@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1267
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Metadata", "Metadata", "{80CE6DFD-BE10-4777-8005-80F696AFBF4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{A9C6FD0F-15CE-42F2-A571-E8CECDD8AB06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generic", "Generic", "{C77D2B41-0C67-4B0E-944B-0F0472613247}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E32AA297-4F61-4BA6-9A77-91EA1B1C2EAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazonGamesLibrary", "Libraries\AmazonGamesLibrary\AmazonGamesLibrary.csproj", "{06BF876E-7083-4CC3-A117-23B2C577CE26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06BF876E-7083-4CC3-A117-23B2C577CE26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06BF876E-7083-4CC3-A117-23B2C577CE26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06BF876E-7083-4CC3-A117-23B2C577CE26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06BF876E-7083-4CC3-A117-23B2C577CE26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{06BF876E-7083-4CC3-A117-23B2C577CE26} = {A9C6FD0F-15CE-42F2-A571-E8CECDD8AB06}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4096CF0F-E5B3-451F-9AED-D1493D1657B4}
+	EndGlobalSection
+EndGlobal
