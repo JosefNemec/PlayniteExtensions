@@ -1,5 +1,6 @@
 ﻿using Playnite.Common;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using PSNLibrary.Models;
 using System;
 using System.Collections.Generic;
@@ -159,7 +160,7 @@ namespace PSNLibrary.Services
             }
         }
 
-        private async Task<T> SendPageRequest<T>(HttpClient client, string url, int offset) where T : class
+        private async Task<T> SendPageRequest<T>(HttpClient client, string url, int offset) where T : class, new()
         {
             var strResponse = await client.GetStringAsync(url.Format(pageRequestLimit, offset));
             return Serialization.FromJson<T>(strResponse);

@@ -74,7 +74,7 @@
       <Project>{f15b7d48-7f9c-406a-825c-b47bb9a5bf4b}</Project>
       <Name>Playnite.Tests</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HumbleLibrary\HumbleLibrary.csproj">
+    <ProjectReference Include="..\..\Libraries\HumbleLibrary\HumbleLibrary.csproj">
       <Project>{2351b5c1-6e28-4b79-a1d9-90fda53b5417}</Project>
       <Name>HumbleLibrary</Name>
     </ProjectReference>

@@ -1,5 +1,5 @@
-﻿using Playnite.Common;
-using Playnite.SDK;
+﻿using Playnite.SDK;
+using Playnite.SDK.Data;
 using Playnite.Services;
 using System;
 using System.Collections.Generic;
@@ -27,13 +27,13 @@ namespace IGDBMetadata.Services
         public IgdbModels.ExpandedGame GetMetadata(SdkModels.Game game)
         {
             // Only serialize minimum amount of data needed
-            var gameData = new Dictionary<string, object>
+            var gameData = Serialization.ToJson(new Dictionary<string, object>
             {
                 { nameof(SdkModels.Game.Name), game.Name },
                 { nameof(SdkModels.Game.ReleaseDate), game.ReleaseDate },
                 { nameof(SdkModels.Game.PluginId), game.PluginId },
                 { nameof(SdkModels.Game.GameId), game.GameId }
-            }.ToJson(false);
+            });
             return ExecutePostRequest<IgdbModels.ExpandedGame>("/igdb/metadata_v2", gameData);
         }
 

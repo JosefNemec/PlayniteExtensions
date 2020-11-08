@@ -98,7 +98,7 @@
       <Project>{f15b7d48-7f9c-406a-825c-b47bb9a5bf4b}</Project>
       <Name>Playnite.Tests</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ItchioLibrary\ItchioLibrary.csproj">
+    <ProjectReference Include="..\..\Libraries\ItchioLibrary\ItchioLibrary.csproj">
       <Project>{27a6e49e-f769-4709-8b43-ff60b8a882be}</Project>
       <Name>ItchioLibrary</Name>
     </ProjectReference>

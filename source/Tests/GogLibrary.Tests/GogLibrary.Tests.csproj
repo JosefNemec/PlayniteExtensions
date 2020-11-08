@@ -97,7 +97,7 @@
       <Project>{f15b7d48-7f9c-406a-825c-b47bb9a5bf4b}</Project>
       <Name>Playnite.Tests</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GogLibrary\GogLibrary.csproj">
+    <ProjectReference Include="..\..\Libraries\GogLibrary\GogLibrary.csproj">
       <Project>{2e4f6f47-c3ac-4650-936a-09e675b9b3b3}</Project>
       <Name>GogLibrary</Name>
     </ProjectReference>

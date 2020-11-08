@@ -5,8 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:igdb="clr-namespace:IGDBMetadata"
+             xmlns:pcon="clr-namespace:Playnite.Converters"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <pcon:ObjectToStringConverter x:Key="ObjectToStringConverter" />
+    </UserControl.Resources>
     
     <StackPanel Margin="20">
         <CheckBox Content="{DynamicResource LOCIgdbUseScreenshotIfNecessary}"

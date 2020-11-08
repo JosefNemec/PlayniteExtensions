@@ -69,7 +69,7 @@
       <Project>{f15b7d48-7f9c-406a-825c-b47bb9a5bf4b}</Project>
       <Name>Playnite.Tests</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UplayLibrary\UplayLibrary.csproj">
+    <ProjectReference Include="..\..\Libraries\UplayLibrary\UplayLibrary.csproj">
       <Project>{7dc1512c-5c82-434b-9675-12ad94b74c56}</Project>
       <Name>UplayLibrary</Name>
     </ProjectReference>

@@ -109,7 +109,7 @@
       <Project>{f15b7d48-7f9c-406a-825c-b47bb9a5bf4b}</Project>
       <Name>Playnite.Tests</Name>
     </ProjectReference>
-    <ProjectReference Include="..\OriginLibrary\OriginLibrary.csproj">
+    <ProjectReference Include="..\..\Libraries\OriginLibrary\OriginLibrary.csproj">
       <Project>{d0efc813-c836-4167-a120-2de785e140a1}</Project>
       <Name>OriginLibrary</Name>
     </ProjectReference>

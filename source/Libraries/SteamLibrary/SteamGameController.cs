@@ -101,7 +101,7 @@ namespace SteamLibrary
 
         public async void StartInstallWatcher()
         {
-            watcherToken = new CancellationTokenSource();      
+            watcherToken = new CancellationTokenSource();
             var stopWatch = Stopwatch.StartNew();
             var id = Game.ToSteamGameID();
 
@@ -126,13 +126,13 @@ namespace SteamLibrary
                     return;
                 }
 
-                await Task.Delay(Playnite.Common.Timer.SecondsToMilliseconds(10));
+                await Task.Delay(10000);
             }
         }
 
         public async void StartUninstallWatcher()
         {
-            watcherToken = new CancellationTokenSource();    
+            watcherToken = new CancellationTokenSource();
             stopWatch = Stopwatch.StartNew();
             var id = Game.ToSteamGameID();
 
@@ -151,7 +151,7 @@ namespace SteamLibrary
                     return;
                 }
 
-                await Task.Delay(Playnite.Common.Timer.SecondsToMilliseconds(5));
+                await Task.Delay(5000);
             }
         }
 

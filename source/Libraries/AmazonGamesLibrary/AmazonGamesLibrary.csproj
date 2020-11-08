@@ -43,6 +43,8 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -54,17 +56,74 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Playnite\BaseGameController.cs">
-      <Link>BaseGameController.cs</Link>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\BaseGameController.cs">
+      <Link>Shared\BaseGameController.cs</Link>
     </Compile>
-    <Compile Include="..\..\playnite\commands\GlobalCommands.cs">
-      <Link>Commands\GlobalCommands.cs</Link>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Commands\GlobalCommands.cs">
+      <Link>Shared\GlobalCommands.cs</Link>
     </Compile>
-    <Compile Include="..\..\Playnite\Converters\InvertableBooleanToVisibilityConverter.cs">
-      <Link>Converters\InvertableBooleanToVisibilityConverter.cs</Link>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Extensions\BitmapExtensions.cs">
+      <Link>Shared\BitmapExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\..\playnite\converters\NegateConverter.cs">
-      <Link>Converters\NegateConverter.cs</Link>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Extensions\BitmapIconExtensions.cs">
+      <Link>Shared\BitmapIconExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Extensions\CloneObject.cs">
+      <Link>Shared\CloneObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Extensions\IconExtension.cs">
+      <Link>Shared\IconExtension.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Extensions\ObjectExtensions.cs">
+      <Link>Shared\ObjectExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Extensions\ProcessExtensions.cs">
+      <Link>Shared\ProcessExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Extensions\StringExtensions.cs">
+      <Link>Shared\StringExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\FileSystem.cs">
+      <Link>Shared\FileSystem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Images.cs">
+      <Link>Shared\Images.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\InteropMethods.cs">
+      <Link>Shared\InteropMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Media\Icons\IconExtractor.cs">
+      <Link>Shared\IconExtractor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Media\Icons\IconUtil.cs">
+      <Link>Shared\IconUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Paths.cs">
+      <Link>Shared\Paths.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\ProcessMonitor.cs">
+      <Link>Shared\ProcessMonitor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\ProcessStarter.cs">
+      <Link>Shared\ProcessStarter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Programs.cs">
+      <Link>Shared\Programs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Resources.cs">
+      <Link>Shared\Resources.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Sizes.cs">
+      <Link>Shared\Sizes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\TGASharpLib.cs">
+      <Link>Shared\TGASharpLib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Converters\InvertableBooleanToVisibilityConverter.cs">
+      <Link>Shared\InvertableBooleanToVisibilityConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Converters\NegateConverter.cs">
+      <Link>Shared\NegateConverter.cs</Link>
     </Compile>
     <Compile Include="..\TwitchLibrary\Models\EntitlementsResponse.cs">
       <Link>Models\EntitlementsResponse.cs</Link>
@@ -101,9 +160,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Localization\en_US.xaml">
+      <Link>Localization\en_US.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Page Include="AmazonGamesLibrarySettingsView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup />

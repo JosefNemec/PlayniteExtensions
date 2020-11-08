@@ -7,12 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="250" d:DesignWidth="800">
     
-    <d:DesignerProperties.DesignStyle>
-        <Style TargetType="UserControl">
-            <Setter Property="Background" Value="White" />
-        </Style>
-    </d:DesignerProperties.DesignStyle>
-
     <StackPanel Margin="20">
         <CheckBox DockPanel.Dock="Top" Name="CheckBethesdaImportInstalled"
                   Margin="0,0,0,15"

@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Playnite.Common;
 using Playnite.Common.Web;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -69,7 +70,7 @@ namespace GogLibrary.Services
                     stringData += trimmed;
                 }
             }
-            
+
             logger.Warn("Failed to get store data from page, no data found. " + gameUrl);
             return null;
         }

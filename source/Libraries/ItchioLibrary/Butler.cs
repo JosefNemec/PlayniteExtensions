@@ -2,6 +2,7 @@
 using ItchioLibrary.Models.Butler;
 using Playnite.Common;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -25,7 +26,7 @@ namespace ItchioLibrary
             /// <summary>
             /// When called, gracefully shutdown the butler daemon.
             /// </summary>
-            public const string Meta_Shutdown = "Meta.Shutdown";            
+            public const string Meta_Shutdown = "Meta.Shutdown";
 
             /// <summary>
             /// Retrieve info for all caves.
@@ -39,7 +40,7 @@ namespace ItchioLibrary
 
             /// <summary>
             /// Lists remembered profiles
-            /// </summary>            
+            /// </summary>
             public const string Profile_List = "Profile.List";
 
             /// <summary>
@@ -92,7 +93,7 @@ namespace ItchioLibrary
             /// </summary>
             public const string PrereqsFailed = "PrereqsFailed";
         }
-        
+
         public static string ExecutablePath
         {
             get
@@ -155,7 +156,7 @@ namespace ItchioLibrary
             }
 
             var butlerArgs = string.Format(startupArgs, DatabasePath);
-            proc = new Process 
+            proc = new Process
             {
                 EnableRaisingEvents = true,
                 StartInfo = new ProcessStartInfo
@@ -237,7 +238,7 @@ namespace ItchioLibrary
             }
 
             LogButtlerOutput(e.Data);
-            if (e.Data.StartsWith("{") && Serialization.TryFromJson<ButlerOutput>(e.Data, out var data))
+            if (e.Data.StartsWith("{") && TryFromJson<ButlerOutput>(e.Data, out var data))
             {
                 if (data.type == ListenNotification.MessageType)
                 {
@@ -275,7 +276,7 @@ namespace ItchioLibrary
                 return;
             }
 
-            if (data.StartsWith("{") && Serialization.TryFromJson<ButlerOutput>(data, out var serialized))
+            if (data.StartsWith("{") && TryFromJson<ButlerOutput>(data, out var serialized))
             {
                 if (serialized.type == Log.MessageType)
                 {
@@ -325,7 +326,7 @@ namespace ItchioLibrary
 
         public List<Profile> GetProfiles()
         {
-            return client.SendRequest<ProfileList>(Methods.Profile_List).profiles;                
+            return client.SendRequest<ProfileList>(Methods.Profile_List).profiles;
         }
 
         public ItchioGame GetGame(int gameId)
@@ -370,6 +371,20 @@ namespace ItchioLibrary
         public void SendResponse(JsonRpcRequest request)
         {
             client.SendResponse(request, new Dictionary<string, object>());
+        }
+
+        public static bool TryFromJson<T>(string json, out T deserialized) where T : class, new()
+        {
+            try
+            {
+                deserialized = Serialization.FromJson<T>(json);
+                return true;
+            }
+            catch
+            {
+                deserialized = null;
+                return false;
+            }
         }
     }
 }

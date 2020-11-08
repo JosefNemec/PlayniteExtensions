@@ -79,7 +79,7 @@
       <Project>{F15B7D48-7F9C-406A-825C-B47BB9A5BF4B}</Project>
       <Name>Playnite.Tests</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IGDBMetadata\IGDBMetadata.csproj">
+    <ProjectReference Include="..\..\Metadata\IGDBMetadata\IGDBMetadata.csproj">
       <Project>{75be5285-6c7c-48fd-a88a-df1f51b4e955}</Project>
       <Name>IGDBMetadata</Name>
     </ProjectReference>

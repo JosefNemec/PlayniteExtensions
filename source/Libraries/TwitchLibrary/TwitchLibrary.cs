@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Playnite.Common;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 using System;
@@ -86,7 +87,7 @@ namespace TwitchLibrary
             {
                 try
                 {
-                    using (var db = new Sqlite(Twitch.CookiesPath, SqliteOpenFlags.ReadOnly))
+                    using (var db = SQLite.OpenDatabase(Twitch.CookiesPath, SqliteOpenFlags.ReadOnly))
                     {
                         var cookies = db.Query<TwitchCookie>("SELECT * FROM 'cookies' WHERE name='auth-token'");
                         if (cookies.Count > 0)

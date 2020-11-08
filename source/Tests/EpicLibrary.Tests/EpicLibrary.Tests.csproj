@@ -94,7 +94,7 @@
       <Project>{f15b7d48-7f9c-406a-825c-b47bb9a5bf4b}</Project>
       <Name>Playnite.Tests</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EpicLibrary\EpicLibrary.csproj">
+    <ProjectReference Include="..\..\Libraries\EpicLibrary\EpicLibrary.csproj">
       <Project>{2fd110fe-f936-4768-ae66-55ec7a60989a}</Project>
       <Name>EpicLibrary</Name>
     </ProjectReference>

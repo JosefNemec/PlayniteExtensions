@@ -1,5 +1,6 @@
 ﻿using ItchioLibrary.Models;
 using Playnite.Common;
+using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -64,7 +65,7 @@ namespace ItchioLibrary
         {
             get
             {
-                return InstalledVersion.Major >= 25; 
+                return InstalledVersion.Major >= 25;
             }
         }
 
@@ -81,7 +82,7 @@ namespace ItchioLibrary
                 var instState = Serialization.FromJson<ItchInstallState>(File.ReadAllText(statePath));
                 return new Version(instState.current);
             }
-        }        
+        }
 
         public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources\itchioicon.png");
 

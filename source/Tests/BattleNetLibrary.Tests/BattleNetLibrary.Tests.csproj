@@ -80,7 +80,7 @@
       <Project>{f15b7d48-7f9c-406a-825c-b47bb9a5bf4b}</Project>
       <Name>Playnite.Tests</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BattleNetLibrary\BattleNetLibrary.csproj">
+    <ProjectReference Include="..\..\Libraries\BattleNetLibrary\BattleNetLibrary.csproj">
       <Project>{e74f843d-39ef-409a-b3fb-341f486a4f97}</Project>
       <Name>BattleNetLibrary</Name>
     </ProjectReference>

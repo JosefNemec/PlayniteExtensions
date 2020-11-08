@@ -2,6 +2,7 @@
 using HumbleLibrary.Models;
 using Playnite.Common;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
 using System.IO;

@@ -8,13 +8,7 @@
              xmlns:pcon="clr-namespace:Playnite.Converters"
              mc:Ignorable="d"
              d:DesignHeight="400" d:DesignWidth="600">
-
-    <d:DesignerProperties.DesignStyle>
-        <Style TargetType="UserControl">
-            <Setter Property="Background" Value="White" />
-        </Style>
-    </d:DesignerProperties.DesignStyle>
-
+    
     <UserControl.Resources>
         <pcon:NegateConverter x:Key="NegateConverter" />
         <sys:Boolean x:Key="True">True</sys:Boolean>

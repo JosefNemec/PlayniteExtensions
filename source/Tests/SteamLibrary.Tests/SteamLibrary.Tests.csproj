@@ -101,7 +101,7 @@
       <Project>{f15b7d48-7f9c-406a-825c-b47bb9a5bf4b}</Project>
       <Name>Playnite.Tests</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SteamLibrary\SteamLibrary.csproj">
+    <ProjectReference Include="..\..\Libraries\SteamLibrary\SteamLibrary.csproj">
       <Project>{0a13cbc8-ecd4-4b9f-961e-e6462f7d2dc0}</Project>
       <Name>SteamLibrary</Name>
     </ProjectReference>

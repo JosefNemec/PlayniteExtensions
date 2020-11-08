@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EpicLibrary.Models;
 using Playnite.Common;
+using Playnite.SDK.Data;
 
 namespace EpicLibrary
 {

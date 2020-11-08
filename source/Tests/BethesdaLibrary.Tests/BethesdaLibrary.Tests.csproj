@@ -69,7 +69,7 @@
       <Project>{f15b7d48-7f9c-406a-825c-b47bb9a5bf4b}</Project>
       <Name>Playnite.Tests</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BethesdaLibrary\BethesdaLibrary.csproj">
+    <ProjectReference Include="..\..\Libraries\BethesdaLibrary\BethesdaLibrary.csproj">
       <Project>{5c2250d7-7623-414a-b68a-4754f311df7d}</Project>
       <Name>BethesdaLibrary</Name>
     </ProjectReference>

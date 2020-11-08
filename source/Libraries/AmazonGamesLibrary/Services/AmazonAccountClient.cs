@@ -1,4 +1,6 @@
 ﻿using AmazonGamesLibrary.Models;
+using Microsoft.Win32;
+using Playnite.Common;
 using Playnite.SDK;
 using Playnite.SDK.Data;
 using System;
@@ -70,7 +72,7 @@ namespace AmazonGamesLibrary.Services
                 reqData.registration_data.app_name = "AGSLauncher for Windows";
                 reqData.registration_data.app_version = "1.0.0";
                 reqData.registration_data.device_model = "Windows";
-                reqData.registration_data.device_serial = Computer.GetMachineGuid().ToString("N");
+                reqData.registration_data.device_serial = GetMachineGuid().ToString("N");
                 reqData.registration_data.device_type = "A2UMVHOX7UP4V7";
                 reqData.registration_data.domain = "Device";
                 reqData.registration_data.os_version = Environment.OSVersion.Version.ToString(4);
@@ -181,6 +183,31 @@ namespace AmazonGamesLibrary.Services
                 var infoResponseContent = await infoResponse.Content.ReadAsStringAsync();
                 var infoData = Serialization.FromJson<ProfileInfo>(infoResponseContent);
                 return !infoData.user_id.IsNullOrEmpty();
+            }
+        }
+
+        public static Guid GetMachineGuid()
+        {
+            RegistryKey root = null;
+            if (Environment.Is64BitOperatingSystem)
+            {
+                root = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
+            }
+            else
+            {
+                root = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32);
+            }
+
+            try
+            {
+                using (var cryptography = root.OpenSubKey("SOFTWARE\\Microsoft\\Cryptography"))
+                {
+                    return Guid.Parse((string)cryptography.GetValue("MachineGuid"));
+                }
+            }
+            finally
+            {
+                root.Dispose();
             }
         }
     }

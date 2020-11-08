@@ -1,6 +1,7 @@
 ﻿using EpicLibrary.Models;
 using Playnite.Common;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -220,7 +221,7 @@ namespace EpicLibrary.Services
             }
         }
 
-        private async Task<Tuple<string, T>> InvokeRequest<T>(string url, OauthResponse tokens) where T : class
+        private async Task<Tuple<string, T>> InvokeRequest<T>(string url, OauthResponse tokens) where T : class, new()
         {
             using (var httpClient = new HttpClient())
             {
@@ -229,7 +230,16 @@ namespace EpicLibrary.Services
                 var response = await httpClient.GetAsync(url);
                 var str = await response.Content.ReadAsStringAsync();
 
-                if (Serialization.TryFromJson<ErrorResponse>(str, out var error) && !string.IsNullOrEmpty(error.errorCode))
+                ErrorResponse error = null;
+                try
+                {
+                    error = Serialization.FromJson<ErrorResponse>(str);
+                }
+                catch
+                {
+                }
+
+                if (error != null && !string.IsNullOrEmpty(error.errorCode))
                 {
                     throw new TokenException(error.errorCode);
                 }

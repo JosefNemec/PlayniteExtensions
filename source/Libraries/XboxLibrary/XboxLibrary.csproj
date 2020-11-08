@@ -34,16 +34,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Playnite.SDK, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PlayniteSDK.5.5.0\lib\net462\Playnite.SDK.dll</HintPath>
+      <HintPath>..\..\packages\PlayniteSDK.5.5.0\lib\net462\Playnite.SDK.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,20 +54,74 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="Windows">
+      <HintPath>..\..\..\PlayniteRepo\references\Windows.winmd</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Playnite\BaseGameController.cs">
-      <Link>BaseGameController.cs</Link>
+    <Compile Include="..\..\..\playniterepo\source\playnite\BaseGameController.cs">
+      <Link>Shared\BaseGameController.cs</Link>
     </Compile>
-    <Compile Include="..\..\playnite\commands\GlobalCommands.cs">
-      <Link>Commands\GlobalCommands.cs</Link>
+    <Compile Include="..\..\..\playniterepo\source\playnite\commands\GlobalCommands.cs">
+      <Link>Shared\GlobalCommands.cs</Link>
     </Compile>
-    <Compile Include="..\..\Playnite\Converters\InvertableBooleanToVisibilityConverter.cs">
-      <Link>Converters\InvertableBooleanToVisibilityConverter.cs</Link>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Computer.cs">
+      <Link>Shared\Computer.cs</Link>
     </Compile>
-    <Compile Include="..\..\playnite\converters\NegateConverter.cs">
-      <Link>Converters\NegateConverter.cs</Link>
+    <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\CloneObject.cs">
+      <Link>Shared\CloneObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\ObjectExtensions.cs">
+      <Link>Shared\ObjectExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\ProcessExtensions.cs">
+      <Link>Shared\ProcessExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\StringExtensions.cs">
+      <Link>Shared\StringExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\playniterepo\source\playnite\common\FileSystem.cs">
+      <Link>Shared\FileSystem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\playniterepo\source\playnite\common\InteropMethods.cs">
+      <Link>Shared\InteropMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\playniterepo\source\playnite\common\Paths.cs">
+      <Link>Shared\Paths.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\playniterepo\source\playnite\common\ProcessMonitor.cs">
+      <Link>Shared\ProcessMonitor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\playniterepo\source\playnite\common\ProcessStarter.cs">
+      <Link>Shared\ProcessStarter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\playniterepo\source\playnite\common\Programs.cs">
+      <Link>Shared\Programs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Programs2.cs">
+      <Link>Shared\Programs2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\playniterepo\source\playnite\common\Resources.cs">
+      <Link>Shared\Resources.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\SafeFileEnumerator.cs">
+      <Link>Shared\SafeFileEnumerator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\playniterepo\source\playnite\common\web\Downloader.cs">
+      <Link>Shared\Downloader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\playniterepo\source\playnite\common\web\HttpDownloader.cs">
+      <Link>Shared\HttpDownloader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\playniterepo\source\playnite\converters\EnumToBooleanConverter.cs">
+      <Link>Shared\EnumToBooleanConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\playniterepo\source\playnite\converters\InvertableBooleanToVisibilityConverter.cs">
+      <Link>Shared\InvertableBooleanToVisibilityConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\playniterepo\source\playnite\converters\NegateConverter.cs">
+      <Link>Shared\NegateConverter.cs</Link>
     </Compile>
     <Compile Include="Models\AuthenticationData.cs" />
     <Compile Include="Services\XboxAccountClient.cs" />
@@ -85,21 +142,36 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\localization\en_US.xaml">
+      <Link>Localization\en_US.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="XboxLibrarySettingsView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Playnite.Common\Playnite.Common.csproj">
-      <Project>{deb1b9f3-6fc9-4185-8daa-4fca15b46f83}</Project>
-      <Name>Playnite.Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
