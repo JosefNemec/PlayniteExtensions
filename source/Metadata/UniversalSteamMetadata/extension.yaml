@@ -1,0 +1,10 @@
+﻿Id: SteamStoreMetadata_PlaynitePlugin
+Name: Universal Steam Metadata
+Author: Josef Nemec
+Version: 1.3
+Module: UniversalSteamMetadata.dll
+Type: MetadataProvider
+Icon: icon.png
+Links:
+    - Name: Website
+      Url: https://github.com/JosefNemec/PlaynitePlugin-SteamStoreMetadata

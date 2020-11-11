@@ -1,0 +1,6 @@
+﻿Name: Rockstar Games Library Importer
+Author: Josef Nemec
+Version: 1.1
+Module: RockstarGamesLibrary.dll
+Type: GameLibrary
+Icon: icon.png
