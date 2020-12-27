@@ -1,0 +1,8 @@
+﻿AddonId: AmazonLibrary_Builtin
+IconUrl: E:\Devel\PlayniteExtensions\source\Libraries\AmazonGamesLibrary\icon.png
+Type: Library
+InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\AmazonLibrary_Builtin.yaml
+ShortDescription: Imports games from Amazon/Twitch game library.
+Name: Amazon Games library importer
+Author: Playnite
+Website: https://github.com/JosefNemec/PlayniteExtensions

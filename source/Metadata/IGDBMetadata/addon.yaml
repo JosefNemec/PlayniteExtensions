@@ -1,0 +1,8 @@
+﻿AddonId: IGDBMetadata_Builtin
+IconUrl: E:\Devel\PlayniteExtensions\source\Metadata\IGDBMetadata\Resources\igdbicon.png
+Type: Metadata
+InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\IGDBMetadata_Builtin.yaml
+ShortDescription: Imports game metadata from IGDB game database.
+Name: IGDB metadata provider
+Author: Playnite
+Website: https://github.com/JosefNemec/PlayniteExtensions

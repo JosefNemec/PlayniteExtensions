@@ -1,0 +1,12 @@
+AddonId: Rockstar_Games_Library
+Packages:
+  - Version: 1.2
+    RequiredApiVersion: 5.6.1
+    ReleaseDate: 2020-11-18
+    PackageUrl: e:\Devel\PlayniteExtensions\build\Release\Rockstar_Games_Library2_1_1.pext
+Changelog:
+  1.2:
+    - Added support for Playnite 8
+  1.1:
+    - Fixed GTA 5 is not starting properly
+    - Added support for client auto-close

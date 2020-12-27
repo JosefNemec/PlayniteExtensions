@@ -1,0 +1,8 @@
+﻿AddonId: ItchioLibrary_Builtin
+IconUrl: E:\Devel\PlayniteExtensions\source\Libraries\ItchioLibrary\Resources\itchioicon.png
+Type: Library
+InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\ItchioLibrary_Builtin.yaml
+ShortDescription: Imports games from itch.io store library.
+Name: itch.io library importer
+Author: Playnite
+Website: https://github.com/JosefNemec/PlayniteExtensions

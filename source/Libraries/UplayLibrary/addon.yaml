@@ -1,0 +1,8 @@
+﻿AddonId: UplayLibrary_Builtin
+IconUrl: E:\Devel\PlayniteExtensions\source\Libraries\UplayLibrary\Resources\uplayicon.png
+Type: Library
+InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\UplayLibrary_Builtin.yaml
+ShortDescription: Imports games from Twitch game library.
+Name: Uplay Library Importer
+Author: Playnite
+Website: https://github.com/JosefNemec/PlayniteExtensions

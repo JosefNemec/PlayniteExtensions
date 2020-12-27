@@ -1,0 +1,8 @@
+﻿AddonId: Universal_Steam_Metadata
+IconUrl: E:\Devel\PlayniteExtensions\source\Metadata\UniversalSteamMetadata\icon.png
+Type: Metadata
+InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\Universal_Steam_Metadata.yaml
+ShortDescription: Imports game metadata from Steam store.
+Name: Universal Steam Metadata
+Author: Playnite
+Website: https://github.com/JosefNemec/PlayniteExtensions

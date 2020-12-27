@@ -1,0 +1,8 @@
+﻿AddonId: SteamLibrary_Builtin
+IconUrl: E:\Devel\PlayniteExtensions\source\Libraries\SteamLibrary\Resources\steamicon.png
+Type: Library
+InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\SteamLibrary_Builtin.yaml
+ShortDescription: Imports games from Steam library.
+Name: Steam Library Importer
+Author: Playnite
+Website: https://github.com/JosefNemec/PlayniteExtensions

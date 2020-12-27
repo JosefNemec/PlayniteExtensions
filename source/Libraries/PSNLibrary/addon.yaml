@@ -1,0 +1,8 @@
+﻿AddonId: PlayStationLibrary_Builtin
+IconUrl: E:\Devel\PlayniteExtensions\source\Libraries\PSNLibrary\icon.png
+Type: Library
+InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\PlayStationLibrary_Builtin.yaml
+ShortDescription: Imports games from PSN account.
+Name: PlayStation library importer
+Author: Playnite
+Website: https://github.com/JosefNemec/PlayniteExtensions

@@ -1,0 +1,8 @@
+﻿AddonId: EpicGamesLibrary_Builtin
+IconUrl: E:\Devel\PlayniteExtensions\source\Libraries\EpicLibrary\Resources\epicicon.png
+Type: Library
+InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\EpicGamesLibrary_Builtin.yaml
+ShortDescription: Imports games from Epic store library.
+Name: Epic Store library importer
+Author: Playnite
+Website: https://github.com/JosefNemec/PlayniteExtensions
