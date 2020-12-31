@@ -319,7 +319,7 @@ namespace Steam
                 }
 
                 gameInfo.CriticScore = downloadedMetadata.StoreDetails.metacritic?.score;
-                if (downloadedMetadata.UserReviewDetails != null)
+                if (downloadedMetadata.UserReviewDetails?.total_reviews > 0)
                 {
                     gameInfo.CommunityScore = CalculateUserScore(downloadedMetadata.UserReviewDetails);
                 }
