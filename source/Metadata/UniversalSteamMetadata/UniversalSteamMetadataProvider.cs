@@ -1,6 +1,7 @@
 ﻿using AngleSharp.Parser.Html;
 using Playnite.Common;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
@@ -93,7 +94,7 @@ namespace UniversalSteamMetadata
             GetGameData();
             if (currentMetadata.GameInfo != null)
             {
-                if (plugin.Settings.BackgroundSource == BackgroundSource.StoreScreenshot &&
+                if (plugin.SettingsViewModel.Settings.BackgroundSource == BackgroundSource.StoreScreenshot &&
                     options.IsBackgroundDownload == false &&
                     currentMetadata.StoreDetails?.screenshots?.Count > 1)
                 {
@@ -249,8 +250,8 @@ namespace UniversalSteamMetadata
                     var appId = uint.Parse(options.GameData.GameId);
                     currentMetadata = metadataProvider.GetGameMetadata(
                         appId,
-                        plugin.Settings.BackgroundSource,
-                        plugin.Settings.DownloadVerticalCovers);
+                        plugin.SettingsViewModel.Settings.BackgroundSource,
+                        plugin.SettingsViewModel.Settings.DownloadVerticalCovers);
                 }
                 else
                 {
@@ -261,8 +262,8 @@ namespace UniversalSteamMetadata
                         {
                             currentMetadata = metadataProvider.GetGameMetadata(
                                 matchedId,
-                                plugin.Settings.BackgroundSource,
-                                plugin.Settings.DownloadVerticalCovers);
+                                plugin.SettingsViewModel.Settings.BackgroundSource,
+                                plugin.SettingsViewModel.Settings.DownloadVerticalCovers);
                         }
                         else
                         {
@@ -313,8 +314,8 @@ namespace UniversalSteamMetadata
                         {
                             currentMetadata = metadataProvider.GetGameMetadata(
                                 ((StoreSearchResult)selectedGame).GameId,
-                                plugin.Settings.BackgroundSource,
-                                plugin.Settings.DownloadVerticalCovers);
+                                plugin.SettingsViewModel.Settings.BackgroundSource,
+                                plugin.SettingsViewModel.Settings.DownloadVerticalCovers);
                         }
                     }
                 }
@@ -383,7 +384,7 @@ namespace UniversalSteamMetadata
             }
 
             // Try removing apostrophes
-            var resCopy = results.GetClone();
+            var resCopy = Serialization.GetClone(results);
             resCopy.ForEach(a => a.Name = a.Name.Replace("'", ""));
             matchedGame = MatchFun(normalizedName, resCopy);
             if (matchedGame > 0)
@@ -393,7 +394,7 @@ namespace UniversalSteamMetadata
 
             // Try removing all ":" and "-"
             testName = Regex.Replace(normalizedName, @"\s*(:|-)\s*", " ");
-            resCopy = results.GetClone();
+            resCopy = Serialization.GetClone(results);
             foreach (var res in resCopy)
             {
                 res.Name = Regex.Replace(res.Name, @"\s*(:|-)\s*", " ");

@@ -51,7 +51,7 @@ namespace TwitchLibrary
             OnStarting(this, new GameControllerEventArgs(this, 0));
             var startViaLauncher = true;
             GameConfiguration gameConfig = null;
-            if (library.LibrarySettings.StartGamesWithoutLauncher)
+            if (library.SettingsViewModel.Settings.StartGamesWithoutLauncher)
             {
                 try
                 {

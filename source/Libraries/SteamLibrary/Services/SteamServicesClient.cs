@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using Playnite.SDK;
+﻿using Playnite.SDK;
 using Playnite.Services;
 using SteamLibrary.Models;
 using System;

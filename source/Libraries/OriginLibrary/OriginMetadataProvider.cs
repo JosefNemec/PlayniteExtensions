@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
-using OriginLibrary.Models;
+﻿using OriginLibrary.Models;
 using OriginLibrary.Services;
 using Playnite.Common.Media.Icons;
 using Playnite.SDK;
@@ -18,24 +17,24 @@ namespace OriginLibrary
 {
     public class OriginMetadataProvider : LibraryMetadataProvider
     {
-        private readonly OriginLibrary library;
+        private readonly IPlayniteAPI api;
 
-        public OriginMetadataProvider(OriginLibrary library)
+        public OriginMetadataProvider(IPlayniteAPI api)
         {
-            this.library = library;
+            this.api = api;
         }
 
         #region IMetadataProvider
 
         public override GameMetadata GetMetadata(Game game)
         {
-            var resources = library.PlayniteApi.Resources;
+            var resources = api.Resources;
             var storeMetadata = DownloadGameMetadata(game.GameId);
             var gameInfo = new GameInfo
             {
                 Name = StringExtensions.NormalizeGameName(storeMetadata.StoreDetails.i18n.displayName),
                 Description = storeMetadata.StoreDetails.i18n.longDescription,
-                ReleaseDate = storeMetadata.StoreDetails.platforms.First(a => a.platform == "PCWIN").releaseDate,
+                ReleaseDate = storeMetadata.StoreDetails.platforms.FirstOrDefault(a => a.platform == "PCWIN")?.releaseDate,
                 Links = new List<Link>()
                 {
                     new Link(resources.GetString("LOCCommonLinksStorePage"), @"https://www.origin.com/store" + storeMetadata.StoreDetails.offerPath),
@@ -104,10 +103,11 @@ namespace OriginLibrary
                 var bkData = data.StoreMetadata?.gamehub.components.items?.FirstOrDefault(a => a.ContainsKey("origin-store-pdp-hero"));
                 if (bkData != null)
                 {
-                    var bk = (bkData["origin-store-pdp-hero"] as JObject).ToObject<Dictionary<string, object>>();
-                    if (bk.TryGetValue("background-image", out var backgroundUrl))
+                    dynamic test = bkData["origin-store-pdp-hero"];
+                    var background = test["background-image"];
+                    if (background != null)
                     {
-                        data.BackgroundImage = new MetadataFile(backgroundUrl.ToString());
+                        data.BackgroundImage = new MetadataFile(background.ToString());
                     }
                 }
             }

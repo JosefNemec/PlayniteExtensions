@@ -20,18 +20,18 @@
     <StackPanel Margin="20">
         <CheckBox DockPanel.Dock="Top" Name="CheckAmazonImportInstalled"
                   Margin="0,0,0,15"
-                  IsChecked="{Binding ImportInstalledGames}"
+                  IsChecked="{Binding Settings.ImportInstalledGames}"
                   Content="{DynamicResource LOCSettingsImportInstalledLabel}"/>
 
         <CheckBox DockPanel.Dock="Top" Name="CheckAmazonConnectAccount"
-                  IsChecked="{Binding ConnectAccount}"
+                  IsChecked="{Binding Settings.ConnectAccount}"
                   Content="{DynamicResource LOCSettingsConnectAccount}"/>
 
         <StackPanel DockPanel.Dock="Top" Margin="40,5,5,5"
                     IsEnabled="{Binding IsChecked, ElementName=CheckAmazonConnectAccount}">
 
             <CheckBox DockPanel.Dock="Top" Name="CheckAmazonImportUninstalled"
-                      IsChecked="{Binding ImportUninstalledGames}"
+                      IsChecked="{Binding Settings.ImportUninstalledGames}"
                       Margin="0,10,0,0"
                       Content="{DynamicResource LOCSettingsImportUninstalledLabel}"/>
 
@@ -65,7 +65,7 @@
             </StackPanel>
         </StackPanel>
 
-        <CheckBox IsChecked="{Binding StartGamesWithoutLauncher}"
+        <CheckBox IsChecked="{Binding Settings.StartGamesWithoutLauncher}"
                   Content="{DynamicResource LOCSettingsStartGameDirectly}"
                   Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}"
                   Margin="0,5,0,0" />

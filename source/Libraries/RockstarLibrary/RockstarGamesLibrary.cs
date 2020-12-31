@@ -13,24 +13,25 @@ using System.Windows.Controls;
 
 namespace RockstarGamesLibrary
 {
-    public class RockstarGamesLibrary : LibraryPlugin
+    [LoadPlugin]
+    public class RockstarGamesLibrary : LibraryPluginBase<RockstarGamesLibrarySettingsViewModel>
     {
-        private static readonly ILogger logger = LogManager.GetLogger();
-        private const string dbImportMessageId = "bnetlibImportError";
-
-        public override Guid Id { get; } = Guid.Parse("88409022-088a-4de8-805a-fdbac291f00a");
-
-        public override string Name => "Rockstar Games";
-
-        public override LibraryClient Client { get; } = new RockstarGamesLibraryClient();
-
-        public override LibraryPluginCapabilities Capabilities { get; } = new LibraryPluginCapabilities
+        public RockstarGamesLibrary(IPlayniteAPI api) : base(
+            "Rockstar Games",
+            Guid.Parse("88409022-088a-4de8-805a-fdbac291f00a"),
+            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new RockstarGamesLibraryClient(),
+            RockstarGames.Icon,
+            null,
+            null,
+            null,
+            api)
         {
-            CanShutdownClient = true
-        };
+        }
 
-        public RockstarGamesLibrary(IPlayniteAPI api) : base(api)
+        public override IGameController GetGameController(Game game)
         {
+            return new RockstarGamesController(this, game);
         }
 
         internal IEnumerable<GameInfo> GetInstalledGames()
@@ -50,7 +51,7 @@ namespace RockstarGamesLibrary
                     var rsGame = RockstarGames.Games.FirstOrDefault(a => a.TitleId == titleId);
                     if (rsGame == null)
                     {
-                        logger.Warn($"Uknown Rockstar game with titleid {titleId}");
+                        Logger.Warn($"Uknown Rockstar game with titleid {titleId}");
                         continue;
                     }
 
@@ -101,29 +102,24 @@ namespace RockstarGamesLibrary
             }
             catch (Exception e)
             {
-                logger.Error(e, "Failed to import rockstar games.");
+                Logger.Error(e, "Failed to import rockstar games.");
                 importError = e;
             }
 
             if (importError != null)
             {
                 PlayniteApi.Notifications.Add(new NotificationMessage(
-                    dbImportMessageId,
+                    ImportErrorMessageId,
                     string.Format(PlayniteApi.Resources.GetString("LOCLibraryImportError"), Name) +
                     Environment.NewLine + importError.Message,
                     NotificationType.Error));
             }
             else
             {
-                PlayniteApi.Notifications.Remove(dbImportMessageId);
+                PlayniteApi.Notifications.Remove(ImportErrorMessageId);
             }
 
             return games;
-        }
-
-        public override IGameController GetGameController(Game game)
-        {
-            return new RockstarGamesController(this, game);
         }
     }
 }

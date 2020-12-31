@@ -1,5 +1,6 @@
 ﻿using IGDBMetadata.Models;
 using Playnite.Common;
+using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;
@@ -61,6 +62,7 @@ namespace IGDBMetadata
 
         public override MetadataFile GetBackgroundImage()
         {
+            var settings = plugin.SettingsViewModel.Settings;
             if (AvailableFields.Contains(MetadataField.BackgroundImage))
             {
                 List<IgdbServerModels.GameImage> possibleBackgrounds = null;
@@ -68,7 +70,7 @@ namespace IGDBMetadata
                 {
                     possibleBackgrounds = IgdbData.artworks.Where(a => !a.url.IsNullOrEmpty()).ToList();
                 }
-                else if (plugin.Settings.UseScreenshotsIfNecessary && IgdbData.screenshots.HasItems())
+                else if (settings.UseScreenshotsIfNecessary && IgdbData.screenshots.HasItems())
                 {
                     possibleBackgrounds = IgdbData.screenshots.Where(a => !a.url.IsNullOrEmpty()).ToList();
                 }
@@ -84,17 +86,17 @@ namespace IGDBMetadata
                     {
                         if (options.IsBackgroundDownload)
                         {
-                            if (plugin.Settings.ImageSelectionPriority == MultiImagePriority.First)
+                            if (settings.ImageSelectionPriority == MultiImagePriority.First)
                             {
                                 selected = possibleBackgrounds[0];
                             }
-                            else if (plugin.Settings.ImageSelectionPriority == MultiImagePriority.Random ||
-                                (plugin.Settings.ImageSelectionPriority == MultiImagePriority.Select && plugin.PlayniteApi.ApplicationInfo.Mode == ApplicationMode.Fullscreen))
+                            else if (settings.ImageSelectionPriority == MultiImagePriority.Random ||
+                                (settings.ImageSelectionPriority == MultiImagePriority.Select && plugin.PlayniteApi.ApplicationInfo.Mode == ApplicationMode.Fullscreen))
                             {
                                 var index = GlobalRandom.Next(0, possibleBackgrounds.Count - 1);
                                 selected = possibleBackgrounds[index];
                             }
-                            else if (plugin.Settings.ImageSelectionPriority == MultiImagePriority.Select && plugin.PlayniteApi.ApplicationInfo.Mode == ApplicationMode.Desktop)
+                            else if (settings.ImageSelectionPriority == MultiImagePriority.Select && plugin.PlayniteApi.ApplicationInfo.Mode == ApplicationMode.Desktop)
                             {
                                 selected = GetBackgroundManually(possibleBackgrounds)?.Image;
                             }
@@ -309,7 +311,7 @@ namespace IGDBMetadata
                 {
                     fields.Add(MetadataField.BackgroundImage);
                 }
-                else if (IgdbData.screenshots.HasItems() && plugin.Settings.UseScreenshotsIfNecessary)
+                else if (IgdbData.screenshots.HasItems() && plugin.SettingsViewModel.Settings.UseScreenshotsIfNecessary)
                 {
                     fields.Add(MetadataField.BackgroundImage);
                 }
@@ -421,6 +423,21 @@ namespace IGDBMetadata
                 {
                     IgdbData = new IgdbServerModels.ExpandedGame() { id = 0 };
                 }
+            }
+        }
+
+        private string GetGameInfoFromUrl(string url)
+        {
+            var data = HttpDownloader.DownloadString(url);
+            var regex = Regex.Match(data, @"games\/(\d+)\/rates");
+            if (regex.Success)
+            {
+                return regex.Groups[1].Value;
+            }
+            else
+            {
+                logger.Error($"Failed to get game id from {url}");
+                return string.Empty;
             }
         }
     }

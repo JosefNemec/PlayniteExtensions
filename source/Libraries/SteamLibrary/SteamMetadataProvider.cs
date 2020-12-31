@@ -57,8 +57,8 @@ namespace SteamLibrary
             {
                 return new MetadataProvider(apiClient).GetGameMetadata(
                     gameId.AppID,
-                    library.LibrarySettings.BackgroundSource,
-                    library.LibrarySettings.DownloadVerticalCovers);
+                    library.SettingsViewModel.Settings.BackgroundSource,
+                    library.SettingsViewModel.Settings.DownloadVerticalCovers);
             }
         }
     }

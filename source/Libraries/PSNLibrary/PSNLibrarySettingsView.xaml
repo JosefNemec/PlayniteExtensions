@@ -14,7 +14,7 @@
 
     <StackPanel Margin="20">
         <CheckBox Name="CheckPSNConnectAccount"
-                  IsChecked="{Binding ConnectAccount}"
+                  IsChecked="{Binding Settings.ConnectAccount}"
                   Content="{DynamicResource LOCSettingsConnectAccount}"/>
 
         <StackPanel DockPanel.Dock="Top" Margin="40,5,5,0"

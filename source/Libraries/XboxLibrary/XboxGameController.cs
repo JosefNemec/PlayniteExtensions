@@ -18,16 +18,14 @@ namespace XboxLibrary
     {
         private readonly IPlayniteAPI api;
         private readonly Game game;
-        private readonly XboxLibrarySettings settings;
         protected ProcessMonitor procMon;
         protected Stopwatch stopWatch;
         private CancellationTokenSource watcherToken;
 
-        public XboxGameController(Game game, IPlayniteAPI api, XboxLibrarySettings settings) : base(game)
+        public XboxGameController(Game game, IPlayniteAPI api) : base(game)
         {
             this.api = api;
             this.game = game;
-            this.settings = settings;
         }
 
         public override void Install()

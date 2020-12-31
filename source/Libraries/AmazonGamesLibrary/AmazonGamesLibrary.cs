@@ -14,31 +14,35 @@ using System.Windows.Controls;
 
 namespace AmazonGamesLibrary
 {
-    public class AmazonGamesLibrary : LibraryPlugin
+    [LoadPlugin]
+    public class AmazonGamesLibrary : LibraryPluginBase<AmazonGamesLibrarySettingsViewModel>
     {
-        private ILogger logger = LogManager.GetLogger();
         internal readonly string TokensPath;
-        private const string dbImportMessageId = "amazonlibImportError";
 
-        public override Guid Id { get; } = Guid.Parse("402674cd-4af6-4886-b6ec-0e695bfa0688");
-
-        internal AmazonGamesLibrarySettings LibrarySettings { get; private set; }
-
-        public override LibraryClient Client => new AmazonGamesLibraryClient();
-
-        public override string Name => "Amazon Games";
-
-        public override string LibraryIcon => AmazonGames.Icon;
-
-        public override LibraryPluginCapabilities Capabilities { get; } = new LibraryPluginCapabilities
+        public AmazonGamesLibrary(IPlayniteAPI api) : base(
+            "Amazon Games",
+            Guid.Parse("402674cd-4af6-4886-b6ec-0e695bfa0688"),
+            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new AmazonGamesLibraryClient(),
+            AmazonGames.Icon,
+            (_) => new AmazonGamesLibrarySettingsView(),
+            null,
+            () => new AmazonGamesMetadataProvider(),
+            api)
         {
-            CanShutdownClient = true
-        };
-
-        public AmazonGamesLibrary(IPlayniteAPI api) : base(api)
-        {
-            LibrarySettings = new AmazonGamesLibrarySettings(this, PlayniteApi);
+            SettingsViewModel = new AmazonGamesLibrarySettingsViewModel(this, PlayniteApi);
             TokensPath = Path.Combine(GetPluginUserDataPath(), "tokens.json");
+        }
+
+        public override ISettings GetSettings(bool firstRunSettings)
+        {
+            SettingsViewModel.IsFirstRunUse = firstRunSettings;
+            return SettingsViewModel;
+        }
+
+        public override IGameController GetGameController(Game game)
+        {
+            return new AmazonGameController(game, SettingsViewModel.Settings, PlayniteApi);
         }
 
         public static GameAction GetPlayAction(string gameId)
@@ -115,51 +119,35 @@ namespace AmazonGamesLibrary
             return games;
         }
 
-        public override ISettings GetSettings(bool firstRunSettings)
-        {
-            LibrarySettings.IsFirstRunUse = firstRunSettings;
-            return LibrarySettings;
-        }
-
-        public override UserControl GetSettingsView(bool firstRunView)
-        {
-            return new AmazonGamesLibrarySettingsView();
-        }
-
-        public override IGameController GetGameController(Game game)
-        {
-            return new AmazonGameController(game, this, PlayniteApi);
-        }
-
         public override IEnumerable<GameInfo> GetGames()
         {
             var allGames = new List<GameInfo>();
             var installedGames = new Dictionary<string, GameInfo>();
             Exception importError = null;
 
-            if (LibrarySettings.ImportInstalledGames)
+            if (SettingsViewModel.Settings.ImportInstalledGames)
             {
                 try
                 {
                     installedGames = GetInstalledGames();
-                    logger.Debug($"Found {installedGames.Count} installed Amazon games.");
+                    Logger.Debug($"Found {installedGames.Count} installed Amazon games.");
                     allGames.AddRange(installedGames.Values.ToList());
                 }
                 catch (Exception e) when (!PlayniteApi.ApplicationInfo.ThrowAllErrors)
                 {
-                    logger.Error(e, "Failed to import installed Amazon games.");
+                    Logger.Error(e, "Failed to import installed Amazon games.");
                     importError = e;
                 }
             }
 
-            if (LibrarySettings.ConnectAccount)
+            if (SettingsViewModel.Settings.ConnectAccount)
             {
                 try
                 {
                     var libraryGames = GetLibraryGames();
-                    logger.Debug($"Found {libraryGames.Count} library Amazon games.");
+                    Logger.Debug($"Found {libraryGames.Count} library Amazon games.");
 
-                    if (!LibrarySettings.ImportUninstalledGames)
+                    if (!SettingsViewModel.Settings.ImportUninstalledGames)
                     {
                         libraryGames = libraryGames.Where(lg => installedGames.ContainsKey(lg.GameId)).ToList();
                     }
@@ -179,7 +167,7 @@ namespace AmazonGamesLibrary
                 }
                 catch (Exception e) when (!PlayniteApi.ApplicationInfo.ThrowAllErrors)
                 {
-                    logger.Error(e, "Failed to import linked account Amazon games details.");
+                    Logger.Error(e, "Failed to import linked account Amazon games details.");
                     importError = e;
                 }
             }
@@ -187,7 +175,7 @@ namespace AmazonGamesLibrary
             if (importError != null)
             {
                 PlayniteApi.Notifications.Add(new NotificationMessage(
-                    dbImportMessageId,
+                    ImportErrorMessageId,
                     string.Format(PlayniteApi.Resources.GetString("LOCLibraryImportError"), Name) +
                     System.Environment.NewLine + importError.Message,
                     NotificationType.Error,
@@ -195,15 +183,10 @@ namespace AmazonGamesLibrary
             }
             else
             {
-                PlayniteApi.Notifications.Remove(dbImportMessageId);
+                PlayniteApi.Notifications.Remove(ImportErrorMessageId);
             }
 
             return allGames;
-        }
-
-        public override LibraryMetadataProvider GetMetadataDownloader()
-        {
-            return new AmazonGamesMetadataProvider(this);
         }
     }
 }

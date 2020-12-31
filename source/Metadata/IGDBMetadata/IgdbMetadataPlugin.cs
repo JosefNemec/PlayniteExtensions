@@ -19,7 +19,8 @@ using System.Windows.Controls;
 
 namespace IGDBMetadata
 {
-    public class IgdbMetadataPlugin : MetadataPlugin
+    [LoadPlugin]
+    public class IgdbMetadataPlugin : MetadataPluginBase<IgdbMetadataSettingsViewModel>
     {
         public class IgdbImageOption : ImageFileOption
         {
@@ -27,37 +28,32 @@ namespace IGDBMetadata
         }
 
         public readonly IgdbServiceClient Client;
-        private static readonly ILogger logger = LogManager.GetLogger();
-        public override string Name { get; } = "IGDB";
-        public override Guid Id { get; } = Guid.Parse("000001DB-DBD1-46C6-B5D0-B1BA559D10E4");
-        internal readonly IgdbMetadataSettings Settings;
-        public override List<MetadataField> SupportedFields { get; } = new List<MetadataField>
-        {
-            MetadataField.Description,
-            MetadataField.CoverImage,
-            MetadataField.BackgroundImage,
-            MetadataField.ReleaseDate,
-            MetadataField.Developers,
-            MetadataField.Publishers,
-            MetadataField.Genres,
-            MetadataField.Links,
-            MetadataField.Features,
-            MetadataField.CriticScore,
-            MetadataField.CommunityScore,
-            MetadataField.Series,
-            MetadataField.AgeRating
-        };
 
-        public IgdbMetadataPlugin(IPlayniteAPI playniteAPI) : base(playniteAPI)
+        public IgdbMetadataPlugin(IPlayniteAPI api) : base(
+            "IGDB",
+            Guid.Parse("000001DB-DBD1-46C6-B5D0-B1BA559D10E4"),
+            new List<MetadataField>
+            {
+                MetadataField.Description,
+                MetadataField.CoverImage,
+                MetadataField.BackgroundImage,
+                MetadataField.ReleaseDate,
+                MetadataField.Developers,
+                MetadataField.Publishers,
+                MetadataField.Genres,
+                MetadataField.Links,
+                MetadataField.Features,
+                MetadataField.CriticScore,
+                MetadataField.CommunityScore,
+                MetadataField.Series,
+                MetadataField.AgeRating
+            },
+            () => new IgdbMetadataSettingsView(),
+            null,
+            api)
         {
-            Client = new IgdbServiceClient(playniteAPI.ApplicationInfo.ApplicationVersion);
-            Settings = new IgdbMetadataSettings(this);
-        }
-
-        public IgdbMetadataPlugin(IPlayniteAPI playniteAPI, IgdbServiceClient client) : base(playniteAPI)
-        {
-            Client = client;
-            Settings = new IgdbMetadataSettings(this);
+            Client = new IgdbServiceClient(api.ApplicationInfo.ApplicationVersion);
+            SettingsViewModel = new IgdbMetadataSettingsViewModel(this, api);
         }
 
         public override OnDemandMetadataProvider GetMetadataProvider(MetadataRequestOptions options)
@@ -99,31 +95,6 @@ namespace IGDBMetadata
             }
 
             return results;
-        }
-
-        internal static string GetGameInfoFromUrl(string url)
-        {
-            var data = HttpDownloader.DownloadString(url);
-            var regex = Regex.Match(data, @"games\/(\d+)\/rates");
-            if (regex.Success)
-            {
-                return regex.Groups[1].Value;
-            }
-            else
-            {
-                logger.Error($"Failed to get game id from {url}");
-                return string.Empty;
-            }
-        }
-
-        public override ISettings GetSettings(bool firstRunSettings)
-        {
-            return Settings;
-        }
-
-        public override UserControl GetSettingsView(bool firstRunView)
-        {
-            return new IgdbMetadataSettingsView();
         }
     }
 }

@@ -310,7 +310,14 @@ namespace Steam
             {
                 gameInfo.Description = ParseDescription(downloadedMetadata.StoreDetails.detailed_description);
                 var cultInfo = new CultureInfo("en-US", false).TextInfo;
-                gameInfo.ReleaseDate = downloadedMetadata.StoreDetails.release_date.date;
+                if (downloadedMetadata.StoreDetails.release_date.date?.IsNullOrEmpty() == false)
+                {
+                    if (DateTime.TryParse(downloadedMetadata.StoreDetails.release_date.date, out var date))
+                    {
+                        gameInfo.ReleaseDate = date;
+                    }
+                }
+
                 gameInfo.CriticScore = downloadedMetadata.StoreDetails.metacritic?.score;
                 if (downloadedMetadata.UserReviewDetails != null)
                 {

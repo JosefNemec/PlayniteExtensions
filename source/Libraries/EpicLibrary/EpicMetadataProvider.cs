@@ -16,12 +16,10 @@ namespace EpicLibrary
     public class EpicMetadataProvider : LibraryMetadataProvider
     {
         private readonly IPlayniteAPI api;
-        private readonly EpicLibrary library;
 
-        public EpicMetadataProvider(EpicLibrary library, IPlayniteAPI api)
+        public EpicMetadataProvider(IPlayniteAPI api)
         {
             this.api = api;
-            this.library = library;
         }
 
         public override GameMetadata GetMetadata(Game game)
@@ -54,7 +52,7 @@ namespace EpicLibrary
                             Select(a => a.Trim()).ToList();
                         metadata.BackgroundImage = new MetadataFile(page.data.hero.backgroundImageUrl);
                         gameInfo.Links.Add(new Link(
-                            library.PlayniteApi.Resources.GetString("LOCCommonLinksStorePage"),
+                            api.Resources.GetString("LOCCommonLinksStorePage"),
                             "https://www.epicgames.com/store/en-US/product/" + catalogs[0].productSlug));
 
                         if (page.data.socialLinks.HasItems())

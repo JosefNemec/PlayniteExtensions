@@ -1,6 +1,4 @@
-﻿using Playnite;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
@@ -26,21 +24,16 @@ namespace SteamLibrary
         Failed
     }
 
-    public class SteamLibrarySettings : ObservableObject, ISettings
+    public class SteamLibrarySettings : ObservableObject
     {
-        private static ILogger logger = LogManager.GetLogger();
-        private SteamLibrarySettings editingClone;
-        private SteamLibrary library;
-        private IPlayniteAPI api;
-
-        #region Settings
-
         public int Version { get; set; }
-
+        public bool DownloadVerticalCovers { get; set; } = true;
+        public bool ImportInstalledGames { get; set; } = true;
+        public bool ConnectAccount { get; set; } = false;
+        public bool ImportUninstalledGames { get; set; } = false;
+        public BackgroundSource BackgroundSource { get; set; } = BackgroundSource.Image;
         public string UserName { get; set; } = string.Empty;
-
         public string UserId { get; set; } = string.Empty;
-
         public bool IncludeFreeSubGames { get; set; } = false;
 
         private bool isPrivateAccount;
@@ -66,41 +59,31 @@ namespace SteamLibrary
                 OnPropertyChanged(nameof(AuthStatus));
             }
         }
+    }
 
-        public bool DownloadVerticalCovers { get; set; } = true;
-
-        public bool ImportInstalledGames { get; set; } = true;
-
-        public bool ConnectAccount { get; set; } = false;
-
-        public bool ImportUninstalledGames { get; set; } = false;
-
-        public BackgroundSource BackgroundSource { get; set; } = BackgroundSource.Image;
-
-        #endregion Settings
-
-        [JsonIgnore]
+    public class SteamLibrarySettingsViewModel : PluginSettingsViewModel<SteamLibrarySettings, SteamLibrary>
+    {
         public AuthStatus AuthStatus
         {
             get
             {
-                if (UserId.IsNullOrEmpty())
+                if (Settings.UserId.IsNullOrEmpty())
                 {
                     return AuthStatus.AuthRequired;
                 }
 
                 try
                 {
-                    if (IsPrivateAccount)
+                    if (Settings.IsPrivateAccount)
                     {
-                        if (UserId.IsNullOrEmpty() || ApiKey.IsNullOrEmpty())
+                        if (Settings.UserId.IsNullOrEmpty() || Settings.ApiKey.IsNullOrEmpty())
                         {
                             return AuthStatus.PrivateAccount;
                         }
 
                         try
                         {
-                            var games = library.GetPrivateOwnedGames(ulong.Parse(UserId), ApiKey, false);
+                            var games = Plugin.GetPrivateOwnedGames(ulong.Parse(Settings.UserId), Settings.ApiKey, false);
                             if (games?.response?.games.HasItems() == true)
                             {
                                 return AuthStatus.Ok;
@@ -116,7 +99,7 @@ namespace SteamLibrary
                     }
                     else
                     {
-                        var games = library.ServicesClient.GetSteamLibrary(ulong.Parse(UserId));
+                        var games = Plugin.ServicesClient.GetSteamLibrary(ulong.Parse(Settings.UserId));
                         if (games.HasItems())
                         {
                             return AuthStatus.Ok;
@@ -129,7 +112,7 @@ namespace SteamLibrary
                 }
                 catch (Exception e) when (!Debugger.IsAttached)
                 {
-                    logger.Error(e, "Failed to check Steam auth status.");
+                    Logger.Error(e, "Failed to check Steam auth status.");
                     return AuthStatus.Failed;
                 }
 
@@ -137,7 +120,6 @@ namespace SteamLibrary
             }
         }
 
-        [JsonIgnore]
         public RelayCommand<object> LoginCommand
         {
             get => new RelayCommand<object>((a) =>
@@ -146,13 +128,10 @@ namespace SteamLibrary
             });
         }
 
-        [JsonIgnore]
         public bool IsFirstRunUse { get; set; }
 
-        [JsonIgnore]
         public List<LocalSteamUser> SteamUsers { get; set; }
 
-        [JsonIgnore]
         public RelayCommand<LocalSteamUser> ImportSteamCategoriesCommand
         {
             get => new RelayCommand<LocalSteamUser>((a) =>
@@ -161,7 +140,6 @@ namespace SteamLibrary
             });
         }
 
-        [JsonIgnore]
         public RelayCommand<LocalSteamUser> ImportSteamLastActivityCommand
         {
             get => new RelayCommand<LocalSteamUser>((a) =>
@@ -170,50 +148,32 @@ namespace SteamLibrary
             });
         }
 
-        public SteamLibrarySettings()
+        public SteamLibrarySettingsViewModel(SteamLibrary library, IPlayniteAPI api) : base(library, api)
         {
-        }
-
-        public SteamLibrarySettings(SteamLibrary library, IPlayniteAPI api)
-        {
-            this.library = library;
-            this.api = api;
-
-            var settings = library.LoadPluginSettings<SteamLibrarySettings>();
-            if (settings != null)
+            var savedSettings = LoadSavedSettings();
+            if (savedSettings != null)
             {
-                if (settings.Version == 0)
+                if (savedSettings.Version == 0)
                 {
-                    logger.Debug("Updating Steam settings from version 0.");
-                    if (settings.ImportUninstalledGames)
+                    Logger.Debug("Updating Steam settings from version 0.");
+                    if (savedSettings.ImportUninstalledGames)
                     {
-                        settings.ConnectAccount = true;
+                        savedSettings.ConnectAccount = true;
                     }
                 }
 
-                settings.Version = 1;
-                LoadValues(settings);
+                savedSettings.Version = 1;
+                Settings = savedSettings;
+            }
+            else
+            {
+                Settings = new SteamLibrarySettings() { Version = 1 };
             }
         }
 
-        public void BeginEdit()
+        public override bool VerifySettings(out List<string> errors)
         {
-            editingClone = this.GetClone();
-        }
-
-        public void CancelEdit()
-        {
-            LoadValues(editingClone);
-        }
-
-        public void EndEdit()
-        {
-            library.SavePluginSettings(this);
-        }
-
-        public bool VerifySettings(out List<string> errors)
-        {
-            if (IsPrivateAccount && ApiKey.IsNullOrEmpty())
+            if (Settings.IsPrivateAccount && Settings.ApiKey.IsNullOrEmpty())
             {
                 errors = new List<string>{ "Steam API key must be specified when using private accounts!" };
                 return false;
@@ -223,21 +183,16 @@ namespace SteamLibrary
             return true;
         }
 
-        private void LoadValues(SteamLibrarySettings source)
-        {
-            source.CopyProperties(this, false, null, true);
-        }
-
         public void ImportSteamCategories(LocalSteamUser user)
         {
             var accId = user == null ? 0 : user.Id;
-            library.ImportSteamCategories(accId);
+            Plugin.ImportSteamCategories(accId);
         }
 
         public void ImportSteamLastActivity(LocalSteamUser user)
         {
             var accId = user == null ? 0 : user.Id;
-            library.ImportSteamLastActivity(accId);
+            Plugin.ImportSteamLastActivity(accId);
         }
 
         private void Login()
@@ -246,7 +201,7 @@ namespace SteamLibrary
             {
                 var steamId = string.Empty;
                 var userName = "Unknown";
-                using (var view = api.WebViews.CreateView(675, 440, Colors.Black))
+                using (var view = PlayniteApi.WebViews.CreateView(675, 440, Colors.Black))
                 {
                     view.LoadingChanged += async (s, e) =>
                     {
@@ -280,20 +235,20 @@ namespace SteamLibrary
 
                 if (!steamId.IsNullOrEmpty())
                 {
-                    UserId = steamId;
+                    Settings.UserId = steamId;
                 }
 
                 if (!userName.IsNullOrEmpty())
                 {
-                    UserName = userName;
+                    Settings.UserName = userName;
                 }
 
                 OnPropertyChanged(nameof(AuthStatus));
             }
             catch (Exception e) when (!Debugger.IsAttached)
             {
-                api.Dialogs.ShowErrorMessage(api.Resources.GetString("LOCNotLoggedInError"), "");
-                logger.Error(e, "Failed to authenticate user.");
+                PlayniteApi.Dialogs.ShowErrorMessage(PlayniteApi.Resources.GetString("LOCNotLoggedInError"), "");
+                Logger.Error(e, "Failed to authenticate user.");
             }
         }
     }

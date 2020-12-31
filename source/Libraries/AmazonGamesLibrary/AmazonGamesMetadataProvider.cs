@@ -15,14 +15,6 @@ namespace AmazonGamesLibrary
 {
     public class AmazonGamesMetadataProvider : LibraryMetadataProvider
     {
-        private ILogger logger = LogManager.GetLogger();
-        private AmazonGamesLibrary library;
-
-        public AmazonGamesMetadataProvider(AmazonGamesLibrary library)
-        {
-            this.library = library;
-        }
-
         public override GameMetadata GetMetadata(Game game)
         {
             var gameInfo = new GameInfo

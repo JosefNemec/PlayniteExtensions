@@ -1,5 +1,6 @@
 ﻿using Playnite;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,58 +9,24 @@ using System.Threading.Tasks;
 
 namespace BethesdaLibrary
 {
-    public class BethesdaLibrarySettings : ObservableObject, ISettings
+    public class BethesdaLibrarySettings
     {
-        private BethesdaLibrarySettings editingClone;
-        private IPlayniteAPI api;
-        private BethesdaLibrary library;
-
-        #region Settings      
-
         public bool ImportInstalledGames { get; set; } = true;
+    }
 
-        #endregion Settings
-
-        public BethesdaLibrarySettings()
+    public class BethesdaLibrarySettingsViewModel : PluginSettingsViewModel<BethesdaLibrarySettings, BethesdaLibrary>
+    {
+        public BethesdaLibrarySettingsViewModel(BethesdaLibrary library, IPlayniteAPI api) : base(library, api)
         {
-        }
-
-        public BethesdaLibrarySettings(BethesdaLibrary library, IPlayniteAPI api)
-        {
-            this.library = library;
-            this.api = api;
-
-            var settings = library.LoadPluginSettings<BethesdaLibrarySettings>();
-            if (settings != null)
+            var savedSettings = LoadSavedSettings();
+            if (savedSettings != null)
             {
-                LoadValues(settings);
+                Settings = savedSettings;
             }
-        }
-
-        public void BeginEdit()
-        {
-            editingClone = this.GetClone();
-        }
-
-        public void CancelEdit()
-        {
-            LoadValues(editingClone);
-        }
-
-        public void EndEdit()
-        {
-            library.SavePluginSettings(this);
-        }
-
-        public bool VerifySettings(out List<string> errors)
-        {
-            errors = null;
-            return true;
-        }
-
-        private void LoadValues(BethesdaLibrarySettings source)
-        {
-            source.CopyProperties(this, false, null, true);
+            else
+            {
+                Settings = new BethesdaLibrarySettings();
+            }
         }
     }
 }

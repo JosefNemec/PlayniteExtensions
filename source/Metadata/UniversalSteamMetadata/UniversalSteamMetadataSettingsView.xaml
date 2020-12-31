@@ -19,13 +19,13 @@
 
     <StackPanel Margin="20">
         <CheckBox Content="Use new vertical cover images"
-                  IsChecked="{Binding DownloadVerticalCovers}" />
+                  IsChecked="{Binding Settings.DownloadVerticalCovers}" />
 
         <TextBlock Text="Background image source:" VerticalAlignment="Center" Margin="0,10,0,10" />
 
         <ComboBox Margin="0,0,0,10"
                   Width="150" HorizontalAlignment="Left"
-                  SelectedValue="{Binding BackgroundSource}"
+                  SelectedValue="{Binding Settings.BackgroundSource}"
                   ItemsSource="{Binding Source={StaticResource BackgroundSourceEnumValues}}" />
     </StackPanel>
 </UserControl>

@@ -34,11 +34,8 @@
     <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AngleSharp.0.9.9\lib\net45\AngleSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Playnite.SDK, Version=5.6.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\PlayniteSDK.5.6.1\lib\net462\Playnite.SDK.dll</HintPath>
+    <Reference Include="Playnite.SDK, Version=5.6.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PlayniteSDK.5.6.6\lib\net462\Playnite.SDK.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -68,9 +65,6 @@
     </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\commands\GlobalCommands.cs">
       <Link>Shared\GlobalCommands.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\CloneObject.cs">
-      <Link>Shared\CloneObject.cs</Link>
     </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\ObjectExtensions.cs">
       <Link>Shared\ObjectExtensions.cs</Link>
@@ -114,6 +108,12 @@
     <Compile Include="..\..\..\playniterepo\source\playnite\converters\NegateConverter.cs">
       <Link>Shared\NegateConverter.cs</Link>
     </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginBase.cs">
+      <Link>Shared\PluginBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginSettingsViewModel.cs">
+      <Link>Shared\PluginSettingsViewModel.cs</Link>
+    </Compile>
     <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\MetadataProvider.cs">
       <Link>SteamShared\MetadataProvider.cs</Link>
     </Compile>
@@ -131,7 +131,7 @@
     </Compile>
     <Compile Include="UniversalSteamMetadata.cs" />
     <Compile Include="UniversalSteamMetadataProvider.cs" />
-    <Compile Include="UniversalSteamMetadataSettings.cs" />
+    <Compile Include="UniversalSteamMetadataSettingsViewModel.cs" />
     <Compile Include="UniversalSteamMetadataSettingsView.xaml.cs">
       <DependentUpon>UniversalSteamMetadataSettingsView.xaml</DependentUpon>
     </Compile>

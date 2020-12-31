@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using Playnite.SDK;
+﻿using Playnite.SDK;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,31 +21,6 @@ namespace Steam.Models
 
         public int success { get; set; }
         public QuerySummary query_summary { get; set; }
-    }
-
-    public class SteamDateConverter : JsonConverter
-    {
-        public override bool CanConvert(Type objectType)
-        {
-            return (objectType == typeof(DateTime?));
-        }
-
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-        {
-            try
-            {
-                return serializer.Deserialize<DateTime?>(reader);
-            }
-            catch
-            {
-                return null;
-            }
-        }
-
-        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-        {
-            writer.WriteValue(value);
-        }
     }
 
     public class StoreSearchResult : GenericItemOption
@@ -73,8 +47,7 @@ namespace Steam.Models
             public class ReleaseDate
             {
                 public bool comming_soon;
-                [JsonConverter(typeof(SteamDateConverter))]
-                public DateTime? date;
+                public string date;
             }
 
             public class Requirement

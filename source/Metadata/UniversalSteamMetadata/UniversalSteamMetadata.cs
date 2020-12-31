@@ -21,62 +21,45 @@ using System.Windows.Controls;
 
 namespace UniversalSteamMetadata
 {
-    public class UniversalSteamMetadata : MetadataPlugin
+    [LoadPlugin]
+    public class UniversalSteamMetadata : MetadataPluginBase<UniversalSteamMetadataSettingsViewModel>
     {
-        private static readonly ILogger logger = LogManager.GetLogger();
         private const string searchUrl = @"https://store.steampowered.com/search/?term={0}&category1=998";
-
         private readonly string[] backgroundUrls = new string[]
         {
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page.bg.jpg",
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page_bg_generated.jpg"
         };
 
-        internal UniversalSteamMetadataSettings Settings { get; set; }
-
-        public override Guid Id { get; } = Guid.Parse("f2db8fb1-4981-4dc4-b087-05c782215b72");
-
-        public override List<MetadataField> SupportedFields { get; } = new List<MetadataField>
+        public UniversalSteamMetadata(IPlayniteAPI api) : base(
+            "Steam Store",
+            Guid.Parse("f2db8fb1-4981-4dc4-b087-05c782215b72"),
+            new List<MetadataField>
+            {
+                MetadataField.Description,
+                MetadataField.BackgroundImage,
+                MetadataField.CommunityScore,
+                MetadataField.CoverImage,
+                MetadataField.CriticScore,
+                MetadataField.Developers,
+                MetadataField.Genres,
+                MetadataField.Icon,
+                MetadataField.Links,
+                MetadataField.Publishers,
+                MetadataField.ReleaseDate,
+                MetadataField.Features,
+                MetadataField.Name
+            },
+            () => new UniversalSteamMetadataSettingsView(),
+            null,
+            api)
         {
-            MetadataField.Description,
-            MetadataField.BackgroundImage,
-            MetadataField.CommunityScore,
-            MetadataField.CoverImage,
-            MetadataField.CriticScore,
-            MetadataField.Developers,
-            MetadataField.Genres,
-            MetadataField.Icon,
-            MetadataField.Links,
-            MetadataField.Publishers,
-            MetadataField.ReleaseDate,
-            MetadataField.Features,
-            MetadataField.Name
-        };
-
-        public override string Name => "Steam Store";
-
-        public UniversalSteamMetadata(IPlayniteAPI api) : base(api)
-        {
-            Settings = new UniversalSteamMetadataSettings(this);
-        }
-
-        public override void Dispose()
-        {
+            SettingsViewModel = new UniversalSteamMetadataSettingsViewModel(this, api);
         }
 
         public override OnDemandMetadataProvider GetMetadataProvider(MetadataRequestOptions options)
         {
             return new UniversalSteamMetadataProvider(options, this);
-        }
-
-        public override ISettings GetSettings(bool firstRunSettings)
-        {
-            return Settings;
-        }
-
-        public override UserControl GetSettingsView(bool firstRunSettings)
-        {
-            return new UniversalSteamMetadataSettingsView();
         }
 
         public static List<StoreSearchResult> GetSearchResults(string searchTerm)

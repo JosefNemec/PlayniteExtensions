@@ -1,6 +1,6 @@
-﻿using Newtonsoft.Json;
-using OriginLibrary.Models;
+﻿using OriginLibrary.Models;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +30,7 @@ namespace OriginLibrary.Services
             client.Headers.Add("accept", "application/vnd.origin.v3+json; x-cache/force-write");
 
             var stringData = client.DownloadString(string.Format(@"https://api1.origin.com/ecommerce2/consolidatedentitlements/{0}?machine_hash=1", userId));
-            var data = JsonConvert.DeserializeObject<AccountEntitlementsResponse>(stringData);
+            var data = Serialization.FromJson<AccountEntitlementsResponse>(stringData);
             return data.entitlements;
         }
 
@@ -39,7 +39,7 @@ namespace OriginLibrary.Services
             var client = new WebClient();
             client.Headers.Add("Authorization", token.token_type + " " + token.access_token);
             var stringData = client.DownloadString(@"https://gateway.ea.com/proxy/identity/pids/me");
-            return JsonConvert.DeserializeObject<AccountInfoResponse>(stringData);
+            return Serialization.FromJson<AccountInfoResponse>(stringData);
         }
 
         public UsageResponse GetUsage(long userId, string gameId, AuthTokenResponse token)
@@ -64,7 +64,7 @@ namespace OriginLibrary.Services
         {
             webView.NavigateAndWait(tokenUrl);
             var stringInfo = webView.GetPageText();
-            var tokenData = JsonConvert.DeserializeObject<AuthTokenResponse>(stringInfo);
+            var tokenData = Serialization.FromJson<AuthTokenResponse>(stringInfo);
             return tokenData;
         }
 

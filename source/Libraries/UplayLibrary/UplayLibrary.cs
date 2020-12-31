@@ -13,19 +13,24 @@ using System.Windows.Controls;
 
 namespace UplayLibrary
 {
-    public class UplayLibrary : LibraryPlugin
+    [LoadPlugin]
+    public class UplayLibrary : LibraryPluginBase<UplayLibrarySettingsViewModel>
     {
-        private ILogger logger = LogManager.GetLogger();
-        private const string dbImportMessageId = "uplaylibImportError";
-
-        internal UplayLibrarySettings LibrarySettings { get; private set; }
-
-        public UplayLibrary(IPlayniteAPI api) : base(api)
+        public UplayLibrary(IPlayniteAPI api) : base(
+            "Ubisoft Connect",
+            Guid.Parse("C2F038E5-8B92-4877-91F1-DA9094155FC5"),
+            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new UplayClient(),
+            Uplay.Icon,
+            (_) => new UplayLibrarySettingsView(),
+            (g) => new UplayGameController(g),
+            () => new UplayMetadataProvider(),
+            api)
         {
-            LibrarySettings = new UplayLibrarySettings(this);
+            SettingsViewModel = new UplayLibrarySettingsViewModel(this, api);
         }
 
-        public GameAction GetGamePlayTask(string id)
+        public static GameAction GetGamePlayTask(string id)
         {
             return new GameAction()
             {
@@ -87,7 +92,7 @@ namespace UplayLibrary
             return games;
         }
 
-        public List<GameInfo> GetInstalledGames()
+        public static List<GameInfo> GetInstalledGames()
         {
             var games = new List<GameInfo>();
 
@@ -126,63 +131,33 @@ namespace UplayLibrary
             return games;
         }
 
-        #region ILibraryPlugin
-
-        public override LibraryClient Client => new UplayClient();
-
-        public override string LibraryIcon => Uplay.Icon;
-
-        public override string Name => "Ubisoft Connect";
-
-        public override Guid Id => Guid.Parse("C2F038E5-8B92-4877-91F1-DA9094155FC5");
-
-        public override LibraryPluginCapabilities Capabilities { get; } = new LibraryPluginCapabilities
-        {
-            CanShutdownClient = true
-        };
-
-        public override ISettings GetSettings(bool firstRunSettings)
-        {
-            return LibrarySettings;
-        }
-
-        public override UserControl GetSettingsView(bool firstRunView)
-        {
-            return new UplayLibrarySettingsView();
-        }
-
-        public override IGameController GetGameController(Game game)
-        {
-            return new UplayGameController(this, game);
-        }
-
         public override IEnumerable<GameInfo> GetGames()
         {
             var allGames = new List<GameInfo>();
             var installedGames = new List<GameInfo>();
             Exception importError = null;
 
-            if (LibrarySettings.ImportInstalledGames)
+            if (SettingsViewModel.Settings.ImportInstalledGames)
             {
                 try
                 {
                     installedGames = GetInstalledGames();
-                    logger.Debug($"Found {installedGames.Count} installed Uplay games.");
+                    Logger.Debug($"Found {installedGames.Count} installed Uplay games.");
                     allGames.AddRange(installedGames);
                 }
                 catch (Exception e)
                 {
-                    logger.Error(e, "Failed to import installed Uplay games.");
+                    Logger.Error(e, "Failed to import installed Uplay games.");
                     importError = e;
                 }
             }
 
-            if (LibrarySettings.ImportUninstalledGames)
+            if (SettingsViewModel.Settings.ImportUninstalledGames)
             {
                 try
                 {
                     var libraryGames = GetLibraryGames();
-                    logger.Debug($"Found {libraryGames.Count} library Uplay games.");
+                    Logger.Debug($"Found {libraryGames.Count} library Uplay games.");
                     foreach (var libGame in libraryGames)
                     {
                         var installed = installedGames.FirstOrDefault(a => a.GameId == libGame.GameId);
@@ -200,7 +175,7 @@ namespace UplayLibrary
                 }
                 catch (Exception e)
                 {
-                    logger.Error(e, "Failed to import uninstalled Uplay games.");
+                    Logger.Error(e, "Failed to import uninstalled Uplay games.");
                     importError = e;
                 }
             }
@@ -208,7 +183,7 @@ namespace UplayLibrary
             if (importError != null)
             {
                 PlayniteApi.Notifications.Add(new NotificationMessage(
-                    dbImportMessageId,
+                    ImportErrorMessageId,
                     string.Format(PlayniteApi.Resources.GetString("LOCLibraryImportError"), Name) +
                     System.Environment.NewLine + importError.Message,
                     NotificationType.Error,
@@ -216,17 +191,10 @@ namespace UplayLibrary
             }
             else
             {
-                PlayniteApi.Notifications.Remove(dbImportMessageId);
+                PlayniteApi.Notifications.Remove(ImportErrorMessageId);
             }
 
             return allGames;
         }
-
-        public override LibraryMetadataProvider GetMetadataDownloader()
-        {
-            return new UplayMetadataProvider();
-        }
-
-        #endregion ILibraryPlugin
     }
 }

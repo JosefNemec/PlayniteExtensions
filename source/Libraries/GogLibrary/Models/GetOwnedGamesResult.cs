@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -10,49 +9,6 @@ namespace GogLibrary.Models
 {
     public class GetOwnedGamesResult
     {
-        // Release date can sometimes contains invalid date if game is not released yet.        
-        class ReleaseDateConverter : JsonConverter
-        {
-            public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-            {
-                if (value == null)
-                {
-                    writer.WriteNull();
-                }
-                else
-                {
-                    DateTime date = (DateTime)value;
-                    writer.WriteValue(date.ToString("yyyy-MM-dd HH:mm:ss.ffffff"));
-                }
-            }
-
-            public override object ReadJson(JsonReader reader, Type objectType, object existingValue,
-                JsonSerializer serializer)
-            {
-                var dataString = (string)reader.Value;
-                if (DateTime.TryParseExact(dataString, "yyyy-MM-dd HH:mm:ss.ffffff", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime date) == true)
-                {
-                    return date;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
-            public override bool CanConvert(Type objectType)
-            {
-                if (objectType == typeof(DateTime) || objectType == typeof(DateTime?))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-        }
-
         public class Tag
         {
             public string id;
@@ -75,8 +31,7 @@ namespace GogLibrary.Models
 
         public class ReleaseDate
         {
-            [JsonConverter(typeof(ReleaseDateConverter))]
-            public DateTime? date;
+            public string date;
             public int timezone_type;
             public string timezone;
         }

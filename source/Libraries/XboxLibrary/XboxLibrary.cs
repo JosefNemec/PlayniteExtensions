@@ -16,26 +16,32 @@ using XboxLibrary.Services;
 
 namespace XboxLibrary
 {
-    public class XboxLibrary : LibraryPlugin
+    [LoadPlugin]
+    public class XboxLibrary : LibraryPluginBase<XboxLibrarySettingsViewModel>
     {
-        private static readonly ILogger logger = LogManager.GetLogger();
-        private const string dbImportMessageId = "xboxlibImportError";
         private readonly string pfnInfoCacheDir;
 
-        internal XboxLibrarySettings Settings { get; set; }
+        public override LibraryClient Client => new XboxLibraryClient(SettingsViewModel);
 
-        public override Guid Id { get; } = Guid.Parse("7e4fbb5e-2ae3-48d4-8ba0-6b30e7a4e287");
-
-        public override string Name => "Xbox";
-
-        public override LibraryClient Client => new XboxLibraryClient(Settings);
-
-        public override string LibraryIcon => Xbox.Icon;
-
-        public XboxLibrary(IPlayniteAPI api) : base(api)
+        public XboxLibrary(IPlayniteAPI api) : base(
+            "Xbox",
+            Guid.Parse("7e4fbb5e-2ae3-48d4-8ba0-6b30e7a4e287"),
+            new LibraryPluginCapabilities(),
+            null,
+            Xbox.Icon,
+            (_) => new XboxLibrarySettingsView(),
+            (g) => new XboxGameController(g, api),
+            null,
+            api)
         {
-            Settings = new XboxLibrarySettings(this);
+            SettingsViewModel = new XboxLibrarySettingsViewModel(this, api);
             pfnInfoCacheDir = Path.Combine(GetPluginUserDataPath(), "PfnInfoCache");
+        }
+
+        public override ISettings GetSettings(bool firstRunSettings)
+        {
+            SettingsViewModel.IsFirstRunUse = firstRunSettings;
+            return SettingsViewModel;
         }
 
         internal GameInfo GetGameInfoFromTitle(TitleHistoryResponse.Title title)
@@ -88,7 +94,7 @@ namespace XboxLibrary
                     }
                     catch (Exception e)
                     {
-                        logger.Error(e, $"Failed to get app info from cache {file}.");
+                        Logger.Error(e, $"Failed to get app info from cache {file}.");
                     }
                 }
             }
@@ -108,7 +114,7 @@ namespace XboxLibrary
             var installedGames = new Dictionary<string, GameInfo>();
             Exception importError = null;
             var allGames = new List<GameInfo>();
-            if (!Settings.ConnectAccount)
+            if (!SettingsViewModel.Settings.ConnectAccount)
             {
                 return allGames;
             }
@@ -127,7 +133,7 @@ namespace XboxLibrary
             }
             catch (Exception e)
             {
-                logger.Error(e, "Failed to Xbox profile titles.");
+                Logger.Error(e, "Failed to Xbox profile titles.");
                 importError = e;
             }
 
@@ -136,7 +142,7 @@ namespace XboxLibrary
                     title.type == "Game" &&
                     title.devices?.Contains("PC") == true).ToList();
 
-            if (Settings.ImportInstalledGames)
+            if (SettingsViewModel.Settings.ImportInstalledGames)
             {
                 try
                 {
@@ -167,7 +173,7 @@ namespace XboxLibrary
                             }
                             catch (Exception e)
                             {
-                                logger.Error(e, $"Failed to get info about installed UWP package {installedApp.AppId}.");
+                                Logger.Error(e, $"Failed to get info about installed UWP package {installedApp.AppId}.");
                             }
                         }
 
@@ -189,21 +195,21 @@ namespace XboxLibrary
                         }
                     }
 
-                    logger.Debug($"Found {installedGames.Count} installed Xbox games.");
+                    Logger.Debug($"Found {installedGames.Count} installed Xbox games.");
                     allGames.AddRange(installedGames.Values.ToList());
                 }
                 catch (Exception e)
                 {
-                    logger.Error(e, "Failed to import installed Xbox games.");
+                    Logger.Error(e, "Failed to import installed Xbox games.");
                     importError = e;
                 }
             }
 
-            if (Settings.ImportUninstalledGames)
+            if (SettingsViewModel.Settings.ImportUninstalledGames)
             {
                 try
                 {
-                    logger.Debug($"Found {pcTitles.Count} Xbox PC games.");
+                    Logger.Debug($"Found {pcTitles.Count} Xbox PC games.");
                     foreach (var libTitle in pcTitles)
                     {
                         if (!installedGames.TryGetValue(libTitle.pfn, out var installed))
@@ -220,12 +226,12 @@ namespace XboxLibrary
                         {
                             var addGame = false;
                             var platform = "";
-                            if (Settings.Import360Games && title.devices.Contains("Xbox360"))
+                            if (SettingsViewModel.Settings.Import360Games && title.devices.Contains("Xbox360"))
                             {
                                 addGame = true;
                                 platform = "Microsoft Xbox 360";
                             }
-                            else if (Settings.ImportXboneGames && title.devices.Contains("XboxOne"))
+                            else if (SettingsViewModel.Settings.ImportXboneGames && title.devices.Contains("XboxOne"))
                             {
                                 addGame = true;
                                 platform = "Microsoft Xbox One";
@@ -243,7 +249,7 @@ namespace XboxLibrary
                 }
                 catch (Exception e)
                 {
-                    logger.Error(e, "Failed to import linked account Xbox games details.");
+                    Logger.Error(e, "Failed to import linked account Xbox games details.");
                     importError = e;
                 }
             }
@@ -251,7 +257,7 @@ namespace XboxLibrary
             if (importError != null)
             {
                 PlayniteApi.Notifications.Add(new NotificationMessage(
-                    dbImportMessageId,
+                    ImportErrorMessageId,
                     string.Format(PlayniteApi.Resources.GetString("LOCLibraryImportError"), Name) +
                     System.Environment.NewLine + importError.Message,
                     NotificationType.Error,
@@ -259,26 +265,10 @@ namespace XboxLibrary
             }
             else
             {
-                PlayniteApi.Notifications.Remove(dbImportMessageId);
+                PlayniteApi.Notifications.Remove(ImportErrorMessageId);
             }
 
             return allGames;
-        }
-
-        public override ISettings GetSettings(bool firstRunSettings)
-        {
-            Settings.IsFirstRunUse = firstRunSettings;
-            return Settings;
-        }
-
-        public override UserControl GetSettingsView(bool firstRunSettings)
-        {
-            return new XboxLibrarySettingsView();
-        }
-
-        public override IGameController GetGameController(Game game)
-        {
-            return new XboxGameController(game, PlayniteApi, Settings);
         }
     }
 }

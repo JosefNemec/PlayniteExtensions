@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,26 +16,26 @@ namespace HumbleLibrary.Models
 
         public class Publisher
         {
-            [JsonProperty("publisher-name")]
+            [SerializationPropertyName("publisher-name")]
             public string publisher_name;
         }
 
         public class Developer
         {
-            [JsonProperty("developer-name")]
+            [SerializationPropertyName("developer-name")]
             public string developer_name;
         }
 
         public string machine_name;
         public string image;
 
-        [JsonProperty("human-name")]
+        [SerializationPropertyName("human-name")]
         public string human_name;
 
-        [JsonProperty("description-text")]
+        [SerializationPropertyName("description-text")]
         public string description_text;
 
-        [JsonProperty("carousel-content")]
+        [SerializationPropertyName("carousel-content")]
         public CarouselContent carousel_content;
 
         public List<Developer> developers;

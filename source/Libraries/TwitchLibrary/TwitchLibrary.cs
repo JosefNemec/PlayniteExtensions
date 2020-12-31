@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using Playnite.Common;
+﻿using Playnite.Common;
 using Playnite.SDK;
 using Playnite.SDK.Data;
 using Playnite.SDK.Models;
@@ -20,18 +19,40 @@ using TwitchLibrary.Services;
 
 namespace TwitchLibrary
 {
-    public class TwitchLibrary : LibraryPlugin
+    [LoadPlugin]
+    public class TwitchLibrary : LibraryPluginBase<TwitchLibrarySettingsViewModel>
     {
-        private ILogger logger = LogManager.GetLogger();
         internal readonly string TokensPath;
-        private const string dbImportMessageId = "twitchlibImportError";
 
-        internal TwitchLibrarySettings LibrarySettings { get; private set; }
-
-        public TwitchLibrary(IPlayniteAPI api) : base(api)
+        public TwitchLibrary(IPlayniteAPI api) : base(
+            "Twitch",
+            Guid.Parse("E2A7D494-C138-489D-BB3F-1D786BEEB675"),
+            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new TwitchClient(),
+            Twitch.Icon,
+            (_) => new TwitchLibrarySettingsView(),
+            null,
+            null,
+            api)
         {
-            LibrarySettings = new TwitchLibrarySettings(this, PlayniteApi);
+            SettingsViewModel = new TwitchLibrarySettingsViewModel(this, PlayniteApi);
             TokensPath = Path.Combine(GetPluginUserDataPath(), "tokens.json");
+        }
+
+        public override ISettings GetSettings(bool firstRunSettings)
+        {
+            SettingsViewModel.IsFirstRunUse = firstRunSettings;
+            return SettingsViewModel;
+        }
+
+        public override IGameController GetGameController(Game game)
+        {
+            return new TwitchGameController(game, this, PlayniteApi);
+        }
+
+        public override LibraryMetadataProvider GetMetadataDownloader()
+        {
+            return new TwitchMetadataProvider(this);
         }
 
         public static GameAction GetPlayAction(string gameId)
@@ -96,13 +117,13 @@ namespace TwitchLibrary
                         }
                         else
                         {
-                            logger.Error("No Twitch auth token found.");
+                            Logger.Error("No Twitch auth token found.");
                         }
                     }
                 }
                 catch (Exception e) when (!PlayniteApi.ApplicationInfo.ThrowAllErrors)
                 {
-                    logger.Error(e, "Failed to get Twitch auth token.");
+                    Logger.Error(e, "Failed to get Twitch auth token.");
                 }
             }
 
@@ -141,66 +162,35 @@ namespace TwitchLibrary
             return games;
         }
 
-        #region ILibraryPlugin
-
-        public override LibraryClient Client => new TwitchClient();
-
-        public override string Name => "Twitch";
-
-        public override string LibraryIcon => Twitch.Icon;
-
-        public override Guid Id => Guid.Parse("E2A7D494-C138-489D-BB3F-1D786BEEB675");
-
-        public override LibraryPluginCapabilities Capabilities { get; } = new LibraryPluginCapabilities
-        {
-            CanShutdownClient = true
-        };
-
-        public override ISettings GetSettings(bool firstRunSettings)
-        {
-            LibrarySettings.IsFirstRunUse = firstRunSettings;
-            return LibrarySettings;
-        }
-
-        public override UserControl GetSettingsView(bool firstRunView)
-        {
-            return new TwitchLibrarySettingsView();
-        }
-
-        public override IGameController GetGameController(Game game)
-        {
-            return new TwitchGameController(game, this, PlayniteApi);
-        }
-
         public override IEnumerable<GameInfo> GetGames()
         {
             var allGames = new List<GameInfo>();
             var installedGames = new Dictionary<string, GameInfo>();
             Exception importError = null;
 
-            if (LibrarySettings.ImportInstalledGames)
+            if (SettingsViewModel.Settings.ImportInstalledGames)
             {
                 try
                 {
                     installedGames = GetInstalledGames();
-                    logger.Debug($"Found {installedGames.Count} installed Twitch games.");
+                    Logger.Debug($"Found {installedGames.Count} installed Twitch games.");
                     allGames.AddRange(installedGames.Values.ToList());
                 }
                 catch (Exception e) when (!PlayniteApi.ApplicationInfo.ThrowAllErrors)
                 {
-                    logger.Error(e, "Failed to import installed Twitch games.");
+                    Logger.Error(e, "Failed to import installed Twitch games.");
                     importError = e;
                 }
             }
 
-            if (LibrarySettings.ConnectAccount)
+            if (SettingsViewModel.Settings.ConnectAccount)
             {
                 try
                 {
                     var libraryGames = GetLibraryGames();
-                    logger.Debug($"Found {libraryGames.Count} library Twitch games.");
+                    Logger.Debug($"Found {libraryGames.Count} library Twitch games.");
 
-                    if (!LibrarySettings.ImportUninstalledGames)
+                    if (!SettingsViewModel.Settings.ImportUninstalledGames)
                     {
                         libraryGames = libraryGames.Where(lg => installedGames.ContainsKey(lg.GameId)).ToList();
                     }
@@ -220,7 +210,7 @@ namespace TwitchLibrary
                 }
                 catch (Exception e) when (!PlayniteApi.ApplicationInfo.ThrowAllErrors)
                 {
-                    logger.Error(e, "Failed to import linked account Twitch games details.");
+                    Logger.Error(e, "Failed to import linked account Twitch games details.");
                     importError = e;
                 }
             }
@@ -228,7 +218,7 @@ namespace TwitchLibrary
             if (importError != null)
             {
                 PlayniteApi.Notifications.Add(new NotificationMessage(
-                    dbImportMessageId,
+                    ImportErrorMessageId,
                     string.Format(PlayniteApi.Resources.GetString("LOCLibraryImportError"), Name) +
                     System.Environment.NewLine + importError.Message,
                     NotificationType.Error,
@@ -236,17 +226,10 @@ namespace TwitchLibrary
             }
             else
             {
-                PlayniteApi.Notifications.Remove(dbImportMessageId);
+                PlayniteApi.Notifications.Remove(ImportErrorMessageId);
             }
 
             return allGames;
         }
-
-        public override LibraryMetadataProvider GetMetadataDownloader()
-        {
-            return new TwitchMetadataProvider(this);
-        }
-
-        #endregion ILibraryPlugin
     }
 }

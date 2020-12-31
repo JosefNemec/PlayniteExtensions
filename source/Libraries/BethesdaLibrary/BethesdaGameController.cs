@@ -18,11 +18,9 @@ namespace BethesdaLibrary
         private CancellationTokenSource watcherToken;
         private ProcessMonitor procMon;
         private Stopwatch stopWatch;
-        private BethesdaLibrary BethesdaLib;
 
-        public BethesdaGameController(BethesdaLibrary library, Game game) : base(game)
+        public BethesdaGameController(Game game) : base(game)
         {
-            BethesdaLib = library;
         }
 
         public override void Dispose()
@@ -89,7 +87,7 @@ namespace BethesdaLibrary
         public async void StartInstallWatcher()
         {
             watcherToken = new CancellationTokenSource();
-    
+
             while (true)
             {
                 if (watcherToken.IsCancellationRequested)
@@ -97,7 +95,7 @@ namespace BethesdaLibrary
                     return;
                 }
 
-                var installedGame = BethesdaLib.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
+                var installedGame = BethesdaLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
                 if (installedGame != null)
                 {
                     var installInfo = new GameInfo()
@@ -105,7 +103,7 @@ namespace BethesdaLibrary
                         PlayAction = installedGame.PlayAction,
                         InstallDirectory = installedGame.InstallDirectory
                     };
-                    
+
                     OnInstalled(this, new GameInstalledEventArgs(installInfo, this, 0));
                     return;
                 }
@@ -117,7 +115,7 @@ namespace BethesdaLibrary
         public async void StartUninstallWatcher()
         {
             watcherToken = new CancellationTokenSource();
-     
+
             while (true)
             {
                 if (watcherToken.IsCancellationRequested)
@@ -125,7 +123,7 @@ namespace BethesdaLibrary
                     return;
                 }
 
-                if (BethesdaLib.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId) == null)
+                if (BethesdaLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId) == null)
                 {
                     OnUninstalled(this, new GameControllerEventArgs(this, 0));
                     return;

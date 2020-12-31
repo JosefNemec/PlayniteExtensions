@@ -1,6 +1,6 @@
 ﻿using HumbleLibrary.Services;
-using Newtonsoft.Json;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,26 +10,21 @@ using System.Threading.Tasks;
 
 namespace HumbleLibrary
 {
-    public class HumbleLibrarySettings : ObservableObject, ISettings
+    public class HumbleLibrarySettings
     {
-        private static ILogger logger = LogManager.GetLogger();
-        private HumbleLibrarySettings editingClone;
-        private readonly HumbleLibrary plugin;
-
         public bool ConnectAccount { get; set; } = false;
-
         public bool IgnoreThirdPartyStoreGames { get; set; } = true;
-
         public bool ImportThirdPartyDrmFree { get; set; } = false;
-
         public bool ImportTroveGames { get; set; } = false;
+    }
 
-        [JsonIgnore]
+    public class HumbleLibrarySettingsViewModel : PluginSettingsViewModel<HumbleLibrarySettings, HumbleLibrary>
+    {
         public bool IsUserLoggedIn
         {
             get
             {
-                using (var view = plugin.PlayniteApi.WebViews.CreateOffscreenView(
+                using (var view = PlayniteApi.WebViews.CreateOffscreenView(
                     new WebViewSettings
                     {
                         JavaScriptEnabled = false
@@ -41,7 +36,6 @@ namespace HumbleLibrary
             }
         }
 
-        [JsonIgnore]
         public RelayCommand<object> LoginCommand
         {
             get => new RelayCommand<object>((a) =>
@@ -50,51 +44,24 @@ namespace HumbleLibrary
             });
         }
 
-        public HumbleLibrarySettings()
+        public HumbleLibrarySettingsViewModel(HumbleLibrary plugin, IPlayniteAPI api) : base(plugin, api)
         {
-        }
-
-        public HumbleLibrarySettings(HumbleLibrary plugin)
-        {
-            this.plugin = plugin;
-            var savedSettings = plugin.LoadPluginSettings<HumbleLibrarySettings>();
+            var savedSettings = LoadSavedSettings();
             if (savedSettings != null)
             {
-                LoadValues(savedSettings);
+                Settings = savedSettings;
             }
-        }
-
-        public void BeginEdit()
-        {
-            editingClone = this.GetClone();
-        }
-
-        public void CancelEdit()
-        {
-            LoadValues(editingClone);
-        }
-
-        public void EndEdit()
-        {
-            plugin.SavePluginSettings(this);
-        }
-
-        private void LoadValues(HumbleLibrarySettings source)
-        {
-            source.CopyProperties(this, false, null, true);
-        }
-
-        public bool VerifySettings(out List<string> errors)
-        {
-            errors = new List<string>();
-            return true;
+            else
+            {
+                Settings = new HumbleLibrarySettings();
+            }
         }
 
         private void Login()
         {
             try
             {
-                using (var view = plugin.PlayniteApi.WebViews.CreateView(490, 670))
+                using (var view = PlayniteApi.WebViews.CreateView(490, 670))
                 {
                     var api = new HumbleAccountClient(view);
                     api.Login();
@@ -104,7 +71,7 @@ namespace HumbleLibrary
             }
             catch (Exception e) when (!Debugger.IsAttached)
             {
-                logger.Error(e, "Failed to authenticate user.");
+                Logger.Error(e, "Failed to authenticate user.");
             }
         }
     }

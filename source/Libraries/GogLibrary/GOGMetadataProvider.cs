@@ -19,16 +19,16 @@ namespace GogLibrary
     {
         private GogApiClient apiClient = new GogApiClient();
         private ILogger logger = LogManager.GetLogger();
-        private GogLibrary library;
+        private IPlayniteAPI api;
 
-        public GogMetadataProvider(GogLibrary library)
+        public GogMetadataProvider(IPlayniteAPI api)
         {
-            this.library = library;
+            this.api = api;
         }
 
         public override GameMetadata GetMetadata(Game game)
         {
-            var resources = library.PlayniteApi.Resources;
+            var resources = api.Resources;
             var storeData = DownloadGameMetadata(game);
             if (storeData.GameDetails == null)
             {

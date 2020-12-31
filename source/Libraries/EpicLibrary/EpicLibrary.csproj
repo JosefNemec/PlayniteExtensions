@@ -34,11 +34,8 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Playnite.SDK, Version=5.6.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\PlayniteSDK.5.6.1\lib\net462\Playnite.SDK.dll</HintPath>
+    <Reference Include="Playnite.SDK, Version=5.6.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PlayniteSDK.5.6.6\lib\net462\Playnite.SDK.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -68,9 +65,6 @@
     </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\BitmapIconExtensions.cs">
       <Link>Shared\BitmapIconExtensions.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\CloneObject.cs">
-      <Link>Shared\CloneObject.cs</Link>
     </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\Enums.cs">
       <Link>Shared\Enums.cs</Link>
@@ -144,11 +138,17 @@
     <Compile Include="..\..\..\playniterepo\source\playnite\GameActionActivator.cs">
       <Link>Shared\GameActionActivator.cs</Link>
     </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginBase.cs">
+      <Link>Shared\PluginBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginSettingsViewModel.cs">
+      <Link>Shared\PluginSettingsViewModel.cs</Link>
+    </Compile>
     <Compile Include="EpicClient.cs" />
     <Compile Include="EpicGameController.cs" />
     <Compile Include="EpicLauncher.cs" />
     <Compile Include="EpicLibrary.cs" />
-    <Compile Include="EpicLibrarySettings.cs" />
+    <Compile Include="EpicLibrarySettingsViewModel.cs" />
     <Compile Include="EpicLibrarySettingsView.xaml.cs">
       <DependentUpon>EpicLibrarySettingsView.xaml</DependentUpon>
     </Compile>

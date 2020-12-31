@@ -17,25 +17,25 @@
 
     <StackPanel Margin="20">
         <CheckBox Name="CheckXboxConnectAccount"
-                  IsChecked="{Binding ConnectAccount}"
+                  IsChecked="{Binding Settings.ConnectAccount}"
                   Content="{DynamicResource LOCSettingsConnectAccount}"/>
 
         <StackPanel DockPanel.Dock="Top" Margin="40,5,5,5"
                     IsEnabled="{Binding IsChecked, ElementName=CheckXboxConnectAccount}">
             <CheckBox Name="CheckXboxImportInstalled" Margin="0,10,0,0"
-                      IsChecked="{Binding ImportInstalledGames}"
+                      IsChecked="{Binding Settings.ImportInstalledGames}"
                       Content="{DynamicResource LOCSettingsImportInstalledLabel}"/>
 
             <CheckBox Name="CheckXboxImportUninstalled" Margin="0,15,0,0"
-                      IsChecked="{Binding ImportUninstalledGames}"
+                      IsChecked="{Binding Settings.ImportUninstalledGames}"
                       Content="{DynamicResource LOCSettingsImportUninstalledLabel}"/>
 
             <CheckBox Margin="0,15,0,0"
-                      IsChecked="{Binding Import360Games}"
+                      IsChecked="{Binding Settings.Import360Games}"
                       Content="{DynamicResource LOCXboxImport360Games}"/>
 
             <CheckBox Margin="0,15,0,0"
-                      IsChecked="{Binding ImportXboneGames}"
+                      IsChecked="{Binding Settings.ImportXboneGames}"
                       Content="{DynamicResource LOCXboxImportXboneGames}"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,15,0,10">
@@ -66,8 +66,8 @@
                 </TextBlock>
             </StackPanel>
         </StackPanel>
-        
-        <CheckBox IsChecked="{Binding XboxAppClientPriorityLaunch}"
+
+        <CheckBox IsChecked="{Binding Settings.XboxAppClientPriorityLaunch}"
                   Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}"
                   Content="{DynamicResource LOCXboxXboxAppClientPriorityLaunch}"/>
 

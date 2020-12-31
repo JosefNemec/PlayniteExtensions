@@ -10,13 +10,13 @@ namespace XboxLibrary
 {
     public class XboxLibraryClient : LibraryClient
     {
-        private readonly XboxLibrarySettings settings;
+        private readonly XboxLibrarySettingsViewModel settings;
 
         public override bool IsInstalled => true;
 
         public override string Icon => Xbox.Icon;
 
-        public XboxLibraryClient(XboxLibrarySettings settings)
+        public XboxLibraryClient(XboxLibrarySettingsViewModel settings)
         {
             this.settings = settings;
         }
@@ -28,7 +28,7 @@ namespace XboxLibrary
                 throw new Exception("Xbox game library is only supported on Windows 10.");
             }
 
-            if (settings.XboxAppClientPriorityLaunch && Xbox.IsXboxPassAppInstalled)
+            if (settings.Settings.XboxAppClientPriorityLaunch && Xbox.IsXboxPassAppInstalled)
             {
                 Xbox.OpenXboxPassApp();
             }

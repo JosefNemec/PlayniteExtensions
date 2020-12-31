@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,7 +26,7 @@ namespace TwitchLibrary.Services
             request.Headers.Add("Content-Encoding", "amz-1.0");
             request.ContentType = "application/json; charset=utf-8";
             request.UserAgent = "FuelSDK/release-1.0.0.0";
-            request.Method = "POST";            
+            request.Method = "POST";
             request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
 
             using (var streamWriter = new StreamWriter(request.GetRequestStream()))
@@ -43,8 +43,8 @@ namespace TwitchLibrary.Services
                 result = streamReader.ReadToEnd();
             }
 
-            var goods = JsonConvert.DeserializeObject<EntitlementsResponse>(result);
-            return goods.entitlements;                
+            var goods = Serialization.FromJson<EntitlementsResponse>(result);
+            return goods.entitlements;
         }
     }
 }

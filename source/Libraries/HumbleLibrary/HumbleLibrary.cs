@@ -18,30 +18,21 @@ using System.Windows.Controls;
 
 namespace HumbleLibrary
 {
-    public class HumbleLibrary : LibraryPlugin
+    [LoadPlugin]
+    public class HumbleLibrary : LibraryPluginBase<HumbleLibrarySettingsViewModel>
     {
-        private const string dbImportMessageId = "humblelibImportError";
-        private static readonly ILogger logger = LogManager.GetLogger();
-
-        internal HumbleLibrarySettings Settings { get; set; }
-
-        public override Guid Id { get; } = Guid.Parse("96e8c4bc-ec5c-4c8b-87e7-18ee5a690626");
-
-        public override string Name => "Humble";
-
-        public override LibraryPluginCapabilities Capabilities { get; } = new LibraryPluginCapabilities
+        public HumbleLibrary(IPlayniteAPI api) : base(
+            "Humble",
+            Guid.Parse("96e8c4bc-ec5c-4c8b-87e7-18ee5a690626"),
+            new LibraryPluginCapabilities { CanShutdownClient = false, HasCustomizedGameImport = true },
+            null,
+            Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"icon.png"),
+            (_) => new HumbleLibrarySettingsView(),
+            (g) => new HumbleGameController(g),
+            null,
+            api)
         {
-            CanShutdownClient = false,
-            HasCustomizedGameImport = true
-        };
-
-        public static string Icon { get; } = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"icon.png");
-
-        public override string LibraryIcon => Icon;
-
-        public HumbleLibrary(IPlayniteAPI api) : base(api)
-        {
-            Settings = new HumbleLibrarySettings(this);
+            SettingsViewModel = new HumbleLibrarySettingsViewModel(this, PlayniteApi);
         }
 
         private static string GetGameId(Order.SubProduct product)
@@ -54,7 +45,7 @@ namespace HumbleLibrary
             return $"{troveGame.machine_name}_{troveGame.human_name}_TROVE";
         }
 
-        public static List<GameInfo> GetTroveGames()
+        public List<GameInfo> GetTroveGames()
         {
             var chunkDataUrlBase = @"https://www.humblebundle.com/api/v1/trove/chunk?property=popularity&direction=desc&index=";
             var games = new List<GameInfo>();
@@ -88,7 +79,7 @@ namespace HumbleLibrary
                 }
                 else
                 {
-                    logger.Warn("Failed to get number of trove chunks.");
+                    Logger.Warn("Failed to get number of trove chunks.");
                 }
             }
 
@@ -99,7 +90,7 @@ namespace HumbleLibrary
         {
             var importedGames = new List<Game>();
             Exception importError = null;
-            if (!Settings.ConnectAccount)
+            if (!SettingsViewModel.Settings.ConnectAccount)
             {
                 return importedGames;
             }
@@ -135,7 +126,7 @@ namespace HumbleLibrary
 
                             if (product.downloads?.Any(a => a.platform == "windows") == true)
                             {
-                                if (Settings.IgnoreThirdPartyStoreGames && order.tpkd_dict?.all_tpks.HasItems() == true)
+                                if (SettingsViewModel.Settings.IgnoreThirdPartyStoreGames && order.tpkd_dict?.all_tpks.HasItems() == true)
                                 {
                                     var exst = allTpks.FirstOrDefault(a =>
                                     !a.human_name.IsNullOrEmpty() &&
@@ -144,7 +135,7 @@ namespace HumbleLibrary
                                     Regex.IsMatch(a.human_name, product.human_name + @".*\s\(?Steam\)?$", RegexOptions.IgnoreCase) ||
                                     Regex.IsMatch(a.human_name + @"\s*+$", product.human_name, RegexOptions.IgnoreCase)));
 
-                                    if (exst != null && !Settings.ImportThirdPartyDrmFree)
+                                    if (exst != null && !SettingsViewModel.Settings.ImportThirdPartyDrmFree)
                                     {
                                         continue;
                                     }
@@ -178,7 +169,7 @@ namespace HumbleLibrary
                     }
                 }
 
-                if (Settings.ImportTroveGames)
+                if (SettingsViewModel.Settings.ImportTroveGames)
                 {
                     foreach (var troveGame in GetTroveGames())
                     {
@@ -198,14 +189,14 @@ namespace HumbleLibrary
             }
             catch (Exception e)
             {
-                logger.Error(e, "Failed to import Humble games.");
+                Logger.Error(e, "Failed to import Humble games.");
                 importError = e;
             }
 
             if (importError != null)
             {
                 PlayniteApi.Notifications.Add(new NotificationMessage(
-                    dbImportMessageId,
+                    ImportErrorMessageId,
                     string.Format(PlayniteApi.Resources.GetString("LOCLibraryImportError"), Name) +
                     System.Environment.NewLine + importError.Message,
                     NotificationType.Error,
@@ -213,7 +204,7 @@ namespace HumbleLibrary
             }
             else
             {
-                PlayniteApi.Notifications.Remove(dbImportMessageId);
+                PlayniteApi.Notifications.Remove(ImportErrorMessageId);
             }
 
             return importedGames;
@@ -221,17 +212,7 @@ namespace HumbleLibrary
 
         public override ISettings GetSettings(bool firstRunSettings)
         {
-            return Settings;
-        }
-
-        public override UserControl GetSettingsView(bool firstRunSettings)
-        {
-            return new HumbleLibrarySettingsView();
-        }
-
-        public override IGameController GetGameController(Game game)
-        {
-            return new HumbleGameController(game);
+            return SettingsViewModel;
         }
     }
 }

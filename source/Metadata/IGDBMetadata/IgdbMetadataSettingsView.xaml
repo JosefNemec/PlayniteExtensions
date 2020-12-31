@@ -15,11 +15,11 @@
     
     <StackPanel Margin="20">
         <CheckBox Content="{DynamicResource LOCIgdbUseScreenshotIfNecessary}"
-                  IsChecked="{Binding UseScreenshotsIfNecessary}"/>
+                  IsChecked="{Binding Settings.UseScreenshotsIfNecessary}"/>
 
         <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
             <TextBlock Text="{DynamicResource LOCIgdbMultipleArtworkOptionsTitle}" VerticalAlignment="Center"/>
-            <ComboBox SelectedValue="{Binding ImageSelectionPriority}"
+            <ComboBox SelectedValue="{Binding Settings.ImageSelectionPriority}"
                       Margin="5,0,0,0">
                 <ComboBox.ItemsSource>
                     <x:Array Type="{x:Type sys:Enum}">

@@ -32,11 +32,8 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Playnite.SDK, Version=5.6.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\PlayniteSDK.5.6.1\lib\net462\Playnite.SDK.dll</HintPath>
+    <Reference Include="Playnite.SDK, Version=5.6.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PlayniteSDK.5.6.6\lib\net462\Playnite.SDK.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -65,9 +62,6 @@
     </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\BitmapIconExtensions.cs">
       <Link>Shared\BitmapIconExtensions.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\CloneObject.cs">
-      <Link>Shared\CloneObject.cs</Link>
     </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\IconExtension.cs">
       <Link>Shared\IconExtension.cs</Link>
@@ -123,6 +117,12 @@
     <Compile Include="..\..\..\playniterepo\source\playnite\converters\NegateConverter.cs">
       <Link>Shared\NegateConverter.cs</Link>
     </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginBase.cs">
+      <Link>Shared\PluginBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginSettingsViewModel.cs">
+      <Link>Shared\PluginSettingsViewModel.cs</Link>
+    </Compile>
     <Compile Include="Environment.cs" />
     <Compile Include="Models\EntitlementsResponse.cs" />
     <Compile Include="Models\GameConfiguration.cs" />
@@ -133,7 +133,7 @@
     <Compile Include="Twitch.cs" />
     <Compile Include="TwitchGameController.cs" />
     <Compile Include="TwitchLibrary.cs" />
-    <Compile Include="TwitchLibrarySettings.cs" />
+    <Compile Include="TwitchLibrarySettingsViewModel.cs" />
     <Compile Include="TwitchLibrarySettingsView.xaml.cs">
       <DependentUpon>TwitchLibrarySettingsView.xaml</DependentUpon>
     </Compile>

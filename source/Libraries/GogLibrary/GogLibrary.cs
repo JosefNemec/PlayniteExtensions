@@ -1,8 +1,8 @@
 ﻿using GogLibrary.Models;
 using GogLibrary.Services;
-using Newtonsoft.Json;
 using Playnite.Common;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 using System;
@@ -19,16 +19,26 @@ using System.Windows.Controls;
 
 namespace GogLibrary
 {
-    public class GogLibrary : LibraryPlugin
+    [LoadPlugin]
+    public class GogLibrary : LibraryPluginBase<GogLibrarySettingsViewModel>
     {
-        private ILogger logger = LogManager.GetLogger();
-        private const string dbImportMessageId = "goglibImportError";
-
-        internal GogLibrarySettings LibrarySettings { get; private set; }
-
-        public GogLibrary(IPlayniteAPI api) : base(api)
+        public GogLibrary(IPlayniteAPI api) : base(
+            "GOG",
+            Guid.Parse("AEBE8B7C-6DC3-4A66-AF31-E7375C6B5E9E"),
+            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new GogClient(),
+            Gog.Icon,
+            (_) => new GogLibrarySettingsView(),
+            null,
+            () => new GogMetadataProvider(api),
+            api)
         {
-            LibrarySettings = new GogLibrarySettings(this, api);
+            SettingsViewModel = new GogLibrarySettingsViewModel(this, api);
+        }
+
+        public override IGameController GetGameController(Game game)
+        {
+            return new GogGameController(game, this, SettingsViewModel, PlayniteApi);
         }
 
         internal Tuple<GameAction, List<GameAction>> GetGameTasks(string gameId, string installDir)
@@ -39,7 +49,7 @@ namespace GogLibrary
                 return new Tuple<GameAction, List<GameAction>>(null, null);
             }
 
-            var gameTaskData = JsonConvert.DeserializeObject<GogGameActionInfo>(File.ReadAllText(gameInfoPath));
+            var gameTaskData = Serialization.FromJsonFile<GogGameActionInfo>(gameInfoPath);
             var playTask = gameTaskData.playTasks.FirstOrDefault(a => a.isPrimary)?.ConvertToGenericTask(installDir);
             if (playTask != null)
             {
@@ -167,66 +177,35 @@ namespace GogLibrary
             }
         }
 
-        #region ILibraryPlugin
-
-        public override LibraryClient Client => new GogClient();
-
-        public override string Name => "GOG";
-
-        public override string LibraryIcon => Gog.Icon;
-
-        public override Guid Id => Guid.Parse("AEBE8B7C-6DC3-4A66-AF31-E7375C6B5E9E");
-
-        public override LibraryPluginCapabilities Capabilities { get; } = new LibraryPluginCapabilities
-        {
-            CanShutdownClient = true
-        };
-
-        public override ISettings GetSettings(bool firstRunSettings)
-        {
-            LibrarySettings.IsFirstRunUse = firstRunSettings;
-            return LibrarySettings;
-        }
-
-        public override UserControl GetSettingsView(bool firstRunView)
-        {
-            return new GogLibrarySettingsView();
-        }
-
-        public override IGameController GetGameController(Game game)
-        {
-            return new GogGameController(game, this, LibrarySettings, PlayniteApi);
-        }
-
         public override IEnumerable<GameInfo> GetGames()
         {
             var allGames = new List<GameInfo>();
             var installedGames = new Dictionary<string, GameInfo>();
             Exception importError = null;
 
-            if (LibrarySettings.ImportInstalledGames)
+            if (SettingsViewModel.Settings.ImportInstalledGames)
             {
                 try
                 {
                     installedGames = GetInstalledGames();
-                    logger.Debug($"Found {installedGames.Count} installed GOG games.");
+                    Logger.Debug($"Found {installedGames.Count} installed GOG games.");
                     allGames.AddRange(installedGames.Values.ToList());
                 }
                 catch (Exception e)
                 {
-                    logger.Error(e, "Failed to import installed GOG games.");
+                    Logger.Error(e, "Failed to import installed GOG games.");
                     importError = e;
                 }
             }
 
-            if (LibrarySettings.ConnectAccount)
+            if (SettingsViewModel.Settings.ConnectAccount)
             {
                 try
                 {
                     var libraryGames = GetLibraryGames();
-                    logger.Debug($"Found {libraryGames.Count} library GOG games.");
+                    Logger.Debug($"Found {libraryGames.Count} library GOG games.");
 
-                    if (!LibrarySettings.ImportUninstalledGames)
+                    if (!SettingsViewModel.Settings.ImportUninstalledGames)
                     {
                         libraryGames = libraryGames.Where(lg => installedGames.ContainsKey(lg.GameId)).ToList();
                     }
@@ -246,7 +225,7 @@ namespace GogLibrary
                 }
                 catch (Exception e)
                 {
-                    logger.Error(e, "Failed to import linked account GOG games details.");
+                    Logger.Error(e, "Failed to import linked account GOG games details.");
                     importError = e;
                 }
             }
@@ -254,7 +233,7 @@ namespace GogLibrary
             if (importError != null)
             {
                 PlayniteApi.Notifications.Add(new NotificationMessage(
-                    dbImportMessageId,
+                    ImportErrorMessageId,
                     string.Format(PlayniteApi.Resources.GetString("LOCLibraryImportError"), Name) +
                     System.Environment.NewLine + importError.Message,
                     NotificationType.Error,
@@ -262,17 +241,10 @@ namespace GogLibrary
             }
             else
             {
-                PlayniteApi.Notifications.Remove(dbImportMessageId);
+                PlayniteApi.Notifications.Remove(ImportErrorMessageId);
             }
 
             return allGames;
         }
-
-        public override LibraryMetadataProvider GetMetadataDownloader()
-        {
-            return new GogMetadataProvider(this);
-        }
-
-        #endregion ILibraryPlugin
     }
 }

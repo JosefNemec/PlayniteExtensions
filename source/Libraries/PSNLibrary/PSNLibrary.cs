@@ -16,29 +16,26 @@ using System.Windows.Controls;
 
 namespace PSNLibrary
 {
-    public class PSNLibrary : LibraryPlugin
+    [LoadPlugin]
+    public class PSNLibrary : LibraryPluginBase<PSNLibrarySettingsViewModel>
     {
-        private const string dbImportMessageId = "psnlibImportError";
-        private static readonly ILogger logger = LogManager.GetLogger();
-        private PSNLibrarySettings settings { get; set; }
         private const string ps4PlatformName = "Sony PlayStation 4";
         private const string ps3PlatformName = "Sony PlayStation 3";
         private const string psvitaPlatformName = "Sony PlayStation Vita";
         private const string pspPlatformName = "Sony PSP";
 
-        public static string Icon { get; } = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"icon.png");
-        public override string LibraryIcon => Icon;
-        public override Guid Id { get; } = Guid.Parse("e4ac81cb-1b1a-4ec9-8639-9a9633989a71");
-        public override string Name => "PlayStation";
-        public override LibraryPluginCapabilities Capabilities { get; } = new LibraryPluginCapabilities
+        public PSNLibrary(IPlayniteAPI api) : base(
+            "PlayStation",
+            Guid.Parse("e4ac81cb-1b1a-4ec9-8639-9a9633989a71"),
+            new LibraryPluginCapabilities { CanShutdownClient = false, HasCustomizedGameImport = true },
+            null,
+            Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"icon.png"),
+            (_) => new PSNLibrarySettingsView(),
+            (g) => new PSNGameController(g),
+            null,
+            api)
         {
-            CanShutdownClient = false,
-            HasCustomizedGameImport = true
-        };
-
-        public PSNLibrary(IPlayniteAPI api) : base(api)
-        {
-            settings = new PSNLibrarySettings(this);
+            SettingsViewModel = new PSNLibrarySettingsViewModel(this, api);
         }
 
         private string ParseOldPlatform(PlatformHash ids)
@@ -192,7 +189,7 @@ namespace PSNLibrary
         {
             var importedGames = new List<Game>();
             Exception importError = null;
-            if (!settings.ConnectAccount)
+            if (!SettingsViewModel.Settings.ConnectAccount)
             {
                 return importedGames;
             }
@@ -222,14 +219,14 @@ namespace PSNLibrary
             }
             catch (Exception e) when (!Debugger.IsAttached)
             {
-                logger.Error(e, "Failed to import PSN games.");
+                Logger.Error(e, "Failed to import PSN games.");
                 importError = e;
             }
 
             if (importError != null)
             {
                 PlayniteApi.Notifications.Add(new NotificationMessage(
-                    dbImportMessageId,
+                    ImportErrorMessageId,
                     string.Format(PlayniteApi.Resources.GetString("LOCLibraryImportError"), Name) +
                     System.Environment.NewLine + importError.Message,
                     NotificationType.Error,
@@ -237,25 +234,10 @@ namespace PSNLibrary
             }
             else
             {
-                PlayniteApi.Notifications.Remove(dbImportMessageId);
+                PlayniteApi.Notifications.Remove(ImportErrorMessageId);
             }
 
             return importedGames;
-        }
-
-        public override ISettings GetSettings(bool firstRunSettings)
-        {
-            return settings;
-        }
-
-        public override UserControl GetSettingsView(bool firstRunSettings)
-        {
-            return new PSNLibrarySettingsView();
-        }
-
-        public override IGameController GetGameController(Game game)
-        {
-            return new PSNGameController(game);
         }
     }
 }

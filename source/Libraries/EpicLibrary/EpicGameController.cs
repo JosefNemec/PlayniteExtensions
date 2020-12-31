@@ -16,37 +16,17 @@ namespace EpicLibrary
 {
     public class EpicGameController : BaseGameController
     {
-        private static List<string> launchelessExceptions = new List<string>
-        {
-            "Duckbill",     // Yooka-Laylee and the Impossible Lair
-            "Vulture",      // Faeria
-            "Stellula",     // Farming Simulator 19
-            "Albacore",     // Assassins Creed Syndicate
-            "Sundrop",      // For Honor
-            "Wombat",       // World War Z
-            "Eel",          // Kingdom Come Deliverance
-            "Dodo",         // Borderlands 2
-            "Turkey",       // Borderlands TPS
-            "Kinglet",      // Civ 6
-            "9d2d0eb64d5c44529cece33fe2a46482", // GTA 5
-            "UnrealTournamentDev",  // Unreal Tournament 4
-            "AzaleaAlpha",  // The Cycle
-            "11e598b192324994abce05bad4f81b50", // A Total War Saga: TROY
-        };
-
         private static ILogger logger = LogManager.GetLogger();
         private CancellationTokenSource watcherToken;
         private ProcessMonitor procMon;
         private Stopwatch stopWatch;
         private readonly IPlayniteAPI api;
         private readonly Game game;
-        private readonly EpicLibrarySettings settings;
 
-        public EpicGameController(Game game, IPlayniteAPI api, EpicLibrarySettings settings) : base(game)
+        public EpicGameController(Game game, IPlayniteAPI api) : base(game)
         {
             this.api = api;
             this.game = game;
-            this.settings = settings;
         }
 
         public override void Dispose()

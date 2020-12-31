@@ -37,11 +37,8 @@
     <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AngleSharp.0.9.9\lib\net45\AngleSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Playnite.SDK, Version=5.6.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\PlayniteSDK.5.6.1\lib\net462\Playnite.SDK.dll</HintPath>
+    <Reference Include="Playnite.SDK, Version=5.6.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PlayniteSDK.5.6.6\lib\net462\Playnite.SDK.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -62,9 +59,6 @@
     </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\commands\GlobalCommands.cs">
       <Link>Shared\GlobalCommands.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\CloneObject.cs">
-      <Link>Shared\CloneObject.cs</Link>
     </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\Enums.cs">
       <Link>Shared\Enums.cs</Link>
@@ -114,10 +108,16 @@
     <Compile Include="..\..\..\playniterepo\source\playnite\GameActionActivator.cs">
       <Link>Shared\GameActionActivator.cs</Link>
     </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginBase.cs">
+      <Link>Shared\PluginBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginSettingsViewModel.cs">
+      <Link>Shared\PluginSettingsViewModel.cs</Link>
+    </Compile>
     <Compile Include="HumbleGameController.cs" />
     <Compile Include="HumbleLibraryClient.cs" />
     <Compile Include="HumbleLibrary.cs" />
-    <Compile Include="HumbleLibrarySettings.cs" />
+    <Compile Include="HumbleLibrarySettingsViewModel.cs" />
     <Compile Include="HumbleLibrarySettingsView.xaml.cs">
       <DependentUpon>HumbleLibrarySettingsView.xaml</DependentUpon>
     </Compile>

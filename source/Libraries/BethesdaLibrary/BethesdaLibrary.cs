@@ -13,19 +13,24 @@ using System.Windows.Controls;
 
 namespace BethesdaLibrary
 {
-    public class BethesdaLibrary : LibraryPlugin
+    [LoadPlugin]
+    public class BethesdaLibrary : LibraryPluginBase<BethesdaLibrarySettingsViewModel>
     {
-        private ILogger logger = LogManager.GetLogger();
-        private const string dbImportMessageId = "bethesdalibImportError";
-
-        internal BethesdaLibrarySettings LibrarySettings { get; private set; }
-
-        public BethesdaLibrary(IPlayniteAPI api) : base(api)
+        public BethesdaLibrary(IPlayniteAPI api) : base(
+            "Bethesda",
+            Guid.Parse("0E2E793E-E0DD-4447-835C-C44A1FD506EC"),
+            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new BethesdaClient(),
+            Bethesda.Icon,
+            (a) => a ? null : new BethesdaLibrarySettingsView(),
+            (g) => new BethesdaGameController(g),
+            () => new BethesdaMetadataProvider(),
+            api)
         {
-            LibrarySettings = new BethesdaLibrarySettings(this, PlayniteApi);
+            SettingsViewModel = new BethesdaLibrarySettingsViewModel(this, PlayniteApi);
         }
 
-        public GameAction GetGamePlayTask(string id)
+        public static GameAction GetGamePlayTask(string id)
         {
             return new GameAction()
             {
@@ -35,7 +40,7 @@ namespace BethesdaLibrary
             };
         }
 
-        public List<GameInfo> GetInstalledGames()
+        public static List<GameInfo> GetInstalledGames()
         {
             var games = new List<GameInfo>();
 
@@ -66,53 +71,28 @@ namespace BethesdaLibrary
             return games;
         }
 
-        #region ILibraryPlugin
-
-        public override LibraryClient Client => new BethesdaClient();
-
-        public override string LibraryIcon => Bethesda.Icon;
-
-        public override string Name => "Bethesda";
-
-        public override Guid Id => Guid.Parse("0E2E793E-E0DD-4447-835C-C44A1FD506EC");
-
-        public override LibraryPluginCapabilities Capabilities { get; } = new LibraryPluginCapabilities
-        {
-            CanShutdownClient = true
-        };
-
         public override ISettings GetSettings(bool firstRunSettings)
         {
-            return firstRunSettings ? null : LibrarySettings;
-        }
-
-        public override UserControl GetSettingsView(bool firstRunView)
-        {
-            return firstRunView ? null : new BethesdaLibrarySettingsView();
-        }
-
-        public override IGameController GetGameController(Game game)
-        {
-            return new BethesdaGameController(this, game);
+            return firstRunSettings ? null : SettingsViewModel;
         }
 
         public override IEnumerable<GameInfo> GetGames()
         {
             var allGames = new List<GameInfo>();
-            if (LibrarySettings.ImportInstalledGames)
+            if (SettingsViewModel.Settings.ImportInstalledGames)
             {
                 try
                 {
                     var installed = GetInstalledGames();
-                    logger.Debug($"Found {installed.Count} installed Bethesda games.");
-                    PlayniteApi.Notifications.Remove(dbImportMessageId);
+                    Logger.Debug($"Found {installed.Count} installed Bethesda games.");
+                    PlayniteApi.Notifications.Remove(ImportErrorMessageId);
                     return installed;
                 }
                 catch (Exception e)
                 {
-                    logger.Error(e, "Failed to import uninstalled Bethesda games.");
+                    Logger.Error(e, "Failed to import uninstalled Bethesda games.");
                     PlayniteApi.Notifications.Add(new NotificationMessage(
-                        dbImportMessageId,
+                        ImportErrorMessageId,
                         string.Format(PlayniteApi.Resources.GetString("LOCLibraryImportError"), Name) +
                         System.Environment.NewLine + e.Message,
                         NotificationType.Error,
@@ -122,12 +102,5 @@ namespace BethesdaLibrary
 
             return allGames;
         }
-
-        public override LibraryMetadataProvider GetMetadataDownloader()
-        {
-            return new BethesdaMetadataProvider();
-        }
-
-        #endregion ILibraryPlugin
     }
 }

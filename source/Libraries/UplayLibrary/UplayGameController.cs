@@ -19,12 +19,10 @@ namespace UplayLibrary
         private CancellationTokenSource watcherToken;
         private ProcessMonitor procMon;
         private Stopwatch stopWatch;
-        private UplayLibrary uplay;
         private static ILogger logger = LogManager.GetLogger();
 
-        public UplayGameController(UplayLibrary library, Game game) : base(game)
+        public UplayGameController(Game game) : base(game)
         {
-            uplay = library;
         }
 
         public override void Dispose()
@@ -123,7 +121,7 @@ namespace UplayLibrary
                     return;
                 }
 
-                var installedGame = uplay.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
+                var installedGame = UplayLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
                 if (installedGame != null)
                 {
                     var installInfo = new GameInfo()
@@ -151,7 +149,7 @@ namespace UplayLibrary
                     return;
                 }
 
-                if (uplay.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId) == null)
+                if (UplayLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId) == null)
                 {
                     OnUninstalled(this, new GameControllerEventArgs(this, 0));
                     return;

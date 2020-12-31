@@ -23,7 +23,7 @@
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
         <ComboBox x:Key="BackgroundSourceBox" x:Shared="False"
-            SelectedValue="{Binding BackgroundSource}"
+            SelectedValue="{Binding Settings.BackgroundSource}"
             ItemsSource="{Binding Source={StaticResource BackgroundSourceEnumValues}}">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -36,22 +36,22 @@
     <StackPanel Margin="20">
         <CheckBox DockPanel.Dock="Top" Name="CheckSteamImportInstalled"
                   Margin="0,0,0,15"
-                  IsChecked="{Binding ImportInstalledGames}"
+                  IsChecked="{Binding Settings.ImportInstalledGames}"
                   Content="{DynamicResource LOCSettingsImportInstalledLabel}"/>
 
         <CheckBox DockPanel.Dock="Top" Name="CheckSteamConnectAccount"
-                  IsChecked="{Binding ConnectAccount}"
+                  IsChecked="{Binding Settings.ConnectAccount}"
                   Content="{DynamicResource LOCSettingsConnectAccount}"/>
 
         <DockPanel DockPanel.Dock="Top" Margin="40,5,5,0" IsEnabled="{Binding IsChecked, ElementName=CheckSteamConnectAccount}">
 
             <CheckBox DockPanel.Dock="Top" Name="CheckSteamImportUninstalled"
-                      IsChecked="{Binding ImportUninstalledGames}"
+                      IsChecked="{Binding Settings.ImportUninstalledGames}"
                       Margin="0,10,0,0"
                       Content="{DynamicResource LOCSettingsImportUninstalledLabel}"/>
             
             <CheckBox DockPanel.Dock="Top"
-                      IsChecked="{Binding IncludeFreeSubGames}"
+                      IsChecked="{Binding Settings.IncludeFreeSubGames}"
                       Margin="0,10,0,0"
                       Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}"
                       Content="{DynamicResource LOCSteamImportFreeSubGames}"/>
@@ -92,14 +92,14 @@
             </StackPanel>
 
             <CheckBox Content="{DynamicResource LOCPrivateAccount}"
-                      IsChecked="{Binding IsPrivateAccount}"
+                      IsChecked="{Binding Settings.IsPrivateAccount}"
                       DockPanel.Dock="Top" Margin="0,15,0,0"
                       Name="CheckSteamPrivate" VerticalAlignment="Center"
                       ToolTip="{DynamicResource LOCSettingsApiKeyTooltip}"/>
             <StackPanel DockPanel.Dock="Top" Margin="25,10,5,5" Orientation="Horizontal"
                         IsEnabled="{Binding IsChecked, ElementName=CheckSteamPrivate}">
                 <TextBlock Text="{DynamicResource LOCAPIKey}" VerticalAlignment="Center"/>
-                <TextBox Text="{Binding ApiKey, UpdateSourceTrigger=PropertyChanged, Delay=150}"
+                <TextBox Text="{Binding Settings.ApiKey, UpdateSourceTrigger=PropertyChanged, Delay=150}"
                          Width="200" VerticalAlignment="Center" Margin="10,0,10,0"/>
                 <TextBlock DockPanel.Dock="Left" VerticalAlignment="Center">
                     <Hyperlink NavigateUri="https://steamcommunity.com/dev/apikey"
@@ -121,7 +121,7 @@
 
         <CheckBox Content="{DynamicResource LOCSteamUseVerticalCovers}"
                   Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}"
-                  IsChecked="{Binding DownloadVerticalCovers}" Margin="0,20,0,5" />
+                  IsChecked="{Binding Settings.DownloadVerticalCovers}" Margin="0,20,0,5" />
 
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0,5,0,5" HorizontalAlignment="Left"
                     ToolTip="{DynamicResource LOCBackgroundImageScreenOptionTooltip}"

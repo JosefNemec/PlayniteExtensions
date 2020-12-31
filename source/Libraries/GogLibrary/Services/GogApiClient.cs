@@ -1,5 +1,4 @@
 ﻿using GogLibrary.Models;
-using Newtonsoft.Json;
 using Playnite.Common;
 using Playnite.Common.Web;
 using Playnite.SDK;
@@ -56,7 +55,7 @@ namespace GogLibrary.Services
 
                 if (line.TrimStart().StartsWith("window.activeFeatures"))
                 {
-                    var desData = JsonConvert.DeserializeObject<StorePageResult>(stringData.TrimEnd(';'));
+                    var desData = Serialization.FromJson<StorePageResult>(stringData.TrimEnd(';'));
                     if (desData.cardProduct == null)
                     {
                         return null;
@@ -82,7 +81,7 @@ namespace GogLibrary.Services
             try
             {
                 var stringData = HttpDownloader.DownloadString(string.Format(baseUrl, id), new List<System.Net.Cookie>() { new System.Net.Cookie("gog_lc", Gog.EnStoreLocaleString) });
-                return JsonConvert.DeserializeObject<ProductApiDetail>(stringData);
+                return Serialization.FromJson<ProductApiDetail>(stringData);
             }
             catch (WebException exc)
             {

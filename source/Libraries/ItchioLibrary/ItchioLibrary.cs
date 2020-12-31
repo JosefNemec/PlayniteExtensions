@@ -17,15 +17,21 @@ using System.Windows.Controls;
 
 namespace ItchioLibrary
 {
-    public class ItchioLibrary : LibraryPlugin
+    [LoadPlugin]
+    public class ItchioLibrary : LibraryPluginBase<ItchioLibrarySettingsViewModel>
     {
-        private ILogger logger = LogManager.GetLogger();
-        private const string dbImportMessageId = "itchiolibImportError";
-        internal readonly ItchioLibrarySettings LibrarySettings;
-
-        public ItchioLibrary(IPlayniteAPI api) : base(api)
+        public ItchioLibrary(IPlayniteAPI api) : base(
+            "itch.io",
+            Guid.Parse("00000001-EBB2-4EEC-ABCB-7C89937A42BB"),
+            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new ItchioClient(),
+            Itch.Icon,
+            (_) => new ItchioLibrarySettingsView(),
+            (g) => new ItchioGameController(g, api),
+            () => new ItchioMetadataProvider(api),
+            api)
         {
-            LibrarySettings = new ItchioLibrarySettings(this, api);
+            SettingsViewModel = new ItchioLibrarySettingsViewModel(this, api);
         }
 
         public static bool TryGetGameActions(string installDir, out GameAction playAction, out List<GameAction> otherActions)
@@ -190,62 +196,42 @@ namespace ItchioLibrary
             return games;
         }
 
-        #region ILibraryPlugin
-
-        public override LibraryClient Client => new ItchioClient();
-
-        public override string LibraryIcon => Itch.Icon;
-
-        public override string Name => "itch.io";
-
-        public override Guid Id => Guid.Parse("00000001-EBB2-4EEC-ABCB-7C89937A42BB");
-
-        public override LibraryPluginCapabilities Capabilities { get; } = new LibraryPluginCapabilities
-        {
-            CanShutdownClient = false
-        };
-
-        public override IGameController GetGameController(Game game)
-        {
-            return new ItchioGameController(game, PlayniteApi);
-        }
-
         public override IEnumerable<GameInfo> GetGames()
         {
             var allGames = new List<GameInfo>();
             var installedGames = new Dictionary<string, GameInfo>();
             Exception importError = null;
 
-            if (!LibrarySettings.ImportInstalledGames && !LibrarySettings.ImportUninstalledGames)
+            if (!SettingsViewModel.Settings.ImportInstalledGames && !SettingsViewModel.Settings.ImportUninstalledGames)
             {
                 return allGames;
             }
 
             if (Itch.IsInstalled)
             {
-                if (LibrarySettings.ImportInstalledGames)
+                if (SettingsViewModel.Settings.ImportInstalledGames)
                 {
                     try
                     {
                         installedGames = GetInstalledGames();
-                        logger.Debug($"Found {installedGames.Count} installed itch.io games.");
+                        Logger.Debug($"Found {installedGames.Count} installed itch.io games.");
                         allGames.AddRange(installedGames.Values.ToList());
                     }
                     catch (Exception e) when (!PlayniteApi.ApplicationInfo.ThrowAllErrors)
                     {
-                        logger.Error(e, "Failed to import installed itch.io games.");
+                        Logger.Error(e, "Failed to import installed itch.io games.");
                         importError = e;
                     }
                 }
 
-                if (LibrarySettings.ConnectAccount)
+                if (SettingsViewModel.Settings.ConnectAccount)
                 {
                     try
                     {
                         var libraryGames = GetLibraryGames();
-                        logger.Debug($"Found {libraryGames.Count} library itch.io games.");
+                        Logger.Debug($"Found {libraryGames.Count} library itch.io games.");
 
-                        if (!LibrarySettings.ImportUninstalledGames)
+                        if (!SettingsViewModel.Settings.ImportUninstalledGames)
                         {
                             libraryGames = libraryGames.Where(lg => installedGames.ContainsKey(lg.GameId)).ToList();
                         }
@@ -265,7 +251,7 @@ namespace ItchioLibrary
                     }
                     catch (Exception e) when (!PlayniteApi.ApplicationInfo.ThrowAllErrors)
                     {
-                        logger.Error(e, "Failed to import linked account itch.io games details.");
+                        Logger.Error(e, "Failed to import linked account itch.io games details.");
                         importError = e;
                     }
                 }
@@ -279,7 +265,7 @@ namespace ItchioLibrary
             if (importError != null)
             {
                 PlayniteApi.Notifications.Add(new NotificationMessage(
-                    dbImportMessageId,
+                    ImportErrorMessageId,
                     string.Format(PlayniteApi.Resources.GetString("LOCLibraryImportError"), Name) +
                     System.Environment.NewLine + importError.Message,
                     NotificationType.Error,
@@ -287,27 +273,10 @@ namespace ItchioLibrary
             }
             else
             {
-                PlayniteApi.Notifications.Remove(dbImportMessageId);
+                PlayniteApi.Notifications.Remove(ImportErrorMessageId);
             }
 
             return allGames;
         }
-
-        public override LibraryMetadataProvider GetMetadataDownloader()
-        {
-            return new ItchioMetadataProvider(this);
-        }
-
-        public override ISettings GetSettings(bool firstRunSettings)
-        {
-            return LibrarySettings;
-        }
-
-        public override UserControl GetSettingsView(bool firstRunView)
-        {
-            return new ItchioLibrarySettingsView();
-        }
-
-        #endregion ILibraryPlugin
     }
 }

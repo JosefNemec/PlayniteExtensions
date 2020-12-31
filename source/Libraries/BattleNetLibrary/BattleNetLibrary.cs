@@ -15,16 +15,21 @@ using System.Windows.Controls;
 
 namespace BattleNetLibrary
 {
-    public class BattleNetLibrary : LibraryPlugin
+    [LoadPlugin]
+    public class BattleNetLibrary : LibraryPluginBase<BattleNetLibrarySettingsViewModel>
     {
-        private ILogger logger = LogManager.GetLogger();
-        private const string dbImportMessageId = "bnetlibImportError";
-
-        internal BattleNetLibrarySettings LibrarySettings { get; private set; }
-
-        public BattleNetLibrary(IPlayniteAPI api) : base(api)
+        public BattleNetLibrary(IPlayniteAPI api) : base(
+            "Battle.net",
+            Guid.Parse("E3C26A3D-D695-4CB7-A769-5FF7612C7EDD"),
+            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new BattleNetClient(),
+            BattleNet.Icon,
+            (_) => new BattleNetLibrarySettingsView(),
+            (g) => new BattleNetGameController(g, api),
+            () => new BattleNetMetadataProvider(),
+            api)
         {
-            LibrarySettings = new BattleNetLibrarySettings(this, PlayniteApi);
+            SettingsViewModel = new BattleNetLibrarySettingsViewModel(this, PlayniteApi);
         }
 
         public static UninstallProgram GetUninstallEntry(BNetApp app)
@@ -176,7 +181,7 @@ namespace BattleNetLibrary
                         var gameInfo = BattleNetGames.Games.FirstOrDefault(a => a.ApiId == product.titleId);
                         if (gameInfo == null)
                         {
-                            logger.Warn($"Unknown game found on the account: {product.localizedGameName}/{product.titleId}, skipping import.");
+                            Logger.Warn($"Unknown game found on the account: {product.localizedGameName}/{product.titleId}, skipping import.");
                             continue;
                         }
 
@@ -252,65 +257,35 @@ namespace BattleNetLibrary
             }
         }
 
-        #region ILibraryPlugin
-
-        public override LibraryClient Client => new BattleNetClient();
-
-        public override string LibraryIcon => BattleNet.Icon;
-
-        public override string Name => "Battle.net";
-
-        public override Guid Id => Guid.Parse("E3C26A3D-D695-4CB7-A769-5FF7612C7EDD");
-
-        public override LibraryPluginCapabilities Capabilities { get; } = new LibraryPluginCapabilities
-        {
-            CanShutdownClient = true
-        };
-
-        public override ISettings GetSettings(bool firstRunSettings)
-        {
-            return LibrarySettings;
-        }
-
-        public override UserControl GetSettingsView(bool firstRunView)
-        {
-            return new BattleNetLibrarySettingsView();
-        }
-
-        public override IGameController GetGameController(Game game)
-        {
-            return new BattleNetGameController(game, PlayniteApi);
-        }
-
         public override IEnumerable<GameInfo> GetGames()
         {
             var allGames = new List<GameInfo>();
             var installedGames = new Dictionary<string, GameInfo>();
             Exception importError = null;
 
-            if (LibrarySettings.ImportInstalledGames)
+            if (SettingsViewModel.Settings.ImportInstalledGames)
             {
                 try
                 {
                     installedGames = GetInstalledGames();
-                    logger.Debug($"Found {installedGames.Count} installed Battle.net games.");
+                    Logger.Debug($"Found {installedGames.Count} installed Battle.net games.");
                     allGames.AddRange(installedGames.Values.ToList());
                 }
                 catch (Exception e)
                 {
-                    logger.Error(e, "Failed to import installed Battle.net games.");
+                    Logger.Error(e, "Failed to import installed Battle.net games.");
                     importError = e;
                 }
             }
 
-            if (LibrarySettings.ConnectAccount)
+            if (SettingsViewModel.Settings.ConnectAccount)
             {
                 try
                 {
                     var libraryGames = GetLibraryGames();
-                    logger.Debug($"Found {libraryGames.Count} library Battle.net games.");
+                    Logger.Debug($"Found {libraryGames.Count} library Battle.net games.");
 
-                    if (!LibrarySettings.ImportUninstalledGames)
+                    if (!SettingsViewModel.Settings.ImportUninstalledGames)
                     {
                         libraryGames = libraryGames.Where(lg => installedGames.ContainsKey(lg.GameId)).ToList();
                     }
@@ -330,7 +305,7 @@ namespace BattleNetLibrary
                 }
                 catch (Exception e)
                 {
-                    logger.Error(e, "Failed to import linked account Battle.net games details.");
+                    Logger.Error(e, "Failed to import linked account Battle.net games details.");
                     importError = e;
                 }
             }
@@ -338,7 +313,7 @@ namespace BattleNetLibrary
             if (importError != null)
             {
                 PlayniteApi.Notifications.Add(new NotificationMessage(
-                    dbImportMessageId,
+                    ImportErrorMessageId,
                     string.Format(PlayniteApi.Resources.GetString("LOCLibraryImportError"), Name) +
                     System.Environment.NewLine + importError.Message,
                     NotificationType.Error,
@@ -346,17 +321,10 @@ namespace BattleNetLibrary
             }
             else
             {
-                PlayniteApi.Notifications.Remove(dbImportMessageId);
+                PlayniteApi.Notifications.Remove(ImportErrorMessageId);
             }
 
             return allGames;
         }
-
-        public override LibraryMetadataProvider GetMetadataDownloader()
-        {
-            return new BattleNetMetadataProvider();
-        }
-
-        #endregion ILibraryPlugin
     }
 }

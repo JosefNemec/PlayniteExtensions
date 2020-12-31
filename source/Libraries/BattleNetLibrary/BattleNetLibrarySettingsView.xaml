@@ -19,18 +19,18 @@
     <StackPanel Margin="20">
         <CheckBox DockPanel.Dock="Top" Name="CheckBattleNetImportInstalled"
                   Margin="0,0,0,15"
-                  IsChecked="{Binding ImportInstalledGames}"
+                  IsChecked="{Binding Settings.ImportInstalledGames}"
                   Content="{DynamicResource LOCSettingsImportInstalledLabel}"/>
 
         <CheckBox DockPanel.Dock="Top" Name="CheckBattleNetConnectAccount"
-                  IsChecked="{Binding ConnectAccount}"
+                  IsChecked="{Binding Settings.ConnectAccount}"
                   Content="{DynamicResource LOCSettingsConnectAccount}"/>
 
         <StackPanel DockPanel.Dock="Top" Margin="40,5,5,0"
                     IsEnabled="{Binding IsChecked, ElementName=CheckBattleNetConnectAccount}">
 
             <CheckBox DockPanel.Dock="Top" Name="CheckBattleNetImportUninstalled"
-                      IsChecked="{Binding ImportUninstalledGames}"
+                      IsChecked="{Binding Settings.ImportUninstalledGames}"
                       Margin="0,10,0,0"
                       Content="{DynamicResource LOCSettingsImportUninstalledLabel}"/>
 

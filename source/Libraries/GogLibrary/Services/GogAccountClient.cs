@@ -1,7 +1,7 @@
 ﻿using GogLibrary.Models;
-using Newtonsoft.Json;
 using Playnite.Common.Web;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,7 +52,7 @@ namespace GogLibrary.Services
         {
             webView.NavigateAndWait(@"https://menu.gog.com/v1/account/basic");
             var stringInfo = webView.GetPageText();
-            var accountInfo = JsonConvert.DeserializeObject<AccountBasicRespose>(stringInfo);
+            var accountInfo = Serialization.FromJson<AccountBasicRespose>(stringInfo);
             return accountInfo;
         }
 
@@ -62,7 +62,7 @@ namespace GogLibrary.Services
             var url = string.Format(baseUrl, accountName, 1);
             var gamesList = HttpDownloader.DownloadString(url);
             var games = new List<LibraryGameResponse>();
-            var libraryData = JsonConvert.DeserializeObject<PagedResponse<LibraryGameResponse>>(gamesList);
+            var libraryData = Serialization.FromJson<PagedResponse<LibraryGameResponse>>(gamesList);
 
             if (libraryData == null)
             {
@@ -77,7 +77,7 @@ namespace GogLibrary.Services
                 for (int i = 2; i <= libraryData.pages; i++)
                 {
                     gamesList = HttpDownloader.DownloadString(string.Format(baseUrl, accountName, i));
-                    var pageData = JsonConvert.DeserializeObject<PagedResponse<LibraryGameResponse>>(gamesList);
+                    var pageData = Serialization.FromJson<PagedResponse<LibraryGameResponse>>(gamesList);
                     games.AddRange(pageData._embedded.items);
                 }
             }
@@ -96,7 +96,7 @@ namespace GogLibrary.Services
                 var url = string.Format(baseUrl, account.username, 1);
                 webView.NavigateAndWait(url);
                 stringLibContent = webView.GetPageText();
-                var libraryData = JsonConvert.DeserializeObject<PagedResponse<LibraryGameResponse>>(stringLibContent);
+                var libraryData = Serialization.FromJson<PagedResponse<LibraryGameResponse>>(stringLibContent);
                 if (libraryData == null)
                 {
                     logger.Error("GOG library content is empty.");
@@ -110,7 +110,7 @@ namespace GogLibrary.Services
                     {
                         webView.NavigateAndWait(string.Format(baseUrl, account.username, i));
                         stringLibContent = webView.GetPageText();
-                        var pageData = JsonConvert.DeserializeObject<PagedResponse<LibraryGameResponse>>(stringLibContent);
+                        var pageData = Serialization.FromJson<PagedResponse<LibraryGameResponse>>(stringLibContent);
                         games.AddRange(pageData._embedded.items);
                     }
                 }
@@ -132,7 +132,7 @@ namespace GogLibrary.Services
             webView.NavigateAndWait(string.Format(baseUrl, 1));
             var gamesList = webView.GetPageText();
 
-            var libraryData = JsonConvert.DeserializeObject<GetOwnedGamesResult>(gamesList);
+            var libraryData = Serialization.FromJson<GetOwnedGamesResult>(gamesList);
             if (libraryData == null)
             {
                 logger.Error("GOG library content is empty.");
@@ -156,7 +156,7 @@ namespace GogLibrary.Services
                 {
                     webView.NavigateAndWait(string.Format(baseUrl, i));
                     gamesList = webView.GetPageText();
-                    var pageData = libraryData = JsonConvert.DeserializeObject<GetOwnedGamesResult>(gamesList);
+                    var pageData = libraryData = Serialization.FromJson<GetOwnedGamesResult>(gamesList);
                     games.AddRange(pageData.products.Select(a => new LibraryGameResponse()
                     {
                         game = new LibraryGameResponse.Game()

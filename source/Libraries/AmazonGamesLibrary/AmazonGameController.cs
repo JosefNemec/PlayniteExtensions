@@ -20,13 +20,13 @@ namespace AmazonGamesLibrary
         private static ILogger logger = LogManager.GetLogger();
         private CancellationTokenSource watcherToken;
         private ProcessMonitor procMon;
-        private AmazonGamesLibrary library;
+        private AmazonGamesLibrarySettings settings;
         private Stopwatch stopWatch;
         private IPlayniteAPI api;
 
-        public AmazonGameController(Game game, AmazonGamesLibrary library, IPlayniteAPI api) : base(game)
+        public AmazonGameController(Game game, AmazonGamesLibrarySettings settings, IPlayniteAPI api) : base(game)
         {
-            this.library = library;
+            this.settings = settings;
             this.api = api;
         }
 
@@ -51,7 +51,7 @@ namespace AmazonGamesLibrary
             OnStarting(this, new GameControllerEventArgs(this, 0));
             var startViaLauncher = true;
             GameConfiguration gameConfig = null;
-            if (library.LibrarySettings.StartGamesWithoutLauncher)
+            if (settings.StartGamesWithoutLauncher)
             {
                 try
                 {

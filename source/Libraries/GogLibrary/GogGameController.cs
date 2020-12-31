@@ -18,13 +18,13 @@ namespace GogLibrary
     public class GogGameController : BaseGameController
     {
         private CancellationTokenSource watcherToken;
-        private GogLibrarySettings settings;
+        private GogLibrarySettingsViewModel settings;
         private ProcessMonitor procMon;
         private Stopwatch stopWatch;
         private GogLibrary library;
         private IPlayniteAPI api;
 
-        public GogGameController(Game game, GogLibrary library, GogLibrarySettings settings, IPlayniteAPI api) : base(game)
+        public GogGameController(Game game, GogLibrary library, GogLibrarySettingsViewModel settings, IPlayniteAPI api) : base(game)
         {
             this.settings = settings;
             this.library = library;
@@ -44,7 +44,7 @@ namespace GogLibrary
         public override void Play()
         {
             ReleaseResources();
-            if (settings.StartGamesUsingGalaxy == true)
+            if (settings.Settings.StartGamesUsingGalaxy == true)
             {
                 OnStarting(this, new GameControllerEventArgs(this, 0));
                 stopWatch = Stopwatch.StartNew();

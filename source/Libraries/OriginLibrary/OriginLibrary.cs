@@ -1,5 +1,4 @@
 ﻿using Microsoft.Win32;
-using Newtonsoft.Json;
 using OriginLibrary.Models;
 using OriginLibrary.Services;
 using Playnite;
@@ -24,7 +23,8 @@ using System.Xml.Serialization;
 
 namespace OriginLibrary
 {
-    public class OriginLibrary : LibraryPlugin
+    [LoadPlugin]
+    public class OriginLibrary : LibraryPluginBase<OriginLibrarySettingsViewModel>
     {
         public class PlatformPath
         {
@@ -45,14 +45,23 @@ namespace OriginLibrary
             }
         }
 
-        private readonly static ILogger logger = LogManager.GetLogger();
-        private const string dbImportMessageId = "originlibImportError";
-
-        internal OriginLibrarySettings LibrarySettings { get; private set; }
-
-        public OriginLibrary(IPlayniteAPI api) : base(api)
+        public OriginLibrary(IPlayniteAPI api) : base(
+            "Origin",
+            Guid.Parse("85DD7072-2F20-4E76-A007-41035E390724"),
+            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new OriginClient(),
+            Origin.Icon,
+            (_) => new OriginLibrarySettingsView(),
+            null,
+            () => new OriginMetadataProvider(api),
+            api)
         {
-            LibrarySettings = new OriginLibrarySettings(this, PlayniteApi);
+            SettingsViewModel = new OriginLibrarySettingsViewModel(this, PlayniteApi);
+        }
+
+        public override IGameController GetGameController(Game game)
+        {
+            return new OriginGameController(this, game, PlayniteApi);
         }
 
         internal PlatformPath GetPathFromPlatformPath(string path, RegistryView platformView)
@@ -65,7 +74,7 @@ namespace OriginLibrary
             var matchPath = Regex.Match(path, @"\[(.*?)\\(.*)\\(.*)\](.*)");
             if (!matchPath.Success)
             {
-                logger.Warn("Unknown path format " + path);
+                Logger.Warn("Unknown path format " + path);
                 return null;
             }
 
@@ -122,7 +131,7 @@ namespace OriginLibrary
             return HttpUtility.ParseQueryString(data);
         }
 
-        internal static GameInstallerData GetGameInstallerData(string dataPath)
+        internal GameInstallerData GetGameInstallerData(string dataPath)
         {
             try
             {
@@ -158,7 +167,7 @@ namespace OriginLibrary
             }
             catch (Exception e)
             {
-                logger.Error(e, $"Failed to deserialize game installer xml {dataPath}.");
+                Logger.Error(e, $"Failed to deserialize game installer xml {dataPath}.");
             }
 
             return null;
@@ -172,7 +181,7 @@ namespace OriginLibrary
             }
             catch (WebException exc) when ((exc.Response as HttpWebResponse)?.StatusCode == HttpStatusCode.NotFound)
             {
-                logger.Info($"Origin manifest {id} not found on EA server, generating fake manifest.");
+                Logger.Info($"Origin manifest {id} not found on EA server, generating fake manifest.");
                 return new GameLocalDataResponse
                 {
                     offerId = id,
@@ -308,7 +317,7 @@ namespace OriginLibrary
                             var match = Regex.Match(gameId, @"^(.*?)(\d+)$");
                             if (!match.Success)
                             {
-                                logger.Warn("Failed to get game id from file " + package);
+                                Logger.Warn("Failed to get game id from file " + package);
                                 continue;
                             }
 
@@ -331,7 +340,7 @@ namespace OriginLibrary
                         }
                         catch (Exception e) when (!Environment.IsDebugBuild)
                         {
-                            logger.Error(e, $"Failed to get Origin manifest for a {gameId}, {package}");
+                            Logger.Error(e, $"Failed to get Origin manifest for a {gameId}, {package}");
                             continue;
                         }
 
@@ -364,7 +373,7 @@ namespace OriginLibrary
                     }
                     catch (Exception e) when (!Environment.IsDebugBuild)
                     {
-                        logger.Error(e, $"Failed to import installed Origin game {package}.");
+                        Logger.Error(e, $"Failed to import installed Origin game {package}.");
                     }
                 }
             }
@@ -411,7 +420,7 @@ namespace OriginLibrary
                     }
                     catch (Exception e)
                     {
-                        logger.Error(e, $"Failed to get usage data for {game.offerId}");
+                        Logger.Error(e, $"Failed to get usage data for {game.offerId}");
                     }
 
                     var gameName = game.offerId;
@@ -425,7 +434,7 @@ namespace OriginLibrary
                     }
                     catch (Exception e) when (!Environment.IsDebugBuild)
                     {
-                        logger.Error(e, $"Failed to get Origin manifest for a {game.offerId}");
+                        Logger.Error(e, $"Failed to get Origin manifest for a {game.offerId}");
                         continue;
                     }
 
@@ -444,65 +453,35 @@ namespace OriginLibrary
             }
         }
 
-        #region ILibraryPlugin
-
-        public override LibraryClient Client => new OriginClient();
-
-        public override string LibraryIcon => Origin.Icon;
-
-        public override string Name => "Origin";
-
-        public override Guid Id => Guid.Parse("85DD7072-2F20-4E76-A007-41035E390724");
-
-        public override LibraryPluginCapabilities Capabilities { get; } = new LibraryPluginCapabilities
-        {
-            CanShutdownClient = true
-        };
-
-        public override ISettings GetSettings(bool firstRunSettings)
-        {
-            return LibrarySettings;
-        }
-
-        public override UserControl GetSettingsView(bool firstRunView)
-        {
-            return new OriginLibrarySettingsView();
-        }
-
-        public override IGameController GetGameController(Game game)
-        {
-            return new OriginGameController(this, game, PlayniteApi);
-        }
-
         public override IEnumerable<GameInfo> GetGames()
         {
             var allGames = new List<GameInfo>();
             var installedGames = new Dictionary<string, GameInfo>();
             Exception importError = null;
 
-            if (LibrarySettings.ImportInstalledGames)
+            if (SettingsViewModel.Settings.ImportInstalledGames)
             {
                 try
                 {
                     installedGames = GetInstalledGames();
-                    logger.Debug($"Found {installedGames.Count} installed Origin games.");
+                    Logger.Debug($"Found {installedGames.Count} installed Origin games.");
                     allGames.AddRange(installedGames.Values.ToList());
                 }
                 catch (Exception e)
                 {
-                    logger.Error(e, "Failed to import installed Origin games.");
+                    Logger.Error(e, "Failed to import installed Origin games.");
                     importError = e;
                 }
             }
 
-            if (LibrarySettings.ConnectAccount && LibrarySettings.ImportUninstalledGames)
+            if (SettingsViewModel.Settings.ConnectAccount && SettingsViewModel.Settings.ImportUninstalledGames)
             {
                 try
                 {
                     var libraryGames = GetLibraryGames();
-                    logger.Debug($"Found {libraryGames.Count} library Origin games.");
+                    Logger.Debug($"Found {libraryGames.Count} library Origin games.");
 
-                    if (!LibrarySettings.ImportUninstalledGames)
+                    if (!SettingsViewModel.Settings.ImportUninstalledGames)
                     {
                         libraryGames = libraryGames.Where(lg => installedGames.ContainsKey(lg.GameId)).ToList();
                     }
@@ -522,7 +501,7 @@ namespace OriginLibrary
                 }
                 catch (Exception e)
                 {
-                    logger.Error(e, "Failed to import linked account Origin games details.");
+                    Logger.Error(e, "Failed to import linked account Origin games details.");
                     importError = e;
                 }
             }
@@ -530,7 +509,7 @@ namespace OriginLibrary
             if (importError != null)
             {
                 PlayniteApi.Notifications.Add(new NotificationMessage(
-                    dbImportMessageId,
+                    ImportErrorMessageId,
                     string.Format(PlayniteApi.Resources.GetString("LOCLibraryImportError"), Name) +
                     System.Environment.NewLine + importError.Message,
                     NotificationType.Error,
@@ -538,17 +517,10 @@ namespace OriginLibrary
             }
             else
             {
-                PlayniteApi.Notifications.Remove(dbImportMessageId);
+                PlayniteApi.Notifications.Remove(ImportErrorMessageId);
             }
 
             return allGames;
         }
-
-        public override LibraryMetadataProvider GetMetadataDownloader()
-        {
-            return new OriginMetadataProvider(this);
-        }
-
-        #endregion ILibraryPlugin
     }
 }
