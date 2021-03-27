@@ -1,8 +1,0 @@
-﻿AddonId: TwitchLibrary_Builtin
-IconUrl: E:\Devel\PlayniteExtensions\source\Libraries\TwitchLibrary\Resources\twitchicon.png
-Type: Library
-InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\TwitchLibrary_Builtin.yaml
-ShortDescription: Imports games from Twitch game library.
-Name: Twitch Library Importer
-Author: Playnite
-Website: https://github.com/JosefNemec/PlayniteExtensions
