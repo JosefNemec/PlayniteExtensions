@@ -1,5 +1,4 @@
-﻿using Playnite.Common.Media.Icons;
-using Playnite.SDK;
+﻿using Playnite.SDK;
 using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;
 using System;
@@ -34,22 +33,7 @@ namespace AmazonGamesLibrary
                 gameInfo.Name = StringExtensions.NormalizeGameName(program.DisplayName);
                 if (!string.IsNullOrEmpty(program.DisplayIcon) && File.Exists(program.DisplayIcon))
                 {
-                    var iconPath = program.DisplayIcon;
-                    if (iconPath.EndsWith("ico", StringComparison.OrdinalIgnoreCase))
-                    {
-                        metadata.Icon = new MetadataFile(program.DisplayIcon);
-                    }
-                    else
-                    {
-                        using (var ms = new MemoryStream())
-                        {
-                            if (IconExtractor.ExtractMainIconFromFile(iconPath, ms))
-                            {
-                                var iconName = Guid.NewGuid() + ".ico";
-                                metadata.Icon = new MetadataFile(iconName, ms.ToArray());
-                            }
-                        }
-                    }
+                    metadata.Icon = new MetadataFile(program.DisplayIcon);
                 }
             }
 

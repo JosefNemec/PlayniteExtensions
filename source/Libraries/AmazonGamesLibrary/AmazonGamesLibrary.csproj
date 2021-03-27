@@ -56,12 +56,6 @@
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Commands\GlobalCommands.cs">
       <Link>Shared\GlobalCommands.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Extensions\BitmapIconExtensions.cs">
-      <Link>Shared\BitmapIconExtensions.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Extensions\IconExtension.cs">
-      <Link>Shared\IconExtension.cs</Link>
-    </Compile>
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Extensions\ObjectExtensions.cs">
       <Link>Shared\ObjectExtensions.cs</Link>
     </Compile>
@@ -77,12 +71,6 @@
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\InteropMethods.cs">
       <Link>Shared\InteropMethods.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Media\Icons\IconExtractor.cs">
-      <Link>Shared\IconExtractor.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Media\Icons\IconUtil.cs">
-      <Link>Shared\IconUtil.cs</Link>
-    </Compile>
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Paths.cs">
       <Link>Shared\Paths.cs</Link>
     </Compile>
@@ -97,9 +85,6 @@
     </Compile>
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Resources.cs">
       <Link>Shared\Resources.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\TGASharpLib.cs">
-      <Link>Shared\TGASharpLib.cs</Link>
     </Compile>
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Converters\InvertableBooleanToVisibilityConverter.cs">
       <Link>Shared\InvertableBooleanToVisibilityConverter.cs</Link>

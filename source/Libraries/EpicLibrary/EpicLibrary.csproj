@@ -57,14 +57,8 @@
     <Compile Include="..\..\..\playniterepo\source\playnite\commands\GlobalCommands.cs">
       <Link>Shared\GlobalCommands.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\BitmapIconExtensions.cs">
-      <Link>Shared\BitmapIconExtensions.cs</Link>
-    </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\Enums.cs">
       <Link>Shared\Enums.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\IconExtension.cs">
-      <Link>Shared\IconExtension.cs</Link>
     </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\ObjectExtensions.cs">
       <Link>Shared\ObjectExtensions.cs</Link>
@@ -86,12 +80,6 @@
     </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\common\InteropMethods.cs">
       <Link>Shared\InteropMethods.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\playniterepo\source\playnite\common\media\icons\IconExtractor.cs">
-      <Link>Shared\IconExtractor.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\playniterepo\source\playnite\common\media\icons\IconUtil.cs">
-      <Link>Shared\IconUtil.cs</Link>
     </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\common\Paths.cs">
       <Link>Shared\Paths.cs</Link>

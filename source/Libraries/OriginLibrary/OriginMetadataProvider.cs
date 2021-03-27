@@ -1,6 +1,5 @@
 ﻿using OriginLibrary.Models;
 using OriginLibrary.Services;
-using Playnite.Common.Media.Icons;
 using Playnite.SDK;
 using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;

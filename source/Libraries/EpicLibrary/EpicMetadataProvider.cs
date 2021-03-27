@@ -1,5 +1,4 @@
 ﻿using EpicLibrary.Services;
-using Playnite.Common.Media.Icons;
 using Playnite.SDK;
 using Playnite.SDK.Data;
 using Playnite.SDK.Metadata;
@@ -85,14 +84,7 @@ namespace EpicLibrary
                     var exePath = Path.Combine(manifest.InstallLocation, manifest.LaunchExecutable);
                     if (File.Exists(exePath))
                     {
-                        using (var ms = new MemoryStream())
-                        {
-                            if (IconExtractor.ExtractMainIconFromFile(exePath, ms))
-                            {
-                                var iconName = Guid.NewGuid() + ".ico";
-                                metadata.Icon = new MetadataFile(iconName, ms.ToArray());
-                            }
-                        }
+                        metadata.Icon = new MetadataFile(exePath);
                     }
                 }
             }

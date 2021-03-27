@@ -3,7 +3,9 @@ param(
     [string]$Configuration = "Release",    
     [string]$OutputDir = (Join-Path $PWD $Configuration),
     [string]$TempDir = (Join-Path $env:TEMP "PlayniteBuild"),    
-    [string]$ToolboxPath = "e:\Devel\Playnite\source\Tools\Playnite.Toolbox\bin\x86\Debug\Toolbox.exe"
+    [string]$ToolboxPath = "e:\Devel\Playnite\source\Tools\Playnite.Toolbox\bin\x86\Debug\Toolbox.exe",
+    [switch]$Extensions,
+    [switch]$Themes
 )
 
 $ErrorActionPreference = "Break"
@@ -14,62 +16,69 @@ if (Test-Path $OutputDir)
     Remove-Item $OutputDir -Recurse -Force
 }
 
-$solutionDir = Join-Path $pwd "..\source"
-$msbuildpath = Get-MsBuildPath
-Invoke-Nuget "restore `"..\source\PlayniteExtensions.sln`" -SolutionDirectory `"$solutionDir`""   
 $allPassed = $true
 
-foreach ($extensionMan in (Get-ChildItem "..\source\" -Filter "extension.yaml" -Recurse))
+if ($Extensions)
 {
-    if ($extensionMan.FullName.Contains('\bin\'))
-    {
-        continue
-    }
+    $solutionDir = Join-Path $pwd "..\source" 
+    $msbuildpath = Get-MsBuildPath
+    Invoke-Nuget "restore `"..\source\PlayniteExtensions.sln`" -SolutionDirectory `"$solutionDir`""  
 
-    $extDir = Split-Path $extensionMan -Parent
-    $projectFile = Get-ChildItem $extDir -Filter "*.csproj" | Select-Object -First 1
-
-    if ($projectFile)
+    foreach ($extensionMan in (Get-ChildItem "..\source\" -Filter "extension.yaml" -Recurse))
     {
-        if ($projectFile.FullName.Contains(".Tests") -or $projectFile.FullName.Contains(".Common"))
+        if ($extensionMan.FullName.Contains('\bin\'))
         {
             continue
         }
 
-        $addonManifest = Get-Content (Join-Path $extDir "extension.yaml") | ConvertFrom-Yaml
-        $buildDir = Join-Path $OutputDir $addonManifest.Id
-        
-        $arguments = "-p:OutDir=`"$buildDir`";Configuration=$configuration;AllowedReferenceRelatedFileExtensions=none `"$projectFile`""
-        $compilerResult = StartAndWait $msbuildPath $arguments
-        if ($compilerResult -ne 0)
+        $extDir = Split-Path $extensionMan -Parent
+        $projectFile = Get-ChildItem $extDir -Filter "*.csproj" | Select-Object -First 1
+
+        if ($projectFile)
         {
-            $allPassed = $false
-        }
-        else
-        {
-            if ((StartAndWait $ToolboxPath "pack `"$buildDir`" `"$OutputDir`"") -ne 0)
+            if ($projectFile.FullName.Contains(".Tests") -or $projectFile.FullName.Contains(".Common"))
+            {
+                continue
+            }
+
+            $addonManifest = Get-Content (Join-Path $extDir "extension.yaml") | ConvertFrom-Yaml
+            $buildDir = Join-Path $OutputDir $addonManifest.Id
+            
+            $arguments = "-p:OutDir=`"$buildDir`";Configuration=$configuration;AllowedReferenceRelatedFileExtensions=none `"$projectFile`""
+            $compilerResult = StartAndWait $msbuildPath $arguments
+            if ($compilerResult -ne 0)
             {
                 $allPassed = $false
             }
+            else
+            {
+                if ((StartAndWait $ToolboxPath "pack `"$buildDir`" `"$OutputDir`"") -ne 0)
+                {
+                    $allPassed = $false
+                }
+            }
         }
-    }
-    else
-    {
-        if ((StartAndWait $ToolboxPath "pack `"$extDir`" `"$OutputDir`"") -ne 0)
+        else
         {
-            $allPassed = $false
-        }         
+            if ((StartAndWait $ToolboxPath "pack `"$extDir`" `"$OutputDir`"") -ne 0)
+            {
+                $allPassed = $false
+            }         
+        }
     }
 }
 
-foreach ($themeMan in (Get-ChildItem "..\source\Themes\" -Filter "theme.yaml" -Recurse))
+if ($Themes)
 {
-    $themeDir = Split-Path $themeMan -Parent
-    $addonManifest = Get-Content (Join-Path $themeDir "theme.yaml") | ConvertFrom-Yaml 
-    if ((StartAndWait $ToolboxPath "pack `"$themeDir`" `"$OutputDir`"") -ne 0)
+    foreach ($themeMan in (Get-ChildItem "..\source\Themes\" -Filter "theme.yaml" -Recurse))
     {
-        $allPassed = $false
-    }   
+        $themeDir = Split-Path $themeMan -Parent
+        $addonManifest = Get-Content (Join-Path $themeDir "theme.yaml") | ConvertFrom-Yaml 
+        if ((StartAndWait $ToolboxPath "pack `"$themeDir`" `"$OutputDir`"") -ne 0)
+        {
+            $allPassed = $false
+        }   
+    }
 }
 
 if (!$allPassed)
