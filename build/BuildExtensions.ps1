@@ -15,27 +15,64 @@ if (Test-Path $OutputDir)
 }
 
 $solutionDir = Join-Path $pwd "..\source"
-$projectFiles = Get-ChildItem "..\source\" -Filter "*.csproj" -Recurse
 $msbuildpath = Get-MsBuildPath
-Invoke-Nuget "restore `"..\source\PlayniteExtensions.sln`" -SolutionDirectory `"$solutionDir`""    
+Invoke-Nuget "restore `"..\source\PlayniteExtensions.sln`" -SolutionDirectory `"$solutionDir`""   
+$allPassed = $true
 
-foreach ($projectFile in $projectFiles)
+foreach ($extensionMan in (Get-ChildItem "..\source\" -Filter "extension.yaml" -Recurse))
 {
-    if ($projectFile.FullName.Contains(".Tests"))
+    if ($extensionMan.FullName.Contains('\bin\'))
     {
         continue
     }
 
-    $projectDir = Split-Path $projectFile -Parent
-    $addonManifest = Get-Content (Join-Path $projectDir "extension.yaml") | ConvertFrom-Yaml
-    $buildDir = Join-Path $OutputDir $addonManifest.Id
-    
-    $arguments = "-p:OutDir=`"$buildDir`";Configuration=$configuration;AllowedReferenceRelatedFileExtensions=none `"$projectFile`""
-    $compilerResult = StartAndWait $msbuildPath $arguments
-    if ($compilerResult -ne 0)
-    {
-        throw "Build failed."
-    }
+    $extDir = Split-Path $extensionMan -Parent
+    $projectFile = Get-ChildItem $extDir -Filter "*.csproj" | Select-Object -First 1
 
-    StartAndWait $ToolboxPath "pack `"$buildDir`" `"$OutputDir`""
+    if ($projectFile)
+    {
+        if ($projectFile.FullName.Contains(".Tests") -or $projectFile.FullName.Contains(".Common"))
+        {
+            continue
+        }
+
+        $addonManifest = Get-Content (Join-Path $extDir "extension.yaml") | ConvertFrom-Yaml
+        $buildDir = Join-Path $OutputDir $addonManifest.Id
+        
+        $arguments = "-p:OutDir=`"$buildDir`";Configuration=$configuration;AllowedReferenceRelatedFileExtensions=none `"$projectFile`""
+        $compilerResult = StartAndWait $msbuildPath $arguments
+        if ($compilerResult -ne 0)
+        {
+            $allPassed = $false
+        }
+        else
+        {
+            if ((StartAndWait $ToolboxPath "pack `"$buildDir`" `"$OutputDir`"") -ne 0)
+            {
+                $allPassed = $false
+            }
+        }
+    }
+    else
+    {
+        if ((StartAndWait $ToolboxPath "pack `"$extDir`" `"$OutputDir`"") -ne 0)
+        {
+            $allPassed = $false
+        }         
+    }
+}
+
+foreach ($themeMan in (Get-ChildItem "..\source\Themes\" -Filter "theme.yaml" -Recurse))
+{
+    $themeDir = Split-Path $themeMan -Parent
+    $addonManifest = Get-Content (Join-Path $themeDir "theme.yaml") | ConvertFrom-Yaml 
+    if ((StartAndWait $ToolboxPath "pack `"$themeDir`" `"$OutputDir`"") -ne 0)
+    {
+        $allPassed = $false
+    }   
+}
+
+if (!$allPassed)
+{
+    Write-Error "Some add-ons failed to build."
 }

@@ -1,4 +1,5 @@
-﻿using Playnite.Common;
+﻿using AmazonGamesLibrary.Models;
+using Playnite.Common;
 using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,6 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using TwitchLibrary.Models;
 
 namespace AmazonGamesLibrary
 {

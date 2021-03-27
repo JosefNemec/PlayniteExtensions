@@ -25,8 +25,6 @@ namespace BattleNetLibrary
             new BattleNetClient(),
             BattleNet.Icon,
             (_) => new BattleNetLibrarySettingsView(),
-            (g) => new BattleNetGameController(g, api),
-            () => new BattleNetMetadataProvider(),
             api)
         {
             SettingsViewModel = new BattleNetLibrarySettingsViewModel(this, PlayniteApi);
@@ -61,16 +59,6 @@ namespace BattleNetLibrary
             return null;
         }
 
-        public static GameAction GetGamePlayTask(string id)
-        {
-            return new GameAction()
-            {
-                Type = GameActionType.URL,
-                Path = $"battlenet://{id}/",
-                IsHandledByPlugin = true
-            };
-        }
-
         public Dictionary<string, GameInfo> GetInstalledGames()
         {
             var games = new Dictionary<string, GameInfo>();
@@ -96,13 +84,6 @@ namespace BattleNetLibrary
                             GameId = product.ProductId,
                             Source = "Battle.net",
                             Name = product.Name.RemoveTrademarks(),
-                            PlayAction = new GameAction()
-                            {
-                                Type = GameActionType.File,
-                                WorkingDir = ExpandableVariables.InstallationDirectory,
-                                Path = product.ClassicExecutable,
-                                IsHandledByPlugin = true
-                            },
                             InstallDirectory = prog.InstallLocation,
                             IsInstalled = true,
                             Platform = "PC"
@@ -145,7 +126,6 @@ namespace BattleNetLibrary
                         GameId = product.ProductId,
                         Source = "Battle.net",
                         Name = product.Name.RemoveTrademarks(),
-                        PlayAction = GetGamePlayTask(product.ProductId),
                         InstallDirectory = prog.InstallLocation,
                         IsInstalled = true,
                         Platform = "PC"
@@ -325,6 +305,41 @@ namespace BattleNetLibrary
             }
 
             return allGames;
+        }
+
+        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<InstallController> { new BnetInstallController(args.Game) };
+        }
+
+        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<UninstallController> { new BnetUninstallController(args.Game) };
+        }
+
+        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<PlayController> { new BnetPlayController(args.Game) };
+        }
+
+        public override LibraryMetadataProvider GetMetadataDownloader()
+        {
+            return new BattleNetMetadataProvider();
         }
     }
 }

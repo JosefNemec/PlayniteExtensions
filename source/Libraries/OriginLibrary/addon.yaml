@@ -1,8 +1,11 @@
 ﻿AddonId: OriginLibrary_Builtin
-IconUrl: E:\Devel\PlayniteExtensions\source\Libraries\OriginLibrary\Resources\originicon.png
-Type: Library
-InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\OriginLibrary_Builtin.yaml
+IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/OriginLibrary/Resources/originicon.png
+Type: GameLibrary
+InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/OriginLibrary_Builtin.yaml
 ShortDescription: Imports games from Origin game library.
-Name: Origin library importer
+Name: Origin library integration
 Author: Playnite
-Website: https://github.com/JosefNemec/PlayniteExtensions
+Links:
+    Website: https://github.com/JosefNemec/PlayniteExtensions
+    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
+SourceUrl: https://github.com/JosefNemec/PlayniteExtensions

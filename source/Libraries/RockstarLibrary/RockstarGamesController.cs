@@ -1,6 +1,6 @@
 ﻿using Playnite;
 using Playnite.Common;
-using Playnite.SDK.Events;
+using Playnite.SDK.Plugins;
 using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
@@ -10,81 +10,29 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Playnite.SDK;
 
 namespace RockstarGamesLibrary
 {
-    public class RockstarGamesController : BaseGameController
+    public class RockstarInstallController : InstallController
     {
         private CancellationTokenSource watcherToken;
-        private ProcessMonitor procMon;
-        private Stopwatch stopWatch;
-        private RockstarGamesLibrary library;
 
-        public RockstarGamesController(RockstarGamesLibrary library, Game game) : base(game)
+        public RockstarInstallController(Game game) : base(game)
         {
-            this.library = library;
+            Name = "Install using Rockstar client";
         }
 
         public override void Dispose()
         {
-            ReleaseResources();
+            watcherToken?.Cancel();
         }
 
-        public void ReleaseResources()
+        public override void Install(InstallActionArgs args)
         {
-            procMon?.Dispose();
-        }
-
-        public override void Play()
-        {
-            ReleaseResources();
-            OnStarting(this, new GameControllerEventArgs(this, 0));
-            if (Directory.Exists(Game.InstallDirectory))
-            {
-                stopWatch = Stopwatch.StartNew();
-                procMon = new ProcessMonitor();
-                procMon.TreeStarted += ProcMon_TreeStarted;
-                procMon.TreeDestroyed += Monitor_TreeDestroyed;
-                var rsApp = RockstarGames.Games.First(a => a.TitleId == Game.GameId);
-                ProcessStarter.StartProcess(Path.Combine(Game.InstallDirectory, rsApp.Executable));
-                StartRunningWatcher();
-            }
-            else
-            {
-                OnStopped(this, new GameControllerEventArgs(this, 0));
-            }
-        }
-
-        public override void Install()
-        {
-            ReleaseResources();
+            Dispose();
             RockstarGames.StartClient();
             StartInstallWatcher();
-        }
-
-        public override void Uninstall()
-        {
-            ReleaseResources();
-            ProcessStarter.StartProcess(RockstarGames.ClientExecPath, $"-enableFullMode -uninstall={Game.GameId}");
-            StartUninstallWatcher();
-        }
-
-        private void ProcMon_TreeStarted(object sender, EventArgs args)
-        {
-            OnStarted(this, new GameControllerEventArgs(this, 0));
-        }
-
-        private void Monitor_TreeDestroyed(object sender, EventArgs args)
-        {
-            stopWatch.Stop();
-            OnStopped(this, new GameControllerEventArgs(this, stopWatch.Elapsed.TotalSeconds));
-        }
-
-        public async void StartRunningWatcher()
-        {
-            // Give original process some time to start RS launcher and then kill itself
-            await Task.Delay(10000);
-            procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
         }
 
         public async void StartInstallWatcher()
@@ -98,21 +46,42 @@ namespace RockstarGamesLibrary
                     return;
                 }
 
-                var installedGame = library.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
+                var installedGame = RockstarGamesLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
                 if (installedGame != null)
                 {
                     var installInfo = new GameInfo()
                     {
-                        PlayAction = installedGame.PlayAction,
                         InstallDirectory = installedGame.InstallDirectory
                     };
 
-                    OnInstalled(this, new GameInstalledEventArgs(installInfo, this, 0));
+                    InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
                     return;
                 }
 
                 await Task.Delay(5000);
             }
+        }
+    }
+
+    public class RockstarUninstallController : UninstallController
+    {
+        private CancellationTokenSource watcherToken;
+
+        public RockstarUninstallController(Game game) : base(game)
+        {
+            Name = "Uninstall using Rockstar client";
+        }
+
+        public override void Dispose()
+        {
+            watcherToken?.Cancel();
+        }
+
+        public override void Uninstall(UninstallActionArgs args)
+        {
+            Dispose();
+            ProcessStarter.StartProcess(RockstarGames.ClientExecPath, $"-enableFullMode -uninstall={Game.GameId}");
+            StartUninstallWatcher();
         }
 
         public async void StartUninstallWatcher()
@@ -126,14 +95,68 @@ namespace RockstarGamesLibrary
                     return;
                 }
 
-                if (library.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId) == null)
+                if (RockstarGamesLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId) == null)
                 {
-                    OnUninstalled(this, new GameControllerEventArgs(this, 0));
+                    InvokeOnUninstalled(new GameUninstalledEventArgs());
                     return;
                 }
 
                 await Task.Delay(2000);
             }
+        }
+    }
+
+    public class RockstarPlayController : PlayController
+    {
+        private static ILogger logger = LogManager.GetLogger();
+        private ProcessMonitor procMon;
+        private Stopwatch stopWatch;
+
+        public RockstarPlayController(Game game) : base(game)
+        {
+            Name = "Play using Rockstar client";
+        }
+
+        public override void Dispose()
+        {
+            procMon?.Dispose();
+        }
+
+        public override void Play(PlayActionArgs args)
+        {
+            Dispose();
+            InvokeOnStarting(new GameStartingEventArgs());
+            if (Directory.Exists(Game.InstallDirectory))
+            {
+                stopWatch = Stopwatch.StartNew();
+                procMon = new ProcessMonitor();
+                procMon.TreeStarted += ProcMon_TreeStarted;
+                procMon.TreeDestroyed += Monitor_TreeDestroyed;
+                var rsApp = RockstarGames.Games.First(a => a.TitleId == Game.GameId);
+                ProcessStarter.StartProcess(Path.Combine(Game.InstallDirectory, rsApp.Executable));
+                StartRunningWatcher();
+            }
+            else
+            {
+                InvokeOnStopped(new GameStoppedEventArgs());
+            }
+        }
+
+        private void ProcMon_TreeStarted(object sender, EventArgs args)
+        {
+            InvokeOnStarted(new GameStartedEventArgs());
+        }
+
+        private void Monitor_TreeDestroyed(object sender, EventArgs args)
+        {
+            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
+        }
+
+        public async void StartRunningWatcher()
+        {
+            // Give original process some time to start RS launcher and then kill itself
+            await Task.Delay(10000);
+            procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
         }
     }
 }

@@ -52,16 +52,9 @@ namespace OriginLibrary
             new OriginClient(),
             Origin.Icon,
             (_) => new OriginLibrarySettingsView(),
-            null,
-            () => new OriginMetadataProvider(api),
             api)
         {
             SettingsViewModel = new OriginLibrarySettingsViewModel(this, PlayniteApi);
-        }
-
-        public override IGameController GetGameController(Game game)
-        {
-            return new OriginGameController(this, game, PlayniteApi);
         }
 
         internal PlatformPath GetPathFromPlatformPath(string path, RegistryView platformView)
@@ -205,16 +198,14 @@ namespace OriginLibrary
                     return new GameAction
                     {
                         Type = GameActionType.URL,
-                        Path = paths.CompletePath,
-                        IsHandledByPlugin = true
+                        Path = paths.CompletePath
                     };
                 }
                 else
                 {
                     var action = new GameAction
                     {
-                        Type = GameActionType.File,
-                        IsHandledByPlugin = true
+                        Type = GameActionType.File
                     };
                     if (paths.Path.IsNullOrEmpty())
                     {
@@ -235,11 +226,7 @@ namespace OriginLibrary
         public GameAction GetGamePlayTask(GameLocalDataResponse manifest)
         {
             var platform = manifest.publishing.softwareList.software.FirstOrDefault(a => a.softwarePlatform == "PCWIN");
-            var playAction = new GameAction()
-            {
-                IsHandledByPlugin = true
-            };
-
+            var playAction = new GameAction();
             if (string.IsNullOrEmpty(platform.fulfillmentAttributes.executePathOverride))
             {
                 return null;
@@ -362,13 +349,6 @@ namespace OriginLibrary
                         }
 
                         newGame.InstallDirectory = installDir;
-                        newGame.PlayAction = new GameAction
-                        {
-                            IsHandledByPlugin = true,
-                            Type = GameActionType.URL,
-                            Path = Origin.GetLaunchString(gameId)
-                        };
-
                         games.Add(newGame.GameId, newGame);
                     }
                     catch (Exception e) when (!Environment.IsDebugBuild)
@@ -521,6 +501,41 @@ namespace OriginLibrary
             }
 
             return allGames;
+        }
+
+        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<InstallController> { new OriginInstallController(args.Game, this) };
+        }
+
+        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<UninstallController> { new OriginUninstallController(args.Game, this) };
+        }
+
+        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<PlayController> { new OriginPlayController(args.Game) };
+        }
+
+        public override LibraryMetadataProvider GetMetadataDownloader()
+        {
+            return new OriginMetadataProvider(PlayniteApi);
         }
     }
 }

@@ -1,9 +1,12 @@
-﻿AddonId: RockstarLibraryIntegration_JN
-IconUrl: E:\Devel\PlayniteExtensions\source\Libraries\RockstarLibrary\icon.png
-Type: Library
-InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\RockstarLibraryIntegration_JN.yaml
+﻿AddonId: Rockstar_Games_Library
+IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/RockstarLibrary/icon.png
+Type: GameLibrary
+InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/Rockstar_Games_Library.yaml
 ShortDescription: Imports games from Rockstar Games launcher.
 Description: Only imports installed games.
-Name: Rockstar Games Library Importer
+Name: Rockstar Games library integration
 Author: Playnite
-Website: https://github.com/JosefNemec/PlayniteExtensions
+Links:
+    Website: https://github.com/JosefNemec/PlayniteExtensions
+    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
+SourceUrl: https://github.com/JosefNemec/PlayniteExtensions

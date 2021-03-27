@@ -31,8 +31,6 @@ namespace PSNLibrary
             null,
             Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"icon.png"),
             (_) => new PSNLibrarySettingsView(),
-            (g) => new PSNGameController(g),
-            null,
             api)
         {
             SettingsViewModel = new PSNLibrarySettingsViewModel(this, api);

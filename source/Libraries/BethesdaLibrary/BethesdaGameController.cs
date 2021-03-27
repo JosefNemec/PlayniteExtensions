@@ -1,7 +1,7 @@
 ﻿using Playnite;
 using Playnite.Common;
-using Playnite.SDK.Events;
 using Playnite.SDK.Models;
+using Playnite.SDK.Plugins;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -13,75 +13,25 @@ using System.Threading.Tasks;
 
 namespace BethesdaLibrary
 {
-    public class BethesdaGameController : BaseGameController
+    public class BethesdaInstallController : InstallController
     {
         private CancellationTokenSource watcherToken;
-        private ProcessMonitor procMon;
-        private Stopwatch stopWatch;
 
-        public BethesdaGameController(Game game) : base(game)
+        public BethesdaInstallController(Game game) : base(game)
         {
+            Name = "Install using Bethesda client";
         }
 
         public override void Dispose()
         {
-            ReleaseResources();
+            watcherToken?.Cancel();
         }
 
-        public void ReleaseResources()
+        public override void Install(InstallActionArgs args)
         {
-            procMon?.Dispose();
-        }
-
-        public override void Play()
-        {
-            ReleaseResources();
-            if (Game.PlayAction.Type == GameActionType.URL && Game.PlayAction.Path.StartsWith("bethesda", StringComparison.OrdinalIgnoreCase))
-            {
-                OnStarting(this, new GameControllerEventArgs(this, 0));
-                GameActionActivator.ActivateAction(Game.PlayAction);
-                if (Directory.Exists(Game.InstallDirectory))
-                {
-                    stopWatch = Stopwatch.StartNew();
-                    procMon = new ProcessMonitor();
-                    procMon.TreeStarted += ProcMon_TreeStarted;
-                    procMon.TreeDestroyed += Monitor_TreeDestroyed;
-                    procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
-                }
-                else
-                {
-                    OnStopped(this, new GameControllerEventArgs(this, 0));
-                }
-            }
-            else
-            {
-                throw new Exception("Unknown Play action configuration.");
-            }
-        }
-
-        public override void Install()
-        {
-            ReleaseResources();
+            Dispose();
             ProcessStarter.StartUrl(Bethesda.ClientExecPath);
             StartInstallWatcher();
-        }
-
-        public override void Uninstall()
-        {
-            ReleaseResources();
-            ProcessStarter.StartUrl("bethesdanet://uninstall/" + Game.GameId);
-            StartUninstallWatcher();
-        }
-
-        private void ProcMon_TreeStarted(object sender, EventArgs args)
-        {
-            OnStarted(this, new GameControllerEventArgs(this, 0));
-        }
-
-        private void Monitor_TreeDestroyed(object sender, EventArgs args)
-        {
-            stopWatch.Stop();
-            OnStopped(this, new GameControllerEventArgs(this, stopWatch.Elapsed.TotalSeconds));
         }
 
         public async void StartInstallWatcher()
@@ -100,16 +50,37 @@ namespace BethesdaLibrary
                 {
                     var installInfo = new GameInfo()
                     {
-                        PlayAction = installedGame.PlayAction,
                         InstallDirectory = installedGame.InstallDirectory
                     };
 
-                    OnInstalled(this, new GameInstalledEventArgs(installInfo, this, 0));
+                    InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
                     return;
                 }
 
-                await Task.Delay(2000);
+                await Task.Delay(10000);
             }
+        }
+    }
+
+    public class BethesdaUninstallController : UninstallController
+    {
+        private CancellationTokenSource watcherToken;
+
+        public BethesdaUninstallController(Game game) : base(game)
+        {
+            Name = "Uninstall using Bethesda client";
+        }
+
+        public override void Dispose()
+        {
+            watcherToken?.Cancel();
+        }
+
+        public override void Uninstall(UninstallActionArgs args)
+        {
+            Dispose();
+            ProcessStarter.StartUrl("bethesdanet://uninstall/" + Game.GameId);
+            StartUninstallWatcher();
         }
 
         public async void StartUninstallWatcher()
@@ -125,12 +96,62 @@ namespace BethesdaLibrary
 
                 if (BethesdaLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId) == null)
                 {
-                    OnUninstalled(this, new GameControllerEventArgs(this, 0));
+                    InvokeOnUninstalled(new GameUninstalledEventArgs());
                     return;
                 }
 
                 await Task.Delay(2000);
             }
+        }
+    }
+
+    public class BethesdaPlayController : PlayController
+    {
+        private ProcessMonitor procMon;
+        private Stopwatch stopWatch;
+
+        public BethesdaPlayController(Game game) : base(game)
+        {
+        }
+
+        public override void Dispose()
+        {
+            procMon?.Dispose();
+        }
+
+        public override void Play(PlayActionArgs args)
+        {
+            Dispose();
+            InvokeOnStarting(new GameStartingEventArgs());
+            GameActionActivator.ActivateAction(new GameAction()
+            {
+                Type = GameActionType.URL,
+                Path = @"bethesdanet://run/" + Game.GameId
+            });
+
+            if (Directory.Exists(Game.InstallDirectory))
+            {
+                stopWatch = Stopwatch.StartNew();
+                procMon = new ProcessMonitor();
+                procMon.TreeStarted += ProcMon_TreeStarted;
+                procMon.TreeDestroyed += Monitor_TreeDestroyed;
+                procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
+            }
+            else
+            {
+                InvokeOnStopped(new GameStoppedEventArgs());
+            }
+        }
+
+        private void ProcMon_TreeStarted(object sender, EventArgs args)
+        {
+            InvokeOnStarted(new GameStartedEventArgs());
+        }
+
+        private void Monitor_TreeDestroyed(object sender, EventArgs args)
+        {
+            stopWatch.Stop();
+            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
         }
     }
 }

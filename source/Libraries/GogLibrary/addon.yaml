@@ -1,8 +1,11 @@
 ﻿AddonId: GogLibrary_Builtin
-IconUrl: E:\Devel\PlayniteExtensions\source\Libraries\GogLibrary\Resources\gogicon.png
-Type: Library
-InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\GogLibrary_Builtin.yaml
+IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/GogLibrary/Resources/gogicon.png
+Type: GameLibrary
+InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/GogLibrary_Builtin.yaml
 ShortDescription: Imports games from GOG game library.
-Name: GOG library importer
+Name: GOG library integration
 Author: Playnite
-Website: https://github.com/JosefNemec/PlayniteExtensions
+Links:
+    Website: https://github.com/JosefNemec/PlayniteExtensions
+    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
+SourceUrl: https://github.com/JosefNemec/PlayniteExtensions

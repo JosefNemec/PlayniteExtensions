@@ -2,8 +2,8 @@
 using Playnite;
 using Playnite.Common;
 using Playnite.SDK;
-using Playnite.SDK.Events;
 using Playnite.SDK.Models;
+using Playnite.SDK.Plugins;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,17 +15,135 @@ using System.Threading.Tasks;
 
 namespace BattleNetLibrary
 {
-    public class BattleNetGameController : BaseGameController
+    public class BnetInstallController : InstallController
+    {
+        private CancellationTokenSource watcherToken;
+
+        public BnetInstallController(Game game) : base(game)
+        {
+            Name = "Install using Battle.net client";
+        }
+
+        public override void Dispose()
+        {
+            watcherToken?.Cancel();
+        }
+
+        public override void Install(InstallActionArgs args)
+        {
+            Dispose();
+            var product = BattleNetGames.GetAppDefinition(Game.GameId);
+            if (product.Type == BNetAppType.Classic)
+            {
+                ProcessStarter.StartUrl(@"https://battle.net/account/management/download/");
+            }
+            else
+            {
+                if (!BattleNet.IsInstalled)
+                {
+                    throw new Exception("Cannot install game, Battle.net launcher is not installed properly.");
+                }
+
+                ProcessStarter.StartProcess(BattleNet.ClientExecPath, $"--game={product.InternalId}");
+            }
+
+            StartInstallWatcher();
+        }
+
+        public async void StartInstallWatcher()
+        {
+            watcherToken = new CancellationTokenSource();
+            var app = BattleNetGames.GetAppDefinition(Game.GameId);
+            while (true)
+            {
+                if (watcherToken.IsCancellationRequested)
+                {
+                    return;
+                }
+
+                var install = BattleNetLibrary.GetUninstallEntry(app);
+                if (install == null)
+                {
+                    await Task.Delay(10000);
+                    continue;
+                }
+                else
+                {
+                    var installInfo = new GameInfo()
+                    {
+                        InstallDirectory = install.InstallLocation
+                    };
+
+                    InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
+                    return;
+                }
+            }
+        }
+    }
+
+    public class BnetUninstallController : UninstallController
+    {
+        private CancellationTokenSource watcherToken;
+
+        public BnetUninstallController(Game game) : base(game)
+        {
+            Name = "Uninstall";
+        }
+
+        public override void Dispose()
+        {
+            watcherToken?.Cancel();
+        }
+
+        public override void Uninstall(UninstallActionArgs args)
+        {
+            Dispose();
+            var product = BattleNetGames.GetAppDefinition(Game.GameId);
+            var entry = BattleNetLibrary.GetUninstallEntry(product);
+            if (entry != null)
+            {
+                var startArgs = string.Format("/C \"{0}\"", entry.UninstallString);
+                ProcessStarter.StartProcess("cmd", startArgs);
+                StartUninstallWatcher();
+            }
+            else
+            {
+                InvokeOnUninstalled(new GameUninstalledEventArgs());
+            }
+        }
+
+        public async void StartUninstallWatcher()
+        {
+            watcherToken = new CancellationTokenSource();
+            var app = BattleNetGames.GetAppDefinition(Game.GameId);
+            while (true)
+            {
+                if (watcherToken.IsCancellationRequested)
+                {
+                    return;
+                }
+
+                var entry = BattleNetLibrary.GetUninstallEntry(app);
+                if (entry == null)
+                {
+                    InvokeOnUninstalled(new GameUninstalledEventArgs());
+                    return;
+                }
+
+                await Task.Delay(2000);
+            }
+        }
+    }
+
+    public class BnetPlayController : PlayController
     {
         private static ILogger logger = LogManager.GetLogger();
-        private CancellationTokenSource watcherToken;
         private ProcessMonitor procMon;
         private Stopwatch stopWatch;
-        private IPlayniteAPI api;
 
-        public BattleNetGameController(Game game, IPlayniteAPI api) : base(game)
+        public BnetPlayController(Game game) : base(game)
         {
-            this.api = api;
+            Name = game.Name;
         }
 
         public override void Dispose()
@@ -38,7 +156,7 @@ namespace BattleNetLibrary
             procMon?.Dispose();
         }
 
-        public override void Play()
+        public override void Play(PlayActionArgs args)
         {
             ReleaseResources();
             stopWatch = Stopwatch.StartNew();
@@ -46,34 +164,35 @@ namespace BattleNetLibrary
             procMon.TreeDestroyed += Monitor_TreeDestroyed;
             var app = BattleNetGames.GetAppDefinition(Game.GameId);
 
-            if (Game.PlayAction.Type == GameActionType.URL && Game.PlayAction.Path.StartsWith("battlenet", StringComparison.OrdinalIgnoreCase))
+            if (app.Type == BNetAppType.Default)
             {
                 if (!BattleNet.IsInstalled)
                 {
                     throw new Exception("Cannot start game, Battle.net launcher is not installed properly.");
                 }
 
-                OnStarting(this, new GameControllerEventArgs(this, 0));
+                InvokeOnStarting(new GameStartingEventArgs());
                 StartBnetRunningWatcher();
             }
-            else if (app.Type == BNetAppType.Classic && Game.PlayAction.Path.Contains(app.ClassicExecutable))
+            else
             {
-                var playAction = api.ExpandGameVariables(Game, Game.PlayAction);
-                OnStarting(this, new GameControllerEventArgs(this, 0));
-                GameActionActivator.ActivateAction(playAction);
-                OnStarted(this, new GameControllerEventArgs(this, 0));
+                InvokeOnStarting(new GameStartingEventArgs());
+                GameActionActivator.ActivateAction(new GameAction
+                {
+                    Type = GameActionType.File,
+                    WorkingDir = Game.InstallDirectory,
+                    Path = app.ClassicExecutable
+                });
+
+                InvokeOnStarted(new GameStartedEventArgs());
                 if (Directory.Exists(Game.InstallDirectory))
                 {
                     procMon.WatchDirectoryProcesses(Game.InstallDirectory, true, true);
                 }
                 else
                 {
-                    OnStopped(this, new GameControllerEventArgs(this, 0));
+                    InvokeOnStopped(new GameStoppedEventArgs());
                 }
-            }
-            else
-            {
-                throw new Exception("Unknown Play action configuration.");
             }
         }
 
@@ -102,7 +221,7 @@ namespace BattleNetLibrary
             catch (Exception e) when (!Debugger.IsAttached)
             {
                 logger.Error(e, "Failed to start battle.net game.");
-                OnStopped(this, new GameControllerEventArgs(this, 0));
+                InvokeOnStopped(new GameStoppedEventArgs());
                 return;
             }
 
@@ -113,123 +232,19 @@ namespace BattleNetLibrary
             }
             else
             {
-                OnStopped(this, new GameControllerEventArgs(this, 0));
-            }
-        }
-
-        public override void Install()
-        {
-            ReleaseResources();
-            var product = BattleNetGames.GetAppDefinition(Game.GameId);
-            if (product.Type == BNetAppType.Classic)
-            {
-                ProcessStarter.StartUrl(@"https://battle.net/account/management/download/");
-            }
-            else
-            {
-                if (!BattleNet.IsInstalled)
-                {
-                    throw new Exception("Cannot install game, Battle.net launcher is not installed properly.");
-                }
-
-                ProcessStarter.StartProcess(BattleNet.ClientExecPath, $"--game={product.InternalId}");
-            }
-
-            StartInstallWatcher();
-        }
-
-        public override void Uninstall()
-        {
-            ReleaseResources();
-            var product = BattleNetGames.GetAppDefinition(Game.GameId);
-            var entry = BattleNetLibrary.GetUninstallEntry(product);
-            if (entry != null)
-            {
-                var args = string.Format("/C \"{0}\"", entry.UninstallString);
-                ProcessStarter.StartProcess("cmd", args);
-                StartUninstallWatcher();
-            }
-            else
-            {
-                OnUninstalled(this, new GameControllerEventArgs(this, 0));
+                InvokeOnStopped(new GameStoppedEventArgs());
             }
         }
 
         private void ProcMon_TreeStarted(object sender, EventArgs args)
         {
-            OnStarted(this, new GameControllerEventArgs(this, 0));
+            InvokeOnStarted(new GameStartedEventArgs());
         }
 
         private void Monitor_TreeDestroyed(object sender, EventArgs args)
         {
             stopWatch.Stop();
-            OnStopped(this, new GameControllerEventArgs(this, stopWatch.Elapsed.TotalSeconds));
-        }
-
-        public async void StartInstallWatcher()
-        {
-            watcherToken = new CancellationTokenSource();
-            var app = BattleNetGames.GetAppDefinition(Game.GameId);
-            while (true)
-            {
-                if (watcherToken.IsCancellationRequested)
-                {
-                    return;
-                }
-
-                var install = BattleNetLibrary.GetUninstallEntry(app);
-                if (install == null)
-                {
-                    await Task.Delay(2000);
-                    continue;
-                }
-                else
-                {
-                    var installInfo = new GameInfo()
-                    {
-                        InstallDirectory = install.InstallLocation
-                    };
-
-                    if (app.Type == BNetAppType.Classic)
-                    {
-                        installInfo.PlayAction = new GameAction()
-                        {
-                            Type = GameActionType.File,
-                            WorkingDir = ExpandableVariables.InstallationDirectory,
-                            Path = app.ClassicExecutable
-                        };
-                    }
-                    else
-                    {
-                        installInfo.PlayAction = BattleNetLibrary.GetGamePlayTask(Game.GameId);
-                    }
-
-                    OnInstalled(this, new GameInstalledEventArgs(installInfo, this, 0));
-                    return;
-                }
-            }
-        }
-
-        public async void StartUninstallWatcher()
-        {
-            watcherToken = new CancellationTokenSource();
-            var app = BattleNetGames.GetAppDefinition(Game.GameId);
-            while (true)
-            {
-                if (watcherToken.IsCancellationRequested)
-                {
-                    return;
-                }
-
-                var entry = BattleNetLibrary.GetUninstallEntry(app);
-                if (entry == null)
-                {
-                    OnUninstalled(this, new GameControllerEventArgs(this, 0));
-                    return;
-                }
-
-                await Task.Delay(2000);
-            }
+            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
         }
     }
 }

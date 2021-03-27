@@ -1,7 +1,7 @@
 ﻿Id: PlayStationLibrary_Builtin
-Name: PlayStation Library Importer
+Name: PlayStation library integration
 Author: Playnite
-Version: 1.0
+Version: 2.0
 Module: PSNLibrary.dll
 Type: GameLibrary
 Icon: icon.png

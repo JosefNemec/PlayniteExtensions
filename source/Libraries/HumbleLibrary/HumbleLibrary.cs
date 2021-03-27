@@ -28,8 +28,6 @@ namespace HumbleLibrary
             null,
             Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"icon.png"),
             (_) => new HumbleLibrarySettingsView(),
-            (g) => new HumbleGameController(g),
-            null,
             api)
         {
             SettingsViewModel = new HumbleLibrarySettingsViewModel(this, PlayniteApi);

@@ -26,8 +26,6 @@ namespace AmazonGamesLibrary
             new AmazonGamesLibraryClient(),
             AmazonGames.Icon,
             (_) => new AmazonGamesLibrarySettingsView(),
-            null,
-            () => new AmazonGamesMetadataProvider(),
             api)
         {
             SettingsViewModel = new AmazonGamesLibrarySettingsViewModel(this, PlayniteApi);
@@ -40,19 +38,39 @@ namespace AmazonGamesLibrary
             return SettingsViewModel;
         }
 
-        public override IGameController GetGameController(Game game)
+        public override LibraryMetadataProvider GetMetadataDownloader()
         {
-            return new AmazonGameController(game, SettingsViewModel.Settings, PlayniteApi);
+            return new AmazonGamesMetadataProvider();
         }
 
-        public static GameAction GetPlayAction(string gameId)
+        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
         {
-            return new GameAction()
+            if (args.Game.PluginId != Id)
             {
-                Type = GameActionType.URL,
-                Path = $"amazon-games://play/{gameId}",
-                IsHandledByPlugin = true
-            };
+                return null;
+            }
+
+            return new List<InstallController> { new AmazonInstallController(args.Game) };
+        }
+
+        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<UninstallController> { new AmazonUninstallController(args.Game) };
+        }
+
+        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<PlayController> { new AmazonPlayController(args.Game, !SettingsViewModel.Settings.StartGamesWithoutLauncher) };
         }
 
         internal Dictionary<string, GameInfo> GetInstalledGames()
@@ -82,7 +100,6 @@ namespace AmazonGamesLibrary
                         Source = "Amazon",
                         Name = program.DisplayName.RemoveTrademarks(),
                         IsInstalled = true,
-                        PlayAction = GetPlayAction(gameId),
                         Platform = "PC"
                     };
 

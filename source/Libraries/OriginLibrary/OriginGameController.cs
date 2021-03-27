@@ -2,7 +2,7 @@
 using Playnite;
 using Playnite.Common;
 using Playnite.SDK;
-using Playnite.SDK.Events;
+using Playnite.SDK.Plugins;
 using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
@@ -15,89 +15,28 @@ using System.Threading.Tasks;
 
 namespace OriginLibrary
 {
-    public class OriginGameController : BaseGameController
+    public class OriginInstallController : InstallController
     {
-        private ILogger logger = LogManager.GetLogger();
+        private static readonly ILogger logger = LogManager.GetLogger();
         private CancellationTokenSource watcherToken;
-        private ProcessMonitor procMon;
-        private Stopwatch stopWatch;
         private OriginLibrary origin;
-        private IPlayniteAPI api;
 
-        public OriginGameController(OriginLibrary library, Game game, IPlayniteAPI api) : base (game)
+        public OriginInstallController(Game game, OriginLibrary library) : base(game)
         {
             origin = library;
-            this.api = api;
+            Name = "Install using Origin client";
         }
 
         public override void Dispose()
         {
-            ReleaseResources();
+            watcherToken?.Cancel();
         }
 
-        public void ReleaseResources()
+        public override void Install(InstallActionArgs args)
         {
-            procMon?.Dispose();
-        }
-
-        public override void Play()
-        {
-            ReleaseResources();
-            OnStarting(this, new GameControllerEventArgs(this, 0));
-            if (Directory.Exists(Game.InstallDirectory))
-            {
-                stopWatch = Stopwatch.StartNew();
-                procMon = new ProcessMonitor();
-                procMon.TreeDestroyed += ProcMon_TreeDestroyed;
-                procMon.TreeStarted += ProcMon_TreeStarted;
-                ProcessStarter.StartUrl(Origin.GetLaunchString(Game.GameId));
-                StartRunningWatcher();
-            }
-            else
-            {
-                OnStopped(this, new GameControllerEventArgs(this, 0));
-            }
-        }
-
-        public async void StartRunningWatcher()
-        {
-            if (Origin.GetGameUsesEasyAntiCheat(Game.InstallDirectory))
-            {
-                // Games with EasyAntiCheat take longer to be re-executed by Origin
-                await Task.Delay(12000);
-            }
-            else if (Origin.GetGameRequiresOrigin(Game.InstallDirectory))
-            {
-                // Solves issues with game process being started/shutdown multiple times during startup via Origin
-                await Task.Delay(5000);
-            }
-
-            procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
-        }
-
-        public override void Install()
-        {
-            ReleaseResources();
+            Dispose();
             ProcessStarter.StartUrl($"origin2://library/open");
             StartInstallWatcher();
-        }
-
-        public override void Uninstall()
-        {
-            ReleaseResources();
-            ProcessStarter.StartProcess("appwiz.cpl", string.Empty);
-            StartUninstallWatcher();
-        }
-
-        private void ProcMon_TreeStarted(object sender, EventArgs args)
-        {
-            OnStarted(this, new GameControllerEventArgs(this, 0));
-        }
-
-        private void ProcMon_TreeDestroyed(object sender, EventArgs args)
-        {
-            stopWatch.Stop();
-            OnStopped(this, new GameControllerEventArgs(this, stopWatch.Elapsed.TotalSeconds));
         }
 
         public async void StartInstallWatcher()
@@ -107,7 +46,6 @@ namespace OriginLibrary
             if (manifest?.publishing == null)
             {
                 logger.Error($"No publishing manifest found for Origin game {Game.GameId}, stopping installation check.");
-                OnUninstalled(this, new GameControllerEventArgs(this, 0));
                 return;
             }
 
@@ -127,22 +65,41 @@ namespace OriginLibrary
                     {
                         var installInfo = new GameInfo()
                         {
-                            PlayAction = new GameAction
-                            {
-                                Type = GameActionType.URL,
-                                Path = Origin.GetLaunchString(Game.GameId),
-                                IsHandledByPlugin = true
-                            },
                             InstallDirectory = origin.GetInstallDirectory(manifest)
                         };
 
-                        OnInstalled(this, new GameInstalledEventArgs(installInfo, this, 0));
+                        InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
                         return;
                     }
                 }
 
                 await Task.Delay(2000);
             }
+        }
+    }
+
+    public class OriginUninstallController : UninstallController
+    {
+        private static readonly ILogger logger = LogManager.GetLogger();
+        private CancellationTokenSource watcherToken;
+        private OriginLibrary origin;
+
+        public OriginUninstallController(Game game, OriginLibrary library) : base(game)
+        {
+            origin = library;
+            Name = "Uninstall using Origin client";
+        }
+
+        public override void Dispose()
+        {
+            watcherToken?.Cancel();
+        }
+
+        public override void Uninstall(UninstallActionArgs args)
+        {
+            Dispose();
+            ProcessStarter.StartUrl($"origin2://library/open");
+            StartUninstallWatcher();
         }
 
         public async void StartUninstallWatcher()
@@ -152,7 +109,7 @@ namespace OriginLibrary
             if (manifest?.publishing == null)
             {
                 logger.Error($"No publishing manifest found for Origin game {Game.GameId}, stopping uninstallation check.");
-                OnUninstalled(this, new GameControllerEventArgs(this, 0));
+                InvokeOnUninstalled(new GameUninstalledEventArgs());
                 return;
             }
 
@@ -168,20 +125,83 @@ namespace OriginLibrary
 
                 if (executablePath?.CompletePath == null)
                 {
-                    OnUninstalled(this, new GameControllerEventArgs(this, 0));
+                    InvokeOnUninstalled(new GameUninstalledEventArgs());
                     return;
                 }
                 else
                 {
                     if (!File.Exists(executablePath.CompletePath))
                     {
-                        OnUninstalled(this, new GameControllerEventArgs(this, 0));
+                        InvokeOnUninstalled(new GameUninstalledEventArgs());
                         return;
                     }
                 }
 
                 await Task.Delay(2000);
             }
+        }
+    }
+
+    public class OriginPlayController : PlayController
+    {
+        private static ILogger logger = LogManager.GetLogger();
+        private ProcessMonitor procMon;
+        private Stopwatch stopWatch;
+
+        public OriginPlayController(Game game) : base(game)
+        {
+            Name = game.Name;
+        }
+
+        public override void Dispose()
+        {
+            procMon?.Dispose();
+        }
+
+        public override void Play(PlayActionArgs args)
+        {
+            Dispose();
+            InvokeOnStarting(new GameStartingEventArgs());
+            if (Directory.Exists(Game.InstallDirectory))
+            {
+                stopWatch = Stopwatch.StartNew();
+                procMon = new ProcessMonitor();
+                procMon.TreeDestroyed += ProcMon_TreeDestroyed;
+                procMon.TreeStarted += ProcMon_TreeStarted;
+                ProcessStarter.StartUrl(Origin.GetLaunchString(Game.GameId));
+                StartRunningWatcher();
+            }
+            else
+            {
+                InvokeOnStopped(new GameStoppedEventArgs());
+            }
+        }
+
+        public async void StartRunningWatcher()
+        {
+            if (Origin.GetGameUsesEasyAntiCheat(Game.InstallDirectory))
+            {
+                // Games with EasyAntiCheat take longer to be re-executed by Origin
+                await Task.Delay(12000);
+            }
+            else if (Origin.GetGameRequiresOrigin(Game.InstallDirectory))
+            {
+                // Solves issues with game process being started/shutdown multiple times during startup via Origin
+                await Task.Delay(5000);
+            }
+
+            procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
+        }
+
+        private void ProcMon_TreeStarted(object sender, EventArgs args)
+        {
+            InvokeOnStarted(new GameStartedEventArgs());
+        }
+
+        private void ProcMon_TreeDestroyed(object sender, EventArgs args)
+        {
+            stopWatch.Stop();
+            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
         }
     }
 }

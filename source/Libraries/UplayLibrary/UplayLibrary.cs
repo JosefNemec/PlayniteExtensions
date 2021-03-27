@@ -23,21 +23,9 @@ namespace UplayLibrary
             new UplayClient(),
             Uplay.Icon,
             (_) => new UplayLibrarySettingsView(),
-            (g) => new UplayGameController(g),
-            () => new UplayMetadataProvider(),
             api)
         {
             SettingsViewModel = new UplayLibrarySettingsViewModel(this, api);
-        }
-
-        public static GameAction GetGamePlayTask(string id)
-        {
-            return new GameAction()
-            {
-                Type = GameActionType.URL,
-                Path = Uplay.GetLaunchString(id),
-                IsHandledByPlugin = true
-            };
         }
 
         public List<GameInfo> GetLibraryGames()
@@ -117,7 +105,6 @@ namespace UplayLibrary
                             GameId = install,
                             Source = "Ubisoft Connect",
                             InstallDirectory = installDir,
-                            PlayAction = GetGamePlayTask(install),
                             Name = Path.GetFileName(installDir.TrimEnd(Path.DirectorySeparatorChar)),
                             IsInstalled = true,
                             Platform = "PC"
@@ -195,6 +182,41 @@ namespace UplayLibrary
             }
 
             return allGames;
+        }
+
+        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<InstallController> { new UplayInstallController(args.Game) };
+        }
+
+        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<UninstallController> { new UplayUninstallController(args.Game) };
+        }
+
+        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<PlayController> { new UplayPlayController(args.Game) };
+        }
+
+        public override LibraryMetadataProvider GetMetadataDownloader()
+        {
+            return new UplayMetadataProvider();
         }
     }
 }

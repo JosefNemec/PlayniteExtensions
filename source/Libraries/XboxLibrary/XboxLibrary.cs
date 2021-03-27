@@ -30,8 +30,6 @@ namespace XboxLibrary
             null,
             Xbox.Icon,
             (_) => new XboxLibrarySettingsView(),
-            (g) => new XboxGameController(g, api),
-            null,
             api)
         {
             SettingsViewModel = new XboxLibrarySettingsViewModel(this, api);
@@ -183,14 +181,6 @@ namespace XboxLibrary
                             game.IsInstalled = true;
                             game.InstallDirectory = installedApp.WorkDir;
                             game.Icon = installedApp.Icon;
-                            game.PlayAction = new GameAction
-                            {
-                                Type = GameActionType.File,
-                                Arguments = installedApp.Arguments,
-                                Path = installedApp.Path,
-                                IsHandledByPlugin = true
-                            };
-
                             installedGames.Add(libTitle.pfn, game);
                         }
                     }
@@ -269,6 +259,36 @@ namespace XboxLibrary
             }
 
             return allGames;
+        }
+
+        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id || args.Game.GameId.StartsWith("CONSOLE"))
+            {
+                return null;
+            }
+
+            return new List<InstallController> { new XboxInstallController(args.Game) };
+        }
+
+        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id || args.Game.GameId.StartsWith("CONSOLE"))
+            {
+                return null;
+            }
+
+            return new List<UninstallController> { new XboxUninstallController(args.Game) };
+        }
+
+        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        {
+            if (args.Game.PluginId != Id || args.Game.GameId.StartsWith("CONSOLE"))
+            {
+                return null;
+            }
+
+            return new List<PlayController> { new XboxPlayController(args.Game) };
         }
     }
 }

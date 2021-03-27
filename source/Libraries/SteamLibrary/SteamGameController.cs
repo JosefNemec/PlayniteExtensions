@@ -1,7 +1,6 @@
 ﻿using Playnite;
 using Playnite.Common;
 using Playnite.SDK;
-using Playnite.SDK.Events;
 using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
@@ -12,97 +11,41 @@ using System.Threading;
 using System.Threading.Tasks;
 using SteamKit2;
 using System.IO;
+using Playnite.SDK.Plugins;
 
 namespace SteamLibrary
 {
-    public class SteamGameController : BaseGameController
+    public class SteamInstallController : InstallController
     {
-        private static ILogger logger = LogManager.GetLogger();
         private CancellationTokenSource watcherToken;
-        private GameID gameId;
-        private ProcessMonitor procMon;
-        private Stopwatch stopWatch;
-        private SteamLibrary library;
 
-        public SteamGameController(Game game, SteamLibrary library) : base(game)
+        public SteamInstallController(Game game) : base(game)
         {
-            gameId = game.ToSteamGameID();
-            this.library = library;
+            Name = "Install using Steam";
         }
 
         public override void Dispose()
         {
-            ReleaseResources();
-        }
-
-        private void ReleaseResources()
-        {
             watcherToken?.Cancel();
-            procMon?.Dispose();
         }
 
-        public override void Play()
+        public override void Install(InstallActionArgs args)
         {
-            ReleaseResources();
-
-            var installDirectory = Game.InstallDirectory;
-            if (gameId.IsMod)
-            {
-                var allGames = library.GetInstalledGames(false);
-                if (allGames.TryGetValue(gameId.AppID.ToString(), out GameInfo realGame))
-                {
-                    installDirectory = realGame.InstallDirectory;
-                }
-            }
-
-            OnStarting(this, new GameControllerEventArgs(this, 0));
-            stopWatch = Stopwatch.StartNew();
-            ProcessStarter.StartUrl($"steam://rungameid/{Game.GameId}");
-            procMon = new ProcessMonitor();
-            procMon.TreeStarted += ProcMon_TreeStarted;
-            procMon.TreeDestroyed += Monitor_TreeDestroyed;
-            if (Directory.Exists(installDirectory))
-            {
-                procMon.WatchDirectoryProcesses(installDirectory, false);
-            }
-            else
-            {
-                OnStopped(this, new GameControllerEventArgs(this, 0));
-            }
-        }
-
-        public override void Install()
-        {
+            var gameId = Game.ToSteamGameID();
             if (gameId.IsMod)
             {
                 throw new NotSupportedException("Installing mods is not supported.");
             }
             else
             {
-                ReleaseResources();
                 ProcessStarter.StartUrl($"steam://install/{gameId.AppID}");
                 StartInstallWatcher();
-            }
-        }
-
-        public override void Uninstall()
-        {
-            if (gameId.IsMod)
-            {
-                throw new NotSupportedException("Uninstalling mods is not supported.");
-            }
-            else
-            {
-                ReleaseResources();
-                ProcessStarter.StartUrl($"steam://uninstall/{gameId.AppID}");
-                StartUninstallWatcher();
             }
         }
 
         public async void StartInstallWatcher()
         {
             watcherToken = new CancellationTokenSource();
-            var stopWatch = Stopwatch.StartNew();
             var id = Game.ToSteamGameID();
 
             while (true)
@@ -112,28 +55,54 @@ namespace SteamLibrary
                     return;
                 }
 
-                var installed = library.GetInstalledGames(false);
+                var installed = SteamLibrary.GetInstalledGames(false);
                 if (installed.TryGetValue(id, out var installedGame))
                 {
                     var installInfo = new GameInfo
                     {
-                        InstallDirectory = installedGame.InstallDirectory,
-                        PlayAction = installedGame.PlayAction
+                        InstallDirectory = installedGame.InstallDirectory
                     };
 
-                    stopWatch.Stop();
-                    OnInstalled(this, new GameInstalledEventArgs(installInfo, this, stopWatch.Elapsed.TotalSeconds));
+                    InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
                     return;
                 }
 
                 await Task.Delay(10000);
             }
         }
+    }
+
+    public class SteamUninstallController : UninstallController
+    {
+        private CancellationTokenSource watcherToken;
+
+        public SteamUninstallController(Game game) : base(game)
+        {
+            Name = "Uninstall using Steam";
+        }
+
+        public override void Dispose()
+        {
+            watcherToken?.Cancel();
+        }
+
+        public override void Uninstall(UninstallActionArgs args)
+        {
+            var gameId = Game.ToSteamGameID();
+            if (gameId.IsMod)
+            {
+                throw new NotSupportedException("Uninstalling mods is not supported.");
+            }
+            else
+            {
+                ProcessStarter.StartUrl($"steam://uninstall/{gameId.AppID}");
+                StartUninstallWatcher();
+            }
+        }
 
         public async void StartUninstallWatcher()
         {
             watcherToken = new CancellationTokenSource();
-            stopWatch = Stopwatch.StartNew();
             var id = Game.ToSteamGameID();
 
             while (true)
@@ -146,24 +115,71 @@ namespace SteamLibrary
                 var gameState = Steam.GetAppState(id);
                 if (gameState.Installed == false)
                 {
-                    stopWatch.Stop();
-                    OnUninstalled(this, new GameControllerEventArgs(this, stopWatch.Elapsed.TotalSeconds));
+                    InvokeOnUninstalled(new GameUninstalledEventArgs());
                     return;
                 }
 
                 await Task.Delay(5000);
             }
         }
+    }
+
+    public class SteamPlayController : PlayController
+    {
+        private GameID gameId;
+        private ProcessMonitor procMon;
+        private Stopwatch stopWatch;
+
+        public SteamPlayController(Game game) : base(game)
+        {
+            gameId = game.ToSteamGameID();
+            Name = "Play on Steam";
+        }
+
+        public override void Dispose()
+        {
+            procMon?.Dispose();
+        }
+
+        public override void Play(PlayActionArgs args)
+        {
+            Dispose();
+
+            var installDirectory = Game.InstallDirectory;
+            if (gameId.IsMod)
+            {
+                var allGames = SteamLibrary.GetInstalledGames(false);
+                if (allGames.TryGetValue(gameId.AppID.ToString(), out GameInfo realGame))
+                {
+                    installDirectory = realGame.InstallDirectory;
+                }
+            }
+
+            InvokeOnStarting(new GameStartingEventArgs());
+            stopWatch = Stopwatch.StartNew();
+            ProcessStarter.StartUrl($"steam://rungameid/{Game.GameId}");
+            procMon = new ProcessMonitor();
+            procMon.TreeStarted += ProcMon_TreeStarted;
+            procMon.TreeDestroyed += Monitor_TreeDestroyed;
+            if (Directory.Exists(installDirectory))
+            {
+                procMon.WatchDirectoryProcesses(installDirectory, false);
+            }
+            else
+            {
+                InvokeOnStopped(new GameStoppedEventArgs());
+            }
+        }
 
         private void ProcMon_TreeStarted(object sender, EventArgs args)
         {
-            OnStarted(this, new GameControllerEventArgs(this, 0));
+            InvokeOnStarted(new GameStartedEventArgs());
         }
 
         private void Monitor_TreeDestroyed(object sender, EventArgs args)
         {
             stopWatch.Stop();
-            OnStopped(this, new GameControllerEventArgs(this, stopWatch.Elapsed.TotalSeconds));
+            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
         }
     }
 }

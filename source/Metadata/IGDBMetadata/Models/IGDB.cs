@@ -38,7 +38,15 @@ namespace PlayniteServices.Models.IGDB
         DLC = 1,
         Expansion = 2,
         Bundle = 3,
-        StandaloneExpansion = 4
+        StandaloneExpansion = 4,
+        Mod = 5,
+        Episode = 6,
+        Season= 7,
+        Remake = 8,
+        Remaster = 9,
+        ExpandedGame = 10,
+        Port = 11,
+        Fork = 12
     }
 
     public enum ReleaseDateCategory

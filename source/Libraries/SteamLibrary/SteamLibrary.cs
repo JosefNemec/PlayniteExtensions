@@ -29,6 +29,7 @@ namespace SteamLibrary
     [LoadPlugin]
     public class SteamLibrary : LibraryPluginBase<SteamLibrarySettingsViewModel>
     {
+        private static readonly ILogger logger = LogManager.GetLogger();
         private readonly Configuration config;
         internal SteamServicesClient ServicesClient;
 
@@ -39,8 +40,6 @@ namespace SteamLibrary
             new SteamClient(),
             Steam.Icon,
             (_) => new SteamLibrarySettingsView(),
-            null,
-            null,
             api)
         {
             SettingsViewModel = new SteamLibrarySettingsViewModel(this, PlayniteApi)
@@ -52,34 +51,17 @@ namespace SteamLibrary
             ServicesClient = new SteamServicesClient(config.ServicesEndpoint, api.ApplicationInfo.ApplicationVersion);
         }
 
-        public override ISettings GetSettings(bool firstRunSettings)
-        {
-            SettingsViewModel.IsFirstRunUse = firstRunSettings;
-            return SettingsViewModel;
-        }
-
-        public override IGameController GetGameController(Game game)
-        {
-            return new SteamGameController(game, this);
-        }
-
-        public override LibraryMetadataProvider GetMetadataDownloader()
-        {
-            return new SteamMetadataProvider(this);
-        }
-
         internal static GameAction CreatePlayTask(GameID gameId)
         {
             return new GameAction()
             {
                 Name = "Play",
                 Type = GameActionType.URL,
-                Path = @"steam://rungameid/" + gameId,
-                IsHandledByPlugin = true
+                Path = @"steam://rungameid/" + gameId
             };
         }
 
-        internal GameInfo GetInstalledGameFromFile(string path)
+        internal static GameInfo GetInstalledGameFromFile(string path)
         {
             var kv = new KeyValue();
             kv.ReadFileAsText(path);
@@ -114,7 +96,6 @@ namespace SteamLibrary
                 GameId = gameId.ToString(),
                 Name = name.RemoveTrademarks(),
                 InstallDirectory = installDir,
-                PlayAction = CreatePlayTask(gameId),
                 IsInstalled = true,
                 Platform = "PC"
             };
@@ -122,7 +103,7 @@ namespace SteamLibrary
             return game;
         }
 
-        internal List<GameInfo> GetInstalledGamesFromFolder(string path)
+        internal static List<GameInfo> GetInstalledGamesFromFolder(string path)
         {
             var games = new List<GameInfo>();
 
@@ -133,7 +114,7 @@ namespace SteamLibrary
                     var game = GetInstalledGameFromFile(Path.Combine(path, file));
                     if (game.InstallDirectory.IsNullOrEmpty() || game.InstallDirectory.Contains(@"steamapps\music"))
                     {
-                        Logger.Info($"Steam game {game.Name} is not properly installed or it's a soundtrack, skipping.");
+                        logger.Info($"Steam game {game.Name} is not properly installed or it's a soundtrack, skipping.");
                         continue;
                     }
 
@@ -142,14 +123,14 @@ namespace SteamLibrary
                 catch (Exception exc)
                 {
                     // Steam can generate invalid acf file according to issue #37
-                    Logger.Error(exc, $"Failed to get information about installed game from: {file}");
+                    logger.Error(exc, $"Failed to get information about installed game from: {file}");
                 }
             }
 
             return games;
         }
 
-        internal List<GameInfo> GetInstalledGoldSrcModsFromFolder(string path)
+        internal static List<GameInfo> GetInstalledGoldSrcModsFromFolder(string path)
         {
             var games = new List<GameInfo>();
             var firstPartyMods = new string[] { "bshift", "cstrike", "czero", "czeror", "dmc", "dod", "gearbox", "ricochet", "tfc", "valve" };
@@ -168,14 +149,14 @@ namespace SteamLibrary
                 catch (Exception exc)
                 {
                     // gameinfo.txt may not exist or may be invalid
-                    Logger.Error(exc, $"Failed to get information about installed GoldSrc mod from: {path}");
+                    logger.Error(exc, $"Failed to get information about installed GoldSrc mod from: {path}");
                 }
             }
 
             return games;
         }
 
-        internal List<GameInfo> GetInstalledSourceModsFromFolder(string path)
+        internal static List<GameInfo> GetInstalledSourceModsFromFolder(string path)
         {
             var games = new List<GameInfo>();
 
@@ -192,14 +173,14 @@ namespace SteamLibrary
                 catch (Exception exc)
                 {
                     // gameinfo.txt may not exist or may be invalid
-                    Logger.Error(exc, $"Failed to get information about installed Source mod from: {path}");
+                    logger.Error(exc, $"Failed to get information about installed Source mod from: {path}");
                 }
             }
 
             return games;
         }
 
-        internal GameInfo GetInstalledModFromFolder(string path, ModInfo.ModType modType)
+        internal static GameInfo GetInstalledModFromFolder(string path, ModInfo.ModType modType)
         {
             var modInfo = ModInfo.GetFromFolder(path, modType);
             if (modInfo == null)
@@ -213,7 +194,6 @@ namespace SteamLibrary
                 GameId = modInfo.GameId.ToString(),
                 Name = modInfo.Name.RemoveTrademarks(),
                 InstallDirectory = path,
-                PlayAction = CreatePlayTask(modInfo.GameId),
                 IsInstalled = true,
                 Developers = new List<string>() { modInfo.Developer },
                 Links = modInfo.Links,
@@ -225,7 +205,7 @@ namespace SteamLibrary
             return game;
         }
 
-        internal Dictionary<string, GameInfo> GetInstalledGames(bool includeMods = true)
+        internal static Dictionary<string, GameInfo> GetInstalledGames(bool includeMods = true)
         {
             var games = new Dictionary<string, GameInfo>();
             if (!Steam.IsInstalled)
@@ -254,7 +234,7 @@ namespace SteamLibrary
                 }
                 else
                 {
-                    Logger.Warn($"Steam library {libFolder} not found.");
+                    logger.Warn($"Steam library {libFolder} not found.");
                 }
             }
 
@@ -290,14 +270,14 @@ namespace SteamLibrary
                 }
                 catch (Exception e) when (!Environment.IsDebugBuild)
                 {
-                    Logger.Error(e, "Failed to import Steam mods.");
+                    logger.Error(e, "Failed to import Steam mods.");
                 }
             }
 
             return games;
         }
 
-        internal List<string> GetLibraryFolders()
+        internal static List<string> GetLibraryFolders()
         {
             var dbs = new List<string>() { Steam.InstallationPath };
             var configPath = Path.Combine(Steam.InstallationPath, "steamapps", "libraryfolders.vdf");
@@ -327,7 +307,7 @@ namespace SteamLibrary
             }
             catch (Exception e) when (!Debugger.IsAttached)
             {
-                Logger.Error(e, "Failed to get additional Steam library folders.");
+                logger.Error(e, "Failed to get additional Steam library folders.");
             }
 
             return dbs;
@@ -680,6 +660,47 @@ namespace SteamLibrary
                     resources.GetString("LOCImportError"),
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        public override ISettings GetSettings(bool firstRunSettings)
+        {
+            SettingsViewModel.IsFirstRunUse = firstRunSettings;
+            return SettingsViewModel;
+        }
+
+        public override LibraryMetadataProvider GetMetadataDownloader()
+        {
+            return new SteamMetadataProvider(this);
+        }
+
+        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<InstallController> { new SteamInstallController(args.Game) };
+        }
+
+        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<UninstallController> { new SteamUninstallController(args.Game) };
+        }
+
+        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<PlayController> { new SteamPlayController(args.Game) };
         }
 
         public override IEnumerable<GameInfo> GetGames()

@@ -1,7 +1,7 @@
 ﻿using Playnite;
 using Playnite.Common;
 using Playnite.SDK;
-using Playnite.SDK.Events;
+using Playnite.SDK.Plugins;
 using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
@@ -14,32 +14,120 @@ using System.Threading.Tasks;
 
 namespace UplayLibrary
 {
-    public class UplayGameController : BaseGameController
+    public class UplayInstallController : InstallController
     {
         private CancellationTokenSource watcherToken;
-        private ProcessMonitor procMon;
-        private Stopwatch stopWatch;
-        private static ILogger logger = LogManager.GetLogger();
 
-        public UplayGameController(Game game) : base(game)
+        public UplayInstallController(Game game) : base(game)
         {
+            Name = "Install using Ubisoft Connect client";
         }
 
         public override void Dispose()
         {
-            ReleaseResources();
+            watcherToken?.Cancel();
         }
 
-        public void ReleaseResources()
+        public override void Install(InstallActionArgs args)
+        {
+            Dispose();
+            ProcessStarter.StartUrl("uplay://install/" + Game.GameId);
+            StartInstallWatcher();
+        }
+
+        public async void StartInstallWatcher()
+        {
+            watcherToken = new CancellationTokenSource();
+
+            while (true)
+            {
+                if (watcherToken.IsCancellationRequested)
+                {
+                    return;
+                }
+
+                var installedGame = UplayLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
+                if (installedGame != null)
+                {
+                    var installInfo = new GameInfo()
+                    {
+                        InstallDirectory = installedGame.InstallDirectory
+                    };
+
+                    InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
+                    return;
+                }
+
+                await Task.Delay(2000);
+            }
+        }
+    }
+
+    public class UplayUninstallController : UninstallController
+    {
+        private CancellationTokenSource watcherToken;
+
+        public UplayUninstallController(Game game) : base(game)
+        {
+            Name = "Uninstall using Ubisoft Connect client";
+        }
+
+        public override void Dispose()
         {
             watcherToken?.Cancel();
-            procMon?.Dispose();
         }
 
-        public override void Play()
+        public override void Uninstall(UninstallActionArgs args)
         {
-            ReleaseResources();
-            OnStarting(this, new GameControllerEventArgs(this, 0));
+            Dispose();
+            ProcessStarter.StartUrl("uplay://uninstall/" + Game.GameId);
+            StartUninstallWatcher();
+        }
+
+        public async void StartUninstallWatcher()
+        {
+            watcherToken = new CancellationTokenSource();
+
+            while (true)
+            {
+                if (watcherToken.IsCancellationRequested)
+                {
+                    return;
+                }
+
+                if (UplayLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId) == null)
+                {
+                    InvokeOnUninstalled(new GameUninstalledEventArgs());
+                    return;
+                }
+
+                await Task.Delay(2000);
+            }
+        }
+    }
+
+    public class UplayPlayController : PlayController
+    {
+        private static ILogger logger = LogManager.GetLogger();
+        private ProcessMonitor procMon;
+        private Stopwatch stopWatch;
+        private CancellationTokenSource watcherToken;
+
+        public UplayPlayController(Game game) : base(game)
+        {
+            Name = "Play using Ubisoft Connect client";
+        }
+
+        public override void Dispose()
+        {
+            procMon?.Dispose();
+            watcherToken?.Dispose();
+        }
+
+        public override void Play(PlayActionArgs args)
+        {
+            Dispose();
+            InvokeOnStarting(new GameStartingEventArgs());
             if (Directory.Exists(Game.InstallDirectory))
             {
                 var requiresUplay = Uplay.GetGameRequiresUplay(Game);
@@ -52,7 +140,7 @@ namespace UplayLibrary
             }
             else
             {
-                OnStopped(this, new GameControllerEventArgs(this, 0));
+                InvokeOnStopped(new GameStoppedEventArgs());
             }
         }
 
@@ -85,78 +173,15 @@ namespace UplayLibrary
             }
         }
 
-        public override void Install()
-        {
-            ReleaseResources();
-            ProcessStarter.StartUrl("uplay://install/" + Game.GameId);
-            StartInstallWatcher();
-        }
-
-        public override void Uninstall()
-        {
-            ReleaseResources();
-            ProcessStarter.StartUrl("uplay://uninstall/" + Game.GameId);
-            StartUninstallWatcher();
-        }
-
         private void ProcMon_TreeStarted(object sender, EventArgs args)
         {
-            OnStarted(this, new GameControllerEventArgs(this, 0));
+            InvokeOnStarted(new GameStartedEventArgs());
         }
 
         private void Monitor_TreeDestroyed(object sender, EventArgs args)
         {
             stopWatch.Stop();
-            OnStopped(this, new GameControllerEventArgs(this, stopWatch.Elapsed.TotalSeconds));
-        }
-
-        public async void StartInstallWatcher()
-        {
-            watcherToken = new CancellationTokenSource();
-
-            while (true)
-            {
-                if (watcherToken.IsCancellationRequested)
-                {
-                    return;
-                }
-
-                var installedGame = UplayLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
-                if (installedGame != null)
-                {
-                    var installInfo = new GameInfo()
-                    {
-                        PlayAction = installedGame.PlayAction,
-                        InstallDirectory = installedGame.InstallDirectory
-                    };
-
-                    OnInstalled(this, new GameInstalledEventArgs(installInfo, this, 0));
-                    return;
-                }
-
-                await Task.Delay(2000);
-            }
-        }
-
-        public async void StartUninstallWatcher()
-        {
-            watcherToken = new CancellationTokenSource();
-
-            while (true)
-            {
-                if (watcherToken.IsCancellationRequested)
-                {
-                    return;
-                }
-
-                if (UplayLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId) == null)
-                {
-                    OnUninstalled(this, new GameControllerEventArgs(this, 0));
-                    return;
-                }
-
-                await Task.Delay(2000);
-            }
+            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
         }
     }
 }

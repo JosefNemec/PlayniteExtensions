@@ -1,8 +1,11 @@
 ﻿AddonId: XboxLibrary_Builtin
-IconUrl: E:\Devel\PlayniteExtensions\source\Libraries\XboxLibrary\icon.png
-Type: Library
-InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\XboxLibrary_Builtin.yaml
+IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/XboxLibrary/icon.png
+Type: GameLibrary
+InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/XboxLibrary_Builtin.yaml
 ShortDescription: Imports games from Xbox Live account.
-Name: Xbox Library Importer
+Name: Xbox library integration
 Author: Playnite
-Website: https://github.com/JosefNemec/PlayniteExtensions
+Links:
+    Website: https://github.com/JosefNemec/PlayniteExtensions
+    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
+SourceUrl: https://github.com/JosefNemec/PlayniteExtensions

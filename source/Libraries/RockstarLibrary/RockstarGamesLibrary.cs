@@ -16,6 +16,8 @@ namespace RockstarGamesLibrary
     [LoadPlugin]
     public class RockstarGamesLibrary : LibraryPluginBase<RockstarGamesLibrarySettingsViewModel>
     {
+        private static readonly ILogger logger = LogManager.GetLogger();
+
         public RockstarGamesLibrary(IPlayniteAPI api) : base(
             "Rockstar Games",
             Guid.Parse("88409022-088a-4de8-805a-fdbac291f00a"),
@@ -23,18 +25,11 @@ namespace RockstarGamesLibrary
             new RockstarGamesLibraryClient(),
             RockstarGames.Icon,
             null,
-            null,
-            null,
             api)
         {
         }
 
-        public override IGameController GetGameController(Game game)
-        {
-            return new RockstarGamesController(this, game);
-        }
-
-        internal IEnumerable<GameInfo> GetInstalledGames()
+        internal static IEnumerable<GameInfo> GetInstalledGames()
         {
             var games = new List<GameInfo>();
             foreach (var app in Programs.GetUnistallProgramsList())
@@ -51,7 +46,7 @@ namespace RockstarGamesLibrary
                     var rsGame = RockstarGames.Games.FirstOrDefault(a => a.TitleId == titleId);
                     if (rsGame == null)
                     {
-                        Logger.Warn($"Uknown Rockstar game with titleid {titleId}");
+                        logger.Warn($"Uknown Rockstar game with titleid {titleId}");
                         continue;
                     }
 
@@ -61,14 +56,7 @@ namespace RockstarGamesLibrary
                         InstallDirectory = app.InstallLocation,
                         Source = "Rockstar Games",
                         Name = rsGame.Name,
-                        GameId = titleId,
-                        PlayAction = new GameAction
-                        {
-                            Type = GameActionType.File,
-                            Path = rsGame.Executable,
-                            WorkingDir = ExpandableVariables.InstallationDirectory,
-                            IsHandledByPlugin = true
-                        }
+                        GameId = titleId
                     };
 
                     if (!string.IsNullOrEmpty(app.DisplayIcon))
@@ -120,6 +108,36 @@ namespace RockstarGamesLibrary
             }
 
             return games;
+        }
+
+        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<InstallController> { new RockstarInstallController(args.Game) };
+        }
+
+        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<UninstallController> { new RockstarUninstallController(args.Game) };
+        }
+
+        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<PlayController> { new RockstarPlayController(args.Game) };
         }
     }
 }

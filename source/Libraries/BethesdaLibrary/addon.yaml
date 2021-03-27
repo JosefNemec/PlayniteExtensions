@@ -1,9 +1,12 @@
 ﻿AddonId: BethesdaLibrary_Builtin
-IconUrl: E:\Devel\PlayniteExtensions\source\Libraries\BethesdaLibrary\Resources\bethesdaicon.png
-Type: Library
-InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\BethesdaLibrary_Builtin.yaml
+IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/BethesdaLibrary/Resources/bethesdaicon.png
+Type: GameLibrary
+InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/BethesdaLibrary_Builtin.yaml
 ShortDescription: Imports games from Bethesda client.
 Description: Only imports installed games!
-Name: Bethesda client importer
+Name: Bethesda library integration
 Author: Playnite
-Website: https://github.com/JosefNemec/PlayniteExtensions
+Links:
+    Website: https://github.com/JosefNemec/PlayniteExtensions
+    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
+SourceUrl: https://github.com/JosefNemec/PlayniteExtensions

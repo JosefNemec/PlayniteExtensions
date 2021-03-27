@@ -1,8 +1,11 @@
 ﻿AddonId: HumbleLibrary_Builtin
-IconUrl: E:\Devel\PlayniteExtensions\source\Libraries\HumbleLibrary\icon.png
-Type: Library
-InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\HumbleLibrary_Builtin.yaml
+IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/HumbleLibrary/icon.png
+Type: GameLibrary
+InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/HumbleLibrary_Builtin.yaml
 ShortDescription: Imports games from Humble store library.
-Name: Humble library importer
+Name: Humble library integration
 Author: Playnite
-Website: https://github.com/JosefNemec/PlayniteExtensions
+Links:
+    Website: https://github.com/JosefNemec/PlayniteExtensions
+    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
+SourceUrl: https://github.com/JosefNemec/PlayniteExtensions

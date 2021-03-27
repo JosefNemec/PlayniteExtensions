@@ -362,51 +362,49 @@ namespace Steam
 
             if (downloadedMetadata.ProductDetails != null)
             {
-                var tasks = new List<GameAction>();
-                var launchList = downloadedMetadata.ProductDetails["config"]["launch"].Children;
-                foreach (var task in launchList.Skip(1))
-                {
-                    var properties = task["config"];
-                    if (properties.Name != null)
-                    {
-                        if (properties["oslist"].Name != null)
-                        {
-                            if (properties["oslist"].Value != "windows")
-                            {
-                                continue;
-                            }
-                        }
-                    }
+                //var tasks = new List<GameAction>();
+                //var launchList = downloadedMetadata.ProductDetails["config"]["launch"].Children;
+                //foreach (var task in launchList.Skip(1))
+                //{
+                //    var properties = task["config"];
+                //    if (properties.Name != null)
+                //    {
+                //        if (properties["oslist"].Name != null)
+                //        {
+                //            if (properties["oslist"].Value != "windows")
+                //            {
+                //                continue;
+                //            }
+                //        }
+                //    }
 
-                    // Ignore action without name  - shoudn't be visible to end user
-                    if (task["description"].Name != null)
-                    {
-                        var newTask = new GameAction()
-                        {
-                            Name = task["description"].Value,
-                            Arguments = task["arguments"].Value ?? string.Empty,
-                            Path = task["executable"].Value,
-                            IsHandledByPlugin = false,
-                            WorkingDir = ExpandableVariables.InstallationDirectory
-                        };
+                //    // Ignore action without name  - shoudn't be visible to end user
+                //    if (task["description"].Name != null)
+                //    {
+                //        var newTask = new GameAction()
+                //        {
+                //            Name = task["description"].Value,
+                //            Arguments = task["arguments"].Value ?? string.Empty,
+                //            Path = task["executable"].Value,
+                //            WorkingDir = ExpandableVariables.InstallationDirectory
+                //        };
 
-                        tasks.Add(newTask);
-                    }
-                }
+                //        tasks.Add(newTask);
+                //    }
+                //}
 
-                var manual = downloadedMetadata.ProductDetails["extended"]["gamemanualurl"];
-                if (manual.Name != null)
-                {
-                    tasks.Add((new GameAction()
-                    {
-                        Name = "Manual",
-                        Type = GameActionType.URL,
-                        Path = manual.Value,
-                        IsHandledByPlugin = false
-                    }));
-                }
+                //var manual = downloadedMetadata.ProductDetails["extended"]["gamemanualurl"];
+                //if (manual.Name != null)
+                //{
+                //    tasks.Add((new GameAction()
+                //    {
+                //        Name = "Manual",
+                //        Type = GameActionType.URL,
+                //        Path = manual.Value
+                //    }));
+                //}
 
-                gameInfo.OtherActions = tasks;
+                //gameInfo.OtherActions = tasks;
 
                 // VR features
                 var vrSupport = false;

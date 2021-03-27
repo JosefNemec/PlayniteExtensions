@@ -74,8 +74,6 @@ namespace Playnite.SDK
         where TSettings : ISettings
     {
         private Func<bool, UserControl> GetSettingsViewAction { get; }
-        private Func<Game, IGameController> GetGameControllerAction { get; }
-        private Func<LibraryMetadataProvider> GetMetadataDownloaderAction { get; }
 
         public readonly ILogger Logger = LogManager.GetLogger();
 
@@ -95,8 +93,6 @@ namespace Playnite.SDK
             LibraryClient client,
             string libraryIcon,
             Func<bool, UserControl> getSettingsViewAction,
-            Func<Game, IGameController> getGameControllerAction,
-            Func<LibraryMetadataProvider> getMetadataDownloaderAction,
             IPlayniteAPI api) : base(api)
         {
             Name = name;
@@ -106,8 +102,6 @@ namespace Playnite.SDK
             Client = client;
             LibraryIcon = libraryIcon;
             GetSettingsViewAction = getSettingsViewAction;
-            GetGameControllerAction = getGameControllerAction;
-            GetMetadataDownloaderAction = getMetadataDownloaderAction;
         }
 
         public override ISettings GetSettings(bool firstRunSettings)
@@ -128,26 +122,6 @@ namespace Playnite.SDK
             }
 
             return base.GetSettingsView(firstRunView);
-        }
-
-        public override IGameController GetGameController(Game game)
-        {
-            if (GetGameControllerAction != null)
-            {
-                return GetGameControllerAction(game);
-            }
-
-            return base.GetGameController(game);
-        }
-
-        public override LibraryMetadataProvider GetMetadataDownloader()
-        {
-            if (GetMetadataDownloaderAction != null)
-            {
-                return GetMetadataDownloaderAction();
-            }
-
-            return base.GetMetadataDownloader();
         }
     }
 }

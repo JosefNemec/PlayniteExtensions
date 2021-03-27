@@ -2,7 +2,7 @@
 using Playnite;
 using Playnite.Common;
 using Playnite.SDK;
-using Playnite.SDK.Events;
+using Playnite.SDK.Plugins;
 using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
@@ -15,21 +15,124 @@ using System.Threading.Tasks;
 
 namespace ItchioLibrary
 {
-    public class ItchioGameController : BaseGameController
+    public class ItchInstallController : InstallController
     {
         private CancellationTokenSource watcherToken;
-        private ProcessMonitor procMon;
+
+        public ItchInstallController(Game game) : base(game)
+        {
+            Name = "Install using Itch client";
+        }
+
+        public override void Dispose()
+        {
+            watcherToken?.Cancel();
+        }
+
+        public override void Install(InstallActionArgs args)
+        {
+            if (!Itch.IsInstalled)
+            {
+                throw new Exception(ResourceProvider.GetString("LOCItchioClientNotInstalledError"));
+            }
+
+            Dispose();
+            ProcessStarter.StartUrl("itch://library/owned");
+            StartInstallWatcher();
+        }
+
+        public async void StartInstallWatcher()
+        {
+            watcherToken = new CancellationTokenSource();
+            using (var butler = new Butler())
+            {
+                while (true)
+                {
+                    if (watcherToken.IsCancellationRequested)
+                    {
+                        return;
+                    }
+
+                    var installed = butler.GetCaves();
+                    var cave = installed?.FirstOrDefault(a => a.game.id.ToString() == Game.GameId);
+                    if (cave != null)
+                    {
+                        var installInfo = new GameInfo
+                        {
+                            InstallDirectory = cave.installInfo.installFolder
+                        };
+
+                        InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
+                        return;
+                    }
+
+                    await Task.Delay(10000);
+                }
+            }
+        }
+    }
+
+    public class ItchUninstallController : UninstallController
+    {
+        private CancellationTokenSource watcherToken;
+
+        public ItchUninstallController(Game game) : base(game)
+        {
+            Name = "Uninstall using Itch client";
+        }
+
+        public override void Dispose()
+        {
+            watcherToken?.Cancel();
+        }
+
+        public override void Uninstall(UninstallActionArgs args)
+        {
+            if (!Itch.IsInstalled)
+            {
+                throw new Exception(ResourceProvider.GetString("LOCItchioClientNotInstalledError"));
+            }
+
+            Dispose();
+            ProcessStarter.StartUrl("itch://library/installed");
+            StartUninstallWatcher();
+        }
+
+        public async void StartUninstallWatcher()
+        {
+            watcherToken = new CancellationTokenSource();
+            using (var butler = new Butler())
+            {
+                while (true)
+                {
+                    if (watcherToken.IsCancellationRequested)
+                    {
+                        return;
+                    }
+
+                    var installed = butler.GetCaves();
+                    var cave = installed?.FirstOrDefault(a => a.game.id.ToString() == Game.GameId);
+                    if (cave == null)
+                    {
+                        InvokeOnUninstalled(new GameUninstalledEventArgs());
+                        return;
+                    }
+
+                    await Task.Delay(2000);
+                }
+            }
+        }
+    }
+
+    public class ItchPlayController : PlayController
+    {
+        private static ILogger logger = LogManager.GetLogger();
         private Stopwatch stopWatch;
-        private readonly IPlayniteAPI api;
-        private readonly Game game;
         private Butler butler;
 
-        public const string DynamicLaunchActionStr = "dynamic";
-
-        public ItchioGameController(Game game, IPlayniteAPI api) : base(game)
+        public ItchPlayController(Game game) : base(game)
         {
-            this.api = api;
-            this.game = game;            
+            Name = "Play using Itch client";
         }
 
         public override void Dispose()
@@ -39,7 +142,6 @@ namespace ItchioLibrary
 
         public void ReleaseResources()
         {
-            procMon?.Dispose();
             if (butler != null)
             {
                 butler.RequestReceived -= Butler_RequestReceived;
@@ -48,56 +150,26 @@ namespace ItchioLibrary
             }
         }
 
-        private void CheckItchInstallStatus()
+        public override void Play(PlayActionArgs args)
         {
             if (!Itch.IsInstalled)
             {
-                throw new Exception(
-                    api.Resources.GetString("LOCItchioClientNotInstalledError"));
+                throw new Exception(ResourceProvider.GetString("LOCItchioClientNotInstalledError"));
             }
-        }
 
-        public override void Play()
-        {
-            CheckItchInstallStatus();
             ReleaseResources();
-            if (Game.PlayAction.Path == DynamicLaunchActionStr ||
-                Game.PlayAction.Type == GameActionType.File ||
-                Game.PlayAction.Type == GameActionType.URL)
+            InvokeOnStarting(new GameStartingEventArgs());
+            butler = new Butler();
+            var cave = butler.GetCaves().FirstOrDefault(a => a.game.id == long.Parse(Game.GameId));
+            if (cave != null)
             {
-                OnStarting(this, new GameControllerEventArgs(this, 0));
-
-                if (Game.PlayAction.Path == DynamicLaunchActionStr)
-                {
-                    butler = new Butler();
-                    butler.RequestReceived += Butler_RequestReceived;
-                    butler.NotificationReceived += Butler_NotificationReceived;
-                    butler.LaunchAsync(Game.PlayAction.Arguments);
-                }
-                else
-                {
-                    if (!Directory.Exists(Game.InstallDirectory))
-                    {
-                        throw new DirectoryNotFoundException(api.Resources.GetString("LOCInstallDirNotFoundError"));
-                    }
-                    
-                    GameActionActivator.ActivateAction(api.ExpandGameVariables(Game, Game.PlayAction));
-                    if (Directory.Exists(Game.InstallDirectory))
-                    {
-                        procMon = new ProcessMonitor();
-                        procMon.TreeStarted += ProcMon_TreeStarted;
-                        procMon.TreeDestroyed += Monitor_TreeDestroyed;
-                        procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
-                    }
-                    else
-                    {
-                        OnStopped(this, new GameControllerEventArgs(this, 0));
-                    }
-                }
+                butler.RequestReceived += Butler_RequestReceived;
+                butler.NotificationReceived += Butler_NotificationReceived;
+                butler.LaunchAsync(cave.id);
             }
             else
             {
-                throw new Exception(api.Resources.GetString("LOCInvalidGameActionSettings"));
+                throw new Exception("Game installation not found.");
             }
         }
 
@@ -105,13 +177,13 @@ namespace ItchioLibrary
         {
             if (e.Notification.Method == Butler.Methods.LaunchRunning)
             {
-                OnStarted(this, new GameControllerEventArgs(this, 0));
+                InvokeOnStarted(new GameStartedEventArgs());
                 stopWatch = Stopwatch.StartNew();
             }
             else if (e.Notification.Method == Butler.Methods.LaunchExited)
             {
                 stopWatch.Stop();
-                OnStopped(this, new GameControllerEventArgs(this, stopWatch.Elapsed.TotalSeconds));
+                InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
             }
         }
 
@@ -153,94 +225,6 @@ namespace ItchioLibrary
                     });
                     break;
             }
-        }
-
-        public override void Install()
-        {
-            CheckItchInstallStatus();
-            ProcessStarter.StartUrl("itch://library/owned");
-            StartInstallWatcher();
-        }
-
-        public override void Uninstall()
-        {
-            CheckItchInstallStatus();
-            ProcessStarter.StartUrl("itch://library/installed");
-            StartUninstallWatcher();
-        }
-
-        public async void StartInstallWatcher()
-        {
-            watcherToken = new CancellationTokenSource();
-            using (var butler = new Butler())
-            {
-                while (true)
-                {
-                    if (watcherToken.IsCancellationRequested)
-                    {
-                        return;
-                    }
-
-                    var installed = butler.GetCaves();
-                    var cave = installed?.FirstOrDefault(a => a.game.id.ToString() == Game.GameId);
-                    if (cave != null)
-                    {
-                        var installInfo = new GameInfo
-                        {
-                            InstallDirectory = cave.installInfo.installFolder,
-                            PlayAction = new GameAction()
-                            {
-                                Type = GameActionType.URL,
-                                Path = DynamicLaunchActionStr,
-                                Arguments = cave.id,
-                                IsHandledByPlugin = true
-                            }
-                        };
-
-                        OnInstalled(this, new GameInstalledEventArgs(installInfo, this, 0));
-                        return;
-                    }
-
-                    await Task.Delay(5000);
-                }
-            }
-        }
-
-        public async void StartUninstallWatcher()
-        {
-            watcherToken = new CancellationTokenSource();
-            using (var butler = new Butler())
-            {
-                while (true)
-                {
-                    if (watcherToken.IsCancellationRequested)
-                    {
-                        return;
-                    }
-
-                    var installed = butler.GetCaves();
-                    var cave = installed?.FirstOrDefault(a => a.game.id.ToString() == Game.GameId);
-                    if (cave == null)
-                    {
-                        OnUninstalled(this, new GameControllerEventArgs(this, 0));
-                        return;
-                    }
-
-                    await Task.Delay(2000);
-                }
-            }
-        }
-
-        private void ProcMon_TreeStarted(object sender, EventArgs args)
-        {
-            OnStarted(this, new GameControllerEventArgs(this, 0));
-            stopWatch = Stopwatch.StartNew();
-        }
-
-        private void Monitor_TreeDestroyed(object sender, EventArgs args)
-        {
-            stopWatch.Stop();
-            OnStopped(this, new GameControllerEventArgs(this, stopWatch.Elapsed.TotalSeconds));
         }
     }
 }

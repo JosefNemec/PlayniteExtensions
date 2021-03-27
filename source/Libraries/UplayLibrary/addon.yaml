@@ -1,8 +1,11 @@
 ﻿AddonId: UplayLibrary_Builtin
-IconUrl: E:\Devel\PlayniteExtensions\source\Libraries\UplayLibrary\Resources\uplayicon.png
-Type: Library
-InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\UplayLibrary_Builtin.yaml
-ShortDescription: Imports games from Twitch game library.
-Name: Uplay Library Importer
+IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/UplayLibrary/Resources/uplayicon.png
+Type: GameLibrary
+InstallerManifestUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/manifests/UplayLibrary_Builtin.yaml
+ShortDescription: Imports games from Ubisoft Connect game library.
+Name: Ubisoft Connect library integration
 Author: Playnite
-Website: https://github.com/JosefNemec/PlayniteExtensions
+Links:
+    Website: https://github.com/JosefNemec/PlayniteExtensions
+    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
+SourceUrl: https://github.com/JosefNemec/PlayniteExtensions

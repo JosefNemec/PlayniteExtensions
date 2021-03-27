@@ -1,8 +1,11 @@
 ﻿AddonId: BattlenetLibrary_Builtin
-IconUrl: E:\Devel\PlayniteExtensions\source\Libraries\BattleNetLibrary\Resources\battleneticon.png
-Type: Library
-InstallerManifestUrl: E:\Devel\PlayniteExtensions\manifests\BattlenetLibrary_Builtin.yaml
+IconUrl: https://github.com/JosefNemec/PlayniteExtensions/raw/master/source/Libraries/BattleNetLibrary/Resources/battleneticon.png
+Type: GameLibrary
+InstallerManifestUrl: https://raw.githubusercontent.com/JosefNemec/PlayniteExtensions/master/manifests/BattlenetLibrary_Builtin.yaml
 ShortDescription: Imports games from Battle.net library.
-Name: Battle.net library importer
+Name: Battle.net library integration
 Author: Playnite
-Website: https://github.com/JosefNemec/PlayniteExtensions
+Links:
+    Website: https://github.com/JosefNemec/PlayniteExtensions
+    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
+SourceUrl: https://github.com/JosefNemec/PlayniteExtensions

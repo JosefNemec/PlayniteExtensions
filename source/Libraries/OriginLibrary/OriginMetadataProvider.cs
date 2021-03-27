@@ -72,16 +72,7 @@ namespace OriginLibrary
 
             if (!string.IsNullOrEmpty(storeMetadata.StoreDetails.i18n.gameManualURL))
             {
-                game.OtherActions = new ObservableCollection<GameAction>()
-                {
-                    new GameAction()
-                    {
-                        IsHandledByPlugin = false,
-                        Type = GameActionType.URL,
-                        Path = storeMetadata.StoreDetails.i18n.gameManualURL,
-                        Name = "Manual"
-                    }
-                };
+                game.Manual = storeMetadata.StoreDetails.i18n.gameManualURL;
             }
 
             return metadata;

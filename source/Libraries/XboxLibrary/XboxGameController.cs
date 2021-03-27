@@ -1,7 +1,7 @@
 ﻿using Playnite;
 using Playnite.Common;
 using Playnite.SDK;
-using Playnite.SDK.Events;
+using Playnite.SDK.Plugins;
 using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
@@ -14,83 +14,25 @@ using System.Threading.Tasks;
 
 namespace XboxLibrary
 {
-    public class XboxGameController : BaseGameController
+    public class XboxInstallController : InstallController
     {
-        private readonly IPlayniteAPI api;
-        private readonly Game game;
-        protected ProcessMonitor procMon;
-        protected Stopwatch stopWatch;
         private CancellationTokenSource watcherToken;
 
-        public XboxGameController(Game game, IPlayniteAPI api) : base(game)
+        public XboxInstallController(Game game) : base(game)
         {
-            this.api = api;
-            this.game = game;
-        }
-
-        public override void Install()
-        {
-            if (Game.GameId.StartsWith("CONSOLE"))
-            {
-                throw new Exception("We can't install console only games, the technology is not there yet.");
-            }
-
-            ProcessStarter.StartUrl($"ms-windows-store://pdp/?PFN={Game.GameId}");
-            StartInstallWatcher();
-        }
-
-        public override void Uninstall()
-        {
-            if (Game.GameId.StartsWith("CONSOLE"))
-            {
-                throw new Exception("We can't uninstall console only games, the technology is not there yet.");
-            }
-
-            ProcessStarter.StartUrl("ms-settings:appsfeatures");
-            StartUninstallWatcher();
-        }
-
-        public override void Play()
-        {
-            if (Game.GameId.StartsWith("CONSOLE"))
-            {
-                throw new Exception("We can't start console only games, the technology is not there yet.");
-            }
-
-            var prg = Programs.GetUWPApps().FirstOrDefault(a => a.AppId == Game.GameId);
-            if (prg == null)
-            {
-                throw new Exception("Cannot start UWP game, installation not found.");
-            }
-
-            OnStarting(this, new GameControllerEventArgs(this, 0));
-            ProcessStarter.StartProcess(prg.Path, prg.Arguments);
-            stopWatch = Stopwatch.StartNew();
-            procMon = new ProcessMonitor();
-            procMon.TreeDestroyed += Monitor_TreeDestroyed;
-            procMon.TreeStarted += ProcMon_TreeStarted;
-
-            // TODO switch to WatchUwpApp once we are building as 64bit app
-            //procMon.WatchUwpApp(uwpMatch.Groups[1].Value, false);
-            if (Directory.Exists(prg.WorkDir) && ProcessMonitor.IsWatchableByProcessNames(prg.WorkDir))
-            {
-                procMon.WatchDirectoryProcesses(prg.WorkDir, false, true);
-            }
-            else
-            {
-                OnStopped(this, new GameControllerEventArgs(this, 0));
-            }
+            Name = "Install using MS Store";
         }
 
         public override void Dispose()
         {
-            ReleaseResources();
+            watcherToken?.Cancel();
         }
 
-        public void ReleaseResources()
+        public override void Install(InstallActionArgs args)
         {
-            procMon?.Dispose();
-            watcherToken?.Cancel();
+            Dispose();
+            ProcessStarter.StartUrl($"ms-windows-store://pdp/?PFN={Game.GameId}");
+            StartInstallWatcher();
         }
 
         public async void StartInstallWatcher()
@@ -109,22 +51,37 @@ namespace XboxLibrary
                 {
                     var installInfo = new GameInfo
                     {
-                        InstallDirectory = app.WorkDir,
-                        PlayAction = new GameAction()
-                        {
-                            Type = GameActionType.File,
-                            Path = app.Path,
-                            Arguments = app.Arguments,
-                            IsHandledByPlugin = true
-                        }
+                        InstallDirectory = app.WorkDir
                     };
 
-                    OnInstalled(this, new GameInstalledEventArgs(installInfo, this, 0));
+                    InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
                     return;
                 };
 
                 await Task.Delay(10000);
             }
+        }
+    }
+
+    public class XboxUninstallController : UninstallController
+    {
+        private CancellationTokenSource watcherToken;
+
+        public XboxUninstallController(Game game) : base(game)
+        {
+            Name = "Uninstall";
+        }
+
+        public override void Dispose()
+        {
+            watcherToken?.Cancel();
+        }
+
+        public override void Uninstall(UninstallActionArgs args)
+        {
+            Dispose();
+            ProcessStarter.StartUrl("ms-settings:appsfeatures");
+            StartUninstallWatcher();
         }
 
         public async void StartUninstallWatcher()
@@ -141,23 +98,73 @@ namespace XboxLibrary
                 var app = Programs.GetUWPApps().FirstOrDefault(a => a.AppId == Game.GameId);
                 if (app == null)
                 {
-                    OnUninstalled(this, new GameControllerEventArgs(this, 0));
+                    InvokeOnUninstalled(new GameUninstalledEventArgs());
                     return;
                 }
 
                 await Task.Delay(10000);
             }
         }
+    }
+
+    public class XboxPlayController : PlayController
+    {
+        private static ILogger logger = LogManager.GetLogger();
+        private ProcessMonitor procMon;
+        private Stopwatch stopWatch;
+
+        public XboxPlayController(Game game) : base(game)
+        {
+            Name = game.Name;
+        }
+
+        public override void Dispose()
+        {
+            procMon?.Dispose();
+        }
+
+        public override void Play(PlayActionArgs args)
+        {
+            Dispose();
+            if (Game.GameId.StartsWith("CONSOLE"))
+            {
+                throw new Exception("We can't start console only games, the technology is not there yet.");
+            }
+
+            var prg = Programs.GetUWPApps().FirstOrDefault(a => a.AppId == Game.GameId);
+            if (prg == null)
+            {
+                throw new Exception("Cannot start UWP game, installation not found.");
+            }
+
+            InvokeOnStarting(new GameStartingEventArgs());
+            ProcessStarter.StartProcess(prg.Path, prg.Arguments);
+            stopWatch = Stopwatch.StartNew();
+            procMon = new ProcessMonitor();
+            procMon.TreeDestroyed += Monitor_TreeDestroyed;
+            procMon.TreeStarted += ProcMon_TreeStarted;
+
+            // TODO switch to WatchUwpApp once we are building as 64bit app
+            //procMon.WatchUwpApp(uwpMatch.Groups[1].Value, false);
+            if (Directory.Exists(prg.WorkDir) && ProcessMonitor.IsWatchableByProcessNames(prg.WorkDir))
+            {
+                procMon.WatchDirectoryProcesses(prg.WorkDir, false, true);
+            }
+            else
+            {
+                InvokeOnStopped(new GameStoppedEventArgs());
+            }
+        }
 
         private void ProcMon_TreeStarted(object sender, EventArgs e)
         {
-            OnStarted(this, new GameControllerEventArgs(this, 0));
+            InvokeOnStarted(new GameStartedEventArgs());
         }
 
         private void Monitor_TreeDestroyed(object sender, EventArgs args)
         {
             stopWatch.Stop();
-            OnStopped(this, new GameControllerEventArgs(this, stopWatch.Elapsed.TotalSeconds));
+            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
         }
     }
 }

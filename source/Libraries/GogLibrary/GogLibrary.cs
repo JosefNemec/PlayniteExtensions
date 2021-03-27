@@ -29,35 +29,77 @@ namespace GogLibrary
             new GogClient(),
             Gog.Icon,
             (_) => new GogLibrarySettingsView(),
-            null,
-            () => new GogMetadataProvider(api),
             api)
         {
             SettingsViewModel = new GogLibrarySettingsViewModel(this, api);
         }
 
-        public override IGameController GetGameController(Game game)
+        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
         {
-            return new GogGameController(game, this, SettingsViewModel, PlayniteApi);
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<InstallController> { new GogInstallController(args.Game) };
         }
 
-        internal Tuple<GameAction, List<GameAction>> GetGameTasks(string gameId, string installDir)
+        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<UninstallController> { new GogUninstallController(args.Game) };
+        }
+
+        public override LibraryMetadataProvider GetMetadataDownloader()
+        {
+            return new GogMetadataProvider(PlayniteApi);
+        }
+
+        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            var entry = GetInstalledEntries().FirstOrDefault(a => a.Key == args.Game.GameId);
+            var tasks = GetPlayTasks(args.Game.GameId, entry.Value.InstallDirectory);
+            if (tasks.HasItems())
+            {
+                return new List<PlayController>(tasks.Select(a =>
+                    new GogPlayController(args.Game, a, SettingsViewModel.Settings.StartGamesUsingGalaxy, PlayniteApi)));
+            }
+
+            return null;
+        }
+
+        internal static List<GameAction> GetPlayTasks(string gameId, string installDir)
         {
             var gameInfoPath = Path.Combine(installDir, string.Format("goggame-{0}.info", gameId));
             if (!File.Exists(gameInfoPath))
             {
-                return new Tuple<GameAction, List<GameAction>>(null, null);
+                return new List<GameAction>();
             }
 
             var gameTaskData = Serialization.FromJsonFile<GogGameActionInfo>(gameInfoPath);
-            var playTask = gameTaskData.playTasks.FirstOrDefault(a => a.isPrimary)?.ConvertToGenericTask(installDir);
-            if (playTask != null)
+            var playTasks = gameTaskData.playTasks?.Where(a => a.isPrimary).Select(a => a.ConvertToGenericTask(installDir)).ToList();
+            return playTasks ?? new List<GameAction>();
+        }
+
+        internal static List<GameAction> GetOtherTasks(string gameId, string installDir)
+        {
+            var gameInfoPath = Path.Combine(installDir, string.Format("goggame-{0}.info", gameId));
+            if (!File.Exists(gameInfoPath))
             {
-                playTask.IsHandledByPlugin = true;
+                return new List<GameAction>();
             }
 
+            var gameTaskData = Serialization.FromJsonFile<GogGameActionInfo>(gameInfoPath);
             var otherTasks = new List<GameAction>();
-
             foreach (var task in gameTaskData.playTasks.Where(a => !a.isPrimary))
             {
                 otherTasks.Add(task.ConvertToGenericTask(installDir));
@@ -71,10 +113,10 @@ namespace GogLibrary
                 }
             }
 
-            return new Tuple<GameAction, List<GameAction>>(playTask, otherTasks.Count > 0 ? otherTasks : null);
+            return otherTasks;
         }
 
-        internal Dictionary<string, GameInfo> GetInstalledGames()
+        internal static Dictionary<string, GameInfo> GetInstalledEntries()
         {
             var games = new Dictionary<string, GameInfo>();
             var programs = Programs.GetUnistallProgramsList();
@@ -102,15 +144,24 @@ namespace GogLibrary
                     Platform = "PC"
                 };
 
-                var tasks = GetGameTasks(game.GameId, game.InstallDirectory);
-                // Empty play task = DLC
-                if (tasks.Item1 == null)
+                games.Add(game.GameId, game);
+            }
+
+            return games;
+        }
+
+        internal static Dictionary<string, GameInfo> GetInstalledGames()
+        {
+            var games = new Dictionary<string, GameInfo>();
+            foreach (var entry in GetInstalledEntries())
+            {
+                var game = entry.Value;
+                if (!GetPlayTasks(game.GameId, game.InstallDirectory).HasItems())
                 {
-                    continue;
+                    continue; // Empty play task = DLC
                 }
 
-                game.PlayAction = tasks.Item1;
-                game.OtherActions = tasks.Item2;
+                game.GameActions = GetOtherTasks(game.GameId, game.InstallDirectory);
                 games.Add(game.GameId, game);
             }
 

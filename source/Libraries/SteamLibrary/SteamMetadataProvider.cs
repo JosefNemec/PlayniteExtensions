@@ -50,7 +50,7 @@ namespace SteamLibrary
             var gameId = game.ToSteamGameID();
             if (gameId.IsMod)
             {
-                var data = library.GetInstalledModFromFolder(game.InstallDirectory, ModInfo.GetModTypeOfGameID(gameId));
+                var data = SteamLibrary.GetInstalledModFromFolder(game.InstallDirectory, ModInfo.GetModTypeOfGameID(gameId));
                 return new GameMetadata(data, null, null, null);
             }
             else

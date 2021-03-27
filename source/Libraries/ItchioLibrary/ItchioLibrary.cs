@@ -27,8 +27,6 @@ namespace ItchioLibrary
             new ItchioClient(),
             Itch.Icon,
             (_) => new ItchioLibrarySettingsView(),
-            (g) => new ItchioGameController(g, api),
-            () => new ItchioMetadataProvider(api),
             api)
         {
             SettingsViewModel = new ItchioLibrarySettingsViewModel(this, api);
@@ -51,7 +49,6 @@ namespace ItchioLibrary
                         {
                             playAction = new GameAction
                             {
-                                IsHandledByPlugin = true,
                                 Name = "Play",
                                 Path = action.path,
                                 WorkingDir = action.path.IsHttpUrl() ? null : ExpandableVariables.InstallationDirectory,
@@ -94,8 +91,8 @@ namespace ItchioLibrary
 
                 foreach (var cave in caves)
                 {
-                    if (cave.game.classification != Models.GameClassification.game &&
-                        cave.game.classification != Models.GameClassification.tool)
+                    if (cave.game.classification != GameClassification.game &&
+                        cave.game.classification != GameClassification.tool)
                     {
                         continue;
                     }
@@ -120,20 +117,13 @@ namespace ItchioLibrary
                         InstallDirectory = installDir,
                         IsInstalled = true,
                         CoverImage = cave.game.coverUrl,
-                        Platform = "PC",
-                        PlayAction = new GameAction
-                        {
-                            Type = GameActionType.URL,
-                            Path = ItchioGameController.DynamicLaunchActionStr,
-                            Arguments = cave.id,
-                            IsHandledByPlugin = true
-                        }
+                        Platform = "PC"
                     };
 
-                    if (TryGetGameActions(installDir, out var play, out var others))
-                    {
-                        game.OtherActions = new List<GameAction>(others);
-                    }
+                    //if (TryGetGameActions(installDir, out var play, out var others))
+                    //{
+                    //    game.OtherActions = new List<GameAction>(others);
+                    //}
 
                     games.Add(game.GameId, game);
                 }
@@ -277,6 +267,41 @@ namespace ItchioLibrary
             }
 
             return allGames;
+        }
+
+        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<InstallController> { new ItchInstallController(args.Game) };
+        }
+
+        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<UninstallController> { new ItchUninstallController(args.Game) };
+        }
+
+        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<PlayController> { new ItchPlayController(args.Game) };
+        }
+
+        public override LibraryMetadataProvider GetMetadataDownloader()
+        {
+            return new ItchioMetadataProvider(PlayniteApi);
         }
     }
 }

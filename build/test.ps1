@@ -14,7 +14,7 @@ $addonsDir = "..\..\PlayniteAddonDatabase\addons\extensions"
 $projectFiles = Get-ChildItem "..\source\" -Filter "*.csproj" -Recurse
 foreach ($projectFile in $projectFiles)
 {
-    if ($projectFile.FullName.Contains(".Tests"))
+    if ($projectFile.FullName.Contains(".Tests") -or $projectFile.FullName.Contains(".Common"))
     {
         continue
     }

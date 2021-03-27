@@ -27,8 +27,6 @@ namespace EpicLibrary
             new EpicClient(),
             EpicLauncher.Icon,
             (_) => new EpicLibrarySettingsView(),
-            (g) => new EpicGameController(g, api),
-            () => new EpicMetadataProvider(api),
             api)
         {
             SettingsViewModel = new EpicLibrarySettingsViewModel(this, api);
@@ -69,12 +67,6 @@ namespace EpicLibrary
                     Name = manifest?.DisplayName ?? Path.GetFileName(app.InstallLocation),
                     InstallDirectory = manifest?.InstallLocation ?? app.InstallLocation,
                     IsInstalled = true,
-                    PlayAction = new GameAction()
-                    {
-                        Type = GameActionType.URL,
-                        Path = string.Format(EpicLauncher.GameLaunchUrlMask, app.AppName),
-                        IsHandledByPlugin = true
-                    },
                     Platform = "PC"
                 };
 
@@ -197,6 +189,41 @@ namespace EpicLibrary
         public string GetCachePath(string dirName)
         {
             return Path.Combine(GetPluginUserDataPath(), dirName);
+        }
+
+        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<InstallController> { new EpicInstallController(args.Game) };
+        }
+
+        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<UninstallController> { new EpicUninstallController(args.Game) };
+        }
+
+        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<PlayController> { new EpicPlayController(args.Game) };
+        }
+
+        public override LibraryMetadataProvider GetMetadataDownloader()
+        {
+            return new EpicMetadataProvider(PlayniteApi);
         }
     }
 }

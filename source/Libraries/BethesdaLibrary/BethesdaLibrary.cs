@@ -23,21 +23,9 @@ namespace BethesdaLibrary
             new BethesdaClient(),
             Bethesda.Icon,
             (a) => a ? null : new BethesdaLibrarySettingsView(),
-            (g) => new BethesdaGameController(g),
-            () => new BethesdaMetadataProvider(),
             api)
         {
             SettingsViewModel = new BethesdaLibrarySettingsViewModel(this, PlayniteApi);
-        }
-
-        public static GameAction GetGamePlayTask(string id)
-        {
-            return new GameAction()
-            {
-                Type = GameActionType.URL,
-                Path = @"bethesdanet://run/" + id,
-                IsHandledByPlugin = true
-            };
         }
 
         public static List<GameInfo> GetInstalledGames()
@@ -59,7 +47,6 @@ namespace BethesdaLibrary
                     GameId = gameId,
                     Source = "Bethesda",
                     InstallDirectory = installDir,
-                    PlayAction = GetGamePlayTask(gameId),
                     Name = program.DisplayName.RemoveTrademarks(),
                     IsInstalled = true,
                     Platform = "PC"
@@ -101,6 +88,41 @@ namespace BethesdaLibrary
             }
 
             return allGames;
+        }
+
+        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<InstallController> { new BethesdaInstallController(args.Game) };
+        }
+
+        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<UninstallController> { new BethesdaUninstallController(args.Game) };
+        }
+
+        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        {
+            if (args.Game.PluginId != Id)
+            {
+                return null;
+            }
+
+            return new List<PlayController> { new BethesdaPlayController(args.Game) };
+        }
+
+        public override LibraryMetadataProvider GetMetadataDownloader()
+        {
+            return new BethesdaMetadataProvider();
         }
     }
 }
