@@ -1,0 +1,10 @@
+﻿AddonId: SteamFriendsButton_bc14d3d7
+Type: GenericPlugin
+InstallerManifestUrl: https://raw.githubusercontent.com/JosefNemec/PlayniteExtensions/master/manifests/SteamFriendsButton_bc14d3d7.yaml
+ShortDescription: Add button to top panel to open Steam's friends list.
+Name: Steam friends top panel button
+Author: Josef Nemec
+Links:
+    Website: https://github.com/JosefNemec/PlayniteExtensions
+    Support: https://github.com/JosefNemec/PlayniteExtensions/wiki
+SourceUrl: https://github.com/JosefNemec/PlayniteExtensions
