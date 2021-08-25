@@ -329,9 +329,9 @@ namespace Steam
                     gameInfo.Developers = new List<string>(downloadedMetadata.StoreDetails.developers);
                 }
 
+                gameInfo.Features = new List<string>(); 
                 if (downloadedMetadata.StoreDetails.categories.HasItems())
                 {
-                    gameInfo.Features = new List<string>();
                     foreach (var category in downloadedMetadata.StoreDetails.categories)
                     {
                         // Ignore VR category, will be set from appinfo
