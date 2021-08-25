@@ -94,7 +94,7 @@ namespace Steam.Models
             public string type;
             public string name;
             public int steam_appid;
-            public int required_age;
+            public string required_age;
             public bool is_free;
             public List<int> dlc;
             public string header_image;
