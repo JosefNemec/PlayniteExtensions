@@ -226,7 +226,18 @@ namespace GogLibrary
                 var libGames = api.GetOwnedGames();
                 if (libGames == null)
                 {
-                    throw new Exception("Failed to obtain libary data.");
+                    throw new Exception("Failed to obtain library data.");
+                }
+
+                var libGamesStats = api.GetOwnedGames(api.GetAccountInfo());
+                if (libGamesStats == null)
+                {
+                    throw new Exception("Failed to obtain library stats data.");
+                }
+
+                foreach (LibraryGameResponse libGame in libGames)
+                {
+                    libGame.stats = libGamesStats?.FirstOrDefault(x => x.game.id.Equals(libGame.game.id))?.stats ?? null;
                 }
 
                 return LibraryGamesToGames(libGames).ToList();
@@ -262,11 +273,19 @@ namespace GogLibrary
                     Platforms = new List<string> { "PC" }
                 };
 
-                if (game.stats?.Keys?.Any() == true)
+                // This is a hack for inconsistent data model on GOG's side.
+                // For some reason game stats are returned as an empty array if no stats exist for a game.
+                // But single object representation is returned instead if stats do exits.
+                // Better solution would require adding JSON.NET dependency.
+                if (game.stats.GetType().Name == "JObject")
                 {
-                    var acc = game.stats.Keys.First();
-                    newGame.Playtime = Convert.ToUInt64(game.stats[acc].playtime * 60);
-                    newGame.LastActivity = game.stats[acc].lastSession;
+                    var stats = ((dynamic)game.stats).ToObject<Dictionary<string, LibraryGameResponse.Stats>>() as Dictionary<string, LibraryGameResponse.Stats>;
+                    if (stats.Keys?.Any() == true)
+                    {
+                        var acc = stats.Keys.First();
+                        newGame.Playtime = Convert.ToUInt64(stats[acc].playtime * 60);
+                        newGame.LastActivity = stats[acc].lastSession;
+                    }
                 }
 
                 yield return newGame;
