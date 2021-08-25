@@ -1,0 +1,72 @@
+﻿<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="LOCSettingsImportInstalledLabel">导入已安装的游戏</sys:String>
+    <sys:String x:Key="LOCSettingsImportUninstalledLabel">导入未安装的游戏</sys:String>
+    <sys:String x:Key="LOCSettingsConnectAccount">连接账户</sys:String>
+    <sys:String x:Key="LOCLoginChecking">正在检查身份认证状态...</sys:String>
+    <sys:String x:Key="LOCLoggedIn">用户已通过身份认证</sys:String>
+    <sys:String x:Key="LOCNotLoggedIn">需要身份认证</sys:String>
+    <sys:String x:Key="LOCNotLoggedInError">用户身份认证失败。</sys:String>
+    <sys:String x:Key="LOCAuthenticateLabel">身份认证</sys:String>
+    <sys:String x:Key="LOCSettingsStartGameDirectly">无需启动官方客户端直接运行游戏</sys:String>
+    <sys:String x:Key="LOCTroubleShootingAccountLink">解决账户同步问题</sys:String>
+    <sys:String x:Key="LOCTroubleShootingIssues">故障排除</sys:String>
+    <sys:String x:Key="LOCSettingsImportLibraryLabel">导入所有游戏</sys:String>
+    <sys:String x:Key="LOCPrivateAccount">私密账户</sys:String>
+    <sys:String x:Key="LOCPublicAccount">公开账户</sys:String>
+    <sys:String x:Key="LOCAPIKey">API密匙</sys:String>
+    <!--itch.io-->
+    <sys:String x:Key="LOCItchioSignInNotif">itch.io客户端将被启动，请登录然后关闭此消息。</sys:String>
+    <sys:String x:Key="LOCItchioSignInWaitMessage">正在等待用户登录，请在完成后关闭...</sys:String>
+    <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io客户端版本需要25或更高。</sys:String>
+    <!--GOG-->
+    <sys:String x:Key="LOCGOGUseLogin">账户登录</sys:String>
+    <sys:String x:Key="LOCGOGUseAccountName">账户名称</sys:String>
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">登录你的账户或使用你的公开账户名称来同步你的完整游戏库。
+请注意，“账户名称”选项只对在GOG隐私设置中设置游戏库公开可见的账户有效。</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxy">使用GOG Galaxy客户端启动游戏</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">这样可以启用GOG Galaxy的云存档、游戏时间记录等功能。</sys:String>
+    <!--Steam-->
+    <sys:String x:Key="LOCSettingsWhatsSteamName">我的账户名称是什么？</sys:String>
+    <sys:String x:Key="LOCSteamCustomUrlName">账户URL名称</sys:String>
+    <sys:String x:Key="LOCSteamLoggedInUser">已身份认证用户</sys:String>
+    <sys:String x:Key="LOCSteamRequiresApiKey">账户是私密账户，需要API密钥。</sys:String>
+    <sys:String x:Key="LOCSteamLinksCommunityHub">社区中心</sys:String>
+    <sys:String x:Key="LOCSteamLinksDiscussions">讨论</sys:String>
+    <sys:String x:Key="LOCSteamLinksGuides">指南</sys:String>
+    <sys:String x:Key="LOCSteamLinksWorkshop">创意工坊</sys:String>
+    <sys:String x:Key="LOCSteamUseVerticalCovers">下载纵向封面图像</sys:String>
+    <sys:String x:Key="LOCSteamImportFreeSubGames">导入一般的免费项目</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarn">这将会覆盖所有Steam游戏的分类（包括隐藏的和最爱的游戏）。您确定要继续吗？</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">确定导入分类？</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">无法导入分类，没有选择要导入的账户。</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">无法导入分类，数据库未打开。</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportError">导入Steam分类失败：{0}</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">无法导入最后启动信息，没有选择要导入的账户。</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">无法导入最后启动信息，数据库未打开。</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportError">导入Steam最后启动的信息失败: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyTooltip">Steam私密账户必需要API密钥</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyUrlText">获取API密钥</sys:String>
+    <sys:String x:Key="LOCSettingsSteamImportMetadata">要导入资料数据的Steam账户：</sys:String>
+    <sys:String x:Key="LOCImportSteamCategoriesLabel">导入Steam分类</sys:String>
+    <sys:String x:Key="LOCImportSteamLastActivityLabel">导入Steam最后启动</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSource">背景图片来源：</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceImage">游戏图像</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">商店截图</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceStore">商店背景</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceBanner"></sys:String>
+    <!--IGDB-->
+    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"></sys:String>
+    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>
+    <sys:String x:Key="LOCIgdbSelectBackgroundTitle"></sys:String>
+    <!--Humble-->
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames"></sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree"></sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
+    <!--Xbox-->
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
+    <sys:String x:Key="LOCXboxImport360Games"></sys:String>
+    <sys:String x:Key="LOCXboxImportXboneGames"></sys:String>
+</ResourceDictionary>

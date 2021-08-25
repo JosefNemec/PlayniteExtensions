@@ -29,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
@@ -192,12 +193,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\localization\cs_CZ.xaml">
-      <Link>Localization\cs_CZ.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="..\..\localization\en_US.xaml">
       <Link>Localization\en_US.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
