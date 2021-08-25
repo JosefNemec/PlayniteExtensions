@@ -34,7 +34,13 @@ namespace EpicLibrary
                 var catalogs = client.QuerySearch(game.Name).GetAwaiter().GetResult();
                 if (catalogs.HasItems())
                 {
-                    var product = client.GetProductInfo(catalogs[0].productSlug).GetAwaiter().GetResult();
+                    var catalog = catalogs.FirstOrDefault(a => a.title.Equals(game.Name, StringComparison.InvariantCultureIgnoreCase));
+                    if (catalog == null)
+                    {
+                        catalog = catalogs[0];
+                    }
+
+                    var product = client.GetProductInfo(catalog.productSlug).GetAwaiter().GetResult();
                     if (product.pages.HasItems())
                     {
                         var page = product.pages.FirstOrDefault(a => a.type is string type && type == "productHome");

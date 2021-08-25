@@ -167,7 +167,7 @@ namespace OriginLibrary
                 procMon = new ProcessMonitor();
                 procMon.TreeDestroyed += ProcMon_TreeDestroyed;
                 procMon.TreeStarted += ProcMon_TreeStarted;
-                ProcessStarter.StartUrl(Origin.GetLaunchString(Game.GameId));
+                ProcessStarter.StartUrl(Origin.GetLaunchString(Game));
                 StartRunningWatcher();
             }
             else

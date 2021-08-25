@@ -45,5 +45,6 @@ namespace AmazonGamesLibrary.Models
     public class EntitlementsResponse
     {
         public List<Entitlement> entitlements;
+        public string nextToken;
     }
 }
