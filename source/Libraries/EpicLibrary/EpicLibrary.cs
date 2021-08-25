@@ -87,6 +87,7 @@ namespace EpicLibrary
                 Logger.Warn("Found no assets on Epic accounts.");
             }
 
+            var playtimeItems = accountApi.GetPlaytimeItems();
             foreach (var gameAsset in assets.Where(a => a.@namespace != "ue"))
             {
                 var cacheFile = Paths.GetSafePathName($"{gameAsset.@namespace}_{gameAsset.catalogItemId}_{gameAsset.buildVersion}.json");
@@ -102,12 +103,20 @@ namespace EpicLibrary
                     continue;
                 }
 
-                games.Add(new GameInfo()
+                var newGame = new GameInfo
                 {
                     Source = "Epic",
                     GameId = gameAsset.appName,
                     Name = catalogItem.title.RemoveTrademarks()
-                });
+                };
+
+                var playtimeItem = playtimeItems?.FirstOrDefault(x => x.artifactId == gameAsset.appName);
+                if (playtimeItem != null)
+                {
+                    newGame.Playtime = playtimeItem.totalTime;
+                }
+
+                games.Add(newGame);
             }
 
             return games;
