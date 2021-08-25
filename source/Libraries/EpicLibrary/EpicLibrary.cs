@@ -23,7 +23,7 @@ namespace EpicLibrary
         public EpicLibrary(IPlayniteAPI api) : base(
             "Epic",
             Guid.Parse("00000002-DBD1-46C6-B5D0-B1BA559D10E4"),
-            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new LibraryPluginProperties { CanShutdownClient = true, HasSettings = true },
             new EpicClient(),
             EpicLauncher.Icon,
             (_) => new EpicLibrarySettingsView(),
@@ -66,8 +66,7 @@ namespace EpicLibrary
                     GameId = app.AppName,
                     Name = manifest?.DisplayName ?? Path.GetFileName(app.InstallLocation),
                     InstallDirectory = manifest?.InstallLocation ?? app.InstallLocation,
-                    IsInstalled = true,
-                    Platform = "PC"
+                    IsInstalled = true
                 };
 
                 game.Name = game.Name.RemoveTrademarks();
@@ -107,15 +106,14 @@ namespace EpicLibrary
                 {
                     Source = "Epic",
                     GameId = gameAsset.appName,
-                    Name = catalogItem.title.RemoveTrademarks(),
-                    Platform = "PC"
+                    Name = catalogItem.title.RemoveTrademarks()
                 });
             }
 
             return games;
         }
 
-        public override IEnumerable<GameInfo> GetGames()
+        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
         {
             var allGames = new List<GameInfo>();
             var installedGames = new Dictionary<string, GameInfo>();
@@ -191,34 +189,41 @@ namespace EpicLibrary
             return Path.Combine(GetPluginUserDataPath(), dirName);
         }
 
-        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        public override IEnumerable<InstallController> GetInstallActions(GetInstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<InstallController> { new EpicInstallController(args.Game) };
+            yield return new EpicInstallController(args.Game);
         }
 
-        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<UninstallController> { new EpicUninstallController(args.Game) };
+            yield return new EpicUninstallController(args.Game);
         }
 
-        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        public override IEnumerable<PlayController> GetPlayActions(GetPlayActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<PlayController> { new EpicPlayController(args.Game) };
+            yield return new AutomaticPlayController(args.Game)
+            {
+                Type = AutomaticPlayActionType.Url,
+                TrackingMode = TrackingMode.Directory,
+                TrackingPath = args.Game.InstallDirectory,
+                Path = string.Format(EpicLauncher.GameLaunchUrlMask, args.Game.GameId),
+                Name = "Start using EGS client"
+            };
         }
 
         public override LibraryMetadataProvider GetMetadataDownloader()

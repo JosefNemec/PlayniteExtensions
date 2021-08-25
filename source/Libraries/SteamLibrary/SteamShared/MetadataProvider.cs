@@ -274,6 +274,9 @@ namespace Steam
             var downloadedMetadata = DownloadGameMetadata(appId, backgroundSource, downloadVerticalCovers);
             var gameInfo = new GameInfo
             {
+                Icon = downloadedMetadata.Icon,
+                CoverImage = downloadedMetadata.CoverImage,
+                BackgroundImage = downloadedMetadata.BackgroundImage,
                 Name = downloadedMetadata.ProductDetails?["common"]["name"]?.Value ?? downloadedMetadata.StoreDetails?.name,
                 Links = new List<Link>()
                 {
@@ -287,15 +290,7 @@ namespace Steam
             };
 
             downloadedMetadata.GameInfo = gameInfo;
-
-            var metadata = new GameMetadata()
-            {
-                GameInfo = gameInfo,
-                Icon = downloadedMetadata.Icon,
-                CoverImage = downloadedMetadata.CoverImage,
-                BackgroundImage = downloadedMetadata.BackgroundImage
-            };
-
+            var metadata = new GameMetadata(gameInfo);
             if (downloadedMetadata.StoreDetails?.categories?.FirstOrDefault(a => a.id == 22) != null)
             {
                 gameInfo.Links.Add(new Link(ResourceProvider.GetString("LOCCommonLinksAchievements"), GetAchievementsUrl(appId)));
@@ -314,7 +309,7 @@ namespace Steam
                 {
                     if (DateTime.TryParse(downloadedMetadata.StoreDetails.release_date.date, out var date))
                     {
-                        gameInfo.ReleaseDate = date;
+                        gameInfo.ReleaseDate = new ReleaseDate(date);
                     }
                 }
 

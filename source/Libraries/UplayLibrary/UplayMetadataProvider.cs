@@ -46,17 +46,17 @@ namespace UplayLibrary
             {
                 if (!prod.root.icon_image.IsNullOrEmpty())
                 {
-                    metadata.Icon = new MetadataFile(prod.root.icon_image);
+                    gameInfo.Icon = new MetadataFile(prod.root.icon_image);
                 }
 
                 if (!prod.root.thumb_image.IsNullOrEmpty())
                 {
-                    metadata.CoverImage = new MetadataFile(prod.root.thumb_image);
+                    gameInfo.CoverImage = new MetadataFile(prod.root.thumb_image);
                 }
 
                 if (!prod.root.background_image.IsNullOrEmpty())
                 {
-                    metadata.BackgroundImage = new MetadataFile(prod.root.background_image);
+                    gameInfo.BackgroundImage = new MetadataFile(prod.root.background_image);
                 }
             }
             else
@@ -66,7 +66,7 @@ namespace UplayLibrary
                 {
                     if (!string.IsNullOrEmpty(program.DisplayIcon) && File.Exists(program.DisplayIcon))
                     {
-                        metadata.Icon = new MetadataFile(program.DisplayIcon);
+                        gameInfo.Icon = new MetadataFile(program.DisplayIcon);
                     }
                 }
             }

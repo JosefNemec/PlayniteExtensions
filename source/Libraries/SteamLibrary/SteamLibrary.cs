@@ -36,7 +36,7 @@ namespace SteamLibrary
         public SteamLibrary(IPlayniteAPI api) : base(
             "Steam",
             Guid.Parse("CB91DFC9-B977-43BF-8E70-55F46E410FAB"),
-            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new LibraryPluginProperties { CanShutdownClient = true, HasSettings = true },
             new SteamClient(),
             Steam.Icon,
             (_) => new SteamLibrarySettingsView(),
@@ -96,8 +96,7 @@ namespace SteamLibrary
                 GameId = gameId.ToString(),
                 Name = name.RemoveTrademarks(),
                 InstallDirectory = installDir,
-                IsInstalled = true,
-                Platform = "PC"
+                IsInstalled = true
             };
 
             return game;
@@ -198,9 +197,12 @@ namespace SteamLibrary
                 Developers = new List<string>() { modInfo.Developer },
                 Links = modInfo.Links,
                 Tags = modInfo.Categories,
-                Icon = modInfo.IconPath,
-                Platform = "PC"
             };
+
+            if (!modInfo.IconPath.IsNullOrEmpty() && File.Exists(modInfo.IconPath))
+            {
+                game.Icon = new Playnite.SDK.Metadata.MetadataFile(modInfo.IconPath);
+            }
 
             return game;
         }
@@ -404,9 +406,7 @@ namespace SteamLibrary
                     Source = "Steam",
                     Name = game.name.RemoveTrademarks(),
                     GameId = game.appid.ToString(),
-                    Playtime = game.playtime_forever * 60,
-                    CompletionStatus = game.playtime_forever > 0 ? CompletionStatus.Played : CompletionStatus.NotPlayed,
-                    Platform = "PC"
+                    Playtime = (ulong)(game.playtime_forever * 60)
                 };
 
                 if (lastActivity != null && lastActivity.TryGetValue(newGame.GameId, out var gameLastActivity))
@@ -673,37 +673,37 @@ namespace SteamLibrary
             return new SteamMetadataProvider(this);
         }
 
-        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        public override IEnumerable<InstallController> GetInstallActions(GetInstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<InstallController> { new SteamInstallController(args.Game) };
+            yield return new SteamInstallController(args.Game);
         }
 
-        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<UninstallController> { new SteamUninstallController(args.Game) };
+            yield return new SteamUninstallController(args.Game);
         }
 
-        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        public override IEnumerable<PlayController> GetPlayActions(GetPlayActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<PlayController> { new SteamPlayController(args.Game) };
+            yield return new SteamPlayController(args.Game);
         }
 
-        public override IEnumerable<GameInfo> GetGames()
+        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
         {
             var allGames = new List<GameInfo>();
             var installedGames = new Dictionary<string, GameInfo>();

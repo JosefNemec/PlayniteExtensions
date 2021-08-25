@@ -40,17 +40,13 @@ namespace GogLibrary
             {
                 Name = StringExtensions.NormalizeGameName(storeData.GameDetails.title),
                 Description = storeData.GameDetails.description.full,
-                Links = new List<Link>()
-            };
-
-            var metadata = new GameMetadata()
-            {
-                GameInfo = gameInfo,
+                Links = new List<Link>(),
                 Icon = storeData.Icon,
                 CoverImage = storeData.CoverImage,
                 BackgroundImage = storeData.BackgroundImage
             };
 
+            var metadata = new GameMetadata(gameInfo);
             if (!string.IsNullOrEmpty(storeData.GameDetails.links.forum))
             {
                 gameInfo.Links.Add(new Link(resources.GetString("LOCCommonLinksForum"), storeData.GameDetails.links.forum));
@@ -72,7 +68,7 @@ namespace GogLibrary
                 var cultInfo = new CultureInfo("en-US", false).TextInfo;
                 if (gameInfo.ReleaseDate == null && storeData.StoreDetails.globalReleaseDate != null)
                 {
-                    gameInfo.ReleaseDate = storeData.StoreDetails.globalReleaseDate;
+                    gameInfo.ReleaseDate = new ReleaseDate(storeData.StoreDetails.globalReleaseDate.Value);
                 }
 
                 if (gameInfo.Features?.Contains("Overlay") == true)

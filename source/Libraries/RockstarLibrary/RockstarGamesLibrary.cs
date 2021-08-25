@@ -21,7 +21,7 @@ namespace RockstarGamesLibrary
         public RockstarGamesLibrary(IPlayniteAPI api) : base(
             "Rockstar Games",
             Guid.Parse("88409022-088a-4de8-805a-fdbac291f00a"),
-            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new LibraryPluginProperties { CanShutdownClient = true, HasSettings = true },
             new RockstarGamesLibraryClient(),
             RockstarGames.Icon,
             null,
@@ -64,7 +64,7 @@ namespace RockstarGamesLibrary
                         var iconPath = app.DisplayIcon.Trim(new char[] { '"' });
                         if (File.Exists(iconPath))
                         {
-                            newGame.Icon = iconPath;
+                            newGame.Icon = new Playnite.SDK.Metadata.MetadataFile(iconPath);
                         }
                     }
 
@@ -75,7 +75,7 @@ namespace RockstarGamesLibrary
             return games;
         }
 
-        public override IEnumerable<GameInfo> GetGames()
+        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
         {
             var games = new List<GameInfo>();
             Exception importError = null;
@@ -110,34 +110,34 @@ namespace RockstarGamesLibrary
             return games;
         }
 
-        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        public override IEnumerable<InstallController> GetInstallActions(GetInstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<InstallController> { new RockstarInstallController(args.Game) };
+            yield return new RockstarInstallController(args.Game);
         }
 
-        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<UninstallController> { new RockstarUninstallController(args.Game) };
+            yield return new RockstarUninstallController(args.Game);
         }
 
-        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        public override IEnumerable<PlayController> GetPlayActions(GetPlayActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<PlayController> { new RockstarPlayController(args.Game) };
+            yield return new RockstarPlayController(args.Game);
         }
     }
 }

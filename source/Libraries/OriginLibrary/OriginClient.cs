@@ -1,5 +1,6 @@
 ﻿using Playnite;
 using Playnite.Common;
+using Playnite.Native;
 using Playnite.SDK;
 using System;
 using System.Collections.Generic;
@@ -31,8 +32,8 @@ namespace OriginLibrary
                 logger.Info("Origin client is no longer running, no need to shut it down.");
                 return;
             }
-            
-            var res = Interop.SendMessage(mainProc.MainWindowHandle, Interop.WM_QUERYENDSESSION, 0, new IntPtr(Interop.ENDSESSION_CLOSEAPP));
+
+            var res = User32.SendMessage(mainProc.MainWindowHandle, Winuser.WM_QUERYENDSESSION, 0, new IntPtr(Winuser.ENDSESSION_CLOSEAPP));
             if ((uint)res == 0)
             {
                 logger.Error("Failed to close Origin gracefully, shutting it down.");
@@ -44,7 +45,7 @@ namespace OriginLibrary
             }
             else
             {
-                Interop.SendMessage(mainProc.MainWindowHandle, Interop.WM_ENDSESSION, 0, new IntPtr(Interop.ENDSESSION_CLOSEAPP));
+                User32.SendMessage(mainProc.MainWindowHandle, Winuser.WM_ENDSESSION, 0, new IntPtr(Winuser.ENDSESSION_CLOSEAPP));
             }
         }
     }

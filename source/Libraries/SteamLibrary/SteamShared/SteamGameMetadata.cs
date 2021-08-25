@@ -10,19 +10,11 @@ namespace Steam.Models
 {
     public class SteamGameMetadata : GameMetadata
     {
-        public KeyValue ProductDetails
-        {
-            get; set;
-        }
-
-        public StoreAppDetailsResult.AppDetails StoreDetails
-        {
-            get; set;
-        }
-
-        public AppReviewsResult.QuerySummary UserReviewDetails
-        {
-            get; set;
-        }
+        public KeyValue ProductDetails { get; set; }
+        public StoreAppDetailsResult.AppDetails StoreDetails { get; set; }
+        public AppReviewsResult.QuerySummary UserReviewDetails { get; set; }
+        public MetadataFile Icon { get; set; }
+        public MetadataFile CoverImage { get; set; }
+        public MetadataFile BackgroundImage { get; set; }
     }
 }

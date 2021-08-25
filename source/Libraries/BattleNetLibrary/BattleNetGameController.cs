@@ -69,7 +69,7 @@ namespace BattleNetLibrary
                 }
                 else
                 {
-                    var installInfo = new GameInfo()
+                    var installInfo = new GameInstallationData()
                     {
                         InstallDirectory = install.InstallLocation
                     };
@@ -171,19 +171,11 @@ namespace BattleNetLibrary
                     throw new Exception("Cannot start game, Battle.net launcher is not installed properly.");
                 }
 
-                InvokeOnStarting(new GameStartingEventArgs());
                 StartBnetRunningWatcher();
             }
             else
             {
-                InvokeOnStarting(new GameStartingEventArgs());
-                GameActionActivator.ActivateAction(new GameAction
-                {
-                    Type = GameActionType.File,
-                    WorkingDir = Game.InstallDirectory,
-                    Path = app.ClassicExecutable
-                });
-
+                ProcessStarter.StartProcess(app.ClassicExecutable, null, Game.InstallDirectory);
                 InvokeOnStarted(new GameStartedEventArgs());
                 if (Directory.Exists(Game.InstallDirectory))
                 {
@@ -208,15 +200,9 @@ namespace BattleNetLibrary
                 }
             }
 
-            var task = new GameAction()
-            {
-                Path = BattleNet.ClientExecPath,
-                Arguments = string.Format("--exec=\"launch {0}\"", Game.GameId)
-            };
-
             try
             {
-                GameActionActivator.ActivateAction(task);
+                ProcessStarter.StartProcess(BattleNet.ClientExecPath, string.Format("--exec=\"launch {0}\"", Game.GameId));
             }
             catch (Exception e) when (!Debugger.IsAttached)
             {
@@ -244,7 +230,7 @@ namespace BattleNetLibrary
         private void Monitor_TreeDestroyed(object sender, EventArgs args)
         {
             stopWatch.Stop();
-            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
+            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToUInt64(stopWatch.Elapsed.TotalSeconds)));
         }
     }
 }

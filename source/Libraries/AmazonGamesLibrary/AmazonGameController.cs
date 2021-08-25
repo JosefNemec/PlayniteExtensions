@@ -56,7 +56,7 @@ namespace AmazonGamesLibrary
                 var program = AmazonGames.GetUninstallRecord(Game.GameId);
                 if (program != null)
                 {
-                    var installInfo = new GameInfo()
+                    var installInfo = new GameInstallationData()
                     {
                         InstallDirectory = Paths.FixSeparators(program.InstallLocation)
                     };
@@ -119,96 +119,6 @@ namespace AmazonGamesLibrary
 
                 await Task.Delay(2000);
             }
-        }
-    }
-
-    public class AmazonPlayController : PlayController
-    {
-        private static ILogger logger = LogManager.GetLogger();
-        private ProcessMonitor procMon;
-        private Stopwatch stopWatch;
-        private bool useLauncher;
-
-        public AmazonPlayController(Game game, bool useLauncher) : base(game)
-        {
-            this.useLauncher = useLauncher;
-        }
-
-        public override void Dispose()
-        {
-            procMon?.Dispose();
-        }
-
-        public override void Play(PlayActionArgs args)
-        {
-            InvokeOnStarting(new GameStartingEventArgs());
-            var startViaLauncher = true;
-            GameConfiguration gameConfig = null;
-            if (!useLauncher)
-            {
-                try
-                {
-                    gameConfig = AmazonGames.GetGameConfiguration(Game.InstallDirectory);
-                    if (AmazonGames.GetGameRequiresClient(gameConfig))
-                    {
-                        startViaLauncher = true;
-                    }
-                    else
-                    {
-                        startViaLauncher = false;
-                    }
-                }
-                catch (Exception e) when (!Debugger.IsAttached)
-                {
-                    logger.Error(e, "Failed to get local game configuration.");
-                }
-            }
-
-            if (startViaLauncher)
-            {
-                ProcessStarter.StartUrl($"amazon-games://play/{Game.GameId}");
-            }
-            else
-            {
-                var exePath = Path.Combine(Game.InstallDirectory, gameConfig.Main.Command);
-                var workDir = Game.InstallDirectory;
-                if (!gameConfig.Main.WorkingSubdirOverride.IsNullOrEmpty())
-                {
-                    workDir = Path.Combine(Game.InstallDirectory, gameConfig.Main.WorkingSubdirOverride);
-                }
-
-                string startArgs = null;
-                if (gameConfig.Main.Args.HasNonEmptyItems())
-                {
-                    startArgs = string.Join(" ", gameConfig.Main.Args);
-                }
-
-                ProcessStarter.StartProcess(exePath, startArgs, workDir);
-            }
-
-            if (Directory.Exists(Game.InstallDirectory))
-            {
-                stopWatch = Stopwatch.StartNew();
-                procMon = new ProcessMonitor();
-                procMon.TreeStarted += ProcMon_TreeStarted;
-                procMon.TreeDestroyed += Monitor_TreeDestroyed;
-                procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
-            }
-            else
-            {
-                InvokeOnStopped(new GameStoppedEventArgs());
-            }
-        }
-
-        private void ProcMon_TreeStarted(object sender, EventArgs args)
-        {
-            InvokeOnStarted(new GameStartedEventArgs());
-        }
-
-        private void Monitor_TreeDestroyed(object sender, EventArgs args)
-        {
-            stopWatch.Stop();
-            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
         }
     }
 }

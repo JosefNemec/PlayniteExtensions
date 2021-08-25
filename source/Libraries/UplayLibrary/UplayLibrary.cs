@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using Playnite.SDK;
+using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 using System;
@@ -19,7 +20,7 @@ namespace UplayLibrary
         public UplayLibrary(IPlayniteAPI api) : base(
             "Ubisoft Connect",
             Guid.Parse("C2F038E5-8B92-4877-91F1-DA9094155FC5"),
-            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new LibraryPluginProperties { CanShutdownClient = true, HasSettings = true },
             new UplayClient(),
             Uplay.Icon,
             (_) => new UplayLibrarySettingsView(),
@@ -67,11 +68,10 @@ namespace UplayLibrary
                 {
                     Name = item.root.name.RemoveTrademarks(),
                     GameId = item.uplay_id.ToString(),
-                    BackgroundImage = item.root.background_image,
-                    Icon = item.root.icon_image,
-                    CoverImage = item.root.thumb_image,
-                    Source = "Ubisoft Connect",
-                    Platform = "PC"
+                    BackgroundImage = item.root.background_image.IsNullOrEmpty() ? null : new MetadataFile(item.root.background_image),
+                    Icon = item.root.icon_image.IsNullOrEmpty() ? null : new MetadataFile(item.root.icon_image),
+                    CoverImage = item.root.thumb_image.IsNullOrEmpty() ? null : new MetadataFile(item.root.thumb_image),
+                    Source = "Ubisoft Connect"
                 };
 
                 games.Add(newGame);
@@ -106,8 +106,7 @@ namespace UplayLibrary
                             Source = "Ubisoft Connect",
                             InstallDirectory = installDir,
                             Name = Path.GetFileName(installDir.TrimEnd(Path.DirectorySeparatorChar)),
-                            IsInstalled = true,
-                            Platform = "PC"
+                            IsInstalled = true
                         };
 
                         games.Add(newGame);
@@ -118,7 +117,7 @@ namespace UplayLibrary
             return games;
         }
 
-        public override IEnumerable<GameInfo> GetGames()
+        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
         {
             var allGames = new List<GameInfo>();
             var installedGames = new List<GameInfo>();
@@ -184,34 +183,34 @@ namespace UplayLibrary
             return allGames;
         }
 
-        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        public override IEnumerable<InstallController> GetInstallActions(GetInstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<InstallController> { new UplayInstallController(args.Game) };
+            yield return new UplayInstallController(args.Game);
         }
 
-        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<UninstallController> { new UplayUninstallController(args.Game) };
+            yield return new UplayUninstallController(args.Game);
         }
 
-        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        public override IEnumerable<PlayController> GetPlayActions(GetPlayActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<PlayController> { new UplayPlayController(args.Game) };
+            yield return new UplayPlayController(args.Game);
         }
 
         public override LibraryMetadataProvider GetMetadataDownloader()

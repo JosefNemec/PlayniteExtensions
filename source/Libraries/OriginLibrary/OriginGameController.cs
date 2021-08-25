@@ -63,7 +63,7 @@ namespace OriginLibrary
                 {
                     if (File.Exists(executablePath.CompletePath))
                     {
-                        var installInfo = new GameInfo()
+                        var installInfo = new GameInstallationData
                         {
                             InstallDirectory = origin.GetInstallDirectory(manifest)
                         };
@@ -161,7 +161,6 @@ namespace OriginLibrary
         public override void Play(PlayActionArgs args)
         {
             Dispose();
-            InvokeOnStarting(new GameStartingEventArgs());
             if (Directory.Exists(Game.InstallDirectory))
             {
                 stopWatch = Stopwatch.StartNew();
@@ -201,7 +200,7 @@ namespace OriginLibrary
         private void ProcMon_TreeDestroyed(object sender, EventArgs args)
         {
             stopWatch.Stop();
-            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
+            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToUInt64(stopWatch.Elapsed.TotalSeconds)));
         }
     }
 }

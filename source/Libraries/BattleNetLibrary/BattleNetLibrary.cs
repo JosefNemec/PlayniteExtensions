@@ -21,7 +21,7 @@ namespace BattleNetLibrary
         public BattleNetLibrary(IPlayniteAPI api) : base(
             "Battle.net",
             Guid.Parse("E3C26A3D-D695-4CB7-A769-5FF7612C7EDD"),
-            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new LibraryPluginProperties { CanShutdownClient = true, HasSettings = true },
             new BattleNetClient(),
             BattleNet.Icon,
             (_) => new BattleNetLibrarySettingsView(),
@@ -85,8 +85,7 @@ namespace BattleNetLibrary
                             Source = "Battle.net",
                             Name = product.Name.RemoveTrademarks(),
                             InstallDirectory = prog.InstallLocation,
-                            IsInstalled = true,
-                            Platform = "PC"
+                            IsInstalled = true
                         };
 
                         // Check in case there are more versions of single games installed.
@@ -127,8 +126,7 @@ namespace BattleNetLibrary
                         Source = "Battle.net",
                         Name = product.Name.RemoveTrademarks(),
                         InstallDirectory = prog.InstallLocation,
-                        IsInstalled = true,
-                        Platform = "PC"
+                        IsInstalled = true
                     };
 
                     // Check in case there are more versions of single games installed.
@@ -172,8 +170,7 @@ namespace BattleNetLibrary
                             {
                                 Source = "Battle.net",
                                 GameId = gameInfo.ProductId,
-                                Name = gameInfo.Name.RemoveTrademarks(),
-                                Platform = "PC"
+                                Name = gameInfo.Name.RemoveTrademarks()
                             });
                         }
                     }
@@ -201,8 +198,7 @@ namespace BattleNetLibrary
                             {
                                 Source = "Battle.net",
                                 GameId = w3x.ProductId,
-                                Name = w3x.Name,
-                                Platform = "PC"
+                                Name = w3x.Name
                             });
                         }
                     }
@@ -226,8 +222,7 @@ namespace BattleNetLibrary
                             {
                                 Source = "Battle.net",
                                 GameId = d2x.ProductId,
-                                Name = d2x.Name,
-                                Platform = "PC"
+                                Name = d2x.Name
                             });
                         }
                     }
@@ -237,7 +232,7 @@ namespace BattleNetLibrary
             }
         }
 
-        public override IEnumerable<GameInfo> GetGames()
+        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
         {
             var allGames = new List<GameInfo>();
             var installedGames = new Dictionary<string, GameInfo>();
@@ -307,34 +302,34 @@ namespace BattleNetLibrary
             return allGames;
         }
 
-        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        public override IEnumerable<InstallController> GetInstallActions(GetInstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<InstallController> { new BnetInstallController(args.Game) };
+            yield return new BnetInstallController(args.Game);
         }
 
-        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<UninstallController> { new BnetUninstallController(args.Game) };
+            yield return new BnetUninstallController(args.Game);
         }
 
-        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        public override IEnumerable<PlayController> GetPlayActions(GetPlayActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<PlayController> { new BnetPlayController(args.Game) };
+            yield return new BnetPlayController(args.Game);
         }
 
         public override LibraryMetadataProvider GetMetadataDownloader()

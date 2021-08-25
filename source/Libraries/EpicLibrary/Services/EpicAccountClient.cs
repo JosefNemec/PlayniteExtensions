@@ -109,7 +109,7 @@ namespace EpicLibrary.Services
                 return;
             }
 
-            var sid = Serialization.FromString<ApiRedirectResponse>(apiRedirectContent, Format.Json).sid;
+            var sid = Serialization.FromJson<ApiRedirectResponse>(apiRedirectContent).sid;
             FileSystem.DeleteFile(tokensPath);
             var exchangeKey = getExcahngeToken(sid);
             if (string.IsNullOrEmpty(exchangeKey))
@@ -181,7 +181,7 @@ namespace EpicLibrary.Services
             {
                 try
                 {
-                    result = Serialization.FromFile<Dictionary<string, CatalogItem>>(cachePath, Format.Json);
+                    result = Serialization.FromJsonFile<Dictionary<string, CatalogItem>>(cachePath);
                 }
                 catch (Exception e)
                 {
@@ -239,13 +239,13 @@ namespace EpicLibrary.Services
                 var response = await httpClient.GetAsync(url);
                 var str = await response.Content.ReadAsStringAsync();
 
-                if (Serialization.TryFromString<ErrorResponse>(str, Format.Json, out var error) && !string.IsNullOrEmpty(error.errorCode))
+                if (Serialization.TryFromJson<ErrorResponse>(str, out var error) && !string.IsNullOrEmpty(error.errorCode))
                 {
                     throw new TokenException(error.errorCode);
                 }
                 else
                 {
-                    return new Tuple<string, T>(str, Serialization.FromString<T>(str, Format.Json));
+                    return new Tuple<string, T>(str, Serialization.FromJson<T>(str));
                 }
             }
         }
@@ -257,7 +257,7 @@ namespace EpicLibrary.Services
                 return null;
             }
 
-            return Serialization.FromFile<OauthResponse>(tokensPath, Format.Json);
+            return Serialization.FromJsonFile<OauthResponse>(tokensPath);
         }
 
         private string getExcahngeToken(string sid)
@@ -282,7 +282,7 @@ namespace EpicLibrary.Services
                     httpClient.DefaultRequestHeaders.Add("X-XSRF-TOKEN", xsrf);
                     resp = httpClient.PostAsync("https://www.epicgames.com/id/api/exchange/generate", null).GetAwaiter().GetResult();
                     var respContent = resp.Content.ReadAsStringAsync().GetAwaiter().GetResult();
-                    return Serialization.FromString<Dictionary<string, string>>(respContent, Format.Json)["code"];
+                    return Serialization.FromJson<Dictionary<string, string>>(respContent)["code"];
                 }
                 else
                 {

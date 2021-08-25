@@ -12,7 +12,10 @@
         <sys:Boolean x:Key="False">False</sys:Boolean>
     </UserControl.Resources>
 
-    <StackPanel Margin="20">
+    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"
+               Text="PSN integration is currently broken and not supported." />
+
+    <!--<StackPanel Margin="20">
         <CheckBox Name="CheckPSNConnectAccount"
                   IsChecked="{Binding Settings.ConnectAccount}"
                   Content="{DynamicResource LOCSettingsConnectAccount}"/>
@@ -48,5 +51,5 @@
                 </TextBlock>
             </StackPanel>
         </StackPanel>
-    </StackPanel>
+    </StackPanel>-->
 </UserControl>

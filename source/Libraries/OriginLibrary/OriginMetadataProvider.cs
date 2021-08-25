@@ -23,8 +23,6 @@ namespace OriginLibrary
             this.api = api;
         }
 
-        #region IMetadataProvider
-
         public override GameMetadata GetMetadata(Game game)
         {
             var resources = api.Resources;
@@ -33,13 +31,18 @@ namespace OriginLibrary
             {
                 Name = StringExtensions.NormalizeGameName(storeMetadata.StoreDetails.i18n.displayName),
                 Description = storeMetadata.StoreDetails.i18n.longDescription,
-                ReleaseDate = storeMetadata.StoreDetails.platforms.FirstOrDefault(a => a.platform == "PCWIN")?.releaseDate,
                 Links = new List<Link>()
                 {
                     new Link(resources.GetString("LOCCommonLinksStorePage"), @"https://www.origin.com/store" + storeMetadata.StoreDetails.offerPath),
                     new Link("PCGamingWiki", @"http://pcgamingwiki.com/w/index.php?search=" + game.Name)
                 }
             };
+
+            var releaseDate = storeMetadata.StoreDetails.platforms.FirstOrDefault(a => a.platform == "PCWIN")?.releaseDate;
+            if (releaseDate != null)
+            {
+                gameInfo.ReleaseDate = new ReleaseDate(releaseDate.Value);
+            }
 
             if (!storeMetadata.StoreDetails.publisherFacetKey.IsNullOrEmpty())
             {
@@ -58,12 +61,11 @@ namespace OriginLibrary
 
             var metadata = new GameMetadata()
             {
-                GameInfo = gameInfo,
-                Icon = storeMetadata.Icon,
-                CoverImage = storeMetadata.CoverImage,
-                BackgroundImage = storeMetadata.BackgroundImage
+                GameInfo = gameInfo
             };
 
+            gameInfo.CoverImage = storeMetadata.CoverImage;
+            gameInfo.BackgroundImage = storeMetadata.BackgroundImage;
             if (!string.IsNullOrEmpty(storeMetadata.StoreDetails.i18n.gameForumURL))
             {
                 gameInfo.Links.Add(new Link(resources.GetString("LOCCommonLinksForum"), storeMetadata.StoreDetails.i18n.gameForumURL));
@@ -76,8 +78,6 @@ namespace OriginLibrary
 
             return metadata;
         }
-
-        #endregion IMetadataProvider
 
         public OriginGameMetadata DownloadGameMetadata(string id)
         {

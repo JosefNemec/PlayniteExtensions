@@ -52,6 +52,7 @@ namespace IGDBMetadata
             null,
             api)
         {
+            Properties = new MetadataPluginProperties { HasSettings = true };
             Client = new IgdbServiceClient(api.ApplicationInfo.ApplicationVersion);
             SettingsViewModel = new IgdbMetadataSettingsViewModel(this, api);
         }

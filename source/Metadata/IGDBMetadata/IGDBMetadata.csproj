@@ -31,8 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Playnite.SDK, Version=5.6.16.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\PlayniteSDK.5.6.16\lib\net462\Playnite.SDK.dll</HintPath>
+    <Reference Include="Playnite.SDK, Version=5.6.24.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PlayniteSDK.5.6.24\lib\net462\Playnite.SDK.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -51,6 +51,54 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\Fileapi.cs">
+      <Link>Shared\Native\Fileapi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\Gdi32.cs">
+      <Link>Shared\Native\Gdi32.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\Kernel32.cs">
+      <Link>Shared\Native\Kernel32.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\Ntdll.cs">
+      <Link>Shared\Native\Ntdll.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\Powrprof.cs">
+      <Link>Shared\Native\Powrprof.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\Processthreadsapi.cs">
+      <Link>Shared\Native\Processthreadsapi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\Psapi.cs">
+      <Link>Shared\Native\Psapi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\Shell32.cs">
+      <Link>Shared\Native\Shell32.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\Shlwapi.cs">
+      <Link>Shared\Native\Shlwapi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\User32.cs">
+      <Link>Shared\Native\User32.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\Winbase.cs">
+      <Link>Shared\Native\Winbase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\Windef.cs">
+      <Link>Shared\Native\Windef.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\WinError.cs">
+      <Link>Shared\Native\WinError.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\Wingdi.cs">
+      <Link>Shared\Native\Wingdi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\Winnt.cs">
+      <Link>Shared\Native\Winnt.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\winuser.cs">
+      <Link>Shared\Native\winuser.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\commands\GlobalCommands.cs">
       <Link>Shared\GlobalCommands.cs</Link>
     </Compile>
@@ -68,9 +116,6 @@
     </Compile>
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\GlobalRandom.cs">
       <Link>Shared\GlobalRandom.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\playniterepo\source\playnite\common\InteropMethods.cs">
-      <Link>Shared\InteropMethods.cs</Link>
     </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\common\Paths.cs">
       <Link>Shared\Paths.cs</Link>

@@ -38,8 +38,8 @@
     <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AngleSharp.0.9.9\lib\net45\AngleSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Playnite.SDK, Version=5.6.16.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\PlayniteSDK.5.6.16\lib\net462\Playnite.SDK.dll</HintPath>
+    <Reference Include="Playnite.SDK, Version=5.6.24.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PlayniteSDK.5.6.24\lib\net462\Playnite.SDK.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -59,6 +59,54 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\Fileapi.cs">
+      <Link>Shared\Native\Fileapi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\Gdi32.cs">
+      <Link>Shared\Native\Gdi32.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\Kernel32.cs">
+      <Link>Shared\Native\Kernel32.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\Ntdll.cs">
+      <Link>Shared\Native\Ntdll.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\Powrprof.cs">
+      <Link>Shared\Native\Powrprof.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\Processthreadsapi.cs">
+      <Link>Shared\Native\Processthreadsapi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\Psapi.cs">
+      <Link>Shared\Native\Psapi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\Shell32.cs">
+      <Link>Shared\Native\Shell32.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\Shlwapi.cs">
+      <Link>Shared\Native\Shlwapi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\User32.cs">
+      <Link>Shared\Native\User32.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\Winbase.cs">
+      <Link>Shared\Native\Winbase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\Windef.cs">
+      <Link>Shared\Native\Windef.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\WinError.cs">
+      <Link>Shared\Native\WinError.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\Wingdi.cs">
+      <Link>Shared\Native\Wingdi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\Winnt.cs">
+      <Link>Shared\Native\Winnt.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\playnite\source\playnite\native\winuser.cs">
+      <Link>Shared\Native\winuser.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\commands\GlobalCommands.cs">
       <Link>Shared\GlobalCommands.cs</Link>
     </Compile>
@@ -82,9 +130,6 @@
     </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\common\IniParser.cs">
       <Link>Shared\IniParser.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\playniterepo\source\playnite\common\InteropMethods.cs">
-      <Link>Shared\InteropMethods.cs</Link>
     </Compile>
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\JsonRpcClient.cs">
       <Link>Shared\JsonRpcClient.cs</Link>
@@ -118,9 +163,6 @@
     </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\converters\ObjectToStringConverter.cs">
       <Link>Shared\ObjectToStringConverter.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\playniterepo\source\playnite\GameActionActivator.cs">
-      <Link>Shared\GameActionActivator.cs</Link>
     </Compile>
     <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginBase.cs">
       <Link>Shared\PluginBase.cs</Link>

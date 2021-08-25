@@ -10,10 +10,10 @@ using System.Windows.Controls;
 namespace Playnite.SDK
 {
     [IgnorePlugin]
-    public class MetadataPluginBase<TSettings> : MetadataPlugin
+    public abstract class MetadataPluginBase<TSettings> : MetadataPlugin
         where TSettings : ISettings
     {
-        public readonly ILogger Logger = LogManager.GetLogger();
+        public readonly ILogger Logger;
 
         public override string Name { get; }
         public override Guid Id { get; }
@@ -31,6 +31,7 @@ namespace Playnite.SDK
             Func<MetadataRequestOptions, OnDemandMetadataProvider> getMetadataProviderAction,
             IPlayniteAPI api) : base(api)
         {
+            Logger = LogManager.GetLogger(GetType().Name);
             Name = name;
             Id = id;
             SupportedFields = supportedFields;
@@ -70,17 +71,16 @@ namespace Playnite.SDK
     }
 
     [IgnorePlugin]
-    public class LibraryPluginBase<TSettings> : LibraryPlugin
+    public abstract class LibraryPluginBase<TSettings> : LibraryPlugin
         where TSettings : ISettings
     {
         private Func<bool, UserControl> GetSettingsViewAction { get; }
 
-        public readonly ILogger Logger = LogManager.GetLogger();
+        public readonly ILogger Logger;
 
         public string ImportErrorMessageId { get; }
         public override string Name { get; }
         public override Guid Id { get; }
-        public override LibraryPluginCapabilities Capabilities { get; }
         public override LibraryClient Client { get; }
         public override string LibraryIcon { get; }
 
@@ -89,16 +89,17 @@ namespace Playnite.SDK
         public LibraryPluginBase(
             string name,
             Guid id,
-            LibraryPluginCapabilities capabilities,
+            LibraryPluginProperties properties,
             LibraryClient client,
             string libraryIcon,
             Func<bool, UserControl> getSettingsViewAction,
             IPlayniteAPI api) : base(api)
         {
+            Logger = LogManager.GetLogger(GetType().Name);
             Name = name;
             Id = id;
             ImportErrorMessageId = $"{name}_libImportError";
-            Capabilities = capabilities;
+            Properties = properties;
             Client = client;
             LibraryIcon = libraryIcon;
             GetSettingsViewAction = getSettingsViewAction;

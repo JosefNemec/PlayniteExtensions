@@ -22,10 +22,12 @@ namespace GogLibrary
     [LoadPlugin]
     public class GogLibrary : LibraryPluginBase<GogLibrarySettingsViewModel>
     {
+        private static readonly ILogger logger = LogManager.GetLogger();
+
         public GogLibrary(IPlayniteAPI api) : base(
             "GOG",
             Guid.Parse("AEBE8B7C-6DC3-4A66-AF31-E7375C6B5E9E"),
-            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new LibraryPluginProperties { CanShutdownClient = true, HasSettings = true },
             new GogClient(),
             Gog.Icon,
             (_) => new GogLibrarySettingsView(),
@@ -34,24 +36,24 @@ namespace GogLibrary
             SettingsViewModel = new GogLibrarySettingsViewModel(this, api);
         }
 
-        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        public override IEnumerable<InstallController> GetInstallActions(GetInstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<InstallController> { new GogInstallController(args.Game) };
+            yield return new GogInstallController(args.Game);
         }
 
-        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<UninstallController> { new GogUninstallController(args.Game) };
+            yield return new GogUninstallController(args.Game);
         }
 
         public override LibraryMetadataProvider GetMetadataDownloader()
@@ -59,22 +61,45 @@ namespace GogLibrary
             return new GogMetadataProvider(PlayniteApi);
         }
 
-        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        public override IEnumerable<PlayController> GetPlayActions(GetPlayActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            var entry = GetInstalledEntries().FirstOrDefault(a => a.Key == args.Game.GameId);
-            var tasks = GetPlayTasks(args.Game.GameId, entry.Value.InstallDirectory);
-            if (tasks.HasItems())
+            if (!GetInstalledEntries().TryGetValue(args.Game.GameId, out var installEntry))
             {
-                return new List<PlayController>(tasks.Select(a =>
-                    new GogPlayController(args.Game, a, SettingsViewModel.Settings.StartGamesUsingGalaxy, PlayniteApi)));
+                throw new DirectoryNotFoundException("Game installation not found.");
             }
 
-            return null;
+            if (SettingsViewModel.Settings.StartGamesUsingGalaxy)
+            {
+                yield return new AutomaticPlayController(args.Game)
+                {
+                    Type = AutomaticPlayActionType.File,
+                    TrackingMode = TrackingMode.Directory,
+                    Name = "Start using Galaxy",
+                    TrackingPath = installEntry.InstallDirectory,
+                    Arguments = string.Format(@"/gameId={0} /command=runGame /path=""{1}""", args.Game.GameId, installEntry.InstallDirectory),
+                    Path = Path.Combine(Gog.InstallationPath, "GalaxyClient.exe")
+                };
+            }
+            else
+            {
+                foreach (var task in GetPlayTasks(args.Game.GameId, installEntry.InstallDirectory))
+                {
+                    yield return new AutomaticPlayController(args.Game)
+                    {
+                        Type = task.Type == GameActionType.URL ? AutomaticPlayActionType.Url : AutomaticPlayActionType.File,
+                        TrackingMode = TrackingMode.Process,
+                        Arguments = task.Arguments,
+                        Path = task.Path,
+                        WorkingDir = task.WorkingDir,
+                        Name = task.Name
+                    };
+                }
+            }
         }
 
         internal static List<GameAction> GetPlayTasks(string gameId, string installDir)
@@ -85,7 +110,17 @@ namespace GogLibrary
                 return new List<GameAction>();
             }
 
-            var gameTaskData = Serialization.FromJsonFile<GogGameActionInfo>(gameInfoPath);
+            GogGameActionInfo gameTaskData = null;
+            try
+            {
+                gameTaskData = Serialization.FromJsonFile<GogGameActionInfo>(gameInfoPath);
+            }
+            catch (Exception e)
+            {
+                logger.Error(e, $"Failed to read install gog game manifest: {gameInfoPath}.");
+                return new List<GameAction>();
+            }
+
             var playTasks = gameTaskData.playTasks?.Where(a => a.isPrimary).Select(a => a.ConvertToGenericTask(installDir)).ToList();
             return playTasks ?? new List<GameAction>();
         }
@@ -98,7 +133,17 @@ namespace GogLibrary
                 return new List<GameAction>();
             }
 
-            var gameTaskData = Serialization.FromJsonFile<GogGameActionInfo>(gameInfoPath);
+            GogGameActionInfo gameTaskData = null;
+            try
+            {
+                gameTaskData = Serialization.FromJsonFile<GogGameActionInfo>(gameInfoPath);
+            }
+            catch (Exception e)
+            {
+                logger.Error(e, $"Failed to read install gog game manifest: {gameInfoPath}.");
+                return new List<GameAction>();
+            }
+
             var otherTasks = new List<GameAction>();
             foreach (var task in gameTaskData.playTasks.Where(a => !a.isPrimary))
             {
@@ -141,7 +186,7 @@ namespace GogLibrary
                     Source = "GOG",
                     Name = program.DisplayName.RemoveTrademarks(),
                     IsInstalled = true,
-                    Platform = "PC"
+                    Platforms = new List<string> { "PC" }
                 };
 
                 games.Add(game.GameId, game);
@@ -214,13 +259,13 @@ namespace GogLibrary
                     {
                         new Link("Store", @"https://www.gog.com" + game.game.url)
                     },
-                    Platform = "PC"
+                    Platforms = new List<string> { "PC" }
                 };
 
                 if (game.stats?.Keys?.Any() == true)
                 {
                     var acc = game.stats.Keys.First();
-                    newGame.Playtime = game.stats[acc].playtime * 60;
+                    newGame.Playtime = Convert.ToUInt64(game.stats[acc].playtime * 60);
                     newGame.LastActivity = game.stats[acc].lastSession;
                 }
 
@@ -228,7 +273,7 @@ namespace GogLibrary
             }
         }
 
-        public override IEnumerable<GameInfo> GetGames()
+        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
         {
             var allGames = new List<GameInfo>();
             var installedGames = new Dictionary<string, GameInfo>();

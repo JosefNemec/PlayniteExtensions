@@ -24,7 +24,7 @@ namespace HumbleLibrary
         public HumbleLibrary(IPlayniteAPI api) : base(
             "Humble",
             Guid.Parse("96e8c4bc-ec5c-4c8b-87e7-18ee5a690626"),
-            new LibraryPluginCapabilities { CanShutdownClient = false, HasCustomizedGameImport = true },
+            new LibraryPluginProperties { CanShutdownClient = false, HasCustomizedGameImport = true, HasSettings = true },
             null,
             Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"icon.png"),
             (_) => new HumbleLibrarySettingsView(),
@@ -67,7 +67,6 @@ namespace HumbleLibrary
                                 Description = troveGame.description_text,
                                 Publishers = troveGame.publishers?.Select(a => a.publisher_name).ToList(),
                                 Developers = troveGame.developers?.Select(a => a.developer_name).ToList(),
-                                Platform = "PC",
                                 Source = "Humble"
                             };
 
@@ -84,7 +83,7 @@ namespace HumbleLibrary
             return games.OrderBy(a => a.Name).ToList();
         }
 
-        public override IEnumerable<Game> ImportGames()
+        public override IEnumerable<Game> ImportGames(LibraryImportGamesArgs args)
         {
             var importedGames = new List<Game>();
             Exception importError = null;
@@ -160,8 +159,7 @@ namespace HumbleLibrary
                         {
                             Name = product.human_name.RemoveTrademarks(),
                             GameId = gameId,
-                            Icon = product.icon,
-                            Platform = "PC",
+                            Icon = product.icon.IsNullOrEmpty() ? null : new Playnite.SDK.Metadata.MetadataFile(product.icon),
                             Source = "Humble"
                         }, this));
                     }

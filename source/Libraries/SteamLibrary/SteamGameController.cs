@@ -58,7 +58,7 @@ namespace SteamLibrary
                 var installed = SteamLibrary.GetInstalledGames(false);
                 if (installed.TryGetValue(id, out var installedGame))
                 {
-                    var installInfo = new GameInfo
+                    var installInfo = new GameInstallationData
                     {
                         InstallDirectory = installedGame.InstallDirectory
                     };
@@ -155,7 +155,6 @@ namespace SteamLibrary
                 }
             }
 
-            InvokeOnStarting(new GameStartingEventArgs());
             stopWatch = Stopwatch.StartNew();
             ProcessStarter.StartUrl($"steam://rungameid/{Game.GameId}");
             procMon = new ProcessMonitor();
@@ -179,7 +178,7 @@ namespace SteamLibrary
         private void Monitor_TreeDestroyed(object sender, EventArgs args)
         {
             stopWatch.Stop();
-            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
+            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToUInt64(stopWatch.Elapsed.TotalSeconds)));
         }
     }
 }

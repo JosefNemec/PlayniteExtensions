@@ -23,7 +23,7 @@ namespace ItchioLibrary
         public ItchioLibrary(IPlayniteAPI api) : base(
             "itch.io",
             Guid.Parse("00000001-EBB2-4EEC-ABCB-7C89937A42BB"),
-            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new LibraryPluginProperties { CanShutdownClient = true, HasSettings = true },
             new ItchioClient(),
             Itch.Icon,
             (_) => new ItchioLibrarySettingsView(),
@@ -116,8 +116,7 @@ namespace ItchioLibrary
                         Name = cave.game.title.RemoveTrademarks(),
                         InstallDirectory = installDir,
                         IsInstalled = true,
-                        CoverImage = cave.game.coverUrl,
-                        Platform = "PC"
+                        CoverImage = cave.game.coverUrl.IsNullOrEmpty() ? null : new Playnite.SDK.Metadata.MetadataFile(cave.game.coverUrl)
                     };
 
                     //if (TryGetGameActions(installDir, out var play, out var others))
@@ -174,8 +173,7 @@ namespace ItchioLibrary
                             Source = "itch.io",
                             GameId = key.game.id.ToString(),
                             Name = key.game.title.RemoveTrademarks(),
-                            CoverImage = key.game.coverUrl,
-                            Platform = "PC"
+                            CoverImage = key.game.coverUrl.IsNullOrEmpty() ? null : new Playnite.SDK.Metadata.MetadataFile(key.game.coverUrl)
                         };
 
                         games.Add(game);
@@ -186,7 +184,7 @@ namespace ItchioLibrary
             return games;
         }
 
-        public override IEnumerable<GameInfo> GetGames()
+        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
         {
             var allGames = new List<GameInfo>();
             var installedGames = new Dictionary<string, GameInfo>();
@@ -269,34 +267,34 @@ namespace ItchioLibrary
             return allGames;
         }
 
-        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        public override IEnumerable<InstallController> GetInstallActions(GetInstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<InstallController> { new ItchInstallController(args.Game) };
+            yield return new ItchInstallController(args.Game);
         }
 
-        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<UninstallController> { new ItchUninstallController(args.Game) };
+            yield return new ItchUninstallController(args.Game);
         }
 
-        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        public override IEnumerable<PlayController> GetPlayActions(GetPlayActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<PlayController> { new ItchPlayController(args.Game) };
+            yield return new ItchPlayController(args.Game);
         }
 
         public override LibraryMetadataProvider GetMetadataDownloader()

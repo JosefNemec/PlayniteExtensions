@@ -49,7 +49,7 @@ namespace UplayLibrary
                 var installedGame = UplayLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
                 if (installedGame != null)
                 {
-                    var installInfo = new GameInfo()
+                    var installInfo = new GameInstallationData
                     {
                         InstallDirectory = installedGame.InstallDirectory
                     };
@@ -127,7 +127,6 @@ namespace UplayLibrary
         public override void Play(PlayActionArgs args)
         {
             Dispose();
-            InvokeOnStarting(new GameStartingEventArgs());
             if (Directory.Exists(Game.InstallDirectory))
             {
                 var requiresUplay = Uplay.GetGameRequiresUplay(Game);
@@ -181,7 +180,7 @@ namespace UplayLibrary
         private void Monitor_TreeDestroyed(object sender, EventArgs args)
         {
             stopWatch.Stop();
-            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
+            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToUInt64(stopWatch.Elapsed.TotalSeconds)));
         }
     }
 }

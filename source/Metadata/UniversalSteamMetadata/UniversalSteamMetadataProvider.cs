@@ -67,7 +67,7 @@ namespace UniversalSteamMetadata
             }
         }
 
-        public override string GetName()
+        public override string GetName(GetMetadataFieldArgs args)
         {
             GetGameData();
             if (currentMetadata.GameInfo != null)
@@ -75,10 +75,10 @@ namespace UniversalSteamMetadata
                 return currentMetadata.GameInfo.Name;
             }
 
-            return base.GetName();
+            return base.GetName(args);
         }
 
-        public override string GetDescription()
+        public override string GetDescription(GetMetadataFieldArgs args)
         {
             GetGameData();
             if (currentMetadata.GameInfo != null)
@@ -86,10 +86,10 @@ namespace UniversalSteamMetadata
                 return currentMetadata.GameInfo.Description;
             }
 
-            return base.GetDescription();
+            return base.GetDescription(args);
         }
 
-        public override MetadataFile GetBackgroundImage()
+        public override MetadataFile GetBackgroundImage(GetMetadataFieldArgs args)
         {
             GetGameData();
             if (currentMetadata.GameInfo != null)
@@ -122,10 +122,10 @@ namespace UniversalSteamMetadata
                 }
             }
 
-            return base.GetBackgroundImage();
+            return base.GetBackgroundImage(args);
         }
 
-        public override MetadataFile GetIcon()
+        public override MetadataFile GetIcon(GetMetadataFieldArgs args)
         {
             GetGameData();
             if (currentMetadata.GameInfo != null)
@@ -133,10 +133,10 @@ namespace UniversalSteamMetadata
                 return currentMetadata.Icon;
             }
 
-            return base.GetIcon();
+            return base.GetIcon(args);
         }
 
-        public override MetadataFile GetCoverImage()
+        public override MetadataFile GetCoverImage(GetMetadataFieldArgs args)
         {
             GetGameData();
             if (currentMetadata.GameInfo != null)
@@ -144,10 +144,10 @@ namespace UniversalSteamMetadata
                 return currentMetadata.CoverImage;
             }
 
-            return base.GetCoverImage();
+            return base.GetCoverImage(args);
         }
 
-        public override int? GetCommunityScore()
+        public override int? GetCommunityScore(GetMetadataFieldArgs args)
         {
             GetGameData();
             if (currentMetadata.GameInfo != null)
@@ -155,10 +155,10 @@ namespace UniversalSteamMetadata
                 return currentMetadata.GameInfo.CommunityScore;
             }
 
-            return base.GetCommunityScore();
+            return base.GetCommunityScore(args);
         }
 
-        public override int? GetCriticScore()
+        public override int? GetCriticScore(GetMetadataFieldArgs args)
         {
             GetGameData();
             if (currentMetadata.GameInfo != null)
@@ -166,10 +166,10 @@ namespace UniversalSteamMetadata
                 return currentMetadata.GameInfo.CriticScore;
             }
 
-            return base.GetCriticScore();
+            return base.GetCriticScore(args);
         }
 
-        public override List<string> GetDevelopers()
+        public override List<string> GetDevelopers(GetMetadataFieldArgs args)
         {
             GetGameData();
             if (currentMetadata.GameInfo != null)
@@ -177,10 +177,10 @@ namespace UniversalSteamMetadata
                 return currentMetadata.GameInfo.Developers;
             }
 
-            return base.GetDevelopers();
+            return base.GetDevelopers(args);
         }
 
-        public override List<string> GetGenres()
+        public override List<string> GetGenres(GetMetadataFieldArgs args)
         {
             GetGameData();
             if (currentMetadata.GameInfo != null)
@@ -188,10 +188,10 @@ namespace UniversalSteamMetadata
                 return currentMetadata.GameInfo.Genres;
             }
 
-            return base.GetGenres();
+            return base.GetGenres(args);
         }
 
-        public override List<Link> GetLinks()
+        public override List<Link> GetLinks(GetMetadataFieldArgs args)
         {
             GetGameData();
             if (currentMetadata.GameInfo != null)
@@ -199,10 +199,10 @@ namespace UniversalSteamMetadata
                 return currentMetadata.GameInfo.Links;
             }
 
-            return base.GetLinks();
+            return base.GetLinks(args);
         }
 
-        public override List<string> GetPublishers()
+        public override List<string> GetPublishers(GetMetadataFieldArgs args)
         {
             GetGameData();
             if (currentMetadata.GameInfo != null)
@@ -210,10 +210,10 @@ namespace UniversalSteamMetadata
                 return currentMetadata.GameInfo.Publishers;
             }
 
-            return base.GetPublishers();
+            return base.GetPublishers(args);
         }
 
-        public override DateTime? GetReleaseDate()
+        public override ReleaseDate? GetReleaseDate(GetMetadataFieldArgs args)
         {
             GetGameData();
             if (currentMetadata.GameInfo != null)
@@ -221,10 +221,10 @@ namespace UniversalSteamMetadata
                 return currentMetadata.GameInfo.ReleaseDate;
             }
 
-            return base.GetReleaseDate();
+            return base.GetReleaseDate(args);
         }
 
-        public override List<string> GetFeatures()
+        public override List<string> GetFeatures(GetMetadataFieldArgs args)
         {
             GetGameData();
             if (currentMetadata.GameInfo != null)
@@ -232,7 +232,7 @@ namespace UniversalSteamMetadata
                 return currentMetadata.GameInfo.Features;
             }
 
-            return base.GetFeatures();
+            return base.GetFeatures(args);
         }
 
         internal void GetGameData()

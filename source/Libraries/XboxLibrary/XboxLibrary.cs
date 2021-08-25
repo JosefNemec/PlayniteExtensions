@@ -26,7 +26,7 @@ namespace XboxLibrary
         public XboxLibrary(IPlayniteAPI api) : base(
             "Xbox",
             Guid.Parse("7e4fbb5e-2ae3-48d4-8ba0-6b30e7a4e287"),
-            new LibraryPluginCapabilities(),
+            new LibraryPluginProperties { HasSettings = true },
             null,
             Xbox.Icon,
             (_) => new XboxLibrarySettingsView(),
@@ -54,7 +54,6 @@ namespace XboxLibrary
                 Replace("- Windows 10", "").
                 RemoveTrademarks().
                 Trim(),
-                Platform = "PC",
                 Source = "Xbox"
             };
 
@@ -62,7 +61,7 @@ namespace XboxLibrary
             {
                 if (title.detail.releaseDate != null)
                 {
-                    newGame.ReleaseDate = title.detail.releaseDate;
+                    newGame.ReleaseDate = new ReleaseDate(title.detail.releaseDate.Value);
                 }
 
                 if (!title.detail.publisherName.IsNullOrEmpty())
@@ -107,7 +106,7 @@ namespace XboxLibrary
             File.WriteAllText(filePath, Serialization.ToJson(data));
         }
 
-        public override IEnumerable<GameInfo> GetGames()
+        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
         {
             var installedGames = new Dictionary<string, GameInfo>();
             Exception importError = null;
@@ -180,7 +179,7 @@ namespace XboxLibrary
                             var game = GetGameInfoFromTitle(libTitle);
                             game.IsInstalled = true;
                             game.InstallDirectory = installedApp.WorkDir;
-                            game.Icon = installedApp.Icon;
+                            game.Icon = installedApp.Icon.IsNullOrEmpty() ? null : new Playnite.SDK.Metadata.MetadataFile();
                             installedGames.Add(libTitle.pfn, game);
                         }
                     }
@@ -231,7 +230,8 @@ namespace XboxLibrary
                             {
                                 var newGame = GetGameInfoFromTitle(title);
                                 newGame.GameId = $"CONSOLE_{title.titleId}_{title.mediaItemType}";
-                                newGame.Platform = platform;
+                                // TODO
+                                //newGame.Platform = platform;
                                 allGames.Add(newGame);
                             };
                         }
@@ -261,34 +261,34 @@ namespace XboxLibrary
             return allGames;
         }
 
-        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        public override IEnumerable<InstallController> GetInstallActions(GetInstallActionsArgs args)
         {
             if (args.Game.PluginId != Id || args.Game.GameId.StartsWith("CONSOLE"))
             {
-                return null;
+                yield break;
             }
 
-            return new List<InstallController> { new XboxInstallController(args.Game) };
+            yield return new XboxInstallController(args.Game);
         }
 
-        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
         {
             if (args.Game.PluginId != Id || args.Game.GameId.StartsWith("CONSOLE"))
             {
-                return null;
+                yield break;
             }
 
-            return new List<UninstallController> { new XboxUninstallController(args.Game) };
+            yield return new XboxUninstallController(args.Game);
         }
 
-        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        public override IEnumerable<PlayController> GetPlayActions(GetPlayActionsArgs args)
         {
             if (args.Game.PluginId != Id || args.Game.GameId.StartsWith("CONSOLE"))
             {
-                return null;
+                yield break;
             }
 
-            return new List<PlayController> { new XboxPlayController(args.Game) };
+            yield return new XboxPlayController(args.Game);
         }
     }
 }

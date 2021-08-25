@@ -19,7 +19,7 @@ namespace BethesdaLibrary
         public BethesdaLibrary(IPlayniteAPI api) : base(
             "Bethesda",
             Guid.Parse("0E2E793E-E0DD-4447-835C-C44A1FD506EC"),
-            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new LibraryPluginProperties { CanShutdownClient = true, HasSettings = true },
             new BethesdaClient(),
             Bethesda.Icon,
             (a) => a ? null : new BethesdaLibrarySettingsView(),
@@ -48,8 +48,7 @@ namespace BethesdaLibrary
                     Source = "Bethesda",
                     InstallDirectory = installDir,
                     Name = program.DisplayName.RemoveTrademarks(),
-                    IsInstalled = true,
-                    Platform = "PC"
+                    IsInstalled = true
                 };
 
                 games.Add(newGame);
@@ -63,7 +62,7 @@ namespace BethesdaLibrary
             return firstRunSettings ? null : SettingsViewModel;
         }
 
-        public override IEnumerable<GameInfo> GetGames()
+        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
         {
             var allGames = new List<GameInfo>();
             if (SettingsViewModel.Settings.ImportInstalledGames)
@@ -90,34 +89,41 @@ namespace BethesdaLibrary
             return allGames;
         }
 
-        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        public override IEnumerable<InstallController> GetInstallActions(GetInstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<InstallController> { new BethesdaInstallController(args.Game) };
+            yield return new BethesdaInstallController(args.Game);
         }
 
-        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<UninstallController> { new BethesdaUninstallController(args.Game) };
+            yield return new BethesdaUninstallController(args.Game);
         }
 
-        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        public override IEnumerable<PlayController> GetPlayActions(GetPlayActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<PlayController> { new BethesdaPlayController(args.Game) };
+            yield return new AutomaticPlayController(args.Game)
+            {
+                Type = AutomaticPlayActionType.Url,
+                TrackingMode = TrackingMode.Directory,
+                Name = "Start using Bethesda client",
+                TrackingPath = args.Game.InstallDirectory,
+                Path = @"bethesdanet://run/" + args.Game.GameId
+            };
         }
 
         public override LibraryMetadataProvider GetMetadataDownloader()

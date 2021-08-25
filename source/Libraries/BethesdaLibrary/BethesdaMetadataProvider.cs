@@ -34,7 +34,7 @@ namespace BethesdaLibrary
 
             if (!string.IsNullOrEmpty(program.DisplayIcon) && File.Exists(program.DisplayIcon))
             {
-                metadata.Icon = new MetadataFile(program.DisplayIcon);
+                gameInfo.Icon = new MetadataFile(program.DisplayIcon);
             }
 
             return metadata;

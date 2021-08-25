@@ -54,6 +54,7 @@ namespace UniversalSteamMetadata
             null,
             api)
         {
+            Properties = new MetadataPluginProperties { HasSettings = true };
             SettingsViewModel = new UniversalSteamMetadataSettingsViewModel(this, api);
         }
 

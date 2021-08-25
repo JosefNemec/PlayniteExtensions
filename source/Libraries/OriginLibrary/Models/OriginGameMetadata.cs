@@ -11,5 +11,7 @@ namespace OriginLibrary.Models
     {
         public GameStoreDataResponse StoreDetails { get; set; }
         public StorePageMetadata StoreMetadata { get; set; }
+        public MetadataFile CoverImage { get; set; }
+        public MetadataFile BackgroundImage { get; set; }
     }
 }

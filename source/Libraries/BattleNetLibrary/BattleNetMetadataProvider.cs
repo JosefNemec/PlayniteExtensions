@@ -36,17 +36,17 @@ namespace BattleNetLibrary
 
             if (!string.IsNullOrEmpty(product.IconUrl))
             {
-                metadata.Icon = new MetadataFile(product.IconUrl);
+                gameInfo.Icon = new MetadataFile(product.IconUrl);
             }
 
             if (!string.IsNullOrEmpty(product.CoverUrl))
             {
-                metadata.CoverImage = new MetadataFile(product.CoverUrl);
+                gameInfo.CoverImage = new MetadataFile(product.CoverUrl);
             }
 
             if (!string.IsNullOrEmpty(product.BackgroundUrl))
             {
-                metadata.BackgroundImage = new MetadataFile(product.BackgroundUrl);
+                gameInfo.BackgroundImage = new MetadataFile(product.BackgroundUrl);
             }
 
             return metadata;

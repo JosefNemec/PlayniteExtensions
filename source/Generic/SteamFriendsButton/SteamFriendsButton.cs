@@ -11,7 +11,7 @@ using System.Windows.Controls;
 
 namespace SteamFriendsButton
 {
-    public class SteamFriendsButton : Plugin
+    public class SteamFriendsButton : GenericPlugin
     {
         private static readonly ILogger logger = LogManager.GetLogger();
 
@@ -21,7 +21,7 @@ namespace SteamFriendsButton
         {
         }
 
-        public override List<TopPanelItem> GetTopPanelItems()
+        public override IEnumerable<TopPanelItem> GetTopPanelItems()
         {
             var icon = new TextBlock
             {
@@ -30,14 +30,11 @@ namespace SteamFriendsButton
             };
 
             icon.SetResourceReference(TextBlock.FontFamilyProperty, "FontIcoFont");
-            return new List<TopPanelItem>
+            yield return new TopPanelItem()
             {
-                new TopPanelItem()
-                {
-                    Icon = icon,
-                    ToolTip = "Steam Friends",
-                    Action = ()=> Process.Start(@"steam://open/friends")
-                }
+                Icon = icon,
+                Title = "Steam Friends",
+                Activated = () => Process.Start(@"steam://open/friends")
             };
         }
     }

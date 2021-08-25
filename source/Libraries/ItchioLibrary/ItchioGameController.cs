@@ -57,7 +57,7 @@ namespace ItchioLibrary
                     var cave = installed?.FirstOrDefault(a => a.game.id.ToString() == Game.GameId);
                     if (cave != null)
                     {
-                        var installInfo = new GameInfo
+                        var installInfo = new GameInstallationData
                         {
                             InstallDirectory = cave.installInfo.installFolder
                         };
@@ -158,7 +158,6 @@ namespace ItchioLibrary
             }
 
             ReleaseResources();
-            InvokeOnStarting(new GameStartingEventArgs());
             butler = new Butler();
             var cave = butler.GetCaves().FirstOrDefault(a => a.game.id == long.Parse(Game.GameId));
             if (cave != null)
@@ -183,7 +182,7 @@ namespace ItchioLibrary
             else if (e.Notification.Method == Butler.Methods.LaunchExited)
             {
                 stopWatch.Stop();
-                InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
+                InvokeOnStopped(new GameStoppedEventArgs(Convert.ToUInt64(stopWatch.Elapsed.TotalSeconds)));
             }
         }
 

@@ -64,7 +64,7 @@ namespace GogLibrary
                 if (games.ContainsKey(Game.GameId))
                 {
                     var game = games[Game.GameId];
-                    var installInfo = new GameInfo()
+                    var installInfo = new GameInstallationData()
                     {
                         InstallDirectory = game.InstallDirectory
                     };
@@ -124,86 +124,6 @@ namespace GogLibrary
 
                 await Task.Delay(5000);
             }
-        }
-    }
-
-    public class GogPlayController : PlayController
-    {
-        private bool useGalaxy;
-        private ProcessMonitor procMon;
-        private Stopwatch stopWatch;
-        private IPlayniteAPI api;
-        public GameAction SourceAction { get; set; }
-
-        public GogPlayController(Game game, GameAction sourceAction, bool useGalaxy, IPlayniteAPI api) : base(game)
-        {
-            this.useGalaxy = useGalaxy;
-            this.api = api;
-            Name = sourceAction.Name;
-            SourceAction = sourceAction;
-        }
-
-        public override void Dispose()
-        {
-            ReleaseResources();
-        }
-
-        public void ReleaseResources()
-        {
-            procMon?.Dispose();
-        }
-
-        public override void Play(PlayActionArgs args)
-        {
-            ReleaseResources();
-            if (useGalaxy)
-            {
-                InvokeOnStarting(new GameStartingEventArgs());
-                stopWatch = Stopwatch.StartNew();
-                procMon = new ProcessMonitor();
-                procMon.TreeStarted += ProcMon_TreeStarted;
-                procMon.TreeDestroyed += Monitor_TreeDestroyed;
-                var startArgs = string.Format(@"/gameId={0} /command=runGame /path=""{1}""", Game.GameId, Game.InstallDirectory);
-                ProcessStarter.StartProcess(Path.Combine(Gog.InstallationPath, "GalaxyClient.exe"), startArgs);
-                if (Directory.Exists(Game.InstallDirectory))
-                {
-                    procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
-                }
-                else
-                {
-                    InvokeOnStopped(new GameStoppedEventArgs());
-                }
-            }
-            else
-            {
-                var playAction = api.ExpandGameVariables(Game, SourceAction);
-                InvokeOnStarting(new GameStartingEventArgs());
-                var proc = GameActionActivator.ActivateAction(playAction);
-                InvokeOnStarted(new GameStartedEventArgs());
-
-                if (playAction.Type != GameActionType.URL)
-                {
-                    stopWatch = Stopwatch.StartNew();
-                    procMon = new ProcessMonitor();
-                    procMon.TreeDestroyed += Monitor_TreeDestroyed;
-                    procMon.WatchProcessTree(proc);
-                }
-                else
-                {
-                    InvokeOnStopped(new GameStoppedEventArgs());
-                }
-            }
-        }
-
-        private void ProcMon_TreeStarted(object sender, EventArgs args)
-        {
-            InvokeOnStarted(new GameStartedEventArgs());
-        }
-
-        private void Monitor_TreeDestroyed(object sender, EventArgs args)
-        {
-            stopWatch.Stop();
-            InvokeOnStopped(new GameStoppedEventArgs() { SessionLength = Convert.ToInt64(stopWatch.Elapsed.TotalSeconds) });
         }
     }
 }

@@ -60,7 +60,7 @@ namespace IGDBMetadata
                 string.Format(plugin.PlayniteApi.Resources.GetString("LOCIgdbSelectBackgroundTitle"), IgdbData.name)) as IgdbImageOption;
         }
 
-        public override MetadataFile GetBackgroundImage()
+        public override MetadataFile GetBackgroundImage(GetMetadataFieldArgs args)
         {
             var settings = plugin.SettingsViewModel.Settings;
             if (AvailableFields.Contains(MetadataField.BackgroundImage))
@@ -121,20 +121,20 @@ namespace IGDBMetadata
                 }
             }
 
-            return base.GetBackgroundImage();
+            return base.GetBackgroundImage(args);
         }
 
-        public override int? GetCommunityScore()
+        public override int? GetCommunityScore(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.CommunityScore))
             {
                 return Convert.ToInt32(IgdbData.rating);
             }
 
-            return base.GetCommunityScore();
+            return base.GetCommunityScore(args);
         }
 
-        public override MetadataFile GetCoverImage()
+        public override MetadataFile GetCoverImage(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.CoverImage) && !IgdbData.cover.url.IsNullOrEmpty())
             {
@@ -148,115 +148,100 @@ namespace IGDBMetadata
                 }
             }
 
-            return base.GetCoverImage();
+            return base.GetCoverImage(args);
         }
 
-        public override int? GetCriticScore()
+        public override int? GetCriticScore(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.CriticScore))
             {
                 return Convert.ToInt32(IgdbData.aggregated_rating);
             }
 
-            return base.GetCriticScore();
+            return base.GetCriticScore(args);
         }
 
-        public override string GetDescription()
+        public override string GetDescription(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.Description))
             {
                 return IgdbData.summary.Replace("\n", "\n<br>");
             }
 
-            return base.GetDescription();
+            return base.GetDescription(args);
         }
 
-        public override List<string> GetDevelopers()
+        public override List<string> GetDevelopers(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.Developers))
             {
                 return IgdbData.involved_companies?.Where(a => a.developer).Select(a => a.company.name).ToList();
             }
 
-            return base.GetDevelopers();
+            return base.GetDevelopers(args);
         }
 
-        public override List<string> GetGenres()
+        public override List<string> GetGenres(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.Genres))
             {
                 return IgdbData.genres?.Select(a => a.name).ToList();
             }
 
-            return base.GetGenres();
+            return base.GetGenres(args);
         }
 
-        public override string GetName()
+        public override string GetName(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.Name))
             {
                 return IgdbData.name;
             }
 
-            return base.GetName();
+            return base.GetName(args);
         }
 
-        public override List<string> GetPublishers()
+        public override List<string> GetPublishers(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.Publishers))
             {
                 return IgdbData.involved_companies?.Where(a => a.publisher).Select(a => a.company.name).ToList();
             }
 
-            return base.GetPublishers();
+            return base.GetPublishers(args);
         }
 
-        public override string GetAgeRating()
+        public override List<string> GetAgeRatings(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.AgeRating))
             {
-                var preferrence = plugin.PlayniteApi.ApplicationSettings.AgeRatingOrgPriority;
-                var esrb = IgdbData.age_ratings.FirstOrDefault(a => a.category == IgdbServerModels.AgeRatingOrganization.ESRB);
-                var pegi = IgdbData.age_ratings.FirstOrDefault(a => a.category == IgdbServerModels.AgeRatingOrganization.PEGI);
-                if (esrb != null && preferrence == AgeRatingOrg.ESRB)
-                {
-                    return esrb.category + " " + esrb.rating.GetDescription();
-                }
-                else if (pegi != null && preferrence == AgeRatingOrg.PEGI)
-                {
-                    return pegi.category + " " + pegi.rating.GetDescription();
-                }
-                else
-                {
-                    var rating = IgdbData.age_ratings[0];
-                    return rating.category + " " + rating.rating.GetDescription();
-                }
+                return IgdbData.age_ratings.Select(a => a.category + " " + a.rating.GetDescription()).ToList();
             }
 
-            return base.GetAgeRating();
+            return base.GetAgeRatings(args);
         }
 
-        public override string GetSeries()
+        public override List<string> GetSeries(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.Series))
             {
-                return IgdbData.collection.name;
+                return new List<string> { IgdbData.collection.name };
             }
 
-            return base.GetSeries();
+            return base.GetSeries(args);
         }
 
-        public override DateTime? GetReleaseDate()
+        public override ReleaseDate? GetReleaseDate(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.ReleaseDate))
             {
-                return DateTimeOffset.FromUnixTimeMilliseconds(IgdbData.first_release_date).DateTime;
+                return new ReleaseDate(DateTimeOffset.FromUnixTimeMilliseconds(IgdbData.first_release_date).DateTime);
             }
 
-            return base.GetReleaseDate();
+            return base.GetReleaseDate(args);
         }
 
-        public override List<string> GetFeatures()
+        public override List<string> GetFeatures(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.Features))
             {
@@ -270,17 +255,17 @@ namespace IGDBMetadata
 
                 return features;
             }
-            return base.GetFeatures();
+            return base.GetFeatures(args);
         }
 
-        public override List<Link> GetLinks()
+        public override List<Link> GetLinks(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.Links))
             {
                 return IgdbData.websites.Where(a => !a.url.IsNullOrEmpty()).Select(a => new Link(a.category.GetDescription(), a.url)).ToList();
             }
 
-            return base.GetLinks();
+            return base.GetLinks(args);
         }
 
         private List<MetadataField> GetAvailableFields()

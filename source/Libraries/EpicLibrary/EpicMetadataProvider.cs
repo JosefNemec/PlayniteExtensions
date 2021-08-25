@@ -49,7 +49,7 @@ namespace EpicLibrary
                         gameInfo.Publishers = page.data.about.publisherAttribution?.
                             Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).
                             Select(a => a.Trim()).ToList();
-                        metadata.BackgroundImage = new MetadataFile(page.data.hero.backgroundImageUrl);
+                        gameInfo.BackgroundImage = new MetadataFile(page.data.hero.backgroundImageUrl);
                         gameInfo.Links.Add(new Link(
                             api.Resources.GetString("LOCCommonLinksStorePage"),
                             "https://www.epicgames.com/store/en-US/product/" + catalogs[0].productSlug));
@@ -84,7 +84,7 @@ namespace EpicLibrary
                     var exePath = Path.Combine(manifest.InstallLocation, manifest.LaunchExecutable);
                     if (File.Exists(exePath))
                     {
-                        metadata.Icon = new MetadataFile(exePath);
+                        gameInfo.Icon = new MetadataFile(exePath);
                     }
                 }
             }

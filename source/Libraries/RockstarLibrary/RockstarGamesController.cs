@@ -49,7 +49,7 @@ namespace RockstarGamesLibrary
                 var installedGame = RockstarGamesLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
                 if (installedGame != null)
                 {
-                    var installInfo = new GameInfo()
+                    var installInfo = new GameInstallationData
                     {
                         InstallDirectory = installedGame.InstallDirectory
                     };
@@ -125,7 +125,6 @@ namespace RockstarGamesLibrary
         public override void Play(PlayActionArgs args)
         {
             Dispose();
-            InvokeOnStarting(new GameStartingEventArgs());
             if (Directory.Exists(Game.InstallDirectory))
             {
                 stopWatch = Stopwatch.StartNew();
@@ -149,7 +148,7 @@ namespace RockstarGamesLibrary
 
         private void Monitor_TreeDestroyed(object sender, EventArgs args)
         {
-            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
+            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToUInt64(stopWatch.Elapsed.TotalSeconds)));
         }
 
         public async void StartRunningWatcher()

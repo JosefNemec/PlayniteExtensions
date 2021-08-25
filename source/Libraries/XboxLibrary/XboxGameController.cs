@@ -49,7 +49,7 @@ namespace XboxLibrary
                 var app = Programs.GetUWPApps().FirstOrDefault(a => a.AppId == Game.GameId);
                 if (app != null)
                 {
-                    var installInfo = new GameInfo
+                    var installInfo = new GameInstallationData
                     {
                         InstallDirectory = app.WorkDir
                     };
@@ -137,7 +137,6 @@ namespace XboxLibrary
                 throw new Exception("Cannot start UWP game, installation not found.");
             }
 
-            InvokeOnStarting(new GameStartingEventArgs());
             ProcessStarter.StartProcess(prg.Path, prg.Arguments);
             stopWatch = Stopwatch.StartNew();
             procMon = new ProcessMonitor();
@@ -164,7 +163,7 @@ namespace XboxLibrary
         private void Monitor_TreeDestroyed(object sender, EventArgs args)
         {
             stopWatch.Stop();
-            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToInt64(stopWatch.Elapsed.TotalSeconds)));
+            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToUInt64(stopWatch.Elapsed.TotalSeconds)));
         }
     }
 }

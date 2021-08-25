@@ -48,7 +48,7 @@ namespace OriginLibrary
         public OriginLibrary(IPlayniteAPI api) : base(
             "Origin",
             Guid.Parse("85DD7072-2F20-4E76-A007-41035E390724"),
-            new LibraryPluginCapabilities { CanShutdownClient = true },
+            new LibraryPluginProperties { CanShutdownClient = true, HasSettings = true },
             new OriginClient(),
             Origin.Icon,
             (_) => new OriginLibrarySettingsView(),
@@ -315,8 +315,7 @@ namespace OriginLibrary
                         {
                             Source = "Origin",
                             GameId = gameId,
-                            IsInstalled = true,
-                            Platform = "PC"
+                            IsInstalled = true
                         };
 
                         GameLocalDataResponse localData = null;
@@ -424,8 +423,7 @@ namespace OriginLibrary
                         GameId = game.offerId,
                         Name = gameName,
                         LastActivity = usage?.lastSessionEndTimeStamp,
-                        Playtime = usage?.total ?? 0,
-                        Platform = "PC"
+                        Playtime = (ulong)(usage?.total ?? 0)
                     });
                 }
 
@@ -433,7 +431,7 @@ namespace OriginLibrary
             }
         }
 
-        public override IEnumerable<GameInfo> GetGames()
+        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
         {
             var allGames = new List<GameInfo>();
             var installedGames = new Dictionary<string, GameInfo>();
@@ -503,34 +501,34 @@ namespace OriginLibrary
             return allGames;
         }
 
-        public override List<InstallController> GetInstallActions(GetInstallActionsArgs args)
+        public override IEnumerable<InstallController> GetInstallActions(GetInstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<InstallController> { new OriginInstallController(args.Game, this) };
+            yield return new OriginInstallController(args.Game, this);
         }
 
-        public override List<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
+        public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<UninstallController> { new OriginUninstallController(args.Game, this) };
+            yield return new OriginUninstallController(args.Game, this);
         }
 
-        public override List<PlayController> GetPlayActions(GetPlayActionsArgs args)
+        public override IEnumerable<PlayController> GetPlayActions(GetPlayActionsArgs args)
         {
             if (args.Game.PluginId != Id)
             {
-                return null;
+                yield break;
             }
 
-            return new List<PlayController> { new OriginPlayController(args.Game) };
+            yield return new OriginPlayController(args.Game);
         }
 
         public override LibraryMetadataProvider GetMetadataDownloader()

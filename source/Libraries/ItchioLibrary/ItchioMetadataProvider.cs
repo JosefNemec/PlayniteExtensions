@@ -53,7 +53,7 @@ namespace ItchioLibrary
             // Cover image
             if (!string.IsNullOrEmpty(itchGame.coverUrl))
             {
-                metadata.CoverImage = new MetadataFile(itchGame.coverUrl);
+                gameData.CoverImage = new MetadataFile(itchGame.coverUrl);
             }
 
             if (!string.IsNullOrEmpty(itchGame.url))
@@ -73,7 +73,7 @@ namespace ItchioLibrary
                 var bckMatch = Regex.Match(gameTheme, @"background-image:\surl\((.+?)\)");
                 if (bckMatch.Success)
                 {
-                    metadata.BackgroundImage = new MetadataFile(bckMatch.Groups[1].Value);
+                    gameData.BackgroundImage = new MetadataFile(bckMatch.Groups[1].Value);
                 }
 
                 // Other info
@@ -131,7 +131,7 @@ namespace ItchioLibrary
                         var strDate = field.QuerySelector("abbr").Attributes["title"].Value.Split('@')[0].Trim();
                         if (DateTime.TryParseExact(strDate, "d MMMM yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var dateTime))
                         {
-                            gameData.ReleaseDate = dateTime;
+                            gameData.ReleaseDate = new ReleaseDate(dateTime);
                         }
                     }
                 }
