@@ -45,7 +45,7 @@ namespace Playnite.SDK
             Settings = EditingClone;
         }
 
-        public void EndEdit()
+        public virtual void EndEdit()
         {
             Plugin.SavePluginSettings(Settings);
         }
