@@ -102,9 +102,6 @@
     <Compile Include="..\..\..\..\playnite\source\playnite\native\winuser.cs">
       <Link>Shared\Native\winuser.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Commands\GlobalCommands.cs">
-      <Link>Shared\GlobalCommands.cs</Link>
-    </Compile>
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Extensions\ObjectExtensions.cs">
       <Link>Shared\ObjectExtensions.cs</Link>
     </Compile>
@@ -137,6 +134,9 @@
     </Compile>
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Converters\NegateConverter.cs">
       <Link>Shared\NegateConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\GlobalCommands.cs">
+      <Link>Shared\GlobalCommands.cs</Link>
     </Compile>
     <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginBase.cs">
       <Link>Shared\PluginBase.cs</Link>

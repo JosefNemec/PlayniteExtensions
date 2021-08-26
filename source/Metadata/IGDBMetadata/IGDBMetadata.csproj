@@ -100,9 +100,6 @@
     <Compile Include="..\..\..\..\Playnite\source\Playnite\Native\winuser.cs">
       <Link>Shared\Native\winuser.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\playniterepo\source\playnite\commands\GlobalCommands.cs">
-      <Link>Shared\GlobalCommands.cs</Link>
-    </Compile>
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Extensions\Enums.cs">
       <Link>Shared\Enums.cs</Link>
     </Compile>
@@ -141,6 +138,9 @@
     </Compile>
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Services\GenericResponse.cs">
       <Link>Services\GenericResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\GlobalCommands.cs">
+      <Link>Shared\GlobalCommands.cs</Link>
     </Compile>
     <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginBase.cs">
       <Link>Shared\PluginBase.cs</Link>
