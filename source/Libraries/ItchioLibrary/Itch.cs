@@ -35,6 +35,15 @@ namespace ItchioLibrary
             get
             {
                 var prog = Programs.GetUnistallProgramsList().FirstOrDefault(a => a.DisplayName == "itch");
+                if (prog == null) // Try default path
+                {
+                    var defPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "itch");
+                    if (File.Exists(Path.Combine(defPath, "state.json")))
+                    {
+                        return defPath;
+                    }
+                }
+
                 return prog == null ? string.Empty : prog.InstallLocation;
             }
         }
