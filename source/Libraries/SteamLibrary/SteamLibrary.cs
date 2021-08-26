@@ -23,6 +23,7 @@ using Playnite.Common.Web;
 using Steam;
 using System.Diagnostics;
 using Playnite.SDK.Data;
+using System.Windows.Media;
 
 namespace SteamLibrary
 {
@@ -32,6 +33,7 @@ namespace SteamLibrary
         private static readonly ILogger logger = LogManager.GetLogger();
         private readonly Configuration config;
         internal SteamServicesClient ServicesClient;
+        internal TopPanelItem TopPanelFriendsButton;
 
         public SteamLibrary(IPlayniteAPI api) : base(
             "Steam",
@@ -49,6 +51,18 @@ namespace SteamLibrary
 
             config = GetPluginConfiguration<Configuration>();
             ServicesClient = new SteamServicesClient(config.ServicesEndpoint, api.ApplicationInfo.ApplicationVersion);
+            TopPanelFriendsButton = new TopPanelItem()
+            {
+                Icon = new TextBlock
+                {
+                    Text = char.ConvertFromUtf32(0xecf9),
+                    FontSize = 20,
+                    FontFamily = ResourceProvider.GetResource("FontIcoFont") as FontFamily
+                },
+                Title = "Steam Friends",
+                Activated = () => Process.Start(@"steam://open/friends"),
+                Visible = SettingsViewModel.Settings.ShowFriendsButton
+            };
         }
 
         internal static GameAction CreatePlayTask(GameID gameId)
@@ -796,6 +810,11 @@ namespace SteamLibrary
             }
 
             return allGames;
+        }
+
+        public override IEnumerable<TopPanelItem> GetTopPanelItems()
+        {
+            yield return TopPanelFriendsButton;
         }
     }
 }

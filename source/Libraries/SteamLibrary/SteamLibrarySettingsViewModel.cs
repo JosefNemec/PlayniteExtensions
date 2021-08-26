@@ -35,6 +35,7 @@ namespace SteamLibrary
         public string UserName { get; set; } = string.Empty;
         public string UserId { get; set; } = string.Empty;
         public bool IncludeFreeSubGames { get; set; } = false;
+        public bool ShowFriendsButton { get; set; } = true;
 
         private bool isPrivateAccount;
         public bool IsPrivateAccount
@@ -251,6 +252,12 @@ namespace SteamLibrary
                 PlayniteApi.Dialogs.ShowErrorMessage(PlayniteApi.Resources.GetString("LOCNotLoggedInError"), "");
                 Logger.Error(e, "Failed to authenticate user.");
             }
+        }
+
+        public override void EndEdit()
+        {
+            base.EndEdit();
+            Plugin.TopPanelFriendsButton.Visible = Settings.ShowFriendsButton;
         }
     }
 }
