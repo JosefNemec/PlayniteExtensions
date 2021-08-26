@@ -71,7 +71,7 @@
                   Margin="0,5,0,0" />
 
         <TextBlock VerticalAlignment="Center" Margin="0,20,0,0">
-            <Hyperlink NavigateUri="https://github.com/JosefNemec/Playnite/wiki/Twitch-and-Amazon-Games-troubleshooting"
+            <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Amazon-Games-troubleshooting"
                         Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"
                         CommandParameter="{Binding NavigateUri, RelativeSource={RelativeSource Self}}">
                 <Run Text="{DynamicResource LOCTroubleShootingIssues}" />

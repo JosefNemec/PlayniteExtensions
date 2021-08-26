@@ -65,7 +65,7 @@
         </StackPanel>
 
         <TextBlock VerticalAlignment="Center" Margin="0,20,0,0">
-            <Hyperlink NavigateUri="https://github.com/JosefNemec/Playnite/wiki/Epic-Game-Store-troubleshooting"
+            <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Epic-Game-Store-troubleshooting"
                         Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"
                         CommandParameter="{Binding NavigateUri, RelativeSource={RelativeSource Self}}">
                 <Run Text="{DynamicResource LOCTroubleShootingIssues}" />

@@ -112,7 +112,7 @@
         </DockPanel>
 
         <TextBlock VerticalAlignment="Center" Margin="0,12,0,0">
-            <Hyperlink NavigateUri="https://github.com/JosefNemec/Playnite/wiki/Steam-troubleshooting"
+            <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Steam-troubleshooting"
                         Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"
                         CommandParameter="{Binding NavigateUri, RelativeSource={RelativeSource Self}}">
                 <Run Text="{DynamicResource LOCTroubleShootingIssues}" />
