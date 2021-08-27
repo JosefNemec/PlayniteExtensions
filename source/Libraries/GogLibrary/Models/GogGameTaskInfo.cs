@@ -34,8 +34,8 @@ namespace GogLibrary.Models
                 {
                     Arguments = arguments,
                     Name = string.IsNullOrEmpty(name) ? "Play" : name,
-                    Path = type == ActionType.FileTask ? Paths.FixSeparators(path) : link,
-                    WorkingDir = Paths.FixSeparators(Path.Combine(ExpandableVariables.InstallationDirectory, (workingDir ?? string.Empty))),
+                    Path = type == ActionType.FileTask ? Path.Combine(installDirectory, Paths.FixSeparators(path)) : link,
+                    WorkingDir = workingDir,
                     Type = type == ActionType.FileTask ? GameActionType.File : GameActionType.URL
                 };
 
