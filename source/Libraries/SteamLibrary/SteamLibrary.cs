@@ -110,7 +110,8 @@ namespace SteamLibrary
                 GameId = gameId.ToString(),
                 Name = name.RemoveTrademarks(),
                 InstallDirectory = installDir,
-                IsInstalled = true
+                IsInstalled = true,
+                Platforms = new List<string> { "pc_windows" }
             };
 
             return game;
@@ -211,6 +212,7 @@ namespace SteamLibrary
                 Developers = new List<string>() { modInfo.Developer },
                 Links = modInfo.Links,
                 Tags = modInfo.Categories,
+                Platforms = new List<string> { "pc_windows" }
             };
 
             if (!modInfo.IconPath.IsNullOrEmpty() && File.Exists(modInfo.IconPath))
@@ -445,7 +447,8 @@ namespace SteamLibrary
                     Source = "Steam",
                     Name = game.name.RemoveTrademarks(),
                     GameId = game.appid.ToString(),
-                    Playtime = (ulong)(game.playtime_forever * 60)
+                    Playtime = (ulong)(game.playtime_forever * 60),
+                    Platforms = new List<string> { "pc_windows" }
                 };
 
                 if (lastActivity != null && lastActivity.TryGetValue(newGame.GameId, out var gameLastActivity))
@@ -619,7 +622,8 @@ namespace SteamLibrary
                     GameId = gameId,
                     Categories = new List<string>(appData),
                     Hidden = app["hidden"].AsInteger() == 1,
-                    Favorite = isFavorite
+                    Favorite = isFavorite,
+                    Platforms = new List<string> { "pc_windows" }
                 });
             }
 

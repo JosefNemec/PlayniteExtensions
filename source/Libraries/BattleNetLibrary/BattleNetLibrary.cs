@@ -85,7 +85,8 @@ namespace BattleNetLibrary
                             Source = "Battle.net",
                             Name = product.Name.RemoveTrademarks(),
                             InstallDirectory = prog.InstallLocation,
-                            IsInstalled = true
+                            IsInstalled = true,
+                            Platforms = new List<string> { "pc_windows" }
                         };
 
                         // Check in case there are more versions of single games installed.
@@ -126,7 +127,8 @@ namespace BattleNetLibrary
                         Source = "Battle.net",
                         Name = product.Name.RemoveTrademarks(),
                         InstallDirectory = prog.InstallLocation,
-                        IsInstalled = true
+                        IsInstalled = true,
+                        Platforms = new List<string> { "pc_windows" }
                     };
 
                     // Check in case there are more versions of single games installed.
@@ -170,7 +172,8 @@ namespace BattleNetLibrary
                             {
                                 Source = "Battle.net",
                                 GameId = gameInfo.ProductId,
-                                Name = gameInfo.Name.RemoveTrademarks()
+                                Name = gameInfo.Name.RemoveTrademarks(),
+                                Platforms = new List<string> { "pc_windows" }
                             });
                         }
                     }
@@ -188,7 +191,8 @@ namespace BattleNetLibrary
                         {
                             Source = "Battle.net",
                             GameId = w3.ProductId,
-                            Name = w3.Name
+                            Name = w3.Name,
+                            Platforms = new List<string> { "pc_windows" }
                         });
 
                         if (w3Games.Count() == 2)
@@ -198,7 +202,8 @@ namespace BattleNetLibrary
                             {
                                 Source = "Battle.net",
                                 GameId = w3x.ProductId,
-                                Name = w3x.Name
+                                Name = w3x.Name,
+                                Platforms = new List<string> { "pc_windows" }
                             });
                         }
                     }
@@ -212,7 +217,8 @@ namespace BattleNetLibrary
                         {
                             Source = "Battle.net",
                             GameId = d2.ProductId,
-                            Name = d2.Name
+                            Name = d2.Name,
+                            Platforms = new List<string> { "pc_windows" }
                         });
 
                         if (d2Games.Count() == 2)
@@ -222,7 +228,8 @@ namespace BattleNetLibrary
                             {
                                 Source = "Battle.net",
                                 GameId = d2x.ProductId,
-                                Name = d2x.Name
+                                Name = d2x.Name,
+                                Platforms = new List<string> { "pc_windows" }
                             });
                         }
                     }

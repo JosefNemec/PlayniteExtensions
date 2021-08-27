@@ -133,7 +133,8 @@ namespace AmazonGamesLibrary
                         GameId = gameId,
                         Source = "Amazon",
                         Name = program.DisplayName.RemoveTrademarks(),
-                        IsInstalled = true
+                        IsInstalled = true,
+                        Platforms = new List<string> { "pc_windows" }
                     };
 
                     games.Add(game.GameId, game);
@@ -159,7 +160,8 @@ namespace AmazonGamesLibrary
                 {
                     Source = "Amazon",
                     GameId = item.product.id,
-                    Name = item.product.title.RemoveTrademarks()
+                    Name = item.product.title.RemoveTrademarks(),
+                    Platforms = new List<string> { "pc_windows" }
                 };
 
                 games.Add(game);

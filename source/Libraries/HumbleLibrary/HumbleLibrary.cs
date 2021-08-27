@@ -67,7 +67,8 @@ namespace HumbleLibrary
                                 Description = troveGame.description_text,
                                 Publishers = troveGame.publishers?.Select(a => a.publisher_name).ToList(),
                                 Developers = troveGame.developers?.Select(a => a.developer_name).ToList(),
-                                Source = "Humble"
+                                Source = "Humble",
+                                Platforms = new List<string> { "pc_windows" }
                             };
 
                             games.Add(game);

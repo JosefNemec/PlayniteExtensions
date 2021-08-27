@@ -71,7 +71,8 @@ namespace UplayLibrary
                     BackgroundImage = item.root.background_image.IsNullOrEmpty() ? null : new MetadataFile(item.root.background_image),
                     Icon = item.root.icon_image.IsNullOrEmpty() ? null : new MetadataFile(item.root.icon_image),
                     CoverImage = item.root.thumb_image.IsNullOrEmpty() ? null : new MetadataFile(item.root.thumb_image),
-                    Source = "Ubisoft Connect"
+                    Source = "Ubisoft Connect",
+                    Platforms = new List<string> { "pc_windows" }
                 };
 
                 games.Add(newGame);
@@ -106,7 +107,8 @@ namespace UplayLibrary
                             Source = "Ubisoft Connect",
                             InstallDirectory = installDir,
                             Name = Path.GetFileName(installDir.TrimEnd(Path.DirectorySeparatorChar)),
-                            IsInstalled = true
+                            IsInstalled = true,
+                            Platforms = new List<string> { "pc_windows" }
                         };
 
                         games.Add(newGame);

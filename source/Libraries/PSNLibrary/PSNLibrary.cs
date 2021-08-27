@@ -19,11 +19,6 @@ namespace PSNLibrary
     [LoadPlugin]
     public class PSNLibrary : LibraryPluginBase<PSNLibrarySettingsViewModel>
     {
-        private const string ps4PlatformName = "Sony PlayStation 4";
-        private const string ps3PlatformName = "Sony PlayStation 3";
-        private const string psvitaPlatformName = "Sony PlayStation Vita";
-        private const string pspPlatformName = "Sony PSP";
-
         public PSNLibrary(IPlayniteAPI api) : base(
             "PlayStation",
             Guid.Parse("e4ac81cb-1b1a-4ec9-8639-9a9633989a71"),
@@ -36,19 +31,19 @@ namespace PSNLibrary
             SettingsViewModel = new PSNLibrarySettingsViewModel(this, api);
         }
 
-        private string ParseOldPlatform(PlatformHash ids)
+        private List<string> ParseOldPlatform(PlatformHash ids)
         {
             if (ids.HasFlag(PlatformHash.PS3))
             {
-                return ps3PlatformName;
+                return new List<string> { "sony_playstation3" };
             }
             else if (ids.HasFlag(PlatformHash.PSVITA))
             {
-                return psvitaPlatformName;
+                return new List<string> { "sony_vita" };
             }
             else if (ids.HasFlag(PlatformHash.PSP))
             {
-                return pspPlatformName;
+                return new List<string> { "sony_psp" };
             }
 
             return null;
@@ -95,23 +90,23 @@ namespace PSNLibrary
                     GameId = "#TROPHY#" + title.npCommunicationId,
                     Name = gameName
                 };
-                // TODO
-                //if (title.trophyTitlePlatfrom?.Contains("PS4") == true)
-                //{
-                //    newGame.Platform = ps4PlatformName;
-                //}
-                //else if (title.trophyTitlePlatfrom?.Contains("PS3") == true)
-                //{
-                //    newGame.Platform = ps3PlatformName;
-                //}
-                //else if (title.trophyTitlePlatfrom?.Contains("PSVITA") == true)
-                //{
-                //    newGame.Platform = psvitaPlatformName;
-                //}
-                //else if (title.trophyTitlePlatfrom?.Contains("PSP") == true)
-                //{
-                //    newGame.Platform = pspPlatformName;
-                //}
+
+                if (title.trophyTitlePlatfrom?.Contains("PS4") == true)
+                {
+                    newGame.Platforms = new List<string> { "sony_playstation4" };
+                }
+                else if (title.trophyTitlePlatfrom?.Contains("PS3") == true)
+                {
+                    newGame.Platforms = new List<string> { "sony_playstation3" };
+                }
+                else if (title.trophyTitlePlatfrom?.Contains("PSVITA") == true)
+                {
+                    newGame.Platforms = new List<string> { "sony_vita" };
+                }
+                else if (title.trophyTitlePlatfrom?.Contains("PSP") == true)
+                {
+                    newGame.Platforms = new List<string> { "sony_psp" };
+                }
 
                 parsedGames.Add(newGame);
             }
@@ -144,14 +139,14 @@ namespace PSNLibrary
                 if (item.entitlement_attributes != null) // PS4
                 {
                     newGame.Name = item.game_meta.name;
-                    //newGame.Platform = ps4PlatformName;
+                    newGame.Platforms = new List<string> { "sony_playstation4" };
                 }
                 else if (item.drm_def != null) //PS3, PSP, or Vita
                 {
                     newGame.Name = item.drm_def.contentName;
                     if (item.drm_def.drmContents.HasItems())
                     {
-                        //newGame.Platform = ParseOldPlatform(item.drm_def.drmContents[0].platformIds);
+                        newGame.Platforms = ParseOldPlatform(item.drm_def.drmContents[0].platformIds);
                     }
                 }
                 else

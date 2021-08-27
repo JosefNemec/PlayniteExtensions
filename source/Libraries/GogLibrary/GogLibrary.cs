@@ -186,7 +186,7 @@ namespace GogLibrary
                     Source = "GOG",
                     Name = program.DisplayName.RemoveTrademarks(),
                     IsInstalled = true,
-                    Platforms = new List<string> { "PC" }
+                    Platforms = new List<string> { "pc_windows" }
                 };
 
                 games.Add(game.GameId, game);
@@ -270,7 +270,7 @@ namespace GogLibrary
                     {
                         new Link("Store", @"https://www.gog.com" + game.game.url)
                     },
-                    Platforms = new List<string> { "PC" }
+                    Platforms = new List<string> { "pc_windows" }
                 };
 
                 // This is a hack for inconsistent data model on GOG's side.

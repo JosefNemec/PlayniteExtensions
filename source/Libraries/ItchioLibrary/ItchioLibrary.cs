@@ -116,7 +116,8 @@ namespace ItchioLibrary
                         Name = cave.game.title.RemoveTrademarks(),
                         InstallDirectory = installDir,
                         IsInstalled = true,
-                        CoverImage = cave.game.coverUrl.IsNullOrEmpty() ? null : new Playnite.SDK.Metadata.MetadataFile(cave.game.coverUrl)
+                        CoverImage = cave.game.coverUrl.IsNullOrEmpty() ? null : new Playnite.SDK.Metadata.MetadataFile(cave.game.coverUrl),
+                        Platforms = new List<string> { "pc_windows" }
                     };
 
                     //if (TryGetGameActions(installDir, out var play, out var others))
@@ -173,7 +174,8 @@ namespace ItchioLibrary
                             Source = "itch.io",
                             GameId = key.game.id.ToString(),
                             Name = key.game.title.RemoveTrademarks(),
-                            CoverImage = key.game.coverUrl.IsNullOrEmpty() ? null : new Playnite.SDK.Metadata.MetadataFile(key.game.coverUrl)
+                            CoverImage = key.game.coverUrl.IsNullOrEmpty() ? null : new Playnite.SDK.Metadata.MetadataFile(key.game.coverUrl),
+                            Platforms = new List<string> { "pc_windows" }
                         };
 
                         games.Add(game);

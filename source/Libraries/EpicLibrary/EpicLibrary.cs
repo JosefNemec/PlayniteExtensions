@@ -66,7 +66,8 @@ namespace EpicLibrary
                     GameId = app.AppName,
                     Name = manifest?.DisplayName ?? Path.GetFileName(app.InstallLocation),
                     InstallDirectory = manifest?.InstallLocation ?? app.InstallLocation,
-                    IsInstalled = true
+                    IsInstalled = true,
+                    Platforms = new List<string> { "pc_windows" }
                 };
 
                 game.Name = game.Name.RemoveTrademarks();
@@ -107,7 +108,8 @@ namespace EpicLibrary
                 {
                     Source = "Epic",
                     GameId = gameAsset.appName,
-                    Name = catalogItem.title.RemoveTrademarks()
+                    Name = catalogItem.title.RemoveTrademarks(),
+                    Platforms = new List<string> { "pc_windows" }
                 };
 
                 var playtimeItem = playtimeItems?.FirstOrDefault(x => x.artifactId == gameAsset.appName);

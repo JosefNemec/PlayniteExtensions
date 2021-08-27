@@ -56,7 +56,8 @@ namespace RockstarGamesLibrary
                         InstallDirectory = app.InstallLocation,
                         Source = "Rockstar Games",
                         Name = rsGame.Name,
-                        GameId = titleId
+                        GameId = titleId,
+                        Platforms = new List<string> { "pc_windows" }
                     };
 
                     if (!string.IsNullOrEmpty(app.DisplayIcon))
