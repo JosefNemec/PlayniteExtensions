@@ -31,12 +31,8 @@
                       Content="{DynamicResource LOCSettingsImportUninstalledLabel}"/>
 
             <CheckBox Margin="0,15,0,0"
-                      IsChecked="{Binding Settings.Import360Games}"
-                      Content="{DynamicResource LOCXboxImport360Games}"/>
-
-            <CheckBox Margin="0,15,0,0"
-                      IsChecked="{Binding Settings.ImportXboneGames}"
-                      Content="{DynamicResource LOCXboxImportXboneGames}"/>
+                      IsChecked="{Binding Settings.ImportConsoleGames}"
+                      Content="{DynamicResource LOCXboxImportConsoleGames}"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,15,0,10">
                 <Button Content="{DynamicResource LOCAuthenticateLabel}" HorizontalAlignment="Left"                         

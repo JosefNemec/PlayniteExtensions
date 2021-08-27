@@ -15,8 +15,7 @@ namespace XboxLibrary
         public bool ImportInstalledGames { get; set; } = true;
         public bool ImportUninstalledGames { get; set; } = false;
         public bool XboxAppClientPriorityLaunch { get; set; } = false;
-        public bool Import360Games { get; set; } = false;
-        public bool ImportXboneGames { get; set; } = false;
+        public bool ImportConsoleGames { get; set; } = false;
     }
 
     public class XboxLibrarySettingsViewModel : PluginSettingsViewModel<XboxLibrarySettings, XboxLibrary>

@@ -216,12 +216,17 @@ namespace XboxLibrary
                         {
                             var addGame = false;
                             var platforms = new List<string>();
-                            if (SettingsViewModel.Settings.Import360Games && title.devices.Contains("Xbox360"))
+                            if (SettingsViewModel.Settings.ImportConsoleGames && title.devices.Contains("Xbox360"))
                             {
                                 addGame = true;
                                 platforms = new List<string> { "xbox360" };
                             }
-                            else if (SettingsViewModel.Settings.ImportXboneGames && title.devices.Contains("XboxOne"))
+                            else if (SettingsViewModel.Settings.ImportConsoleGames && title.devices.Contains("XboxSeries"))
+                            {
+                                addGame = true;
+                                platforms = new List<string> { "xbox_series" };
+                            }
+                            else if (SettingsViewModel.Settings.ImportConsoleGames && title.devices.Contains("XboxOne"))
                             {
                                 addGame = true;
                                 platforms = new List<string> { "xbox_one" };
