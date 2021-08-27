@@ -84,8 +84,8 @@ namespace UplayLibrary
                 return false;
             }
 
-            var fileEnumerator = new SafeFileEnumerator(game.InstallDirectory, "uplay_*_loader*", SearchOption.AllDirectories);
-            return fileEnumerator.Any() == true;
+            return new SafeFileEnumerator(game.InstallDirectory, "uplay_*_loader*", SearchOption.AllDirectories).Any() ||
+                   new SafeFileEnumerator(game.InstallDirectory, "upc_*_loader*", SearchOption.AllDirectories).Any();
         }
 
         public static string GetLaunchString(string gameId)

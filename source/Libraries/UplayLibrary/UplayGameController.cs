@@ -129,13 +129,12 @@ namespace UplayLibrary
             Dispose();
             if (Directory.Exists(Game.InstallDirectory))
             {
-                var requiresUplay = Uplay.GetGameRequiresUplay(Game);
                 stopWatch = Stopwatch.StartNew();
                 procMon = new ProcessMonitor();
                 procMon.TreeStarted += ProcMon_TreeStarted;
                 procMon.TreeDestroyed += Monitor_TreeDestroyed;
                 ProcessStarter.StartUrl(Uplay.GetLaunchString(Game.GameId));
-                StartRunningWatcher(requiresUplay);
+                StartRunningWatcher(Uplay.GetGameRequiresUplay(Game));
             }
             else
             {
