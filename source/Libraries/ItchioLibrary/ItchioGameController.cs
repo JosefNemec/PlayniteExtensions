@@ -44,31 +44,34 @@ namespace ItchioLibrary
         public async void StartInstallWatcher()
         {
             watcherToken = new CancellationTokenSource();
-            using (var butler = new Butler())
+            await Task.Run(async () =>
             {
-                while (true)
+                using (var butler = new Butler())
                 {
-                    if (watcherToken.IsCancellationRequested)
+                    while (true)
                     {
-                        return;
-                    }
-
-                    var installed = butler.GetCaves();
-                    var cave = installed?.FirstOrDefault(a => a.game.id.ToString() == Game.GameId);
-                    if (cave != null)
-                    {
-                        var installInfo = new GameInstallationData
+                        if (watcherToken.IsCancellationRequested)
                         {
-                            InstallDirectory = cave.installInfo.installFolder
-                        };
+                            return;
+                        }
 
-                        InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
-                        return;
+                        var installed = butler.GetCaves();
+                        var cave = installed?.FirstOrDefault(a => a.game.id.ToString() == Game.GameId);
+                        if (cave != null)
+                        {
+                            var installInfo = new GameInstallationData
+                            {
+                                InstallDirectory = cave.installInfo.installFolder
+                            };
+
+                            InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
+                            return;
+                        }
+
+                        await Task.Delay(10000);
                     }
-
-                    await Task.Delay(10000);
                 }
-            }
+            });
         }
     }
 

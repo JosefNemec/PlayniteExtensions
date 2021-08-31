@@ -54,30 +54,33 @@ namespace BattleNetLibrary
         {
             watcherToken = new CancellationTokenSource();
             var app = BattleNetGames.GetAppDefinition(Game.GameId);
-            while (true)
+            await Task.Run(async () =>
             {
-                if (watcherToken.IsCancellationRequested)
+                while (true)
                 {
-                    return;
-                }
-
-                var install = BattleNetLibrary.GetUninstallEntry(app);
-                if (install == null)
-                {
-                    await Task.Delay(10000);
-                    continue;
-                }
-                else
-                {
-                    var installInfo = new GameInstallationData()
+                    if (watcherToken.IsCancellationRequested)
                     {
-                        InstallDirectory = install.InstallLocation
-                    };
+                        return;
+                    }
 
-                    InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
-                    return;
+                    var install = BattleNetLibrary.GetUninstallEntry(app);
+                    if (install == null)
+                    {
+                        await Task.Delay(10000);
+                        continue;
+                    }
+                    else
+                    {
+                        var installInfo = new GameInstallationData()
+                        {
+                            InstallDirectory = install.InstallLocation
+                        };
+
+                        InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
+                        return;
+                    }
                 }
-            }
+            });
         }
     }
 

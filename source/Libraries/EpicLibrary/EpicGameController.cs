@@ -43,29 +43,31 @@ namespace EpicLibrary
         public async void StartInstallWatcher()
         {
             watcherToken = new CancellationTokenSource();
-
-            while (true)
+            await Task.Run(async () =>
             {
-                if (watcherToken.IsCancellationRequested)
+                while (true)
                 {
-                    return;
-                }
-
-                var installed = EpicLauncher.GetInstalledAppList();
-                var app = installed?.FirstOrDefault(a => a.AppName == Game.GameId);
-                if (app != null)
-                {
-                    var installInfo = new GameInstallationData
+                    if (watcherToken.IsCancellationRequested)
                     {
-                        InstallDirectory = app.InstallLocation
+                        return;
+                    }
+
+                    var installed = EpicLauncher.GetInstalledAppList();
+                    var app = installed?.FirstOrDefault(a => a.AppName == Game.GameId);
+                    if (app != null)
+                    {
+                        var installInfo = new GameInstallationData
+                        {
+                            InstallDirectory = app.InstallLocation
+                        };
+
+                        InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
+                        return;
                     };
 
-                    InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
-                    return;
-                };
-
-                await Task.Delay(10000);
-            }
+                    await Task.Delay(10000);
+                }
+            });
         }
     }
 

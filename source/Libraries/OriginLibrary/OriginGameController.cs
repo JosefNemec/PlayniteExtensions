@@ -50,31 +50,33 @@ namespace OriginLibrary
             }
 
             var platform = manifest.publishing.softwareList.software.FirstOrDefault(a => a.softwarePlatform == "PCWIN");
-
-            while (true)
+            await Task.Run(async () =>
             {
-                if (watcherToken.IsCancellationRequested)
+                while (true)
                 {
-                    return;
-                }
-
-                var executablePath = origin.GetPathFromPlatformPath(platform.fulfillmentAttributes.installCheckOverride);
-                if (!executablePath?.CompletePath.IsNullOrEmpty() != null)
-                {
-                    if (File.Exists(executablePath.CompletePath))
+                    if (watcherToken.IsCancellationRequested)
                     {
-                        var installInfo = new GameInstallationData
-                        {
-                            InstallDirectory = origin.GetInstallDirectory(manifest)
-                        };
-
-                        InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
                         return;
                     }
-                }
 
-                await Task.Delay(2000);
-            }
+                    var executablePath = origin.GetPathFromPlatformPath(platform.fulfillmentAttributes.installCheckOverride);
+                    if (!executablePath?.CompletePath.IsNullOrEmpty() != null)
+                    {
+                        if (File.Exists(executablePath.CompletePath))
+                        {
+                            var installInfo = new GameInstallationData
+                            {
+                                InstallDirectory = origin.GetInstallDirectory(manifest)
+                            };
+
+                            InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
+                            return;
+                        }
+                    }
+
+                    await Task.Delay(10000);
+                }
+            });
         }
     }
 

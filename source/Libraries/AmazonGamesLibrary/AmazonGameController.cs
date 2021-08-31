@@ -46,27 +46,29 @@ namespace AmazonGamesLibrary
         public async void StartInstallWatcher()
         {
             watcherToken = new CancellationTokenSource();
-
-            while (true)
+            await Task.Run(async () =>
             {
-                if (watcherToken.IsCancellationRequested)
+                while (true)
                 {
-                    return;
-                }
-                var program = AmazonGames.GetUninstallRecord(Game.GameId);
-                if (program != null)
-                {
-                    var installInfo = new GameInstallationData()
+                    if (watcherToken.IsCancellationRequested)
                     {
-                        InstallDirectory = Paths.FixSeparators(program.InstallLocation)
-                    };
+                        return;
+                    }
+                    var program = AmazonGames.GetUninstallRecord(Game.GameId);
+                    if (program != null)
+                    {
+                        var installInfo = new GameInstallationData()
+                        {
+                            InstallDirectory = Paths.FixSeparators(program.InstallLocation)
+                        };
 
-                    InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
-                    return;
+                        InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
+                        return;
+                    }
+
+                    await Task.Delay(10000);
                 }
-
-                await Task.Delay(2000);
-            }
+            });
         }
     }
 

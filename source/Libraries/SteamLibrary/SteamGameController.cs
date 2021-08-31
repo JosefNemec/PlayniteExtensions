@@ -47,28 +47,30 @@ namespace SteamLibrary
         {
             watcherToken = new CancellationTokenSource();
             var id = Game.ToSteamGameID();
-
-            while (true)
+            await Task.Run(async () =>
             {
-                if (watcherToken.IsCancellationRequested)
+                while (true)
                 {
-                    return;
-                }
-
-                var installed = SteamLibrary.GetInstalledGames(false);
-                if (installed.TryGetValue(id, out var installedGame))
-                {
-                    var installInfo = new GameInstallationData
+                    if (watcherToken.IsCancellationRequested)
                     {
-                        InstallDirectory = installedGame.InstallDirectory
-                    };
+                        return;
+                    }
 
-                    InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
-                    return;
+                    var installed = SteamLibrary.GetInstalledGames(false);
+                    if (installed.TryGetValue(id, out var installedGame))
+                    {
+                        var installInfo = new GameInstallationData
+                        {
+                            InstallDirectory = installedGame.InstallDirectory
+                        };
+
+                        InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
+                        return;
+                    }
+
+                    await Task.Delay(10000);
                 }
-
-                await Task.Delay(10000);
-            }
+            });
         }
     }
 

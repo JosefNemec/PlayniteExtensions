@@ -53,28 +53,31 @@ namespace GogLibrary
         public async void StartInstallWatcher()
         {
             watcherToken = new CancellationTokenSource();
-            while (true)
+            await Task.Run(async () =>
             {
-                if (watcherToken.IsCancellationRequested)
+                while (true)
                 {
-                    return;
-                }
-
-                var games = GogLibrary.GetInstalledGames();
-                if (games.ContainsKey(Game.GameId))
-                {
-                    var game = games[Game.GameId];
-                    var installInfo = new GameInstallationData()
+                    if (watcherToken.IsCancellationRequested)
                     {
-                        InstallDirectory = game.InstallDirectory
-                    };
+                        return;
+                    }
 
-                    InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
-                    return;
+                    var games = GogLibrary.GetInstalledGames();
+                    if (games.ContainsKey(Game.GameId))
+                    {
+                        var game = games[Game.GameId];
+                        var installInfo = new GameInstallationData()
+                        {
+                            InstallDirectory = game.InstallDirectory
+                        };
+
+                        InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
+                        return;
+                    }
+
+                    await Task.Delay(10000);
                 }
-
-                await Task.Delay(2000);
-            }
+            });
         }
     }
 

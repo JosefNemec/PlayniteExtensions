@@ -38,28 +38,30 @@ namespace XboxLibrary
         public async void StartInstallWatcher()
         {
             watcherToken = new CancellationTokenSource();
-
-            while (true)
+            await Task.Run(async () =>
             {
-                if (watcherToken.IsCancellationRequested)
+                while (true)
                 {
-                    return;
-                }
-
-                var app = Programs.GetUWPApps().FirstOrDefault(a => a.AppId == Game.GameId);
-                if (app != null)
-                {
-                    var installInfo = new GameInstallationData
+                    if (watcherToken.IsCancellationRequested)
                     {
-                        InstallDirectory = app.WorkDir
+                        return;
+                    }
+
+                    var app = Programs.GetUWPApps().FirstOrDefault(a => a.AppId == Game.GameId);
+                    if (app != null)
+                    {
+                        var installInfo = new GameInstallationData
+                        {
+                            InstallDirectory = app.WorkDir
+                        };
+
+                        InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
+                        return;
                     };
 
-                    InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
-                    return;
-                };
-
-                await Task.Delay(10000);
-            }
+                    await Task.Delay(10000);
+                }
+            });
         }
     }
 

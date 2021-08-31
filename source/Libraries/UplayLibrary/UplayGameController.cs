@@ -38,28 +38,30 @@ namespace UplayLibrary
         public async void StartInstallWatcher()
         {
             watcherToken = new CancellationTokenSource();
-
-            while (true)
+            await Task.Run(async () =>
             {
-                if (watcherToken.IsCancellationRequested)
+                while (true)
                 {
-                    return;
-                }
-
-                var installedGame = UplayLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
-                if (installedGame != null)
-                {
-                    var installInfo = new GameInstallationData
+                    if (watcherToken.IsCancellationRequested)
                     {
-                        InstallDirectory = installedGame.InstallDirectory
-                    };
+                        return;
+                    }
 
-                    InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
-                    return;
+                    var installedGame = UplayLibrary.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
+                    if (installedGame != null)
+                    {
+                        var installInfo = new GameInstallationData
+                        {
+                            InstallDirectory = installedGame.InstallDirectory
+                        };
+
+                        InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
+                        return;
+                    }
+
+                    await Task.Delay(10000);
                 }
-
-                await Task.Delay(2000);
-            }
+            });
         }
     }
 
