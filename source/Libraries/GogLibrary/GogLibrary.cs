@@ -161,9 +161,9 @@ namespace GogLibrary
             return otherTasks;
         }
 
-        internal static Dictionary<string, GameInfo> GetInstalledEntries()
+        internal static Dictionary<string, GameMetadata> GetInstalledEntries()
         {
-            var games = new Dictionary<string, GameInfo>();
+            var games = new Dictionary<string, GameMetadata>();
             var programs = Programs.GetUnistallProgramsList();
             foreach (var program in programs)
             {
@@ -179,14 +179,14 @@ namespace GogLibrary
                 }
 
                 var gameId = match.Groups[1].Value;
-                var game = new GameInfo()
+                var game = new GameMetadata()
                 {
                     InstallDirectory = Paths.FixSeparators(program.InstallLocation),
                     GameId = gameId,
-                    Source = "GOG",
+                    Source = new MetadataNameProperty("GOG"),
                     Name = program.DisplayName.RemoveTrademarks(),
                     IsInstalled = true,
-                    Platforms = new List<string> { "pc_windows" }
+                    Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
                 games.Add(game.GameId, game);
@@ -195,9 +195,9 @@ namespace GogLibrary
             return games;
         }
 
-        internal static Dictionary<string, GameInfo> GetInstalledGames()
+        internal static Dictionary<string, GameMetadata> GetInstalledGames()
         {
-            var games = new Dictionary<string, GameInfo>();
+            var games = new Dictionary<string, GameMetadata>();
             foreach (var entry in GetInstalledEntries())
             {
                 var game = entry.Value;
@@ -213,7 +213,7 @@ namespace GogLibrary
             return games;
         }
 
-        internal List<GameInfo> GetLibraryGames()
+        internal List<GameMetadata> GetLibraryGames()
         {
             using (var view = PlayniteApi.WebViews.CreateOffscreenView())
             {
@@ -244,10 +244,10 @@ namespace GogLibrary
             }
         }
 
-        internal List<GameInfo> GetLibraryGames(string accountName)
+        internal List<GameMetadata> GetLibraryGames(string accountName)
         {
             var api = new GogAccountClient(null);
-            var games = new List<GameInfo>();
+            var games = new List<GameMetadata>();
             var libGames = api.GetOwnedGamesFromPublicAccount(accountName);
             if (libGames == null)
             {
@@ -257,20 +257,20 @@ namespace GogLibrary
             return LibraryGamesToGames(libGames).ToList();
         }
 
-        internal IEnumerable<GameInfo> LibraryGamesToGames(List<LibraryGameResponse> libGames)
+        internal IEnumerable<GameMetadata> LibraryGamesToGames(List<LibraryGameResponse> libGames)
         {
             foreach (var game in libGames)
             {
-                var newGame = new GameInfo()
+                var newGame = new GameMetadata()
                 {
-                    Source = "GOG",
+                    Source = new MetadataNameProperty("GOG"),
                     GameId = game.game.id,
                     Name = game.game.title.RemoveTrademarks(),
                     Links = new List<Link>()
                     {
                         new Link("Store", @"https://www.gog.com" + game.game.url)
                     },
-                    Platforms = new List<string> { "pc_windows" }
+                    Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
                 // This is a hack for inconsistent data model on GOG's side.
@@ -292,10 +292,10 @@ namespace GogLibrary
             }
         }
 
-        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
+        public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
         {
-            var allGames = new List<GameInfo>();
-            var installedGames = new Dictionary<string, GameInfo>();
+            var allGames = new List<GameMetadata>();
+            var installedGames = new Dictionary<string, GameMetadata>();
             Exception importError = null;
 
             if (SettingsViewModel.Settings.ImportInstalledGames)

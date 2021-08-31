@@ -2,7 +2,6 @@
 using Playnite.Common;
 using Playnite.Common.Web;
 using Playnite.SDK;
-using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 using System;
@@ -171,21 +170,21 @@ namespace IGDBMetadata
             return base.GetDescription(args);
         }
 
-        public override List<string> GetDevelopers(GetMetadataFieldArgs args)
+        public override IEnumerable<MetadataProperty> GetDevelopers(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.Developers))
             {
-                return IgdbData.involved_companies?.Where(a => a.developer).Select(a => a.company.name).ToList();
+                return IgdbData.involved_companies?.Where(a => a.developer).Select(a => new MetadataNameProperty(a.company.name)).ToList();
             }
 
             return base.GetDevelopers(args);
         }
 
-        public override List<string> GetGenres(GetMetadataFieldArgs args)
+        public override IEnumerable<MetadataProperty> GetGenres(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.Genres))
             {
-                return IgdbData.genres?.Select(a => a.name).ToList();
+                return IgdbData.genres?.Select(a => new MetadataNameProperty(a.name)).ToList();
             }
 
             return base.GetGenres(args);
@@ -201,31 +200,31 @@ namespace IGDBMetadata
             return base.GetName(args);
         }
 
-        public override List<string> GetPublishers(GetMetadataFieldArgs args)
+        public override IEnumerable<MetadataProperty> GetPublishers(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.Publishers))
             {
-                return IgdbData.involved_companies?.Where(a => a.publisher).Select(a => a.company.name).ToList();
+                return IgdbData.involved_companies?.Where(a => a.publisher).Select(a => new MetadataNameProperty(a.company.name)).ToList();
             }
 
             return base.GetPublishers(args);
         }
 
-        public override List<string> GetAgeRatings(GetMetadataFieldArgs args)
+        public override IEnumerable<MetadataProperty> GetAgeRatings(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.AgeRating))
             {
-                return IgdbData.age_ratings.Select(a => a.category + " " + a.rating.GetDescription()).ToList();
+                return IgdbData.age_ratings.Select(a => new MetadataNameProperty(a.category + " " + a.rating.GetDescription())).ToList();
             }
 
             return base.GetAgeRatings(args);
         }
 
-        public override List<string> GetSeries(GetMetadataFieldArgs args)
+        public override IEnumerable<MetadataProperty> GetSeries(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.Series))
             {
-                return new List<string> { IgdbData.collection.name };
+                return new List<MetadataProperty> { new MetadataNameProperty(IgdbData.collection.name) };
             }
 
             return base.GetSeries(args);
@@ -241,16 +240,16 @@ namespace IGDBMetadata
             return base.GetReleaseDate(args);
         }
 
-        public override List<string> GetFeatures(GetMetadataFieldArgs args)
+        public override IEnumerable<MetadataProperty> GetFeatures(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.Features))
             {
                 var cultInfo = new CultureInfo("en-US", false).TextInfo;
-                var features = IgdbData.game_modes.Select(a => cultInfo.ToTitleCase(a.name)).ToList();
+                var features = IgdbData.game_modes.Select(a => new MetadataNameProperty(cultInfo.ToTitleCase(a.name))).ToList();
                 if (IgdbData.player_perspectives.HasItems() &&
                     IgdbData.player_perspectives.FirstOrDefault(a => a.name == "Virtual Reality") != null)
                 {
-                    features.Add("VR");
+                    features.Add(new MetadataNameProperty("VR"));
                 }
 
                 return features;
@@ -258,7 +257,7 @@ namespace IGDBMetadata
             return base.GetFeatures(args);
         }
 
-        public override List<Link> GetLinks(GetMetadataFieldArgs args)
+        public override IEnumerable<Link> GetLinks(GetMetadataFieldArgs args)
         {
             if (AvailableFields.Contains(MetadataField.Links))
             {

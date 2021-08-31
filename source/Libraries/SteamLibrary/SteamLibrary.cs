@@ -75,7 +75,7 @@ namespace SteamLibrary
             };
         }
 
-        internal static GameInfo GetInstalledGameFromFile(string path)
+        internal static GameMetadata GetInstalledGameFromFile(string path)
         {
             var kv = new KeyValue();
             kv.ReadFileAsText(path);
@@ -104,22 +104,22 @@ namespace SteamLibrary
                 }
             }
 
-            var game = new GameInfo()
+            var game = new GameMetadata()
             {
-                Source = "Steam",
+                Source = new MetadataNameProperty("Steam"),
                 GameId = gameId.ToString(),
                 Name = name.RemoveTrademarks(),
                 InstallDirectory = installDir,
                 IsInstalled = true,
-                Platforms = new List<string> { "pc_windows" }
+                Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
             };
 
             return game;
         }
 
-        internal static List<GameInfo> GetInstalledGamesFromFolder(string path)
+        internal static List<GameMetadata> GetInstalledGamesFromFolder(string path)
         {
-            var games = new List<GameInfo>();
+            var games = new List<GameMetadata>();
 
             foreach (var file in Directory.GetFiles(path, @"appmanifest*"))
             {
@@ -144,9 +144,9 @@ namespace SteamLibrary
             return games;
         }
 
-        internal static List<GameInfo> GetInstalledGoldSrcModsFromFolder(string path)
+        internal static List<GameMetadata> GetInstalledGoldSrcModsFromFolder(string path)
         {
-            var games = new List<GameInfo>();
+            var games = new List<GameMetadata>();
             var firstPartyMods = new string[] { "bshift", "cstrike", "czero", "czeror", "dmc", "dod", "gearbox", "ricochet", "tfc", "valve" };
             var dirInfo = new DirectoryInfo(path);
 
@@ -162,7 +162,7 @@ namespace SteamLibrary
                 }
                 catch (Exception exc)
                 {
-                    // gameinfo.txt may not exist or may be invalid
+                    // GameMetadata.txt may not exist or may be invalid
                     logger.Error(exc, $"Failed to get information about installed GoldSrc mod from: {path}");
                 }
             }
@@ -170,9 +170,9 @@ namespace SteamLibrary
             return games;
         }
 
-        internal static List<GameInfo> GetInstalledSourceModsFromFolder(string path)
+        internal static List<GameMetadata> GetInstalledSourceModsFromFolder(string path)
         {
-            var games = new List<GameInfo>();
+            var games = new List<GameMetadata>();
 
             foreach (var folder in Directory.GetDirectories(path))
             {
@@ -186,7 +186,7 @@ namespace SteamLibrary
                 }
                 catch (Exception exc)
                 {
-                    // gameinfo.txt may not exist or may be invalid
+                    // GameMetadata.txt may not exist or may be invalid
                     logger.Error(exc, $"Failed to get information about installed Source mod from: {path}");
                 }
             }
@@ -194,7 +194,7 @@ namespace SteamLibrary
             return games;
         }
 
-        internal static GameInfo GetInstalledModFromFolder(string path, ModInfo.ModType modType)
+        internal static GameMetadata GetInstalledModFromFolder(string path, ModInfo.ModType modType)
         {
             var modInfo = ModInfo.GetFromFolder(path, modType);
             if (modInfo == null)
@@ -202,33 +202,33 @@ namespace SteamLibrary
                 return null;
             }
 
-            var game = new GameInfo()
+            var game = new GameMetadata()
             {
-                Source = "Steam",
+                Source = new MetadataNameProperty("Steam"),
                 GameId = modInfo.GameId.ToString(),
                 Name = modInfo.Name.RemoveTrademarks(),
                 InstallDirectory = path,
                 IsInstalled = true,
-                Developers = new List<string>() { modInfo.Developer },
+                Developers = new List<MetadataProperty>() { new MetadataNameProperty(modInfo.Developer) },
                 Links = modInfo.Links,
-                Tags = modInfo.Categories,
-                Platforms = new List<string> { "pc_windows" }
+                Tags = modInfo.Categories?.Select(a => new MetadataNameProperty(a)).ToList(),
+                Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
             };
 
             if (!modInfo.IconPath.IsNullOrEmpty() && File.Exists(modInfo.IconPath))
             {
-                game.Icon = new Playnite.SDK.Metadata.MetadataFile(modInfo.IconPath);
+                game.Icon = new MetadataFile(modInfo.IconPath);
             }
 
             return game;
         }
 
-        internal static Dictionary<string, GameInfo> GetInstalledGames(bool includeMods = true)
+        internal static Dictionary<string, GameMetadata> GetInstalledGames(bool includeMods = true)
         {
-            var games = new Dictionary<string, GameInfo>();
+            var games = new Dictionary<string, GameMetadata>();
             if (!Steam.IsInstalled)
             {
-                return games;
+                throw new Exception("Steam installation not found.");
             }
 
             foreach (var folder in GetLibraryFolders())
@@ -386,7 +386,7 @@ namespace SteamLibrary
             return users;
         }
 
-        internal List<GameInfo> GetLibraryGames(SteamLibrarySettings settings)
+        internal List<GameMetadata> GetLibraryGames(SteamLibrarySettings settings)
         {
             if (settings.UserId.IsNullOrEmpty())
             {
@@ -416,7 +416,7 @@ namespace SteamLibrary
             return Serialization.FromJson<GetOwnedGamesResult>(stringLibrary);
         }
 
-        internal List<GameInfo> GetLibraryGames(ulong userId, List<GetOwnedGamesResult.Game> ownedGames)
+        internal List<GameMetadata> GetLibraryGames(ulong userId, List<GetOwnedGamesResult.Game> ownedGames)
         {
             if (ownedGames == null)
             {
@@ -433,7 +433,7 @@ namespace SteamLibrary
                 Logger.Warn(exc, "Failed to import Steam last activity.");
             }
 
-            var games = new List<GameInfo>();
+            var games = new List<GameMetadata>();
             foreach (var game in ownedGames)
             {
                 // Ignore games without name, like 243870
@@ -442,13 +442,13 @@ namespace SteamLibrary
                     continue;
                 }
 
-                var newGame = new GameInfo()
+                var newGame = new GameMetadata()
                 {
-                    Source = "Steam",
+                    Source = new MetadataNameProperty("Steam"),
                     Name = game.name.RemoveTrademarks(),
                     GameId = game.appid.ToString(),
                     Playtime = (ulong)(game.playtime_forever * 60),
-                    Platforms = new List<string> { "pc_windows" }
+                    Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
                 if (lastActivity != null && lastActivity.TryGetValue(newGame.GameId, out var gameLastActivity))
@@ -563,10 +563,10 @@ namespace SteamLibrary
             }
         }
 
-        public List<GameInfo> GetCategorizedGames(ulong steamId)
+        public List<GameMetadata> GetCategorizedGames(ulong steamId)
         {
             var id = new SteamID(steamId);
-            var result = new List<GameInfo>();
+            var result = new List<GameMetadata>();
             var vdf = Path.Combine(Steam.InstallationPath, "userdata", id.AccountID.ToString(), "7", "remote", "sharedconfig.vdf");
             var sharedconfig = new KeyValue();
             sharedconfig.ReadFileAsText(vdf);
@@ -616,14 +616,14 @@ namespace SteamLibrary
                     }
                 }
 
-                result.Add(new GameInfo()
+                result.Add(new GameMetadata()
                 {
-                    Source = "Steam",
+                    Source = new MetadataNameProperty("Steam"),
                     GameId = gameId,
-                    Categories = new List<string>(appData),
+                    Categories = appData.Select(a => new MetadataNameProperty(a)).ToList(),
                     Hidden = app["hidden"].AsInteger() == 1,
                     Favorite = isFavorite,
-                    Platforms = new List<string> { "pc_windows" }
+                    Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 });
             }
 
@@ -746,10 +746,10 @@ namespace SteamLibrary
             yield return new SteamPlayController(args.Game);
         }
 
-        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
+        public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
         {
-            var allGames = new List<GameInfo>();
-            var installedGames = new Dictionary<string, GameInfo>();
+            var allGames = new List<GameMetadata>();
+            var installedGames = new Dictionary<string, GameMetadata>();
             Exception importError = null;
 
             if (SettingsViewModel.Settings.ImportInstalledGames)

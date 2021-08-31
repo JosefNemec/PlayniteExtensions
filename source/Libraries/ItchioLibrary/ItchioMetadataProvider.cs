@@ -1,7 +1,6 @@
 ﻿using AngleSharp.Parser.Html;
 using Playnite.Common.Web;
 using Playnite.SDK;
-using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
@@ -35,17 +34,15 @@ namespace ItchioLibrary
 
         public override GameMetadata GetMetadata(Game game)
         {
-            var gameData = new GameInfo()
+            var tags = new List<MetadataNameProperty>();
+            var genres = new List<MetadataNameProperty>();
+            var features = new List<MetadataNameProperty>();
+            var gameData = new GameMetadata()
             {
                 Links = new List<Link>(),
-                Tags = new List<string>(),
-                Genres = new List<string>(),
-                Features = new List<string>()
-            };
-
-            var metadata = new GameMetadata
-            {
-                GameInfo = gameData
+                Tags = tags,
+                Genres = genres,
+                Features = features
             };
 
             var itchGame = butler.GetGame(Convert.ToInt32(game.GameId));
@@ -88,7 +85,7 @@ namespace ItchioLibrary
                     {
                         foreach (var item in field.QuerySelectorAll("a"))
                         {
-                            gameData.Genres.Add(item.TextContent);
+                            tags.Add(new MetadataNameProperty(item.TextContent));
                         }
 
                         continue;
@@ -100,11 +97,11 @@ namespace ItchioLibrary
                         {
                             if (item.TextContent == "Virtual Reality (VR)")
                             {
-                                gameData.Features.Add("VR");
+                                features.Add(new MetadataNameProperty("VR"));
                             }
                             else
                             {
-                                gameData.Tags.Add(item.TextContent);
+                               tags.Add(new MetadataNameProperty(item.TextContent));
                             }
                         }
 
@@ -123,7 +120,7 @@ namespace ItchioLibrary
 
                     if (name == "Author")
                     {
-                        gameData.Developers = new List<string> { field.ChildNodes[1].TextContent };
+                        gameData.Developers = new List<MetadataProperty> { new MetadataNameProperty(field.ChildNodes[1].TextContent) };
                     }
 
                     if (name == "Release date")
@@ -137,7 +134,7 @@ namespace ItchioLibrary
                 }
             }
 
-            return metadata;
+            return gameData;
         }
 
         #endregion IMetadataProvider

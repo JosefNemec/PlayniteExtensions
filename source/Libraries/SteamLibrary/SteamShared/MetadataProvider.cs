@@ -1,6 +1,5 @@
 ﻿using Playnite.Common.Web;
 using Playnite.SDK;
-using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;
 using Steam.Models;
 using SteamKit2;
@@ -271,68 +270,61 @@ namespace Steam
             BackgroundSource backgroundSource,
             bool downloadVerticalCovers)
         {
-            var downloadedMetadata = DownloadGameMetadata(appId, backgroundSource, downloadVerticalCovers);
-            var gameInfo = new GameInfo
+            var metadata = DownloadGameMetadata(appId, backgroundSource, downloadVerticalCovers);
+            metadata.Name = metadata.ProductDetails?["common"]["name"]?.Value ?? metadata.StoreDetails?.name;
+            metadata.Links = new List<Link>()
             {
-                Icon = downloadedMetadata.Icon,
-                CoverImage = downloadedMetadata.CoverImage,
-                BackgroundImage = downloadedMetadata.BackgroundImage,
-                Name = downloadedMetadata.ProductDetails?["common"]["name"]?.Value ?? downloadedMetadata.StoreDetails?.name,
-                Links = new List<Link>()
-                {
-                    new Link(ResourceProvider.GetString("LOCSteamLinksCommunityHub"), $"https://steamcommunity.com/app/{appId}"),
-                    new Link(ResourceProvider.GetString("LOCSteamLinksDiscussions"), $"https://steamcommunity.com/app/{appId}/discussions/"),
-                    new Link(ResourceProvider.GetString("LOCSteamLinksGuides"), $"https://steamcommunity.com/app/{appId}/guides/"),
-                    new Link(ResourceProvider.GetString("LOCCommonLinksNews"), $"https://store.steampowered.com/news/?appids={appId}"),
-                    new Link(ResourceProvider.GetString("LOCCommonLinksStorePage"), $"https://store.steampowered.com/app/{appId}"),
-                    new Link("PCGamingWiki", $"https://pcgamingwiki.com/api/appid.php?appid={appId}")
-                }
+                new Link(ResourceProvider.GetString("LOCSteamLinksCommunityHub"), $"https://steamcommunity.com/app/{appId}"),
+                new Link(ResourceProvider.GetString("LOCSteamLinksDiscussions"), $"https://steamcommunity.com/app/{appId}/discussions/"),
+                new Link(ResourceProvider.GetString("LOCSteamLinksGuides"), $"https://steamcommunity.com/app/{appId}/guides/"),
+                new Link(ResourceProvider.GetString("LOCCommonLinksNews"), $"https://store.steampowered.com/news/?appids={appId}"),
+                new Link(ResourceProvider.GetString("LOCCommonLinksStorePage"), $"https://store.steampowered.com/app/{appId}"),
+                new Link("PCGamingWiki", $"https://pcgamingwiki.com/api/appid.php?appid={appId}")
             };
 
-            downloadedMetadata.GameInfo = gameInfo;
-            var metadata = new GameMetadata(gameInfo);
-            if (downloadedMetadata.StoreDetails?.categories?.FirstOrDefault(a => a.id == 22) != null)
+            if (metadata.StoreDetails?.categories?.FirstOrDefault(a => a.id == 22) != null)
             {
-                gameInfo.Links.Add(new Link(ResourceProvider.GetString("LOCCommonLinksAchievements"), GetAchievementsUrl(appId)));
+                metadata.Links.Add(new Link(ResourceProvider.GetString("LOCCommonLinksAchievements"), GetAchievementsUrl(appId)));
             }
 
-            if (downloadedMetadata.StoreDetails?.categories?.FirstOrDefault(a => a.id == 30) != null)
+            if (metadata.StoreDetails?.categories?.FirstOrDefault(a => a.id == 30) != null)
             {
-                gameInfo.Links.Add(new Link(ResourceProvider.GetString("LOCSteamLinksWorkshop"), GetWorkshopUrl(appId)));
+                metadata.Links.Add(new Link(ResourceProvider.GetString("LOCSteamLinksWorkshop"), GetWorkshopUrl(appId)));
             }
 
-            if (downloadedMetadata.StoreDetails != null)
+            var features = new List<MetadataProperty>();
+            if (metadata.StoreDetails != null)
             {
-                gameInfo.Description = ParseDescription(downloadedMetadata.StoreDetails.detailed_description);
+                metadata.Description = ParseDescription(metadata.StoreDetails.detailed_description);
                 var cultInfo = new CultureInfo("en-US", false).TextInfo;
-                if (downloadedMetadata.StoreDetails.release_date.date?.IsNullOrEmpty() == false)
+                if (metadata.StoreDetails.release_date.date?.IsNullOrEmpty() == false)
                 {
-                    if (DateTime.TryParse(downloadedMetadata.StoreDetails.release_date.date, out var date))
+                    if (DateTime.TryParse(metadata.StoreDetails.release_date.date, out var date))
                     {
-                        gameInfo.ReleaseDate = new ReleaseDate(date);
+                        metadata.ReleaseDate = new ReleaseDate(date);
                     }
                 }
 
-                gameInfo.CriticScore = downloadedMetadata.StoreDetails.metacritic?.score;
-                if (downloadedMetadata.UserReviewDetails?.total_reviews > 0)
+                metadata.CriticScore = metadata.StoreDetails.metacritic?.score;
+                if (metadata.UserReviewDetails?.total_reviews > 0)
                 {
-                    gameInfo.CommunityScore = CalculateUserScore(downloadedMetadata.UserReviewDetails);
+                    metadata.CommunityScore = CalculateUserScore(metadata.UserReviewDetails);
                 }
 
-                if (downloadedMetadata.StoreDetails.publishers.HasNonEmptyItems())
+                if (metadata.StoreDetails.publishers.HasNonEmptyItems())
                 {
-                    gameInfo.Publishers = new List<string>(downloadedMetadata.StoreDetails.publishers);
+                    metadata.Publishers = metadata.StoreDetails.publishers.Select(a => new MetadataNameProperty(a)).ToList();
                 }
 
-                if (downloadedMetadata.StoreDetails.developers.HasNonEmptyItems())
+                if (metadata.StoreDetails.developers.HasNonEmptyItems())
                 {
-                    gameInfo.Developers = new List<string>(downloadedMetadata.StoreDetails.developers);
+                    metadata.Developers = metadata.StoreDetails.developers.Select(a => new MetadataNameProperty(a)).ToList();
                 }
 
-                gameInfo.Features = new List<string>(); 
-                if (downloadedMetadata.StoreDetails.categories.HasItems())
+                metadata.Features = features;
+                if (metadata.StoreDetails.categories.HasItems())
                 {
-                    foreach (var category in downloadedMetadata.StoreDetails.categories)
+                    foreach (var category in metadata.StoreDetails.categories)
                     {
                         // Ignore VR category, will be set from appinfo
                         if (category.id == 31)
@@ -345,17 +337,17 @@ namespace Steam
                             category.description = "Cloud Saves";
                         }
 
-                        gameInfo.Features.Add(cultInfo.ToTitleCase(category.description.Replace("steam", "", StringComparison.OrdinalIgnoreCase).Trim()));
+                        features.Add(new MetadataNameProperty(cultInfo.ToTitleCase(category.description.Replace("steam", "", StringComparison.OrdinalIgnoreCase).Trim())));
                     }
                 }
 
-                if (downloadedMetadata.StoreDetails.genres.HasItems())
+                if (metadata.StoreDetails.genres.HasItems())
                 {
-                    gameInfo.Genres = new List<string>(downloadedMetadata.StoreDetails.genres.Select(a => a.description));
+                    metadata.Genres = metadata.StoreDetails.genres.Select(a => new MetadataNameProperty(a.description)).ToList();
                 }
             }
 
-            if (downloadedMetadata.ProductDetails != null)
+            if (metadata.ProductDetails != null)
             {
                 //var tasks = new List<GameAction>();
                 //var launchList = downloadedMetadata.ProductDetails["config"]["launch"].Children;
@@ -403,52 +395,52 @@ namespace Steam
 
                 // VR features
                 var vrSupport = false;
-                foreach (var vrArea in downloadedMetadata.ProductDetails["common"]["playareavr"].Children)
+                foreach (var vrArea in metadata.ProductDetails["common"]["playareavr"].Children)
                 {
                     if (vrArea.Name == "seated" && vrArea.Value == "1")
                     {
-                        gameInfo.Features.Add("VR Seated");
+                        features.Add(new MetadataNameProperty("VR Seated"));
                         vrSupport = true;
                     }
                     else if (vrArea.Name == "standing" && vrArea.Value == "1")
                     {
-                        gameInfo.Features.Add("VR Standing");
+                        features.Add(new MetadataNameProperty("VR Standing"));
                         vrSupport = true;
                     }
                     if (vrArea.Name.Contains("roomscale"))
                     {
-                        gameInfo.Features.AddMissing("VR Room-Scale");
+                        features.AddMissing(new MetadataNameProperty("VR Room-Scale"));
                         vrSupport = true;
                     }
                 }
 
-                foreach (var vrArea in downloadedMetadata.ProductDetails["common"]["controllervr"].Children)
+                foreach (var vrArea in metadata.ProductDetails["common"]["controllervr"].Children)
                 {
                     if (vrArea.Name == "kbm" && vrArea.Value == "1")
                     {
-                        gameInfo.Features.Add("VR Keyboard / Mouse");
+                        features.Add(new MetadataNameProperty("VR Keyboard / Mouse"));
                         vrSupport = true;
                     }
                     else if (vrArea.Name == "xinput" && vrArea.Value == "1")
                     {
-                        gameInfo.Features.Add("VR Gamepad");
+                        features.Add(new MetadataNameProperty("VR Gamepad"));
                         vrSupport = true;
                     }
                     if ((vrArea.Name == "oculus" && vrArea.Value == "1") ||
                         (vrArea.Name == "steamvr" && vrArea.Value == "1"))
                     {
-                        gameInfo.Features.Add("VR Motion Controllers");
+                        features.Add(new MetadataNameProperty("VR Motion Controllers"));
                         vrSupport = true;
                     }
                 }
 
                 if (vrSupport)
                 {
-                    gameInfo.Features.Add("VR");
+                    features.Add(new MetadataNameProperty("VR"));
                 }
             }
 
-            return downloadedMetadata;
+            return metadata;
         }
 
         private string GetGameBackground(uint appId)

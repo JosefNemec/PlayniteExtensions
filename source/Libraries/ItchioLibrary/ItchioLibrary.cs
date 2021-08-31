@@ -78,9 +78,9 @@ namespace ItchioLibrary
             return false;
         }
 
-        internal Dictionary<string, GameInfo> GetInstalledGames()
+        internal Dictionary<string, GameMetadata> GetInstalledGames()
         {
-            var games = new Dictionary<string, GameInfo>();
+            var games = new Dictionary<string, GameMetadata>();
             using (var butler = new Butler())
             {
                 var caves = butler.GetCaves();
@@ -109,15 +109,15 @@ namespace ItchioLibrary
                         continue;
                     }
 
-                    var game = new GameInfo()
+                    var game = new GameMetadata()
                     {
-                        Source = "itch.io",
+                        Source = new MetadataNameProperty("itch.io"),
                         GameId = cave.game.id.ToString(),
                         Name = cave.game.title.RemoveTrademarks(),
                         InstallDirectory = installDir,
                         IsInstalled = true,
-                        CoverImage = cave.game.coverUrl.IsNullOrEmpty() ? null : new Playnite.SDK.Metadata.MetadataFile(cave.game.coverUrl),
-                        Platforms = new List<string> { "pc_windows" }
+                        CoverImage = cave.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(cave.game.coverUrl),
+                        Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     };
 
                     //if (TryGetGameActions(installDir, out var play, out var others))
@@ -132,9 +132,9 @@ namespace ItchioLibrary
             return games;
         }
 
-        internal List<GameInfo> GetLibraryGames()
+        internal List<GameMetadata> GetLibraryGames()
         {
-            var games = new List<GameInfo>();
+            var games = new List<GameMetadata>();
             using (var butler = new Butler())
             {
                 var profiles = butler.GetProfiles();
@@ -169,13 +169,13 @@ namespace ItchioLibrary
                             continue;
                         }
 
-                        var game = new GameInfo()
+                        var game = new GameMetadata()
                         {
-                            Source = "itch.io",
+                            Source = new MetadataNameProperty("itch.io"),
                             GameId = key.game.id.ToString(),
                             Name = key.game.title.RemoveTrademarks(),
-                            CoverImage = key.game.coverUrl.IsNullOrEmpty() ? null : new Playnite.SDK.Metadata.MetadataFile(key.game.coverUrl),
-                            Platforms = new List<string> { "pc_windows" }
+                            CoverImage = key.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(key.game.coverUrl),
+                            Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                         };
 
                         games.Add(game);
@@ -186,10 +186,10 @@ namespace ItchioLibrary
             return games;
         }
 
-        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
+        public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
         {
-            var allGames = new List<GameInfo>();
-            var installedGames = new Dictionary<string, GameInfo>();
+            var allGames = new List<GameMetadata>();
+            var installedGames = new Dictionary<string, GameMetadata>();
             Exception importError = null;
 
             if (!SettingsViewModel.Settings.ImportInstalledGames && !SettingsViewModel.Settings.ImportUninstalledGames)

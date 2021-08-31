@@ -1,7 +1,6 @@
 ﻿using EpicLibrary.Services;
 using Playnite.SDK;
 using Playnite.SDK.Data;
-using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
@@ -23,12 +22,7 @@ namespace EpicLibrary
 
         public override GameMetadata GetMetadata(Game game)
         {
-            var gameInfo = new GameInfo() { Links = new List<Link>() };
-            var metadata = new GameMetadata()
-            {
-                GameInfo = gameInfo
-            };
-
+            var gameInfo = new GameMetadata() { Links = new List<Link>() };
             using (var client = new WebStoreClient())
             {
                 var catalogs = client.QuerySearch(game.Name).GetAwaiter().GetResult();
@@ -51,10 +45,10 @@ namespace EpicLibrary
 
                         gameInfo.Developers = page.data.about.developerAttribution?.
                             Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).
-                            Select(a => a.Trim()).ToList();
+                            Select(a => new MetadataNameProperty(a.Trim())).ToList();
                         gameInfo.Publishers = page.data.about.publisherAttribution?.
                             Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).
-                            Select(a => a.Trim()).ToList();
+                            Select(a => new MetadataNameProperty(a.Trim())).ToList();
                         gameInfo.BackgroundImage = new MetadataFile(page.data.hero.backgroundImageUrl);
                         gameInfo.Links.Add(new Link(
                             api.Resources.GetString("LOCCommonLinksStorePage"),
@@ -95,7 +89,7 @@ namespace EpicLibrary
                 }
             }
 
-            return metadata;
+            return gameInfo;
         }
     }
 }

@@ -343,19 +343,19 @@ namespace OriginLibrary
             return detectedPackages;
         }
 
-        public Dictionary<string, GameInfo> GetInstalledGames()
+        public Dictionary<string, GameMetadata> GetInstalledGames()
         {
-            var games = new Dictionary<string, GameInfo>();
+            var games = new Dictionary<string, GameMetadata>();
             foreach (var package in GetInstallPackages())
             {
                 try
                 {
-                    var newGame = new GameInfo()
+                    var newGame = new GameMetadata()
                     {
-                        Source = "Origin",
+                        Source = new MetadataNameProperty("Origin"),
                         GameId = package.ConvertedId,
                         IsInstalled = true,
-                        Platforms = new List<string> { "pc_windows" }
+                        Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     };
 
                     GameLocalDataResponse localData = null;
@@ -399,7 +399,7 @@ namespace OriginLibrary
             return games;
         }
 
-        public List<GameInfo> GetLibraryGames()
+        public List<GameMetadata> GetLibraryGames()
         {
             using (var view = PlayniteApi.WebViews.CreateOffscreenView())
             {
@@ -427,7 +427,7 @@ namespace OriginLibrary
                     throw new Exception("Access error: " + info.error);
                 }
 
-                var games = new List<GameInfo>();
+                var games = new List<GameMetadata>();
 
                 foreach (var game in api.GetOwnedGames(info.pid.pidId, token).Where(a => a.offerType == "basegame"))
                 {
@@ -456,14 +456,14 @@ namespace OriginLibrary
                         continue;
                     }
 
-                    games.Add(new GameInfo()
+                    games.Add(new GameMetadata()
                     {
-                        Source = "Origin",
+                        Source = new MetadataNameProperty("Origin"),
                         GameId = game.offerId,
                         Name = gameName,
                         LastActivity = usage?.lastSessionEndTimeStamp,
                         Playtime = (ulong)(usage?.total ?? 0),
-                        Platforms = new List<string> { "pc_windows" }
+                        Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     });
                 }
 
@@ -471,10 +471,10 @@ namespace OriginLibrary
             }
         }
 
-        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
+        public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
         {
-            var allGames = new List<GameInfo>();
-            var installedGames = new Dictionary<string, GameInfo>();
+            var allGames = new List<GameMetadata>();
+            var installedGames = new Dictionary<string, GameMetadata>();
             Exception importError = null;
 
             if (SettingsViewModel.Settings.ImportInstalledGames)

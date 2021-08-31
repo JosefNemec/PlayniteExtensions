@@ -1,10 +1,6 @@
 ﻿using IGDBMetadata.Models;
 using IGDBMetadata.Services;
-using Playnite.Common;
-using Playnite.Common.Web;
 using Playnite.SDK;
-using Playnite.SDK.Metadata;
-using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 using System;
 using System.Collections.Generic;

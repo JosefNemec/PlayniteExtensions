@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Playnite.SDK;
-using Playnite.SDK.Metadata;
 using GogLibrary.Models;
 using System.IO;
 using Playnite;
@@ -36,48 +35,36 @@ namespace GogLibrary
                 return null;
             }
 
-            var gameInfo = new GameInfo
-            {
-                Name = StringExtensions.NormalizeGameName(storeData.GameDetails.title),
-                Description = storeData.GameDetails.description.full,
-                Links = new List<Link>(),
-                Icon = storeData.Icon,
-                CoverImage = storeData.CoverImage,
-                BackgroundImage = storeData.BackgroundImage
-            };
+            storeData.Name = StringExtensions.NormalizeGameName(storeData.GameDetails.title);
+            storeData.Description = storeData.GameDetails.description.full;
+            storeData.Links = new List<Link>();
 
-            var metadata = new GameMetadata(gameInfo);
             if (!string.IsNullOrEmpty(storeData.GameDetails.links.forum))
             {
-                gameInfo.Links.Add(new Link(resources.GetString("LOCCommonLinksForum"), storeData.GameDetails.links.forum));
+                storeData.Links.Add(new Link(resources.GetString("LOCCommonLinksForum"), storeData.GameDetails.links.forum));
             };
 
             if (!string.IsNullOrEmpty(storeData.GameDetails.links.product_card))
             {
-                gameInfo.Links.Add(new Link(resources.GetString("LOCCommonLinksStorePage"), storeData.GameDetails.links.product_card));
+                storeData.Links.Add(new Link(resources.GetString("LOCCommonLinksStorePage"), storeData.GameDetails.links.product_card));
             };
 
-            gameInfo.Links.Add(new Link("PCGamingWiki", @"http://pcgamingwiki.com/w/index.php?search=" + storeData.GameDetails.title));
+            storeData.Links.Add(new Link("PCGamingWiki", @"http://pcgamingwiki.com/w/index.php?search=" + storeData.GameDetails.title));
 
             if (storeData.StoreDetails != null)
             {
-                gameInfo.Genres = storeData.StoreDetails.genres?.Select(a => a.name).ToList();
-                gameInfo.Features = storeData.StoreDetails.features?.Select(a => a.name).ToList();
-                gameInfo.Developers = storeData.StoreDetails.developers.Select(a => a.name).ToList();
-                gameInfo.Publishers = new List<string>() { storeData.StoreDetails.publisher };
+                storeData.Genres = storeData.StoreDetails.genres?.Select(a => new MetadataNameProperty(a.name)).ToList();
+                storeData.Features = storeData.StoreDetails.features?.Where(a => a.name != "Overlay").Select(a => new MetadataNameProperty(a.name)).ToList();
+                storeData.Developers = storeData.StoreDetails.developers.Select(a => new MetadataNameProperty(a.name)).ToList();
+                storeData.Publishers = new List<MetadataProperty>() { new MetadataNameProperty(storeData.StoreDetails.publisher) };
                 var cultInfo = new CultureInfo("en-US", false).TextInfo;
-                if (gameInfo.ReleaseDate == null && storeData.StoreDetails.globalReleaseDate != null)
+                if (storeData.ReleaseDate == null && storeData.StoreDetails.globalReleaseDate != null)
                 {
-                    gameInfo.ReleaseDate = new ReleaseDate(storeData.StoreDetails.globalReleaseDate.Value);
-                }
-
-                if (gameInfo.Features?.Contains("Overlay") == true)
-                {
-                    gameInfo.Features.Remove("Overlay");
+                    storeData.ReleaseDate = new ReleaseDate(storeData.StoreDetails.globalReleaseDate.Value);
                 }
             }
 
-            return metadata;
+            return storeData;
         }
 
         internal GogGameMetadata DownloadGameMetadata(Game game)

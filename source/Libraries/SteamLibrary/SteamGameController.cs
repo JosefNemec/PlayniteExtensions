@@ -149,7 +149,7 @@ namespace SteamLibrary
             if (gameId.IsMod)
             {
                 var allGames = SteamLibrary.GetInstalledGames(false);
-                if (allGames.TryGetValue(gameId.AppID.ToString(), out GameInfo realGame))
+                if (allGames.TryGetValue(gameId.AppID.ToString(), out GameMetadata realGame))
                 {
                     installDirectory = realGame.InstallDirectory;
                 }

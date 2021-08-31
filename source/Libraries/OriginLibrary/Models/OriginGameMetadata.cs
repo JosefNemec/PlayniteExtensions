@@ -1,4 +1,4 @@
-﻿using Playnite.SDK.Metadata;
+﻿using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,5 @@ namespace OriginLibrary.Models
     {
         public GameStoreDataResponse StoreDetails { get; set; }
         public StorePageMetadata StoreMetadata { get; set; }
-        public MetadataFile CoverImage { get; set; }
-        public MetadataFile BackgroundImage { get; set; }
     }
 }

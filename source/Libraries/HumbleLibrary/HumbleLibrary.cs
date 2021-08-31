@@ -43,10 +43,10 @@ namespace HumbleLibrary
             return $"{troveGame.machine_name}_{troveGame.human_name}_TROVE";
         }
 
-        public List<GameInfo> GetTroveGames()
+        public List<GameMetadata> GetTroveGames()
         {
             var chunkDataUrlBase = @"https://www.humblebundle.com/api/v1/trove/chunk?property=popularity&direction=desc&index=";
-            var games = new List<GameInfo>();
+            var games = new List<GameMetadata>();
 
             using (var webClient = new WebClient { Encoding = Encoding.UTF8 })
             {
@@ -60,15 +60,15 @@ namespace HumbleLibrary
                         var chunkDataStr = webClient.DownloadString(chunkDataUrlBase + i);
                         foreach (var troveGame in Serialization.FromJson<List<TroveGame>>(chunkDataStr))
                         {
-                            var game = new GameInfo
+                            var game = new GameMetadata
                             {
                                 Name = troveGame.human_name.RemoveTrademarks(),
                                 GameId = GetGameId(troveGame),
                                 Description = troveGame.description_text,
-                                Publishers = troveGame.publishers?.Select(a => a.publisher_name).ToList(),
-                                Developers = troveGame.developers?.Select(a => a.developer_name).ToList(),
-                                Source = "Humble",
-                                Platforms = new List<string> { "pc_windows" }
+                                Publishers = troveGame.publishers?.Select(a => new MetadataNameProperty(a.publisher_name)).ToList(),
+                                Developers = troveGame.developers?.Select(a => new MetadataNameProperty(a.developer_name)).ToList(),
+                                Source = new MetadataNameProperty("Humble"),
+                                Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                             };
 
                             games.Add(game);
@@ -156,12 +156,12 @@ namespace HumbleLibrary
                     var alreadyImported = PlayniteApi.Database.Games.FirstOrDefault(a => a.GameId == gameId && a.PluginId == Id);
                     if (alreadyImported == null)
                     {
-                        importedGames.Add(PlayniteApi.Database.ImportGame(new GameInfo()
+                        importedGames.Add(PlayniteApi.Database.ImportGame(new GameMetadata()
                         {
                             Name = product.human_name.RemoveTrademarks(),
                             GameId = gameId,
-                            Icon = product.icon.IsNullOrEmpty() ? null : new Playnite.SDK.Metadata.MetadataFile(product.icon),
-                            Source = "Humble"
+                            Icon = product.icon.IsNullOrEmpty() ? null : new MetadataFile(product.icon),
+                            Source = new MetadataNameProperty("Humble")
                         }, this));
                     }
                 }

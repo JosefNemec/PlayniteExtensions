@@ -1,6 +1,5 @@
 ﻿using Microsoft.Win32;
 using Playnite.SDK;
-using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 using System;
@@ -29,9 +28,9 @@ namespace UplayLibrary
             SettingsViewModel = new UplayLibrarySettingsViewModel(this, api);
         }
 
-        public List<GameInfo> GetLibraryGames()
+        public List<GameMetadata> GetLibraryGames()
         {
-            var games = new List<GameInfo>();
+            var games = new List<GameMetadata>();
             var dlcsToIgnore = new List<uint>();
             foreach (var item in Uplay.GetLocalProductCache())
             {
@@ -64,15 +63,15 @@ namespace UplayLibrary
                     continue;
                 }
 
-                var newGame = new GameInfo
+                var newGame = new GameMetadata
                 {
                     Name = item.root.name.RemoveTrademarks(),
                     GameId = item.uplay_id.ToString(),
                     BackgroundImage = item.root.background_image.IsNullOrEmpty() ? null : new MetadataFile(item.root.background_image),
                     Icon = item.root.icon_image.IsNullOrEmpty() ? null : new MetadataFile(item.root.icon_image),
                     CoverImage = item.root.thumb_image.IsNullOrEmpty() ? null : new MetadataFile(item.root.thumb_image),
-                    Source = "Ubisoft Connect",
-                    Platforms = new List<string> { "pc_windows" }
+                    Source = new MetadataNameProperty("Ubisoft Connect"),
+                    Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
                 games.Add(newGame);
@@ -81,9 +80,9 @@ namespace UplayLibrary
             return games;
         }
 
-        public static List<GameInfo> GetInstalledGames()
+        public static List<GameMetadata> GetInstalledGames()
         {
-            var games = new List<GameInfo>();
+            var games = new List<GameMetadata>();
 
             var root = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32);
             var installsKey = root.OpenSubKey(@"SOFTWARE\ubisoft\Launcher\Installs\");
@@ -101,14 +100,14 @@ namespace UplayLibrary
                     var installDir = (gameData.GetValue("InstallDir") as string)?.Replace('/', Path.DirectorySeparatorChar);
                     if (!installDir.IsNullOrEmpty() && Directory.Exists(installDir))
                     {
-                        var newGame = new GameInfo()
+                        var newGame = new GameMetadata()
                         {
                             GameId = install,
-                            Source = "Ubisoft Connect",
+                            Source = new MetadataNameProperty("Ubisoft Connect"),
                             InstallDirectory = installDir,
                             Name = Path.GetFileName(installDir.TrimEnd(Path.DirectorySeparatorChar)),
                             IsInstalled = true,
-                            Platforms = new List<string> { "pc_windows" }
+                            Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                         };
 
                         games.Add(newGame);
@@ -119,10 +118,10 @@ namespace UplayLibrary
             return games;
         }
 
-        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
+        public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
         {
-            var allGames = new List<GameInfo>();
-            var installedGames = new List<GameInfo>();
+            var allGames = new List<GameMetadata>();
+            var installedGames = new List<GameMetadata>();
             Exception importError = null;
 
             if (SettingsViewModel.Settings.ImportInstalledGames)

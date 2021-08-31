@@ -59,9 +59,9 @@ namespace BattleNetLibrary
             return null;
         }
 
-        public Dictionary<string, GameInfo> GetInstalledGames()
+        public Dictionary<string, GameMetadata> GetInstalledGames()
         {
-            var games = new Dictionary<string, GameInfo>();
+            var games = new Dictionary<string, GameMetadata>();
             foreach (var prog in Programs.GetUnistallProgramsList())
             {
                 if (string.IsNullOrEmpty(prog.UninstallString))
@@ -79,14 +79,14 @@ namespace BattleNetLibrary
                             continue;
                         }
 
-                        var game = new GameInfo()
+                        var game = new GameMetadata()
                         {
                             GameId = product.ProductId,
-                            Source = "Battle.net",
+                            Source = new MetadataNameProperty("Battle.net"),
                             Name = product.Name.RemoveTrademarks(),
                             InstallDirectory = prog.InstallLocation,
                             IsInstalled = true,
-                            Platforms = new List<string> { "pc_windows" }
+                            Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                         };
 
                         // Check in case there are more versions of single games installed.
@@ -121,14 +121,14 @@ namespace BattleNetLibrary
                         continue;
                     }
 
-                    var game = new GameInfo()
+                    var game = new GameMetadata()
                     {
                         GameId = product.ProductId,
-                        Source = "Battle.net",
+                        Source = new MetadataNameProperty("Battle.net"),
                         Name = product.Name.RemoveTrademarks(),
                         InstallDirectory = prog.InstallLocation,
                         IsInstalled = true,
-                        Platforms = new List<string> { "pc_windows" }
+                        Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     };
 
                     // Check in case there are more versions of single games installed.
@@ -142,12 +142,12 @@ namespace BattleNetLibrary
             return games;
         }
 
-        public List<GameInfo> GetLibraryGames()
+        public List<GameMetadata> GetLibraryGames()
         {
             using (var view = PlayniteApi.WebViews.CreateOffscreenView())
             {
                 var api = new BattleNetAccountClient(view);
-                var games = new List<GameInfo>();
+                var games = new List<GameMetadata>();
                 if (!api.GetIsUserLoggedIn())
                 {
                     throw new Exception("User is not logged in.");
@@ -168,12 +168,12 @@ namespace BattleNetLibrary
                         // To avoid duplicates like multiple WoW accounts
                         if (!games.Any(a => a.GameId == gameInfo.ProductId))
                         {
-                            games.Add(new GameInfo()
+                            games.Add(new GameMetadata()
                             {
-                                Source = "Battle.net",
+                                Source = new MetadataNameProperty("Battle.net"),
                                 GameId = gameInfo.ProductId,
                                 Name = gameInfo.Name.RemoveTrademarks(),
-                                Platforms = new List<string> { "pc_windows" }
+                                Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                             });
                         }
                     }
@@ -187,23 +187,23 @@ namespace BattleNetLibrary
                     if (w3Games.Any())
                     {
                         var w3 = BattleNetGames.Games.FirstOrDefault(a => a.ProductId == "W3");
-                        games.Add(new GameInfo()
+                        games.Add(new GameMetadata()
                         {
-                            Source = "Battle.net",
+                            Source = new MetadataNameProperty("Battle.net"),
                             GameId = w3.ProductId,
                             Name = w3.Name,
-                            Platforms = new List<string> { "pc_windows" }
+                            Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                         });
 
                         if (w3Games.Count() == 2)
                         {
                             var w3x = BattleNetGames.Games.FirstOrDefault(a => a.ProductId == "W3X");
-                            games.Add(new GameInfo()
+                            games.Add(new GameMetadata()
                             {
-                                Source = "Battle.net",
+                                Source = new MetadataNameProperty("Battle.net"),
                                 GameId = w3x.ProductId,
                                 Name = w3x.Name,
-                                Platforms = new List<string> { "pc_windows" }
+                                Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                             });
                         }
                     }
@@ -213,23 +213,23 @@ namespace BattleNetLibrary
                     if (d2Games.Any())
                     {
                         var d2 = BattleNetGames.Games.FirstOrDefault(a => a.ProductId == "D2");
-                        games.Add(new GameInfo()
+                        games.Add(new GameMetadata()
                         {
-                            Source = "Battle.net",
+                            Source = new MetadataNameProperty("Battle.net"),
                             GameId = d2.ProductId,
                             Name = d2.Name,
-                            Platforms = new List<string> { "pc_windows" }
+                            Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                         });
 
                         if (d2Games.Count() == 2)
                         {
                             var d2x = BattleNetGames.Games.FirstOrDefault(a => a.ProductId == "D2X");
-                            games.Add(new GameInfo()
+                            games.Add(new GameMetadata()
                             {
-                                Source = "Battle.net",
+                                Source = new MetadataNameProperty("Battle.net"),
                                 GameId = d2x.ProductId,
                                 Name = d2x.Name,
-                                Platforms = new List<string> { "pc_windows" }
+                                Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                             });
                         }
                     }
@@ -239,10 +239,10 @@ namespace BattleNetLibrary
             }
         }
 
-        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
+        public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
         {
-            var allGames = new List<GameInfo>();
-            var installedGames = new Dictionary<string, GameInfo>();
+            var allGames = new List<GameMetadata>();
+            var installedGames = new Dictionary<string, GameMetadata>();
             Exception importError = null;
 
             if (SettingsViewModel.Settings.ImportInstalledGames)

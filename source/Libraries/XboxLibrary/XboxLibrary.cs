@@ -42,9 +42,9 @@ namespace XboxLibrary
             return SettingsViewModel;
         }
 
-        internal GameInfo GetGameInfoFromTitle(TitleHistoryResponse.Title title)
+        internal GameMetadata GetGameMetadataFromTitle(TitleHistoryResponse.Title title)
         {
-            var newGame = new GameInfo
+            var newGame = new GameMetadata
             {
                 GameId = title.pfn,
                 Name = title.name.
@@ -54,8 +54,8 @@ namespace XboxLibrary
                 Replace("- Windows 10", "").
                 RemoveTrademarks().
                 Trim(),
-                Source = "Xbox",
-                Platforms = new List<string> { "pc_windows" }
+                Source = new MetadataNameProperty("Xbox"),
+                Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
             };
 
             if (title.detail != null)
@@ -67,12 +67,12 @@ namespace XboxLibrary
 
                 if (!title.detail.publisherName.IsNullOrEmpty())
                 {
-                    newGame.Publishers = title.detail.publisherName.Split(new char[] { '|' }).Select(a => a.Trim()).ToList();
+                    newGame.Publishers = title.detail.publisherName.Split(new char[] { '|' }).Select(a => new MetadataNameProperty(a.Trim())).ToList();
                 }
 
                 if (!title.detail.developerName.IsNullOrEmpty())
                 {
-                    newGame.Developers = title.detail.developerName.Split(new char[] { '|' }).Select(a => a.Trim()).ToList();
+                    newGame.Developers = title.detail.developerName.Split(new char[] { '|' }).Select(a => new MetadataNameProperty(a.Trim())).ToList();
                 }
             }
 
@@ -107,11 +107,11 @@ namespace XboxLibrary
             File.WriteAllText(filePath, Serialization.ToJson(data));
         }
 
-        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
+        public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
         {
-            var installedGames = new Dictionary<string, GameInfo>();
+            var installedGames = new Dictionary<string, GameMetadata>();
             Exception importError = null;
-            var allGames = new List<GameInfo>();
+            var allGames = new List<GameMetadata>();
             if (!SettingsViewModel.Settings.ConnectAccount)
             {
                 return allGames;
@@ -177,10 +177,10 @@ namespace XboxLibrary
 
                         if (import)
                         {
-                            var game = GetGameInfoFromTitle(libTitle);
+                            var game = GetGameMetadataFromTitle(libTitle);
                             game.IsInstalled = true;
                             game.InstallDirectory = installedApp.WorkDir;
-                            game.Icon = installedApp.Icon.IsNullOrEmpty() ? null : new Playnite.SDK.Metadata.MetadataFile();
+                            game.Icon = installedApp.Icon.IsNullOrEmpty() ? null : new MetadataFile(installedApp.Icon);
                             installedGames.Add(libTitle.pfn, game);
                         }
                     }
@@ -204,7 +204,7 @@ namespace XboxLibrary
                     {
                         if (!installedGames.TryGetValue(libTitle.pfn, out var installed))
                         {
-                            allGames.Add(GetGameInfoFromTitle(libTitle));
+                            allGames.Add(GetGameMetadataFromTitle(libTitle));
                         }
                     }
 
@@ -215,28 +215,32 @@ namespace XboxLibrary
                             !title.devices.Contains("PC"))
                         {
                             var addGame = false;
-                            var platforms = new List<string>();
+                            string platform = null;
                             if (SettingsViewModel.Settings.ImportConsoleGames && title.devices.Contains("Xbox360"))
                             {
                                 addGame = true;
-                                platforms = new List<string> { "xbox360" };
+                                platform = "xbox360";
                             }
                             else if (SettingsViewModel.Settings.ImportConsoleGames && title.devices.Contains("XboxSeries"))
                             {
                                 addGame = true;
-                                platforms = new List<string> { "xbox_series" };
+                                platform = "xbox_series";
                             }
                             else if (SettingsViewModel.Settings.ImportConsoleGames && title.devices.Contains("XboxOne"))
                             {
                                 addGame = true;
-                                platforms = new List<string> { "xbox_one" };
+                                platform = "xbox_one";
                             }
 
                             if (addGame)
                             {
-                                var newGame = GetGameInfoFromTitle(title);
+                                var newGame = GetGameMetadataFromTitle(title);
                                 newGame.GameId = $"CONSOLE_{title.titleId}_{title.mediaItemType}";
-                                newGame.Platforms = platforms;
+                                if (!platform.IsNullOrEmpty())
+                                {
+                                    newGame.Platforms = new List<MetadataProperty> { new MetadataSpecProperty(platform) };
+                                }
+
                                 allGames.Add(newGame);
                             };
                         }

@@ -107,9 +107,9 @@ namespace AmazonGamesLibrary
             }
         }
 
-        internal Dictionary<string, GameInfo> GetInstalledGames()
+        internal Dictionary<string, GameMetadata> GetInstalledGames()
         {
-            var games = new Dictionary<string, GameInfo>();
+            var games = new Dictionary<string, GameMetadata>();
             var programs = Programs.GetUnistallProgramsList();
             foreach (var program in programs)
             {
@@ -127,14 +127,14 @@ namespace AmazonGamesLibrary
                 var gameId = match.Groups[1].Value;
                 if (!games.ContainsKey(gameId))
                 {
-                    var game = new GameInfo()
+                    var game = new GameMetadata()
                     {
                         InstallDirectory = Paths.FixSeparators(program.InstallLocation),
                         GameId = gameId,
-                        Source = "Amazon",
+                        Source = new MetadataNameProperty("Amazon"),
                         Name = program.DisplayName.RemoveTrademarks(),
                         IsInstalled = true,
-                        Platforms = new List<string> { "pc_windows" }
+                        Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     };
 
                     games.Add(game.GameId, game);
@@ -144,9 +144,9 @@ namespace AmazonGamesLibrary
             return games;
         }
 
-        public List<GameInfo> GetLibraryGames()
+        public List<GameMetadata> GetLibraryGames()
         {
-            var games = new List<GameInfo>();
+            var games = new List<GameMetadata>();
             var client = new AmazonAccountClient(this);
             var entitlements = client.GetAccountEntitlements().GetAwaiter().GetResult();
             foreach (var item in entitlements)
@@ -156,12 +156,12 @@ namespace AmazonGamesLibrary
                     continue;
                 }
 
-                var game = new GameInfo()
+                var game = new GameMetadata()
                 {
-                    Source = "Amazon",
+                    Source = new MetadataNameProperty("Amazon"),
                     GameId = item.product.id,
                     Name = item.product.title.RemoveTrademarks(),
-                    Platforms = new List<string> { "pc_windows" }
+                    Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
                 games.Add(game);
@@ -170,10 +170,10 @@ namespace AmazonGamesLibrary
             return games;
         }
 
-        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
+        public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
         {
-            var allGames = new List<GameInfo>();
-            var installedGames = new Dictionary<string, GameInfo>();
+            var allGames = new List<GameMetadata>();
+            var installedGames = new Dictionary<string, GameMetadata>();
             Exception importError = null;
 
             if (SettingsViewModel.Settings.ImportInstalledGames)

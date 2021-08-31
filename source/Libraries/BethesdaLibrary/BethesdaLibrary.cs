@@ -28,9 +28,9 @@ namespace BethesdaLibrary
             SettingsViewModel = new BethesdaLibrarySettingsViewModel(this, PlayniteApi);
         }
 
-        public static List<GameInfo> GetInstalledGames()
+        public static List<GameMetadata> GetInstalledGames()
         {
-            var games = new List<GameInfo>();
+            var games = new List<GameMetadata>();
 
             foreach (var program in Bethesda.GetBethesdaInstallEntried())
             {
@@ -42,14 +42,14 @@ namespace BethesdaLibrary
 
                 var match = Regex.Match(program.UninstallString, @"uninstall\/(\d+)");
                 var gameId = match.Groups[1].Value;
-                var newGame = new GameInfo()
+                var newGame = new GameMetadata()
                 {
                     GameId = gameId,
-                    Source = "Bethesda",
+                    Source = new MetadataNameProperty("Bethesda"),
                     InstallDirectory = installDir,
                     Name = program.DisplayName.RemoveTrademarks(),
                     IsInstalled = true,
-                    Platforms = new List<string> { "pc_windows" }
+                    Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
                 games.Add(newGame);
@@ -63,9 +63,9 @@ namespace BethesdaLibrary
             return firstRunSettings ? null : SettingsViewModel;
         }
 
-        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
+        public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
         {
-            var allGames = new List<GameInfo>();
+            var allGames = new List<GameMetadata>();
             if (SettingsViewModel.Settings.ImportInstalledGames)
             {
                 try

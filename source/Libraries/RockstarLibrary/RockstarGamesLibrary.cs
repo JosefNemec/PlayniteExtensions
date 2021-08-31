@@ -29,9 +29,9 @@ namespace RockstarGamesLibrary
         {
         }
 
-        internal static IEnumerable<GameInfo> GetInstalledGames()
+        internal static IEnumerable<GameMetadata> GetInstalledGames()
         {
-            var games = new List<GameInfo>();
+            var games = new List<GameMetadata>();
             foreach (var app in Programs.GetUnistallProgramsList())
             {
                 if (string.IsNullOrEmpty(app.UninstallString))
@@ -50,14 +50,14 @@ namespace RockstarGamesLibrary
                         continue;
                     }
 
-                    var newGame = new GameInfo
+                    var newGame = new GameMetadata
                     {
                         IsInstalled = true,
                         InstallDirectory = app.InstallLocation,
-                        Source = "Rockstar Games",
+                        Source = new MetadataNameProperty("Rockstar Games"),
                         Name = rsGame.Name,
                         GameId = titleId,
-                        Platforms = new List<string> { "pc_windows" }
+                        Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     };
 
                     if (!string.IsNullOrEmpty(app.DisplayIcon))
@@ -65,7 +65,7 @@ namespace RockstarGamesLibrary
                         var iconPath = app.DisplayIcon.Trim(new char[] { '"' });
                         if (File.Exists(iconPath))
                         {
-                            newGame.Icon = new Playnite.SDK.Metadata.MetadataFile(iconPath);
+                            newGame.Icon = new MetadataFile(iconPath);
                         }
                     }
 
@@ -76,9 +76,9 @@ namespace RockstarGamesLibrary
             return games;
         }
 
-        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
+        public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
         {
-            var games = new List<GameInfo>();
+            var games = new List<GameMetadata>();
             Exception importError = null;
 
             try

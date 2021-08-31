@@ -1,6 +1,5 @@
 ﻿using Playnite.Common;
 using Playnite.SDK;
-using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
@@ -30,17 +29,12 @@ namespace UplayLibrary
 
         public override GameMetadata GetMetadata(Game game)
         {
-            var gameInfo = new GameInfo
+            var gameInfo = new GameMetadata
             {
                 Links = new List<Link>()
             };
 
             gameInfo.Links.Add(new Link("PCGamingWiki", @"http://pcgamingwiki.com/w/index.php?search=" + gameInfo.Name));
-            var metadata = new GameMetadata()
-            {
-                GameInfo = gameInfo
-            };
-
             var prod = productInfo?.FirstOrDefault(a => a.uplay_id.ToString() == game.GameId);
             if (prod != null)
             {
@@ -71,7 +65,7 @@ namespace UplayLibrary
                 }
             }
 
-            return metadata;
+            return gameInfo;
         }
     }
 }

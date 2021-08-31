@@ -1,8 +1,6 @@
-﻿using AngleSharp.Parser.Html;
-using Playnite.Common;
+﻿using Playnite.Common;
 using Playnite.SDK;
 using Playnite.SDK.Data;
-using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 using Steam;
@@ -45,7 +43,8 @@ namespace UniversalSteamMetadata
             MetadataField.Publishers,
             MetadataField.ReleaseDate,
             MetadataField.Features,
-            MetadataField.Name
+            MetadataField.Name,
+            MetadataField.Platform
         };
 
         public UniversalSteamMetadataProvider(MetadataRequestOptions options, UniversalSteamMetadata plugin)
@@ -70,9 +69,9 @@ namespace UniversalSteamMetadata
         public override string GetName(GetMetadataFieldArgs args)
         {
             GetGameData();
-            if (currentMetadata.GameInfo != null)
+            if (currentMetadata != null)
             {
-                return currentMetadata.GameInfo.Name;
+                return currentMetadata.Name;
             }
 
             return base.GetName(args);
@@ -81,9 +80,9 @@ namespace UniversalSteamMetadata
         public override string GetDescription(GetMetadataFieldArgs args)
         {
             GetGameData();
-            if (currentMetadata.GameInfo != null)
+            if (currentMetadata != null)
             {
-                return currentMetadata.GameInfo.Description;
+                return currentMetadata.Description;
             }
 
             return base.GetDescription(args);
@@ -92,7 +91,7 @@ namespace UniversalSteamMetadata
         public override MetadataFile GetBackgroundImage(GetMetadataFieldArgs args)
         {
             GetGameData();
-            if (currentMetadata.GameInfo != null)
+            if (currentMetadata != null)
             {
                 if (plugin.SettingsViewModel.Settings.BackgroundSource == BackgroundSource.StoreScreenshot &&
                     options.IsBackgroundDownload == false &&
@@ -128,7 +127,7 @@ namespace UniversalSteamMetadata
         public override MetadataFile GetIcon(GetMetadataFieldArgs args)
         {
             GetGameData();
-            if (currentMetadata.GameInfo != null)
+            if (currentMetadata != null)
             {
                 return currentMetadata.Icon;
             }
@@ -139,7 +138,7 @@ namespace UniversalSteamMetadata
         public override MetadataFile GetCoverImage(GetMetadataFieldArgs args)
         {
             GetGameData();
-            if (currentMetadata.GameInfo != null)
+            if (currentMetadata != null)
             {
                 return currentMetadata.CoverImage;
             }
@@ -150,9 +149,9 @@ namespace UniversalSteamMetadata
         public override int? GetCommunityScore(GetMetadataFieldArgs args)
         {
             GetGameData();
-            if (currentMetadata.GameInfo != null)
+            if (currentMetadata != null)
             {
-                return currentMetadata.GameInfo.CommunityScore;
+                return currentMetadata.CommunityScore;
             }
 
             return base.GetCommunityScore(args);
@@ -161,53 +160,53 @@ namespace UniversalSteamMetadata
         public override int? GetCriticScore(GetMetadataFieldArgs args)
         {
             GetGameData();
-            if (currentMetadata.GameInfo != null)
+            if (currentMetadata != null)
             {
-                return currentMetadata.GameInfo.CriticScore;
+                return currentMetadata.CriticScore;
             }
 
             return base.GetCriticScore(args);
         }
 
-        public override List<string> GetDevelopers(GetMetadataFieldArgs args)
+        public override IEnumerable<MetadataProperty> GetDevelopers(GetMetadataFieldArgs args)
         {
             GetGameData();
-            if (currentMetadata.GameInfo != null)
+            if (currentMetadata != null)
             {
-                return currentMetadata.GameInfo.Developers;
+                return currentMetadata.Developers;
             }
 
             return base.GetDevelopers(args);
         }
 
-        public override List<string> GetGenres(GetMetadataFieldArgs args)
+        public override IEnumerable<MetadataProperty> GetGenres(GetMetadataFieldArgs args)
         {
             GetGameData();
-            if (currentMetadata.GameInfo != null)
+            if (currentMetadata != null)
             {
-                return currentMetadata.GameInfo.Genres;
+                return currentMetadata.Genres;
             }
 
             return base.GetGenres(args);
         }
 
-        public override List<Link> GetLinks(GetMetadataFieldArgs args)
+        public override IEnumerable<Link> GetLinks(GetMetadataFieldArgs args)
         {
             GetGameData();
-            if (currentMetadata.GameInfo != null)
+            if (currentMetadata != null)
             {
-                return currentMetadata.GameInfo.Links;
+                return currentMetadata.Links;
             }
 
             return base.GetLinks(args);
         }
 
-        public override List<string> GetPublishers(GetMetadataFieldArgs args)
+        public override IEnumerable<MetadataProperty> GetPublishers(GetMetadataFieldArgs args)
         {
             GetGameData();
-            if (currentMetadata.GameInfo != null)
+            if (currentMetadata != null)
             {
-                return currentMetadata.GameInfo.Publishers;
+                return currentMetadata.Publishers;
             }
 
             return base.GetPublishers(args);
@@ -216,23 +215,28 @@ namespace UniversalSteamMetadata
         public override ReleaseDate? GetReleaseDate(GetMetadataFieldArgs args)
         {
             GetGameData();
-            if (currentMetadata.GameInfo != null)
+            if (currentMetadata != null)
             {
-                return currentMetadata.GameInfo.ReleaseDate;
+                return currentMetadata.ReleaseDate;
             }
 
             return base.GetReleaseDate(args);
         }
 
-        public override List<string> GetFeatures(GetMetadataFieldArgs args)
+        public override IEnumerable<MetadataProperty> GetFeatures(GetMetadataFieldArgs args)
         {
             GetGameData();
-            if (currentMetadata.GameInfo != null)
+            if (currentMetadata != null)
             {
-                return currentMetadata.GameInfo.Features;
+                return currentMetadata.Features;
             }
 
             return base.GetFeatures(args);
+        }
+
+        public override IEnumerable<MetadataProperty> GetPlatforms(GetMetadataFieldArgs args)
+        {
+            return new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") };
         }
 
         internal void GetGameData()

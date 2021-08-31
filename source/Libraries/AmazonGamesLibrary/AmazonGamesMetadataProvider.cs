@@ -1,5 +1,4 @@
 ﻿using Playnite.SDK;
-using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
@@ -15,14 +14,9 @@ namespace AmazonGamesLibrary
     {
         public override GameMetadata GetMetadata(Game game)
         {
-            var gameInfo = new GameInfo
+            var gameInfo = new GameMetadata
             {
                 Links = new List<Link>()
-            };
-
-            var metadata = new GameMetadata()
-            {
-                GameInfo = gameInfo
             };
 
             gameInfo.Links.Add(new Link("PCGamingWiki", @"http://pcgamingwiki.com/w/index.php?search=" + game.Name));
@@ -37,7 +31,7 @@ namespace AmazonGamesLibrary
                 }
             }
 
-            return metadata;
+            return gameInfo;
         }
     }
 }

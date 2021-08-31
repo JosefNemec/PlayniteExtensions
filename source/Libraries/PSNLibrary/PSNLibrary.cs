@@ -31,19 +31,19 @@ namespace PSNLibrary
             SettingsViewModel = new PSNLibrarySettingsViewModel(this, api);
         }
 
-        private List<string> ParseOldPlatform(PlatformHash ids)
+        private string ParseOldPlatform(PlatformHash ids)
         {
             if (ids.HasFlag(PlatformHash.PS3))
             {
-                return new List<string> { "sony_playstation3" };
+                return "sony_playstation3";
             }
             else if (ids.HasFlag(PlatformHash.PSVITA))
             {
-                return new List<string> { "sony_vita" };
+                return "sony_vita";
             }
             else if (ids.HasFlag(PlatformHash.PSP))
             {
-                return new List<string> { "sony_psp" };
+                return "sony_psp";
             }
 
             return null;
@@ -59,13 +59,13 @@ namespace PSNLibrary
             return Regex.Replace(gameName, @"\s+", " ");
         }
 
-        private List<GameInfo> ParseAccountList(PSNAccountClient clientApi)
+        private List<GameMetadata> ParseAccountList(PSNAccountClient clientApi)
         {
-            var parsedGames = new List<GameInfo>();
+            var parsedGames = new List<GameMetadata>();
             foreach (var title in clientApi.GetAccountTitles().GetAwaiter().GetResult())
             {
                 var gameName = FixGameName(title.name);
-                parsedGames.Add(new GameInfo
+                parsedGames.Add(new GameMetadata
                 {
                     GameId = "#ACCOUNT#" + title.titleId,
                     Name = gameName
@@ -75,9 +75,9 @@ namespace PSNLibrary
             return parsedGames;
         }
 
-        private List<GameInfo> ParseThrophies(PSNAccountClient clientApi)
+        private List<GameMetadata> ParseThrophies(PSNAccountClient clientApi)
         {
-            var parsedGames = new List<GameInfo>();
+            var parsedGames = new List<GameMetadata>();
             foreach (var title in clientApi.GetThropyTitles().GetAwaiter().GetResult())
             {
                 var gameName = FixGameName(title.trophyTitleName);
@@ -85,7 +85,7 @@ namespace PSNLibrary
                     TrimEndString("Trophies", StringComparison.OrdinalIgnoreCase).
                     TrimEndString("Trophy", StringComparison.OrdinalIgnoreCase).
                     Trim();
-                var newGame = new GameInfo
+                var newGame = new GameMetadata
                 {
                     GameId = "#TROPHY#" + title.npCommunicationId,
                     Name = gameName
@@ -93,19 +93,19 @@ namespace PSNLibrary
 
                 if (title.trophyTitlePlatfrom?.Contains("PS4") == true)
                 {
-                    newGame.Platforms = new List<string> { "sony_playstation4" };
+                    newGame.Platforms = new List<MetadataProperty> { new MetadataSpecProperty("sony_playstation4") };
                 }
                 else if (title.trophyTitlePlatfrom?.Contains("PS3") == true)
                 {
-                    newGame.Platforms = new List<string> { "sony_playstation3" };
+                    newGame.Platforms = new List<MetadataProperty> { new MetadataSpecProperty("sony_playstation3") };
                 }
                 else if (title.trophyTitlePlatfrom?.Contains("PSVITA") == true)
                 {
-                    newGame.Platforms = new List<string> { "sony_vita" };
+                    newGame.Platforms = new List<MetadataProperty> { new MetadataSpecProperty("sony_vita") };
                 }
                 else if (title.trophyTitlePlatfrom?.Contains("PSP") == true)
                 {
-                    newGame.Platforms = new List<string> { "sony_psp" };
+                    newGame.Platforms = new List<MetadataProperty> { new MetadataSpecProperty("sony_psp") };
                 }
 
                 parsedGames.Add(newGame);
@@ -114,9 +114,9 @@ namespace PSNLibrary
             return parsedGames;
         }
 
-        private List<GameInfo> ParseDownloadList(PSNAccountClient clientApi)
+        private List<GameMetadata> ParseDownloadList(PSNAccountClient clientApi)
         {
-            var parsedGames = new List<GameInfo>();
+            var parsedGames = new List<GameMetadata>();
             foreach (var item in clientApi.GetDownloadList().GetAwaiter().GetResult())
             {
                 if (item.drm_def?.contentType == "TV")
@@ -133,20 +133,24 @@ namespace PSNLibrary
                     continue;
                 }
 
-                var newGame = new GameInfo();
+                var newGame = new GameMetadata();
                 newGame.GameId = "#DLIST#" + item.id;
 
                 if (item.entitlement_attributes != null) // PS4
                 {
                     newGame.Name = item.game_meta.name;
-                    newGame.Platforms = new List<string> { "sony_playstation4" };
+                    newGame.Platforms = new List<MetadataProperty> { new MetadataSpecProperty("sony_playstation4") };
                 }
                 else if (item.drm_def != null) //PS3, PSP, or Vita
                 {
                     newGame.Name = item.drm_def.contentName;
                     if (item.drm_def.drmContents.HasItems())
                     {
-                        newGame.Platforms = ParseOldPlatform(item.drm_def.drmContents[0].platformIds);
+                        var plat = ParseOldPlatform(item.drm_def.drmContents[0].platformIds);
+                        if (!plat.IsNullOrEmpty())
+                        {
+                            newGame.Platforms = new List<MetadataProperty> { new MetadataSpecProperty(plat) };
+                        }
                     }
                 }
                 else
@@ -189,7 +193,7 @@ namespace PSNLibrary
             try
             {
                 var clientApi = new PSNAccountClient(this);
-                var allGames = new List<GameInfo>();
+                var allGames = new List<GameMetadata>();
                 allGames.AddRange(ParseAccountList(clientApi));
                 allGames.AddRange(ParseThrophies(clientApi));
 
@@ -204,7 +208,7 @@ namespace PSNLibrary
                     var alreadyImported = PlayniteApi.Database.Games.FirstOrDefault(a => a.GameId == game.GameId && a.PluginId == Id);
                     if (alreadyImported == null)
                     {
-                        game.Source = "PlayStation";
+                        game.Source = new MetadataNameProperty("PlayStation");
                         importedGames.Add(PlayniteApi.Database.ImportGame(game, this));
                     }
                 }

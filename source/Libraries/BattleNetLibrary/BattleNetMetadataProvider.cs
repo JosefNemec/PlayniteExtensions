@@ -1,5 +1,4 @@
 ﻿using Playnite.SDK;
-using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
@@ -21,19 +20,13 @@ namespace BattleNetLibrary
                 return null;
             }
 
-            var gameInfo = new GameInfo
+            var gameInfo = new GameMetadata
             {
                 Name = product.Name,
                 Links = new List<Link>(product.Links)
             };
 
             gameInfo.Links.Add(new Link("PCGamingWiki", @"http://pcgamingwiki.com/w/index.php?search=" + product.Name));
-
-            var metadata = new GameMetadata()
-            {
-                GameInfo = gameInfo
-            };
-
             if (!string.IsNullOrEmpty(product.IconUrl))
             {
                 gameInfo.Icon = new MetadataFile(product.IconUrl);
@@ -49,7 +42,7 @@ namespace BattleNetLibrary
                 gameInfo.BackgroundImage = new MetadataFile(product.BackgroundUrl);
             }
 
-            return metadata;
+            return gameInfo;
         }
     }
 }

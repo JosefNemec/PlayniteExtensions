@@ -1,7 +1,6 @@
 ﻿using AngleSharp.Parser.Html;
 using Playnite.Common.Web;
 using Playnite.SDK;
-using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 using Steam;
@@ -48,7 +47,8 @@ namespace UniversalSteamMetadata
                 MetadataField.Publishers,
                 MetadataField.ReleaseDate,
                 MetadataField.Features,
-                MetadataField.Name
+                MetadataField.Name,
+                MetadataField.Platform
             },
             () => new UniversalSteamMetadataSettingsView(),
             null,

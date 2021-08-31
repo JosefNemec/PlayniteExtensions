@@ -33,9 +33,9 @@ namespace EpicLibrary
             TokensPath = Path.Combine(GetPluginUserDataPath(), "tokens.json");
         }
 
-        internal Dictionary<string, GameInfo> GetInstalledGames()
+        internal Dictionary<string, GameMetadata> GetInstalledGames()
         {
-            var games = new Dictionary<string, GameInfo>();
+            var games = new Dictionary<string, GameMetadata>();
             var appList = EpicLauncher.GetInstalledAppList();
             var manifests = EpicLauncher.GetInstalledManifests();
 
@@ -60,14 +60,14 @@ namespace EpicLibrary
                     continue;
                 }
 
-                var game = new GameInfo()
+                var game = new GameMetadata()
                 {
-                    Source = "Epic",
+                    Source = new MetadataNameProperty("Epic"),
                     GameId = app.AppName,
                     Name = manifest?.DisplayName ?? Path.GetFileName(app.InstallLocation),
                     InstallDirectory = manifest?.InstallLocation ?? app.InstallLocation,
                     IsInstalled = true,
-                    Platforms = new List<string> { "pc_windows" }
+                    Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
                 game.Name = game.Name.RemoveTrademarks();
@@ -77,10 +77,10 @@ namespace EpicLibrary
             return games;
         }
 
-        internal List<GameInfo> GetLibraryGames()
+        internal List<GameMetadata> GetLibraryGames()
         {
             var cacheDir = GetCachePath("catalogcache");
-            var games = new List<GameInfo>();
+            var games = new List<GameMetadata>();
             var accountApi = new EpicAccountClient(PlayniteApi, TokensPath);
             var assets = accountApi.GetAssets();
             if (!assets?.Any() == true)
@@ -104,12 +104,12 @@ namespace EpicLibrary
                     continue;
                 }
 
-                var newGame = new GameInfo
+                var newGame = new GameMetadata
                 {
-                    Source = "Epic",
+                    Source = new MetadataNameProperty("Epic"),
                     GameId = gameAsset.appName,
                     Name = catalogItem.title.RemoveTrademarks(),
-                    Platforms = new List<string> { "pc_windows" }
+                    Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
                 var playtimeItem = playtimeItems?.FirstOrDefault(x => x.artifactId == gameAsset.appName);
@@ -124,10 +124,10 @@ namespace EpicLibrary
             return games;
         }
 
-        public override IEnumerable<GameInfo> GetGames(LibraryGetGamesArgs args)
+        public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
         {
-            var allGames = new List<GameInfo>();
-            var installedGames = new Dictionary<string, GameInfo>();
+            var allGames = new List<GameMetadata>();
+            var installedGames = new Dictionary<string, GameMetadata>();
             Exception importError = null;
 
             if (SettingsViewModel.Settings.ImportInstalledGames)

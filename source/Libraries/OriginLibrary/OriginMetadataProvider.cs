@@ -1,7 +1,6 @@
 ﻿using OriginLibrary.Models;
 using OriginLibrary.Services;
 using Playnite.SDK;
-using Playnite.SDK.Metadata;
 using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
@@ -27,7 +26,7 @@ namespace OriginLibrary
         {
             var resources = api.Resources;
             var storeMetadata = DownloadGameMetadata(game.GameId);
-            var gameInfo = new GameInfo
+            var gameInfo = new GameMetadata
             {
                 Name = StringExtensions.NormalizeGameName(storeMetadata.StoreDetails.i18n.displayName),
                 Description = storeMetadata.StoreDetails.i18n.longDescription,
@@ -46,23 +45,18 @@ namespace OriginLibrary
 
             if (!storeMetadata.StoreDetails.publisherFacetKey.IsNullOrEmpty())
             {
-                gameInfo.Publishers = new List<string>() { storeMetadata.StoreDetails.publisherFacetKey };
+                gameInfo.Publishers = new List<MetadataProperty>() { new MetadataNameProperty(storeMetadata.StoreDetails.publisherFacetKey) };
             }
 
             if (!storeMetadata.StoreDetails.developerFacetKey.IsNullOrEmpty())
             {
-                gameInfo.Developers = new List<string>() { storeMetadata.StoreDetails.developerFacetKey };
+                gameInfo.Developers = new List<MetadataProperty>() { new MetadataNameProperty(storeMetadata.StoreDetails.developerFacetKey) };
             }
 
             if (!storeMetadata.StoreDetails.genreFacetKey.IsNullOrEmpty())
             {
-                gameInfo.Genres = new List<string>(storeMetadata.StoreDetails.genreFacetKey?.Split(','));
+                gameInfo.Genres = storeMetadata.StoreDetails.genreFacetKey?.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(a => new MetadataNameProperty(a)).ToList();
             }
-
-            var metadata = new GameMetadata()
-            {
-                GameInfo = gameInfo
-            };
 
             gameInfo.CoverImage = storeMetadata.CoverImage;
             gameInfo.BackgroundImage = storeMetadata.BackgroundImage;
@@ -76,7 +70,7 @@ namespace OriginLibrary
                 game.Manual = storeMetadata.StoreDetails.i18n.gameManualURL;
             }
 
-            return metadata;
+            return gameInfo;
         }
 
         public OriginGameMetadata DownloadGameMetadata(string id)
