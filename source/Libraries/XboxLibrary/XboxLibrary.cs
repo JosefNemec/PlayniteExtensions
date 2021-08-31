@@ -88,7 +88,16 @@ namespace XboxLibrary
                 {
                     try
                     {
-                        items.Add(Serialization.FromJsonFile<TitleHistoryResponse.Title>(file));
+                        var cachCont = Serialization.FromJsonFile<TitleHistoryResponse.Title>(file);
+                        if (cachCont == null)
+                        {
+                            Logger.Error($"Failed to get app info from cache {file}, cache is empty.");
+                            File.Delete(file);
+                        }
+                        else
+                        {
+                            items.Add(cachCont);
+                        }
                     }
                     catch (Exception e)
                     {
