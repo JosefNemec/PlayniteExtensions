@@ -2,6 +2,7 @@
 using Playnite.Common;
 using Playnite.SDK;
 using Playnite.SDK.Data;
+using PlayniteExtensions.Common;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -9,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.Principal;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -133,7 +135,11 @@ namespace EpicLibrary.Services
                     var response = httpClient.PostAsync(oauthUrl, content).GetAwaiter().GetResult();
                     var respContent = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
                     FileSystem.CreateDirectory(Path.GetDirectoryName(tokensPath));
-                    File.WriteAllText(tokensPath, respContent);
+                    Encryption.EncryptToFile(
+                        tokensPath,
+                        respContent,
+                        Encoding.UTF8,
+                        WindowsIdentity.GetCurrent().User.Value);
                 }
             }
         }
@@ -241,7 +247,11 @@ namespace EpicLibrary.Services
                     var response = httpClient.PostAsync(oauthUrl, content).GetAwaiter().GetResult();
                     var respContent = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
                     FileSystem.CreateDirectory(Path.GetDirectoryName(tokensPath));
-                    File.WriteAllText(tokensPath, respContent);
+                    Encryption.EncryptToFile(
+                        tokensPath,
+                        respContent,
+                        Encoding.UTF8,
+                        WindowsIdentity.GetCurrent().User.Value);
                 }
             }
         }
@@ -268,12 +278,23 @@ namespace EpicLibrary.Services
 
         private OauthResponse loadTokens()
         {
-            if (!File.Exists(tokensPath))
+            if (File.Exists(tokensPath))
             {
-                return null;
+                try
+                {
+                    return Serialization.FromJson<OauthResponse>(
+                        Encryption.DecryptFromFile(
+                            tokensPath,
+                            Encoding.UTF8,
+                            WindowsIdentity.GetCurrent().User.Value));
+                }
+                catch (Exception e)
+                {
+                    logger.Error(e, "Failed to load saved tokens.");
+                }
             }
 
-            return Serialization.FromJsonFile<OauthResponse>(tokensPath);
+            return null;
         }
 
         private string getExcahngeToken(string sid)

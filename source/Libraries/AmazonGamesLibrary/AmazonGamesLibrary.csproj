@@ -135,6 +135,9 @@
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Converters\NegateConverter.cs">
       <Link>Shared\NegateConverter.cs</Link>
     </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\Encryption.cs">
+      <Link>Shared\Encryption.cs</Link>
+    </Compile>
     <Compile Include="..\..\Generic\PlayniteExtensions.Common\GlobalCommands.cs">
       <Link>Shared\GlobalCommands.cs</Link>
     </Compile>

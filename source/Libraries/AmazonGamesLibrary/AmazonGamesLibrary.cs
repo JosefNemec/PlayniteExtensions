@@ -17,8 +17,6 @@ namespace AmazonGamesLibrary
     [LoadPlugin]
     public class AmazonGamesLibrary : LibraryPluginBase<AmazonGamesLibrarySettingsViewModel>
     {
-        internal readonly string TokensPath;
-
         public AmazonGamesLibrary(IPlayniteAPI api) : base(
             "Amazon Games",
             Guid.Parse("402674cd-4af6-4886-b6ec-0e695bfa0688"),
@@ -29,7 +27,6 @@ namespace AmazonGamesLibrary
             api)
         {
             SettingsViewModel = new AmazonGamesLibrarySettingsViewModel(this, PlayniteApi);
-            TokensPath = Path.Combine(GetPluginUserDataPath(), "tokens.json");
         }
 
         public override ISettings GetSettings(bool firstRunSettings)

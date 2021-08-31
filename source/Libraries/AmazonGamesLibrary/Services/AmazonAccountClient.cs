@@ -3,11 +3,13 @@ using Microsoft.Win32;
 using Playnite.Common;
 using Playnite.SDK;
 using Playnite.SDK.Data;
+using PlayniteExtensions.Common;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -88,7 +90,11 @@ namespace AmazonGamesLibrary.Services
                 var authData = Serialization.FromJson<DeviceRegistrationResponse>(authResponseContent);
                 if (authData.response?.success != null)
                 {
-                    FileSystem.WriteStringToFile(tokensPath, Serialization.ToJson(authData.response.success.tokens.bearer));
+                    Encryption.EncryptToFile(
+                        tokensPath,
+                        Serialization.ToJson(authData.response.success.tokens.bearer),
+                        Encoding.UTF8,
+                        WindowsIdentity.GetCurrent().User.Value);
                 }
             }
         }
@@ -137,7 +143,18 @@ namespace AmazonGamesLibrary.Services
         {
             if (File.Exists(tokensPath))
             {
-                return Serialization.FromJsonFile<DeviceRegistrationResponse.Response.Success.Tokens.Bearer>(tokensPath);
+                try
+                {
+                    return Serialization.FromJson<DeviceRegistrationResponse.Response.Success.Tokens.Bearer>(
+                        Encryption.DecryptFromFile(
+                            tokensPath,
+                            Encoding.UTF8,
+                            WindowsIdentity.GetCurrent().User.Value));
+                }
+                catch (Exception e)
+                {
+                    logger.Error(e, "Failed to load saved tokens.");
+                }
             }
 
             return null;
@@ -169,7 +186,11 @@ namespace AmazonGamesLibrary.Services
                 var authResponseContent = await authResponse.Content.ReadAsStringAsync();
                 var authData = Serialization.FromJson<DeviceRegistrationResponse.Response.Success.Tokens.Bearer>(authResponseContent);
                 token.access_token = authData.access_token;
-                FileSystem.WriteStringToFile(tokensPath, Serialization.ToJson(token));
+                Encryption.EncryptToFile(
+                    tokensPath,
+                    Serialization.ToJson(token),
+                    Encoding.UTF8,
+                    WindowsIdentity.GetCurrent().User.Value);
                 return token;
             }
         }

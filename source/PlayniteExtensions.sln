@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockstarGamesLibrary", "Lib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayniteExtensions.Common", "Generic\PlayniteExtensions.Common\PlayniteExtensions.Common.csproj", "{EC61901F-C040-4A87-A5A9-7C2C5AD52E7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Tests", "Tests\Common.Tests\Common.Tests.csproj", "{17784809-C96D-473E-8D99-3A543BF5E375}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -179,6 +181,14 @@ Global
 		{EC61901F-C040-4A87-A5A9-7C2C5AD52E7D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EC61901F-C040-4A87-A5A9-7C2C5AD52E7D}.Release|x86.ActiveCfg = Release|Any CPU
 		{EC61901F-C040-4A87-A5A9-7C2C5AD52E7D}.Release|x86.Build.0 = Release|Any CPU
+		{17784809-C96D-473E-8D99-3A543BF5E375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17784809-C96D-473E-8D99-3A543BF5E375}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17784809-C96D-473E-8D99-3A543BF5E375}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{17784809-C96D-473E-8D99-3A543BF5E375}.Debug|x86.Build.0 = Debug|Any CPU
+		{17784809-C96D-473E-8D99-3A543BF5E375}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17784809-C96D-473E-8D99-3A543BF5E375}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17784809-C96D-473E-8D99-3A543BF5E375}.Release|x86.ActiveCfg = Release|Any CPU
+		{17784809-C96D-473E-8D99-3A543BF5E375}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -200,6 +210,7 @@ Global
 		{A54423D1-8E7A-4339-B0D5-24E7CEFE469B} = {80CE6DFD-BE10-4777-8005-80F696AFBF4A}
 		{183FAF1B-0385-469D-8465-6F21076BF7B6} = {A9C6FD0F-15CE-42F2-A571-E8CECDD8AB06}
 		{EC61901F-C040-4A87-A5A9-7C2C5AD52E7D} = {C77D2B41-0C67-4B0E-944B-0F0472613247}
+		{17784809-C96D-473E-8D99-3A543BF5E375} = {E32AA297-4F61-4BA6-9A77-91EA1B1C2EAF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4096CF0F-E5B3-451F-9AED-D1493D1657B4}

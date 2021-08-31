@@ -1,12 +1,14 @@
 ﻿using Playnite.Common;
 using Playnite.SDK;
 using Playnite.SDK.Data;
+using PlayniteExtensions.Common;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -78,7 +80,11 @@ namespace XboxLibrary.Services
                     UserId = fragments["user_id"]
                 };
 
-                FileSystem.WriteStringToFile(liveTokensPath, Serialization.ToJson(liveLoginData));
+                Encryption.EncryptToFile(
+                    liveTokensPath,
+                    Serialization.ToJson(liveLoginData),
+                    Encoding.UTF8,
+                    WindowsIdentity.GetCurrent().User.Value);
                 await Authenticate(liveLoginData.AccessToken);
             }
         }
@@ -92,7 +98,21 @@ namespace XboxLibrary.Services
                     return false;
                 }
 
-                var tokens = Serialization.FromJsonFile<AuthorizationData>(xstsLoginTokesPath);
+                AuthorizationData tokens;
+                try
+                {
+                    tokens = Serialization.FromJson<AuthorizationData>(
+                        Encryption.DecryptFromFile(
+                            xstsLoginTokesPath,
+                            Encoding.UTF8,
+                            WindowsIdentity.GetCurrent().User.Value));
+                }
+                catch (Exception e)
+                {
+                    logger.Error(e, "Failed to load saved tokens.");
+                    return false;
+                }
+
                 using (var client = new HttpClient())
                 {
                     SetAuthenticationHeaders(client.DefaultRequestHeaders, tokens);
@@ -143,14 +163,31 @@ namespace XboxLibrary.Services
                 var atrzResponseContent = await atrzResponse.Content.ReadAsStringAsync();
                 var atrzTokens = Serialization.FromJson<AuthorizationData>(atrzResponseContent);
 
-                FileSystem.WriteStringToFile(xstsLoginTokesPath, atrzResponseContent);
+                Encryption.EncryptToFile(
+                    xstsLoginTokesPath,
+                    atrzResponseContent,
+                    Encoding.UTF8,
+                    WindowsIdentity.GetCurrent().User.Value);
             }
         }
 
         internal async Task RefreshTokens()
         {
             logger.Debug("Refreshing xbox tokens.");
-            var tokens = Serialization.FromJsonFile<AuthenticationData>(liveTokensPath);
+            AuthenticationData tokens = null;
+            try
+            {
+                tokens = Serialization.FromJson<AuthenticationData>(
+                    Encryption.DecryptFromFile(
+                        liveTokensPath,
+                        Encoding.UTF8,
+                        WindowsIdentity.GetCurrent().User.Value));
+            }
+            catch (Exception e)
+            {
+                logger.Error(e, "Failed to load saved tokens.");
+                return;
+            }
 
             var query = HttpUtility.ParseQueryString(string.Empty);
             query.Add("grant_type", "refresh_token");
@@ -168,7 +205,11 @@ namespace XboxLibrary.Services
                     var response = Serialization.FromJson<RefreshTokenResponse>(responseContent);
                     tokens.AccessToken = response.access_token;
                     tokens.RefreshToken = response.refresh_token;
-                    FileSystem.WriteStringToFile(liveTokensPath, Serialization.ToJson(tokens));
+                    Encryption.EncryptToFile(
+                        liveTokensPath,
+                        Serialization.ToJson(tokens),
+                        Encoding.UTF8,
+                        WindowsIdentity.GetCurrent().User.Value);
                     await Authenticate(tokens.AccessToken);
                 }
             }
@@ -194,7 +235,12 @@ namespace XboxLibrary.Services
                 }
             }
 
-            var tokens = Serialization.FromJsonFile<AuthorizationData>(xstsLoginTokesPath);
+            var tokens = GetSavedXstsTokens();
+            if (tokens == null)
+            {
+                throw new Exception("User is not authenticated.");
+            }
+
             using (var client = new HttpClient())
             {
                 SetAuthenticationHeaders(client.DefaultRequestHeaders, tokens);
@@ -214,7 +260,12 @@ namespace XboxLibrary.Services
 
         public async Task<TitleHistoryResponse.Title> GetTitleInfo(string pfn)
         {
-            var tokens = Serialization.FromJsonFile<AuthorizationData>(xstsLoginTokesPath);
+            var tokens = GetSavedXstsTokens();
+            if (tokens == null)
+            {
+                throw new Exception("User is not authenticated.");
+            }
+
             using (var client = new HttpClient())
             {
                 SetAuthenticationHeaders(client.DefaultRequestHeaders, tokens);
@@ -250,6 +301,23 @@ namespace XboxLibrary.Services
             headers.Add("x-xbl-contract-version", "2");
             headers.Add("Authorization", $"XBL3.0 x={auth.DisplayClaims.xui[0].uhs};{auth.Token}");
             headers.Add("Accept-Language", "en-US");
+        }
+
+        AuthorizationData GetSavedXstsTokens()
+        {
+            try
+            {
+                return Serialization.FromJson<AuthorizationData>(
+                    Encryption.DecryptFromFile(
+                        xstsLoginTokesPath,
+                        Encoding.UTF8,
+                        WindowsIdentity.GetCurrent().User.Value));
+            }
+            catch (Exception e)
+            {
+                logger.Error(e, "Failed to load saved tokens.");
+                return null;
+            }
         }
     }
 }

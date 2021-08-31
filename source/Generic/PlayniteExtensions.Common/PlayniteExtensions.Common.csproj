@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Encryption.cs" />
     <Compile Include="PluginBase.cs" />
     <Compile Include="PluginSettingsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
