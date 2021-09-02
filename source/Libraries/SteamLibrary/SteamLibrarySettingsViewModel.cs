@@ -28,6 +28,7 @@ namespace SteamLibrary
     {
         public int Version { get; set; }
         public bool DownloadVerticalCovers { get; set; } = true;
+        public bool DownloadFallbackBannerCovers { get; set; } = false;
         public bool ImportInstalledGames { get; set; } = true;
         public bool ConnectAccount { get; set; } = false;
         public bool ImportUninstalledGames { get; set; } = false;

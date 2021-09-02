@@ -124,7 +124,8 @@ namespace Steam
         internal SteamGameMetadata DownloadGameMetadata(
             uint appId,
             BackgroundSource backgroundSource,
-            bool downloadVerticalCovers)
+            bool downloadVerticalCovers,
+            bool downloadFallbackBannerCovers)
         {
             var metadata = new SteamGameMetadata();
             var productInfo = GetAppInfo(appId);
@@ -175,7 +176,7 @@ namespace Steam
                 }
             }
 
-            // Image
+            // Cover Image
             var useBanner = false;
             if (downloadVerticalCovers)
             {
@@ -185,7 +186,7 @@ namespace Steam
                 {
                     metadata.CoverImage = new MetadataFile(imageUrl);
                 }
-                else
+                else if (downloadFallbackBannerCovers)
                 {
                     useBanner = true;
                 }
@@ -201,7 +202,7 @@ namespace Steam
                 }
             }
 
-            if (metadata.CoverImage == null)
+            if (metadata.CoverImage == null && downloadFallbackBannerCovers)
             {
                 if (productInfo != null)
                 {
@@ -268,9 +269,10 @@ namespace Steam
         public SteamGameMetadata GetGameMetadata(
             uint appId,
             BackgroundSource backgroundSource,
-            bool downloadVerticalCovers)
+            bool downloadVerticalCovers,
+            bool downloadFallbackBannerCovers)
         {
-            var metadata = DownloadGameMetadata(appId, backgroundSource, downloadVerticalCovers);
+            var metadata = DownloadGameMetadata(appId, backgroundSource, downloadVerticalCovers, downloadFallbackBannerCovers);
             metadata.Name = metadata.ProductDetails?["common"]["name"]?.Value ?? metadata.StoreDetails?.name;
             metadata.Links = new List<Link>()
             {
