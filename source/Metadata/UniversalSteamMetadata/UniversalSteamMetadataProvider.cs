@@ -255,7 +255,8 @@ namespace UniversalSteamMetadata
                     currentMetadata = metadataProvider.GetGameMetadata(
                         appId,
                         plugin.SettingsViewModel.Settings.BackgroundSource,
-                        plugin.SettingsViewModel.Settings.DownloadVerticalCovers);
+                        plugin.SettingsViewModel.Settings.DownloadVerticalCovers,
+                        plugin.SettingsViewModel.Settings.DownloadFallbackBannerCovers);
                 }
                 else
                 {
@@ -267,7 +268,8 @@ namespace UniversalSteamMetadata
                             currentMetadata = metadataProvider.GetGameMetadata(
                                 matchedId,
                                 plugin.SettingsViewModel.Settings.BackgroundSource,
-                                plugin.SettingsViewModel.Settings.DownloadVerticalCovers);
+                                plugin.SettingsViewModel.Settings.DownloadVerticalCovers,
+                                plugin.SettingsViewModel.Settings.DownloadFallbackBannerCovers);
                         }
                         else
                         {
@@ -319,7 +321,8 @@ namespace UniversalSteamMetadata
                             currentMetadata = metadataProvider.GetGameMetadata(
                                 ((StoreSearchResult)selectedGame).GameId,
                                 plugin.SettingsViewModel.Settings.BackgroundSource,
-                                plugin.SettingsViewModel.Settings.DownloadVerticalCovers);
+                                plugin.SettingsViewModel.Settings.DownloadVerticalCovers,
+                                plugin.SettingsViewModel.Settings.DownloadFallbackBannerCovers);
                         }
                     }
                 }

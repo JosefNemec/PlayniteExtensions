@@ -11,6 +11,7 @@ namespace UniversalSteamMetadata
     public class UniversalSteamMetadataSettings
     {
         public bool DownloadVerticalCovers { get; set; } = true;
+        public bool DownloadFallbackBannerCovers { get; set; } = false;
         public BackgroundSource BackgroundSource { get; set; } = BackgroundSource.Image;
     }
 

@@ -18,8 +18,10 @@
     </UserControl.Resources>
 
     <StackPanel Margin="20">
-        <CheckBox Content="Use new vertical cover images"
+        <CheckBox Name="CheckUseVerticalCovers" Content="Use new vertical cover images"
                   IsChecked="{Binding Settings.DownloadVerticalCovers}" />
+        <CheckBox Content="Download banner cover when vertical image could not be obtained" IsEnabled="{Binding IsChecked, ElementName=CheckUseVerticalCovers}"
+                  IsChecked="{Binding Settings.DownloadFallbackBannerCovers}" Margin="40,10,0,5" />
 
         <TextBlock Text="Background image source:" VerticalAlignment="Center" Margin="0,10,0,10" />
 
