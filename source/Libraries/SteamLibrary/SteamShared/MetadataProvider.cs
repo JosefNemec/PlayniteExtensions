@@ -175,8 +175,7 @@ namespace Steam
                 }
             }
 
-            // Image
-            var useBanner = false;
+            // Cover Image
             if (downloadVerticalCovers)
             {
                 var imageRoot = @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/library_600x900_2x.jpg";
@@ -185,33 +184,14 @@ namespace Steam
                 {
                     metadata.CoverImage = new MetadataFile(imageUrl);
                 }
-                else
-                {
-                    useBanner = true;
-                }
             }
-
-            if (useBanner || !downloadVerticalCovers)
+            else
             {
                 var imageRoot = @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/header.jpg";
                 var imageUrl = string.Format(imageRoot, appId);
                 if (HttpDownloader.GetResponseCode(imageUrl) == HttpStatusCode.OK)
                 {
                     metadata.CoverImage = new MetadataFile(imageUrl);
-                }
-            }
-
-            if (metadata.CoverImage == null)
-            {
-                if (productInfo != null)
-                {
-                    var imageRoot = @"https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/{0}/{1}.jpg";
-                    var image = productInfo["common"]["logo"];
-                    if (!string.IsNullOrEmpty(image.Value))
-                    {
-                        var imageUrl = string.Format(imageRoot, appId, image.Value);
-                        metadata.CoverImage = new MetadataFile(imageUrl);
-                    }
                 }
             }
 
