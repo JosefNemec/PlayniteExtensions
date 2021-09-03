@@ -1,8 +1,8 @@
 AddonId: ItchioLibrary_Builtin
 Packages:
   - Version: 2.0
-    RequiredApiVersion: 5.6.0
-    ReleaseDate: 2021-01-25
-    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/test_0.1/ItchioLibrary_Builtin_2_0.pext
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2021-09-03
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/1.0/ItchioLibrary_Builtin_2_0.pext
     Changelog:
       - Playnite 9 support

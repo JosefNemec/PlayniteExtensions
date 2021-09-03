@@ -1,0 +1,8 @@
+AddonId: Playnite_builtin_ClassicDesktopPlain
+Packages:
+  - Version: 2.0
+    RequiredApiVersion: 2.0.0
+    ReleaseDate: 2021-09-03
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/1.0/Playnite_builtin_ClassicDesktopPlain_2_0.pthm
+    Changelog:
+      - Playnite 9 support

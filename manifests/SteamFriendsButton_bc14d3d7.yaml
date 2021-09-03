@@ -1,8 +1,0 @@
-AddonId: SteamFriendsButton_bc14d3d7
-Packages:
-  - Version: 1.0
-    RequiredApiVersion: 5.6.0
-    ReleaseDate: 2021-04-23
-    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/test_0.1/SteamFriendsButton_bc14d3d7_1_0.pext
-    Changelog:
-      - Initial release
