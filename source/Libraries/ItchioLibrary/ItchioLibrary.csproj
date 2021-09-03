@@ -59,52 +59,52 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\Fileapi.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\Fileapi.cs">
       <Link>Shared\Native\Fileapi.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\Gdi32.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\Gdi32.cs">
       <Link>Shared\Native\Gdi32.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\Kernel32.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\Kernel32.cs">
       <Link>Shared\Native\Kernel32.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\Ntdll.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\Ntdll.cs">
       <Link>Shared\Native\Ntdll.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\Powrprof.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\Powrprof.cs">
       <Link>Shared\Native\Powrprof.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\Processthreadsapi.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\Processthreadsapi.cs">
       <Link>Shared\Native\Processthreadsapi.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\Psapi.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\Psapi.cs">
       <Link>Shared\Native\Psapi.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\Shell32.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\Shell32.cs">
       <Link>Shared\Native\Shell32.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\Shlwapi.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\Shlwapi.cs">
       <Link>Shared\Native\Shlwapi.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\User32.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\User32.cs">
       <Link>Shared\Native\User32.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\Winbase.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\Winbase.cs">
       <Link>Shared\Native\Winbase.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\Windef.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\Windef.cs">
       <Link>Shared\Native\Windef.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\WinError.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\WinError.cs">
       <Link>Shared\Native\WinError.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\Wingdi.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\Wingdi.cs">
       <Link>Shared\Native\Wingdi.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\Winnt.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\Winnt.cs">
       <Link>Shared\Native\Winnt.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\playnite\source\playnite\native\winuser.cs">
+    <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\winuser.cs">
       <Link>Shared\Native\winuser.cs</Link>
     </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\common\extensions\Enums.cs">
