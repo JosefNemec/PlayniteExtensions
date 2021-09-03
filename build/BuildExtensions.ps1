@@ -1,3 +1,5 @@
+#Requires -Modules powershell-yaml
+
 param(
     [ValidateSet("Release", "Debug")]
     [string]$Configuration = "Release",    
