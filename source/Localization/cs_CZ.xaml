@@ -1,71 +1,74 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-    <sys:String x:Key="LOCSettingsImportInstalledLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsImportUninstalledLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsConnectAccount"></sys:String>
-    <sys:String x:Key="LOCLoginChecking"></sys:String>
-    <sys:String x:Key="LOCLoggedIn"></sys:String>
-    <sys:String x:Key="LOCNotLoggedIn"></sys:String>
-    <sys:String x:Key="LOCNotLoggedInError"></sys:String>
-    <sys:String x:Key="LOCAuthenticateLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsStartGameDirectly"></sys:String>
-    <sys:String x:Key="LOCTroubleShootingAccountLink"></sys:String>
-    <sys:String x:Key="LOCTroubleShootingIssues"></sys:String>
-    <sys:String x:Key="LOCSettingsImportLibraryLabel"></sys:String>
-    <sys:String x:Key="LOCPrivateAccount"></sys:String>
-    <sys:String x:Key="LOCPublicAccount"></sys:String>
-    <sys:String x:Key="LOCAPIKey"></sys:String>
+    <sys:String x:Key="LOCSettingsImportInstalledLabel">Importovat nainstalované hry</sys:String>
+    <sys:String x:Key="LOCSettingsImportUninstalledLabel">Importovat neinstalované hry</sys:String>
+    <sys:String x:Key="LOCSettingsConnectAccount">Připojit účet</sys:String>
+    <sys:String x:Key="LOCLoginChecking">Ověřuji stav přihlášení…</sys:String>
+    <sys:String x:Key="LOCLoggedIn">Uživatel je přihlášen</sys:String>
+    <sys:String x:Key="LOCNotLoggedIn">Vyžaduje přihlášení</sys:String>
+    <sys:String x:Key="LOCNotLoggedInError">Přihlášení se nezdařilo.</sys:String>
+    <sys:String x:Key="LOCAuthenticateLabel">Autentizovat</sys:String>
+    <sys:String x:Key="LOCSettingsStartGameDirectly">Spustit hru přímo bez použití oficiálního klienta</sys:String>
+    <sys:String x:Key="LOCTroubleShootingAccountLink">Řešení problémů se synchronizací účtu</sys:String>
+    <sys:String x:Key="LOCTroubleShootingIssues">Řešení potíží</sys:String>
+    <sys:String x:Key="LOCSettingsImportLibraryLabel">Importovat všechny hry</sys:String>
+    <sys:String x:Key="LOCPrivateAccount">Soukromý Účet</sys:String>
+    <sys:String x:Key="LOCPublicAccount">Veřejný Účet</sys:String>
+    <sys:String x:Key="LOCAPIKey">API Klíč</sys:String>
     <!--itch.io-->
-    <sys:String x:Key="LOCItchioSignInNotif"></sys:String>
-    <sys:String x:Key="LOCItchioSignInWaitMessage"></sys:String>
-    <sys:String x:Key="LOCItchioClientNotInstalledError"></sys:String>
+    <sys:String x:Key="LOCItchioSignInNotif">Bude spuštěno itch.io. Prosím přihlašte se a pak zavřete tuto zprávu.</sys:String>
+    <sys:String x:Key="LOCItchioSignInWaitMessage">Čekám na přihlášení uživatele, zavřete prosím toto okno, až budete hotovi...</sys:String>
+    <sys:String x:Key="LOCItchioClientNotInstalledError">Aplikace itch.io verze 25 nebo vyšší není nainstalována.</sys:String>
     <!--GOG-->
-    <sys:String x:Key="LOCGOGUseLogin"></sys:String>
-    <sys:String x:Key="LOCGOGUseAccountName"></sys:String>
-    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxy"></sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip"></sys:String>
+    <sys:String x:Key="LOCGOGUseLogin">Přihlášení k Účtu</sys:String>
+    <sys:String x:Key="LOCGOGUseAccountName">Název Účtu</sys:String>
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Pro synchronizaci celé knihovny se přihlaste do svého účtu nebo zadejte veřejné jméno účtu.
+Připomínáme, že možnost zadání jména účtu funguje pouze pro ty účty, které mají v nastavení GOG v sekci soukromí nastavenou veřejnou viditelnost knihovny.</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxy">Spustit hry pomocí klienta GOG Galaxy</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Toto umožní schopnosti GOG Galaxy jako cloud ukládání, sledování herního času atd.</sys:String>
     <!--Steam-->
-    <sys:String x:Key="LOCSettingsWhatsSteamName"></sys:String>
-    <sys:String x:Key="LOCSteamCustomUrlName"></sys:String>
-    <sys:String x:Key="LOCSteamLoggedInUser"></sys:String>
-    <sys:String x:Key="LOCSteamRequiresApiKey"></sys:String>
-    <sys:String x:Key="LOCSteamLinksCommunityHub"></sys:String>
-    <sys:String x:Key="LOCSteamLinksDiscussions"></sys:String>
-    <sys:String x:Key="LOCSteamLinksGuides"></sys:String>
-    <sys:String x:Key="LOCSteamLinksWorkshop"></sys:String>
-    <sys:String x:Key="LOCSteamUseVerticalCovers"></sys:String>
-    <sys:String x:Key="LOCSteamImportFreeSubGames"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarn"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportError"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportError"></sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyTooltip"></sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyUrlText"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamImportMetadata"></sys:String>
-    <sys:String x:Key="LOCImportSteamCategoriesLabel"></sys:String>
-    <sys:String x:Key="LOCImportSteamLastActivityLabel"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSource"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceImage"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceStore"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceBanner"></sys:String>
+    <sys:String x:Key="LOCSettingsWhatsSteamName">Jaké je jméno mého účtu?</sys:String>
+    <sys:String x:Key="LOCSteamCustomUrlName">Jméno URL Účtu</sys:String>
+    <sys:String x:Key="LOCSteamLoggedInUser">Přihlášený Uživatel</sys:String>
+    <sys:String x:Key="LOCSteamRequiresApiKey">Účet je soukromý, je vyžadován API Klíč.</sys:String>
+    <sys:String x:Key="LOCSteamLinksCommunityHub">Komunitní Centrum</sys:String>
+    <sys:String x:Key="LOCSteamLinksDiscussions">Diskuze</sys:String>
+    <sys:String x:Key="LOCSteamLinksGuides">Návody</sys:String>
+    <sys:String x:Key="LOCSteamLinksWorkshop">Dílna</sys:String>
+    <sys:String x:Key="LOCSteamUseVerticalCovers">Stáhnout svislé obrázky obálek</sys:String>
+    <sys:String x:Key="LOCSteamImportFreeSubGames">Importovat obecné bezplatné předměty</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarn">Tato operace přepíše existující kategorie a také skrytý a oblíbený status u všech Steam her. Chcete pokračovat?</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Importovat Kategorie?</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Nelze importovat kategorie, účet pro import není vybrán.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Nelze importovat kategorie, databáze není otevřená.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportError">Nepodařilo se importovat Steam kategorie: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">Nelze importovat čas posledního spuštění, účet pro import není vybrán.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">Nelze importovat čas posledního spuštění, databáze není otevřená.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportError">Nepodařilo se importovat čas posledního spuštění ze Steamu: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyTooltip">Pro soukromé účty na Steamu je vyžadován API Klíč</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyUrlText">Získat API klíč</sys:String>
+    <sys:String x:Key="LOCSettingsSteamImportMetadata">Importovat metadata z účtu Steam:</sys:String>
+    <sys:String x:Key="LOCImportSteamCategoriesLabel">Importovat kategorie ze Steamu</sys:String>
+    <sys:String x:Key="LOCImportSteamLastActivityLabel">Importovat čas posledního spuštění ze Steamu</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSource">Zdroj obrázku na pozadí:</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceImage">Obrázek Hry</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Snímek obrazovky z obchodu</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceStore">Pozadí z obchodu</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton">Zobrazit ikonu přátel na horním panelu</sys:String>
     <!--IGDB-->
-    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"></sys:String>
-    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>
-    <sys:String x:Key="LOCIgdbSelectBackgroundTitle"></sys:String>
+    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Použít snímek z hry pokud není k dispozici obrázek</sys:String>
+    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Pokud je k dispozici víc obrázků, použít:</sys:String>
+    <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Vyberte obrázek pozadí pro {0}</sys:String>
     <!--Humble-->
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames"></sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorovat hry z obchodů třetích stran</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Importovat Trove hry</sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Povolte pro přeskočení importu her, které vyžadují klienty třetích stran,
+včetně obchodů již spravovaných v Playnite, pro zabránění duplikátům.</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importovat, pokud je k dispozici verze bez DRM</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importovat hry vyžadující klient třetí strany, pokud je také dostupná verze bez DRM.</sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
-    <sys:String x:Key="LOCXboxImport360Games"></sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames"></sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Spustit aplikaci Xbox Pass namísto Microsoft Store při otevírání klienta</sys:String>
+    <sys:String x:Key="LOCXboxImport360Games">Importovat Xbox 360 hry</sys:String>
+    <sys:String x:Key="LOCXboxImportXboneGames">Importovat Xbox One hry</sys:String>
 </ResourceDictionary>

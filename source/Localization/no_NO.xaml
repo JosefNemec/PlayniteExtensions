@@ -1,71 +1,74 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-    <sys:String x:Key="LOCSettingsImportInstalledLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsImportUninstalledLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsConnectAccount"></sys:String>
-    <sys:String x:Key="LOCLoginChecking"></sys:String>
-    <sys:String x:Key="LOCLoggedIn"></sys:String>
-    <sys:String x:Key="LOCNotLoggedIn"></sys:String>
-    <sys:String x:Key="LOCNotLoggedInError"></sys:String>
-    <sys:String x:Key="LOCAuthenticateLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsStartGameDirectly"></sys:String>
-    <sys:String x:Key="LOCTroubleShootingAccountLink"></sys:String>
-    <sys:String x:Key="LOCTroubleShootingIssues"></sys:String>
-    <sys:String x:Key="LOCSettingsImportLibraryLabel"></sys:String>
-    <sys:String x:Key="LOCPrivateAccount"></sys:String>
-    <sys:String x:Key="LOCPublicAccount"></sys:String>
-    <sys:String x:Key="LOCAPIKey"></sys:String>
+    <sys:String x:Key="LOCSettingsImportInstalledLabel">Importer installerte spill</sys:String>
+    <sys:String x:Key="LOCSettingsImportUninstalledLabel">Importer spill som ikke er installert</sys:String>
+    <sys:String x:Key="LOCSettingsConnectAccount">Tilknytt konto</sys:String>
+    <sys:String x:Key="LOCLoginChecking">Kontrollerer autentiseringsstatus …</sys:String>
+    <sys:String x:Key="LOCLoggedIn">Brukeren er autentisert</sys:String>
+    <sys:String x:Key="LOCNotLoggedIn">Krever autentisering</sys:String>
+    <sys:String x:Key="LOCNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
+    <sys:String x:Key="LOCAuthenticateLabel">Autentiser</sys:String>
+    <sys:String x:Key="LOCSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
+    <sys:String x:Key="LOCTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
+    <sys:String x:Key="LOCTroubleShootingIssues">Feilsøking av problemer</sys:String>
+    <sys:String x:Key="LOCSettingsImportLibraryLabel">Importer alle spill</sys:String>
+    <sys:String x:Key="LOCPrivateAccount">Privat konto</sys:String>
+    <sys:String x:Key="LOCPublicAccount">Offentlig konto</sys:String>
+    <sys:String x:Key="LOCAPIKey">API-nøkkel</sys:String>
     <!--itch.io-->
-    <sys:String x:Key="LOCItchioSignInNotif"></sys:String>
-    <sys:String x:Key="LOCItchioSignInWaitMessage"></sys:String>
-    <sys:String x:Key="LOCItchioClientNotInstalledError"></sys:String>
+    <sys:String x:Key="LOCItchioSignInNotif">itch.io-klienten vil starte. Vennligst logg inn, og lukk deretter denne meldingen.</sys:String>
+    <sys:String x:Key="LOCItchioSignInWaitMessage">Venter på at brukeren skal logge inn. Vennligst lukk dette vinduet når du er ferdig …</sys:String>
+    <sys:String x:Key="LOCItchioClientNotInstalledError">Versjon 25 eller nyere av itch.io-klienten er ikke installert.</sys:String>
     <!--GOG-->
-    <sys:String x:Key="LOCGOGUseLogin"></sys:String>
-    <sys:String x:Key="LOCGOGUseAccountName"></sys:String>
-    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxy"></sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip"></sys:String>
+    <sys:String x:Key="LOCGOGUseLogin">Kontopålogging</sys:String>
+    <sys:String x:Key="LOCGOGUseAccountName">Kontonavn</sys:String>
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Logg inn på kontoen din eller bruk det offentlige kontonavnet for å synkronisere hele biblioteket.
+Merk at alternativet Kontonavn bare fungerer for kontoer der spillbibliotekene er gjort offentlig synlige i GOGs personverninnstillinger.</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxy">Start spill ved hjelp av GOG Galaxy-klienten</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Dette vil aktivere GOG Galaxy-funksjoner som skylagring, sporing av spilletid osv.</sys:String>
     <!--Steam-->
-    <sys:String x:Key="LOCSettingsWhatsSteamName"></sys:String>
-    <sys:String x:Key="LOCSteamCustomUrlName"></sys:String>
-    <sys:String x:Key="LOCSteamLoggedInUser"></sys:String>
-    <sys:String x:Key="LOCSteamRequiresApiKey"></sys:String>
-    <sys:String x:Key="LOCSteamLinksCommunityHub"></sys:String>
-    <sys:String x:Key="LOCSteamLinksDiscussions"></sys:String>
-    <sys:String x:Key="LOCSteamLinksGuides"></sys:String>
-    <sys:String x:Key="LOCSteamLinksWorkshop"></sys:String>
-    <sys:String x:Key="LOCSteamUseVerticalCovers"></sys:String>
-    <sys:String x:Key="LOCSteamImportFreeSubGames"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarn"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportError"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportError"></sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyTooltip"></sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyUrlText"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamImportMetadata"></sys:String>
-    <sys:String x:Key="LOCImportSteamCategoriesLabel"></sys:String>
-    <sys:String x:Key="LOCImportSteamLastActivityLabel"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSource"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceImage"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceStore"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceBanner"></sys:String>
+    <sys:String x:Key="LOCSettingsWhatsSteamName">Hva er kontonavnet mitt?</sys:String>
+    <sys:String x:Key="LOCSteamCustomUrlName">URL-navn for konto</sys:String>
+    <sys:String x:Key="LOCSteamLoggedInUser">Autentisert bruker</sys:String>
+    <sys:String x:Key="LOCSteamRequiresApiKey">Kontoen er privat og API-nøkkel kreves.</sys:String>
+    <sys:String x:Key="LOCSteamLinksCommunityHub">Samfunnssentral</sys:String>
+    <sys:String x:Key="LOCSteamLinksDiscussions">Diskusjoner</sys:String>
+    <sys:String x:Key="LOCSteamLinksGuides">Guider</sys:String>
+    <sys:String x:Key="LOCSteamLinksWorkshop">Verksted</sys:String>
+    <sys:String x:Key="LOCSteamUseVerticalCovers">Last ned vertikale omslagsbilder</sys:String>
+    <sys:String x:Key="LOCSteamImportFreeSubGames">Importer generiske gratisgjenstander</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarn">Dette vil overskrive eksisterende kategorier samt alle valg av favoritter og skjulte titler blant alle Steam-spill. Vil du fortsette?</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Importer kategorier?</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Kan ikke importere kategorier fordi konto for import ikke er valgt.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Kan ikke importere kategorier fordi databasen ikke er åpnet.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportError">Kunne ikke importere Steam-kategorier: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">Kan ikke importere sist spilt-informasjon fordi importkonto er ikke valgt.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">Kan ikke importere sist spilt-informasjon fordi databasen ikke er åpnet.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportError">Kunne ikke importere sist spilt-informasjon fra Steam: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyTooltip">API-nøkkel kreves for private kontoer på Steam</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyUrlText">Få API-nøkkel</sys:String>
+    <sys:String x:Key="LOCSettingsSteamImportMetadata">Importer metadata fra Steam-konto:</sys:String>
+    <sys:String x:Key="LOCImportSteamCategoriesLabel">Importer Steam-kategorier</sys:String>
+    <sys:String x:Key="LOCImportSteamLastActivityLabel">Importer sist spilt-data fra Steam</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSource">Kilde for bakgrunnsbilde:</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceImage">Spillbilde</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Butikk-skjermbilde</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceStore">Butikk-bakgrunn</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton">Vis Friends-knapp i toppanelet</sys:String>
     <!--IGDB-->
-    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"></sys:String>
-    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>
-    <sys:String x:Key="LOCIgdbSelectBackgroundTitle"></sys:String>
+    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Bruk skjermbilder hvis bildemateriale ikke er tilgjengelig</sys:String>
+    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Hvis flere bilder er tilgjengelige, bruk:</sys:String>
+    <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Velg bakgrunnsbilde for {0}</sys:String>
     <!--Humble-->
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames"></sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorer tredjeparts butikkspill</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Importer Trove-spill</sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Aktiver for å hoppe over import av spill som krever tredjepartsklienter,
+inkludert butikker som allerede er administrert i Playnite, for å forhindre duplikater.</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importer hvis DRM-fri versjon er tilgjengelig</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importer spill som krever tredjepartsklient hvis DRM-fri versjon også er tilgjengelig.</sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
-    <sys:String x:Key="LOCXboxImport360Games"></sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames"></sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Start Xbox Game Pass-appen i stedet for Microsoft Store når du åpner klienten</sys:String>
+    <sys:String x:Key="LOCXboxImport360Games">Importer Xbox 360-spill</sys:String>
+    <sys:String x:Key="LOCXboxImportXboneGames">Importer Xbox One-spill</sys:String>
 </ResourceDictionary>

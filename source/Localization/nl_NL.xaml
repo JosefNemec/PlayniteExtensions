@@ -1,71 +1,74 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-    <sys:String x:Key="LOCSettingsImportInstalledLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsImportUninstalledLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsConnectAccount"></sys:String>
-    <sys:String x:Key="LOCLoginChecking"></sys:String>
-    <sys:String x:Key="LOCLoggedIn"></sys:String>
-    <sys:String x:Key="LOCNotLoggedIn"></sys:String>
-    <sys:String x:Key="LOCNotLoggedInError"></sys:String>
-    <sys:String x:Key="LOCAuthenticateLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsStartGameDirectly"></sys:String>
-    <sys:String x:Key="LOCTroubleShootingAccountLink"></sys:String>
-    <sys:String x:Key="LOCTroubleShootingIssues"></sys:String>
-    <sys:String x:Key="LOCSettingsImportLibraryLabel"></sys:String>
-    <sys:String x:Key="LOCPrivateAccount"></sys:String>
-    <sys:String x:Key="LOCPublicAccount"></sys:String>
-    <sys:String x:Key="LOCAPIKey"></sys:String>
+    <sys:String x:Key="LOCSettingsImportInstalledLabel">Importeer geïnstalleerde spellen</sys:String>
+    <sys:String x:Key="LOCSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
+    <sys:String x:Key="LOCSettingsConnectAccount">Accounts koppelen</sys:String>
+    <sys:String x:Key="LOCLoginChecking">Verificatiestatus aan het controleren...</sys:String>
+    <sys:String x:Key="LOCLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+    <sys:String x:Key="LOCNotLoggedIn">Verificatie vereist</sys:String>
+    <sys:String x:Key="LOCNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+    <sys:String x:Key="LOCAuthenticateLabel">Verifiëren</sys:String>
+    <sys:String x:Key="LOCSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
+    <sys:String x:Key="LOCTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
+    <sys:String x:Key="LOCTroubleShootingIssues">Probleemoplossing</sys:String>
+    <sys:String x:Key="LOCSettingsImportLibraryLabel">Importeer alle spellen</sys:String>
+    <sys:String x:Key="LOCPrivateAccount">Privé-account</sys:String>
+    <sys:String x:Key="LOCPublicAccount">Openbaar Account</sys:String>
+    <sys:String x:Key="LOCAPIKey">API Sleutel</sys:String>
     <!--itch.io-->
-    <sys:String x:Key="LOCItchioSignInNotif"></sys:String>
-    <sys:String x:Key="LOCItchioSignInWaitMessage"></sys:String>
-    <sys:String x:Key="LOCItchioClientNotInstalledError"></sys:String>
+    <sys:String x:Key="LOCItchioSignInNotif">itch.io wordt gestart. Log in a.u.b. en sluit dan dit bericht.</sys:String>
+    <sys:String x:Key="LOCItchioSignInWaitMessage">Wachten op aanmelding van gebruiker, sluit alstublieft af wanneer je klaar bent</sys:String>
+    <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io client versie 25 of nieuwer is niet geïnstalleerd.</sys:String>
     <!--GOG-->
-    <sys:String x:Key="LOCGOGUseLogin"></sys:String>
-    <sys:String x:Key="LOCGOGUseAccountName"></sys:String>
-    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxy"></sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip"></sys:String>
+    <sys:String x:Key="LOCGOGUseLogin">Account login</sys:String>
+    <sys:String x:Key="LOCGOGUseAccountName">Accountnaam</sys:String>
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Log in op uw account of gebruik uw openbare accountnaam om uw volledige bibliotheek te synchroniseren.
+Houd er rekening mee dat de optie Accountnaam alleen werkt voor accounts waarvan de spelbibliotheken zijn ingesteld  om openbaar zichtbaar te zijn in de privacy-instellingen van GOG.</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxy">Start games met GOG Galaxy client</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Dit zal GOG Galaxy features zoals cloud saves, game tijd tracking, etc aanzetten.</sys:String>
     <!--Steam-->
-    <sys:String x:Key="LOCSettingsWhatsSteamName"></sys:String>
-    <sys:String x:Key="LOCSteamCustomUrlName"></sys:String>
-    <sys:String x:Key="LOCSteamLoggedInUser"></sys:String>
-    <sys:String x:Key="LOCSteamRequiresApiKey"></sys:String>
-    <sys:String x:Key="LOCSteamLinksCommunityHub"></sys:String>
-    <sys:String x:Key="LOCSteamLinksDiscussions"></sys:String>
-    <sys:String x:Key="LOCSteamLinksGuides"></sys:String>
-    <sys:String x:Key="LOCSteamLinksWorkshop"></sys:String>
-    <sys:String x:Key="LOCSteamUseVerticalCovers"></sys:String>
-    <sys:String x:Key="LOCSteamImportFreeSubGames"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarn"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportError"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportError"></sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyTooltip"></sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyUrlText"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamImportMetadata"></sys:String>
-    <sys:String x:Key="LOCImportSteamCategoriesLabel"></sys:String>
-    <sys:String x:Key="LOCImportSteamLastActivityLabel"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSource"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceImage"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceStore"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceBanner"></sys:String>
+    <sys:String x:Key="LOCSettingsWhatsSteamName">Wat is mijn accountnaam?</sys:String>
+    <sys:String x:Key="LOCSteamCustomUrlName">Account URL Naam</sys:String>
+    <sys:String x:Key="LOCSteamLoggedInUser">Geverifieerde Gebruiker</sys:String>
+    <sys:String x:Key="LOCSteamRequiresApiKey">Account is privé, API-sleutel is vereist.</sys:String>
+    <sys:String x:Key="LOCSteamLinksCommunityHub">Community hub</sys:String>
+    <sys:String x:Key="LOCSteamLinksDiscussions">Discussies</sys:String>
+    <sys:String x:Key="LOCSteamLinksGuides">Handleidingen</sys:String>
+    <sys:String x:Key="LOCSteamLinksWorkshop">Werkplaats</sys:String>
+    <sys:String x:Key="LOCSteamUseVerticalCovers">Download verticale coverafbeeldingen</sys:String>
+    <sys:String x:Key="LOCSteamImportFreeSubGames">Importeer generieke gratis items</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarn">Dit zal de huidige categorieën en verborgen en favoriete status van alle Steam games overschrijven. Wil je hiermee doorgaan?</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Importeer Categorieën?</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Kan categorieën niet importeren. Account voor importeren is niet geselecteerd.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Kan categorieën niet importeren. Database is niet geopend.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportError">Importeren van de volgende Steam categorieën mislukt: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">Kan laatst gespeeld informatie niet importeren. Account voor importeren is niet geselecteerd.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">Kan laatst gespeeld informatie niet importeren. Database is niet geopend.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportError">Laatst gespeeld informatie van Steam importeren is mislukt: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyTooltip">API-sleutel is nodig voor privé Steam accounts</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyUrlText">API-sleutel verkrijgen</sys:String>
+    <sys:String x:Key="LOCSettingsSteamImportMetadata">Metadata importeren uit Steam account:</sys:String>
+    <sys:String x:Key="LOCImportSteamCategoriesLabel">Steam Categorieën Importeren</sys:String>
+    <sys:String x:Key="LOCImportSteamLastActivityLabel">Importeer Steam Laatst Gespeeld</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSource">Bron achtergrondafbeelding:</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceImage">Afbeelding spel</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Sla Screenshot Op</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceStore">Sla Achtergrond Op</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton">Toon vriendenknop in het top-paneel</sys:String>
     <!--IGDB-->
-    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"></sys:String>
-    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>
-    <sys:String x:Key="LOCIgdbSelectBackgroundTitle"></sys:String>
+    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Gebruik screenshots als illustraties niet beschikbaar zijn</sys:String>
+    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Wanneer meerdere afbeeldingen beschikbaar zijn gebruik dan:</sys:String>
+    <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Selecteer achtergrondafbeelding voor {0}</sys:String>
     <!--Humble-->
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames"></sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Negeer spellen van derde partij winkels</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Importeer Trove spellen</sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Schakel in om importeren van spellen die derde partij cliënten vereisen over te slaan,
+inclusief winkels die reeds beheerd worden in Playnite, om duplicaten te vermijden</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importeer als DRM-vrije versie beschikbaar is</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importeer spellen die cliënt van 3de partij vereist indien DRM vrije versie ook beschikbaar is</sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
-    <sys:String x:Key="LOCXboxImport360Games"></sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames"></sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Start Xbox Pass applicatie in plaats van Microsoft Store wanneer je de client opent</sys:String>
+    <sys:String x:Key="LOCXboxImport360Games">Importeer Xbox 360 games</sys:String>
+    <sys:String x:Key="LOCXboxImportXboneGames">Importeer Xbox One games</sys:String>
 </ResourceDictionary>

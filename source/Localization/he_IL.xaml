@@ -55,6 +55,7 @@
     <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">צילום מסך חנות</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceStore">רקע חנות</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">באנר</sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">השתמש בתצלומי מסך אם עטיפה אינה זמינה</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">אם כמה תמונות קיימות אז בחר:</sys:String>

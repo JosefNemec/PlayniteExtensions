@@ -1,71 +1,73 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-    <sys:String x:Key="LOCSettingsImportInstalledLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsImportUninstalledLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsConnectAccount"></sys:String>
-    <sys:String x:Key="LOCLoginChecking"></sys:String>
-    <sys:String x:Key="LOCLoggedIn"></sys:String>
-    <sys:String x:Key="LOCNotLoggedIn"></sys:String>
-    <sys:String x:Key="LOCNotLoggedInError"></sys:String>
-    <sys:String x:Key="LOCAuthenticateLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsStartGameDirectly"></sys:String>
-    <sys:String x:Key="LOCTroubleShootingAccountLink"></sys:String>
-    <sys:String x:Key="LOCTroubleShootingIssues"></sys:String>
-    <sys:String x:Key="LOCSettingsImportLibraryLabel"></sys:String>
-    <sys:String x:Key="LOCPrivateAccount"></sys:String>
-    <sys:String x:Key="LOCPublicAccount"></sys:String>
-    <sys:String x:Key="LOCAPIKey"></sys:String>
+    <sys:String x:Key="LOCSettingsImportInstalledLabel">Importar jogos instalados</sys:String>
+    <sys:String x:Key="LOCSettingsImportUninstalledLabel">Importar jogos não instalados</sys:String>
+    <sys:String x:Key="LOCSettingsConnectAccount">Conectar conta</sys:String>
+    <sys:String x:Key="LOCLoginChecking">Verificando o estado da autenticação…</sys:String>
+    <sys:String x:Key="LOCLoggedIn">Usuário autenticado</sys:String>
+    <sys:String x:Key="LOCNotLoggedIn">Requer autenticação</sys:String>
+    <sys:String x:Key="LOCNotLoggedInError">Falha ao autenticar o usuário.</sys:String>
+    <sys:String x:Key="LOCAuthenticateLabel">Autenticar</sys:String>
+    <sys:String x:Key="LOCSettingsStartGameDirectly">Iniciar jogos diretamente, sem executar o cliente oficial</sys:String>
+    <sys:String x:Key="LOCTroubleShootingAccountLink">Solução de problemas de sincronização de contas</sys:String>
+    <sys:String x:Key="LOCTroubleShootingIssues">Soluções de problemas</sys:String>
+    <sys:String x:Key="LOCSettingsImportLibraryLabel">Importar todos os jogos</sys:String>
+    <sys:String x:Key="LOCPrivateAccount">Conta privada</sys:String>
+    <sys:String x:Key="LOCPublicAccount">Conta pública</sys:String>
+    <sys:String x:Key="LOCAPIKey">Chave da API</sys:String>
     <!--itch.io-->
-    <sys:String x:Key="LOCItchioSignInNotif"></sys:String>
-    <sys:String x:Key="LOCItchioSignInWaitMessage"></sys:String>
-    <sys:String x:Key="LOCItchioClientNotInstalledError"></sys:String>
+    <sys:String x:Key="LOCItchioSignInNotif">O cliente da itch.io será executado agora. Inicie a sessão e então feche esta janela.</sys:String>
+    <sys:String x:Key="LOCItchioSignInWaitMessage">Aguardando que o usuário inicie a sessão, feche esta janela quando terminar…</sys:String>
+    <sys:String x:Key="LOCItchioClientNotInstalledError">Cliente da itch.io versão 25 ou superior não instalado.</sys:String>
     <!--GOG-->
-    <sys:String x:Key="LOCGOGUseLogin"></sys:String>
-    <sys:String x:Key="LOCGOGUseAccountName"></sys:String>
-    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxy"></sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip"></sys:String>
+    <sys:String x:Key="LOCGOGUseLogin">Dados da conta</sys:String>
+    <sys:String x:Key="LOCGOGUseAccountName">Nome da conta</sys:String>
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Inicie uma sessão com a sua conta ou use o nome de usuário da sua conta pública para sincronizar a sua biblioteca completa. Observe que o nome de usuário da conta só funciona para contas cujas bibliotecas de jogos foram definidas nas configurações de privacidade da GOG para serem visíveis publicamente.</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxy">Abrir jogos utilizando o cliente GOG Galaxy</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Isso irá habilitar funções do GOG Galaxy como salvamento na nuvem, contador de tempo de jogo, etc.</sys:String>
     <!--Steam-->
-    <sys:String x:Key="LOCSettingsWhatsSteamName"></sys:String>
-    <sys:String x:Key="LOCSteamCustomUrlName"></sys:String>
-    <sys:String x:Key="LOCSteamLoggedInUser"></sys:String>
-    <sys:String x:Key="LOCSteamRequiresApiKey"></sys:String>
-    <sys:String x:Key="LOCSteamLinksCommunityHub"></sys:String>
-    <sys:String x:Key="LOCSteamLinksDiscussions"></sys:String>
-    <sys:String x:Key="LOCSteamLinksGuides"></sys:String>
-    <sys:String x:Key="LOCSteamLinksWorkshop"></sys:String>
-    <sys:String x:Key="LOCSteamUseVerticalCovers"></sys:String>
-    <sys:String x:Key="LOCSteamImportFreeSubGames"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarn"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportError"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportError"></sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyTooltip"></sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyUrlText"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamImportMetadata"></sys:String>
-    <sys:String x:Key="LOCImportSteamCategoriesLabel"></sys:String>
-    <sys:String x:Key="LOCImportSteamLastActivityLabel"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSource"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceImage"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceStore"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceBanner"></sys:String>
+    <sys:String x:Key="LOCSettingsWhatsSteamName">Qual o nome da minha conta?</sys:String>
+    <sys:String x:Key="LOCSteamCustomUrlName">Nome da conta na URL</sys:String>
+    <sys:String x:Key="LOCSteamLoggedInUser">Usuário autenticado</sys:String>
+    <sys:String x:Key="LOCSteamRequiresApiKey">Esta conta é privada, uma chave de API é necessária.</sys:String>
+    <sys:String x:Key="LOCSteamLinksCommunityHub">Central da comunidade</sys:String>
+    <sys:String x:Key="LOCSteamLinksDiscussions">Discussões</sys:String>
+    <sys:String x:Key="LOCSteamLinksGuides">Guias</sys:String>
+    <sys:String x:Key="LOCSteamLinksWorkshop">Oficina</sys:String>
+    <sys:String x:Key="LOCSteamUseVerticalCovers">Baixar imagens de capa verticais</sys:String>
+    <sys:String x:Key="LOCSteamImportFreeSubGames">Importar itens gratuitos genéricos.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarn">Isto irá sobrescrever as categorias atuais, assim como os marcadores de ocultos e favoritos em todos os jogos da Steam. Você deseja continuar?</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Importar categorias?</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Não foi possível importar as categorias, a conta para importação não foi definida.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Não foi possível importar as categorias, o banco de dados não está aberto.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportError">Falha ao importar as categorias do Steam: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">Não foi possível importar as últimas sessões dos jogos, a conta para a importação não foi selecionada.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">Não foi possível importar as últimas sessões dos jogos, o banco de dados não está aberto.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportError">Falha ao importar as últimas sessões dos jogos do Steam: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyTooltip">Você precisa de uma chave da API para vincular contas privadas do Steam</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyUrlText">Obter chave da API</sys:String>
+    <sys:String x:Key="LOCSettingsSteamImportMetadata">Importar metadados da conta Steam:</sys:String>
+    <sys:String x:Key="LOCImportSteamCategoriesLabel">Importar categorias do Steam</sys:String>
+    <sys:String x:Key="LOCImportSteamLastActivityLabel">Importar última sessão da Steam</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSource">Fonte da imagem de fundo:</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceImage">Imagem do jogo</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Captura de tela da loja</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceStore">Imagem de fundo da loja</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton">Mostrar o botão de amigos no painel superior</sys:String>
     <!--IGDB-->
-    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"></sys:String>
-    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>
-    <sys:String x:Key="LOCIgdbSelectBackgroundTitle"></sys:String>
+    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usar capturas de tela se não houver uma capa disponível</sys:String>
+    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Se houverem várias imagens disponíveis, usar:</sys:String>
+    <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Selecionar imagem de fundo para {0}</sys:String>
     <!--Humble-->
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames"></sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorar jogos de lojas de terceiros</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Importar jogos da Trove</sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Ative para pular a importação de jogos que precisam de clientes de terceiros,
+incluindo lojas já gerenciadas por Playnite, para previnir duplicação.</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importar se versão sem DRM estiver disponível</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importar jogos que precisam de cliente de terceiros se versão sem DRM também estiver disponível.</sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
-    <sys:String x:Key="LOCXboxImport360Games"></sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames"></sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Iniciar o aplicativo do Xbox Game Pass ao invés da Microsoft Store ao abrir o cliente</sys:String>
+    <sys:String x:Key="LOCXboxImport360Games">Importar jogos de Xbox 360</sys:String>
+    <sys:String x:Key="LOCXboxImportXboneGames">Importar jogos de Xbox One</sys:String>
 </ResourceDictionary>

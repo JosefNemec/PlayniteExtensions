@@ -1,71 +1,74 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-    <sys:String x:Key="LOCSettingsImportInstalledLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsImportUninstalledLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsConnectAccount"></sys:String>
-    <sys:String x:Key="LOCLoginChecking"></sys:String>
-    <sys:String x:Key="LOCLoggedIn"></sys:String>
-    <sys:String x:Key="LOCNotLoggedIn"></sys:String>
-    <sys:String x:Key="LOCNotLoggedInError"></sys:String>
-    <sys:String x:Key="LOCAuthenticateLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsStartGameDirectly"></sys:String>
-    <sys:String x:Key="LOCTroubleShootingAccountLink"></sys:String>
-    <sys:String x:Key="LOCTroubleShootingIssues"></sys:String>
-    <sys:String x:Key="LOCSettingsImportLibraryLabel"></sys:String>
-    <sys:String x:Key="LOCPrivateAccount"></sys:String>
-    <sys:String x:Key="LOCPublicAccount"></sys:String>
-    <sys:String x:Key="LOCAPIKey"></sys:String>
+    <sys:String x:Key="LOCSettingsImportInstalledLabel">Імпортувати встановлені ігри</sys:String>
+    <sys:String x:Key="LOCSettingsImportUninstalledLabel">Імпортувати не встановлені ігри</sys:String>
+    <sys:String x:Key="LOCSettingsConnectAccount">Під'єднати обліковий запис</sys:String>
+    <sys:String x:Key="LOCLoginChecking">Перевірка стану автентифікації...</sys:String>
+    <sys:String x:Key="LOCLoggedIn">Користувача автентифіковано</sys:String>
+    <sys:String x:Key="LOCNotLoggedIn">Необхідна автентифікація</sys:String>
+    <sys:String x:Key="LOCNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
+    <sys:String x:Key="LOCAuthenticateLabel">Автентифікація</sys:String>
+    <sys:String x:Key="LOCSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
+    <sys:String x:Key="LOCTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
+    <sys:String x:Key="LOCTroubleShootingIssues">Вирішення проблем</sys:String>
+    <sys:String x:Key="LOCSettingsImportLibraryLabel">Імпортувати всі ігри</sys:String>
+    <sys:String x:Key="LOCPrivateAccount">Приватний обліковий запис</sys:String>
+    <sys:String x:Key="LOCPublicAccount">Загальнодоступний обліковий запис</sys:String>
+    <sys:String x:Key="LOCAPIKey">Ключ API</sys:String>
     <!--itch.io-->
-    <sys:String x:Key="LOCItchioSignInNotif"></sys:String>
-    <sys:String x:Key="LOCItchioSignInWaitMessage"></sys:String>
-    <sys:String x:Key="LOCItchioClientNotInstalledError"></sys:String>
+    <sys:String x:Key="LOCItchioSignInNotif">itch.io буде запущено. Будь ласка авторизуйтеся після чого закрийте це повідомлення.</sys:String>
+    <sys:String x:Key="LOCItchioSignInWaitMessage">Очікування на вхід користувача, будь ласка закрийте це коли завершите...</sys:String>
+    <sys:String x:Key="LOCItchioClientNotInstalledError">Клієнт itch.io версії 25 чи новіше не встановлено.</sys:String>
     <!--GOG-->
-    <sys:String x:Key="LOCGOGUseLogin"></sys:String>
-    <sys:String x:Key="LOCGOGUseAccountName"></sys:String>
-    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxy"></sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip"></sys:String>
+    <sys:String x:Key="LOCGOGUseLogin">Логін облікового запису</sys:String>
+    <sys:String x:Key="LOCGOGUseAccountName">Ім'я облікового запису</sys:String>
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Увійдіть у свій обліковий запис або використовуйте ім’я свого загальнодоступного облікового запису, щоб синхронізувати повну бібліотеку.
+Зауважте, що параметр «Ім'я облікового запису» працює лише для тих облікових записів, чиї ігрові бібліотеки були встановлені в налаштуваннях конфіденційності GOG, як загальнодоступні.</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxy">Запускати ігри використовуючи клієнт GOG Galaxy</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Це увімкне такі функції GOG Galaxy, як хмарні збереження, фіксація ігрового часу тощо.</sys:String>
     <!--Steam-->
-    <sys:String x:Key="LOCSettingsWhatsSteamName"></sys:String>
-    <sys:String x:Key="LOCSteamCustomUrlName"></sys:String>
-    <sys:String x:Key="LOCSteamLoggedInUser"></sys:String>
-    <sys:String x:Key="LOCSteamRequiresApiKey"></sys:String>
-    <sys:String x:Key="LOCSteamLinksCommunityHub"></sys:String>
-    <sys:String x:Key="LOCSteamLinksDiscussions"></sys:String>
-    <sys:String x:Key="LOCSteamLinksGuides"></sys:String>
-    <sys:String x:Key="LOCSteamLinksWorkshop"></sys:String>
-    <sys:String x:Key="LOCSteamUseVerticalCovers"></sys:String>
-    <sys:String x:Key="LOCSteamImportFreeSubGames"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarn"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportError"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportError"></sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyTooltip"></sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyUrlText"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamImportMetadata"></sys:String>
-    <sys:String x:Key="LOCImportSteamCategoriesLabel"></sys:String>
-    <sys:String x:Key="LOCImportSteamLastActivityLabel"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSource"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceImage"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceStore"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceBanner"></sys:String>
+    <sys:String x:Key="LOCSettingsWhatsSteamName">Яке ім’я мого облікового запису?</sys:String>
+    <sys:String x:Key="LOCSteamCustomUrlName">URL-адреса облікового запису</sys:String>
+    <sys:String x:Key="LOCSteamLoggedInUser">Автентифікований користувач</sys:String>
+    <sys:String x:Key="LOCSteamRequiresApiKey">Облікового запис є приватним, необхідний API ключ.</sys:String>
+    <sys:String x:Key="LOCSteamLinksCommunityHub">Центр спільноти </sys:String>
+    <sys:String x:Key="LOCSteamLinksDiscussions">Обговорення</sys:String>
+    <sys:String x:Key="LOCSteamLinksGuides">Посібники</sys:String>
+    <sys:String x:Key="LOCSteamLinksWorkshop">Майстерня</sys:String>
+    <sys:String x:Key="LOCSteamUseVerticalCovers">Завантажувати вертикальні обкладинки</sys:String>
+    <sys:String x:Key="LOCSteamImportFreeSubGames">Імпортувати загально безкоштовні речі</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarn">Це перезапише поточні категорії, а також стани &quot;Приховано&quot; і &quot;Обране&quot; всіх ігор Steam. Хочете продовжити?</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Імпортувати категорії?</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Неможливо імпортувати категорії, обліковий запис для імпорту не вибрано.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Неможливо імпортувати категорії, база даних не відкрито.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportError">Не вдалося імпортувати атегорії Steam: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">Неможливо імпортувати інформацію про останню зіграну гру, обліковий запис для імпорту не вибрано.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">Неможливо імпортувати інформацію про останню зіграну гру, база даних не відкрита.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportError">Не вдалося імпортувати інформацію про останню зіграну гру Steam: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyTooltip">Для приватних облікових записів Steam необхідний API ключ</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyUrlText">Отримати API ключ</sys:String>
+    <sys:String x:Key="LOCSettingsSteamImportMetadata">Імпорт метаданих з облікового запису Steam:</sys:String>
+    <sys:String x:Key="LOCImportSteamCategoriesLabel">Імпортувати категорії Steam</sys:String>
+    <sys:String x:Key="LOCImportSteamLastActivityLabel">Імпортувати останнє зігране із Steam</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSource">Джерело фонового зображення:</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceImage">Ігрове зображення</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Знімок екрану магазину</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceStore">Фон з магазину</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceBanner">Банер</sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton">Показати кнопку друзів на верхній панелі </sys:String>
     <!--IGDB-->
-    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"></sys:String>
-    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>
-    <sys:String x:Key="LOCIgdbSelectBackgroundTitle"></sys:String>
+    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Використовувати знімки гри якщо немає іншого зображення</sys:String>
+    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Якщо доступно декілька зображень, використовувати:</sys:String>
+    <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Обрати фонове зображення для {0}</sys:String>
     <!--Humble-->
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames"></sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ігнорувати ігри із стороннього магазину</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Імпорт ігор з Humble Trove</sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Увімкніть щоб пропустити імпорт ігор, що потребують сторонніх клієнтів,
+включно з магазинами, якими вже керує Playnite, щоб уникнути дублікатів.</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Імпортувати якщо доступна версія без DRM</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Імпортувати ігри, що потребують стороннього клієнту, якщо також доступна версія без DRM.</sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
-    <sys:String x:Key="LOCXboxImport360Games"></sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames"></sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Запускати додаток Xbox Pass замість Microsoft Store під час відкриття клієнта</sys:String>
+    <sys:String x:Key="LOCXboxImport360Games">Імпортувати ігри Xbox 360</sys:String>
+    <sys:String x:Key="LOCXboxImportXboneGames">Імпортувати ігри Xbox One</sys:String>
 </ResourceDictionary>
