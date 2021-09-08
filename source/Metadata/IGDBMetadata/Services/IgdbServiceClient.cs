@@ -34,7 +34,7 @@ namespace IGDBMetadata.Services
                 { nameof(SdkModels.Game.PluginId), game.PluginId },
                 { nameof(SdkModels.Game.GameId), game.GameId }
             });
-            return ExecutePostRequest<IgdbModels.ExpandedGame>("/igdb/metadata_v2", gameData);
+            return ExecutePostRequest<IgdbModels.ExpandedGame>("/igdb/metadata_v3", gameData);
         }
 
         public List<IgdbModels.ExpandedGameLegacy> GetIGDBGames(string searchName)
