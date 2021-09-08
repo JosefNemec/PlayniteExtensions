@@ -293,12 +293,20 @@ namespace Steam
 
                 if (metadata.StoreDetails.publishers.HasNonEmptyItems())
                 {
-                    metadata.Publishers = metadata.StoreDetails.publishers.Select(a => new MetadataNameProperty(a)).Cast<MetadataProperty>().ToHashSet();
+                    metadata.Publishers = metadata.StoreDetails.publishers.
+                        Where(a => !a.IsNullOrWhiteSpace()).
+                        Select(a => new MetadataNameProperty(a)).
+                        Cast<MetadataProperty>().
+                        ToHashSet();
                 }
 
                 if (metadata.StoreDetails.developers.HasNonEmptyItems())
                 {
-                    metadata.Developers = metadata.StoreDetails.developers.Select(a => new MetadataNameProperty(a)).Cast<MetadataProperty>().ToHashSet();
+                    metadata.Developers = metadata.StoreDetails.developers.
+                        Where(a => !a.IsNullOrWhiteSpace()).
+                        Select(a => new MetadataNameProperty(a)).
+                        Cast<MetadataProperty>().
+                        ToHashSet();
                 }
 
                 metadata.Features = features;
