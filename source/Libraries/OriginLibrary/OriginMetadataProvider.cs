@@ -45,17 +45,21 @@ namespace OriginLibrary
 
             if (!storeMetadata.StoreDetails.publisherFacetKey.IsNullOrEmpty())
             {
-                gameInfo.Publishers = new List<MetadataProperty>() { new MetadataNameProperty(storeMetadata.StoreDetails.publisherFacetKey) };
+                gameInfo.Publishers = new HashSet<MetadataProperty>() { new MetadataNameProperty(storeMetadata.StoreDetails.publisherFacetKey) };
             }
 
             if (!storeMetadata.StoreDetails.developerFacetKey.IsNullOrEmpty())
             {
-                gameInfo.Developers = new List<MetadataProperty>() { new MetadataNameProperty(storeMetadata.StoreDetails.developerFacetKey) };
+                gameInfo.Developers = new HashSet<MetadataProperty>() { new MetadataNameProperty(storeMetadata.StoreDetails.developerFacetKey) };
             }
 
             if (!storeMetadata.StoreDetails.genreFacetKey.IsNullOrEmpty())
             {
-                gameInfo.Genres = storeMetadata.StoreDetails.genreFacetKey?.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(a => new MetadataNameProperty(a)).ToList();
+                gameInfo.Genres = storeMetadata.StoreDetails.genreFacetKey?.
+                    Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).
+                    Select(a => new MetadataNameProperty(a)).
+                    Cast<MetadataProperty>().
+                    ToHashSet();
             }
 
             gameInfo.CoverImage = storeMetadata.CoverImage;

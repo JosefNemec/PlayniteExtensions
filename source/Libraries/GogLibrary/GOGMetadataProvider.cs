@@ -53,10 +53,10 @@ namespace GogLibrary
 
             if (storeData.StoreDetails != null)
             {
-                storeData.Genres = storeData.StoreDetails.genres?.Select(a => new MetadataNameProperty(a.name)).ToList();
-                storeData.Features = storeData.StoreDetails.features?.Where(a => a.name != "Overlay").Select(a => new MetadataNameProperty(a.name)).ToList();
-                storeData.Developers = storeData.StoreDetails.developers.Select(a => new MetadataNameProperty(a.name)).ToList();
-                storeData.Publishers = new List<MetadataProperty>() { new MetadataNameProperty(storeData.StoreDetails.publisher) };
+                storeData.Genres = storeData.StoreDetails.genres?.Select(a => new MetadataNameProperty(a.name)).Cast<MetadataProperty>().ToHashSet();
+                storeData.Features = storeData.StoreDetails.features?.Where(a => a.name != "Overlay").Select(a => new MetadataNameProperty(a.name)).Cast<MetadataProperty>().ToHashSet();
+                storeData.Developers = storeData.StoreDetails.developers.Select(a => new MetadataNameProperty(a.name)).Cast<MetadataProperty>().ToHashSet();
+                storeData.Publishers = new HashSet<MetadataProperty>() { new MetadataNameProperty(storeData.StoreDetails.publisher) };
                 var cultInfo = new CultureInfo("en-US", false).TextInfo;
                 if (storeData.ReleaseDate == null && storeData.StoreDetails.globalReleaseDate != null)
                 {

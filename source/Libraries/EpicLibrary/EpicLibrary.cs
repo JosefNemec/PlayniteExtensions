@@ -67,7 +67,7 @@ namespace EpicLibrary
                     Name = manifest?.DisplayName ?? Path.GetFileName(app.InstallLocation),
                     InstallDirectory = manifest?.InstallLocation ?? app.InstallLocation,
                     IsInstalled = true,
-                    Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
                 game.Name = game.Name.RemoveTrademarks();
@@ -109,7 +109,7 @@ namespace EpicLibrary
                     Source = new MetadataNameProperty("Epic"),
                     GameId = gameAsset.appName,
                     Name = catalogItem.title.RemoveTrademarks(),
-                    Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
                 var playtimeItem = playtimeItems?.FirstOrDefault(x => x.artifactId == gameAsset.appName);

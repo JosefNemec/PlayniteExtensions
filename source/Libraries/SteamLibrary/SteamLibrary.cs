@@ -111,7 +111,7 @@ namespace SteamLibrary
                 Name = name.RemoveTrademarks(),
                 InstallDirectory = installDir,
                 IsInstalled = true,
-                Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
             };
 
             return game;
@@ -209,10 +209,10 @@ namespace SteamLibrary
                 Name = modInfo.Name.RemoveTrademarks(),
                 InstallDirectory = path,
                 IsInstalled = true,
-                Developers = new List<MetadataProperty>() { new MetadataNameProperty(modInfo.Developer) },
+                Developers = new HashSet<MetadataProperty>() { new MetadataNameProperty(modInfo.Developer) },
                 Links = modInfo.Links,
-                Tags = modInfo.Categories?.Select(a => new MetadataNameProperty(a)).ToList(),
-                Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                Tags = modInfo.Categories?.Select(a => new MetadataNameProperty(a)).Cast<MetadataProperty>().ToHashSet(),
+                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
             };
 
             if (!modInfo.IconPath.IsNullOrEmpty() && File.Exists(modInfo.IconPath))
@@ -448,7 +448,7 @@ namespace SteamLibrary
                     Name = game.name.RemoveTrademarks(),
                     GameId = game.appid.ToString(),
                     Playtime = (ulong)(game.playtime_forever * 60),
-                    Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
                 if (lastActivity != null && lastActivity.TryGetValue(newGame.GameId, out var gameLastActivity))
@@ -620,10 +620,10 @@ namespace SteamLibrary
                 {
                     Source = new MetadataNameProperty("Steam"),
                     GameId = gameId,
-                    Categories = appData.Select(a => new MetadataNameProperty(a)).ToList(),
+                    Categories = appData.Select(a => new MetadataNameProperty(a)).Cast<MetadataProperty>().ToHashSet(),
                     Hidden = app["hidden"].AsInteger() == 1,
                     Favorite = isFavorite,
-                    Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 });
             }
 

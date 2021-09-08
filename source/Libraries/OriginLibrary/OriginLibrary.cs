@@ -355,7 +355,7 @@ namespace OriginLibrary
                         Source = new MetadataNameProperty("Origin"),
                         GameId = package.ConvertedId,
                         IsInstalled = true,
-                        Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                        Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     };
 
                     GameLocalDataResponse localData = null;
@@ -463,7 +463,7 @@ namespace OriginLibrary
                         Name = gameName,
                         LastActivity = usage?.lastSessionEndTimeStamp,
                         Playtime = (ulong)(usage?.total ?? 0),
-                        Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                        Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     });
                 }
 

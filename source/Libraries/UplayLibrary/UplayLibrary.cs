@@ -71,7 +71,7 @@ namespace UplayLibrary
                     Icon = item.root.icon_image.IsNullOrEmpty() ? null : new MetadataFile(item.root.icon_image),
                     CoverImage = item.root.thumb_image.IsNullOrEmpty() ? null : new MetadataFile(item.root.thumb_image),
                     Source = new MetadataNameProperty("Ubisoft Connect"),
-                    Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
                 games.Add(newGame);
@@ -107,7 +107,7 @@ namespace UplayLibrary
                             InstallDirectory = installDir,
                             Name = Path.GetFileName(installDir.TrimEnd(Path.DirectorySeparatorChar)),
                             IsInstalled = true,
-                            Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                            Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                         };
 
                         games.Add(newGame);

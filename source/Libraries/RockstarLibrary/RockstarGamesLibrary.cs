@@ -57,7 +57,7 @@ namespace RockstarGamesLibrary
                         Source = new MetadataNameProperty("Rockstar Games"),
                         Name = rsGame.Name,
                         GameId = titleId,
-                        Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                        Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     };
 
                     if (!string.IsNullOrEmpty(app.DisplayIcon))

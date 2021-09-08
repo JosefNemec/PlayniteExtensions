@@ -65,10 +65,10 @@ namespace HumbleLibrary
                                 Name = troveGame.human_name.RemoveTrademarks(),
                                 GameId = GetGameId(troveGame),
                                 Description = troveGame.description_text,
-                                Publishers = troveGame.publishers?.Select(a => new MetadataNameProperty(a.publisher_name)).ToList(),
-                                Developers = troveGame.developers?.Select(a => new MetadataNameProperty(a.developer_name)).ToList(),
+                                Publishers = troveGame.publishers?.Select(a => new MetadataNameProperty(a.publisher_name)).Cast<MetadataProperty>().ToHashSet(),
+                                Developers = troveGame.developers?.Select(a => new MetadataNameProperty(a.developer_name)).Cast<MetadataProperty>().ToHashSet(),
                                 Source = new MetadataNameProperty("Humble"),
-                                Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                             };
 
                             games.Add(game);

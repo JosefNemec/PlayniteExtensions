@@ -86,7 +86,7 @@ namespace BattleNetLibrary
                             Name = product.Name.RemoveTrademarks(),
                             InstallDirectory = prog.InstallLocation,
                             IsInstalled = true,
-                            Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                            Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                         };
 
                         // Check in case there are more versions of single games installed.
@@ -128,7 +128,7 @@ namespace BattleNetLibrary
                         Name = product.Name.RemoveTrademarks(),
                         InstallDirectory = prog.InstallLocation,
                         IsInstalled = true,
-                        Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                        Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     };
 
                     // Check in case there are more versions of single games installed.
@@ -173,7 +173,7 @@ namespace BattleNetLibrary
                                 Source = new MetadataNameProperty("Battle.net"),
                                 GameId = gameInfo.ProductId,
                                 Name = gameInfo.Name.RemoveTrademarks(),
-                                Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                             });
                         }
                     }
@@ -192,7 +192,7 @@ namespace BattleNetLibrary
                             Source = new MetadataNameProperty("Battle.net"),
                             GameId = w3.ProductId,
                             Name = w3.Name,
-                            Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                            Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                         });
 
                         if (w3Games.Count() == 2)
@@ -203,7 +203,7 @@ namespace BattleNetLibrary
                                 Source = new MetadataNameProperty("Battle.net"),
                                 GameId = w3x.ProductId,
                                 Name = w3x.Name,
-                                Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                             });
                         }
                     }
@@ -218,7 +218,7 @@ namespace BattleNetLibrary
                             Source = new MetadataNameProperty("Battle.net"),
                             GameId = d2.ProductId,
                             Name = d2.Name,
-                            Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                            Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                         });
 
                         if (d2Games.Count() == 2)
@@ -229,7 +229,7 @@ namespace BattleNetLibrary
                                 Source = new MetadataNameProperty("Battle.net"),
                                 GameId = d2x.ProductId,
                                 Name = d2x.Name,
-                                Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                             });
                         }
                     }

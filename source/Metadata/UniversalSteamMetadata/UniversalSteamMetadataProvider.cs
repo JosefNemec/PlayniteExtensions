@@ -236,7 +236,7 @@ namespace UniversalSteamMetadata
 
         public override IEnumerable<MetadataProperty> GetPlatforms(GetMetadataFieldArgs args)
         {
-            return new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") };
+            return new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") };
         }
 
         internal void GetGameData()

@@ -117,7 +117,7 @@ namespace ItchioLibrary
                         InstallDirectory = installDir,
                         IsInstalled = true,
                         CoverImage = cave.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(cave.game.coverUrl),
-                        Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                        Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     };
 
                     //if (TryGetGameActions(installDir, out var play, out var others))
@@ -175,7 +175,7 @@ namespace ItchioLibrary
                             GameId = key.game.id.ToString(),
                             Name = key.game.title.RemoveTrademarks(),
                             CoverImage = key.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(key.game.coverUrl),
-                            Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                            Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                         };
 
                         games.Add(game);

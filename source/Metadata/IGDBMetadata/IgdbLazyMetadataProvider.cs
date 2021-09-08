@@ -224,7 +224,7 @@ namespace IGDBMetadata
         {
             if (AvailableFields.Contains(MetadataField.Series))
             {
-                return new List<MetadataProperty> { new MetadataNameProperty(IgdbData.collection.name) };
+                return new HashSet<MetadataProperty> { new MetadataNameProperty(IgdbData.collection.name) };
             }
 
             return base.GetSeries(args);

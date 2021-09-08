@@ -45,10 +45,10 @@ namespace EpicLibrary
 
                         gameInfo.Developers = page.data.about.developerAttribution?.
                             Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).
-                            Select(a => new MetadataNameProperty(a.Trim())).ToList();
+                            Select(a => new MetadataNameProperty(a.Trim())).Cast<MetadataProperty>().ToHashSet();
                         gameInfo.Publishers = page.data.about.publisherAttribution?.
                             Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).
-                            Select(a => new MetadataNameProperty(a.Trim())).ToList();
+                            Select(a => new MetadataNameProperty(a.Trim())).Cast<MetadataProperty>().ToHashSet();
                         gameInfo.BackgroundImage = new MetadataFile(page.data.hero.backgroundImageUrl);
                         gameInfo.Links.Add(new Link(
                             api.Resources.GetString("LOCCommonLinksStorePage"),

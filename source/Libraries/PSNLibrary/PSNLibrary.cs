@@ -93,19 +93,19 @@ namespace PSNLibrary
 
                 if (title.trophyTitlePlatfrom?.Contains("PS4") == true)
                 {
-                    newGame.Platforms = new List<MetadataProperty> { new MetadataSpecProperty("sony_playstation4") };
+                    newGame.Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("sony_playstation4") };
                 }
                 else if (title.trophyTitlePlatfrom?.Contains("PS3") == true)
                 {
-                    newGame.Platforms = new List<MetadataProperty> { new MetadataSpecProperty("sony_playstation3") };
+                    newGame.Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("sony_playstation3") };
                 }
                 else if (title.trophyTitlePlatfrom?.Contains("PSVITA") == true)
                 {
-                    newGame.Platforms = new List<MetadataProperty> { new MetadataSpecProperty("sony_vita") };
+                    newGame.Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("sony_vita") };
                 }
                 else if (title.trophyTitlePlatfrom?.Contains("PSP") == true)
                 {
-                    newGame.Platforms = new List<MetadataProperty> { new MetadataSpecProperty("sony_psp") };
+                    newGame.Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("sony_psp") };
                 }
 
                 parsedGames.Add(newGame);
@@ -139,7 +139,7 @@ namespace PSNLibrary
                 if (item.entitlement_attributes != null) // PS4
                 {
                     newGame.Name = item.game_meta.name;
-                    newGame.Platforms = new List<MetadataProperty> { new MetadataSpecProperty("sony_playstation4") };
+                    newGame.Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("sony_playstation4") };
                 }
                 else if (item.drm_def != null) //PS3, PSP, or Vita
                 {
@@ -149,7 +149,7 @@ namespace PSNLibrary
                         var plat = ParseOldPlatform(item.drm_def.drmContents[0].platformIds);
                         if (!plat.IsNullOrEmpty())
                         {
-                            newGame.Platforms = new List<MetadataProperty> { new MetadataSpecProperty(plat) };
+                            newGame.Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty(plat) };
                         }
                     }
                 }

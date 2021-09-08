@@ -34,9 +34,9 @@ namespace ItchioLibrary
 
         public override GameMetadata GetMetadata(Game game)
         {
-            var tags = new List<MetadataNameProperty>();
-            var genres = new List<MetadataNameProperty>();
-            var features = new List<MetadataNameProperty>();
+            var tags = new HashSet<MetadataProperty>();
+            var genres = new HashSet<MetadataProperty>();
+            var features = new HashSet<MetadataProperty>();
             var gameData = new GameMetadata()
             {
                 Links = new List<Link>(),
@@ -120,7 +120,7 @@ namespace ItchioLibrary
 
                     if (name == "Author")
                     {
-                        gameData.Developers = new List<MetadataProperty> { new MetadataNameProperty(field.ChildNodes[1].TextContent) };
+                        gameData.Developers = new HashSet<MetadataProperty> { new MetadataNameProperty(field.ChildNodes[1].TextContent) };
                     }
 
                     if (name == "Release date")

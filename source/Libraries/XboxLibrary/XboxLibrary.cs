@@ -55,7 +55,7 @@ namespace XboxLibrary
                 RemoveTrademarks().
                 Trim(),
                 Source = new MetadataNameProperty("Xbox"),
-                Platforms = new List<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
             };
 
             if (title.detail != null)
@@ -67,12 +67,18 @@ namespace XboxLibrary
 
                 if (!title.detail.publisherName.IsNullOrEmpty())
                 {
-                    newGame.Publishers = title.detail.publisherName.Split(new char[] { '|' }).Select(a => new MetadataNameProperty(a.Trim())).ToList();
+                    newGame.Publishers = title.detail.publisherName.Split(new char[] { '|' })
+                        .Select(a => new MetadataNameProperty(a.Trim()))
+                        .Cast<MetadataProperty>()
+                        .ToHashSet();
                 }
 
                 if (!title.detail.developerName.IsNullOrEmpty())
                 {
-                    newGame.Developers = title.detail.developerName.Split(new char[] { '|' }).Select(a => new MetadataNameProperty(a.Trim())).ToList();
+                    newGame.Developers = title.detail.developerName.Split(new char[] { '|' })
+                        .Select(a => new MetadataNameProperty(a.Trim()))
+                        .Cast<MetadataProperty>().
+                        ToHashSet();
                 }
             }
 
@@ -247,7 +253,7 @@ namespace XboxLibrary
                                 newGame.GameId = $"CONSOLE_{title.titleId}_{title.mediaItemType}";
                                 if (!platform.IsNullOrEmpty())
                                 {
-                                    newGame.Platforms = new List<MetadataProperty> { new MetadataSpecProperty(platform) };
+                                    newGame.Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty(platform) };
                                 }
 
                                 allGames.Add(newGame);

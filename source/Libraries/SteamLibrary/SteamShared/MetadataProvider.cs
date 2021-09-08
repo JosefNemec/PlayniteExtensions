@@ -272,7 +272,7 @@ namespace Steam
                 metadata.Links.Add(new Link(ResourceProvider.GetString("LOCSteamLinksWorkshop"), GetWorkshopUrl(appId)));
             }
 
-            var features = new List<MetadataProperty>();
+            var features = new HashSet<MetadataProperty>();
             if (metadata.StoreDetails != null)
             {
                 metadata.Description = ParseDescription(metadata.StoreDetails.detailed_description);
@@ -293,12 +293,12 @@ namespace Steam
 
                 if (metadata.StoreDetails.publishers.HasNonEmptyItems())
                 {
-                    metadata.Publishers = metadata.StoreDetails.publishers.Select(a => new MetadataNameProperty(a)).ToList();
+                    metadata.Publishers = metadata.StoreDetails.publishers.Select(a => new MetadataNameProperty(a)).Cast<MetadataProperty>().ToHashSet();
                 }
 
                 if (metadata.StoreDetails.developers.HasNonEmptyItems())
                 {
-                    metadata.Developers = metadata.StoreDetails.developers.Select(a => new MetadataNameProperty(a)).ToList();
+                    metadata.Developers = metadata.StoreDetails.developers.Select(a => new MetadataNameProperty(a)).Cast<MetadataProperty>().ToHashSet();
                 }
 
                 metadata.Features = features;
@@ -323,7 +323,7 @@ namespace Steam
 
                 if (metadata.StoreDetails.genres.HasItems())
                 {
-                    metadata.Genres = metadata.StoreDetails.genres.Select(a => new MetadataNameProperty(a.description)).ToList();
+                    metadata.Genres = metadata.StoreDetails.genres.Select(a => new MetadataNameProperty(a.description)).Cast<MetadataProperty>().ToHashSet();
                 }
             }
 
@@ -389,7 +389,7 @@ namespace Steam
                     }
                     if (vrArea.Name.Contains("roomscale"))
                     {
-                        features.AddMissing(new MetadataNameProperty("VR Room-Scale"));
+                        features.Add(new MetadataNameProperty("VR Room-Scale"));
                         vrSupport = true;
                     }
                 }
