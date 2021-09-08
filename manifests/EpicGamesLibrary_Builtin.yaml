@@ -1,5 +1,12 @@
 AddonId: EpicGamesLibrary_Builtin
 Packages:
+  - Version: 2.1
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2021-09-08
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/1.0/EpicGamesLibrary_Builtin_2_1.pext
+    Changelog:
+      - Authentication doesn't work properly
+      - Updated to support Playnite 9 beta 2
   - Version: 2.0
     RequiredApiVersion: 6.0.0
     ReleaseDate: 2021-09-03

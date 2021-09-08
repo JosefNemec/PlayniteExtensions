@@ -1,7 +1,7 @@
 ﻿Id: UplayLibrary_Builtin
 Name: Uplay library integration
 Author: Playnite
-Version: 2.0
+Version: 2.1
 Module: UplayLibrary.dll
 Type: GameLibrary
 Icon: Resources\uplayicon.png
