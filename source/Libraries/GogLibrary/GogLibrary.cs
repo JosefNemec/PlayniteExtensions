@@ -277,7 +277,7 @@ namespace GogLibrary
                 // For some reason game stats are returned as an empty array if no stats exist for a game.
                 // But single object representation is returned instead if stats do exits.
                 // Better solution would require adding JSON.NET dependency.
-                if (game.stats.GetType().Name == "JObject")
+                if (game.stats?.GetType().Name == "JObject")
                 {
                     var stats = ((dynamic)game.stats).ToObject<Dictionary<string, LibraryGameResponse.Stats>>() as Dictionary<string, LibraryGameResponse.Stats>;
                     if (stats.Keys?.Any() == true)
