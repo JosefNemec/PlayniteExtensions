@@ -55,7 +55,7 @@ namespace XboxLibrary
                 RemoveTrademarks().
                 Trim(),
                 Source = new MetadataNameProperty("Xbox"),
-                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                Platforms = GetPlatforms(title.devices, out _, out _),
             };
 
             if (title.detail != null)
@@ -120,6 +120,39 @@ namespace XboxLibrary
             var filePath = Path.Combine(pfnInfoCacheDir, data.pfn + ".json");
             FileSystem.PrepareSaveFile(filePath);
             File.WriteAllText(filePath, Serialization.ToJson(data));
+        }
+
+        private static HashSet<MetadataProperty> GetPlatforms(List<string> devices, out bool containsPC, out bool containsConsole)
+        {
+            containsPC = false;
+            containsConsole = false;
+            HashSet<MetadataProperty> output = new HashSet<MetadataProperty>();
+            if (devices == null)
+                return output;
+
+            foreach (var deviceName in devices)
+            {
+                switch (deviceName)
+                {
+                    case "PC":
+                        containsPC = true;
+                        output.Add(new MetadataSpecProperty("pc_windows"));
+                        break;
+                    case "Xbox360":
+                        containsConsole = true;
+                        output.Add(new MetadataSpecProperty("xbox360"));
+                        break;
+                    case "XboxOne":
+                        containsConsole = true;
+                        output.Add(new MetadataSpecProperty("xbox_one"));
+                        break;
+                    case "XboxSeries":
+                        containsConsole = true;
+                        output.Add(new MetadataSpecProperty("xbox_series"));
+                        break;
+                }
+            }
+            return output;
         }
 
         public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
@@ -225,39 +258,13 @@ namespace XboxLibrary
 
                     foreach (var title in titles)
                     {
-                        if (title.devices.HasItems() &&
-                            (title.devices.Contains("Xbox360") || title.devices.Contains("XboxOne")) &&
-                            !title.devices.Contains("PC"))
+                        GetPlatforms(title.devices, out bool containsPC, out bool containsConsole);
+                        if (containsConsole && !containsPC && SettingsViewModel.Settings.ImportConsoleGames)
                         {
-                            var addGame = false;
-                            string platform = null;
-                            if (SettingsViewModel.Settings.ImportConsoleGames && title.devices.Contains("Xbox360"))
-                            {
-                                addGame = true;
-                                platform = "xbox360";
-                            }
-                            else if (SettingsViewModel.Settings.ImportConsoleGames && title.devices.Contains("XboxSeries"))
-                            {
-                                addGame = true;
-                                platform = "xbox_series";
-                            }
-                            else if (SettingsViewModel.Settings.ImportConsoleGames && title.devices.Contains("XboxOne"))
-                            {
-                                addGame = true;
-                                platform = "xbox_one";
-                            }
+                            var newGame = GetGameMetadataFromTitle(title);
+                            newGame.GameId = $"CONSOLE_{title.titleId}_{title.mediaItemType}";
 
-                            if (addGame)
-                            {
-                                var newGame = GetGameMetadataFromTitle(title);
-                                newGame.GameId = $"CONSOLE_{title.titleId}_{title.mediaItemType}";
-                                if (!platform.IsNullOrEmpty())
-                                {
-                                    newGame.Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty(platform) };
-                                }
-
-                                allGames.Add(newGame);
-                            };
+                            allGames.Add(newGame);
                         }
                     }
                 }
