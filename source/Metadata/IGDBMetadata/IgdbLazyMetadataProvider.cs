@@ -381,8 +381,15 @@ namespace IGDBMetadata
                     }
                     else
                     {
-                        var res = plugin.GetSearchResults(a);
-                        return res.Select(b => b as GenericItemOption).ToList();
+                        if (a.IsNullOrWhiteSpace())
+                        {
+                            return new List<GenericItemOption>();
+                        }
+                        else
+                        {
+                            var res = plugin.GetSearchResults(a.Replace("\\", "").Replace("/", "").Trim());
+                            return res.Select(b => b as GenericItemOption).ToList();
+                        }
                     }
                 }, options.GameData.Name);
 
