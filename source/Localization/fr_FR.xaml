@@ -54,7 +54,7 @@
     <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Capture d'écran (magasin)</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Image de fond (magasin)</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Bannières</sys:String>
-    <sys:String x:Key="LOCSteamShowFriendsButton">Afficher le bouton &quot;contacts&quot; dans le panneau supérieur</sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton">Afficher un raccourcis vers &quot;Contacts et Chat&quot; dans le panneau supérieur</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Utiliser des captures d'écran si aucune image de fond n'est disponible</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">À choisir si plusieurs images sont disponibles :</sys:String>

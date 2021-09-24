@@ -55,7 +55,7 @@ Beachte, dass die Option des öffentlichen Kontonamens nur bei Konten funktionie
     <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Shop-Screenshot</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Shop-Hintergrund</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
-    <sys:String x:Key="LOCSteamShowFriendsButton"></sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton">Schaltfläche »Freunde« in oberer Leiste anzeigen</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Screenshots verwenden, falls kein Bildmaterial verfügbar</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Falls mehrere Bilder verfügbar, das folgende verwenden:</sys:String>

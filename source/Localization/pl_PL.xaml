@@ -22,7 +22,8 @@
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Logowanie do konta</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Nazwa konta</sys:String>
-    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Zaloguj się do konta lub podaj nazwę konta, jeżeli jest publiczne, aby zsynchronizować bibliotekę.
+Pamiętaj, że opcja Nazwa konta działa tylko w przypadku kont, których konta GOG są ustawione na publiczne.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Uruchamiaj gry za pomocą klienta GOG Galaxy</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Ta opcja włączy funkcje GOG Galaxy takie jak zapis w chmurze, licznik czasu w grze itd.</sys:String>
     <!--Steam-->
@@ -36,37 +37,37 @@
     <sys:String x:Key="LOCSteamLinksWorkshop">Warsztat</sys:String>
     <sys:String x:Key="LOCSteamUseVerticalCovers">Pobierz pionowe obrazki okładek</sys:String>
     <sys:String x:Key="LOCSteamImportFreeSubGames">Importuj darmowe</sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarn"></sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarn">Ta operacja nadpisze obecne kategorie, ukryte i ulubione wszystkich gier Steam. Czy chcesz kontynuować?</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Zaimportować kolekcje?</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Nie można zaimportować kategorii, konto źródłowe nie zostało wybrane.</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Nie można zaimportować kategorii, baza danych nie jest otwarta.</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportError">Nie udało się zaimportować kategorii Steam: {0}</sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportError"></sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyTooltip"></sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyUrlText"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamImportMetadata"></sys:String>
-    <sys:String x:Key="LOCImportSteamCategoriesLabel"></sys:String>
-    <sys:String x:Key="LOCImportSteamLastActivityLabel"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSource"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceImage"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceStore"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceBanner"></sys:String>
-    <sys:String x:Key="LOCSteamShowFriendsButton"></sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">Nie można zaimportować danych ostatniej rozgrywki, konto nie zostało wybrane.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">Nie można zaimportować informacji o ostatniej rozgrywce, baza danych nie jest otwarta.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportError">Błąd importowania informacji o ostatniej rozgrywce z Steam: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyTooltip">Klucz API jest wymagany dla prywatnych kont Steam</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyUrlText">Uzyskaj klucz API</sys:String>
+    <sys:String x:Key="LOCSettingsSteamImportMetadata">Importuj metadane z konta Steam:</sys:String>
+    <sys:String x:Key="LOCImportSteamCategoriesLabel">Importuj kategorie Steam</sys:String>
+    <sys:String x:Key="LOCImportSteamLastActivityLabel">Importuj ostatnio grane ze Steam</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSource">Źródło obrazu tła:</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceImage">Obraz Gry</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Zrzut ekranu z oficjalnego sklepu</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceStore">Tło z oficjalnego sklepu</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceBanner">Baner</sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton">Pokaż przycisk znajomych w panelu górnym</sys:String>
     <!--IGDB-->
-    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"></sys:String>
-    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>
-    <sys:String x:Key="LOCIgdbSelectBackgroundTitle"></sys:String>
+    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Użyj zrzutów ekranu, jeśli grafika nie jest dostępna</sys:String>
+    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Jeśli dostępnych jest wiele obrazów, używaj:</sys:String>
+    <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Wybierz obraz tła dla: {0}</sys:String>
     <!--Humble-->
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames"></sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignoruj gry ze sklepów zewnętrznych</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Importuj gry z katalogu Trove</sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Włącz aby pominąć importowanie gier z zewnętrznych klientów, włączając sklepy obsługiwane przez Playnite. Zapobiegnie to duplikacji.</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importuj wersję bez zabezpieczeń DRM, jeśli to możliwe.</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importuj gry wymagające zewnętrznego klienta, jeśli oferują wersję bez zabezpieczeń DRM.</sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
-    <sys:String x:Key="LOCXboxImport360Games"></sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames"></sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Uruchom Xbox Game Pass zamiast Microsoft Store</sys:String>
+    <sys:String x:Key="LOCXboxImport360Games">Importuj gry Xbox 360</sys:String>
+    <sys:String x:Key="LOCXboxImportXboneGames">Importuj gry Xbox One</sys:String>
 </ResourceDictionary>
