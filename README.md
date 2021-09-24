@@ -6,31 +6,31 @@ Extensions I've made for [Playnite](https://github.com/JosefNemec/Playnite) laun
 Installation
 ---------
 
-You can install these via Playnite's built-in add-on browser or by clicking on following links (Playnite 9 and newer required):
+You can install these via Playnite's built-in add-on browser or opening following URI links (Playnite 9 and newer required):
 
 ### Integration plugins
 
-[Amazon / Twitch](playnite://playnite/installaddon/AmazonLibrary_Builtin)  
-[Battle.net](playnite://playnite/installaddon/BattlenetLibrary_Builtin)  
-[Bethesda](playnite://playnite/installaddon/BethesdaLibrary_Builtin)  
-[Epic store](playnite://playnite/installaddon/EpicGamesLibrary_Builtin)  
-[GOG](playnite://playnite/installaddon/GogLibrary_Builtin)  
-[Humble](playnite://playnite/installaddon/HumbleLibrary_Builtin)  
-[itch.io](playnite://playnite/installaddon/ItchioLibrary_Builtin)  
-[Origin](playnite://playnite/installaddon/OriginLibrary_Builtin)  
-[Rockstar launcher](playnite://playnite/installaddon/Rockstar_Games_Library)  
-[Steam](playnite://playnite/installaddon/SteamLibrary_Builtin)  
-[Ubisoft Connect](playnite://playnite/installaddon/UplayLibrary_Builtin)  
-[Xbox / MS Store](playnite://playnite/installaddon/XboxLibrary_Builtin)  
+`Amazon / Twitch` playnite://playnite/installaddon/AmazonLibrary_Builtin  
+`Battle.net` playnite://playnite/installaddon/BattlenetLibrary_Builtin  
+`Bethesda` playnite://playnite/installaddon/BethesdaLibrary_Builtin  
+`Epic store` playnite://playnite/installaddon/EpicGamesLibrary_Builtin  
+`GOG` playnite://playnite/installaddon/GogLibrary_Builtin  
+`Humble` playnite://playnite/installaddon/HumbleLibrary_Builtin  
+`itch.io` playnite://playnite/installaddon/ItchioLibrary_Builtin  
+`Origin` playnite://playnite/installaddon/OriginLibrary_Builtin  
+`Rockstar launcher` playnite://playnite/installaddon/Rockstar_Games_Library  
+`Steam` playnite://playnite/installaddon/SteamLibrary_Builtin  
+`Ubisoft Connect` playnite://playnite/installaddon/UplayLibrary_Builtin  
+`Xbox / MS Store` playnite://playnite/installaddon/XboxLibrary_Builtin  
 
 ### Metadata plugins
 
-[IGDB](playnite://playnite/installaddon/IGDBMetadata_Builtin)
-[Universal Steam](playnite://playnite/installaddon/Universal_Steam_Metadata)
+`IGDB` playnite://playnite/installaddon/IGDBMetadata_Builtin  
+`Universal Steam` playnite://playnite/installaddon/Universal_Steam_Metadata
 
 ### Other extensions
 
-[Simple library exporter script](playnite://playnite/installaddon/LibraryExporterPS_Builtin)
+`Simple library exporter script` playnite://playnite/installaddon/LibraryExporterPS_Builtin)  
 
 Issues
 ---------
