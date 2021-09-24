@@ -1,5 +1,11 @@
 AddonId: Universal_Steam_Metadata
 Packages:
+  - Version: 2.2
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2021-09-24
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_2.pext
+    Changelog:
+      - Updated dependencies for Playnite 9
   - Version: 2.1
     RequiredApiVersion: 6.0.0
     ReleaseDate: 2021-09-08
