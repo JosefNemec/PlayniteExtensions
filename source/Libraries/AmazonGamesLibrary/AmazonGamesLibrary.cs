@@ -120,7 +120,7 @@ namespace AmazonGamesLibrary
                     continue;
                 }
 
-                var match = Regex.Match(program.UninstallString, @"-p\s+([a-zA-Z0-9\-]+)");
+                var match = Regex.Match(program.UninstallString, @"-p\s+(\S+)");
                 var gameId = match.Groups[1].Value;
                 if (!games.ContainsKey(gameId))
                 {

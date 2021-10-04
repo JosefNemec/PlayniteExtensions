@@ -40,6 +40,11 @@ namespace AmazonGamesLibrary.Models
         public string id;
         public Product product;
         public string state;
+
+        public override string ToString()
+        {
+            return product?.title ?? id;
+        }
     }
 
     public class EntitlementsResponse
