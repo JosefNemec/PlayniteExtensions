@@ -230,14 +230,16 @@ namespace GogLibrary
                 }
 
                 var libGamesStats = api.GetOwnedGames(api.GetAccountInfo());
-                if (libGamesStats == null)
+                if (libGamesStats != null)
                 {
-                    throw new Exception("Failed to obtain library stats data.");
+                    foreach (LibraryGameResponse libGame in libGames)
+                    {
+                        libGame.stats = libGamesStats?.FirstOrDefault(x => x.game.id.Equals(libGame.game.id))?.stats ?? null;
+                    }
                 }
-
-                foreach (LibraryGameResponse libGame in libGames)
+                else
                 {
-                    libGame.stats = libGamesStats?.FirstOrDefault(x => x.game.id.Equals(libGame.game.id))?.stats ?? null;
+                    Logger.Warn("Failed to obtain library stats data.");
                 }
 
                 return LibraryGamesToGames(libGames).ToList();
