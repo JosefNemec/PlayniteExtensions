@@ -126,9 +126,11 @@ namespace XboxLibrary
         {
             containsPC = false;
             containsConsole = false;
-            HashSet<MetadataProperty> output = new HashSet<MetadataProperty>();
+            var output = new HashSet<MetadataProperty>();
             if (devices == null)
+            {
                 return output;
+            }
 
             foreach (var deviceName in devices)
             {
