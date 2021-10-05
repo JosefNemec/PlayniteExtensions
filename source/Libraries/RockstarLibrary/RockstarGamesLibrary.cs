@@ -39,7 +39,7 @@ namespace RockstarGamesLibrary
                     continue;
                 }
 
-                var match = Regex.Match(app.UninstallString, @"Launcher\.exe.+uninstall=(.+)$", RegexOptions.IgnoreCase);
+                var match = Regex.Match(app.UninstallString, @"(?:Launcher|uninstall)\.exe.+uninstall=(.+)$", RegexOptions.IgnoreCase);
                 if (match.Success)
                 {
                     var titleId = match.Groups[1].Value;
