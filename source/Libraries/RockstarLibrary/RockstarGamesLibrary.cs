@@ -39,14 +39,14 @@ namespace RockstarGamesLibrary
                     continue;
                 }
 
-                var match = Regex.Match(app.UninstallString, @"Launcher\.exe.+uninstall=(.+)$", RegexOptions.IgnoreCase);
+                var match = Regex.Match(app.UninstallString, @"(?:Launcher|uninstall)\.exe.+uninstall=(.+)$", RegexOptions.IgnoreCase);
                 if (match.Success)
                 {
                     var titleId = match.Groups[1].Value;
                     var rsGame = RockstarGames.Games.FirstOrDefault(a => a.TitleId == titleId);
                     if (rsGame == null)
                     {
-                        logger.Warn($"Uknown Rockstar game with titleid {titleId}");
+                        logger.Warn($"Unknown Rockstar game with titleid {titleId}");
                         continue;
                     }
 
