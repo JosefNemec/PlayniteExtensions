@@ -18,3 +18,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/1.0/Rockstar_Games_Library_2_0.pext
     Changelog:
       - Playnite 9 support
+  - Version: 2.3
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2021-10-08
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Rockstar_Games_Library_2_3.pext
+    Changelog:
+      - Fixed GTA V not being detected as installed after its latest update
