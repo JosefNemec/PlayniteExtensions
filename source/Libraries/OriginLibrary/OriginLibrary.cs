@@ -14,6 +14,7 @@ using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Controls;
@@ -343,11 +344,16 @@ namespace OriginLibrary
             return detectedPackages;
         }
 
-        public Dictionary<string, GameMetadata> GetInstalledGames()
+        public Dictionary<string, GameMetadata> GetInstalledGames(CancellationToken cancelToken)
         {
             var games = new Dictionary<string, GameMetadata>();
             foreach (var package in GetInstallPackages())
             {
+                if (cancelToken.IsCancellationRequested)
+                {
+                    break;
+                }
+
                 try
                 {
                     var newGame = new GameMetadata()
@@ -388,7 +394,11 @@ namespace OriginLibrary
                     }
 
                     newGame.InstallDirectory = installDir;
-                    games.Add(newGame.GameId, newGame);
+                    // Games can be duplicated if user has EA Play sub and also bought the game.
+                    if (!games.TryGetValue(newGame.GameId, out var _))
+                    {
+                        games.Add(newGame.GameId, newGame);
+                    }
                 }
                 catch (Exception e) when (!Environment.IsDebugBuild)
                 {
@@ -399,7 +409,7 @@ namespace OriginLibrary
             return games;
         }
 
-        public List<GameMetadata> GetLibraryGames()
+        public List<GameMetadata> GetLibraryGames(CancellationToken cancelToken)
         {
             using (var view = PlayniteApi.WebViews.CreateOffscreenView())
             {
@@ -431,6 +441,11 @@ namespace OriginLibrary
 
                 foreach (var game in api.GetOwnedGames(info.pid.pidId, token).Where(a => a.offerType == "basegame"))
                 {
+                    if (cancelToken.IsCancellationRequested)
+                    {
+                        break;
+                    }
+
                     UsageResponse usage = null;
                     try
                     {
@@ -481,7 +496,7 @@ namespace OriginLibrary
             {
                 try
                 {
-                    installedGames = GetInstalledGames();
+                    installedGames = GetInstalledGames(args.CancelToken);
                     Logger.Debug($"Found {installedGames.Count} installed Origin games.");
                     allGames.AddRange(installedGames.Values.ToList());
                 }
@@ -496,7 +511,7 @@ namespace OriginLibrary
             {
                 try
                 {
-                    var libraryGames = GetLibraryGames();
+                    var libraryGames = GetLibraryGames(args.CancelToken);
                     Logger.Debug($"Found {libraryGames.Count} library Origin games.");
 
                     if (!SettingsViewModel.Settings.ImportUninstalledGames)

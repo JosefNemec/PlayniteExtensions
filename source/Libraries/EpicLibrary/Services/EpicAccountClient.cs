@@ -163,6 +163,11 @@ namespace EpicLibrary.Services
                 {
                     renewToknes(tokens.refresh_token);
                     tokens = loadTokens();
+                    if (tokens.account_id.IsNullOrEmpty() || tokens.access_token.IsNullOrEmpty())
+                    {
+                        return false;
+                    }
+
                     var account = InvokeRequest<AccountResponse>(accountUrl + tokens.account_id, tokens).GetAwaiter().GetResult().Item2;
                     return account.id == tokens.account_id;
                 }

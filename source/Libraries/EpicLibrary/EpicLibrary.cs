@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
@@ -77,7 +78,7 @@ namespace EpicLibrary
             return games;
         }
 
-        internal List<GameMetadata> GetLibraryGames()
+        internal List<GameMetadata> GetLibraryGames(CancellationToken cancelToken)
         {
             var cacheDir = GetCachePath("catalogcache");
             var games = new List<GameMetadata>();
@@ -91,6 +92,11 @@ namespace EpicLibrary
             var playtimeItems = accountApi.GetPlaytimeItems();
             foreach (var gameAsset in assets.Where(a => a.@namespace != "ue"))
             {
+                if (cancelToken.IsCancellationRequested)
+                {
+                    break;
+                }
+
                 var cacheFile = Paths.GetSafePathName($"{gameAsset.@namespace}_{gameAsset.catalogItemId}_{gameAsset.buildVersion}.json");
                 cacheFile = Path.Combine(cacheDir, cacheFile);
                 var catalogItem = accountApi.GetCatalogItem(gameAsset.@namespace, gameAsset.catalogItemId, cacheFile);
@@ -149,7 +155,7 @@ namespace EpicLibrary
             {
                 try
                 {
-                    var libraryGames = GetLibraryGames();
+                    var libraryGames = GetLibraryGames(args.CancelToken);
                     Logger.Debug($"Found {libraryGames.Count} library Epic games.");
 
                     if (!SettingsViewModel.Settings.ImportUninstalledGames)
