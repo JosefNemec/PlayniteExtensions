@@ -32,7 +32,6 @@ namespace SteamLibrary
         public bool ConnectAccount { get; set; } = false;
         public bool ImportUninstalledGames { get; set; } = false;
         public BackgroundSource BackgroundSource { get; set; } = BackgroundSource.Image;
-        public string UserName { get; set; } = string.Empty;
         public string UserId { get; set; } = string.Empty;
         public bool IncludeFreeSubGames { get; set; } = false;
         public bool ShowFriendsButton { get; set; } = true;
@@ -201,7 +200,6 @@ namespace SteamLibrary
             try
             {
                 var steamId = string.Empty;
-                var userName = "Unknown";
                 using (var view = PlayniteApi.WebViews.CreateView(675, 440, Colors.Black))
                 {
                     view.LoadingChanged += async (s, e) =>
@@ -215,11 +213,13 @@ namespace SteamLibrary
                             {
                                 steamId = idMatch.Groups[1].Value;
                             }
-
-                            var userMatch = Regex.Match(source, @"personaname"":""(.+?)""");
-                            if (userMatch.Success)
+                            else
                             {
-                                userName = userMatch.Groups[1].Value;
+                                idMatch = Regex.Match(source, @"steamid"":""(\d+)""");
+                                if (idMatch.Success)
+                                {
+                                    steamId = idMatch.Groups[1].Value;
+                                }
                             }
 
                             if (idMatch.Success)
@@ -238,11 +238,6 @@ namespace SteamLibrary
                 if (!steamId.IsNullOrEmpty())
                 {
                     Settings.UserId = steamId;
-                }
-
-                if (!userName.IsNullOrEmpty())
-                {
-                    Settings.UserName = userName;
                 }
 
                 OnPropertyChanged(nameof(AuthStatus));
