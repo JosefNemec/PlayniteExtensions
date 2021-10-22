@@ -71,6 +71,8 @@ namespace PlayniteServices.Models.IGDB
         China = 6,
         Asia = 7,
         Worldwide = 8,
+        Korea = 9,
+        Brazil = 10
     }
 
     public enum ExternalGameCategory : int
@@ -81,7 +83,12 @@ namespace PlayniteServices.Models.IGDB
         Microsoft = 11,
         Apple = 13,
         Twitch = 14,
-        Android = 15
+        Android = 15,
+        AmazonAsin = 20,
+        AamazonAuna = 22,
+        AmazonAdg = 23,
+        EpicGameStore = 26,
+        Oculus = 28
     }
 
     public enum PlatformCategory
@@ -97,7 +104,12 @@ namespace PlayniteServices.Models.IGDB
     public enum AgeRatingOrganization
     {
         ESRB = 1,
-        PEGI = 2
+        PEGI = 2,
+        CERO = 3,
+        USK = 4,
+        GRAC = 5,
+        ClassInd = 6,
+        ACB = 7
     }
 
     public enum AgeRatingType
@@ -118,7 +130,59 @@ namespace PlayniteServices.Models.IGDB
         E10 = 9,
         T = 10,
         M = 11,
-        AO = 12
+        AO = 12,
+        [Description("A")]
+        CERO_A = 13,
+        [Description("B")]
+        CERO_B = 14,
+        [Description("C")]
+        CERO_C = 15,
+        [Description("D")]
+        CERO_D = 16,
+        [Description("Z")]
+        CERO_Z = 17,
+        [Description("0")]
+        USK_0 = 18,
+        [Description("6")]
+        USK_6 = 19,
+        [Description("12")]
+        USK_12 = 20,
+        [Description("18")]
+        USK_18 = 21,
+        [Description("ALL")]
+        GRAC_ALL = 22,
+        [Description("12")]
+        GRAC_Twelve = 23,
+        [Description("15")]
+        GRAC_Fifteen = 24,
+        [Description("18")]
+        GRAC_Eighteen = 25,
+        [Description("TESTING")]
+        GRAC_TESTING = 26,
+        [Description("L")]
+        CLASS_IND_L = 27,
+        [Description("10")]
+        CLASS_IND_Ten = 28,
+        [Description("12")]
+        CLASS_IND_Twelve = 29,
+        [Description("14")]
+        CLASS_IND_Fourteen = 30,
+        [Description("16")]
+        CLASS_IND_Sixteen = 31,
+        [Description("18")]
+        CLASS_IND_Eighteen = 32,
+        [Description("G")]
+        ACB_G = 33,
+        [Description("PG")]
+        ACB_PG = 34,
+        [Description("M")]
+        ACB_M = 35,
+        [Description("MA15")]
+        ACB_MA15 = 36,
+        [Description("R18")]
+        ACB_R18 = 37,
+        [Description("RC")]
+        ACB_RC = 38
     }
 
     public class AgeRating : IgdbItem
