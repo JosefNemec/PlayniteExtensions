@@ -48,7 +48,7 @@ namespace EpicLibrary
                 if (progs == null)
                 {
                     // Try default location. These registry keys sometimes go missing on people's PCs...
-                    if (File.Exists(GetExecutablePath(@"C:\Program Files(x86)\Epic Games\")))
+                    if (File.Exists(GetExecutablePath(@"C:\Program Files (x86)\Epic Games\")))
                     {
                         return @"C:\Program Files(x86)\Epic Games\";
                     }
