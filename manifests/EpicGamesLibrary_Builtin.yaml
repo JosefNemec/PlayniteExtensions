@@ -27,7 +27,7 @@ Packages:
       - Canceling library sync takes too long
   - Version: 2.4
     RequiredApiVersion: 6.0.0
-    ReleaseDate: 2021-27-12
+    ReleaseDate: 2021-10-27
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_4.pext
     Changelog:
       - Fixed Epic client installation not detected properly
