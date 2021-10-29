@@ -426,6 +426,15 @@ namespace Steam
                 {
                     features.Add(new MetadataNameProperty("VR"));
                 }
+
+                foreach (var ass in metadata.ProductDetails["common"]["associations"].Children)
+                {
+                    if (ass["type"].Value == "franchise")
+                    {
+                        metadata.Series = new HashSet<MetadataProperty> { new MetadataNameProperty(ass["name"].Value) };
+                        break;
+                    }
+                }
             }
 
             return metadata;

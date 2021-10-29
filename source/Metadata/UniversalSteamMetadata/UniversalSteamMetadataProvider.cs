@@ -44,7 +44,8 @@ namespace UniversalSteamMetadata
             MetadataField.ReleaseDate,
             MetadataField.Features,
             MetadataField.Name,
-            MetadataField.Platform
+            MetadataField.Platform,
+            MetadataField.Series
         };
 
         public UniversalSteamMetadataProvider(MetadataRequestOptions options, UniversalSteamMetadata plugin)
@@ -232,6 +233,17 @@ namespace UniversalSteamMetadata
             }
 
             return base.GetFeatures(args);
+        }
+
+        public override IEnumerable<MetadataProperty> GetSeries(GetMetadataFieldArgs args)
+        {
+            GetGameData();
+            if (currentMetadata != null)
+            {
+                return currentMetadata.Series;
+            }
+
+            return base.GetSeries(args);
         }
 
         public override IEnumerable<MetadataProperty> GetPlatforms(GetMetadataFieldArgs args)
