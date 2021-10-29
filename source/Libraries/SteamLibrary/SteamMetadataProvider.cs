@@ -17,14 +17,16 @@ namespace SteamLibrary
 {
     public class SteamMetadataProvider : LibraryMetadataProvider
     {
-        private ILogger logger = LogManager.GetLogger();
-        private SteamLibrary library;
-        private SteamApiClient apiClient;
+        private static readonly ILogger logger = LogManager.GetLogger();
+        private readonly SteamLibrary library;
+        private readonly SteamApiClient apiClient;
+        private readonly WebApiClient webApiClient;
 
         public SteamMetadataProvider(SteamLibrary library)
         {
             this.library = library;
             apiClient = new SteamApiClient();
+            webApiClient = new WebApiClient();
         }
 
         public override void Dispose()
@@ -37,6 +39,8 @@ namespace SteamLibrary
             {
                 logger.Error(e, "Failed to logout Steam client.");
             }
+
+            webApiClient.Dispose();
         }
 
         public override GameMetadata GetMetadata(Game game)
@@ -53,7 +57,7 @@ namespace SteamLibrary
             }
             else
             {
-                return new MetadataProvider(apiClient).GetGameMetadata(
+                return new MetadataProvider(apiClient, webApiClient).GetGameMetadata(
                     gameId.AppID,
                     library.SettingsViewModel.Settings.BackgroundSource,
                     library.SettingsViewModel.Settings.DownloadVerticalCovers);

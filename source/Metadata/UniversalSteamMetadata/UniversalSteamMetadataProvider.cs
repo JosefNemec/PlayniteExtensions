@@ -28,6 +28,7 @@ namespace UniversalSteamMetadata
         private readonly UniversalSteamMetadata plugin;
         private SteamGameMetadata currentMetadata;
         private readonly SteamApiClient apiClient;
+        private readonly WebApiClient webApiClient;
 
         public override List<MetadataField> AvailableFields { get; } = new List<MetadataField>
         {
@@ -53,6 +54,7 @@ namespace UniversalSteamMetadata
             this.options = options;
             this.plugin = plugin;
             apiClient = new SteamApiClient();
+            webApiClient = new WebApiClient();
         }
 
         public override void Dispose()
@@ -65,6 +67,8 @@ namespace UniversalSteamMetadata
             {
                 logger.Error(e, "Failed to logout Steam client.");
             }
+
+            webApiClient.Dispose();
         }
 
         public override string GetName(GetMetadataFieldArgs args)
@@ -260,7 +264,7 @@ namespace UniversalSteamMetadata
 
             try
             {
-                var metadataProvider = new MetadataProvider(apiClient);
+                var metadataProvider = new MetadataProvider(apiClient, webApiClient);
                 if (BuiltinExtensions.GetExtensionFromId(options.GameData.PluginId) == BuiltinExtension.SteamLibrary)
                 {
                     var appId = uint.Parse(options.GameData.GameId);
@@ -294,7 +298,7 @@ namespace UniversalSteamMetadata
                             {
                                 try
                                 {
-                                    var store = WebApiClient.GetStoreAppDetail(appId);
+                                    var store = webApiClient.GetStoreAppDetail(appId);
                                     return new List<GenericItemOption> { new StoreSearchResult
                                     {
                                         GameId = appId,

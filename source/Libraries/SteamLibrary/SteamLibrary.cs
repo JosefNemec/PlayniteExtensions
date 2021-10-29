@@ -412,8 +412,11 @@ namespace SteamLibrary
                 libraryUrl += "&include_free_sub=1";
             }
 
-            var stringLibrary = HttpDownloader.DownloadString(string.Format(libraryUrl, apiKey, userId));
-            return Serialization.FromJson<GetOwnedGamesResult>(stringLibrary);
+            using (var webClient = new WebClient { Encoding = Encoding.UTF8 })
+            {
+                var stringLibrary = webClient.DownloadString(string.Format(libraryUrl, apiKey, userId));
+                return Serialization.FromJson<GetOwnedGamesResult>(stringLibrary);
+            }
         }
 
         internal List<GameMetadata> GetLibraryGames(ulong userId, List<GetOwnedGamesResult.Game> ownedGames)

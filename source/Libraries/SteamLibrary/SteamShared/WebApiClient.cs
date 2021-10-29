@@ -10,18 +10,25 @@ using Steam.Models;
 
 namespace Steam
 {
-    public class WebApiClient
+    public class WebApiClient : IDisposable
     {
-        public static AppReviewsResult GetUserRating(uint appId)
+        private readonly WebClient webClient;
+
+        public WebApiClient()
         {
-            var url = $"https://store.steampowered.com/appreviews/{appId}?json=1&purchase_type=all&language=all";
-            return Serialization.FromJson<AppReviewsResult>(HttpDownloader.DownloadString(url));
+            webClient = new WebClient { Encoding = Encoding.UTF8 };
         }
 
-        public static StoreAppDetailsResult.AppDetails GetStoreAppDetail(uint appId)
+        public AppReviewsResult GetUserRating(uint appId)
+        {
+            var url = $"https://store.steampowered.com/appreviews/{appId}?json=1&purchase_type=all&language=all";
+            return Serialization.FromJson<AppReviewsResult>(webClient.DownloadString(url));
+        }
+
+        public StoreAppDetailsResult.AppDetails GetStoreAppDetail(uint appId)
         {
             var url = $"https://store.steampowered.com/api/appdetails?appids={appId}&l=english";
-            var parsedData = Serialization.FromJson<Dictionary<string, StoreAppDetailsResult>>(HttpDownloader.DownloadString(url));
+            var parsedData = Serialization.FromJson<Dictionary<string, StoreAppDetailsResult>>(webClient.DownloadString(url));
             var response = parsedData[appId.ToString()];
 
             // No store data for this appid
@@ -31,6 +38,11 @@ namespace Steam
             }
 
             return response.data;
+        }
+
+        public void Dispose()
+        {
+            webClient.Dispose();
         }
     }
 }

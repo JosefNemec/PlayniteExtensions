@@ -26,8 +26,9 @@ namespace Steam
 
     public class MetadataProvider
     {
-        private ILogger logger = LogManager.GetLogger();
+        private static readonly ILogger logger = LogManager.GetLogger();
         private readonly SteamApiClient apiClient;
+        private readonly WebApiClient webApiClient;
 
         private readonly string[] backgroundUrls = new string[]
         {
@@ -35,9 +36,10 @@ namespace Steam
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page_bg_generated.jpg"
         };
 
-        public MetadataProvider(SteamApiClient apiClient)
+        public MetadataProvider(SteamApiClient apiClient, WebApiClient webApiClient)
         {
             this.apiClient = apiClient;
+            this.webApiClient = webApiClient;
         }
 
         public static string GetWorkshopUrl(uint appId)
@@ -105,12 +107,12 @@ namespace Steam
 
         internal StoreAppDetailsResult.AppDetails GetStoreData(uint appId)
         {
-            return SendDelayedStoreRequest(() => WebApiClient.GetStoreAppDetail(appId), appId);
+            return SendDelayedStoreRequest(() => webApiClient.GetStoreAppDetail(appId), appId);
         }
 
         internal AppReviewsResult.QuerySummary GetUserReviewsData(uint appId)
         {
-            var ratings = SendDelayedStoreRequest(() => WebApiClient.GetUserRating(appId), appId);
+            var ratings = SendDelayedStoreRequest(() => webApiClient.GetUserRating(appId), appId);
             if (ratings?.success == 1)
             {
                 return ratings.query_summary;
