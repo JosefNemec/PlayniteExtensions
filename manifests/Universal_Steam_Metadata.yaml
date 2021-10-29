@@ -19,3 +19,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/1.0/Universal_Steam_Metadata_2_0.pext
     Changelog:
       - Playnite 9 support
+  - Version: 2.3
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2021-10-29
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_3.pext
+    Changelog:
+      - Franchine field from Steam is used to populate Series field
+      - Small optimization to metadata download
