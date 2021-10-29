@@ -41,7 +41,7 @@
     <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Імпортувати категорії?</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Неможливо імпортувати категорії, обліковий запис для імпорту не вибрано.</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Неможливо імпортувати категорії, база даних не відкрито.</sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportError">Не вдалося імпортувати атегорії Steam: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportError">Не вдалося імпортувати категорії Steam: {0}</sys:String>
     <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">Неможливо імпортувати інформацію про останню зіграну гру, обліковий запис для імпорту не вибрано.</sys:String>
     <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">Неможливо імпортувати інформацію про останню зіграну гру, база даних не відкрита.</sys:String>
     <sys:String x:Key="LOCSettingsSteamLastActivityImportError">Не вдалося імпортувати інформацію про останню зіграну гру Steam: {0}</sys:String>
