@@ -59,7 +59,7 @@ namespace SteamLibrary
                     FontSize = 20,
                     FontFamily = ResourceProvider.GetResource("FontIcoFont") as FontFamily
                 },
-                Title = "Steam Friends",
+                Title = ResourceProvider.GetString("LOCSteamFriendsTooltip"),
                 Activated = () => Process.Start(@"steam://open/friends"),
                 Visible = SettingsViewModel.Settings.ShowFriendsButton
             };
