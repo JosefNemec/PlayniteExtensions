@@ -204,11 +204,11 @@ namespace EpicLibrary.Services
         public CatalogItem GetCatalogItem(string nameSpace, string id, string cachePath)
         {
             Dictionary<string, CatalogItem> result = null;
-            if (!cachePath.IsNullOrEmpty() && File.Exists(cachePath))
+            if (!cachePath.IsNullOrEmpty() && FileSystem.FileExists(cachePath))
             {
                 try
                 {
-                    result = Serialization.FromJsonFile<Dictionary<string, CatalogItem>>(cachePath);
+                    result = Serialization.FromJson<Dictionary<string, CatalogItem>>(FileSystem.ReadStringFromFile(cachePath));
                 }
                 catch (Exception e)
                 {
