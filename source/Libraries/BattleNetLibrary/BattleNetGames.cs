@@ -284,6 +284,16 @@ namespace BattleNetLibrary
                 InternalId = "rtro",
                 Name = "Blizzard Arcade Collection",
                 Type = BNetAppType.Default
+            },
+            new BNetApp()
+            {
+                ApiId = 1179603525,
+                ProductId = "FORE",
+                InternalId = "fore",
+                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//f94/d9d4f33efd0ed10acacf1d032479cd01-CODVG_Reveal_Standard_Keyart_Textless-Bnet-Shop_Background_Desktop-1600x680.jpg",
+                CoverUrl = "https://bnetproduct-a.akamaihd.net//6a/238445d222b2b650eec86a37e4c2ba67-CODVG_Reveal_Ultimate_Keyart_Textless-Bnet-Shop_Card_Product_Vert-700x850_02a.jpg",
+                Name = "Call of Duty: Vanguard",
+                Type = BNetAppType.Default
             }
         };
 
