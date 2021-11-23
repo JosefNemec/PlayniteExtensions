@@ -37,3 +37,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_5.pext
     Changelog:
       - Fixed import of uninstalled games not working properly sometimes
+  - Version: 2.6
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2021-11-23
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_6.pext
+    Changelog:
+      - Temporarily reworked how authentication works
