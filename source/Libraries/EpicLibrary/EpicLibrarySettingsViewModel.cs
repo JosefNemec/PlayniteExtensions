@@ -70,7 +70,7 @@ namespace EpicLibrary
             try
             {
                 var clientApi = new EpicAccountClient(PlayniteApi, Plugin.TokensPath);
-                clientApi.Login();
+                clientApi.Login(PlayniteApi);
                 OnPropertyChanged(nameof(IsUserLoggedIn));
             }
             catch (Exception e) when (!Debugger.IsAttached)

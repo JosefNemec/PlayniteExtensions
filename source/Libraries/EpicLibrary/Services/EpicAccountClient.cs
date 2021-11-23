@@ -83,39 +83,23 @@ namespace EpicLibrary.Services
             }
         }
 
-        public void Login()
+        public void Login(IPlayniteAPI playniteAPI)
         {
-            var loggedIn = false;
-            var apiRedirectContent = string.Empty;
-            using (var view = api.WebViews.CreateView(580, 700))
-            {
-                view.LoadingChanged += async (s, e) =>
-                {
-                    var address = view.GetCurrentAddress();
-                    if (address.StartsWith(@"https://www.epicgames.com/id/api/redirect"))
-                    {
-                        apiRedirectContent = await view.GetPageTextAsync();
-                        loggedIn = true;
-                        view.Close();
-                    }
-                };
+            playniteAPI.Dialogs.ShowMessage(
+@"Click OK to open Epic login page in your default web browser.
 
-                view.DeleteDomainCookies(".epicgames.com");
-                view.Navigate(loginUrl);
-                view.OpenDialog();
-            }
+After succesfull login, page will open with ""sid"" identifier, for example ""f4fbb95359414f96abf1fcf6f84a0d7b"".
 
-            if (!loggedIn)
+Copy that string and enter it on next dialog.
+", "");
+            ProcessStarter.StartUrl(loginUrl);
+            var inputRes = playniteAPI.Dialogs.SelectString("Enter \"sid\" identifier:", "", "");
+            if (!inputRes.Result || inputRes.SelectedString.IsNullOrWhiteSpace())
             {
                 return;
             }
 
-            if (apiRedirectContent.IsNullOrEmpty())
-            {
-                return;
-            }
-
-            var sid = Serialization.FromJson<ApiRedirectResponse>(apiRedirectContent).sid;
+            var sid = inputRes.SelectedString.Trim().Trim('"');
             FileSystem.DeleteFile(tokensPath);
             var exchangeKey = getExcahngeToken(sid);
             if (string.IsNullOrEmpty(exchangeKey))
