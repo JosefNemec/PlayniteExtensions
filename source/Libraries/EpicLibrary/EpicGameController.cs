@@ -36,7 +36,7 @@ namespace EpicLibrary
             }
 
             Dispose();
-            ProcessStarter.StartUrl(EpicLauncher.LibraryLaunchUrl);
+            ProcessStarter.StartUrl(string.Format(EpicLauncher.GameInstallUrlMask, Game.GameId));
             StartInstallWatcher();
         }
 
