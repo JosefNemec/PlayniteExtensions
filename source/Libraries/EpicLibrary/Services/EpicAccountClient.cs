@@ -83,23 +83,46 @@ namespace EpicLibrary.Services
             }
         }
 
-        public void Login(IPlayniteAPI playniteAPI)
+        public void Login()
         {
-            playniteAPI.Dialogs.ShowMessage(
-@"Click OK to open Epic login page in your default web browser.
+            var loggedIn = false;
+            var apiRedirectContent = string.Empty;
 
-After succesfull login, page will open with ""sid"" identifier, for example ""f4fbb95359414f96abf1fcf6f84a0d7b"".
+            using (var view = api.WebViews.CreateView(new WebViewSettings
+            {
+                WindowWidth = 580,
+                WindowHeight = 700,
+                // This is needed otherwise captcha won't pass
+                UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36"
+            }))
+            {
+                view.LoadingChanged += async (s, e) =>
+                {
+                    var address = view.GetCurrentAddress();
+                    if (address.StartsWith(@"https://www.epicgames.com/id/api/redirect"))
+                    {
+                        apiRedirectContent = await view.GetPageTextAsync();
+                        loggedIn = true;
+                        view.Close();
+                    }
+                };
 
-Copy that string and enter it on next dialog.
-", "");
-            ProcessStarter.StartUrl(loginUrl);
-            var inputRes = playniteAPI.Dialogs.SelectString("Enter \"sid\" identifier:", "", "");
-            if (!inputRes.Result || inputRes.SelectedString.IsNullOrWhiteSpace())
+                view.DeleteDomainCookies(".epicgames.com");
+                view.Navigate(loginUrl);
+                view.OpenDialog();
+            }
+
+            if (!loggedIn)
             {
                 return;
             }
 
-            var sid = inputRes.SelectedString.Trim().Trim('"');
+            if (apiRedirectContent.IsNullOrEmpty())
+            {
+                return;
+            }
+
+            var sid = Serialization.FromJson<ApiRedirectResponse>(apiRedirectContent).sid;
             FileSystem.DeleteFile(tokensPath);
             var exchangeKey = getExcahngeToken(sid);
             if (string.IsNullOrEmpty(exchangeKey))
