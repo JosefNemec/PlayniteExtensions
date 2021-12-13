@@ -43,3 +43,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_6.pext
     Changelog:
       - Temporarily reworked how authentication works
+  - Version: 2.7
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2021-12-13
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_7.pext
+    Changelog:
+      - Restored original authentication process
+      - Game installation no longer just opens Epic client, but actually starts installation of specific game (by darklinkpower)
