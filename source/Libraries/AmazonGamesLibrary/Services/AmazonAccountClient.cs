@@ -110,14 +110,21 @@ namespace AmazonGamesLibrary.Services
             var token = LoadToken();
             using (var client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Add("User-Agent", "com.amazon.agslauncher.win/1.1.133.2-9e2c3a3");
-                client.DefaultRequestHeaders.Add("X-Amz-Target", "com.amazonaws.gearbox.softwaredistribution.service.model.SoftwareDistributionService.GetEntitlements");
+                client.DefaultRequestHeaders.Add("User-Agent", "com.amazon.agslauncher.win/2.1.5699.1");
+                client.DefaultRequestHeaders.Add("X-Amz-Target", "com.amazonaws.gearbox.softwaredistribution.service.model.SoftwareDistributionService.GetEntitlementsV2");
                 client.DefaultRequestHeaders.Add("x-amzn-token", token.access_token);
 
                 string nextToken = null;
+                var reqData = new EntitlementsRequest
+                {
+                    // not sure what key this is but it's some key from Amazon.Fuel.Plugin.Entitlement.dll
+                    keyId = "d5dc8b8b-86c8-4fc4-ae93-18c0def5314d",
+                    hardwareHash = Guid.NewGuid().ToString("N")
+                };
+
                 do
                 {
-                    var reqData = new EntitlementsRequest() { nextToken = nextToken };
+                    reqData.nextToken = nextToken;
                     var strCont = new StringContent(Serialization.ToJson(reqData, true), Encoding.UTF8, "application/json");
                     strCont.Headers.TryAddWithoutValidation("Expect", "100-continue");
                     strCont.Headers.TryAddWithoutValidation("Content-Encoding", "amz-1.0");
