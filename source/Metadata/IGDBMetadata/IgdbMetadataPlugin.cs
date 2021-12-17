@@ -30,6 +30,7 @@ namespace IGDBMetadata
             Guid.Parse("000001DB-DBD1-46C6-B5D0-B1BA559D10E4"),
             new List<MetadataField>
             {
+                MetadataField.Name,
                 MetadataField.Description,
                 MetadataField.CoverImage,
                 MetadataField.BackgroundImage,
