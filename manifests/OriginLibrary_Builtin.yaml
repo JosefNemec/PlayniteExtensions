@@ -25,3 +25,9 @@ Packages:
     Changelog:
       - Canceling library sync takes too long
       - Minor fix to import of installed games
+  - Version: 2.4
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2021-12-17
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/OriginLibrary_Builtin_2_4.pext
+    Changelog:
+      - Fixed opening Origin client starting EA Desktop instead if it's installed
