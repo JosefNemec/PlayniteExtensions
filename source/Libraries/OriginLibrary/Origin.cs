@@ -30,11 +30,18 @@ namespace OriginLibrary
         {
             get
             {
-                var root = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32);
-                var key = root.OpenSubKey(@"SOFTWARE\Origin");
-                if (key?.GetValueNames().Contains("ClientPath") == true)
+                using (var root = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32))
+                using (var key = root.OpenSubKey(@"SOFTWARE\Origin"))
                 {
-                    return key.GetValue("ClientPath").ToString();
+                    var values = key?.GetValueNames();
+                    if (values.Contains("OriginPath") == true)
+                    {
+                        return key.GetValue("OriginPath").ToString();
+                    }
+                    else if (values.Contains("ClientPath") == true)
+                    {
+                        return key.GetValue("ClientPath").ToString();
+                    }
                 }
 
                 return string.Empty;
