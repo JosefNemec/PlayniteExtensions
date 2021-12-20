@@ -34,11 +34,11 @@ namespace OriginLibrary
                 using (var key = root.OpenSubKey(@"SOFTWARE\Origin"))
                 {
                     var values = key?.GetValueNames();
-                    if (values.Contains("OriginPath") == true)
+                    if (values?.Contains("OriginPath") == true)
                     {
                         return key.GetValue("OriginPath").ToString();
                     }
-                    else if (values.Contains("ClientPath") == true)
+                    else if (values?.Contains("ClientPath") == true)
                     {
                         return key.GetValue("ClientPath").ToString();
                     }
