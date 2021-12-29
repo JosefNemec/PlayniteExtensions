@@ -31,6 +31,11 @@ namespace SteamLibrary
 
         public override void Install(InstallActionArgs args)
         {
+            if (!Steam.IsInstalled)
+            {
+                throw new Exception("Steam installation not found.");
+            }
+
             var gameId = Game.ToSteamGameID();
             if (gameId.IsMod)
             {
@@ -90,6 +95,11 @@ namespace SteamLibrary
 
         public override void Uninstall(UninstallActionArgs args)
         {
+            if (!Steam.IsInstalled)
+            {
+                throw new Exception("Steam installation not found.");
+            }
+
             var gameId = Game.ToSteamGameID();
             if (gameId.IsMod)
             {
