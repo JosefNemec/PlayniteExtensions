@@ -253,7 +253,16 @@ namespace Steam
             bool downloadVerticalCovers)
         {
             var metadata = DownloadGameMetadata(appId, backgroundSource, downloadVerticalCovers);
-            metadata.Name = metadata.ProductDetails?["common"]["name"]?.Value ?? metadata.StoreDetails?.name;
+            var newName = metadata.ProductDetails?["common"]["name_localized"]["english"]?.Value;
+            if (newName != null)
+            {
+                metadata.Name = newName;
+            }
+            else
+            {
+                metadata.Name = metadata.ProductDetails?["common"]["name"]?.Value ?? metadata.StoreDetails?.name;
+            }
+
             metadata.Links = new List<Link>()
             {
                 new Link(ResourceProvider.GetString("LOCSteamLinksCommunityHub"), $"https://steamcommunity.com/app/{appId}"),
