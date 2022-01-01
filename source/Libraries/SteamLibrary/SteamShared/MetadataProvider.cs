@@ -286,7 +286,7 @@ namespace Steam
             var features = new HashSet<MetadataProperty>();
             if (metadata.StoreDetails != null)
             {
-                metadata.Description = ParseDescription(metadata.StoreDetails.detailed_description);
+                metadata.Description = ParseDescription(metadata.StoreDetails.about_the_game);
                 var cultInfo = new CultureInfo("en-US", false).TextInfo;
                 if (metadata.StoreDetails.release_date.date?.IsNullOrEmpty() == false)
                 {
