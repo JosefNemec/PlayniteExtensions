@@ -43,6 +43,7 @@ namespace EpicLibrary.Services
         private readonly string catalogUrl = @"";
         private readonly string playtimeUrl = @"";
         private const string authEcodedString = "MzRhMDJjZjhmNDQxNGUyOWIxNTkyMTg3NmRhMzZmOWE6ZGFhZmJjY2M3Mzc3NDUwMzlkZmZlNTNkOTRmYzc2Y2Y=";
+        private const string userAgent = @"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Vivaldi/4.3";
 
         public EpicAccountClient(IPlayniteAPI api, string tokensPath)
         {
@@ -93,7 +94,7 @@ namespace EpicLibrary.Services
                 WindowWidth = 580,
                 WindowHeight = 700,
                 // This is needed otherwise captcha won't pass
-                UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36"
+                UserAgent = userAgent
             }))
             {
                 view.LoadingChanged += async (s, e) =>
@@ -320,7 +321,7 @@ namespace EpicLibrary.Services
                 httpClient.DefaultRequestHeaders.Add("X-Epic-Event-Category", "login");
                 httpClient.DefaultRequestHeaders.Add("X-Epic-Strategy-Flags", "");
                 httpClient.DefaultRequestHeaders.Add("X-Requested-With", "XMLHttpRequest");
-                httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0) Gecko/20100101 Firefox/86.0");
+                httpClient.DefaultRequestHeaders.Add("User-Agent", userAgent);
 
                 httpClient.GetAsync(@"https://www.epicgames.com/id/api/set-sid?sid=" + sid).GetAwaiter().GetResult();
                 var resp = httpClient.GetAsync(@"https://www.epicgames.com/id/api/csrf").GetAwaiter().GetResult();
