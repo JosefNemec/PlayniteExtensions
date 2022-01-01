@@ -50,3 +50,9 @@ Packages:
     Changelog:
       - Restored original authentication process
       - Game installation no longer just opens Epic client, but actually starts installation of specific game (by darklinkpower)
+  - Version: 2.8
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2022-01-01
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_8.pext
+    Changelog:
+      - Fixed authentication using Google account not working
