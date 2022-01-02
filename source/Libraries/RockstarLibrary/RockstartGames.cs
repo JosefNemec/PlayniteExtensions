@@ -59,6 +59,12 @@ namespace RockstarGamesLibrary
             },
             new RockstarGame
             {
+                Name = "Grand Theft Auto: San Andreas – The Definitive Edition",
+                Executable = "Gameface/Binaries/Win64/SanAndreas.exe",
+                TitleId = "gtasaunreal"
+            },
+            new RockstarGame
+            {
                 Name = "Grand Theft Auto III",
                 Executable = "gta3.exe",
                 TitleId = "gta3"
