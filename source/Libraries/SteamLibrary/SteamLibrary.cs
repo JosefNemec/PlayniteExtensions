@@ -454,7 +454,7 @@ namespace SteamLibrary
                     Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
-                if (lastActivity != null && lastActivity.TryGetValue(newGame.GameId, out var gameLastActivity))
+                if (lastActivity != null && lastActivity.TryGetValue(newGame.GameId, out var gameLastActivity) && newGame.Playtime > 0)
                 {
                     newGame.LastActivity = gameLastActivity;
                 }
