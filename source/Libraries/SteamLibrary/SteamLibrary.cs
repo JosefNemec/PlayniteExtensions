@@ -681,6 +681,10 @@ namespace SteamLibrary
                         {
                             dbGame.CategoryIds = db.Categories.Add(game.Categories).Select(a => a.Id).ToList();
                         }
+                        else
+                        {
+                            dbGame.CategoryIds = null;
+                        }
 
                         if (game.Hidden)
                         {
