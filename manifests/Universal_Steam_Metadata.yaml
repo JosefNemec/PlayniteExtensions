@@ -26,3 +26,10 @@ Packages:
     Changelog:
       - Franchine field from Steam is used to populate Series field
       - Small optimization to metadata download
+  - Version: 2.4
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-01-03
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_4.pext
+    Changelog:
+      - Use game descriptions without promotion junk
+      - Prioritize English localized game names
