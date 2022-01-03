@@ -26,3 +26,13 @@ Packages:
       - Franchine field from Steam is used to populate Series field
       - Small optimization to metadata download
       - Fixed private API keys leaking to logs
+  - Version: 2.4
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-01-03
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_4.pext
+    Changelog:
+      - Use game descriptions without promotion junk
+      - Prioritize English localized game names
+      - Fixed crash when installing or uninstalling a game and Steam installation is not detected
+      - Fixed newly added games have "Last Played" set to date where they were bought
+      - Fixed (Re)Import of Steam categories does not take into account games where categories have been removed in Steam
