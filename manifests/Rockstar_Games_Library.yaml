@@ -24,3 +24,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Rockstar_Games_Library_2_3.pext
     Changelog:
       - Fixed GTA V not being detected as installed after its latest update
+  - Version: 2.4
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-01-03
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Rockstar_Games_Library_2_4.pext
+    Changelog:
+      - GTA Definitive Editions support (by levibostian)
