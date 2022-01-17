@@ -28,17 +28,9 @@ namespace GogLibrary.Services
             {
                 data = HttpDownloader.DownloadString(gameUrl, new List<System.Net.Cookie>() { new System.Net.Cookie("gog_lc", Gog.EnStoreLocaleString) }).Split('\n');
             }
-            catch (WebException e)
+            catch (WebException _)
             {
-                var response = (HttpWebResponse)e.Response;
-                if (response.StatusCode == HttpStatusCode.NotFound)
-                {
-                    return null;
-                }
-                else
-                {
-                    throw;
-                }
+                return null;
             }
 
             var dataStarted = false;
