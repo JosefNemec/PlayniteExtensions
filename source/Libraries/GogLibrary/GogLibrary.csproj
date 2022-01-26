@@ -168,6 +168,7 @@
       <DependentUpon>GogLibrarySettingsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="GOGMetadataProvider.cs" />
+    <Compile Include="LocalizationKeys.cs" />
     <Compile Include="Models\AccountBasicRespose.cs" />
     <Compile Include="Models\GogGameMetadata.cs" />
     <Compile Include="Models\GogGameTaskInfo.cs" />
@@ -189,8 +190,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\localization\en_US.xaml">
-      <Link>Localization\en_US.xaml</Link>
+    <None Include="Localization\*.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

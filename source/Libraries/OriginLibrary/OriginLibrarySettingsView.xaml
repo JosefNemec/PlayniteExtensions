@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:OriginLibrary"
              xmlns:pcon="clr-namespace:Playnite.Converters"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:pcmd="clr-namespace:Playnite.Commands"
              mc:Ignorable="d" 
              d:DesignHeight="250" d:DesignWidth="800">
 
@@ -19,11 +20,11 @@
         <CheckBox DockPanel.Dock="Top" Name="CheckOriginImportInstalled"
                   Margin="0,0,0,15"
                   IsChecked="{Binding Settings.ImportInstalledGames}"
-                  Content="{DynamicResource LOCSettingsImportInstalledLabel}"/>
+                  Content="{DynamicResource LOCOriginSettingsImportInstalledLabel}"/>
 
         <CheckBox DockPanel.Dock="Top" Name="CheckOriginConnectAccount"
                   IsChecked="{Binding Settings.ConnectAccount}"
-                  Content="{DynamicResource LOCSettingsConnectAccount}"/>
+                  Content="{DynamicResource LOCOriginSettingsConnectAccount}"/>
 
         <StackPanel DockPanel.Dock="Top" Margin="40,5,5,0"
                     IsEnabled="{Binding IsChecked, ElementName=CheckOriginConnectAccount}">
@@ -31,11 +32,11 @@
             <CheckBox DockPanel.Dock="Top" Name="CheckOriginImportUninstalled"
                       IsChecked="{Binding Settings.ImportUninstalledGames}"
                       Margin="0,10,0,0"
-                      Content="{DynamicResource LOCSettingsImportUninstalledLabel}"/>
+                      Content="{DynamicResource LOCOriginSettingsImportUninstalledLabel}"/>
 
             <StackPanel Orientation="Horizontal"
                         DockPanel.Dock="Top" Margin="0,15,5,0" HorizontalAlignment="Left">
-                <Button Content="{DynamicResource LOCAuthenticateLabel}" HorizontalAlignment="Left"
+                <Button Content="{DynamicResource LOCOriginAuthenticateLabel}" HorizontalAlignment="Left"
                         Command="{Binding LoginCommand}"/>
                 <TextBlock VerticalAlignment="Center" Margin="10,5,5,5">
                     <TextBlock.Tag>
@@ -48,13 +49,13 @@
                         <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
                             <Style.Triggers>
                                 <Trigger Property="Tag" Value="{StaticResource True}">
-                                    <Setter Property="Text" Value="{DynamicResource LOCLoggedIn}" />
+                                    <Setter Property="Text" Value="{DynamicResource LOCOriginLoggedIn}" />
                                 </Trigger>
                                 <Trigger Property="Tag" Value="{StaticResource False}">
-                                    <Setter Property="Text" Value="{DynamicResource LOCNotLoggedIn}" />
+                                    <Setter Property="Text" Value="{DynamicResource LOCOriginNotLoggedIn}" />
                                 </Trigger>
                                 <Trigger Property="Tag" Value="{x:Null}">
-                                    <Setter Property="Text" Value="{DynamicResource LOCLoginChecking}" />
+                                    <Setter Property="Text" Value="{DynamicResource LOCOriginLoginChecking}" />
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -62,5 +63,13 @@
                 </TextBlock>
             </StackPanel>
         </StackPanel>
+
+        <TextBlock VerticalAlignment="Center" Margin="0,20,0,0">
+            <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Origin-troubleshooting"
+                        Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"
+                        CommandParameter="{Binding NavigateUri, RelativeSource={RelativeSource Self}}">
+                <Run Text="{DynamicResource LOCOriginTroubleShootingIssues}" />
+            </Hyperlink>
+        </TextBlock>
     </StackPanel>
 </UserControl>

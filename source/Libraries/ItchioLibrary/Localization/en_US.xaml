@@ -1,0 +1,21 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">Import installed games</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Import not installed games</sys:String>
+  <sys:String x:Key="LOCitchioSettingsConnectAccount">Connect account</sys:String>
+  <sys:String x:Key="LOCitchioLoginChecking">Checking authentication status…</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">User is authenticated</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedIn">Requires authentication</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">Failed to authenticate user.</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateLabel">Authenticate</sys:String>
+  <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Start games directly without running official client</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Troubleshooting account sync issues</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingIssues">Troubleshooting issues</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">Import all games</sys:String>
+  <sys:String x:Key="LOCitchioPrivateAccount">Private Account</sys:String>
+  <sys:String x:Key="LOCitchioPublicAccount">Public Account</sys:String>
+  <sys:String x:Key="LOCitchioAPIKey">API Key</sys:String>
+  <!--itch.io-->
+  <sys:String x:Key="LOCItchioSignInNotif">itch.io will be launched. Please sign in and then close this message.</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">Waiting for user to sign in, please close this when you're done…</sys:String>
+  <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io app version 25 or newer is not installed.</sys:String>
+</ResourceDictionary>

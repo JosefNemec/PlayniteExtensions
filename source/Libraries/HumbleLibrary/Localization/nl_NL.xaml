@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">Importeer geïnstalleerde spellen</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">Accounts koppelen</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">Verificatiestatus aan het controleren...</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">Verificatie vereist</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">Verifiëren</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">Probleemoplossing</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Importeer alle spellen</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">Privé-account</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">Openbaar Account</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">API Sleutel</sys:String>
+  <!--Humble-->
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Negeer spellen van derde partij winkels</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGames">Importeer Humble Choice spellen</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importeer spellen die beschikbaar zijn als onderdeel van het Humble Choice abonnement</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibrary">Importeer Humble Library spellen</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importeer standaard Humble winkel- en bundelaankopen.</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Schakel in om importeren van spellen die derde partij cliënten vereisen over te slaan,
+inclusief winkels die reeds beheerd worden in Playnite, om duplicaten te vermijden</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importeer als DRM-vrije versie beschikbaar is</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importeer spellen die cliënt van 3de partij vereist indien DRM vrije versie ook beschikbaar is</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Gebruik altijd de Humble App om spellen te starten</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Indien dit uitstaat zal Playnite pogen spellen direct te lanceren, zonder tussenkomst van de Humble App.</sys:String>
+</ResourceDictionary>

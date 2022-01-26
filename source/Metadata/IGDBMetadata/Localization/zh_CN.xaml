@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCIGDBSettingsImportInstalledLabel">导入已安装的游戏</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel">导入未安装的游戏</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsConnectAccount">连接账户</sys:String>
+  <sys:String x:Key="LOCIGDBLoginChecking">正在检查身份认证状态…</sys:String>
+  <sys:String x:Key="LOCIGDBLoggedIn">用户已通过身份验证</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedIn">需要身份认证</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedInError">用户身份验证失败。</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateLabel">身份验证</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">账户同步疑难解答</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingIssues">疑难解答</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel">导入所有游戏</sys:String>
+  <sys:String x:Key="LOCIGDBPrivateAccount">私密账户</sys:String>
+  <sys:String x:Key="LOCIGDBPublicAccount">公开账户</sys:String>
+  <sys:String x:Key="LOCIGDBAPIKey">API 密匙</sys:String>
+  <!--IGDB-->
+  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">在无法使用艺术作品的时候使用截图</sys:String>
+  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">如果有多个图像，则使用：</sys:String>
+  <sys:String x:Key="LOCIgdbSelectBackgroundTitle">选择 {0} 的背景图像</sys:String>
+</ResourceDictionary>

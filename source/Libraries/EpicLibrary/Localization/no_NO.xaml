@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCEpicSettingsImportInstalledLabel">Importer installerte spill</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">Importer spill som ikke er installert</sys:String>
+  <sys:String x:Key="LOCEpicSettingsConnectAccount">Tilknytt konto</sys:String>
+  <sys:String x:Key="LOCEpicLoginChecking">Kontrollerer autentiseringsstatus …</sys:String>
+  <sys:String x:Key="LOCEpicLoggedIn">Brukeren er autentisert</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedIn">Krever autentisering</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateLabel">Autentiser</sys:String>
+  <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingIssues">Feilsøking av problemer</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">Importer alle spill</sys:String>
+  <sys:String x:Key="LOCEpicPrivateAccount">Privat konto</sys:String>
+  <sys:String x:Key="LOCEpicPublicAccount">Offentlig konto</sys:String>
+  <sys:String x:Key="LOCEpicAPIKey">API-nøkkel</sys:String>
+</ResourceDictionary>

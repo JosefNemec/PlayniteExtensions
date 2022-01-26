@@ -33,7 +33,7 @@ namespace ItchioLibrary
         {
             if (!Itch.IsInstalled)
             {
-                throw new Exception(ResourceProvider.GetString("LOCItchioClientNotInstalledError"));
+                throw new Exception(ResourceProvider.GetString(LOC.ItchioClientNotInstalledError));
             }
 
             Dispose();
@@ -93,7 +93,7 @@ namespace ItchioLibrary
         {
             if (!Itch.IsInstalled)
             {
-                throw new Exception(ResourceProvider.GetString("LOCItchioClientNotInstalledError"));
+                throw new Exception(ResourceProvider.GetString(LOC.ItchioClientNotInstalledError));
             }
 
             Dispose();
@@ -157,7 +157,7 @@ namespace ItchioLibrary
         {
             if (!Itch.IsInstalled)
             {
-                throw new Exception(ResourceProvider.GetString("LOCItchioClientNotInstalledError"));
+                throw new Exception(ResourceProvider.GetString(LOC.ItchioClientNotInstalledError));
             }
 
             ReleaseResources();

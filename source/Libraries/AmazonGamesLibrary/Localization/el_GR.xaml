@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel">Εισαγωγή εγκατεστημένων παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel">Εισαγωγή μη εγκατεστημένων παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsConnectAccount">Σύνδεση λογαριασμού</sys:String>
+  <sys:String x:Key="LOCAmazonLoginChecking">Έλεγχος κατάστασης ταυτοποίησης...</sys:String>
+  <sys:String x:Key="LOCAmazonLoggedIn">Ο χρήστης είναι πιστοποιημένος</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedIn">Απαιτείται Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateLabel">Επικύρωση</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Απευθείας εκκίνηση παιχνιδιού χωρίς την χρήση του επίσημου client</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρόνισης λογαριασμού</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Εισαγωγή όλων των παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCAmazonPrivateAccount">Ιδιωτικός Λογαριασμός</sys:String>
+  <sys:String x:Key="LOCAmazonPublicAccount">Δημόσιος Λογαριασμός</sys:String>
+  <sys:String x:Key="LOCAmazonAPIKey">Κλειδί API</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCSteamSettingsImportInstalledLabel">وارد کردن بازی های نصب شده</sys:String>
+  <sys:String x:Key="LOCSteamSettingsImportUninstalledLabel">واردات بازی های نصب نشده</sys:String>
+  <sys:String x:Key="LOCSteamSettingsConnectAccount">اتصال حساب</sys:String>
+  <sys:String x:Key="LOCSteamLoginChecking">بررسی وضیعت تایید…</sys:String>
+  <sys:String x:Key="LOCSteamLoggedIn">کاربر تایید شد</sys:String>
+  <sys:String x:Key="LOCSteamNotLoggedIn">نیاز به تائید هویت</sys:String>
+  <sys:String x:Key="LOCSteamNotLoggedInError">شکست در تایید کاربر.</sys:String>
+  <sys:String x:Key="LOCSteamAuthenticateLabel">احراز هویت</sys:String>
+  <sys:String x:Key="LOCSteamSettingsStartGameDirectly">بازی ها را مستقیماً و بدون اجرای مشتری رسمی شروع کنید</sys:String>
+  <sys:String x:Key="LOCSteamTroubleShootingAccountLink">عیب یابی مشکلات همگام سازی حساب</sys:String>
+  <sys:String x:Key="LOCSteamTroubleShootingIssues">عیب یابی مشکلات</sys:String>
+  <sys:String x:Key="LOCSteamSettingsImportLibraryLabel">وارد کردن همه بازی ها</sys:String>
+  <sys:String x:Key="LOCSteamPrivateAccount">حساب خصوصی</sys:String>
+  <sys:String x:Key="LOCSteamPublicAccount">حساب عمومی</sys:String>
+  <sys:String x:Key="LOCSteamAPIKey">کلید API</sys:String>
+  <!--Steam-->
+  <sys:String x:Key="LOCSettingsWhatsSteamName">حساب من کجاست؟</sys:String>
+  <sys:String x:Key="LOCSteamCustomUrlName">نام آدرس کاربری</sys:String>
+  <sys:String x:Key="LOCSteamLoggedInUser">کاربر معتبر</sys:String>
+  <sys:String x:Key="LOCSteamRequiresApiKey">حساب خصوصی است، کلید API لازم است.</sys:String>
+  <sys:String x:Key="LOCSteamLinksCommunityHub">جامعه</sys:String>
+  <sys:String x:Key="LOCSteamLinksDiscussions">نظرات</sys:String>
+  <sys:String x:Key="LOCSteamLinksGuides">راهنماها</sys:String>
+  <sys:String x:Key="LOCSteamLinksWorkshop">کارگاه</sys:String>
+  <sys:String x:Key="LOCSteamUseVerticalCovers">بارگیری تصاویر جلد عمودی</sys:String>
+  <sys:String x:Key="LOCSteamImportFreeSubGames">وارد کردن موارد رایگان عمومی</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportWarn">با این کار دسته بندی های فعلی و همچنین حالت های پنهان و مورد علاقه در تمام بازی های Steam بازنویسی می شود. می خواهید ادامه دهید؟</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">ورود دسته ها؟</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">دسته بندی ها را نمی توان وارد کرد ، حساب برای واردات انتخاب نشده است.</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Cannot import categories, database is not opened.
+</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportError">واردات دسته های استیم انجام نشد: {0}</sys:String>
+  <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">وارد کردن آخرین اطلاعات بازی شده امکان پذیر نیست، برای واردات حساب انتخاب نشده است.</sys:String>
+  <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">وارد کردن آخرین اطلاعات بازی شده امکان پذیر نیست، بانک اطلاعاتی باز نشده است.</sys:String>
+  <sys:String x:Key="LOCSettingsSteamLastActivityImportError">وارد کردن اطلاعات آخرین بازی Steam انجام نشد: {0}</sys:String>
+  <sys:String x:Key="LOCSettingsApiKeyTooltip">کلید API برای حسابهای خصوصی Steam لازم است</sys:String>
+  <sys:String x:Key="LOCSettingsApiKeyUrlText">گرفتن کلید API</sys:String>
+  <sys:String x:Key="LOCSettingsSteamImportMetadata">وارد کردن ابرداده از حساب Steam:</sys:String>
+  <sys:String x:Key="LOCImportSteamCategoriesLabel">ورود دسته های استیم</sys:String>
+  <sys:String x:Key="LOCImportSteamLastActivityLabel">واردات آخرین بازی استیم</sys:String>
+  <sys:String x:Key="LOCSteamBackgroundSource">منبع تصویر پس‌زمینه:</sys:String>
+  <sys:String x:Key="LOCSteamBackgroundSourceImage">عکس بازی</sys:String>
+  <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">اسکرین شات فروشگاه</sys:String>
+  <sys:String x:Key="LOCSteamBackgroundSourceStore">پس زمینه فروشگاه</sys:String>
+  <sys:String x:Key="LOCSteamBackgroundSourceBanner">بنر</sys:String>
+  <sys:String x:Key="LOCSteamShowFriendsButton">نمایش دکمه دوستان در بالای صفحه</sys:String>
+</ResourceDictionary>

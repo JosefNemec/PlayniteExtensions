@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCGOGSettingsImportInstalledLabel">Installierte Spiele importieren</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel">Nicht installierte Spiele importieren</sys:String>
+  <sys:String x:Key="LOCGOGSettingsConnectAccount">Benutzerkonto verbinden</sys:String>
+  <sys:String x:Key="LOCGOGLoginChecking">Authentifizierungsstatus wird überprüft …</sys:String>
+  <sys:String x:Key="LOCGOGLoggedIn">Benutzer ist authentifiziert</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedIn">Authentifizierung erforderlich</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedInError">Benutzer konnte nicht authentifiziert werden.</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateLabel">Authentifizieren</sys:String>
+  <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Spiele direkt starten ohne offiziellen Client</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Beheben von Problemen mit der Kontosynchronisation</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingIssues">Problembehebung</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">Alle Spiele importieren</sys:String>
+  <sys:String x:Key="LOCGOGPrivateAccount">Privates Konto</sys:String>
+  <sys:String x:Key="LOCGOGPublicAccount">Öffentliches Konto</sys:String>
+  <sys:String x:Key="LOCGOGAPIKey">API-Schlüssel</sys:String>
+  <!--GOG-->
+  <sys:String x:Key="LOCGOGUseLogin">Kontoanmeldung</sys:String>
+  <sys:String x:Key="LOCGOGUseAccountName">Kontoname</sys:String>
+  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Melde dich in deinem Benutzerkonto an oder verwende deinen öffentlichen Kontonamen, um deine Bibliothek vollständig zu synchronisieren.
+Beachte, dass die Option des öffentlichen Kontonamens nur bei Konten funktioniert, deren Spielebibliotheken in GOGs Privatsphäreeinstellungen als öffentlich sichtbar festgelegt wurden.</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxy">Spiele mit GOG-Galaxy-Client starten</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Dies aktiviert Features von GOG Galaxy wie Cloud-Spielstände, Spielzeiterfassung etc.</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,21 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCIGDBSettingsImportInstalledLabel">Import installed games</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel">Import not installed games</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsConnectAccount">Connect account</sys:String>
+  <sys:String x:Key="LOCIGDBLoginChecking">Checking authentication status…</sys:String>
+  <sys:String x:Key="LOCIGDBLoggedIn">User is authenticated</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedIn">Requires authentication</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedInError">Failed to authenticate user.</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateLabel">Authenticate</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Start games directly without running official client</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Troubleshooting account sync issues</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingIssues">Troubleshooting issues</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel">Import all games</sys:String>
+  <sys:String x:Key="LOCIGDBPrivateAccount">Private Account</sys:String>
+  <sys:String x:Key="LOCIGDBPublicAccount">Public Account</sys:String>
+  <sys:String x:Key="LOCIGDBAPIKey">API Key</sys:String>
+  <!--IGDB-->
+  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Use screenshots if artwork is not available</sys:String>
+  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">If multiple images are available then use:</sys:String>
+  <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Select background image for {0}</sys:String>
+</ResourceDictionary>

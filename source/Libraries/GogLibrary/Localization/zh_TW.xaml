@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCGOGSettingsImportInstalledLabel">匯入已安裝的遊戲</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel">匯入未安裝遊戲</sys:String>
+  <sys:String x:Key="LOCGOGSettingsConnectAccount">連結帳號</sys:String>
+  <sys:String x:Key="LOCGOGLoginChecking">正在檢查驗證狀態...</sys:String>
+  <sys:String x:Key="LOCGOGLoggedIn">使用者已驗證</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedIn">需要驗證</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedInError">無法驗證用戶</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateLabel">驗證</sys:String>
+  <sys:String x:Key="LOCGOGSettingsStartGameDirectly">不透過啟動器直接開始遊戲</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingAccountLink">解決帳號同步問題</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingIssues">疑難排解</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">匯入所有遊戲</sys:String>
+  <sys:String x:Key="LOCGOGPrivateAccount">私密帳號</sys:String>
+  <sys:String x:Key="LOCGOGPublicAccount">公開帳號</sys:String>
+  <sys:String x:Key="LOCGOGAPIKey">API 密鑰</sys:String>
+  <!--GOG-->
+  <sys:String x:Key="LOCGOGUseLogin">帳號登入</sys:String>
+  <sys:String x:Key="LOCGOGUseAccountName">帳號名稱</sys:String>
+  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">登入您的帳號或者使用您的公開帳號名稱以同步你的完整資料庫。
+請注意，帳號名稱選項只對曾在GOG隱私設定中設為公開的帳號有效。</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxy">使用GOG Galaxy用戶端啟動遊戲</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">這將啟用GOG Galaxy功能，如雲端存檔，遊玩時間紀錄等</sys:String>
+</ResourceDictionary>

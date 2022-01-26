@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">インストール済みのゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">インストールされていないゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">アカウントに接続</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">認証ステータスを確認しています...</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">ユーザー認証済み</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">認証が必要</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">認証する</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">問題解決</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">すべてのゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">非公開アカウント</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">公開アカウント</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">API キー</sys:String>
+  <!--Humble-->
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">サードパーティー製のストアのゲームを無視する</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGames" />
+  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip" />
+  <sys:String x:Key="LOCHumbleGeneralLibrary" />
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">サードパーティのクライアント（すでにPlayniteで管理されているストアを含む）を必要とするゲームのインポートを重複を防ぐためにスキップすることを可能にします。</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">DRMフリーバージョンが利用可能ならインポート</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">DRMフリー版も利用可能な場合は、サードパーティ製のクライアントを必要とするゲームをインポートする。</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
+</ResourceDictionary>

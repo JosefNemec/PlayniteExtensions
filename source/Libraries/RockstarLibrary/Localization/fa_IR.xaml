@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCRockstarSettingsImportInstalledLabel">وارد کردن بازی های نصب شده</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel">واردات بازی های نصب نشده</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsConnectAccount">اتصال حساب</sys:String>
+  <sys:String x:Key="LOCRockstarLoginChecking">بررسی وضیعت تایید…</sys:String>
+  <sys:String x:Key="LOCRockstarLoggedIn">کاربر تایید شد</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedIn">نیاز به تائید هویت</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedInError">شکست در تایید کاربر.</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateLabel">احراز هویت</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">بازی ها را مستقیماً و بدون اجرای مشتری رسمی شروع کنید</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">عیب یابی مشکلات همگام سازی حساب</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingIssues">عیب یابی مشکلات</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">وارد کردن همه بازی ها</sys:String>
+  <sys:String x:Key="LOCRockstarPrivateAccount">حساب خصوصی</sys:String>
+  <sys:String x:Key="LOCRockstarPublicAccount">حساب عمومی</sys:String>
+  <sys:String x:Key="LOCRockstarAPIKey">کلید API</sys:String>
+</ResourceDictionary>

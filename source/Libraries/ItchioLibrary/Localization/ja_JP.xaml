@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">インストール済みのゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">インストールされていないゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCitchioSettingsConnectAccount">アカウントに接続</sys:String>
+  <sys:String x:Key="LOCitchioLoginChecking">認証ステータスを確認しています...</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">ユーザー認証済み</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedIn">認証が必要</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateLabel">認証する</sys:String>
+  <sys:String x:Key="LOCitchioSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingIssues">問題解決</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">すべてのゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCitchioPrivateAccount">非公開アカウント</sys:String>
+  <sys:String x:Key="LOCitchioPublicAccount">公開アカウント</sys:String>
+  <sys:String x:Key="LOCitchioAPIKey">API キー</sys:String>
+  <!--itch.io-->
+  <sys:String x:Key="LOCItchioSignInNotif">itch.ioクライアントが開きます。サインインしてからこのメッセージを閉じてください。</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">ユーザーがログインするのを待っています。完了したら閉じてください。</sys:String>
+  <sys:String x:Key="LOCItchioClientNotInstalledError">バージョン25以降のItchクライアントがインストールされていません。</sys:String>
+</ResourceDictionary>

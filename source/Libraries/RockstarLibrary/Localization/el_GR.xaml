@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCRockstarSettingsImportInstalledLabel">Εισαγωγή εγκατεστημένων παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel">Εισαγωγή μη εγκατεστημένων παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsConnectAccount">Σύνδεση λογαριασμού</sys:String>
+  <sys:String x:Key="LOCRockstarLoginChecking">Έλεγχος κατάστασης ταυτοποίησης...</sys:String>
+  <sys:String x:Key="LOCRockstarLoggedIn">Ο χρήστης είναι πιστοποιημένος</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedIn">Απαιτείται Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateLabel">Επικύρωση</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Απευθείας εκκίνηση παιχνιδιού χωρίς την χρήση του επίσημου client</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρόνισης λογαριασμού</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">Εισαγωγή όλων των παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCRockstarPrivateAccount">Ιδιωτικός Λογαριασμός</sys:String>
+  <sys:String x:Key="LOCRockstarPublicAccount">Δημόσιος Λογαριασμός</sys:String>
+  <sys:String x:Key="LOCRockstarAPIKey">Κλειδί API</sys:String>
+</ResourceDictionary>

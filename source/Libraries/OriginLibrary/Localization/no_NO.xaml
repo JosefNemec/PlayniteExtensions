@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCOriginSettingsImportInstalledLabel">Importer installerte spill</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportUninstalledLabel">Importer spill som ikke er installert</sys:String>
+  <sys:String x:Key="LOCOriginSettingsConnectAccount">Tilknytt konto</sys:String>
+  <sys:String x:Key="LOCOriginLoginChecking">Kontrollerer autentiseringsstatus …</sys:String>
+  <sys:String x:Key="LOCOriginLoggedIn">Brukeren er autentisert</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedIn">Krever autentisering</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
+  <sys:String x:Key="LOCOriginAuthenticateLabel">Autentiser</sys:String>
+  <sys:String x:Key="LOCOriginSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingIssues">Feilsøking av problemer</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportLibraryLabel">Importer alle spill</sys:String>
+  <sys:String x:Key="LOCOriginPrivateAccount">Privat konto</sys:String>
+  <sys:String x:Key="LOCOriginPublicAccount">Offentlig konto</sys:String>
+  <sys:String x:Key="LOCOriginAPIKey">API-nøkkel</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">Импортировать установленные игры</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Импортировать неустановленные игры</sys:String>
+  <sys:String x:Key="LOCitchioSettingsConnectAccount">Подключить аккаунт</sys:String>
+  <sys:String x:Key="LOCitchioLoginChecking">Проверка статуса аутентификации…</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">Пользователь аутентифицирован</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedIn">Требуется аутентификация</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateLabel">Аутентификация</sys:String>
+  <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Запускать игры напрямую, без запуска официального клиента</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingIssues">Устранение неисправностей</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">Импортировать все игры</sys:String>
+  <sys:String x:Key="LOCitchioPrivateAccount">Приватный профиль</sys:String>
+  <sys:String x:Key="LOCitchioPublicAccount">Публичный профиль</sys:String>
+  <sys:String x:Key="LOCitchioAPIKey">Ключ API</sys:String>
+  <!--itch.io-->
+  <sys:String x:Key="LOCItchioSignInNotif">Откроется клиент itch.io. Пожалуйста, войдите в систему и закройте это сообщение.</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">Ожидание входа пользователя, пожалуйста, закройте сообщение, когда войдете…</sys:String>
+  <sys:String x:Key="LOCItchioClientNotInstalledError">Приложение Itch.io версии 25 или новее не установлено.</sys:String>
+</ResourceDictionary>

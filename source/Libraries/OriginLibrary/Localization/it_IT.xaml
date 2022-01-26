@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCOriginSettingsImportInstalledLabel">Importa i giochi installati</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportUninstalledLabel">Importa giochi non installati</sys:String>
+  <sys:String x:Key="LOCOriginSettingsConnectAccount">Connetti l'account</sys:String>
+  <sys:String x:Key="LOCOriginLoginChecking">Controllo stato di autenticazione in corso…</sys:String>
+  <sys:String x:Key="LOCOriginLoggedIn">L'utente è autenticato</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedIn">Richiede autenticazione</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedInError">Autenticazione utente fallita.</sys:String>
+  <sys:String x:Key="LOCOriginAuthenticateLabel">Connetti</sys:String>
+  <sys:String x:Key="LOCOriginSettingsStartGameDirectly">Avvia i giochi direttamente senza avviare il client ufficiale</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingAccountLink">Risoluzione dei problemi di sincronizzazione dell'account</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingIssues">Risoluzione dei problemi</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportLibraryLabel">Importa tutti i giochi</sys:String>
+  <sys:String x:Key="LOCOriginPrivateAccount">Account privato</sys:String>
+  <sys:String x:Key="LOCOriginPublicAccount">Account pubblico</sys:String>
+  <sys:String x:Key="LOCOriginAPIKey">Chiave API</sys:String>
+</ResourceDictionary>

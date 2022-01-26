@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">Installierte Spiele importieren</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Nicht installierte Spiele importieren</sys:String>
+  <sys:String x:Key="LOCitchioSettingsConnectAccount">Benutzerkonto verbinden</sys:String>
+  <sys:String x:Key="LOCitchioLoginChecking">Authentifizierungsstatus wird überprüft …</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">Benutzer ist authentifiziert</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedIn">Authentifizierung erforderlich</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">Benutzer konnte nicht authentifiziert werden.</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateLabel">Authentifizieren</sys:String>
+  <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Spiele direkt starten ohne offiziellen Client</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Beheben von Problemen mit der Kontosynchronisation</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingIssues">Problembehebung</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">Alle Spiele importieren</sys:String>
+  <sys:String x:Key="LOCitchioPrivateAccount">Privates Konto</sys:String>
+  <sys:String x:Key="LOCitchioPublicAccount">Öffentliches Konto</sys:String>
+  <sys:String x:Key="LOCitchioAPIKey">API-Schlüssel</sys:String>
+  <!--itch.io-->
+  <sys:String x:Key="LOCItchioSignInNotif">Der itch.io-Client wird gestartet. Bitte melde dich dort an und schließe anschließend diese Meldung.</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">Es wird auf die Benutzeranmeldung gewartet. Bitte schließen diese Meldung, sobald du damit fertig bist …</sys:String>
+  <sys:String x:Key="LOCItchioClientNotInstalledError">Die itch.io-App in Version 25 oder neuer ist nicht installiert.</sys:String>
+</ResourceDictionary>

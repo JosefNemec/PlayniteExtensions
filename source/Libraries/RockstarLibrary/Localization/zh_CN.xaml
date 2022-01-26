@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCRockstarSettingsImportInstalledLabel">导入已安装的游戏</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel">导入未安装的游戏</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsConnectAccount">连接账户</sys:String>
+  <sys:String x:Key="LOCRockstarLoginChecking">正在检查身份认证状态…</sys:String>
+  <sys:String x:Key="LOCRockstarLoggedIn">用户已通过身份验证</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedIn">需要身份认证</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedInError">用户身份验证失败。</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateLabel">身份验证</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">账户同步疑难解答</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingIssues">疑难解答</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">导入所有游戏</sys:String>
+  <sys:String x:Key="LOCRockstarPrivateAccount">私密账户</sys:String>
+  <sys:String x:Key="LOCRockstarPublicAccount">公开账户</sys:String>
+  <sys:String x:Key="LOCRockstarAPIKey">API 密匙</sys:String>
+</ResourceDictionary>

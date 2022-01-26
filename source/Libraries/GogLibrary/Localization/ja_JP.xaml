@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCGOGSettingsImportInstalledLabel">インストール済みのゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel">インストールされていないゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCGOGSettingsConnectAccount">アカウントに接続</sys:String>
+  <sys:String x:Key="LOCGOGLoginChecking">認証ステータスを確認しています...</sys:String>
+  <sys:String x:Key="LOCGOGLoggedIn">ユーザー認証済み</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedIn">認証が必要</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateLabel">認証する</sys:String>
+  <sys:String x:Key="LOCGOGSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingIssues">問題解決</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">すべてのゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCGOGPrivateAccount">非公開アカウント</sys:String>
+  <sys:String x:Key="LOCGOGPublicAccount">公開アカウント</sys:String>
+  <sys:String x:Key="LOCGOGAPIKey">API キー</sys:String>
+  <!--GOG-->
+  <sys:String x:Key="LOCGOGUseLogin">アカウントログイン</sys:String>
+  <sys:String x:Key="LOCGOGUseAccountName">アカウント名</sys:String>
+  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">あなたのアカウントにログインするか、あなたの公開アカウントの名前を使って、すべてのライブラリを同期させてください。
+[アカウント名]オプションは、ゲームライブラリがGOGのプライバシー設定で公開されて表示されるように設定されているアカウントに対してのみ機能することに注意してください。</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxy">Galaxyクライアントを使用してゲームを開始する</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">これにより、クラウドセーブやゲームタイムトラッキングなどのGOG Galaxyの機能が利用できるようになります。</sys:String>
+</ResourceDictionary>

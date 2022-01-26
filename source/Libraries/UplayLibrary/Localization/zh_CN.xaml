@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCUbisoftSettingsImportInstalledLabel">导入已安装的游戏</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportUninstalledLabel">导入未安装的游戏</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsConnectAccount">连接账户</sys:String>
+  <sys:String x:Key="LOCUbisoftLoginChecking">正在检查身份认证状态…</sys:String>
+  <sys:String x:Key="LOCUbisoftLoggedIn">用户已通过身份验证</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedIn">需要身份认证</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedInError">用户身份验证失败。</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateLabel">身份验证</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">账户同步疑难解答</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingIssues">疑难解答</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">导入所有游戏</sys:String>
+  <sys:String x:Key="LOCUbisoftPrivateAccount">私密账户</sys:String>
+  <sys:String x:Key="LOCUbisoftPublicAccount">公开账户</sys:String>
+  <sys:String x:Key="LOCUbisoftAPIKey">API 密匙</sys:String>
+</ResourceDictionary>

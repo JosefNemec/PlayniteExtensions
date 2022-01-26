@@ -52,13 +52,7 @@ if (!$SkipExtensions)
                 $allPassed = $false
             }
             else
-            {                
-                $locOut =  Join-Path $buildDir "Localization\"
-                if (Test-Path -LiteralPath $locOut)
-                {
-                    Copy-Item "..\source\Localization\*.*" $locOut
-                }
-
+            {
                 if ((StartAndWait $ToolboxPath "pack `"$buildDir`" `"$OutputDir`"") -ne 0)
                 {
                     $allPassed = $false

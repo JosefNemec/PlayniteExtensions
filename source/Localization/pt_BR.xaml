@@ -61,13 +61,17 @@
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Selecionar imagem de fundo para {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorar jogos de lojas de terceiros</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Importar jogos da Trove</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Importar jogos Humble Choice</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importar jogos disponíveis como parte da assinatura Humble Choice.</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">Importar jogos da Biblioteca Humble</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importar compras padrão da loja Humble e pacotes.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Ative para pular a importação de jogos que precisam de clientes de terceiros,
 incluindo lojas já gerenciadas por Playnite, para previnir duplicação.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importar se versão sem DRM estiver disponível</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importar jogos que precisam de cliente de terceiros se versão sem DRM também estiver disponível.</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Sempre usar o Humble App para iniciar jogos</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Quando desativado, Playnite tentará iniciar os jogos diretamente, ignorando Humble App.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Iniciar o aplicativo do Xbox Game Pass ao invés da Microsoft Store ao abrir o cliente</sys:String>
-    <sys:String x:Key="LOCXboxImport360Games">Importar jogos de Xbox 360</sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames">Importar jogos de Xbox One</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">Importar jogos de Xbox</sys:String>
 </ResourceDictionary>

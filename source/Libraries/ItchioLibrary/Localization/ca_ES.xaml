@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel" />
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel" />
+  <sys:String x:Key="LOCitchioSettingsConnectAccount" />
+  <sys:String x:Key="LOCitchioLoginChecking" />
+  <sys:String x:Key="LOCitchioLoggedIn" />
+  <sys:String x:Key="LOCitchioNotLoggedIn" />
+  <sys:String x:Key="LOCitchioNotLoggedInError" />
+  <sys:String x:Key="LOCitchioAuthenticateLabel" />
+  <sys:String x:Key="LOCitchioSettingsStartGameDirectly" />
+  <sys:String x:Key="LOCitchioTroubleShootingAccountLink" />
+  <sys:String x:Key="LOCitchioTroubleShootingIssues" />
+  <sys:String x:Key="LOCitchioSettingsImportLibraryLabel" />
+  <sys:String x:Key="LOCitchioPrivateAccount" />
+  <sys:String x:Key="LOCitchioPublicAccount" />
+  <sys:String x:Key="LOCitchioAPIKey" />
+  <!--itch.io-->
+  <sys:String x:Key="LOCItchioSignInNotif" />
+  <sys:String x:Key="LOCItchioSignInWaitMessage" />
+  <sys:String x:Key="LOCItchioClientNotInstalledError" />
+</ResourceDictionary>

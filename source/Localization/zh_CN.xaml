@@ -3,72 +3,76 @@
     <sys:String x:Key="LOCSettingsImportInstalledLabel">导入已安装的游戏</sys:String>
     <sys:String x:Key="LOCSettingsImportUninstalledLabel">导入未安装的游戏</sys:String>
     <sys:String x:Key="LOCSettingsConnectAccount">连接账户</sys:String>
-    <sys:String x:Key="LOCLoginChecking">正在检查身份认证状态...</sys:String>
-    <sys:String x:Key="LOCLoggedIn">用户已通过身份认证</sys:String>
+    <sys:String x:Key="LOCLoginChecking">正在检查身份认证状态…</sys:String>
+    <sys:String x:Key="LOCLoggedIn">用户已通过身份验证</sys:String>
     <sys:String x:Key="LOCNotLoggedIn">需要身份认证</sys:String>
-    <sys:String x:Key="LOCNotLoggedInError">用户身份认证失败。</sys:String>
-    <sys:String x:Key="LOCAuthenticateLabel">身份认证</sys:String>
-    <sys:String x:Key="LOCSettingsStartGameDirectly">无需启动官方客户端直接运行游戏</sys:String>
-    <sys:String x:Key="LOCTroubleShootingAccountLink">解决账户同步问题</sys:String>
-    <sys:String x:Key="LOCTroubleShootingIssues">故障排除</sys:String>
+    <sys:String x:Key="LOCNotLoggedInError">用户身份验证失败。</sys:String>
+    <sys:String x:Key="LOCAuthenticateLabel">身份验证</sys:String>
+    <sys:String x:Key="LOCSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
+    <sys:String x:Key="LOCTroubleShootingAccountLink">账户同步疑难解答</sys:String>
+    <sys:String x:Key="LOCTroubleShootingIssues">疑难解答</sys:String>
     <sys:String x:Key="LOCSettingsImportLibraryLabel">导入所有游戏</sys:String>
     <sys:String x:Key="LOCPrivateAccount">私密账户</sys:String>
     <sys:String x:Key="LOCPublicAccount">公开账户</sys:String>
-    <sys:String x:Key="LOCAPIKey">API密匙</sys:String>
+    <sys:String x:Key="LOCAPIKey">API 密匙</sys:String>
     <!--itch.io-->
-    <sys:String x:Key="LOCItchioSignInNotif">itch.io客户端将被启动，请登录然后关闭此消息。</sys:String>
-    <sys:String x:Key="LOCItchioSignInWaitMessage">正在等待用户登录，请在完成后关闭...</sys:String>
-    <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io客户端版本需要25或更高。</sys:String>
+    <sys:String x:Key="LOCItchioSignInNotif">即将启动 itch.io 客户端，请在登录后关闭此消息。</sys:String>
+    <sys:String x:Key="LOCItchioSignInWaitMessage">正在等待用户登录，请您在完成后关闭此消息…</sys:String>
+    <sys:String x:Key="LOCItchioClientNotInstalledError">未安装 25 或更高版本的 itch.io 客户端。</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">账户登录</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">账户名称</sys:String>
-    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">登录你的账户或使用你的公开账户名称来同步你的完整游戏库。
-请注意，“账户名称”选项只对在GOG隐私设置中设置游戏库公开可见的账户有效。</sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxy">使用GOG Galaxy客户端启动游戏</sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">这样可以启用GOG Galaxy的云存档、游戏时间记录等功能。</sys:String>
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">登录您的账户或使用您的公开账户名称来同步您的完整的库。
+请注意，“账户名称”选项只对在 GOG 隐私设置中设置游戏库公开可见的账户有效。</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxy">使用 GOG Galaxy 客户端启动游戏</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">这可启用 GOG Galaxy 的云存档、游戏时间追踪等功能。</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">我的账户名称是什么？</sys:String>
-    <sys:String x:Key="LOCSteamCustomUrlName">账户URL名称</sys:String>
-    <sys:String x:Key="LOCSteamLoggedInUser">已身份认证用户</sys:String>
-    <sys:String x:Key="LOCSteamRequiresApiKey">账户是私密账户，需要API密钥。</sys:String>
+    <sys:String x:Key="LOCSteamCustomUrlName">账户网址名称</sys:String>
+    <sys:String x:Key="LOCSteamLoggedInUser">身份已验证的用户</sys:String>
+    <sys:String x:Key="LOCSteamRequiresApiKey">此为私密账户，需要 API 密钥。</sys:String>
     <sys:String x:Key="LOCSteamLinksCommunityHub">社区中心</sys:String>
     <sys:String x:Key="LOCSteamLinksDiscussions">讨论</sys:String>
     <sys:String x:Key="LOCSteamLinksGuides">指南</sys:String>
     <sys:String x:Key="LOCSteamLinksWorkshop">创意工坊</sys:String>
     <sys:String x:Key="LOCSteamUseVerticalCovers">下载纵向封面图像</sys:String>
-    <sys:String x:Key="LOCSteamImportFreeSubGames">导入一般的免费项目</sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarn">这将会覆盖所有Steam游戏的分类（包括隐藏的和最爱的游戏）。您确定要继续吗？</sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">确定导入分类？</sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">无法导入分类，没有选择要导入的账户。</sys:String>
+    <sys:String x:Key="LOCSteamImportFreeSubGames">导入普通免费项目</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarn">这将会覆盖所有 Steam 游戏的当前分类（包括隐藏和收藏的游戏）。您确定要继续吗？</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">导入分类？</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">无法导入分类，未选择要导入的账户。</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">无法导入分类，数据库未打开。</sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportError">导入Steam分类失败：{0}</sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">无法导入最后启动信息，没有选择要导入的账户。</sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">无法导入最后启动信息，数据库未打开。</sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportError">导入Steam最后启动的信息失败: {0}</sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyTooltip">Steam私密账户必需要API密钥</sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyUrlText">获取API密钥</sys:String>
-    <sys:String x:Key="LOCSettingsSteamImportMetadata">要导入资料数据的Steam账户：</sys:String>
-    <sys:String x:Key="LOCImportSteamCategoriesLabel">导入Steam分类</sys:String>
-    <sys:String x:Key="LOCImportSteamLastActivityLabel">导入Steam最后启动</sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSource">背景图片来源：</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportError">导入 Steam 收藏到分类字段失败：{0}</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">无法导入上次开动信息，未选择要导入的账户。</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">无法导入上次开动信息，数据库未打开。</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportError">导入 Steam 的上次开动的信息失败: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyTooltip">Steam 私密账户需要 API 密钥</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyUrlText">获取 API 密钥</sys:String>
+    <sys:String x:Key="LOCSettingsSteamImportMetadata">要导入元数据的 Steam 账户：</sys:String>
+    <sys:String x:Key="LOCImportSteamCategoriesLabel">导入 Steam 收藏到分类字段</sys:String>
+    <sys:String x:Key="LOCImportSteamLastActivityLabel">导入 Steam 上次开动</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSource">背景图像来源：</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceImage">游戏图像</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">商店截图</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceStore">商店背景</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">横幅</sys:String>
-    <sys:String x:Key="LOCSteamShowFriendsButton">在顶栏显示朋友按钮</sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton">在顶部面板显示好友按钮</sys:String>
     <!--IGDB-->
-    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">如果没有图片，则使用截图</sys:String>
+    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">在无法使用艺术作品的时候使用截图</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">如果有多个图像，则使用：</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">选择 {0} 的背景图像</sys:String>
     <!--Humble-->
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">忽略第三方游戏平台的游戏</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">导入Trove游戏</sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">忽略第三方商店的游戏</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">导入 Humble 精选游戏</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">导入 Humble 精选订阅中可用的游戏。</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">导入 Humble 库的游戏</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">导入标准的 Humble 商店购买项目和捆绑包购买项目。</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">启用来跳过导入需要第三方客户端的游戏，
-为避免重复，包括已由Playnite管理的商店。</sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">如果有无DRM版本则导入</sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">如果也有无DRM版本，导入需要第三方客户端的游戏。</sys:String>
+为避免重复，已由 Playnite 管理的商店的游戏也将跳过。</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">若存在无 DRM 的版本则导入</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">导入存在无 DRM 版本但需要第三方客户端的游戏。</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">总是使用 Humble 客户端启动游戏</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">当禁用时，Playnite 会尝试绕过 Humble 客户端，直接启动游戏。</sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">打开客户端时启动Xbox Pass应用而不是微软商店。</sys:String>
-    <sys:String x:Key="LOCXboxImport360Games">导入Xbox 360游戏</sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames">导入Xbox One游戏</sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">打开客户端时，启动 Xbox Pass 应用而不是 Microsoft Store。</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">导入 Xbox 游戏机游戏</sys:String>
 </ResourceDictionary>

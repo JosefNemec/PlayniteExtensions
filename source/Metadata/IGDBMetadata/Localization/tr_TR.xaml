@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCIGDBSettingsImportInstalledLabel">Yüklü oyunları içeri aktar</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel">Yüklü olmayan oyunları içe aktar</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsConnectAccount">Hesap bağla</sys:String>
+  <sys:String x:Key="LOCIGDBLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
+  <sys:String x:Key="LOCIGDBLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedIn">Kimlik doğrulama gerektiriyor</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateLabel">Kimlik Doğrulaması</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Hesap eşitleme sorunlarını giderme</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingIssues">Sorunları giderme</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel">Tüm oyunları içeri aktar</sys:String>
+  <sys:String x:Key="LOCIGDBPrivateAccount">Özel Hesap</sys:String>
+  <sys:String x:Key="LOCIGDBPublicAccount">Genel Hesap</sys:String>
+  <sys:String x:Key="LOCIGDBAPIKey">API Anahtarı</sys:String>
+  <!--IGDB-->
+  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Resim kullanılamıyorsa ekran görüntüsü kullan</sys:String>
+  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Birden fazla resim mevcutsa, şunu kullan:</sys:String>
+  <sys:String x:Key="LOCIgdbSelectBackgroundTitle">{0} için arka plan resmi seç</sys:String>
+</ResourceDictionary>

@@ -156,6 +156,7 @@
     <Compile Include="BattleNetMetadataProvider.cs" />
     <Compile Include="BattleNetLibrarySettingsViewModel.cs" />
     <Compile Include="Environment.cs" />
+    <Compile Include="LocalizationKeys.cs" />
     <Compile Include="Models\BattleNetApiStatus.cs" />
     <Compile Include="Models\BNetApp.cs" />
     <Compile Include="Models\ClassicGames.cs" />
@@ -176,8 +177,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\localization\en_US.xaml">
-      <Link>Localization\en_US.xaml</Link>
+    <None Include="Localization\*.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

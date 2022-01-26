@@ -55,17 +55,24 @@ Note that the Account Name option only works for accounts whose game libraries h
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Store Background</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">Show friends button on Top panel</sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">Steam Friends</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Use screenshots if artwork is not available</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">If multiple images are available then use:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Select background image for {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignore third party store games</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Import Trove games</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames">Import Humble Choice games</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Import games available as part of Humble Choice subscription.</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">Import Humble Library games</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Import standard Humble store purchases and bundle purchases.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Enable to skip importing games that require third-party clients,
 including stores already managed in Playnite, to prevent duplicates.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Import if DRM free version is available</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Import games requiring 3rd party client if DRM free version is also available.</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Always use Humble App to start games</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">When disabled, Playnite will try to launch games directly, bypassing Humble App.</sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">Automatic installation and uninstallation of non-subscription Humble games is currently not supported.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Start Xbox Pass app instead of Microsoft Store when opening client</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Import Xbox console games</sys:String>

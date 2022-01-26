@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCRockstarSettingsImportInstalledLabel">インストール済みのゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel">インストールされていないゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsConnectAccount">アカウントに接続</sys:String>
+  <sys:String x:Key="LOCRockstarLoginChecking">認証ステータスを確認しています...</sys:String>
+  <sys:String x:Key="LOCRockstarLoggedIn">ユーザー認証済み</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedIn">認証が必要</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateLabel">認証する</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingIssues">問題解決</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">すべてのゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCRockstarPrivateAccount">非公開アカウント</sys:String>
+  <sys:String x:Key="LOCRockstarPublicAccount">公開アカウント</sys:String>
+  <sys:String x:Key="LOCRockstarAPIKey">API キー</sys:String>
+</ResourceDictionary>

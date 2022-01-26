@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCGOGSettingsImportInstalledLabel">Importovat nainstalované hry</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel">Importovat neinstalované hry</sys:String>
+  <sys:String x:Key="LOCGOGSettingsConnectAccount">Připojit účet</sys:String>
+  <sys:String x:Key="LOCGOGLoginChecking">Ověřuji stav přihlášení…</sys:String>
+  <sys:String x:Key="LOCGOGLoggedIn">Uživatel je přihlášen</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedIn">Vyžaduje přihlášení</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedInError">Přihlášení se nezdařilo.</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateLabel">Autentizovat</sys:String>
+  <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Spustit hru přímo bez použití oficiálního klienta</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Řešení problémů se synchronizací účtu</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingIssues">Řešení potíží</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">Importovat všechny hry</sys:String>
+  <sys:String x:Key="LOCGOGPrivateAccount">Soukromý Účet</sys:String>
+  <sys:String x:Key="LOCGOGPublicAccount">Veřejný Účet</sys:String>
+  <sys:String x:Key="LOCGOGAPIKey">API Klíč</sys:String>
+  <!--GOG-->
+  <sys:String x:Key="LOCGOGUseLogin">Přihlášení k Účtu</sys:String>
+  <sys:String x:Key="LOCGOGUseAccountName">Název Účtu</sys:String>
+  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Pro synchronizaci celé knihovny se přihlaste do svého účtu nebo zadejte veřejné jméno účtu.
+Připomínáme, že možnost zadání jména účtu funguje pouze pro ty účty, které mají v nastavení GOG v sekci soukromí nastavenou veřejnou viditelnost knihovny.</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxy">Spustit hry pomocí klienta GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Toto umožní schopnosti GOG Galaxy jako cloud ukládání, sledování herního času atd.</sys:String>
+</ResourceDictionary>

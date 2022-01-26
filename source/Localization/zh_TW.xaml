@@ -62,14 +62,18 @@
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">選擇 {0} 的背景圖片</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">忽略第三方遊戲平台的遊戲</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">匯入Trove遊戲</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">匯入Humble Choice 遊戲</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">匯入Humble Choice訂閱包裡面可遊玩的遊戲</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">匯入Humble Choice 遊戲</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">匯入標準Humble商店遊戲以及組合包遊戲</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">啟用以跳過匯入需要第三方用戶端的遊戲，
 已經由Playnite管理的商店內容也將跳過，以避免重複</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">如果存在非數位版權管理的版本的話，則進行匯入</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">如果有必須透過第三方用戶端啟動同時又有非數位版權管理版本的遊戲的話，則進行匯入
 </sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">總是透過Humble App啟動遊戲</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">停用則Playnite會嘗試直接啟動遊戲，不經過Humble App。</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">啟動客戶端時開啟Xbox Pass應用程式而非Microsoft商店。</sys:String>
-    <sys:String x:Key="LOCXboxImport360Games">匯入Xbox 360遊戲</sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames">匯入Xbox One遊戲</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">匯入Xbox 遊戲</sys:String>
 </ResourceDictionary>

@@ -249,7 +249,7 @@ namespace ItchioLibrary
             else
             {
                 importError = new Exception(
-                    PlayniteApi.Resources.GetString("LOCItchioClientNotInstalledError"));
+                    PlayniteApi.Resources.GetString(LOC.ItchioClientNotInstalledError));
             }
 
             if (importError != null)

@@ -244,7 +244,7 @@ namespace SteamLibrary
             }
             catch (Exception e) when (!Debugger.IsAttached)
             {
-                PlayniteApi.Dialogs.ShowErrorMessage(PlayniteApi.Resources.GetString("LOCNotLoggedInError"), "");
+                PlayniteApi.Dialogs.ShowErrorMessage(PlayniteApi.Resources.GetString(LOC.SteamNotLoggedInError), "");
                 Logger.Error(e, "Failed to authenticate user.");
             }
         }

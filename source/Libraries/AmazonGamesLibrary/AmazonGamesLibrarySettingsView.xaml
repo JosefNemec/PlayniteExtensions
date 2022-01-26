@@ -21,11 +21,11 @@
         <CheckBox DockPanel.Dock="Top" Name="CheckAmazonImportInstalled"
                   Margin="0,0,0,15"
                   IsChecked="{Binding Settings.ImportInstalledGames}"
-                  Content="{DynamicResource LOCSettingsImportInstalledLabel}"/>
+                  Content="{DynamicResource LOCAmazonSettingsImportInstalledLabel}"/>
 
         <CheckBox DockPanel.Dock="Top" Name="CheckAmazonConnectAccount"
                   IsChecked="{Binding Settings.ConnectAccount}"
-                  Content="{DynamicResource LOCSettingsConnectAccount}"/>
+                  Content="{DynamicResource LOCAmazonSettingsConnectAccount}"/>
 
         <StackPanel DockPanel.Dock="Top" Margin="40,5,5,5"
                     IsEnabled="{Binding IsChecked, ElementName=CheckAmazonConnectAccount}">
@@ -33,11 +33,11 @@
             <CheckBox DockPanel.Dock="Top" Name="CheckAmazonImportUninstalled"
                       IsChecked="{Binding Settings.ImportUninstalledGames}"
                       Margin="0,10,0,0"
-                      Content="{DynamicResource LOCSettingsImportUninstalledLabel}"/>
+                      Content="{DynamicResource LOCAmazonSettingsImportUninstalledLabel}"/>
 
             <StackPanel Orientation="Horizontal"
                         DockPanel.Dock="Top" Margin="0,15,5,5" HorizontalAlignment="Left">
-                <Button Content="{DynamicResource LOCAuthenticateLabel}" HorizontalAlignment="Left"
+                <Button Content="{DynamicResource LOCAmazonAuthenticateLabel}" HorizontalAlignment="Left"
                         Command="{Binding LoginCommand}"/>
                 <TextBlock VerticalAlignment="Center" Margin="10,5,5,5">
                     <TextBlock.Tag>
@@ -50,13 +50,13 @@
                         <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
                             <Style.Triggers>
                                 <Trigger Property="Tag" Value="{StaticResource True}">
-                                    <Setter Property="Text" Value="{DynamicResource LOCLoggedIn}" />
+                                    <Setter Property="Text" Value="{DynamicResource LOCAmazonLoggedIn}" />
                                 </Trigger>
                                 <Trigger Property="Tag" Value="{StaticResource False}">
-                                    <Setter Property="Text" Value="{DynamicResource LOCNotLoggedIn}" />
+                                    <Setter Property="Text" Value="{DynamicResource LOCAmazonNotLoggedIn}" />
                                 </Trigger>
                                 <Trigger Property="Tag" Value="{x:Null}">
-                                    <Setter Property="Text" Value="{DynamicResource LOCLoginChecking}" />
+                                    <Setter Property="Text" Value="{DynamicResource LOCAmazonLoginChecking}" />
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -66,7 +66,7 @@
         </StackPanel>
 
         <CheckBox IsChecked="{Binding Settings.StartGamesWithoutLauncher}"
-                  Content="{DynamicResource LOCSettingsStartGameDirectly}"
+                  Content="{DynamicResource LOCAmazonSettingsStartGameDirectly}"
                   Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}"
                   Margin="0,5,0,0" />
 
@@ -74,7 +74,7 @@
             <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Amazon-Games-troubleshooting"
                         Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"
                         CommandParameter="{Binding NavigateUri, RelativeSource={RelativeSource Self}}">
-                <Run Text="{DynamicResource LOCTroubleShootingIssues}" />
+                <Run Text="{DynamicResource LOCAmazonTroubleShootingIssues}" />
             </Hyperlink>
         </TextBlock>
     </StackPanel>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCUbisoftSettingsImportInstalledLabel">インストール済みのゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportUninstalledLabel">インストールされていないゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsConnectAccount">アカウントに接続</sys:String>
+  <sys:String x:Key="LOCUbisoftLoginChecking">認証ステータスを確認しています...</sys:String>
+  <sys:String x:Key="LOCUbisoftLoggedIn">ユーザー認証済み</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedIn">認証が必要</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateLabel">認証する</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingIssues">問題解決</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">すべてのゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCUbisoftPrivateAccount">非公開アカウント</sys:String>
+  <sys:String x:Key="LOCUbisoftPublicAccount">公開アカウント</sys:String>
+  <sys:String x:Key="LOCUbisoftAPIKey">API キー</sys:String>
+</ResourceDictionary>

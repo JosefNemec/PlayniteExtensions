@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">导入已安装的游戏</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">导入未安装的游戏</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">连接账户</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">正在检查身份认证状态…</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">用户已通过身份验证</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">需要身份认证</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">用户身份验证失败。</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">身份验证</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">账户同步疑难解答</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">疑难解答</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">导入所有游戏</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">私密账户</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">公开账户</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">API 密匙</sys:String>
+  <!--Humble-->
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">忽略第三方商店的游戏</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGames">导入 Humble 精选游戏</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">导入 Humble 精选订阅中可用的游戏。</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibrary">导入 Humble 库的游戏</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">导入标准的 Humble 商店购买项目和捆绑包购买项目。</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">启用来跳过导入需要第三方客户端的游戏，
+为避免重复，已由 Playnite 管理的商店的游戏也将跳过。</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">若存在无 DRM 的版本则导入</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">导入存在无 DRM 版本但需要第三方客户端的游戏。</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">总是使用 Humble 客户端启动游戏</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">当禁用时，Playnite 会尝试绕过 Humble 客户端，直接启动游戏。</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCBattleNetSettingsImportInstalledLabel">Importovat nainstalované hry</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportUninstalledLabel">Importovat neinstalované hry</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsConnectAccount">Připojit účet</sys:String>
+  <sys:String x:Key="LOCBattleNetLoginChecking">Ověřuji stav přihlášení…</sys:String>
+  <sys:String x:Key="LOCBattleNetLoggedIn">Uživatel je přihlášen</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedIn">Vyžaduje přihlášení</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedInError">Přihlášení se nezdařilo.</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateLabel">Autentizovat</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Spustit hru přímo bez použití oficiálního klienta</sys:String>
+  <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Řešení problémů se synchronizací účtu</sys:String>
+  <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Řešení potíží</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel">Importovat všechny hry</sys:String>
+  <sys:String x:Key="LOCBattleNetPrivateAccount">Soukromý Účet</sys:String>
+  <sys:String x:Key="LOCBattleNetPublicAccount">Veřejný Účet</sys:String>
+  <sys:String x:Key="LOCBattleNetAPIKey">API Klíč</sys:String>
+</ResourceDictionary>

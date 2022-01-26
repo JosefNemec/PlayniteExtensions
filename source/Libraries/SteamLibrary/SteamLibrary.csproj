@@ -171,6 +171,7 @@
     <Compile Include="Environment.cs" />
     <Compile Include="GameExtension.cs" />
     <Compile Include="AppState.cs" />
+    <Compile Include="LocalizationKeys.cs" />
     <Compile Include="Models\GetOwnedGamesResult.cs" />
     <Compile Include="Models\LocalSteamUser.cs" />
     <Compile Include="Models\ResolveVanityResult.cs" />
@@ -204,8 +205,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\localization\en_US.xaml">
-      <Link>Localization\en_US.xaml</Link>
+    <None Include="Localization\*.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

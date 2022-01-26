@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCIGDBSettingsImportInstalledLabel">ייבא משחקים שהותקנו</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel">ייבא משחקים שלא הותקנו</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsConnectAccount">חבר חשבון</sys:String>
+  <sys:String x:Key="LOCIGDBLoginChecking">בודק מצב אימות…</sys:String>
+  <sys:String x:Key="LOCIGDBLoggedIn">המשתמש מאומת</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedIn">מחייב אימות</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedInError">נכשל באימות משתמש.</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateLabel">אימות</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">הפעל את המשחקים בלי להריץ את הקליינט המקורי שלהם</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">טיפול בתקלות סנכרון חשבון</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingIssues">פתרון בעיות</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel">יבא את כל המשחקים</sys:String>
+  <sys:String x:Key="LOCIGDBPrivateAccount">חשבון פרטי</sys:String>
+  <sys:String x:Key="LOCIGDBPublicAccount">חשבון ציבורי</sys:String>
+  <sys:String x:Key="LOCIGDBAPIKey">מפתח API</sys:String>
+  <!--IGDB-->
+  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">השתמש בתצלומי מסך אם עטיפה אינה זמינה</sys:String>
+  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">אם כמה תמונות קיימות אז בחר:</sys:String>
+  <sys:String x:Key="LOCIgdbSelectBackgroundTitle">בחר תמונת רקע עבור {0}</sys:String>
+</ResourceDictionary>

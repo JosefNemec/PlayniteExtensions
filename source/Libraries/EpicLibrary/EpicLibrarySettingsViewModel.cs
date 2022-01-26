@@ -75,7 +75,7 @@ namespace EpicLibrary
             }
             catch (Exception e) when (!Debugger.IsAttached)
             {
-                PlayniteApi.Dialogs.ShowErrorMessage(PlayniteApi.Resources.GetString("LOCNotLoggedInError"), "");
+                PlayniteApi.Dialogs.ShowErrorMessage(PlayniteApi.Resources.GetString(LOC.EpicNotLoggedInError), "");
                 Logger.Error(e, "Failed to authenticate user.");
             }
         }

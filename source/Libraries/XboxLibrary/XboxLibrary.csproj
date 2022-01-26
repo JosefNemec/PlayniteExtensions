@@ -169,6 +169,7 @@
     <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginSettingsViewModel.cs">
       <Link>Shared\PluginSettingsViewModel.cs</Link>
     </Compile>
+    <Compile Include="LocalizationKeys.cs" />
     <Compile Include="Models\AuthenticationData.cs" />
     <Compile Include="Services\XboxAccountClient.cs" />
     <Compile Include="Xbox.cs" />
@@ -205,8 +206,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\localization\en_US.xaml">
-      <Link>Localization\en_US.xaml</Link>
+    <None Include="Localization\*.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">Telepített játékok importálása</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Nem telepített játékok importálása</sys:String>
+  <sys:String x:Key="LOCitchioSettingsConnectAccount">Összekapcsolás a fiókkal</sys:String>
+  <sys:String x:Key="LOCitchioLoginChecking">Hitelesítés ellenőrzése…</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">Felhasználó hitelesítve</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedIn">Felhasználói hitelesítés szükséges.</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">Felhasználói hitelesítés sikertelen.</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateLabel">Bejelentkezés</sys:String>
+  <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Játékok indítása a hivatalos kliens futtatása nélkül</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Fiók szinkronizálási hibaelhárító</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingIssues">Hibaelhárítás</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">Minden játék importálása</sys:String>
+  <sys:String x:Key="LOCitchioPrivateAccount">Nem publikus fiók</sys:String>
+  <sys:String x:Key="LOCitchioPublicAccount">Publikus fiók</sys:String>
+  <sys:String x:Key="LOCitchioAPIKey">API Kulcs</sys:String>
+  <!--itch.io-->
+  <sys:String x:Key="LOCItchioSignInNotif">A megnyíló itch.io kliens ablakában jelentkezz be, és zárd be ezt az üzenet.</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">Felhasználó bejelentkezésére vár, zárd be ezt, miután kész…</sys:String>
+  <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io kliens v25 vagy újabb nincs telepítve.</sys:String>
+</ResourceDictionary>

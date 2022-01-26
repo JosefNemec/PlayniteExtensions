@@ -61,12 +61,16 @@
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle"></sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames"></sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Importar jogos da Humble Choice</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importar jogos está disponível através da Humble Choice subscrição.</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">Importar jogos da Humble Choice</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importar compras padrão da loja e pacotes da Humble.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree"></sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Usar sempre a aplicação Humble para iniciar jogos.</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Quando desativado, o Playnite irá tentar iniciar jogos diretamente, ignorando a aplicação Humble.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
-    <sys:String x:Key="LOCXboxImport360Games"></sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames"></sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">Importar jogos Xbox.</sys:String>
 </ResourceDictionary>

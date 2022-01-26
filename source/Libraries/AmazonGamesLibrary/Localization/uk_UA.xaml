@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel">Імпортувати встановлені ігри</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel">Імпортувати не встановлені ігри</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsConnectAccount">Під'єднати обліковий запис</sys:String>
+  <sys:String x:Key="LOCAmazonLoginChecking">Перевірка стану автентифікації...</sys:String>
+  <sys:String x:Key="LOCAmazonLoggedIn">Користувача автентифіковано</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedIn">Необхідна автентифікація</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateLabel">Автентифікація</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingIssues">Вирішення проблем</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Імпортувати всі ігри</sys:String>
+  <sys:String x:Key="LOCAmazonPrivateAccount">Приватний обліковий запис</sys:String>
+  <sys:String x:Key="LOCAmazonPublicAccount">Загальнодоступний обліковий запис</sys:String>
+  <sys:String x:Key="LOCAmazonAPIKey">Ключ API</sys:String>
+</ResourceDictionary>

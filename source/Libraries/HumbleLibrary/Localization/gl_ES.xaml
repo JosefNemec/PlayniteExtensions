@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">Importar xogos instalados</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Importar xogos non instalados</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">Vincular conta</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">Comprobando estado da verificación</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">O usuario xa está verificado</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">Requírese verificación</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">Erro na verificación do usuario</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">Verificar</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Comezar xogos dereitamente sen arrincar o cliente oficial</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Solución de problemas ca sincronización da conta</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">Solución de problemas</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Importar todos os xogos</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">Conta privada</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">Conta pública</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">Chave da API</sys:String>
+  <!--Humble-->
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorar xogos de tendas de terceiros </sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGames" />
+  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip" />
+  <sys:String x:Key="LOCHumbleGeneralLibrary" />
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Habilitar para omitir a importación de xogos que requiren clientes de terceiros, incluidas as tendas xa xestionadas en Playnite, para precaver duplicados.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importar se a versión sen DRM está dispoñible</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importar xogos que requiren cliente de terceiros se a versión sen DRM está tamén dispoñible.</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
+</ResourceDictionary>

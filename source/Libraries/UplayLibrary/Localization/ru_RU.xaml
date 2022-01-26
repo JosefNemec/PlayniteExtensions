@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCUbisoftSettingsImportInstalledLabel">Импортировать установленные игры</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportUninstalledLabel">Импортировать неустановленные игры</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsConnectAccount">Подключить аккаунт</sys:String>
+  <sys:String x:Key="LOCUbisoftLoginChecking">Проверка статуса аутентификации…</sys:String>
+  <sys:String x:Key="LOCUbisoftLoggedIn">Пользователь аутентифицирован</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedIn">Требуется аутентификация</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateLabel">Аутентификация</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Запускать игры напрямую, без запуска официального клиента</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Устранение неисправностей</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">Импортировать все игры</sys:String>
+  <sys:String x:Key="LOCUbisoftPrivateAccount">Приватный профиль</sys:String>
+  <sys:String x:Key="LOCUbisoftPublicAccount">Публичный профиль</sys:String>
+  <sys:String x:Key="LOCUbisoftAPIKey">Ключ API</sys:String>
+</ResourceDictionary>

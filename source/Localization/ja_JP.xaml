@@ -63,12 +63,16 @@
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">背景画像 {0} を選択</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">サードパーティー製のストアのゲームを無視する</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Troveゲームをインポートする</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary"></sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip"></sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">サードパーティのクライアント（すでにPlayniteで管理されているストアを含む）を必要とするゲームのインポートを重複を防ぐためにスキップすることを可能にします。</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">DRMフリーバージョンが利用可能ならインポート</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">DRMフリー版も利用可能な場合は、サードパーティ製のクライアントを必要とするゲームをインポートする。</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart"></sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip"></sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">クライアントを開くときにMicrosoft StoreではなくXbox Passアプリを起動する</sys:String>
-    <sys:String x:Key="LOCXboxImport360Games">Xbox 360のゲームをインポートする</sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames">Xbox Oneのゲームをインポートする</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames"></sys:String>
 </ResourceDictionary>

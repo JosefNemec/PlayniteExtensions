@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCEpicSettingsImportInstalledLabel">Telepített játékok importálása</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">Nem telepített játékok importálása</sys:String>
+  <sys:String x:Key="LOCEpicSettingsConnectAccount">Összekapcsolás a fiókkal</sys:String>
+  <sys:String x:Key="LOCEpicLoginChecking">Hitelesítés ellenőrzése…</sys:String>
+  <sys:String x:Key="LOCEpicLoggedIn">Felhasználó hitelesítve</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedIn">Felhasználói hitelesítés szükséges.</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedInError">Felhasználói hitelesítés sikertelen.</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateLabel">Bejelentkezés</sys:String>
+  <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Játékok indítása a hivatalos kliens futtatása nélkül</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Fiók szinkronizálási hibaelhárító</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingIssues">Hibaelhárítás</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">Minden játék importálása</sys:String>
+  <sys:String x:Key="LOCEpicPrivateAccount">Nem publikus fiók</sys:String>
+  <sys:String x:Key="LOCEpicPublicAccount">Publikus fiók</sys:String>
+  <sys:String x:Key="LOCEpicAPIKey">API Kulcs</sys:String>
+</ResourceDictionary>

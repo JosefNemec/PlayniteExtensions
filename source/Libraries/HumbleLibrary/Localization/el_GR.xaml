@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">Εισαγωγή εγκατεστημένων παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Εισαγωγή μη εγκατεστημένων παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">Σύνδεση λογαριασμού</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">Έλεγχος κατάστασης ταυτοποίησης...</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">Ο χρήστης είναι πιστοποιημένος</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">Απαιτείται Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">Επικύρωση</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Απευθείας εκκίνηση παιχνιδιού χωρίς την χρήση του επίσημου client</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρόνισης λογαριασμού</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Εισαγωγή όλων των παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">Ιδιωτικός Λογαριασμός</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">Δημόσιος Λογαριασμός</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">Κλειδί API</sys:String>
+  <!--Humble-->
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames" />
+  <sys:String x:Key="LOCHumbleImportTroveGames" />
+  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip" />
+  <sys:String x:Key="LOCHumbleGeneralLibrary" />
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve" />
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Εισαγωγή παιχνιδιού εάν υπάρχει διαθέσιμη έκδοση χωρις DRM</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip" />
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
+</ResourceDictionary>

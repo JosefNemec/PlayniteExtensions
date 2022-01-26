@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCIGDBSettingsImportInstalledLabel">Telepített játékok importálása</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel">Nem telepített játékok importálása</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsConnectAccount">Összekapcsolás a fiókkal</sys:String>
+  <sys:String x:Key="LOCIGDBLoginChecking">Hitelesítés ellenőrzése…</sys:String>
+  <sys:String x:Key="LOCIGDBLoggedIn">Felhasználó hitelesítve</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedIn">Felhasználói hitelesítés szükséges.</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedInError">Felhasználói hitelesítés sikertelen.</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateLabel">Bejelentkezés</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Játékok indítása a hivatalos kliens futtatása nélkül</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Fiók szinkronizálási hibaelhárító</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingIssues">Hibaelhárítás</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel">Minden játék importálása</sys:String>
+  <sys:String x:Key="LOCIGDBPrivateAccount">Nem publikus fiók</sys:String>
+  <sys:String x:Key="LOCIGDBPublicAccount">Publikus fiók</sys:String>
+  <sys:String x:Key="LOCIGDBAPIKey">API Kulcs</sys:String>
+  <!--IGDB-->
+  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Képernyőkép használata, ha nincs játékgrafika</sys:String>
+  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Ha több találat van, válassza:</sys:String>
+  <sys:String x:Key="LOCIgdbSelectBackgroundTitle">{0} háttérképének kiválasztása</sys:String>
+</ResourceDictionary>

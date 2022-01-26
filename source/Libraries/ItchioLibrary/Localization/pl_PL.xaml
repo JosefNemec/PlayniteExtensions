@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">Importuj zainstalowane gry</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Importuj niezainstalowane gry</sys:String>
+  <sys:String x:Key="LOCitchioSettingsConnectAccount">Połącz z kontem</sys:String>
+  <sys:String x:Key="LOCitchioLoginChecking">Sprawdzanie statusu uwierzytelnienia…</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">Użytkownik jest uwierzytelniony</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedIn">Wymagane uwierzytelnienie</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">Nie powiodło się uwierzytelnienie użytkownika</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateLabel">Uwierzytelnij</sys:String>
+  <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Rozpoczynaj gry bez uruchamiania oficjalnego klienta</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Rozwiązywanie problemów z synchronizacją konta</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">Importuj wszystkie gry</sys:String>
+  <sys:String x:Key="LOCitchioPrivateAccount">Konto prywatne</sys:String>
+  <sys:String x:Key="LOCitchioPublicAccount">Publiczne konto</sys:String>
+  <sys:String x:Key="LOCitchioAPIKey">Klucz API</sys:String>
+  <!--itch.io-->
+  <sys:String x:Key="LOCItchioSignInNotif">itch.io zostanie uruchomiony. Zaloguj się, a następnie zamknij ten komunikat.</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">Oczekiwanie na zalogowanie się użytkownika. Zamknij tą wiadomość, gdy skończysz…</sys:String>
+  <sys:String x:Key="LOCItchioClientNotInstalledError">Aplikacja itch.io w wersji 25 lub nowszej nie jest zainstalowana.</sys:String>
+</ResourceDictionary>

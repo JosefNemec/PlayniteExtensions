@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCOriginSettingsImportInstalledLabel">匯入已安裝的遊戲</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportUninstalledLabel">匯入未安裝遊戲</sys:String>
+  <sys:String x:Key="LOCOriginSettingsConnectAccount">連結帳號</sys:String>
+  <sys:String x:Key="LOCOriginLoginChecking">正在檢查驗證狀態...</sys:String>
+  <sys:String x:Key="LOCOriginLoggedIn">使用者已驗證</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedIn">需要驗證</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedInError">無法驗證用戶</sys:String>
+  <sys:String x:Key="LOCOriginAuthenticateLabel">驗證</sys:String>
+  <sys:String x:Key="LOCOriginSettingsStartGameDirectly">不透過啟動器直接開始遊戲</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingAccountLink">解決帳號同步問題</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingIssues">疑難排解</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportLibraryLabel">匯入所有遊戲</sys:String>
+  <sys:String x:Key="LOCOriginPrivateAccount">私密帳號</sys:String>
+  <sys:String x:Key="LOCOriginPublicAccount">公開帳號</sys:String>
+  <sys:String x:Key="LOCOriginAPIKey">API 密鑰</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCGOGSettingsImportInstalledLabel">ייבא משחקים שהותקנו</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel">ייבא משחקים שלא הותקנו</sys:String>
+  <sys:String x:Key="LOCGOGSettingsConnectAccount">חבר חשבון</sys:String>
+  <sys:String x:Key="LOCGOGLoginChecking">בודק מצב אימות…</sys:String>
+  <sys:String x:Key="LOCGOGLoggedIn">המשתמש מאומת</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedIn">מחייב אימות</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedInError">נכשל באימות משתמש.</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateLabel">אימות</sys:String>
+  <sys:String x:Key="LOCGOGSettingsStartGameDirectly">הפעל את המשחקים בלי להריץ את הקליינט המקורי שלהם</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingAccountLink">טיפול בתקלות סנכרון חשבון</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingIssues">פתרון בעיות</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">יבא את כל המשחקים</sys:String>
+  <sys:String x:Key="LOCGOGPrivateAccount">חשבון פרטי</sys:String>
+  <sys:String x:Key="LOCGOGPublicAccount">חשבון ציבורי</sys:String>
+  <sys:String x:Key="LOCGOGAPIKey">מפתח API</sys:String>
+  <!--GOG-->
+  <sys:String x:Key="LOCGOGUseLogin">כניסה לחשבון</sys:String>
+  <sys:String x:Key="LOCGOGUseAccountName">שם חשבון</sys:String>
+  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">התחבר לחשבון שלך או השתמש בשם החשבון הציבורי שלך כדי לסנכרן את כל הספריה שלך.
+שים לב שאפשרות שם החשבון תעבוד רק עבור חשבונות שספריות המשחק שלהם נקבעו להיות פומביות לתצוגה בהגדרות הפרטיות ב GOG.</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxy">הפעל משחקים באמצעות GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">זה יאפשר תכונות GOG Galaxy כמו שמירה בענן, מעכב אחרי זמן משחק וכו'.</sys:String>
+</ResourceDictionary>

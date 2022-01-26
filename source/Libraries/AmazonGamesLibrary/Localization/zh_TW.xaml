@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel">匯入已安裝的遊戲</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel">匯入未安裝遊戲</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsConnectAccount">連結帳號</sys:String>
+  <sys:String x:Key="LOCAmazonLoginChecking">正在檢查驗證狀態...</sys:String>
+  <sys:String x:Key="LOCAmazonLoggedIn">使用者已驗證</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedIn">需要驗證</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedInError">無法驗證用戶</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateLabel">驗證</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">不透過啟動器直接開始遊戲</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">解決帳號同步問題</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingIssues">疑難排解</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">匯入所有遊戲</sys:String>
+  <sys:String x:Key="LOCAmazonPrivateAccount">私密帳號</sys:String>
+  <sys:String x:Key="LOCAmazonPublicAccount">公開帳號</sys:String>
+  <sys:String x:Key="LOCAmazonAPIKey">API 密鑰</sys:String>
+</ResourceDictionary>

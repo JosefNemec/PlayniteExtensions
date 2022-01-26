@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCBattleNetSettingsImportInstalledLabel">Importa i giochi installati</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportUninstalledLabel">Importa giochi non installati</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsConnectAccount">Connetti l'account</sys:String>
+  <sys:String x:Key="LOCBattleNetLoginChecking">Controllo stato di autenticazione in corso…</sys:String>
+  <sys:String x:Key="LOCBattleNetLoggedIn">L'utente è autenticato</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedIn">Richiede autenticazione</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedInError">Autenticazione utente fallita.</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateLabel">Connetti</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Avvia i giochi direttamente senza avviare il client ufficiale</sys:String>
+  <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Risoluzione dei problemi di sincronizzazione dell'account</sys:String>
+  <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Risoluzione dei problemi</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel">Importa tutti i giochi</sys:String>
+  <sys:String x:Key="LOCBattleNetPrivateAccount">Account privato</sys:String>
+  <sys:String x:Key="LOCBattleNetPublicAccount">Account pubblico</sys:String>
+  <sys:String x:Key="LOCBattleNetAPIKey">Chiave API</sys:String>
+</ResourceDictionary>

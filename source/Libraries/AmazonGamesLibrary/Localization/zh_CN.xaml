@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel">导入已安装的游戏</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel">导入未安装的游戏</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsConnectAccount">连接账户</sys:String>
+  <sys:String x:Key="LOCAmazonLoginChecking">正在检查身份认证状态…</sys:String>
+  <sys:String x:Key="LOCAmazonLoggedIn">用户已通过身份验证</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedIn">需要身份认证</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedInError">用户身份验证失败。</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateLabel">身份验证</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">账户同步疑难解答</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingIssues">疑难解答</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">导入所有游戏</sys:String>
+  <sys:String x:Key="LOCAmazonPrivateAccount">私密账户</sys:String>
+  <sys:String x:Key="LOCAmazonPublicAccount">公开账户</sys:String>
+  <sys:String x:Key="LOCAmazonAPIKey">API 密匙</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCRockstarSettingsImportInstalledLabel">Yüklü oyunları içeri aktar</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel">Yüklü olmayan oyunları içe aktar</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsConnectAccount">Hesap bağla</sys:String>
+  <sys:String x:Key="LOCRockstarLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
+  <sys:String x:Key="LOCRockstarLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedIn">Kimlik doğrulama gerektiriyor</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateLabel">Kimlik Doğrulaması</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Hesap eşitleme sorunlarını giderme</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingIssues">Sorunları giderme</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">Tüm oyunları içeri aktar</sys:String>
+  <sys:String x:Key="LOCRockstarPrivateAccount">Özel Hesap</sys:String>
+  <sys:String x:Key="LOCRockstarPublicAccount">Genel Hesap</sys:String>
+  <sys:String x:Key="LOCRockstarAPIKey">API Anahtarı</sys:String>
+</ResourceDictionary>

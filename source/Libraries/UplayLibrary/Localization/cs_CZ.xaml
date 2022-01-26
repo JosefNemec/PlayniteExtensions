@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCUbisoftSettingsImportInstalledLabel">Importovat nainstalované hry</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportUninstalledLabel">Importovat neinstalované hry</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsConnectAccount">Připojit účet</sys:String>
+  <sys:String x:Key="LOCUbisoftLoginChecking">Ověřuji stav přihlášení…</sys:String>
+  <sys:String x:Key="LOCUbisoftLoggedIn">Uživatel je přihlášen</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedIn">Vyžaduje přihlášení</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedInError">Přihlášení se nezdařilo.</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateLabel">Autentizovat</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Spustit hru přímo bez použití oficiálního klienta</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Řešení problémů se synchronizací účtu</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Řešení potíží</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">Importovat všechny hry</sys:String>
+  <sys:String x:Key="LOCUbisoftPrivateAccount">Soukromý Účet</sys:String>
+  <sys:String x:Key="LOCUbisoftPublicAccount">Veřejný Účet</sys:String>
+  <sys:String x:Key="LOCUbisoftAPIKey">API Klíč</sys:String>
+</ResourceDictionary>

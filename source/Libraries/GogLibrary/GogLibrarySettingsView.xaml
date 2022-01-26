@@ -20,11 +20,11 @@
         <CheckBox DockPanel.Dock="Top" Name="CheckGOGImportInstalled"
                   Margin="0,0,0,15"
                   IsChecked="{Binding Settings.ImportInstalledGames}"
-                  Content="{DynamicResource LOCSettingsImportInstalledLabel}"/>
+                  Content="{DynamicResource LOCGOGSettingsImportInstalledLabel}"/>
 
         <CheckBox DockPanel.Dock="Top" Name="CheckGOGConnectAccount"
                   IsChecked="{Binding Settings.ConnectAccount}"
-                  Content="{DynamicResource LOCSettingsConnectAccount}"/>
+                  Content="{DynamicResource LOCGOGSettingsConnectAccount}"/>
 
         <StackPanel DockPanel.Dock="Top" Margin="40,5,5,0"
                    IsEnabled="{Binding IsChecked, ElementName=CheckGOGConnectAccount}">
@@ -32,10 +32,10 @@
             <CheckBox DockPanel.Dock="Top" Name="CheckGOGImportUninstalled"
                       IsChecked="{Binding Settings.ImportUninstalledGames}"
                       Margin="0,10,0,0"
-                      Content="{DynamicResource LOCSettingsImportUninstalledLabel}"/>
+                      Content="{DynamicResource LOCGOGSettingsImportUninstalledLabel}"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
-                <Button Content="{DynamicResource LOCAuthenticateLabel}" HorizontalAlignment="Left"                         
+                <Button Content="{DynamicResource LOCGOGAuthenticateLabel}" HorizontalAlignment="Left"                         
                         Command="{Binding LoginCommand}" Margin="0,5,5,5"/>
                 <TextBlock VerticalAlignment="Center" Margin="10,5,5,5">
                     <TextBlock.Tag>
@@ -48,13 +48,13 @@
                         <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
                             <Style.Triggers>
                                 <Trigger Property="Tag" Value="{StaticResource True}">
-                                    <Setter Property="Text" Value="{DynamicResource LOCLoggedIn}" />
+                                    <Setter Property="Text" Value="{DynamicResource LOCGOGLoggedIn}" />
                                 </Trigger>
                                 <Trigger Property="Tag" Value="{StaticResource False}">
-                                    <Setter Property="Text" Value="{DynamicResource LOCNotLoggedIn}" />
+                                    <Setter Property="Text" Value="{DynamicResource LOCGOGNotLoggedIn}" />
                                 </Trigger>
                                 <Trigger Property="Tag" Value="{x:Null}">
-                                    <Setter Property="Text" Value="{DynamicResource LOCLoginChecking}" />
+                                    <Setter Property="Text" Value="{DynamicResource LOCGOGLoginChecking}" />
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -70,7 +70,7 @@
             <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/GOG-troubleshooting"
                         Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"
                         CommandParameter="{Binding NavigateUri, RelativeSource={RelativeSource Self}}">
-                <Run Text="{DynamicResource LOCTroubleShootingIssues}" />
+                <Run Text="{DynamicResource LOCGOGTroubleShootingIssues}" />
             </Hyperlink>
         </TextBlock>
     </StackPanel>

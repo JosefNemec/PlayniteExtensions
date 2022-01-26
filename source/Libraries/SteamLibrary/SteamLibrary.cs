@@ -59,7 +59,7 @@ namespace SteamLibrary
                     FontSize = 20,
                     FontFamily = ResourceProvider.GetResource("FontIcoFont") as FontFamily
                 },
-                Title = ResourceProvider.GetString("LOCSteamFriendsTooltip"),
+                Title = ResourceProvider.GetString(LOC.SteamFriendsTooltip),
                 Activated = () => Process.Start(@"steam://open/friends"),
                 Visible = SettingsViewModel.Settings.ShowFriendsButton
             };
@@ -390,7 +390,7 @@ namespace SteamLibrary
         {
             if (settings.UserId.IsNullOrEmpty())
             {
-                throw new Exception(PlayniteApi.Resources.GetString("LOCNotLoggedInError"));
+                throw new Exception(PlayniteApi.Resources.GetString(LOC.SteamNotLoggedInError));
             }
 
             var userId = ulong.Parse(settings.UserId);
@@ -519,7 +519,7 @@ namespace SteamLibrary
             if (accountId == 0)
             {
                 dialogs.ShowMessage(
-                    resources.GetString("LOCSettingsSteamLastActivityImportErrorAccount"),
+                    resources.GetString(LOC.SettingsSteamLastActivityImportErrorAccount),
                     resources.GetString("LOCImportError"),
                     MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -528,7 +528,7 @@ namespace SteamLibrary
             if (!db.IsOpen)
             {
                 dialogs.ShowMessage(
-                    resources.GetString("LOCSettingsSteamLastActivityImportErrorDb"),
+                    resources.GetString(LOC.SettingsSteamLastActivityImportErrorDb),
                     resources.GetString("LOCImportError"),
                     MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -560,7 +560,7 @@ namespace SteamLibrary
             {
                 Logger.Error(exc, "Failed to import Steam last activity.");
                 dialogs.ShowMessage(
-                    resources.GetString("LOCSettingsSteamLastActivityImportError"),
+                    resources.GetString(LOC.SettingsSteamLastActivityImportError),
                     resources.GetString("LOCImportError"),
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -640,8 +640,8 @@ namespace SteamLibrary
             var db = PlayniteApi.Database;
 
             if (dialogs.ShowMessage(
-                resources.GetString("LOCSettingsSteamCatImportWarn"),
-                resources.GetString("LOCSettingsSteamCatImportWarnTitle"),
+                resources.GetString(LOC.SettingsSteamCatImportWarn),
+                resources.GetString(LOC.SettingsSteamCatImportWarnTitle),
                 MessageBoxButton.YesNo, MessageBoxImage.Warning) != MessageBoxResult.Yes)
             {
                 return;
@@ -650,7 +650,7 @@ namespace SteamLibrary
             if (accountId == 0)
             {
                 dialogs.ShowMessage(
-                    resources.GetString("LOCSettingsSteamCatImportErrorAccount"),
+                    resources.GetString(LOC.SettingsSteamCatImportErrorAccount),
                     resources.GetString("LOCImportError"),
                     MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -659,7 +659,7 @@ namespace SteamLibrary
             if (!db.IsOpen)
             {
                 dialogs.ShowMessage(
-                    resources.GetString("LOCSettingsSteamCatImportErrorDb"),
+                    resources.GetString(LOC.SettingsSteamCatImportErrorDb),
                     resources.GetString("LOCImportError"),
                     MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -706,7 +706,7 @@ namespace SteamLibrary
             {
                 Logger.Error(exc, "Failed to import Steam categories.");
                 dialogs.ShowMessage(
-                    resources.GetString("LOCSettingsSteamCatImportError"),
+                    resources.GetString(LOC.SettingsSteamCatImportError),
                     resources.GetString("LOCImportError"),
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }

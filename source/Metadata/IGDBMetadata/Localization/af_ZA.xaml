@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCIGDBSettingsImportInstalledLabel" />
+  <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel" />
+  <sys:String x:Key="LOCIGDBSettingsConnectAccount" />
+  <sys:String x:Key="LOCIGDBLoginChecking" />
+  <sys:String x:Key="LOCIGDBLoggedIn" />
+  <sys:String x:Key="LOCIGDBNotLoggedIn" />
+  <sys:String x:Key="LOCIGDBNotLoggedInError" />
+  <sys:String x:Key="LOCIGDBAuthenticateLabel" />
+  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly" />
+  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink" />
+  <sys:String x:Key="LOCIGDBTroubleShootingIssues" />
+  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel" />
+  <sys:String x:Key="LOCIGDBPrivateAccount" />
+  <sys:String x:Key="LOCIGDBPublicAccount" />
+  <sys:String x:Key="LOCIGDBAPIKey" />
+  <!--IGDB-->
+  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary" />
+  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle" />
+  <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Kies agtergrond prent vir {0}</sys:String>
+</ResourceDictionary>

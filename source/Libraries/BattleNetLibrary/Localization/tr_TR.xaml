@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCBattleNetSettingsImportInstalledLabel">Yüklü oyunları içeri aktar</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportUninstalledLabel">Yüklü olmayan oyunları içe aktar</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsConnectAccount">Hesap bağla</sys:String>
+  <sys:String x:Key="LOCBattleNetLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
+  <sys:String x:Key="LOCBattleNetLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedIn">Kimlik doğrulama gerektiriyor</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateLabel">Kimlik Doğrulaması</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
+  <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Hesap eşitleme sorunlarını giderme</sys:String>
+  <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Sorunları giderme</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel">Tüm oyunları içeri aktar</sys:String>
+  <sys:String x:Key="LOCBattleNetPrivateAccount">Özel Hesap</sys:String>
+  <sys:String x:Key="LOCBattleNetPublicAccount">Genel Hesap</sys:String>
+  <sys:String x:Key="LOCBattleNetAPIKey">API Anahtarı</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel">Importeer geïnstalleerde spellen</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsConnectAccount">Accounts koppelen</sys:String>
+  <sys:String x:Key="LOCAmazonLoginChecking">Verificatiestatus aan het controleren...</sys:String>
+  <sys:String x:Key="LOCAmazonLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedIn">Verificatie vereist</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateLabel">Verifiëren</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingIssues">Probleemoplossing</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Importeer alle spellen</sys:String>
+  <sys:String x:Key="LOCAmazonPrivateAccount">Privé-account</sys:String>
+  <sys:String x:Key="LOCAmazonPublicAccount">Openbaar Account</sys:String>
+  <sys:String x:Key="LOCAmazonAPIKey">API Sleutel</sys:String>
+</ResourceDictionary>

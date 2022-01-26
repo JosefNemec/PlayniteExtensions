@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel" />
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel" />
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount" />
+  <sys:String x:Key="LOCHumbleLoginChecking" />
+  <sys:String x:Key="LOCHumbleLoggedIn" />
+  <sys:String x:Key="LOCHumbleNotLoggedIn" />
+  <sys:String x:Key="LOCHumbleNotLoggedInError" />
+  <sys:String x:Key="LOCHumbleAuthenticateLabel" />
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly" />
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink" />
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues" />
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel" />
+  <sys:String x:Key="LOCHumblePrivateAccount" />
+  <sys:String x:Key="LOCHumblePublicAccount" />
+  <sys:String x:Key="LOCHumbleAPIKey" />
+  <!--Humble-->
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames" />
+  <sys:String x:Key="LOCHumbleImportTroveGames" />
+  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip" />
+  <sys:String x:Key="LOCHumbleGeneralLibrary" />
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve" />
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree" />
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip" />
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
+</ResourceDictionary>

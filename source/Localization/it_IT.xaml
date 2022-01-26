@@ -62,12 +62,16 @@ Nota che l'opzione Nome Account funziona solo per gli account le cui librerie di
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Seleziona l'Immagine di sfondo per {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignora i giochi dei negozi di terze parti</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Importa giochi Humble Trove</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Importa giochi di Humble Choice</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importa i giochi disponibili come parte dell'abbonamento Humble Choice.</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">Importa giochi di Humble Library</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importa gli acquisti standard del negozio Humble e gli acquisti in bundle.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Abilità la possibilità di non importare giochi che richiedono un client di terze parti, inclusi gli store già gestiti in Playnite, per evitare ridondanze</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importa se disponibile una versione DRM free</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importa giochi che richiedono un client di terze parti se disponibile una versione DRM free</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Utilizza sempre la Humble App per avviare i giochi</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Quando è disabilitato, Playnite cercherà di lanciare i giochi direttamente, bypassando Humble App.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Avvia l'app Xbox Pass invece di Microsoft Store all'avvio del client</sys:String>
-    <sys:String x:Key="LOCXboxImport360Games">Importa giochi Xbox 360</sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames">Importa giochi Xbox One</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">Importa giochi da console Xbox </sys:String>
 </ResourceDictionary>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCUbisoftSettingsImportInstalledLabel">Importar xogos instalados</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportUninstalledLabel">Importar xogos non instalados</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsConnectAccount">Vincular conta</sys:String>
+  <sys:String x:Key="LOCUbisoftLoginChecking">Comprobando estado da verificación</sys:String>
+  <sys:String x:Key="LOCUbisoftLoggedIn">O usuario xa está verificado</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedIn">Requírese verificación</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedInError">Erro na verificación do usuario</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateLabel">Verificar</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Comezar xogos dereitamente sen arrincar o cliente oficial</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Solución de problemas ca sincronización da conta</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Solución de problemas</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">Importar todos os xogos</sys:String>
+  <sys:String x:Key="LOCUbisoftPrivateAccount">Conta privada</sys:String>
+  <sys:String x:Key="LOCUbisoftPublicAccount">Conta pública</sys:String>
+  <sys:String x:Key="LOCUbisoftAPIKey">Chave da API</sys:String>
+</ResourceDictionary>

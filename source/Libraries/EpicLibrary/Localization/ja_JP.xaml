@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCEpicSettingsImportInstalledLabel">インストール済みのゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">インストールされていないゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCEpicSettingsConnectAccount">アカウントに接続</sys:String>
+  <sys:String x:Key="LOCEpicLoginChecking">認証ステータスを確認しています...</sys:String>
+  <sys:String x:Key="LOCEpicLoggedIn">ユーザー認証済み</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedIn">認証が必要</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateLabel">認証する</sys:String>
+  <sys:String x:Key="LOCEpicSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingIssues">問題解決</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">すべてのゲームをインポートする</sys:String>
+  <sys:String x:Key="LOCEpicPrivateAccount">非公開アカウント</sys:String>
+  <sys:String x:Key="LOCEpicPublicAccount">公開アカウント</sys:String>
+  <sys:String x:Key="LOCEpicAPIKey">API キー</sys:String>
+</ResourceDictionary>

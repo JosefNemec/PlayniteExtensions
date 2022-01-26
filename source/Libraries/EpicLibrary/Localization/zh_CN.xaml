@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCEpicSettingsImportInstalledLabel">导入已安装的游戏</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">导入未安装的游戏</sys:String>
+  <sys:String x:Key="LOCEpicSettingsConnectAccount">连接账户</sys:String>
+  <sys:String x:Key="LOCEpicLoginChecking">正在检查身份认证状态…</sys:String>
+  <sys:String x:Key="LOCEpicLoggedIn">用户已通过身份验证</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedIn">需要身份认证</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedInError">用户身份验证失败。</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateLabel">身份验证</sys:String>
+  <sys:String x:Key="LOCEpicSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingAccountLink">账户同步疑难解答</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingIssues">疑难解答</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">导入所有游戏</sys:String>
+  <sys:String x:Key="LOCEpicPrivateAccount">私密账户</sys:String>
+  <sys:String x:Key="LOCEpicPublicAccount">公开账户</sys:String>
+  <sys:String x:Key="LOCEpicAPIKey">API 密匙</sys:String>
+</ResourceDictionary>

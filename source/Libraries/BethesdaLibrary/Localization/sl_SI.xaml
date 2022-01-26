@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCBethesdaSettingsImportInstalledLabel" />
+  <sys:String x:Key="LOCBethesdaSettingsImportUninstalledLabel" />
+  <sys:String x:Key="LOCBethesdaSettingsConnectAccount" />
+  <sys:String x:Key="LOCBethesdaLoginChecking" />
+  <sys:String x:Key="LOCBethesdaLoggedIn" />
+  <sys:String x:Key="LOCBethesdaNotLoggedIn" />
+  <sys:String x:Key="LOCBethesdaNotLoggedInError" />
+  <sys:String x:Key="LOCBethesdaAuthenticateLabel" />
+  <sys:String x:Key="LOCBethesdaSettingsStartGameDirectly" />
+  <sys:String x:Key="LOCBethesdaTroubleShootingAccountLink" />
+  <sys:String x:Key="LOCBethesdaTroubleShootingIssues" />
+  <sys:String x:Key="LOCBethesdaSettingsImportLibraryLabel" />
+  <sys:String x:Key="LOCBethesdaPrivateAccount" />
+  <sys:String x:Key="LOCBethesdaPublicAccount" />
+  <sys:String x:Key="LOCBethesdaAPIKey" />
+</ResourceDictionary>

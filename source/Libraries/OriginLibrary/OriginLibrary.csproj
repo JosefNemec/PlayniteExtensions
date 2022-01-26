@@ -155,6 +155,7 @@
       <Link>Shared\PluginSettingsViewModel.cs</Link>
     </Compile>
     <Compile Include="Environment.cs" />
+    <Compile Include="LocalizationKeys.cs" />
     <Compile Include="Models\GameInstallerData.cs" />
     <Compile Include="Models\UsageReponse.cs" />
     <Compile Include="Models\AccountEntitlementsResponse.cs" />
@@ -184,8 +185,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\localization\en_US.xaml">
-      <Link>Localization\en_US.xaml</Link>
+    <None Include="Localization\*.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

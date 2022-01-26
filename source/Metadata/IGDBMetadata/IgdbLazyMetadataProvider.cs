@@ -56,7 +56,7 @@ namespace IGDBMetadata
             }
             return plugin.PlayniteApi.Dialogs.ChooseImageFile(
                 selection,
-                string.Format(plugin.PlayniteApi.Resources.GetString("LOCIgdbSelectBackgroundTitle"), IgdbData.name)) as IgdbImageOption;
+                string.Format(plugin.PlayniteApi.Resources.GetString(LOC.IgdbSelectBackgroundTitle), IgdbData.name)) as IgdbImageOption;
         }
 
         public override MetadataFile GetBackgroundImage(GetMetadataFieldArgs args)

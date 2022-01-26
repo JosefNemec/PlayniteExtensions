@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCGOGSettingsImportInstalledLabel" />
+  <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel" />
+  <sys:String x:Key="LOCGOGSettingsConnectAccount" />
+  <sys:String x:Key="LOCGOGLoginChecking" />
+  <sys:String x:Key="LOCGOGLoggedIn" />
+  <sys:String x:Key="LOCGOGNotLoggedIn" />
+  <sys:String x:Key="LOCGOGNotLoggedInError" />
+  <sys:String x:Key="LOCGOGAuthenticateLabel" />
+  <sys:String x:Key="LOCGOGSettingsStartGameDirectly" />
+  <sys:String x:Key="LOCGOGTroubleShootingAccountLink" />
+  <sys:String x:Key="LOCGOGTroubleShootingIssues" />
+  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel" />
+  <sys:String x:Key="LOCGOGPrivateAccount" />
+  <sys:String x:Key="LOCGOGPublicAccount" />
+  <sys:String x:Key="LOCGOGAPIKey" />
+  <!--GOG-->
+  <sys:String x:Key="LOCGOGUseLogin" />
+  <sys:String x:Key="LOCGOGUseAccountName" />
+  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve" />
+  <sys:String x:Key="LOCSettingsGOGUseGalaxy" />
+  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip" />
+</ResourceDictionary>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCBethesdaSettingsImportInstalledLabel">Importa i giochi installati</sys:String>
+  <sys:String x:Key="LOCBethesdaSettingsImportUninstalledLabel">Importa giochi non installati</sys:String>
+  <sys:String x:Key="LOCBethesdaSettingsConnectAccount">Connetti l'account</sys:String>
+  <sys:String x:Key="LOCBethesdaLoginChecking">Controllo stato di autenticazione in corso…</sys:String>
+  <sys:String x:Key="LOCBethesdaLoggedIn">L'utente è autenticato</sys:String>
+  <sys:String x:Key="LOCBethesdaNotLoggedIn">Richiede autenticazione</sys:String>
+  <sys:String x:Key="LOCBethesdaNotLoggedInError">Autenticazione utente fallita.</sys:String>
+  <sys:String x:Key="LOCBethesdaAuthenticateLabel">Connetti</sys:String>
+  <sys:String x:Key="LOCBethesdaSettingsStartGameDirectly">Avvia i giochi direttamente senza avviare il client ufficiale</sys:String>
+  <sys:String x:Key="LOCBethesdaTroubleShootingAccountLink">Risoluzione dei problemi di sincronizzazione dell'account</sys:String>
+  <sys:String x:Key="LOCBethesdaTroubleShootingIssues">Risoluzione dei problemi</sys:String>
+  <sys:String x:Key="LOCBethesdaSettingsImportLibraryLabel">Importa tutti i giochi</sys:String>
+  <sys:String x:Key="LOCBethesdaPrivateAccount">Account privato</sys:String>
+  <sys:String x:Key="LOCBethesdaPublicAccount">Account pubblico</sys:String>
+  <sys:String x:Key="LOCBethesdaAPIKey">Chiave API</sys:String>
+</ResourceDictionary>

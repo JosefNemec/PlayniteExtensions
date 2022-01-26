@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">Importer installerte spill</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Importer spill som ikke er installert</sys:String>
+  <sys:String x:Key="LOCitchioSettingsConnectAccount">Tilknytt konto</sys:String>
+  <sys:String x:Key="LOCitchioLoginChecking">Kontrollerer autentiseringsstatus …</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">Brukeren er autentisert</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedIn">Krever autentisering</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateLabel">Autentiser</sys:String>
+  <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingIssues">Feilsøking av problemer</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">Importer alle spill</sys:String>
+  <sys:String x:Key="LOCitchioPrivateAccount">Privat konto</sys:String>
+  <sys:String x:Key="LOCitchioPublicAccount">Offentlig konto</sys:String>
+  <sys:String x:Key="LOCitchioAPIKey">API-nøkkel</sys:String>
+  <!--itch.io-->
+  <sys:String x:Key="LOCItchioSignInNotif">itch.io-klienten vil starte. Vennligst logg inn, og lukk deretter denne meldingen.</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">Venter på at brukeren skal logge inn. Vennligst lukk dette vinduet når du er ferdig …</sys:String>
+  <sys:String x:Key="LOCItchioClientNotInstalledError">Versjon 25 eller nyere av itch.io-klienten er ikke installert.</sys:String>
+</ResourceDictionary>

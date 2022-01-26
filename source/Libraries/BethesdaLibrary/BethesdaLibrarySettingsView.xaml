@@ -11,12 +11,12 @@
         <CheckBox DockPanel.Dock="Top" Name="CheckBethesdaImportInstalled"
                   Margin="0,0,0,15"
                   IsChecked="{Binding Settings.ImportInstalledGames}"
-                  Content="{DynamicResource LOCSettingsImportInstalledLabel}"/>
+                  Content="{DynamicResource LOCBethesdaSettingsImportInstalledLabel}"/>
         <TextBlock VerticalAlignment="Center" Margin="0,10,0,0">
             <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Bethesda-troubleshooting"
                         Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"
                         CommandParameter="{Binding NavigateUri, RelativeSource={RelativeSource Self}}">
-                <Run Text="{DynamicResource LOCTroubleShootingIssues}" />
+                <Run Text="{DynamicResource LOCBethesdaTroubleShootingIssues}" />
             </Hyperlink>
         </TextBlock>
     </StackPanel>

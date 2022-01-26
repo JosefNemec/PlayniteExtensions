@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">ייבא משחקים שהותקנו</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">ייבא משחקים שלא הותקנו</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">חבר חשבון</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">בודק מצב אימות…</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">המשתמש מאומת</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">מחייב אימות</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">נכשל באימות משתמש.</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">אימות</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">הפעל את המשחקים בלי להריץ את הקליינט המקורי שלהם</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">טיפול בתקלות סנכרון חשבון</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">פתרון בעיות</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">יבא את כל המשחקים</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">חשבון פרטי</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">חשבון ציבורי</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">מפתח API</sys:String>
+  <!--Humble-->
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">התעלם ממשחקי חנויות חיצוניות</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGames" />
+  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip" />
+  <sys:String x:Key="LOCHumbleGeneralLibrary" />
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">אפשר דילוג על ייבור משחקים הדורשים ספריות צד-שלישי, 
+כולל חנויות אשר מנוהלות כבר ב Playnite, על מנת למנוע כפילויות.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">ייבא אם גירסא ללא DRM קיימת</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">ייבא משחקים הדורשים ספריות צד שלישי אם גירסה ללא DRM זמינה גם כן.</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
+</ResourceDictionary>

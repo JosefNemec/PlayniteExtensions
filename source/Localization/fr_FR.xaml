@@ -61,13 +61,17 @@
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Sélectionner une image de fond pour {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorer les jeux dépendant de clients tiers</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Importer les jeux du Humble Trove</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Importer les jeux Humble Choice</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Permet d'importer les jeux disponibles dans le service Humble Choice.</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">Importer les jeux depuis la bibliothèque Humble</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Permet d'importer les achats standards et en bundle depuis le Humble Store.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Lorsque cette option est activée, les jeux nécessitant un client tiers ne seront pas importés.
 Cela inclut les clients déjà supportées par Playnite, de manière à éviter les ajouts redondants.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importer la version DRM Free lorsque cela est possible</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importer les versions requérant un client tiers plutôt que les versions DRM Free</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Lancer les jeux depuis Humble App</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Désactiver ce paramètre pour tenter de lancer les jeux sans passer par l'Humble App.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Lancer l'application Xbox Game Pass plutôt que le Microsoft Store</sys:String>
-    <sys:String x:Key="LOCXboxImport360Games">Importer les jeux Xbox 360</sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames">Importer les jeux Xbox One</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">Importer les jeux des consoles Xbox</sys:String>
 </ResourceDictionary>

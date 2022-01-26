@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">Telepített játékok importálása</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Nem telepített játékok importálása</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">Összekapcsolás a fiókkal</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">Hitelesítés ellenőrzése…</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">Felhasználó hitelesítve</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">Felhasználói hitelesítés szükséges.</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">Felhasználói hitelesítés sikertelen.</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">Bejelentkezés</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Játékok indítása a hivatalos kliens futtatása nélkül</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Fiók szinkronizálási hibaelhárító</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">Hibaelhárítás</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Minden játék importálása</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">Nem publikus fiók</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">Publikus fiók</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">API Kulcs</sys:String>
+  <!--Humble-->
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Harmadik féltől származó játékok figyelmen kívül hagyása</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGames">Humble Choice játékok importálása</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Játékok importálása amelyek a Humble Choice szolgáltatás részei.</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibrary">Humble könyvtárban lévő játékok importálása</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Általános Humble áruházi és csomag vásárlások importálása.</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Kliensfüggő játékok nem kerülnek importálásra. A már meglévők sem, hogy ne legyenek duplikátumok.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importálás csak másolásvédelem-mentes változat esetében</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Kliensfüggő játékok importálása, ha van másolásvédelem-mentes változatuk is.</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Mindig indítsa el a Humble alkalmazást a játékok futtatásakor</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Ha ez ki van kapcsolva, akkor a Playnite megpróbálja közvetlenül elindítani a játékokat a Humble alkalmazás nélkül.</sys:String>
+</ResourceDictionary>

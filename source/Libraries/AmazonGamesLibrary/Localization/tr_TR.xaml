@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel">Yüklü oyunları içeri aktar</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel">Yüklü olmayan oyunları içe aktar</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsConnectAccount">Hesap bağla</sys:String>
+  <sys:String x:Key="LOCAmazonLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
+  <sys:String x:Key="LOCAmazonLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedIn">Kimlik doğrulama gerektiriyor</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateLabel">Kimlik Doğrulaması</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Hesap eşitleme sorunlarını giderme</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingIssues">Sorunları giderme</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Tüm oyunları içeri aktar</sys:String>
+  <sys:String x:Key="LOCAmazonPrivateAccount">Özel Hesap</sys:String>
+  <sys:String x:Key="LOCAmazonPublicAccount">Genel Hesap</sys:String>
+  <sys:String x:Key="LOCAmazonAPIKey">API Anahtarı</sys:String>
+</ResourceDictionary>

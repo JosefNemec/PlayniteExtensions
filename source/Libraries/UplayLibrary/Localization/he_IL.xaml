@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCUbisoftSettingsImportInstalledLabel">ייבא משחקים שהותקנו</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportUninstalledLabel">ייבא משחקים שלא הותקנו</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsConnectAccount">חבר חשבון</sys:String>
+  <sys:String x:Key="LOCUbisoftLoginChecking">בודק מצב אימות…</sys:String>
+  <sys:String x:Key="LOCUbisoftLoggedIn">המשתמש מאומת</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedIn">מחייב אימות</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedInError">נכשל באימות משתמש.</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateLabel">אימות</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">הפעל את המשחקים בלי להריץ את הקליינט המקורי שלהם</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">טיפול בתקלות סנכרון חשבון</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingIssues">פתרון בעיות</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">יבא את כל המשחקים</sys:String>
+  <sys:String x:Key="LOCUbisoftPrivateAccount">חשבון פרטי</sys:String>
+  <sys:String x:Key="LOCUbisoftPublicAccount">חשבון ציבורי</sys:String>
+  <sys:String x:Key="LOCUbisoftAPIKey">מפתח API</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,20 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCXboxSettingsImportInstalledLabel">Import installed games</sys:String>
+  <sys:String x:Key="LOCXboxSettingsImportUninstalledLabel">Import not installed games</sys:String>
+  <sys:String x:Key="LOCXboxSettingsConnectAccount">Connect account</sys:String>
+  <sys:String x:Key="LOCXboxLoginChecking">Checking authentication status…</sys:String>
+  <sys:String x:Key="LOCXboxLoggedIn">User is authenticated</sys:String>
+  <sys:String x:Key="LOCXboxNotLoggedIn">Requires authentication</sys:String>
+  <sys:String x:Key="LOCXboxNotLoggedInError">Failed to authenticate user.</sys:String>
+  <sys:String x:Key="LOCXboxAuthenticateLabel">Authenticate</sys:String>
+  <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Start games directly without running official client</sys:String>
+  <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Troubleshooting account sync issues</sys:String>
+  <sys:String x:Key="LOCXboxTroubleShootingIssues">Troubleshooting issues</sys:String>
+  <sys:String x:Key="LOCXboxSettingsImportLibraryLabel">Import all games</sys:String>
+  <sys:String x:Key="LOCXboxPrivateAccount">Private Account</sys:String>
+  <sys:String x:Key="LOCXboxPublicAccount">Public Account</sys:String>
+  <sys:String x:Key="LOCXboxAPIKey">API Key</sys:String>
+  <!--Xbox-->
+  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Start Xbox Pass app instead of Microsoft Store when opening client</sys:String>
+  <sys:String x:Key="LOCXboxImportConsoleGames">Import Xbox console games</sys:String>
+</ResourceDictionary>

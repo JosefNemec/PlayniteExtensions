@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCBattleNetSettingsImportInstalledLabel" />
+  <sys:String x:Key="LOCBattleNetSettingsImportUninstalledLabel" />
+  <sys:String x:Key="LOCBattleNetSettingsConnectAccount" />
+  <sys:String x:Key="LOCBattleNetLoginChecking" />
+  <sys:String x:Key="LOCBattleNetLoggedIn" />
+  <sys:String x:Key="LOCBattleNetNotLoggedIn" />
+  <sys:String x:Key="LOCBattleNetNotLoggedInError" />
+  <sys:String x:Key="LOCBattleNetAuthenticateLabel" />
+  <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly" />
+  <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink" />
+  <sys:String x:Key="LOCBattleNetTroubleShootingIssues" />
+  <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel" />
+  <sys:String x:Key="LOCBattleNetPrivateAccount" />
+  <sys:String x:Key="LOCBattleNetPublicAccount" />
+  <sys:String x:Key="LOCBattleNetAPIKey" />
+</ResourceDictionary>

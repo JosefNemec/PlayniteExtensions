@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCOriginSettingsImportInstalledLabel">Εισαγωγή εγκατεστημένων παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportUninstalledLabel">Εισαγωγή μη εγκατεστημένων παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCOriginSettingsConnectAccount">Σύνδεση λογαριασμού</sys:String>
+  <sys:String x:Key="LOCOriginLoginChecking">Έλεγχος κατάστασης ταυτοποίησης...</sys:String>
+  <sys:String x:Key="LOCOriginLoggedIn">Ο χρήστης είναι πιστοποιημένος</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedIn">Απαιτείται Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
+  <sys:String x:Key="LOCOriginAuthenticateLabel">Επικύρωση</sys:String>
+  <sys:String x:Key="LOCOriginSettingsStartGameDirectly">Απευθείας εκκίνηση παιχνιδιού χωρίς την χρήση του επίσημου client</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρόνισης λογαριασμού</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportLibraryLabel">Εισαγωγή όλων των παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCOriginPrivateAccount">Ιδιωτικός Λογαριασμός</sys:String>
+  <sys:String x:Key="LOCOriginPublicAccount">Δημόσιος Λογαριασμός</sys:String>
+  <sys:String x:Key="LOCOriginAPIKey">Κλειδί API</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCRockstarSettingsImportInstalledLabel">Importeer geïnstalleerde spellen</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsConnectAccount">Accounts koppelen</sys:String>
+  <sys:String x:Key="LOCRockstarLoginChecking">Verificatiestatus aan het controleren...</sys:String>
+  <sys:String x:Key="LOCRockstarLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedIn">Verificatie vereist</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateLabel">Verifiëren</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingIssues">Probleemoplossing</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">Importeer alle spellen</sys:String>
+  <sys:String x:Key="LOCRockstarPrivateAccount">Privé-account</sys:String>
+  <sys:String x:Key="LOCRockstarPublicAccount">Openbaar Account</sys:String>
+  <sys:String x:Key="LOCRockstarAPIKey">API Sleutel</sys:String>
+</ResourceDictionary>

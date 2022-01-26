@@ -62,13 +62,17 @@ Merk at alternativet Kontonavn bare fungerer for kontoer der spillbibliotekene e
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Velg bakgrunnsbilde for {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorer tredjeparts butikkspill</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Importer Trove-spill</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Importer Humble Choice-spill</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importer spill som er tilgjengelig via Humble Choice-abonnement.</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">Importer spill fra Humble-biblioteket.</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importer vanlige kjøp og pakkekjøp fra Humble Store.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Aktiver for å hoppe over import av spill som krever tredjepartsklienter,
 inkludert butikker som allerede er administrert i Playnite, for å forhindre duplikater.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importer hvis DRM-fri versjon er tilgjengelig</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importer spill som krever tredjepartsklient hvis DRM-fri versjon også er tilgjengelig.</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Bruk alltid Humble-appen til å starte spill.</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Hvis dette er deaktivert, vil Playnite overse Humble-appen og prøve å starte spill direkte.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Start Xbox Game Pass-appen i stedet for Microsoft Store når du åpner klienten</sys:String>
-    <sys:String x:Key="LOCXboxImport360Games">Importer Xbox 360-spill</sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames">Importer Xbox One-spill</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">Importer konsollspill for Xbox</sys:String>
 </ResourceDictionary>

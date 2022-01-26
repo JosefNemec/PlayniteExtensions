@@ -8,26 +8,27 @@
     <sys:String x:Key="LOCNotLoggedIn">Требуется аутентификация</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Аутентификация</sys:String>
-    <sys:String x:Key="LOCSettingsStartGameDirectly"></sys:String>
-    <sys:String x:Key="LOCTroubleShootingAccountLink"></sys:String>
-    <sys:String x:Key="LOCTroubleShootingIssues"></sys:String>
-    <sys:String x:Key="LOCSettingsImportLibraryLabel"></sys:String>
-    <sys:String x:Key="LOCPrivateAccount"></sys:String>
-    <sys:String x:Key="LOCPublicAccount"></sys:String>
+    <sys:String x:Key="LOCSettingsStartGameDirectly">Запускать игры напрямую, без запуска официального клиента</sys:String>
+    <sys:String x:Key="LOCTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
+    <sys:String x:Key="LOCTroubleShootingIssues">Устранение неисправностей</sys:String>
+    <sys:String x:Key="LOCSettingsImportLibraryLabel">Импортировать все игры</sys:String>
+    <sys:String x:Key="LOCPrivateAccount">Приватный профиль</sys:String>
+    <sys:String x:Key="LOCPublicAccount">Публичный профиль</sys:String>
     <sys:String x:Key="LOCAPIKey">Ключ API</sys:String>
     <!--itch.io-->
-    <sys:String x:Key="LOCItchioSignInNotif"></sys:String>
-    <sys:String x:Key="LOCItchioSignInWaitMessage"></sys:String>
-    <sys:String x:Key="LOCItchioClientNotInstalledError"></sys:String>
+    <sys:String x:Key="LOCItchioSignInNotif">Откроется клиент itch.io. Пожалуйста, войдите в систему и закройте это сообщение.</sys:String>
+    <sys:String x:Key="LOCItchioSignInWaitMessage">Ожидание входа пользователя, пожалуйста, закройте сообщение, когда войдете…</sys:String>
+    <sys:String x:Key="LOCItchioClientNotInstalledError">Приложение Itch.io версии 25 или новее не установлено.</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Логин учетной записи</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Имя учетной записи</sys:String>
-    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxy"></sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip"></sys:String>
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Войдите в ваш аккаунт или используйте публичное имя вашего аккаунта для синхронизации всей игровой библиотеки.
+Обратите внимание, что использование имени аккаунта работает только для тех аккаунтов, у которых в настройках конфиденциальности GOG выставлена публичная видимость.</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxy">Запуск игр с помощью клиента GOG Galaxy</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Это позволит включить функции GOG Galaxy, такие как облачные сохранения, отслеживание игрового времени и т. д.</sys:String>
     <!--Steam-->
-    <sys:String x:Key="LOCSettingsWhatsSteamName"></sys:String>
-    <sys:String x:Key="LOCSteamCustomUrlName"></sys:String>
+    <sys:String x:Key="LOCSettingsWhatsSteamName">Какое имя у моего аккаунта?</sys:String>
+    <sys:String x:Key="LOCSteamCustomUrlName">URL-адрес аккаунта</sys:String>
     <sys:String x:Key="LOCSteamLoggedInUser">Авторизованный пользователь</sys:String>
     <sys:String x:Key="LOCSteamRequiresApiKey">Аккаунт приватный, требуется API ключ.</sys:String>
     <sys:String x:Key="LOCSteamLinksCommunityHub">Центр сообщества</sys:String>
@@ -35,38 +36,43 @@
     <sys:String x:Key="LOCSteamLinksGuides">Руководства</sys:String>
     <sys:String x:Key="LOCSteamLinksWorkshop">Мастерская</sys:String>
     <sys:String x:Key="LOCSteamUseVerticalCovers">Загружать вертикальные обложки</sys:String>
-    <sys:String x:Key="LOCSteamImportFreeSubGames"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarn"></sys:String>
+    <sys:String x:Key="LOCSteamImportFreeSubGames">Импорт общих бесплатных элементов</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarn">Это заменит текущие категории, а также скрытые и избранные состояния во всех играх Steam. Вы хотите продолжить?</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Импортировать категории?</sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportError"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportError"></sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyTooltip"></sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Не получается импортировать категории - не выбран аккаунт для импортирования</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Не получается импортировать категории - база данных не открыта.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportError">Не получается импортировать Steam-категории: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">Не удается импортировать информацию последней игровой активности, аккаунт для импортирования не выбран.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">Не удается импортировать информацию последней игровой активности, база данных не открыта.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportError">Не удалось импортировать информацию последней игровой активности Steam: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyTooltip">Для приватных Steam-аккаунтов необходим API-ключ</sys:String>
     <sys:String x:Key="LOCSettingsApiKeyUrlText">Получить ключ API</sys:String>
-    <sys:String x:Key="LOCSettingsSteamImportMetadata"></sys:String>
-    <sys:String x:Key="LOCImportSteamCategoriesLabel"></sys:String>
-    <sys:String x:Key="LOCImportSteamLastActivityLabel"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSource"></sys:String>
+    <sys:String x:Key="LOCSettingsSteamImportMetadata">Импортировать метаданные из аккаунта Steam:</sys:String>
+    <sys:String x:Key="LOCImportSteamCategoriesLabel">Импортировать Steam-категории</sys:String>
+    <sys:String x:Key="LOCImportSteamLastActivityLabel">Импортировать из Steam последнюю игровую активность</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSource">Источник фонового изображения</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceImage">Изображение игры</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Скриншот из магазина</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Фон из магазина</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Баннер</sys:String>
-    <sys:String x:Key="LOCSteamShowFriendsButton"></sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton">Показывать кнопку &quot;Друзья&quot; на Верхней панели</sys:String>
     <!--IGDB-->
-    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"></sys:String>
-    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>
-    <sys:String x:Key="LOCIgdbSelectBackgroundTitle"></sys:String>
+    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Использовать скриншоты из игры при отсутствии обложки </sys:String>
+    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">При наличии нескольких изображений используйте:</sys:String>
+    <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Выбрать фоновое изображение для: {0}</sys:String>
     <!--Humble-->
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames"></sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Игнорировать игры из сторонних магазинов.</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Импортирование игр Humble Choice</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Импортирование игр доступно в рамках подписки Humble Choice.</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">Импортирование игр из библиотеки Humble </sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Импортировать стандартные покупки в магазине Humble и покупки бандлов.</sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Включите возможность пропустить импортирование игр, для которых требуются сторонние клиенты,
+включая магазины, уже управляемые в Playnite, чтобы предотвратить дубликаты.</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Импортировать, если доступна версия без DRM</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Импортировать игры, требующие стороннего клиента, если также доступна версия без DRM</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Всегда использовать приложение Humble для запуска игр</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Если этот параметр отключен, Playnite будет пытаться запускать игры напрямую, минуя приложение Humble.</sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
-    <sys:String x:Key="LOCXboxImport360Games">Импорт игр с Xbox 360</sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames">Импорт игр с Xbox One</sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Запускать Xbox Pass вместо Microsoft Store при открытии клиента</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">Импортирование игр с Xbox</sys:String>
 </ResourceDictionary>

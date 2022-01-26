@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">Εισαγωγή εγκατεστημένων παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Εισαγωγή μη εγκατεστημένων παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCitchioSettingsConnectAccount">Σύνδεση λογαριασμού</sys:String>
+  <sys:String x:Key="LOCitchioLoginChecking">Έλεγχος κατάστασης ταυτοποίησης...</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">Ο χρήστης είναι πιστοποιημένος</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedIn">Απαιτείται Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateLabel">Επικύρωση</sys:String>
+  <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Απευθείας εκκίνηση παιχνιδιού χωρίς την χρήση του επίσημου client</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρόνισης λογαριασμού</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">Εισαγωγή όλων των παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCitchioPrivateAccount">Ιδιωτικός Λογαριασμός</sys:String>
+  <sys:String x:Key="LOCitchioPublicAccount">Δημόσιος Λογαριασμός</sys:String>
+  <sys:String x:Key="LOCitchioAPIKey">Κλειδί API</sys:String>
+  <!--itch.io-->
+  <sys:String x:Key="LOCItchioSignInNotif" />
+  <sys:String x:Key="LOCItchioSignInWaitMessage" />
+  <sys:String x:Key="LOCItchioClientNotInstalledError">Η έκδοση 25 ή νεότερη της εφαρμογής itch.io δεν είναι εγκατεστημένη.</sys:String>
+</ResourceDictionary>

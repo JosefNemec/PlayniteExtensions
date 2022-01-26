@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCUniversalSteamMetadataSettingsImportInstalledLabel">Importeer geïnstalleerde spellen</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataSettingsConnectAccount">Accounts koppelen</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataLoginChecking">Verificatiestatus aan het controleren...</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedIn">Verificatie vereist</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateLabel">Verifiëren</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingIssues">Probleemoplossing</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataSettingsImportLibraryLabel">Importeer alle spellen</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Privé-account</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Openbaar Account</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API Sleutel</sys:String>
+</ResourceDictionary>

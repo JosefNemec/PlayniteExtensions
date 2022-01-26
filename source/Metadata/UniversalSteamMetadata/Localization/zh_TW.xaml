@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCUniversalSteamMetadataSettingsImportInstalledLabel">匯入已安裝的遊戲</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataSettingsImportUninstalledLabel">匯入未安裝遊戲</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataSettingsConnectAccount">連結帳號</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataLoginChecking">正在檢查驗證狀態...</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataLoggedIn">使用者已驗證</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedIn">需要驗證</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedInError">無法驗證用戶</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateLabel">驗證</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataSettingsStartGameDirectly">不透過啟動器直接開始遊戲</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingAccountLink">解決帳號同步問題</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingIssues">疑難排解</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataSettingsImportLibraryLabel">匯入所有遊戲</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">私密帳號</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">公開帳號</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API 密鑰</sys:String>
+</ResourceDictionary>

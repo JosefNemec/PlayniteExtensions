@@ -154,6 +154,7 @@
     <Compile Include="IgdbMetadataSettingsView.xaml.cs">
       <DependentUpon>IgdbMetadataSettingsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LocalizationKeys.cs" />
     <Compile Include="Models\IGDB.cs" />
     <Compile Include="Models\ImageSizes.cs" />
     <Compile Include="Models\MetadataSearchResult.cs" />
@@ -173,8 +174,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\localization\en_US.xaml">
-      <Link>Localization\en_US.xaml</Link>
+    <None Include="Localization\*.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

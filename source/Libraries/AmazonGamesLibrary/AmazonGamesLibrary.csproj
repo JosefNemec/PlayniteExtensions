@@ -154,6 +154,7 @@
     <Compile Include="AmazonGamesLibrarySettingsView.xaml.cs">
       <DependentUpon>AmazonGamesLibrarySettingsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LocalizationKeys.cs" />
     <Compile Include="Models\DeviceRegistration.cs" />
     <Compile Include="Models\EntitlementsRequest.cs" />
     <Compile Include="Models\EntitlementsResponse.cs" />
@@ -176,8 +177,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Localization\en_US.xaml">
-      <Link>Localization\en_US.xaml</Link>
+    <None Include="Localization\*.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCEpicSettingsImportInstalledLabel">ייבא משחקים שהותקנו</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">ייבא משחקים שלא הותקנו</sys:String>
+  <sys:String x:Key="LOCEpicSettingsConnectAccount">חבר חשבון</sys:String>
+  <sys:String x:Key="LOCEpicLoginChecking">בודק מצב אימות…</sys:String>
+  <sys:String x:Key="LOCEpicLoggedIn">המשתמש מאומת</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedIn">מחייב אימות</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedInError">נכשל באימות משתמש.</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateLabel">אימות</sys:String>
+  <sys:String x:Key="LOCEpicSettingsStartGameDirectly">הפעל את המשחקים בלי להריץ את הקליינט המקורי שלהם</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingAccountLink">טיפול בתקלות סנכרון חשבון</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingIssues">פתרון בעיות</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">יבא את כל המשחקים</sys:String>
+  <sys:String x:Key="LOCEpicPrivateAccount">חשבון פרטי</sys:String>
+  <sys:String x:Key="LOCEpicPublicAccount">חשבון ציבורי</sys:String>
+  <sys:String x:Key="LOCEpicAPIKey">מפתח API</sys:String>
+</ResourceDictionary>

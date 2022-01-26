@@ -62,13 +62,17 @@
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">בחר תמונת רקע עבור {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">התעלם ממשחקי חנויות חיצוניות</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">ייבא משחקים מ- Trove</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary"></sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip"></sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">אפשר דילוג על ייבור משחקים הדורשים ספריות צד-שלישי, 
 כולל חנויות אשר מנוהלות כבר ב Playnite, על מנת למנוע כפילויות.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">ייבא אם גירסא ללא DRM קיימת</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">ייבא משחקים הדורשים ספריות צד שלישי אם גירסה ללא DRM זמינה גם כן.</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart"></sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip"></sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">הפעל את אפליקציית Xbox Game Pass במקום חנות מיקרוסופט בעת פתיחת לקוח</sys:String>
-    <sys:String x:Key="LOCXboxImport360Games">יבא משחקים של אקסבוקס 360</sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames">יבא משחקים של אקסבוקס ONE</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames"></sys:String>
 </ResourceDictionary>

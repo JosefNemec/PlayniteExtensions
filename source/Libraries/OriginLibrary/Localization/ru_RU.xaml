@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCOriginSettingsImportInstalledLabel">Импортировать установленные игры</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportUninstalledLabel">Импортировать неустановленные игры</sys:String>
+  <sys:String x:Key="LOCOriginSettingsConnectAccount">Подключить аккаунт</sys:String>
+  <sys:String x:Key="LOCOriginLoginChecking">Проверка статуса аутентификации…</sys:String>
+  <sys:String x:Key="LOCOriginLoggedIn">Пользователь аутентифицирован</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedIn">Требуется аутентификация</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
+  <sys:String x:Key="LOCOriginAuthenticateLabel">Аутентификация</sys:String>
+  <sys:String x:Key="LOCOriginSettingsStartGameDirectly">Запускать игры напрямую, без запуска официального клиента</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingIssues">Устранение неисправностей</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportLibraryLabel">Импортировать все игры</sys:String>
+  <sys:String x:Key="LOCOriginPrivateAccount">Приватный профиль</sys:String>
+  <sys:String x:Key="LOCOriginPublicAccount">Публичный профиль</sys:String>
+  <sys:String x:Key="LOCOriginAPIKey">Ключ API</sys:String>
+</ResourceDictionary>

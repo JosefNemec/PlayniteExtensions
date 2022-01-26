@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">Importeer geïnstalleerde spellen</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
+  <sys:String x:Key="LOCitchioSettingsConnectAccount">Accounts koppelen</sys:String>
+  <sys:String x:Key="LOCitchioLoginChecking">Verificatiestatus aan het controleren...</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedIn">Verificatie vereist</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateLabel">Verifiëren</sys:String>
+  <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingIssues">Probleemoplossing</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">Importeer alle spellen</sys:String>
+  <sys:String x:Key="LOCitchioPrivateAccount">Privé-account</sys:String>
+  <sys:String x:Key="LOCitchioPublicAccount">Openbaar Account</sys:String>
+  <sys:String x:Key="LOCitchioAPIKey">API Sleutel</sys:String>
+  <!--itch.io-->
+  <sys:String x:Key="LOCItchioSignInNotif">itch.io wordt gestart. Log in a.u.b. en sluit dan dit bericht.</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">Wachten op aanmelding van gebruiker, sluit alstublieft af wanneer je klaar bent</sys:String>
+  <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io client versie 25 of nieuwer is niet geïnstalleerd.</sys:String>
+</ResourceDictionary>

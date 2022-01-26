@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">Importuj zainstalowane gry</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Importuj niezainstalowane gry</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">Połącz z kontem</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">Sprawdzanie statusu uwierzytelnienia…</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">Użytkownik jest uwierzytelniony</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">Wymagane uwierzytelnienie</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">Nie powiodło się uwierzytelnienie użytkownika</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">Uwierzytelnij</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Rozpoczynaj gry bez uruchamiania oficjalnego klienta</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Rozwiązywanie problemów z synchronizacją konta</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Importuj wszystkie gry</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">Konto prywatne</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">Publiczne konto</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">Klucz API</sys:String>
+  <!--Humble-->
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignoruj gry ze sklepów zewnętrznych</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGames">Importuj gry z Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importuj gry dostępne w ramach subskrypcji Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibrary">Importuj gry z Humble Library</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importuj standardowe zakupy w Humble store oraz bundle</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Włącz aby pominąć importowanie gier z zewnętrznych klientów, włączając sklepy obsługiwane przez Playnite. Zapobiegnie to duplikacji.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importuj wersję bez zabezpieczeń DRM, jeśli to możliwe.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importuj gry wymagające zewnętrznego klienta, jeśli oferują wersję bez zabezpieczeń DRM.</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Zawsze używaj aplikacji Humble do uruchomienia gier</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Kiedy wyłączone, Playnite będzie próbował bezpośrednio uruchamiać gry, omijając aplikację Humble </sys:String>
+</ResourceDictionary>

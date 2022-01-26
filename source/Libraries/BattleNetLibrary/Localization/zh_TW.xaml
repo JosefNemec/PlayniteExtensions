@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCBattleNetSettingsImportInstalledLabel">匯入已安裝的遊戲</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportUninstalledLabel">匯入未安裝遊戲</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsConnectAccount">連結帳號</sys:String>
+  <sys:String x:Key="LOCBattleNetLoginChecking">正在檢查驗證狀態...</sys:String>
+  <sys:String x:Key="LOCBattleNetLoggedIn">使用者已驗證</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedIn">需要驗證</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedInError">無法驗證用戶</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateLabel">驗證</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">不透過啟動器直接開始遊戲</sys:String>
+  <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">解決帳號同步問題</sys:String>
+  <sys:String x:Key="LOCBattleNetTroubleShootingIssues">疑難排解</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel">匯入所有遊戲</sys:String>
+  <sys:String x:Key="LOCBattleNetPrivateAccount">私密帳號</sys:String>
+  <sys:String x:Key="LOCBattleNetPublicAccount">公開帳號</sys:String>
+  <sys:String x:Key="LOCBattleNetAPIKey">API 密鑰</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">Installierte Spiele importieren</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Nicht installierte Spiele importieren</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">Benutzerkonto verbinden</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">Authentifizierungsstatus wird überprüft …</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">Benutzer ist authentifiziert</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">Authentifizierung erforderlich</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">Benutzer konnte nicht authentifiziert werden.</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">Authentifizieren</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Spiele direkt starten ohne offiziellen Client</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Beheben von Problemen mit der Kontosynchronisation</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">Problembehebung</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Alle Spiele importieren</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">Privates Konto</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">Öffentliches Konto</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">API-Schlüssel</sys:String>
+  <!--Humble-->
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Spiele von Drittanbieter-Shops ignorieren</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGames" />
+  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip" />
+  <sys:String x:Key="LOCHumbleGeneralLibrary" />
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Aktivieren, um keine Spiele zu importieren, die einen Drittanbieter-Client erfordern. Einschließlich bereits von Playnite verwalteter Shops, um Duplikate zu vermeiden.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importieren, falls DRM-freie Version verfügbar</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Spiele mit Drittanbieter-Client importieren, falls auch eine DRM-freie Version verfügbar ist.</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
+</ResourceDictionary>

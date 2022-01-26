@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCOriginSettingsImportInstalledLabel">Імпортувати встановлені ігри</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportUninstalledLabel">Імпортувати не встановлені ігри</sys:String>
+  <sys:String x:Key="LOCOriginSettingsConnectAccount">Під'єднати обліковий запис</sys:String>
+  <sys:String x:Key="LOCOriginLoginChecking">Перевірка стану автентифікації...</sys:String>
+  <sys:String x:Key="LOCOriginLoggedIn">Користувача автентифіковано</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedIn">Необхідна автентифікація</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
+  <sys:String x:Key="LOCOriginAuthenticateLabel">Автентифікація</sys:String>
+  <sys:String x:Key="LOCOriginSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingIssues">Вирішення проблем</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportLibraryLabel">Імпортувати всі ігри</sys:String>
+  <sys:String x:Key="LOCOriginPrivateAccount">Приватний обліковий запис</sys:String>
+  <sys:String x:Key="LOCOriginPublicAccount">Загальнодоступний обліковий запис</sys:String>
+  <sys:String x:Key="LOCOriginAPIKey">Ключ API</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCGOGSettingsImportInstalledLabel">Importuj zainstalowane gry</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel">Importuj niezainstalowane gry</sys:String>
+  <sys:String x:Key="LOCGOGSettingsConnectAccount">Połącz z kontem</sys:String>
+  <sys:String x:Key="LOCGOGLoginChecking">Sprawdzanie statusu uwierzytelnienia…</sys:String>
+  <sys:String x:Key="LOCGOGLoggedIn">Użytkownik jest uwierzytelniony</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedIn">Wymagane uwierzytelnienie</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedInError">Nie powiodło się uwierzytelnienie użytkownika</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateLabel">Uwierzytelnij</sys:String>
+  <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Rozpoczynaj gry bez uruchamiania oficjalnego klienta</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Rozwiązywanie problemów z synchronizacją konta</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">Importuj wszystkie gry</sys:String>
+  <sys:String x:Key="LOCGOGPrivateAccount">Konto prywatne</sys:String>
+  <sys:String x:Key="LOCGOGPublicAccount">Publiczne konto</sys:String>
+  <sys:String x:Key="LOCGOGAPIKey">Klucz API</sys:String>
+  <!--GOG-->
+  <sys:String x:Key="LOCGOGUseLogin">Logowanie do konta</sys:String>
+  <sys:String x:Key="LOCGOGUseAccountName">Nazwa konta</sys:String>
+  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Zaloguj się do konta lub podaj nazwę konta, jeżeli jest publiczne, aby zsynchronizować bibliotekę.
+Pamiętaj, że opcja Nazwa konta działa tylko w przypadku kont, których konta GOG są ustawione na publiczne.</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxy">Uruchamiaj gry za pomocą klienta GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Ta opcja włączy funkcje GOG Galaxy takie jak zapis w chmurze, licznik czasu w grze itd.</sys:String>
+</ResourceDictionary>

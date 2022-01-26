@@ -61,12 +61,16 @@
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Kies agtergrond prent vir {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignoreer derde party winkel speletjies</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Voer Trove speletjies in</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary"></sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip"></sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree"></sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart"></sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip"></sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
-    <sys:String x:Key="LOCXboxImport360Games"></sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames"></sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames"></sys:String>
 </ResourceDictionary>

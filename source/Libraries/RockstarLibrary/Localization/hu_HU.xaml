@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCRockstarSettingsImportInstalledLabel">Telepített játékok importálása</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel">Nem telepített játékok importálása</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsConnectAccount">Összekapcsolás a fiókkal</sys:String>
+  <sys:String x:Key="LOCRockstarLoginChecking">Hitelesítés ellenőrzése…</sys:String>
+  <sys:String x:Key="LOCRockstarLoggedIn">Felhasználó hitelesítve</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedIn">Felhasználói hitelesítés szükséges.</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedInError">Felhasználói hitelesítés sikertelen.</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateLabel">Bejelentkezés</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Játékok indítása a hivatalos kliens futtatása nélkül</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Fiók szinkronizálási hibaelhárító</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingIssues">Hibaelhárítás</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">Minden játék importálása</sys:String>
+  <sys:String x:Key="LOCRockstarPrivateAccount">Nem publikus fiók</sys:String>
+  <sys:String x:Key="LOCRockstarPublicAccount">Publikus fiók</sys:String>
+  <sys:String x:Key="LOCRockstarAPIKey">API Kulcs</sys:String>
+</ResourceDictionary>

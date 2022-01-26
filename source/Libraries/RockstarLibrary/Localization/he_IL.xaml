@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCRockstarSettingsImportInstalledLabel">ייבא משחקים שהותקנו</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel">ייבא משחקים שלא הותקנו</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsConnectAccount">חבר חשבון</sys:String>
+  <sys:String x:Key="LOCRockstarLoginChecking">בודק מצב אימות…</sys:String>
+  <sys:String x:Key="LOCRockstarLoggedIn">המשתמש מאומת</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedIn">מחייב אימות</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedInError">נכשל באימות משתמש.</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateLabel">אימות</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">הפעל את המשחקים בלי להריץ את הקליינט המקורי שלהם</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">טיפול בתקלות סנכרון חשבון</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingIssues">פתרון בעיות</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">יבא את כל המשחקים</sys:String>
+  <sys:String x:Key="LOCRockstarPrivateAccount">חשבון פרטי</sys:String>
+  <sys:String x:Key="LOCRockstarPublicAccount">חשבון ציבורי</sys:String>
+  <sys:String x:Key="LOCRockstarAPIKey">מפתח API</sys:String>
+</ResourceDictionary>

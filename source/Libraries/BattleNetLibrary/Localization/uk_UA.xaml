@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCBattleNetSettingsImportInstalledLabel">Імпортувати встановлені ігри</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportUninstalledLabel">Імпортувати не встановлені ігри</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsConnectAccount">Під'єднати обліковий запис</sys:String>
+  <sys:String x:Key="LOCBattleNetLoginChecking">Перевірка стану автентифікації...</sys:String>
+  <sys:String x:Key="LOCBattleNetLoggedIn">Користувача автентифіковано</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedIn">Необхідна автентифікація</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateLabel">Автентифікація</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
+  <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
+  <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Вирішення проблем</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel">Імпортувати всі ігри</sys:String>
+  <sys:String x:Key="LOCBattleNetPrivateAccount">Приватний обліковий запис</sys:String>
+  <sys:String x:Key="LOCBattleNetPublicAccount">Загальнодоступний обліковий запис</sys:String>
+  <sys:String x:Key="LOCBattleNetAPIKey">Ключ API</sys:String>
+</ResourceDictionary>

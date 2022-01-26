@@ -62,13 +62,17 @@ Připomínáme, že možnost zadání jména účtu funguje pouze pro ty účty,
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Vyberte obrázek pozadí pro {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorovat hry z obchodů třetích stran</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Importovat Trove hry</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary"></sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip"></sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Povolte pro přeskočení importu her, které vyžadují klienty třetích stran,
 včetně obchodů již spravovaných v Playnite, pro zabránění duplikátům.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importovat, pokud je k dispozici verze bez DRM</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importovat hry vyžadující klient třetí strany, pokud je také dostupná verze bez DRM.</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart"></sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip"></sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Spustit aplikaci Xbox Pass namísto Microsoft Store při otevírání klienta</sys:String>
-    <sys:String x:Key="LOCXboxImport360Games">Importovat Xbox 360 hry</sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames">Importovat Xbox One hry</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames"></sys:String>
 </ResourceDictionary>

@@ -62,12 +62,16 @@ A fióknév opció csak akkor működik, ha a GOG adatvédelmi beállításainá
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">{0} háttérképének kiválasztása</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Harmadik féltől származó játékok figyelmen kívül hagyása</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Trove játékok importálása</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Humble Choice játékok importálása</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Játékok importálása amelyek a Humble Choice szolgáltatás részei.</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">Humble könyvtárban lévő játékok importálása</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Általános Humble áruházi és csomag vásárlások importálása.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Kliensfüggő játékok nem kerülnek importálásra. A már meglévők sem, hogy ne legyenek duplikátumok.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importálás csak másolásvédelem-mentes változat esetében</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Kliensfüggő játékok importálása, ha van másolásvédelem-mentes változatuk is.</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Mindig indítsa el a Humble alkalmazást a játékok futtatásakor</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Ha ez ki van kapcsolva, akkor a Playnite megpróbálja közvetlenül elindítani a játékokat a Humble alkalmazás nélkül.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Kliens indításakor az Xbox Pass induljon a Microsoft Áruház helyett</sys:String>
-    <sys:String x:Key="LOCXboxImport360Games">Xbox 360 játékok importálása</sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames">Xbox One játékok importálása</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">Xbox konzolos játékok importálása</sys:String>
 </ResourceDictionary>

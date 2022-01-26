@@ -37,18 +37,18 @@
         <CheckBox DockPanel.Dock="Top" Name="CheckSteamImportInstalled"
                   Margin="0,0,0,15"
                   IsChecked="{Binding Settings.ImportInstalledGames}"
-                  Content="{DynamicResource LOCSettingsImportInstalledLabel}"/>
+                  Content="{DynamicResource LOCSteamSettingsImportInstalledLabel}"/>
 
         <CheckBox DockPanel.Dock="Top" Name="CheckSteamConnectAccount"
                   IsChecked="{Binding Settings.ConnectAccount}"
-                  Content="{DynamicResource LOCSettingsConnectAccount}"/>
+                  Content="{DynamicResource LOCSteamSettingsConnectAccount}"/>
 
         <DockPanel DockPanel.Dock="Top" Margin="40,5,5,0" IsEnabled="{Binding IsChecked, ElementName=CheckSteamConnectAccount}">
 
             <CheckBox DockPanel.Dock="Top" Name="CheckSteamImportUninstalled"
                       IsChecked="{Binding Settings.ImportUninstalledGames}"
                       Margin="0,10,0,0"
-                      Content="{DynamicResource LOCSettingsImportUninstalledLabel}"/>
+                      Content="{DynamicResource LOCSteamSettingsImportUninstalledLabel}"/>
             
             <CheckBox DockPanel.Dock="Top"
                       IsChecked="{Binding Settings.IncludeFreeSubGames}"
@@ -58,7 +58,7 @@
 
             <StackPanel Orientation="Horizontal"
                         DockPanel.Dock="Top" Margin="0,15,5,5" HorizontalAlignment="Left">
-                <Button Content="{DynamicResource LOCAuthenticateLabel}"
+                <Button Content="{DynamicResource LOCSteamAuthenticateLabel}"
                         Command="{Binding LoginCommand}"/>
                 <TextBlock VerticalAlignment="Center" Margin="10,0,0,0">
                     <TextBlock.Tag>
@@ -71,19 +71,19 @@
                         <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
                             <Style.Triggers>
                                 <Trigger Property="Tag" Value="{x:Static steam:AuthStatus.Checking}">
-                                    <Setter Property="Text" Value="{DynamicResource LOCLoginChecking}" />
+                                    <Setter Property="Text" Value="{DynamicResource LOCSteamLoginChecking}" />
                                 </Trigger>
                                 <Trigger Property="Tag" Value="{x:Static steam:AuthStatus.Ok}">
-                                    <Setter Property="Text" Value="{DynamicResource LOCLoggedIn}" />
+                                    <Setter Property="Text" Value="{DynamicResource LOCSteamLoggedIn}" />
                                 </Trigger>
                                 <Trigger Property="Tag" Value="{x:Static steam:AuthStatus.AuthRequired}">
-                                    <Setter Property="Text" Value="{DynamicResource LOCNotLoggedIn}" />
+                                    <Setter Property="Text" Value="{DynamicResource LOCSteamNotLoggedIn}" />
                                 </Trigger>
                                 <Trigger Property="Tag" Value="{x:Static steam:AuthStatus.PrivateAccount}">
                                     <Setter Property="Text" Value="{DynamicResource LOCSteamRequiresApiKey}" />
                                 </Trigger>
                                 <Trigger Property="Tag" Value="{x:Static steam:AuthStatus.Failed}">
-                                    <Setter Property="Text" Value="{DynamicResource LOCNotLoggedInError}" />
+                                    <Setter Property="Text" Value="{DynamicResource LOCSteamNotLoggedInError}" />
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -91,14 +91,14 @@
                 </TextBlock>
             </StackPanel>
 
-            <CheckBox Content="{DynamicResource LOCPrivateAccount}"
+            <CheckBox Content="{DynamicResource LOCSteamPrivateAccount}"
                       IsChecked="{Binding Settings.IsPrivateAccount}"
                       DockPanel.Dock="Top" Margin="0,15,0,0"
                       Name="CheckSteamPrivate" VerticalAlignment="Center"
                       ToolTip="{DynamicResource LOCSettingsApiKeyTooltip}"/>
             <StackPanel DockPanel.Dock="Top" Margin="25,10,5,5" Orientation="Horizontal"
                         IsEnabled="{Binding IsChecked, ElementName=CheckSteamPrivate}">
-                <TextBlock Text="{DynamicResource LOCAPIKey}" VerticalAlignment="Center"/>
+                <TextBlock Text="{DynamicResource LOCSteamAPIKey}" VerticalAlignment="Center"/>
                 <TextBox Text="{Binding Settings.ApiKey, UpdateSourceTrigger=PropertyChanged, Delay=150}"
                          Width="200" VerticalAlignment="Center" Margin="10,0,10,0"/>
                 <TextBlock DockPanel.Dock="Left" VerticalAlignment="Center">
@@ -115,7 +115,7 @@
             <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Steam-troubleshooting"
                         Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"
                         CommandParameter="{Binding NavigateUri, RelativeSource={RelativeSource Self}}">
-                <Run Text="{DynamicResource LOCTroubleShootingIssues}" />
+                <Run Text="{DynamicResource LOCSteamTroubleShootingIssues}" />
             </Hyperlink>
         </TextBlock>
 
@@ -127,7 +127,6 @@
                   IsChecked="{Binding Settings.DownloadVerticalCovers}" Margin="0,0,0,5" />
 
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0,5,0,5" HorizontalAlignment="Left"
-                    ToolTip="{DynamicResource LOCBackgroundImageScreenOptionTooltip}"
                     ToolTipService.InitialShowDelay="0"
                     Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}">
             <TextBlock Text="{DynamicResource LOCSteamBackgroundSource}"

@@ -75,18 +75,18 @@ namespace ItchioLibrary
                 if (!Itch.IsInstalled)
                 {
                     PlayniteApi.Dialogs.ShowErrorMessage(
-                        PlayniteApi.Resources.GetString("LOCItchioClientNotInstalledError"), "");
+                        PlayniteApi.Resources.GetString(LOC.ItchioClientNotInstalledError), "");
                     return;
                 }
 
-                PlayniteApi.Dialogs.ShowMessage(PlayniteApi.Resources.GetString("LOCItchioSignInNotif"));
+                PlayniteApi.Dialogs.ShowMessage(PlayniteApi.Resources.GetString(LOC.ItchioSignInNotif));
                 Itch.StartClient();
-                PlayniteApi.Dialogs.ShowMessage(PlayniteApi.Resources.GetString("LOCItchioSignInWaitMessage"));
+                PlayniteApi.Dialogs.ShowMessage(PlayniteApi.Resources.GetString(LOC.ItchioSignInWaitMessage));
                 OnPropertyChanged(nameof(IsUserLoggedIn));
             }
             catch (Exception e) when (!Debugger.IsAttached)
             {
-                PlayniteApi.Dialogs.ShowErrorMessage(PlayniteApi.Resources.GetString("LOCNotLoggedInError"), "");
+                PlayniteApi.Dialogs.ShowErrorMessage(PlayniteApi.Resources.GetString(LOC.itchioNotLoggedInError), "");
                 Logger.Error(e, "Failed to authenticate itch.io user.");
             }
         }

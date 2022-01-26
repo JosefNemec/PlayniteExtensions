@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">Yüklü oyunları içeri aktar</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Yüklü olmayan oyunları içe aktar</sys:String>
+  <sys:String x:Key="LOCitchioSettingsConnectAccount">Hesap bağla</sys:String>
+  <sys:String x:Key="LOCitchioLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedIn">Kimlik doğrulama gerektiriyor</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateLabel">Kimlik Doğrulaması</sys:String>
+  <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Hesap eşitleme sorunlarını giderme</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingIssues">Sorunları giderme</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">Tüm oyunları içeri aktar</sys:String>
+  <sys:String x:Key="LOCitchioPrivateAccount">Özel Hesap</sys:String>
+  <sys:String x:Key="LOCitchioPublicAccount">Genel Hesap</sys:String>
+  <sys:String x:Key="LOCitchioAPIKey">API Anahtarı</sys:String>
+  <!--itch.io-->
+  <sys:String x:Key="LOCItchioSignInNotif">itch.io başlatılacaktır. Lütfen oturum açın ve ardından bu mesajı kapatın.</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">Kullanıcının oturum açmasını bekleyin, tamamladığınızda lütfen bunu kapatın...</sys:String>
+  <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io uygulama sürümü 25 veya daha yenisi yüklü değil.</sys:String>
+</ResourceDictionary>

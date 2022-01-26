@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">Імпортувати встановлені ігри</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Імпортувати не встановлені ігри</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">Під'єднати обліковий запис</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">Перевірка стану автентифікації...</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">Користувача автентифіковано</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">Необхідна автентифікація</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">Автентифікація</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">Вирішення проблем</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Імпортувати всі ігри</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">Приватний обліковий запис</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">Загальнодоступний обліковий запис</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">Ключ API</sys:String>
+  <!--Humble-->
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ігнорувати ігри із стороннього магазину</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGames">Імпортувати ігри з Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Імпортувати ігри доступні у рамках підписки Humble Choice.</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibrary">Імпортувати ігри з Humble Library</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Імпортувати стандартні покупки в магазині Humble, включно з наборами.</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Увімкніть щоб пропустити імпорт ігор, що потребують сторонніх клієнтів,
+включно з магазинами, якими вже керує Playnite, щоб уникнути дублікатів.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Імпортувати якщо доступна версія без DRM</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Імпортувати ігри, що потребують стороннього клієнту, якщо також доступна версія без DRM.</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Завжди використовувати додаток Humble для запуску ігор</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Коли вимкнено, Playnite намагатиметься запускати ігри напряму, минаючи додаток Humble.</sys:String>
+</ResourceDictionary>

@@ -62,13 +62,17 @@
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Обрати фонове зображення для {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ігнорувати ігри із стороннього магазину</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Імпорт ігор з Humble Trove</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Імпортувати ігри з Humble Choice</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Імпортувати ігри доступні у рамках підписки Humble Choice.</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">Імпортувати ігри з Humble Library</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Імпортувати стандартні покупки в магазині Humble, включно з наборами.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Увімкніть щоб пропустити імпорт ігор, що потребують сторонніх клієнтів,
 включно з магазинами, якими вже керує Playnite, щоб уникнути дублікатів.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Імпортувати якщо доступна версія без DRM</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Імпортувати ігри, що потребують стороннього клієнту, якщо також доступна версія без DRM.</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Завжди використовувати додаток Humble для запуску ігор</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Коли вимкнено, Playnite намагатиметься запускати ігри напряму, минаючи додаток Humble.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Запускати додаток Xbox Pass замість Microsoft Store під час відкриття клієнта</sys:String>
-    <sys:String x:Key="LOCXboxImport360Games">Імпортувати ігри Xbox 360</sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames">Імпортувати ігри Xbox One</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">Імпортувати ігри з консолі Xbox</sys:String>
 </ResourceDictionary>

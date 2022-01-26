@@ -180,6 +180,7 @@
     <Compile Include="ItchioLibrarySettingsView.xaml.cs">
       <DependentUpon>ItchioLibrarySettingsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LocalizationKeys.cs" />
     <Compile Include="Models\Butler.cs" />
     <Compile Include="Models\Cave.cs" />
     <Compile Include="Models\FetchGame.cs" />
@@ -207,8 +208,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\localization\en_US.xaml">
-      <Link>Localization\en_US.xaml</Link>
+    <None Include="Localization\*.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

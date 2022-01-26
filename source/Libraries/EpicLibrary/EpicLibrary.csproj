@@ -170,6 +170,7 @@
     <Compile Include="EpicLibrarySettingsView.xaml.cs">
       <DependentUpon>EpicLibrarySettingsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LocalizationKeys.cs" />
     <Compile Include="Models\AccountResponse.cs" />
     <Compile Include="Models\AssetsResponse.cs" />
     <Compile Include="Models\CatalogResponse.cs" />
@@ -196,8 +197,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\localization\en_US.xaml">
-      <Link>Localization\en_US.xaml</Link>
+    <None Include="Localization\*.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">Importar juegos instalados</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Importar juegos no instalados</sys:String>
+  <sys:String x:Key="LOCitchioSettingsConnectAccount">Conectar cuenta</sys:String>
+  <sys:String x:Key="LOCitchioLoginChecking">Comprobando el estado de la autenticación…</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">El usuario está autenticado</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedIn">Requiere autenticación</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">Fallo al autenticar usuario.</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateLabel">Autenticar</sys:String>
+  <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Iniciar juegos directamente sin correr el cliente oficial</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Resolución de problemas de sincronización de cuentas</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingIssues">Resolución de problemas</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">Importar todos los juegos</sys:String>
+  <sys:String x:Key="LOCitchioPrivateAccount">Cuenta Privada</sys:String>
+  <sys:String x:Key="LOCitchioPublicAccount">Cuenta Pública</sys:String>
+  <sys:String x:Key="LOCitchioAPIKey">Clave de API</sys:String>
+  <!--itch.io-->
+  <sys:String x:Key="LOCItchioSignInNotif">Se lanzará itch.io. Por favor inicie sesión y luego cierre este mensaje.</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">Esperando a que el usuario inicie sesión, por favor, cierre esto cuando hayas terminado…</sys:String>
+  <sys:String x:Key="LOCItchioClientNotInstalledError">La aplicación itch.io versión 25 o posterior no está instalada.</sys:String>
+</ResourceDictionary>

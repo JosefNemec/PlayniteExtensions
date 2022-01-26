@@ -1,0 +1,17 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCEpicSettingsImportInstalledLabel">Import installed games</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">Import not installed games</sys:String>
+  <sys:String x:Key="LOCEpicSettingsConnectAccount">Connect account</sys:String>
+  <sys:String x:Key="LOCEpicLoginChecking">Checking authentication status…</sys:String>
+  <sys:String x:Key="LOCEpicLoggedIn">User is authenticated</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedIn">Requires authentication</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedInError">Failed to authenticate user.</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateLabel">Authenticate</sys:String>
+  <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Start games directly without running official client</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Troubleshooting account sync issues</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingIssues">Troubleshooting issues</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">Import all games</sys:String>
+  <sys:String x:Key="LOCEpicPrivateAccount">Private Account</sys:String>
+  <sys:String x:Key="LOCEpicPublicAccount">Public Account</sys:String>
+  <sys:String x:Key="LOCEpicAPIKey">API Key</sys:String>
+</ResourceDictionary>

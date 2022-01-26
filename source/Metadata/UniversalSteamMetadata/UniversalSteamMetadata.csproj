@@ -172,6 +172,7 @@
     <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\WebApiClient.cs">
       <Link>SteamShared\WebApiClient.cs</Link>
     </Compile>
+    <Compile Include="LocalizationKeys.cs" />
     <Compile Include="UniversalSteamMetadata.cs" />
     <Compile Include="UniversalSteamMetadataProvider.cs" />
     <Compile Include="UniversalSteamMetadataSettingsViewModel.cs" />
@@ -193,8 +194,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\localization\en_US.xaml">
-      <Link>Localization\en_US.xaml</Link>
+    <None Include="Localization\*.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

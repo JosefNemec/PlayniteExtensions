@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCEpicSettingsImportInstalledLabel">Импортировать установленные игры</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">Импортировать неустановленные игры</sys:String>
+  <sys:String x:Key="LOCEpicSettingsConnectAccount">Подключить аккаунт</sys:String>
+  <sys:String x:Key="LOCEpicLoginChecking">Проверка статуса аутентификации…</sys:String>
+  <sys:String x:Key="LOCEpicLoggedIn">Пользователь аутентифицирован</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedIn">Требуется аутентификация</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateLabel">Аутентификация</sys:String>
+  <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Запускать игры напрямую, без запуска официального клиента</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingIssues">Устранение неисправностей</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">Импортировать все игры</sys:String>
+  <sys:String x:Key="LOCEpicPrivateAccount">Приватный профиль</sys:String>
+  <sys:String x:Key="LOCEpicPublicAccount">Публичный профиль</sys:String>
+  <sys:String x:Key="LOCEpicAPIKey">Ключ API</sys:String>
+</ResourceDictionary>

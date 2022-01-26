@@ -62,12 +62,16 @@ Beachte, dass die Option des öffentlichen Kontonamens nur bei Konten funktionie
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Hintergrundbild für {0} auswählen</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Spiele von Drittanbieter-Shops ignorieren</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Trove-Spiele importieren</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary"></sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip"></sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Aktivieren, um keine Spiele zu importieren, die einen Drittanbieter-Client erfordern. Einschließlich bereits von Playnite verwalteter Shops, um Duplikate zu vermeiden.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importieren, falls DRM-freie Version verfügbar</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Spiele mit Drittanbieter-Client importieren, falls auch eine DRM-freie Version verfügbar ist.</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart"></sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip"></sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Beim Öffen des Clients App für Xbox Game Pass anstatt Microsoft Store starten</sys:String>
-    <sys:String x:Key="LOCXboxImport360Games">Xbox-360-Spiele importieren</sys:String>
-    <sys:String x:Key="LOCXboxImportXboneGames">Xbox-One-Spiele importieren</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames"></sys:String>
 </ResourceDictionary>
