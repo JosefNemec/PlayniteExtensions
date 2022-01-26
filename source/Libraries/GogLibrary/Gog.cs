@@ -43,19 +43,26 @@ namespace GogLibrary
         {
             get
             {
-                RegistryKey key;
-                key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\GOG.com\GalaxyClient\paths");
-                if (key == null)
+                RegistryKey key = null;
+                try
                 {
-                    Registry.LocalMachine.OpenSubKey(@"SOFTWARE\GOG.com\GalaxyClient\paths");
+                    key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\GOG.com\GalaxyClient\paths");
+                    if (key == null)
+                    {
+                        key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\GOG.com\GalaxyClient\paths");
+                    }
+
+                    if (key?.GetValueNames().Contains("client") == true)
+                    {
+                        return key.GetValue("client").ToString();
+                    }
+
+                    return string.Empty;
                 }
-
-                if (key?.GetValueNames().Contains("client") == true)
+                finally
                 {
-                    return key.GetValue("client").ToString();
-                }          
-
-                return string.Empty;
+                    key?.Dispose();
+                }
             }
         }
 
