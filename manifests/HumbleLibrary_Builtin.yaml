@@ -26,3 +26,9 @@ Packages:
       - Added support for new Humble App
       - Added support for new Humble Choice subscription
       - Improved general import speed
+  - Version: 3.1
+    RequiredApiVersion: 6.2.2
+    ReleaseDate: 2022-02-01
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/HumbleLibrary_Builtin_3_1.pext
+    Changelog:
+      - Fixed Humble library icon not showing up properly when set as missing game icon
