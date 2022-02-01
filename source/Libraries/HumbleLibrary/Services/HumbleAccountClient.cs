@@ -21,7 +21,7 @@ namespace HumbleLibrary.Services
         private const string loginUrl = @"https://www.humblebundle.com/login?goto=%2Fhome%2Flibrary&qs=hmb_source%3Dnavbar";
         private const string libraryUrl = @"https://www.humblebundle.com/home/library?hmb_source=navbar";
         private const string logoutUrl = @"https://www.humblebundle.com/logout?goto=/";
-        private const string orderUrlMask = @"https://www.humblebundle.com/api/v1/order/{0}?all_tpkds=true";
+        private const string ordersUrlRoot = @"https://www.humblebundle.com/api/v1/orders?all_tpkds=true";
 
         public HumbleAccountClient(IWebView webView)
         {
@@ -70,22 +70,28 @@ namespace HumbleLibrary.Services
         internal List<Order> GetOrders(List<string> gamekeys)
         {
             var orders = new List<Order>();
-            foreach (var key in gamekeys)
+            var perPage = 40;
+            var bulkKeys = "";
+            for (var i = 0; i < gamekeys.Count; i += perPage)
             {
-                webView.NavigateAndWait(string.Format(orderUrlMask, key));
+                for (var j = i; j < i + perPage && j < gamekeys.Count; j++)
+                {
+                    bulkKeys += $"&gamekeys={gamekeys[j]}";
+                }
+
+                webView.NavigateAndWait(ordersUrlRoot + bulkKeys);
                 var strContent = webView.GetPageText();
-                orders.Add(Serialization.FromJson<Order>(strContent));
-            }
+                if (Serialization.TryFromJson<Dictionary<string, Order>>(strContent, out var pageOrders))
+                {
+                    orders.AddRange(pageOrders.Select(a => a.Value));
+                }
+                else
+                {
+                    logger.Error("Failed to parse Humble order page.");
+                    logger.Debug(strContent);
+                }
 
-            return orders;
-        }
-
-        internal List<Order> GetOrders(string cachePath)
-        {
-            var orders = new List<Order>();
-            foreach (var cacheFile in Directory.GetFiles(cachePath))
-            {
-                orders.Add(Serialization.FromJsonFile<Order>(cacheFile));
+                bulkKeys = "";
             }
 
             return orders;

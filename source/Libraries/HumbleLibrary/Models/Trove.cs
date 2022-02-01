@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 
 namespace HumbleLibrary.Models
 {
+    public enum TroveGameCategory
+    {
+        premium,
+        general
+    }
+
     public class TroveGame
     {
         public class CarouselContent
@@ -16,30 +22,21 @@ namespace HumbleLibrary.Models
 
         public class Publisher
         {
-            [SerializationPropertyName("publisher-name")]
-            public string publisher_name;
+            [SerializationPropertyName("publisher-name")] public string publisher_name;
         }
 
         public class Developer
         {
-            [SerializationPropertyName("developer-name")]
-            public string developer_name;
+            [SerializationPropertyName("developer-name")] public string developer_name;
         }
 
         public string machine_name;
         public string image;
-
-        [SerializationPropertyName("human-name")]
-        public string human_name;
-
-        [SerializationPropertyName("description-text")]
-        public string description_text;
-
-        [SerializationPropertyName("carousel-content")]
-        public CarouselContent carousel_content;
-
         public List<Developer> developers;
-
         public List<Publisher> publishers;
+        public TroveGameCategory trove_category;
+        [SerializationPropertyName("human-name")] public string human_name;
+        [SerializationPropertyName("description-text")] public string description_text;
+        [SerializationPropertyName("carousel-content")] public CarouselContent carousel_content;
     }
 }

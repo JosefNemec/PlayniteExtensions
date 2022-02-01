@@ -15,7 +15,9 @@ namespace HumbleLibrary
         public bool ConnectAccount { get; set; } = false;
         public bool IgnoreThirdPartyStoreGames { get; set; } = true;
         public bool ImportThirdPartyDrmFree { get; set; } = false;
+        public bool ImportGeneralLibrary { get; set; } = true;
         public bool ImportTroveGames { get; set; } = false;
+        public bool LaunchViaHumbleApp { get; set; } = true;
     }
 
     public class HumbleLibrarySettingsViewModel : PluginSettingsViewModel<HumbleLibrarySettings, HumbleLibrary>
@@ -27,7 +29,8 @@ namespace HumbleLibrary
                 using (var view = PlayniteApi.WebViews.CreateOffscreenView(
                     new WebViewSettings
                     {
-                        JavaScriptEnabled = false
+                        JavaScriptEnabled = false,
+                        UserAgent = Plugin.UserAgent
                     }))
                 {
                     var api = new HumbleAccountClient(view);
@@ -61,7 +64,12 @@ namespace HumbleLibrary
         {
             try
             {
-                using (var view = PlayniteApi.WebViews.CreateView(490, 670))
+                using (var view = PlayniteApi.WebViews.CreateView(new WebViewSettings
+                {
+                    WindowWidth = 490,
+                    WindowHeight = 670,
+                    UserAgent = Plugin.UserAgent
+                }))
                 {
                     var api = new HumbleAccountClient(view);
                     api.Login();
