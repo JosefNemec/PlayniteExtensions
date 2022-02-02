@@ -337,6 +337,11 @@ namespace HumbleLibrary
 
         public override IEnumerable<PlayController> GetPlayActions(GetPlayActionsArgs args)
         {
+            if (args.Game.PluginId != Id)
+            {
+                yield break;
+            }
+
             if (args.Game.GameId.EndsWith("_trove", StringComparison.OrdinalIgnoreCase))
             {
                 if (SettingsViewModel.Settings.LaunchViaHumbleApp)
@@ -371,11 +376,21 @@ namespace HumbleLibrary
 
         public override IEnumerable<InstallController> GetInstallActions(GetInstallActionsArgs args)
         {
+            if (args.Game.PluginId != Id)
+            {
+                yield break;
+            }
+
             yield return new HumbleInstallController(args.Game, this);
         }
 
         public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
         {
+            if (args.Game.PluginId != Id)
+            {
+                yield break;
+            }
+
             yield return new HumbleUninstallController(args.Game, this);
         }
     }
