@@ -32,3 +32,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/HumbleLibrary_Builtin_3_1.pext
     Changelog:
       - Fixed Humble library icon not showing up properly when set as missing game icon
+  - Version: 3.2
+    RequiredApiVersion: 6.2.2
+    ReleaseDate: 2022-02-02
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/HumbleLibrary_Builtin_3_2.pext
+    Changelog:
+      - Fixed Humble App being selectable install option for non-Humble games
