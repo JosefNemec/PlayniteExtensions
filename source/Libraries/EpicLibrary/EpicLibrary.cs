@@ -62,8 +62,8 @@ namespace EpicLibrary
                     continue;
                 }
 
-                var installLocation = manifest?.InstallLocation ?? app.InstallLocation;
                 var gameName = manifest?.DisplayName ?? Path.GetFileName(app.InstallLocation);
+                var installLocation = manifest?.InstallLocation ?? app.InstallLocation;
                 var isInstalled = true;
                 if (!Directory.Exists(installLocation))
                 {
