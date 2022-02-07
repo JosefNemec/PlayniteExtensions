@@ -69,6 +69,7 @@ namespace EpicLibrary
                 {
                     logger.Info($"Epic game {gameName} installation directory {installLocation} not detected.");
                     isInstalled = false;
+                    installLocation = string.Empty;
                 }
 
                 var game = new GameMetadata()
