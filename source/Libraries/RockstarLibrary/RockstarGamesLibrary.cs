@@ -54,7 +54,7 @@ namespace RockstarGamesLibrary
                     var installDirectory = app.InstallLocation;
                     if (!Directory.Exists(installDirectory))
                     {
-                        logger.Info($"Rockstar game {rsGame.Name} installation directory {installDirectory} not detected.");
+                        logger.Error($"Rockstar game {rsGame.Name} installation directory {installDirectory} not detected.");
                         isInstalled = false;
                         installDirectory = string.Empty;
                     }

@@ -67,7 +67,7 @@ namespace EpicLibrary
                 var isInstalled = true;
                 if (!Directory.Exists(installLocation))
                 {
-                    logger.Info($"Epic game {gameName} installation directory {installLocation} not detected.");
+                    logger.Error($"Epic game {gameName} installation directory {installLocation} not detected.");
                     isInstalled = false;
                     installLocation = string.Empty;
                 }
