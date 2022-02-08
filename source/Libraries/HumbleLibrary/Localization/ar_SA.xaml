@@ -1,29 +1,32 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCHumbleSettingsConnectAccount" />
-  <sys:String x:Key="LOCHumbleLoginChecking" />
-  <sys:String x:Key="LOCHumbleLoggedIn" />
-  <sys:String x:Key="LOCHumbleNotLoggedIn" />
-  <sys:String x:Key="LOCHumbleNotLoggedInError" />
-  <sys:String x:Key="LOCHumbleAuthenticateLabel" />
-  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCHumbleTroubleShootingIssues" />
-  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCHumblePrivateAccount" />
-  <sys:String x:Key="LOCHumblePublicAccount" />
-  <sys:String x:Key="LOCHumbleAPIKey" />
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">استيراد الألعاب المثبتة</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">استيراد الألعاب الغير المثبتة</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">ربط الحساب</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">جاري التحقق من حالة المصادقة…</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">تم مصادقة المستخدم</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">يتطلب المصادقة</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">مصادقة</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">استيراد جميع الألعاب</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">حساب خاص</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">حساب عام</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">مفتاح API</sys:String>
   <!--Humble-->
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames" />
-  <sys:String x:Key="LOCHumbleImportTroveGames" />
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip" />
-  <sys:String x:Key="LOCHumbleGeneralLibrary" />
-  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve" />
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree" />
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">تجاهُل ألعاب متجر الطرف الثالث</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGames">استيراد ألعاب Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">استيراد الألعاب المتاحة كجزء من اشتراك Humble Choice.</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibrary">استيراد ألعاب Humble</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">استيراد مشتريات متجر Humble القياسي ومشتريات الحزم.</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">تمكين لتخطي استيراد الألعاب التي تتطلب عملاء من جهات خارجية ،
+بما في ذلك المتاجر المدارة بالفعل في Playnite ، لمنع التكرارات.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">استيراد إذا كان الإصدار المجاني DRM متاحًا
+</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">استيراد الألعاب التي تتطلب عميلًا تابعًا لجهة خارجية إذا كان الإصدار المجاني من DRM متاحًا أيضًا.
+</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">استخدم دائمًا تطبيق Humble لبدء الألعاب</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">عند التعطيل ، سيحاول Playnite تشغيل الألعاب مباشرة ، متجاوزًا تطبيق Humble.</sys:String>
 </ResourceDictionary>

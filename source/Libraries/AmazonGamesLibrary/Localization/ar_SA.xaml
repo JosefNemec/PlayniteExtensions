@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCAmazonSettingsConnectAccount" />
-  <sys:String x:Key="LOCAmazonLoginChecking" />
-  <sys:String x:Key="LOCAmazonLoggedIn" />
-  <sys:String x:Key="LOCAmazonNotLoggedIn" />
-  <sys:String x:Key="LOCAmazonNotLoggedInError" />
-  <sys:String x:Key="LOCAmazonAuthenticateLabel" />
-  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCAmazonTroubleShootingIssues" />
-  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCAmazonPrivateAccount" />
-  <sys:String x:Key="LOCAmazonPublicAccount" />
-  <sys:String x:Key="LOCAmazonAPIKey" />
+  <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel">استيراد الألعاب المثبتة</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel">استيراد الألعاب الغير المثبتة</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsConnectAccount">ربط الحساب</sys:String>
+  <sys:String x:Key="LOCAmazonLoginChecking">جاري التحقق من حالة المصادقة…</sys:String>
+  <sys:String x:Key="LOCAmazonLoggedIn">تم مصادقة المستخدم</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedIn">يتطلب المصادقة</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateLabel">مصادقة</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">استيراد جميع الألعاب</sys:String>
+  <sys:String x:Key="LOCAmazonPrivateAccount">حساب خاص</sys:String>
+  <sys:String x:Key="LOCAmazonPublicAccount">حساب عام</sys:String>
+  <sys:String x:Key="LOCAmazonAPIKey">مفتاح API</sys:String>
 </ResourceDictionary>

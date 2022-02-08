@@ -53,7 +53,7 @@
     <sys:String x:Key="LOCSteamBackgroundSourceImage">Εικόνα Παιχνιδιού</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Αποθήκευση Στιγμιότυπου Οθόνης</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Αποθήκευση Φόντου</sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceBanner"></sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceBanner">Επιγραφή</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"></sys:String>
@@ -72,5 +72,5 @@
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip"></sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
-    <sys:String x:Key="LOCXboxImportConsoleGames"></sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">Εισαγωγή παιχνιδιών Xbox</sys:String>
 </ResourceDictionary>

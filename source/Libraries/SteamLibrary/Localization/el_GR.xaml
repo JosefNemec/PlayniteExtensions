@@ -43,6 +43,6 @@
   <sys:String x:Key="LOCSteamBackgroundSourceImage">Εικόνα Παιχνιδιού</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Αποθήκευση Στιγμιότυπου Οθόνης</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Αποθήκευση Φόντου</sys:String>
-  <sys:String x:Key="LOCSteamBackgroundSourceBanner" />
+  <sys:String x:Key="LOCSteamBackgroundSourceBanner">Επιγραφή</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton" />
 </ResourceDictionary>

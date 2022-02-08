@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCRockstarSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCRockstarSettingsConnectAccount" />
-  <sys:String x:Key="LOCRockstarLoginChecking" />
-  <sys:String x:Key="LOCRockstarLoggedIn" />
-  <sys:String x:Key="LOCRockstarNotLoggedIn" />
-  <sys:String x:Key="LOCRockstarNotLoggedInError" />
-  <sys:String x:Key="LOCRockstarAuthenticateLabel" />
-  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCRockstarTroubleShootingIssues" />
-  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCRockstarPrivateAccount" />
-  <sys:String x:Key="LOCRockstarPublicAccount" />
-  <sys:String x:Key="LOCRockstarAPIKey" />
+  <sys:String x:Key="LOCRockstarSettingsImportInstalledLabel">استيراد الألعاب المثبتة</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel">استيراد الألعاب الغير المثبتة</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsConnectAccount">ربط الحساب</sys:String>
+  <sys:String x:Key="LOCRockstarLoginChecking">جاري التحقق من حالة المصادقة…</sys:String>
+  <sys:String x:Key="LOCRockstarLoggedIn">تم مصادقة المستخدم</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedIn">يتطلب المصادقة</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateLabel">مصادقة</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">استيراد جميع الألعاب</sys:String>
+  <sys:String x:Key="LOCRockstarPrivateAccount">حساب خاص</sys:String>
+  <sys:String x:Key="LOCRockstarPublicAccount">حساب عام</sys:String>
+  <sys:String x:Key="LOCRockstarAPIKey">مفتاح API</sys:String>
 </ResourceDictionary>

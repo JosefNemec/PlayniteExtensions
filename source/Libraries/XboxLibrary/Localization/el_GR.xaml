@@ -17,5 +17,5 @@
   <sys:String x:Key="LOCXboxAPIKey">Κλειδί API</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch" />
-  <sys:String x:Key="LOCXboxImportConsoleGames" />
+  <sys:String x:Key="LOCXboxImportConsoleGames">Εισαγωγή παιχνιδιών Xbox</sys:String>
 </ResourceDictionary>

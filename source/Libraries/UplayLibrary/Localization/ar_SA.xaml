@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCUbisoftSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCUbisoftSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCUbisoftSettingsConnectAccount" />
-  <sys:String x:Key="LOCUbisoftLoginChecking" />
-  <sys:String x:Key="LOCUbisoftLoggedIn" />
-  <sys:String x:Key="LOCUbisoftNotLoggedIn" />
-  <sys:String x:Key="LOCUbisoftNotLoggedInError" />
-  <sys:String x:Key="LOCUbisoftAuthenticateLabel" />
-  <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCUbisoftTroubleShootingIssues" />
-  <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCUbisoftPrivateAccount" />
-  <sys:String x:Key="LOCUbisoftPublicAccount" />
-  <sys:String x:Key="LOCUbisoftAPIKey" />
+  <sys:String x:Key="LOCUbisoftSettingsImportInstalledLabel">استيراد الألعاب المثبتة</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportUninstalledLabel">استيراد الألعاب الغير المثبتة</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsConnectAccount">ربط الحساب</sys:String>
+  <sys:String x:Key="LOCUbisoftLoginChecking">جاري التحقق من حالة المصادقة…</sys:String>
+  <sys:String x:Key="LOCUbisoftLoggedIn">تم مصادقة المستخدم</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedIn">يتطلب المصادقة</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateLabel">مصادقة</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">استيراد جميع الألعاب</sys:String>
+  <sys:String x:Key="LOCUbisoftPrivateAccount">حساب خاص</sys:String>
+  <sys:String x:Key="LOCUbisoftPublicAccount">حساب عام</sys:String>
+  <sys:String x:Key="LOCUbisoftAPIKey">مفتاح API</sys:String>
 </ResourceDictionary>

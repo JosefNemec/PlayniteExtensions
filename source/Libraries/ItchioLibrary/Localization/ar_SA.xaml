@@ -1,22 +1,24 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCitchioSettingsConnectAccount" />
-  <sys:String x:Key="LOCitchioLoginChecking" />
-  <sys:String x:Key="LOCitchioLoggedIn" />
-  <sys:String x:Key="LOCitchioNotLoggedIn" />
-  <sys:String x:Key="LOCitchioNotLoggedInError" />
-  <sys:String x:Key="LOCitchioAuthenticateLabel" />
-  <sys:String x:Key="LOCitchioSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCitchioTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCitchioTroubleShootingIssues" />
-  <sys:String x:Key="LOCitchioSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCitchioPrivateAccount" />
-  <sys:String x:Key="LOCitchioPublicAccount" />
-  <sys:String x:Key="LOCitchioAPIKey" />
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">استيراد الألعاب المثبتة</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">استيراد الألعاب الغير المثبتة</sys:String>
+  <sys:String x:Key="LOCitchioSettingsConnectAccount">ربط الحساب</sys:String>
+  <sys:String x:Key="LOCitchioLoginChecking">جاري التحقق من حالة المصادقة…</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">تم مصادقة المستخدم</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedIn">يتطلب المصادقة</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateLabel">مصادقة</sys:String>
+  <sys:String x:Key="LOCitchioSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">استيراد جميع الألعاب</sys:String>
+  <sys:String x:Key="LOCitchioPrivateAccount">حساب خاص</sys:String>
+  <sys:String x:Key="LOCitchioPublicAccount">حساب عام</sys:String>
+  <sys:String x:Key="LOCitchioAPIKey">مفتاح API</sys:String>
   <!--itch.io-->
-  <sys:String x:Key="LOCItchioSignInNotif" />
-  <sys:String x:Key="LOCItchioSignInWaitMessage" />
-  <sys:String x:Key="LOCItchioClientNotInstalledError" />
+  <sys:String x:Key="LOCItchioSignInNotif">سيتم إطلاق itch.io. الرجاء تسجيل الدخول ثم إغلاق هذه الرسالة.
+</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">في انتظار تسجيل دخول المستخدم، الرجاء إغلاق هذا عند الانتهاء…</sys:String>
+  <sys:String x:Key="LOCItchioClientNotInstalledError">لم يتم تثبيت الإصدار 25 من تطبيق itch.io أو الأحدث.
+</sys:String>
 </ResourceDictionary>

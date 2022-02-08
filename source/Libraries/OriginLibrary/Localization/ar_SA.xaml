@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCOriginSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCOriginSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCOriginSettingsConnectAccount" />
-  <sys:String x:Key="LOCOriginLoginChecking" />
-  <sys:String x:Key="LOCOriginLoggedIn" />
-  <sys:String x:Key="LOCOriginNotLoggedIn" />
-  <sys:String x:Key="LOCOriginNotLoggedInError" />
-  <sys:String x:Key="LOCOriginAuthenticateLabel" />
-  <sys:String x:Key="LOCOriginSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCOriginTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCOriginTroubleShootingIssues" />
-  <sys:String x:Key="LOCOriginSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCOriginPrivateAccount" />
-  <sys:String x:Key="LOCOriginPublicAccount" />
-  <sys:String x:Key="LOCOriginAPIKey" />
+  <sys:String x:Key="LOCOriginSettingsImportInstalledLabel">استيراد الألعاب المثبتة</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportUninstalledLabel">استيراد الألعاب الغير المثبتة</sys:String>
+  <sys:String x:Key="LOCOriginSettingsConnectAccount">ربط الحساب</sys:String>
+  <sys:String x:Key="LOCOriginLoginChecking">جاري التحقق من حالة المصادقة…</sys:String>
+  <sys:String x:Key="LOCOriginLoggedIn">تم مصادقة المستخدم</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedIn">يتطلب المصادقة</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
+  <sys:String x:Key="LOCOriginAuthenticateLabel">مصادقة</sys:String>
+  <sys:String x:Key="LOCOriginSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportLibraryLabel">استيراد جميع الألعاب</sys:String>
+  <sys:String x:Key="LOCOriginPrivateAccount">حساب خاص</sys:String>
+  <sys:String x:Key="LOCOriginPublicAccount">حساب عام</sys:String>
+  <sys:String x:Key="LOCOriginAPIKey">مفتاح API</sys:String>
 </ResourceDictionary>

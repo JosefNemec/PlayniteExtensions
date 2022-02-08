@@ -17,5 +17,5 @@
   <sys:String x:Key="LOCXboxAPIKey">کلید API</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">هنگام باز کردن، برنامه Xbox Pass را به جای فروشگاه Microsoft شروع کنید</sys:String>
-  <sys:String x:Key="LOCXboxImportConsoleGames" />
+  <sys:String x:Key="LOCXboxImportConsoleGames">واردات بازی های کنسول ایکس باکس</sys:String>
 </ResourceDictionary>

@@ -16,6 +16,6 @@
   <sys:String x:Key="LOCXboxPublicAccount">공개 계정</sys:String>
   <sys:String x:Key="LOCXboxAPIKey">API 키</sys:String>
   <!--Xbox-->
-  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch" />
-  <sys:String x:Key="LOCXboxImportConsoleGames" />
+  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">클라이언트 실행 시 마이크로소프트 스토어 대신 Xbox Pass 실행</sys:String>
+  <sys:String x:Key="LOCXboxImportConsoleGames">Xbox 콘솔 게임 가져오기</sys:String>
 </ResourceDictionary>

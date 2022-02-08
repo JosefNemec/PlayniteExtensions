@@ -54,24 +54,24 @@
     <sys:String x:Key="LOCSteamBackgroundSourceImage">게임 이미지</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">스토어 스크린샷</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceStore">스토어 배경</sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceBanner"></sys:String>
-    <sys:String x:Key="LOCSteamShowFriendsButton"></sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceBanner">배너</sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton">상단 패널에 친구 목록을 보여줄 버튼을 표시</sys:String>
     <!--IGDB-->
-    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"></sys:String>
-    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>
+    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">아트워크를 사용할 수 없을 경우 스크린샷 사용</sys:String>
+    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">사용할 수 있는 이미지가 여러장 있을때 사용할 이미지</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle"></sys:String>
     <!--Humble-->
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames"></sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">서드파티 스토어 게임 무시</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Humble 초이스 게임 라이브러리 가져오기</sys:String>
     <sys:String x:Key="LOCHumbleImportTroveGamesTooltip"></sys:String>
-    <sys:String x:Key="LOCHumbleGeneralLibrary"></sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">Humble 라이브러리 게임 가져오기</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip"></sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree"></sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
-    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart"></sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">게임 실행 시 항상 Humble App을 사용해 실행</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip"></sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
-    <sys:String x:Key="LOCXboxImportConsoleGames"></sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">클라이언트 실행 시 마이크로소프트 스토어 대신 Xbox Pass 실행</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">Xbox 콘솔 게임 가져오기</sys:String>
 </ResourceDictionary>

@@ -43,6 +43,6 @@
   <sys:String x:Key="LOCSteamBackgroundSourceImage">게임 이미지</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">스토어 스크린샷</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceStore">스토어 배경</sys:String>
-  <sys:String x:Key="LOCSteamBackgroundSourceBanner" />
-  <sys:String x:Key="LOCSteamShowFriendsButton" />
+  <sys:String x:Key="LOCSteamBackgroundSourceBanner">배너</sys:String>
+  <sys:String x:Key="LOCSteamShowFriendsButton">상단 패널에 친구 목록을 보여줄 버튼을 표시</sys:String>
 </ResourceDictionary>

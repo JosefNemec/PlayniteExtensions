@@ -16,14 +16,14 @@
   <sys:String x:Key="LOCHumblePublicAccount">공개 계정</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">API 키</sys:String>
   <!--Humble-->
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames" />
-  <sys:String x:Key="LOCHumbleImportTroveGames" />
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">서드파티 스토어 게임 무시</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGames">Humble 초이스 게임 라이브러리 가져오기</sys:String>
   <sys:String x:Key="LOCHumbleImportTroveGamesTooltip" />
-  <sys:String x:Key="LOCHumbleGeneralLibrary" />
+  <sys:String x:Key="LOCHumbleGeneralLibrary">Humble 라이브러리 게임 가져오기</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve" />
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree" />
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">게임 실행 시 항상 Humble App을 사용해 실행</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
 </ResourceDictionary>
