@@ -19,6 +19,7 @@ namespace EpicLibrary
     [LoadPlugin]
     public class EpicLibrary : LibraryPluginBase<EpicLibrarySettingsViewModel>
     {
+        private static readonly ILogger logger = LogManager.GetLogger();
         internal readonly string TokensPath;
 
         public EpicLibrary(IPlayniteAPI api) : base(
@@ -61,13 +62,23 @@ namespace EpicLibrary
                     continue;
                 }
 
+                var gameName = manifest?.DisplayName ?? Path.GetFileName(app.InstallLocation);
+                var installLocation = manifest?.InstallLocation ?? app.InstallLocation;
+                var isInstalled = true;
+                if (!Directory.Exists(installLocation))
+                {
+                    logger.Info($"Epic game {gameName} installation directory {installLocation} not detected.");
+                    isInstalled = false;
+                    installLocation = string.Empty;
+                }
+
                 var game = new GameMetadata()
                 {
                     Source = new MetadataNameProperty("Epic"),
                     GameId = app.AppName,
-                    Name = manifest?.DisplayName ?? Path.GetFileName(app.InstallLocation),
-                    InstallDirectory = manifest?.InstallLocation ?? app.InstallLocation,
-                    IsInstalled = true,
+                    Name = gameName,
+                    InstallDirectory = installLocation,
+                    IsInstalled = isInstalled,
                     Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
