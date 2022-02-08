@@ -30,3 +30,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Rockstar_Games_Library_2_4.pext
     Changelog:
       - GTA Definitive Editions support (by levibostian)
+  - Version: 2.5
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-02-08
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Rockstar_Games_Library_2_5.pext
+    Changelog:
+      - Fixed detection of installed games
+      - Updated localizations
