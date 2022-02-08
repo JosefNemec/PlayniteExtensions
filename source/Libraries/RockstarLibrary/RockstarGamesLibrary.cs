@@ -50,10 +50,19 @@ namespace RockstarGamesLibrary
                         continue;
                     }
 
+                    var isInstalled = true;
+                    var installDirectory = app.InstallLocation;
+                    if (!Directory.Exists(installDirectory))
+                    {
+                        logger.Info($"Rockstar game {rsGame.Name} installation directory {installDirectory} not detected.");
+                        isInstalled = false;
+                        installDirectory = string.Empty;
+                    }
+
                     var newGame = new GameMetadata
                     {
-                        IsInstalled = true,
-                        InstallDirectory = app.InstallLocation,
+                        IsInstalled = isInstalled,
+                        InstallDirectory = installDirectory,
                         Source = new MetadataNameProperty("Rockstar Games"),
                         Name = rsGame.Name,
                         GameId = titleId,
