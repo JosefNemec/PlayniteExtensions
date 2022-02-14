@@ -183,6 +183,8 @@
     <Compile Include="LocalizationKeys.cs" />
     <Compile Include="Models\Butler.cs" />
     <Compile Include="Models\Cave.cs" />
+    <Compile Include="Models\Collection.cs" />
+    <Compile Include="Models\FetchCollections.cs" />
     <Compile Include="Models\FetchGame.cs" />
     <Compile Include="Models\FetchCaves.cs" />
     <Compile Include="Models\FetchProfileOwnedKeys.cs" />

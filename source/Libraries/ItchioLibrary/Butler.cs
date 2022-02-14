@@ -92,6 +92,11 @@ namespace ItchioLibrary
             /// Sent during Launch, when one or more prerequisites have failed to install.
             /// </summary>
             public const string PrereqsFailed = "PrereqsFailed";
+
+            /// <summary>
+            /// List user collections
+            /// </summary>
+            public const string FetchCollections = "Fetch.ProfileCollections";
         }
 
         public static string ExecutablePath
@@ -327,6 +332,14 @@ namespace ItchioLibrary
         public List<Profile> GetProfiles()
         {
             return client.SendRequest<ProfileList>(Methods.Profile_List).profiles;
+        }
+
+        public FetchCollections GetCollection(long id)
+        {
+            return client.SendRequest<FetchCollections>(Methods.FetchCollections, new Dictionary<string, object>
+			{
+                {"profileId",id }
+			});
         }
 
         public ItchioGame GetGame(int gameId)

@@ -145,6 +145,7 @@ namespace ItchioLibrary
 
                 foreach (var profile in profiles)
                 {
+                    var s = butler.GetCollection(profile.id);
                     var keys = butler.GetOwnedKeys(profile.id);
                     if (!keys.HasItems())
                     {
@@ -175,8 +176,12 @@ namespace ItchioLibrary
                             GameId = key.game.id.ToString(),
                             Name = key.game.title.RemoveTrademarks(),
                             CoverImage = key.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(key.game.coverUrl),
-                            Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                            Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
                         };
+						if (key.game.published)
+						{
+                            game.ReleaseDate=new ReleaseDate((DateTime)key.game.publishedAt);
+						}
 
                         games.Add(game);
                     }
