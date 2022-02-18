@@ -145,7 +145,16 @@ namespace ItchioLibrary
 
                 foreach (var profile in profiles)
                 {
-                    var s = butler.GetCollection(profile.id);
+                    var collections = butler.GetCollection(profile.id);
+                    foreach (var collection in collections.items)
+					{
+                        var g = butler.GetGameRecords(profile.id, GameRecordsSource.Collection,new Dictionary<string, object>
+						{
+                            { "collectionId", collection.id },
+                            { "limit", collection.gamesCount }
+						});
+                        var i = 0;
+                    }
                     var keys = butler.GetOwnedKeys(profile.id);
                     if (!keys.HasItems())
                     {

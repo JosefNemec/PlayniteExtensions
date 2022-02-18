@@ -171,6 +171,7 @@
       <Link>Shared\PluginSettingsViewModel.cs</Link>
     </Compile>
     <Compile Include="Butler.cs" />
+    <Compile Include="Models\FetchGameRecords.cs" />
     <Compile Include="ItchioMetadataProvider.cs" />
     <Compile Include="ItchioGameController.cs" />
     <Compile Include="Itch.cs" />
@@ -188,6 +189,7 @@
     <Compile Include="Models\FetchGame.cs" />
     <Compile Include="Models\FetchCaves.cs" />
     <Compile Include="Models\FetchProfileOwnedKeys.cs" />
+    <Compile Include="Models\GameRecord.cs" />
     <Compile Include="Models\HTMLLaunch.cs" />
     <Compile Include="Models\ItchInstallState.cs" />
     <Compile Include="Models\LaunchManifest.cs" />

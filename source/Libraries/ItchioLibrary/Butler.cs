@@ -97,6 +97,11 @@ namespace ItchioLibrary
             /// List user collections
             /// </summary>
             public const string FetchCollections = "Fetch.ProfileCollections";
+
+            /// <summary>
+            /// List user collections
+            /// </summary>
+            public const string FetchGameRecords= "Fetch.GameRecords";
         }
 
         public static string ExecutablePath
@@ -341,6 +346,29 @@ namespace ItchioLibrary
                 {"profileId",id }
 			});
         }
+
+        public FetchGameRecords GetGameRecords(long id, string source, Dictionary<string, object> optionalParameters = null)
+		{
+			var parameters = new Dictionary<string, object>
+			{
+				{ "profileId",id },
+				{ "source", source },
+			};
+            if(optionalParameters != null)
+			{
+				foreach (var pair in optionalParameters)
+				{
+                    parameters.Add(pair.Key, pair.Value);
+				}
+			}
+			return client.SendRequest<FetchGameRecords>(Methods.FetchGameRecords, parameters);
+			//         return client.SendRequest<FetchGameRecords>(Methods.FetchGameRecords,new Dictionary<string, object>
+			//{
+			//             { "profileId",id },
+			//             { "source", source },
+			//             { "collectionId", optionalParameters["collectionId"] },
+			//});
+		}
 
         public ItchioGame GetGame(int gameId)
         {
