@@ -117,7 +117,8 @@ namespace ItchioLibrary
                         InstallDirectory = installDir,
                         IsInstalled = true,
                         CoverImage = cave.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(cave.game.coverUrl),
-                        Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                        Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
+                        ReleaseDate = cave.game.publishedAt != null ? new ReleaseDate((DateTime)cave.game.publishedAt) : new ReleaseDate(),
                     };
 
                     //if (TryGetGameActions(installDir, out var play, out var others))
@@ -147,14 +148,51 @@ namespace ItchioLibrary
                 {
                     var collections = butler.GetCollection(profile.id);
                     foreach (var collection in collections.items)
-					{
-                        var g = butler.GetGameRecords(profile.id, GameRecordsSource.Collection,new Dictionary<string, object>
-						{
+                    {
+                        var fetchRecords = butler.GetGameRecords(profile.id, GameRecordsSource.Collection, new Dictionary<string, object>
+                        {
                             { "collectionId", collection.id },
-                            { "limit", collection.gamesCount }
-						});
-                        var i = 0;
+                            { "limit", collection.gamesCount },
+                            { "filters", new Dictionary<string, object> 
+                                {
+                                    { "owned", false }
+                                } 
+                            }
+                        });
+                        foreach (var record in fetchRecords.records)
+                        {
+                            ItchioGame game;
+                            try
+                            {
+                                game = butler.GetGame(record.id);
+                            }
+                            catch (JsonRpcException ex)
+                            {
+                                continue;
+                            }
+
+                            if (game.classification != GameClassification.game &&
+                                game.classification != GameClassification.tool)
+                            {
+                                continue;
+                            }
+
+                            if(game.minPrice > 0)
+                            {
+                                continue;
+                            }
+                            games.Add(new GameMetadata()
+                            {
+                                Source = new MetadataNameProperty("itch.io"),
+                                GameId = game.id.ToString(),
+                                Name = game.title.RemoveTrademarks(),
+                                CoverImage = game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(game.coverUrl),
+                                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
+                                ReleaseDate = game.publishedAt != null ? new ReleaseDate((DateTime)game.publishedAt) : new ReleaseDate(),
+                            });
+                        }
                     }
+
                     var keys = butler.GetOwnedKeys(profile.id);
                     if (!keys.HasItems())
                     {
@@ -186,11 +224,8 @@ namespace ItchioLibrary
                             Name = key.game.title.RemoveTrademarks(),
                             CoverImage = key.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(key.game.coverUrl),
                             Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
+                            ReleaseDate = key.game.publishedAt != null ? new ReleaseDate((DateTime)key.game.publishedAt) : new ReleaseDate(),
                         };
-						if (key.game.published)
-						{
-                            game.ReleaseDate=new ReleaseDate((DateTime)key.game.publishedAt);
-						}
 
                         games.Add(game);
                     }

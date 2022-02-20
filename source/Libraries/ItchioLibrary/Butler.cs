@@ -342,33 +342,27 @@ namespace ItchioLibrary
         public FetchCollections GetCollection(long id)
         {
             return client.SendRequest<FetchCollections>(Methods.FetchCollections, new Dictionary<string, object>
-			{
+            {
                 {"profileId",id }
-			});
+            });
         }
 
         public FetchGameRecords GetGameRecords(long id, string source, Dictionary<string, object> optionalParameters = null)
-		{
-			var parameters = new Dictionary<string, object>
-			{
-				{ "profileId",id },
-				{ "source", source },
-			};
+        {
+            var parameters = new Dictionary<string, object>
+            {
+                { "profileId",id },
+                { "source", source },
+            };
             if(optionalParameters != null)
-			{
-				foreach (var pair in optionalParameters)
-				{
+            {
+                foreach (var pair in optionalParameters)
+                {
                     parameters.Add(pair.Key, pair.Value);
-				}
-			}
-			return client.SendRequest<FetchGameRecords>(Methods.FetchGameRecords, parameters);
-			//         return client.SendRequest<FetchGameRecords>(Methods.FetchGameRecords,new Dictionary<string, object>
-			//{
-			//             { "profileId",id },
-			//             { "source", source },
-			//             { "collectionId", optionalParameters["collectionId"] },
-			//});
-		}
+                }
+            }
+            return client.SendRequest<FetchGameRecords>(Methods.FetchGameRecords, parameters);
+        }
 
         public ItchioGame GetGame(int gameId)
         {
