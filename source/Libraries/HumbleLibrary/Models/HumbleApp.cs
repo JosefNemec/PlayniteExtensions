@@ -59,7 +59,7 @@ namespace HumbleLibrary.Models
         public string imagePath { get; set; }
         public string status { get; set; }
         public Downloads downloads { get; set; }
-        public int downloadPercentage { get; set; }
+        public double downloadPercentage { get; set; }
         public string downloadSpeed { get; set; }
         public string downloadEta { get; set; }
         public int? downloadedVersion { get; set; }
