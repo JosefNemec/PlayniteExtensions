@@ -38,3 +38,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/HumbleLibrary_Builtin_3_2.pext
     Changelog:
       - Fixed Humble App being selectable install option for non-Humble games
+  - Version: 3.3
+    RequiredApiVersion: 6.2.2
+    ReleaseDate: 2022-03-02
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/HumbleLibrary_Builtin_3_3.pext
+    Changelog:
+      - Game import fails when Humble App is downloading games
