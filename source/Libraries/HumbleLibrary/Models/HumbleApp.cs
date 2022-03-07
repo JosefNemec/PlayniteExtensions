@@ -81,6 +81,7 @@ namespace HumbleLibrary.Models
         public string troveCategory { get; set; }
         public long? dateEnded { get; set; }
         public string downloadFilePath { get; set; }
+        public string filePath { get; set; }
         public string executablePath { get; set; }
         public long? downloadTotalBytes { get; set; }
         public List<object> dependencies { get; set; }

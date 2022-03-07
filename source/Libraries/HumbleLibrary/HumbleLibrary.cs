@@ -28,6 +28,14 @@ namespace HumbleLibrary
         public string Executable { get; set; }
     }
 
+    public static class Extensions
+    {
+        public static bool SupportsHumbleApp(this Game game)
+        {
+            return game.GameId.EndsWith("_trove", StringComparison.OrdinalIgnoreCase) || game.GameId.EndsWith("_collection", StringComparison.OrdinalIgnoreCase);
+        }
+    }
+
     [LoadPlugin]
     public class HumbleLibrary : LibraryPluginBase<HumbleLibrarySettingsViewModel>
     {
@@ -73,7 +81,17 @@ namespace HumbleLibrary
             var games = new List<InstalledTroveGame>();
             foreach (var entry in appConfig.GameCollection4.Where(a => a.status == "downloaded" || a.status == "installed"))
             {
-                var exePath = Paths.FixSeparators(Path.Combine(entry.downloadFilePath, entry.machineName, entry.executablePath));
+                string exePath = string.Empty;
+                if (!entry.filePath.IsNullOrEmpty())
+                {
+                    exePath = Paths.FixSeparators(Path.Combine(entry.filePath, entry.executablePath));
+                }
+                else
+                {
+                    // This is for installs created by older Humble App versions
+                    exePath = Paths.FixSeparators(Path.Combine(entry.downloadFilePath, entry.machineName, entry.executablePath));
+                }
+
                 var installDir = Path.GetDirectoryName(exePath);
                 games.Add(new InstalledTroveGame
                 {
@@ -342,7 +360,7 @@ namespace HumbleLibrary
                 yield break;
             }
 
-            if (args.Game.GameId.EndsWith("_trove", StringComparison.OrdinalIgnoreCase))
+            if (args.Game.SupportsHumbleApp())
             {
                 if (SettingsViewModel.Settings.LaunchViaHumbleApp)
                 {

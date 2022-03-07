@@ -31,7 +31,7 @@ namespace HumbleLibrary
 
         public override void Install(InstallActionArgs args)
         {
-            if (Game.GameId.EndsWith("_trove", StringComparison.OrdinalIgnoreCase))
+            if (Game.SupportsHumbleApp())
             {
                 Dispose();
                 if (!HumbleClient.GetIsClientInstalled())
@@ -122,7 +122,7 @@ namespace HumbleLibrary
 
         public override void Uninstall(UninstallActionArgs args)
         {
-            if (Game.GameId.EndsWith("_trove", StringComparison.OrdinalIgnoreCase))
+            if (Game.SupportsHumbleApp())
             {
                 Dispose();
                 if (!HumbleClient.GetIsClientInstalled())
