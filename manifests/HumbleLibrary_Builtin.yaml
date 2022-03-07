@@ -44,3 +44,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/HumbleLibrary_Builtin_3_3.pext
     Changelog:
       - Game import fails when Humble App is downloading games
+  - Version: 3.4
+    RequiredApiVersion: 6.2.2
+    ReleaseDate: 2022-03-07
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/HumbleLibrary_Builtin_3_4.pext
+    Changelog:
+      - Certain games don't launch or install
