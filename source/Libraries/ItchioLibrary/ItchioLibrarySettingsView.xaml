@@ -32,6 +32,11 @@
                       IsChecked="{Binding Settings.ImportUninstalledGames}"
                       Margin="0,10,0,0"
                       Content="{DynamicResource LOCitchioSettingsImportUninstalledLabel}"/>
+          
+            <CheckBox DockPanel.Dock="Top" Name="CheckItchioImportFreeGamesFromCollections"
+                      IsChecked="{Binding Settings.ImportFreeGamesFromCollections}"
+                      Margin="0,10,0,0"
+                      Content="{DynamicResource LOCitchioSettingsImportFreeGamesFromCollectionsLabel}"/>
 
             <StackPanel Orientation="Horizontal"
                         DockPanel.Dock="Top" Margin="0,15,5,5" HorizontalAlignment="Left">

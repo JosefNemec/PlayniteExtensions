@@ -146,50 +146,53 @@ namespace ItchioLibrary
 
                 foreach (var profile in profiles)
                 {
-                    var collections = butler.GetCollection(profile.id);
-                    foreach (var collection in collections.items)
+                    if (SettingsViewModel.Settings.ImportFreeGamesFromCollections)
                     {
-                        var fetchRecords = butler.GetGameRecords(profile.id, GameRecordsSource.Collection, new Dictionary<string, object>
+                        var collections = butler.GetCollection(profile.id);
+                        foreach (var collection in collections.items)
                         {
-                            { "collectionId", collection.id },
-                            { "limit", collection.gamesCount },
-                            { "filters", new Dictionary<string, object> 
-                                {
-                                    { "owned", false }
-                                } 
-                            }
-                        });
-                        foreach (var record in fetchRecords.records)
-                        {
-                            ItchioGame game;
-                            try
+                            var fetchRecords = butler.GetGameRecords(profile.id, GameRecordsSource.Collection, new Dictionary<string, object>
                             {
-                                game = butler.GetGame(record.id);
-                            }
-                            catch (JsonRpcException ex)
-                            {
-                                continue;
-                            }
-
-                            if (game.classification != GameClassification.game &&
-                                game.classification != GameClassification.tool)
-                            {
-                                continue;
-                            }
-
-                            if(game.minPrice > 0)
-                            {
-                                continue;
-                            }
-                            games.Add(new GameMetadata()
-                            {
-                                Source = new MetadataNameProperty("itch.io"),
-                                GameId = game.id.ToString(),
-                                Name = game.title.RemoveTrademarks(),
-                                CoverImage = game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(game.coverUrl),
-                                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
-                                ReleaseDate = game.publishedAt != null ? new ReleaseDate((DateTime)game.publishedAt) : new ReleaseDate(),
+                                { "collectionId", collection.id },
+                                { "limit", collection.gamesCount },
+                                { "filters", new Dictionary<string, object> 
+                                    {
+                                        { "owned", false }
+                                    } 
+                                }
                             });
+                            foreach (var record in fetchRecords.records)
+                            {
+                                ItchioGame game;
+                                try
+                                {
+                                    game = butler.GetGame(record.id);
+                                }
+                                catch (JsonRpcException ex)
+                                {
+                                    continue;
+                                }
+
+                                if (game.classification != GameClassification.game &&
+                                    game.classification != GameClassification.tool)
+                                {
+                                    continue;
+                                }
+
+                                if(game.minPrice > 0)
+                                {
+                                    continue;
+                                }
+                                games.Add(new GameMetadata()
+                                {
+                                    Source = new MetadataNameProperty("itch.io"),
+                                    GameId = game.id.ToString(),
+                                    Name = game.title.RemoveTrademarks(),
+                                    CoverImage = game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(game.coverUrl),
+                                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
+                                    ReleaseDate = game.publishedAt != null ? new ReleaseDate((DateTime)game.publishedAt) : new ReleaseDate(),
+                                });
+                            }
                         }
                     }
 

@@ -17,6 +17,7 @@ namespace ItchioLibrary
         public bool ImportInstalledGames { get; set; } = Itch.IsInstalled;
         public bool ConnectAccount { get; set; } = false;
         public bool ImportUninstalledGames { get; set; } = false;
+        public bool ImportFreeGamesFromCollections { get; set; } = false;
     }
 
     public class ItchioLibrarySettingsViewModel : PluginSettingsViewModel<ItchioLibrarySettings, ItchioLibrary>
