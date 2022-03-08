@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
+using System.ComponentModel;
 
 namespace ItchioLibrary.Models
 {
@@ -40,46 +41,55 @@ namespace ItchioLibrary.Models
         /// <summary>
         /// GameClassificationGame is something you can play
         /// </summary>
+		[Description("Games")]
         game,
 
         /// <summary>
         /// GameClassificationTool includes all software pretty much
         /// </summary>
+		[Description("Tools")]
         tool,
 
         /// <summary>
         /// GameClassificationAssets includes assets: graphics, sounds, etc.
         /// </summary>
+		[Description("Assets")]
         assets,
 
         /// <summary>
         /// GameClassificationGameMod are game mods (no link to game, purely creator tagging)
         /// </summary>
+		[Description("Mods")]
         game_mod,
 
         /// <summary>
         /// GameClassificationPhysicalGame is for a printable / board / card game
         /// </summary>
+		[Description("Physical games")]
         physical_game,
 
         /// <summary>
         /// GameClassificationSoundtrack is a bunch of music files
         /// </summary>
+		[Description("Soundtracks")]
         soundtrack,
 
         /// <summary>
         /// GameClassificationOther is anything that creators think don’t fit in any other category
         /// </summary>
+		[Description("Others")]
         other,
 
         /// <summary>
         /// GameClassificationComic is a comic book (pdf, jpg, specific comic formats, etc.)
         /// </summary>
+		[Description("Comics")]
         comic,
 
         /// <summary>
         /// GameClassificationBook is a book (pdf, jpg, specific e-book formats, etc.)
         /// </summary>
+		[Description("Books")]
         book
     }
 
