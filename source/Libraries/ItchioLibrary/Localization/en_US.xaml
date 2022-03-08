@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCItchioSignInWaitMessage">Waiting for user to sign in, please close this when you're done…</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io app version 25 or newer is not installed.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Import free games from collections.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Items to be imported:</sys:String>
 </ResourceDictionary>

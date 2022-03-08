@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Playnite.SDK.Data;
+using ItchioLibrary.Models;
 
 namespace ItchioLibrary
 {
@@ -18,10 +19,19 @@ namespace ItchioLibrary
         public bool ConnectAccount { get; set; } = false;
         public bool ImportUninstalledGames { get; set; } = false;
         public bool ImportFreeGamesFromCollections { get; set; } = false;
+        public List<GameClassification> ImportGameClassification { get; set; } = new List<GameClassification>() { GameClassification.game, GameClassification.tool };
+    }
+
+    public class GameClassificationItem
+    {
+        public bool IsChecked { get; set; }
+        public GameClassification Value { get; set; }
     }
 
     public class ItchioLibrarySettingsViewModel : PluginSettingsViewModel<ItchioLibrarySettings, ItchioLibrary>
     {
+        public List<GameClassificationItem> GameClassificationList { get; private set; }
+        
         public bool IsUserLoggedIn
         {
             get
@@ -46,6 +56,26 @@ namespace ItchioLibrary
             });
         }
 
+        public RelayCommand<GameClassificationItem> ToggleGameClassificationCommand
+        {
+            get => new RelayCommand<GameClassificationItem>((item) =>
+			{
+                ToggleGameClassification(item);
+            });
+        }
+
+        private void ToggleGameClassification(GameClassificationItem item)
+        {
+			if (item.IsChecked)
+			{
+                Settings.ImportGameClassification.Add(item.Value);
+			}
+			else
+			{
+                Settings.ImportGameClassification.Remove(item.Value);
+            }
+        }
+
         public ItchioLibrarySettingsViewModel(ItchioLibrary library, IPlayniteAPI api) : base(library, api)
         {
             var savedSettings = LoadSavedSettings();
@@ -67,6 +97,15 @@ namespace ItchioLibrary
             {
                 Settings = new ItchioLibrarySettings { Version = 1 };
             }
+
+			GameClassificationList = ((GameClassification[])Enum.GetValues(typeof(GameClassification))).Select(a =>
+            {
+                return new GameClassificationItem()
+                {
+                    Value = a,
+                    IsChecked = Settings.ImportGameClassification.Contains(a)
+                };
+            }).ToList();
         }
 
         private void Login()
