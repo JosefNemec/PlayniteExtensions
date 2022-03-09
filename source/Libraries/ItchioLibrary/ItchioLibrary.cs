@@ -91,8 +91,7 @@ namespace ItchioLibrary
 
                 foreach (var cave in caves)
                 {
-                    if (cave.game.classification != GameClassification.game &&
-                        cave.game.classification != GameClassification.tool)
+                    if(!SettingsViewModel.Settings.ImportGameClassification.Contains(cave.game.classification))
                     {
                         continue;
                     }
@@ -173,13 +172,12 @@ namespace ItchioLibrary
                                     continue;
                                 }
 
-                                if (game.classification != GameClassification.game &&
-                                    game.classification != GameClassification.tool)
+                                if (!SettingsViewModel.Settings.ImportGameClassification.Contains(game.classification))
                                 {
                                     continue;
                                 }
 
-                                if(game.minPrice > 0)
+                                if (game.minPrice > 0)
                                 {
                                     continue;
                                 }
@@ -209,8 +207,7 @@ namespace ItchioLibrary
                             continue;
                         }
 
-                        if (key.game.classification != GameClassification.game &&
-                            key.game.classification != GameClassification.tool)
+                        if (!SettingsViewModel.Settings.ImportGameClassification.Contains(key.game.classification))
                         {
                             continue;
                         }
