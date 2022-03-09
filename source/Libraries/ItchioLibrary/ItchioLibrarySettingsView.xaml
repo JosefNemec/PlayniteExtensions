@@ -45,13 +45,14 @@
                       Margin="0,10,0,0"
                       Content="{DynamicResource LOCitchioSettingsImportFreeGamesFromCollectionsLabel}"/>
 
-            <Label Margin="0,10,0,0"
+            <Label Margin="0,15,0,0"
                    Content="{DynamicResource LOCitchioSettingsImportGameClassificationLabel}"/>
-            <ItemsControl Margin="0,10,0,0"
+            <ItemsControl Margin="0,0,0,0"
                           ItemsSource="{Binding GameClassificationList}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <CheckBox Content="{Binding Value,Converter={StaticResource ObjectToStringConverter}}"
+                        <CheckBox Margin="0,10,0,0" 
+                                  Content="{Binding Value,Converter={StaticResource ObjectToStringConverter}}"
                                   IsChecked="{Binding IsChecked}"
                                   CommandParameter="{Binding}"
                                   Command="{Binding DataContext.ToggleGameClassificationCommand, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=StackPanel}}"
