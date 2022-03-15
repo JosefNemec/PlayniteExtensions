@@ -116,9 +116,12 @@ namespace ItchioLibrary
                         InstallDirectory = installDir,
                         IsInstalled = true,
                         CoverImage = cave.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(cave.game.coverUrl),
-                        Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
-                        ReleaseDate = cave.game.publishedAt != null ? new ReleaseDate((DateTime)cave.game.publishedAt) : new ReleaseDate(),
+                        Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     };
+                    if (cave.game.publishedAt != null)
+                    {
+                        game.ReleaseDate = new ReleaseDate((DateTime)cave.game.publishedAt);
+                    }
 
                     //if (TryGetGameActions(installDir, out var play, out var others))
                     //{
@@ -183,15 +186,19 @@ namespace ItchioLibrary
                                     continue;
                                 }
 
-                                games.Add(new GameMetadata()
+                                var metadata = new GameMetadata()
                                 {
                                     Source = new MetadataNameProperty("itch.io"),
                                     GameId = game.id.ToString(),
                                     Name = game.title.RemoveTrademarks(),
                                     CoverImage = game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(game.coverUrl),
-                                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
-                                    ReleaseDate = game.publishedAt != null ? new ReleaseDate((DateTime)game.publishedAt) : new ReleaseDate(),
-                                });
+                                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                                };
+                                if (game.publishedAt != null)
+                                {
+                                    metadata.ReleaseDate = new ReleaseDate((DateTime)game.publishedAt);
+                                }
+                                games.Add(metadata);
                             }
                         }
                     }
@@ -225,9 +232,12 @@ namespace ItchioLibrary
                             GameId = key.game.id.ToString(),
                             Name = key.game.title.RemoveTrademarks(),
                             CoverImage = key.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(key.game.coverUrl),
-                            Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
-                            ReleaseDate = key.game.publishedAt != null ? new ReleaseDate((DateTime)key.game.publishedAt) : new ReleaseDate(),
+                            Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                         };
+                        if (key.game.publishedAt != null)
+                        {
+                            game.ReleaseDate = new ReleaseDate((DateTime)key.game.publishedAt);
+                        }
 
                         games.Add(game);
                     }
