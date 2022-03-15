@@ -59,19 +59,19 @@ namespace ItchioLibrary
         public RelayCommand<GameClassificationItem> ToggleGameClassificationCommand
         {
             get => new RelayCommand<GameClassificationItem>((item) =>
-			{
+            {
                 ToggleGameClassification(item);
             });
         }
 
         private void ToggleGameClassification(GameClassificationItem item)
         {
-			if (item.IsChecked)
-			{
+            if (item.IsChecked)
+            {
                 Settings.ImportGameClassification.Add(item.Value);
-			}
-			else
-			{
+            }
+            else
+            {
                 Settings.ImportGameClassification.Remove(item.Value);
             }
         }
@@ -98,7 +98,7 @@ namespace ItchioLibrary
                 Settings = new ItchioLibrarySettings { Version = 1 };
             }
 
-			GameClassificationList = ((GameClassification[])Enum.GetValues(typeof(GameClassification))).Select(a =>
+            GameClassificationList = ((GameClassification[])Enum.GetValues(typeof(GameClassification))).Select(a =>
             {
                 return new GameClassificationItem()
                 {

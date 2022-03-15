@@ -354,13 +354,14 @@ namespace ItchioLibrary
                 { "profileId",id },
                 { "source", source },
             };
-            if(optionalParameters != null)
+            if (optionalParameters != null)
             {
                 foreach (var pair in optionalParameters)
                 {
                     parameters.Add(pair.Key, pair.Value);
                 }
             }
+
             return client.SendRequest<FetchGameRecords>(Methods.FetchGameRecords, parameters);
         }
 

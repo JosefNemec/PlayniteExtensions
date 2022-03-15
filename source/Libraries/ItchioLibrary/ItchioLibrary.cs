@@ -91,7 +91,7 @@ namespace ItchioLibrary
 
                 foreach (var cave in caves)
                 {
-                    if(!SettingsViewModel.Settings.ImportGameClassification.Contains(cave.game.classification))
+                    if (!SettingsViewModel.Settings.ImportGameClassification.Contains(cave.game.classification))
                     {
                         continue;
                     }
@@ -181,6 +181,7 @@ namespace ItchioLibrary
                                 {
                                     continue;
                                 }
+
                                 games.Add(new GameMetadata()
                                 {
                                     Source = new MetadataNameProperty("itch.io"),
