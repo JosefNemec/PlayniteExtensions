@@ -167,8 +167,9 @@ namespace ItchioLibrary
                                 {
                                     game = butler.GetGame(record.id);
                                 }
-                                catch (JsonRpcException ex)
+                                catch (JsonRpcException e)
                                 {
+                                    Logger.Error(e, $"Failed to import {record.title} from itch.io");
                                     continue;
                                 }
 
