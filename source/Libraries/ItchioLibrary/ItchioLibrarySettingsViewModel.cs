@@ -5,9 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Playnite.SDK.Data;
 using ItchioLibrary.Models;
 
 namespace ItchioLibrary
@@ -19,7 +16,7 @@ namespace ItchioLibrary
         public bool ConnectAccount { get; set; } = false;
         public bool ImportUninstalledGames { get; set; } = false;
         public bool ImportFreeGamesFromCollections { get; set; } = false;
-        public List<GameClassification> ImportGameClassification { get; set; } = new List<GameClassification>() { GameClassification.game, GameClassification.tool };
+        public List<GameClassificationItem> ImportGameClassification { get; set; }
     }
 
     public class GameClassificationItem
@@ -30,8 +27,6 @@ namespace ItchioLibrary
 
     public class ItchioLibrarySettingsViewModel : PluginSettingsViewModel<ItchioLibrarySettings, ItchioLibrary>
     {
-        public List<GameClassificationItem> GameClassificationList { get; private set; }
-        
         public bool IsUserLoggedIn
         {
             get
@@ -56,26 +51,6 @@ namespace ItchioLibrary
             });
         }
 
-        public RelayCommand<GameClassificationItem> ToggleGameClassificationCommand
-        {
-            get => new RelayCommand<GameClassificationItem>((item) =>
-            {
-                ToggleGameClassification(item);
-            });
-        }
-
-        private void ToggleGameClassification(GameClassificationItem item)
-        {
-            if (item.IsChecked)
-            {
-                Settings.ImportGameClassification.Add(item.Value);
-            }
-            else
-            {
-                Settings.ImportGameClassification.Remove(item.Value);
-            }
-        }
-
         public ItchioLibrarySettingsViewModel(ItchioLibrary library, IPlayniteAPI api) : base(library, api)
         {
             var savedSettings = LoadSavedSettings();
@@ -98,14 +73,20 @@ namespace ItchioLibrary
                 Settings = new ItchioLibrarySettings { Version = 1 };
             }
 
-            GameClassificationList = ((GameClassification[])Enum.GetValues(typeof(GameClassification))).Select(a =>
+            if (Settings.ImportGameClassification == null)
             {
-                return new GameClassificationItem()
-                {
-                    Value = a,
-                    IsChecked = Settings.ImportGameClassification.Contains(a)
+                Settings.ImportGameClassification = new List<GameClassificationItem>() {
+                    new GameClassificationItem(){Value = GameClassification.game, IsChecked = true},
+                    new GameClassificationItem(){Value = GameClassification.tool, IsChecked = true},
+                    new GameClassificationItem(){Value = GameClassification.assets, IsChecked = false},
+                    new GameClassificationItem(){Value = GameClassification.book, IsChecked = false},
+                    new GameClassificationItem(){Value = GameClassification.comic, IsChecked = false},
+                    new GameClassificationItem(){Value = GameClassification.game_mod, IsChecked = false},
+                    new GameClassificationItem(){Value = GameClassification.other, IsChecked = false},
+                    new GameClassificationItem(){Value = GameClassification.physical_game, IsChecked = false},
+                    new GameClassificationItem(){Value = GameClassification.soundtrack, IsChecked = false},
                 };
-            }).ToList();
+            }
         }
 
         private void Login()
