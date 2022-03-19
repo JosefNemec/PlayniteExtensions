@@ -15,11 +15,6 @@
         <pcon:ObjectToStringConverter x:Key="ObjectToStringConverter" />
         <sys:Boolean x:Key="True">True</sys:Boolean>
         <sys:Boolean x:Key="False">False</sys:Boolean>
-        <ObjectDataProvider x:Key="GameClassification" MethodName="GetValues" ObjectType="{x:Type models:GameClassification}">
-            <ObjectDataProvider.MethodParameters>
-                <x:Type TypeName="models:GameClassification"/>
-            </ObjectDataProvider.MethodParameters>
-        </ObjectDataProvider>
     </UserControl.Resources>
 
     <StackPanel Margin="20">
@@ -52,8 +47,10 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <CheckBox Margin="0,10,0,0" 
-                                  Content="{Binding Value,Converter={StaticResource ObjectToStringConverter}}"
-                                  IsChecked="{Binding IsChecked,Mode=TwoWay}"
+                                  Content="{Binding Key,Converter={StaticResource ObjectToStringConverter}}"
+                                  IsChecked="{Binding Value, Mode=OneWay}"
+                                  Command="{Binding Path=DataContext.ToggleGameClassificationCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                  CommandParameter="{Binding Key}"
                                   />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

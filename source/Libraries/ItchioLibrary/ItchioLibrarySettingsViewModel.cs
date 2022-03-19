@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using ItchioLibrary.Models;
+using System.Collections.Concurrent;
 
 namespace ItchioLibrary
 {
@@ -16,7 +17,17 @@ namespace ItchioLibrary
         public bool ConnectAccount { get; set; } = false;
         public bool ImportUninstalledGames { get; set; } = false;
         public bool ImportFreeGamesFromCollections { get; set; } = false;
-        public List<GameClassificationItem> ImportGameClassification { get; set; }
+        public ObservableConcurrentDictionary<GameClassification, bool> ImportGameClassification { get; set; } = new ObservableConcurrentDictionary<GameClassification, bool> {
+            {GameClassification.game, true},
+            {GameClassification.tool, true},
+            {GameClassification.assets, false},
+            {GameClassification.book, false},
+            {GameClassification.comic, false},
+            {GameClassification.game_mod, false},
+            {GameClassification.physical_game, false},
+            {GameClassification.soundtrack, false},
+            {GameClassification.other, false},
+        };
     }
 
     public class GameClassificationItem
@@ -41,6 +52,20 @@ namespace ItchioLibrary
                     return butler.GetProfiles().Count > 0;
                 }
             }
+        }
+
+        public RelayCommand<GameClassification> ToggleGameClassificationCommand
+        {
+            get => new RelayCommand<GameClassification>((gc) =>
+            {
+                ToggleGameClassification(gc);
+            });
+        }
+
+        private void ToggleGameClassification(GameClassification gc)
+        {
+            Settings.ImportGameClassification[gc] = !Settings.ImportGameClassification[gc];
+
         }
 
         public RelayCommand<object> LoginCommand
@@ -71,21 +96,6 @@ namespace ItchioLibrary
             else
             {
                 Settings = new ItchioLibrarySettings { Version = 1 };
-            }
-
-            if (Settings.ImportGameClassification == null)
-            {
-                Settings.ImportGameClassification = new List<GameClassificationItem>() {
-                    new GameClassificationItem(){Value = GameClassification.game, IsChecked = true},
-                    new GameClassificationItem(){Value = GameClassification.tool, IsChecked = true},
-                    new GameClassificationItem(){Value = GameClassification.assets, IsChecked = false},
-                    new GameClassificationItem(){Value = GameClassification.book, IsChecked = false},
-                    new GameClassificationItem(){Value = GameClassification.comic, IsChecked = false},
-                    new GameClassificationItem(){Value = GameClassification.game_mod, IsChecked = false},
-                    new GameClassificationItem(){Value = GameClassification.other, IsChecked = false},
-                    new GameClassificationItem(){Value = GameClassification.physical_game, IsChecked = false},
-                    new GameClassificationItem(){Value = GameClassification.soundtrack, IsChecked = false},
-                };
             }
         }
 

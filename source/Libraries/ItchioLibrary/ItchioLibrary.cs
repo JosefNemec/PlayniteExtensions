@@ -32,11 +32,6 @@ namespace ItchioLibrary
             SettingsViewModel = new ItchioLibrarySettingsViewModel(this, api);
         }
 
-        private List<GameClassification> SelectedGameClassification()
-        {
-            return SettingsViewModel.Settings.ImportGameClassification.Where(x => x.IsChecked).Select(x => x.Value).ToList();
-        }
-
         public static bool TryGetGameActions(string installDir, out GameAction playAction, out List<GameAction> otherActions)
         {
             var fileEnum = new SafeFileEnumerator(installDir, ".itch.toml", SearchOption.AllDirectories);
@@ -85,7 +80,6 @@ namespace ItchioLibrary
 
         internal Dictionary<string, GameMetadata> GetInstalledGames()
         {
-            var selectedGameClassification = SelectedGameClassification();
             var games = new Dictionary<string, GameMetadata>();
             using (var butler = new Butler())
             {
@@ -97,7 +91,7 @@ namespace ItchioLibrary
 
                 foreach (var cave in caves)
                 {
-                    if (!selectedGameClassification.Contains(cave.game.classification))
+                    if (!SettingsViewModel.Settings.ImportGameClassification[cave.game.classification])
                     {
                         continue;
                     }
@@ -143,7 +137,6 @@ namespace ItchioLibrary
 
         internal List<GameMetadata> GetLibraryGames()
         {
-            var selectedGameClassification = SelectedGameClassification();
             var games = new List<GameMetadata>();
             using (var butler = new Butler())
             {
@@ -183,7 +176,7 @@ namespace ItchioLibrary
                                     continue;
                                 }
 
-                                if (!selectedGameClassification.Contains(game.classification))
+                                if (!SettingsViewModel.Settings.ImportGameClassification[game.classification])
                                 {
                                     continue;
                                 }
@@ -223,7 +216,7 @@ namespace ItchioLibrary
                             continue;
                         }
 
-                        if (!selectedGameClassification.Contains(key.game.classification))
+                        if (!SettingsViewModel.Settings.ImportGameClassification[key.game.classification])
                         {
                             continue;
                         }
