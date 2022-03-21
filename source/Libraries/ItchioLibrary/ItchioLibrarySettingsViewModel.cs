@@ -5,9 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Playnite.SDK.Data;
+using ItchioLibrary.Models;
+using System.Collections.Concurrent;
 
 namespace ItchioLibrary
 {
@@ -17,6 +16,24 @@ namespace ItchioLibrary
         public bool ImportInstalledGames { get; set; } = Itch.IsInstalled;
         public bool ConnectAccount { get; set; } = false;
         public bool ImportUninstalledGames { get; set; } = false;
+        public bool ImportFreeGamesFromCollections { get; set; } = false;
+        public ObservableConcurrentDictionary<GameClassification, bool> ImportGameClassification { get; set; } = new ObservableConcurrentDictionary<GameClassification, bool> {
+            {GameClassification.game, true},
+            {GameClassification.tool, true},
+            {GameClassification.assets, false},
+            {GameClassification.book, false},
+            {GameClassification.comic, false},
+            {GameClassification.game_mod, false},
+            {GameClassification.physical_game, false},
+            {GameClassification.soundtrack, false},
+            {GameClassification.other, false},
+        };
+    }
+
+    public class GameClassificationItem
+    {
+        public bool IsChecked { get; set; }
+        public GameClassification Value { get; set; }
     }
 
     public class ItchioLibrarySettingsViewModel : PluginSettingsViewModel<ItchioLibrarySettings, ItchioLibrary>
@@ -35,6 +52,20 @@ namespace ItchioLibrary
                     return butler.GetProfiles().Count > 0;
                 }
             }
+        }
+
+        public RelayCommand<GameClassification> ToggleGameClassificationCommand
+        {
+            get => new RelayCommand<GameClassification>((gc) =>
+            {
+                ToggleGameClassification(gc);
+            });
+        }
+
+        private void ToggleGameClassification(GameClassification gc)
+        {
+            Settings.ImportGameClassification[gc] = !Settings.ImportGameClassification[gc];
+
         }
 
         public RelayCommand<object> LoginCommand

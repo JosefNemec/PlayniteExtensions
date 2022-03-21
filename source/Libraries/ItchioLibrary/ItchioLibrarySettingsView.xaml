@@ -4,13 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ItchioLibrary"
+             xmlns:models="clr-namespace:ItchioLibrary.Models"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             xmlns:pcon="clr-namespace:Playnite.Converters"
+             xmlns:pcon="clr-namespace:Playnite.Converters" d:DataContext="{d:DesignInstance Type=local:ItchioLibrarySettingsViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="250" d:DesignWidth="400">
 
     <UserControl.Resources>
         <pcon:NegateConverter x:Key="NegateConverter" />
+        <pcon:ObjectToStringConverter x:Key="ObjectToStringConverter" />
         <sys:Boolean x:Key="True">True</sys:Boolean>
         <sys:Boolean x:Key="False">False</sys:Boolean>
     </UserControl.Resources>
@@ -32,7 +34,28 @@
                       IsChecked="{Binding Settings.ImportUninstalledGames}"
                       Margin="0,10,0,0"
                       Content="{DynamicResource LOCitchioSettingsImportUninstalledLabel}"/>
+          
+            <CheckBox DockPanel.Dock="Top" Name="CheckItchioImportFreeGamesFromCollections"
+                      IsChecked="{Binding Settings.ImportFreeGamesFromCollections}"
+                      Margin="0,10,0,0"
+                      Content="{DynamicResource LOCitchioSettingsImportFreeGamesFromCollectionsLabel}"/>
 
+            <Label Margin="0,15,0,0"
+                   Content="{DynamicResource LOCitchioSettingsImportGameClassificationLabel}"/>
+            <ItemsControl Margin="0,0,0,0"
+                          ItemsSource="{Binding Settings.ImportGameClassification}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Margin="0,10,0,0" 
+                                  Content="{Binding Key,Converter={StaticResource ObjectToStringConverter}}"
+                                  IsChecked="{Binding Value, Mode=OneWay}"
+                                  Command="{Binding Path=DataContext.ToggleGameClassificationCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                  CommandParameter="{Binding Key}"
+                                  />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            
             <StackPanel Orientation="Horizontal"
                         DockPanel.Dock="Top" Margin="0,15,5,5" HorizontalAlignment="Left">
                 <Button Content="{DynamicResource LOCitchioAuthenticateLabel}" HorizontalAlignment="Left"

@@ -91,8 +91,7 @@ namespace ItchioLibrary
 
                 foreach (var cave in caves)
                 {
-                    if (cave.game.classification != GameClassification.game &&
-                        cave.game.classification != GameClassification.tool)
+                    if (!SettingsViewModel.Settings.ImportGameClassification[cave.game.classification])
                     {
                         continue;
                     }
@@ -119,6 +118,10 @@ namespace ItchioLibrary
                         CoverImage = cave.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(cave.game.coverUrl),
                         Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     };
+                    if (cave.game.publishedAt != null)
+                    {
+                        game.ReleaseDate = new ReleaseDate((DateTime)cave.game.publishedAt);
+                    }
 
                     //if (TryGetGameActions(installDir, out var play, out var others))
                     //{
@@ -145,6 +148,61 @@ namespace ItchioLibrary
 
                 foreach (var profile in profiles)
                 {
+                    if (SettingsViewModel.Settings.ImportFreeGamesFromCollections)
+                    {
+                        var collections = butler.GetCollection(profile.id);
+                        foreach (var collection in collections.items)
+                        {
+                            var fetchRecords = butler.GetGameRecords(profile.id, GameRecordsSource.Collection, new Dictionary<string, object>
+                            {
+                                { "collectionId", collection.id },
+                                { "limit", collection.gamesCount },
+                                { "filters", new Dictionary<string, object>
+                                    {
+                                        { "owned", false }
+                                    }
+                                }
+                            });
+                            foreach (var record in fetchRecords.records)
+                            {
+                                ItchioGame game;
+                                try
+                                {
+                                    game = butler.GetGame(record.id);
+                                }
+                                catch (JsonRpcException e)
+                                {
+                                    Logger.Error(e, $"Failed to import {record.title} from itch.io");
+                                    continue;
+                                }
+
+                                if (!SettingsViewModel.Settings.ImportGameClassification[game.classification])
+                                {
+                                    continue;
+                                }
+
+                                if (game.minPrice > 0)
+                                {
+                                    continue;
+                                }
+
+                                var metadata = new GameMetadata()
+                                {
+                                    Source = new MetadataNameProperty("itch.io"),
+                                    GameId = game.id.ToString(),
+                                    Name = game.title.RemoveTrademarks(),
+                                    CoverImage = game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(game.coverUrl),
+                                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                                };
+                                if (game.publishedAt != null)
+                                {
+                                    metadata.ReleaseDate = new ReleaseDate((DateTime)game.publishedAt);
+                                }
+                                games.Add(metadata);
+                            }
+                        }
+                    }
+
                     var keys = butler.GetOwnedKeys(profile.id);
                     if (!keys.HasItems())
                     {
@@ -158,8 +216,7 @@ namespace ItchioLibrary
                             continue;
                         }
 
-                        if (key.game.classification != GameClassification.game &&
-                            key.game.classification != GameClassification.tool)
+                        if (!SettingsViewModel.Settings.ImportGameClassification[key.game.classification])
                         {
                             continue;
                         }
@@ -177,6 +234,10 @@ namespace ItchioLibrary
                             CoverImage = key.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(key.game.coverUrl),
                             Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                         };
+                        if (key.game.publishedAt != null)
+                        {
+                            game.ReleaseDate = new ReleaseDate((DateTime)key.game.publishedAt);
+                        }
 
                         games.Add(game);
                     }
