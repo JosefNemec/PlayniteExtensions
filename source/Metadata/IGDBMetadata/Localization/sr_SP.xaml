@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCIGDBSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCIGDBSettingsConnectAccount" />
-  <sys:String x:Key="LOCIGDBLoginChecking" />
-  <sys:String x:Key="LOCIGDBLoggedIn" />
-  <sys:String x:Key="LOCIGDBNotLoggedIn" />
-  <sys:String x:Key="LOCIGDBNotLoggedInError" />
-  <sys:String x:Key="LOCIGDBAuthenticateLabel" />
-  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCIGDBTroubleShootingIssues" />
-  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCIGDBPrivateAccount" />
-  <sys:String x:Key="LOCIGDBPublicAccount" />
-  <sys:String x:Key="LOCIGDBAPIKey" />
+  <sys:String x:Key="LOCIGDBSettingsImportInstalledLabel">Увези инсталиране игре</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel">Увези неинсталиране игре</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsConnectAccount">Повежи налог</sys:String>
+  <sys:String x:Key="LOCIGDBLoginChecking">Проверавање статуса аутентификације...</sys:String>
+  <sys:String x:Key="LOCIGDBLoggedIn">Корисник је проверен</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedIn">Захтева аутентификацију</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedInError">Неуспешна аутентификација корисника</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateLabel">Аутентификуј</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Покрени игре директно без покретања званичног клијента</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Решавање проблема са синхронизацијом налога</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingIssues">Решавање проблема</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel">Увези све игре</sys:String>
+  <sys:String x:Key="LOCIGDBPrivateAccount">Приватан налог</sys:String>
+  <sys:String x:Key="LOCIGDBPublicAccount">Јавни налог</sys:String>
+  <sys:String x:Key="LOCIGDBAPIKey">API кључ</sys:String>
   <!--IGDB-->
-  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary" />
-  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle" />
-  <sys:String x:Key="LOCIgdbSelectBackgroundTitle" />
+  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Користи снимке екрана ако слике нису доступне</sys:String>
+  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Ако је више слика доступно користи:</sys:String>
+  <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Изабери позадинску слику за {0}</sys:String>
 </ResourceDictionary>

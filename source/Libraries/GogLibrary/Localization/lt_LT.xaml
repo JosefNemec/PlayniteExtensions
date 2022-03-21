@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCGOGSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCGOGSettingsConnectAccount" />
-  <sys:String x:Key="LOCGOGLoginChecking" />
-  <sys:String x:Key="LOCGOGLoggedIn" />
-  <sys:String x:Key="LOCGOGNotLoggedIn" />
-  <sys:String x:Key="LOCGOGNotLoggedInError" />
-  <sys:String x:Key="LOCGOGAuthenticateLabel" />
-  <sys:String x:Key="LOCGOGSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCGOGTroubleShootingAccountLink" />
+  <sys:String x:Key="LOCGOGSettingsImportInstalledLabel">Importuoti įdiegtus žaidimus</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel">Importuoti neįdiegtus žaidimus</sys:String>
+  <sys:String x:Key="LOCGOGSettingsConnectAccount">Susieti paskyrą</sys:String>
+  <sys:String x:Key="LOCGOGLoginChecking">Tikrinama autentifikavimo būsena...</sys:String>
+  <sys:String x:Key="LOCGOGLoggedIn">Vartotojas autentifikuotas</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedIn">Reikalinga autentifikavimas</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedInError">Nepavyko autentifikuoti vartotojo.</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateLabel">Autentifikuoti</sys:String>
+  <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Paleisti žaidimus tiesiogiai, nenaudojant oficialaus kliento</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Spręsti vartotojo sinchronizacijos problemas</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues" />
-  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCGOGPrivateAccount" />
-  <sys:String x:Key="LOCGOGPublicAccount" />
-  <sys:String x:Key="LOCGOGAPIKey" />
+  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">Importuoti visus žaidimus</sys:String>
+  <sys:String x:Key="LOCGOGPrivateAccount">Privatus paskyra</sys:String>
+  <sys:String x:Key="LOCGOGPublicAccount">Vieša paskyra</sys:String>
+  <sys:String x:Key="LOCGOGAPIKey">API raktas</sys:String>
   <!--GOG-->
-  <sys:String x:Key="LOCGOGUseLogin" />
-  <sys:String x:Key="LOCGOGUseAccountName" />
+  <sys:String x:Key="LOCGOGUseLogin">Vartotojo prisijungimas</sys:String>
+  <sys:String x:Key="LOCGOGUseAccountName">Vartotojo vardas</sys:String>
   <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve" />
-  <sys:String x:Key="LOCSettingsGOGUseGalaxy" />
+  <sys:String x:Key="LOCSettingsGOGUseGalaxy">Paleisti žaidimus naudojant GOG Galaxy klientą</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip" />
 </ResourceDictionary>

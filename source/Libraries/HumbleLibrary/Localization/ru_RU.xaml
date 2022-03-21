@@ -8,13 +8,13 @@
   <sys:String x:Key="LOCHumbleNotLoggedIn">Требуется аутентификация</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">Аутентификация</sys:String>
-  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Запускать игры напрямую, без запуска официального клиента</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">Устранение неисправностей</sys:String>
   <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Импортировать все игры</sys:String>
-  <sys:String x:Key="LOCHumblePrivateAccount">Приватный профиль</sys:String>
-  <sys:String x:Key="LOCHumblePublicAccount">Публичный профиль</sys:String>
-  <sys:String x:Key="LOCHumbleAPIKey">Ключ API</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">Закрытый профиль</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">Открытый профиль</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">API-ключ</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Игнорировать игры из сторонних магазинов.</sys:String>
   <sys:String x:Key="LOCHumbleImportTroveGames">Импортирование игр Humble Choice</sys:String>

@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCRockstarSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCRockstarSettingsConnectAccount" />
-  <sys:String x:Key="LOCRockstarLoginChecking" />
-  <sys:String x:Key="LOCRockstarLoggedIn" />
-  <sys:String x:Key="LOCRockstarNotLoggedIn" />
-  <sys:String x:Key="LOCRockstarNotLoggedInError" />
-  <sys:String x:Key="LOCRockstarAuthenticateLabel" />
-  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCRockstarTroubleShootingIssues" />
-  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCRockstarPrivateAccount" />
-  <sys:String x:Key="LOCRockstarPublicAccount" />
-  <sys:String x:Key="LOCRockstarAPIKey" />
+  <sys:String x:Key="LOCRockstarSettingsImportInstalledLabel">Увези инсталиране игре</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel">Увези неинсталиране игре</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsConnectAccount">Повежи налог</sys:String>
+  <sys:String x:Key="LOCRockstarLoginChecking">Проверавање статуса аутентификације...</sys:String>
+  <sys:String x:Key="LOCRockstarLoggedIn">Корисник је проверен</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedIn">Захтева аутентификацију</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedInError">Неуспешна аутентификација корисника</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateLabel">Аутентификуј</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Покрени игре директно без покретања званичног клијента</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Решавање проблема са синхронизацијом налога</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingIssues">Решавање проблема</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">Увези све игре</sys:String>
+  <sys:String x:Key="LOCRockstarPrivateAccount">Приватан налог</sys:String>
+  <sys:String x:Key="LOCRockstarPublicAccount">Јавни налог</sys:String>
+  <sys:String x:Key="LOCRockstarAPIKey">API кључ</sys:String>
 </ResourceDictionary>

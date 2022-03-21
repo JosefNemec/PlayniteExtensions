@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCAmazonSettingsConnectAccount" />
-  <sys:String x:Key="LOCAmazonLoginChecking" />
-  <sys:String x:Key="LOCAmazonLoggedIn" />
-  <sys:String x:Key="LOCAmazonNotLoggedIn" />
-  <sys:String x:Key="LOCAmazonNotLoggedInError" />
-  <sys:String x:Key="LOCAmazonAuthenticateLabel" />
-  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCAmazonTroubleShootingIssues" />
-  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCAmazonPrivateAccount" />
-  <sys:String x:Key="LOCAmazonPublicAccount" />
-  <sys:String x:Key="LOCAmazonAPIKey" />
+  <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel">Увези инсталиране игре</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel">Увези неинсталиране игре</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsConnectAccount">Повежи налог</sys:String>
+  <sys:String x:Key="LOCAmazonLoginChecking">Проверавање статуса аутентификације...</sys:String>
+  <sys:String x:Key="LOCAmazonLoggedIn">Корисник је проверен</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedIn">Захтева аутентификацију</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedInError">Неуспешна аутентификација корисника</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateLabel">Аутентификуј</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Покрени игре директно без покретања званичног клијента</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Решавање проблема са синхронизацијом налога</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingIssues">Решавање проблема</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Увези све игре</sys:String>
+  <sys:String x:Key="LOCAmazonPrivateAccount">Приватан налог</sys:String>
+  <sys:String x:Key="LOCAmazonPublicAccount">Јавни налог</sys:String>
+  <sys:String x:Key="LOCAmazonAPIKey">API кључ</sys:String>
 </ResourceDictionary>

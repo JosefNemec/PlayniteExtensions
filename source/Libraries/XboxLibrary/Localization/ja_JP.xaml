@@ -17,5 +17,5 @@
   <sys:String x:Key="LOCXboxAPIKey">API キー</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">クライアントを開くときにMicrosoft StoreではなくXbox Passアプリを起動する</sys:String>
-  <sys:String x:Key="LOCXboxImportConsoleGames" />
+  <sys:String x:Key="LOCXboxImportConsoleGames">Xboxシリーズのゲームをインポートする</sys:String>
 </ResourceDictionary>

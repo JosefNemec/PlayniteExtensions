@@ -25,7 +25,7 @@
   <sys:String x:Key="LOCSteamLinksGuides">ガイド</sys:String>
   <sys:String x:Key="LOCSteamLinksWorkshop">ワークショップ</sys:String>
   <sys:String x:Key="LOCSteamUseVerticalCovers">縦カバー画像をダウンロードする</sys:String>
-  <sys:String x:Key="LOCSteamImportFreeSubGames">ジェネリックの無料アイテムをインポート</sys:String>
+  <sys:String x:Key="LOCSteamImportFreeSubGames">一般的な無料アイテムをインポート</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportWarn">すべてのSteamゲームで現在のカテゴリーを非表示やお気に入りの状態と同様に上書きします。よろしいですか？</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">カテゴリーをインポートしますか？</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">カテゴリーをインポートできません。インポートするアカウントが選択されていません。</sys:String>

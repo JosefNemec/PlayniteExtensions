@@ -8,13 +8,13 @@
   <sys:String x:Key="LOCGOGNotLoggedIn">Требуется аутентификация</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Аутентификация</sys:String>
-  <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Запускать игры напрямую, без запуска официального клиента</sys:String>
+  <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues">Устранение неисправностей</sys:String>
   <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">Импортировать все игры</sys:String>
-  <sys:String x:Key="LOCGOGPrivateAccount">Приватный профиль</sys:String>
-  <sys:String x:Key="LOCGOGPublicAccount">Публичный профиль</sys:String>
-  <sys:String x:Key="LOCGOGAPIKey">Ключ API</sys:String>
+  <sys:String x:Key="LOCGOGPrivateAccount">Закрытый профиль</sys:String>
+  <sys:String x:Key="LOCGOGPublicAccount">Открытый профиль</sys:String>
+  <sys:String x:Key="LOCGOGAPIKey">API-ключ</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Логин учетной записи</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Имя учетной записи</sys:String>

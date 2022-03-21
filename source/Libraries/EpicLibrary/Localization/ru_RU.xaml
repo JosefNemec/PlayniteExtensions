@@ -8,11 +8,11 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">Требуется аутентификация</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Аутентификация</sys:String>
-  <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Запускать игры напрямую, без запуска официального клиента</sys:String>
+  <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">Устранение неисправностей</sys:String>
   <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">Импортировать все игры</sys:String>
-  <sys:String x:Key="LOCEpicPrivateAccount">Приватный профиль</sys:String>
-  <sys:String x:Key="LOCEpicPublicAccount">Публичный профиль</sys:String>
-  <sys:String x:Key="LOCEpicAPIKey">Ключ API</sys:String>
+  <sys:String x:Key="LOCEpicPrivateAccount">Закрытый профиль</sys:String>
+  <sys:String x:Key="LOCEpicPublicAccount">Открытый профиль</sys:String>
+  <sys:String x:Key="LOCEpicAPIKey">API-ключ</sys:String>
 </ResourceDictionary>

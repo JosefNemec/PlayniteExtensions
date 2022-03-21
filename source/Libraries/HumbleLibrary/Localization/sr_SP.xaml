@@ -1,29 +1,29 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCHumbleSettingsConnectAccount" />
-  <sys:String x:Key="LOCHumbleLoginChecking" />
-  <sys:String x:Key="LOCHumbleLoggedIn" />
-  <sys:String x:Key="LOCHumbleNotLoggedIn" />
-  <sys:String x:Key="LOCHumbleNotLoggedInError" />
-  <sys:String x:Key="LOCHumbleAuthenticateLabel" />
-  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCHumbleTroubleShootingIssues" />
-  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCHumblePrivateAccount" />
-  <sys:String x:Key="LOCHumblePublicAccount" />
-  <sys:String x:Key="LOCHumbleAPIKey" />
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">Увези инсталиране игре</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Увези неинсталиране игре</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">Повежи налог</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">Проверавање статуса аутентификације...</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">Корисник је проверен</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">Захтева аутентификацију</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">Неуспешна аутентификација корисника</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">Аутентификуј</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Покрени игре директно без покретања званичног клијента</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Решавање проблема са синхронизацијом налога</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">Решавање проблема</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Увези све игре</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">Приватан налог</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">Јавни налог</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">API кључ</sys:String>
   <!--Humble-->
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames" />
-  <sys:String x:Key="LOCHumbleImportTroveGames" />
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip" />
-  <sys:String x:Key="LOCHumbleGeneralLibrary" />
-  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve" />
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree" />
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Игнориши игре из осталих продавница</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGames">Увези Хамбл Чоис игре</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Увези доступне игре из претплате на Хамбл Чоис</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibrary">Увези Хамбл библиотеку игара</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Увези стандардне и пакет куповине из Хамбл продавнице</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Укључите да бисте прескочили увод игара које захтевају клијенте треће стране, укључујући и продавнице већ руковођене од стране Playnite-а, да бисте спречили дупликате.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Увези ако је доступна верзија без ДРМ-а</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Увези игре које захтевају остале клијенте ако је и верзија без ДРМ-а доступна.</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Увек користи Хамбл апликацију за покретање игара</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Када је опција искључена,  неће се покретати игре директно, занемарујући Хамбл апликацију.</sys:String>
 </ResourceDictionary>

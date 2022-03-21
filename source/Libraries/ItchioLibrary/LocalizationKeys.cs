@@ -77,5 +77,13 @@ namespace System
         /// itch.io app version 25 or newer is not installed.
         /// </summary>
         public const string ItchioClientNotInstalledError = "LOCItchioClientNotInstalledError";
+        /// <summary>
+        /// Import free games from collections.
+        /// </summary>
+        public const string itchioSettingsImportFreeGamesFromCollectionsLabel = "LOCitchioSettingsImportFreeGamesFromCollectionsLabel";
+        /// <summary>
+        /// Items to be imported:
+        /// </summary>
+        public const string itchioSettingsImportGameClassificationLabel = "LOCitchioSettingsImportGameClassificationLabel";
     }
 }

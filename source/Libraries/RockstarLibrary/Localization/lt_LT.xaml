@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCRockstarSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCRockstarSettingsConnectAccount" />
-  <sys:String x:Key="LOCRockstarLoginChecking" />
-  <sys:String x:Key="LOCRockstarLoggedIn" />
-  <sys:String x:Key="LOCRockstarNotLoggedIn" />
-  <sys:String x:Key="LOCRockstarNotLoggedInError" />
-  <sys:String x:Key="LOCRockstarAuthenticateLabel" />
-  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink" />
+  <sys:String x:Key="LOCRockstarSettingsImportInstalledLabel">Importuoti įdiegtus žaidimus</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel">Importuoti neįdiegtus žaidimus</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsConnectAccount">Susieti paskyrą</sys:String>
+  <sys:String x:Key="LOCRockstarLoginChecking">Tikrinama autentifikavimo būsena...</sys:String>
+  <sys:String x:Key="LOCRockstarLoggedIn">Vartotojas autentifikuotas</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedIn">Reikalinga autentifikavimas</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedInError">Nepavyko autentifikuoti vartotojo.</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateLabel">Autentifikuoti</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Paleisti žaidimus tiesiogiai, nenaudojant oficialaus kliento</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Spręsti vartotojo sinchronizacijos problemas</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues" />
-  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCRockstarPrivateAccount" />
-  <sys:String x:Key="LOCRockstarPublicAccount" />
-  <sys:String x:Key="LOCRockstarAPIKey" />
+  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">Importuoti visus žaidimus</sys:String>
+  <sys:String x:Key="LOCRockstarPrivateAccount">Privatus paskyra</sys:String>
+  <sys:String x:Key="LOCRockstarPublicAccount">Vieša paskyra</sys:String>
+  <sys:String x:Key="LOCRockstarAPIKey">API raktas</sys:String>
 </ResourceDictionary>

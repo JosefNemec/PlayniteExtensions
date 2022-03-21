@@ -17,14 +17,14 @@
   <sys:String x:Key="LOCHumbleAPIKey">API Klíč</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorovat hry z obchodů třetích stran</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGames" />
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip" />
-  <sys:String x:Key="LOCHumbleGeneralLibrary" />
-  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
+  <sys:String x:Key="LOCHumbleImportTroveGames">Importovat hry Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importovat hry dostupné jako součást předplatného Humble Choice.</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibrary">Importovat hry knihovny Humble</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importovat standardní a bundle nákupy z Humble obchodu.</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Povolte pro přeskočení importu her, které vyžadují klienty třetích stran,
 včetně obchodů již spravovaných v Playnite, pro zabránění duplikátům.</sys:String>
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importovat, pokud je k dispozici verze bez DRM</sys:String>
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importovat hry vyžadující klient třetí strany, pokud je také dostupná verze bez DRM.</sys:String>
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Vždy použít aplikaci Humble pro spouštění her</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Je-li vypnuto, Playnite se pokusí spustit hry přímo a obejít aplikaci Humble.</sys:String>
 </ResourceDictionary>

@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCBattleNetSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCBattleNetSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCBattleNetSettingsConnectAccount" />
-  <sys:String x:Key="LOCBattleNetLoginChecking" />
-  <sys:String x:Key="LOCBattleNetLoggedIn" />
-  <sys:String x:Key="LOCBattleNetNotLoggedIn" />
-  <sys:String x:Key="LOCBattleNetNotLoggedInError" />
-  <sys:String x:Key="LOCBattleNetAuthenticateLabel" />
-  <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCBattleNetTroubleShootingIssues" />
-  <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCBattleNetPrivateAccount" />
-  <sys:String x:Key="LOCBattleNetPublicAccount" />
-  <sys:String x:Key="LOCBattleNetAPIKey" />
+  <sys:String x:Key="LOCBattleNetSettingsImportInstalledLabel">Увези инсталиране игре</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportUninstalledLabel">Увези неинсталиране игре</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsConnectAccount">Повежи налог</sys:String>
+  <sys:String x:Key="LOCBattleNetLoginChecking">Проверавање статуса аутентификације...</sys:String>
+  <sys:String x:Key="LOCBattleNetLoggedIn">Корисник је проверен</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedIn">Захтева аутентификацију</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedInError">Неуспешна аутентификација корисника</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateLabel">Аутентификуј</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Покрени игре директно без покретања званичног клијента</sys:String>
+  <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Решавање проблема са синхронизацијом налога</sys:String>
+  <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Решавање проблема</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel">Увези све игре</sys:String>
+  <sys:String x:Key="LOCBattleNetPrivateAccount">Приватан налог</sys:String>
+  <sys:String x:Key="LOCBattleNetPublicAccount">Јавни налог</sys:String>
+  <sys:String x:Key="LOCBattleNetAPIKey">API кључ</sys:String>
 </ResourceDictionary>

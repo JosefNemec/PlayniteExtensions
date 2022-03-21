@@ -8,14 +8,14 @@
   <sys:String x:Key="LOCXboxNotLoggedIn">Требуется аутентификация</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
   <sys:String x:Key="LOCXboxAuthenticateLabel">Аутентификация</sys:String>
-  <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Запускать игры напрямую, без запуска официального клиента</sys:String>
+  <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingIssues">Устранение неисправностей</sys:String>
   <sys:String x:Key="LOCXboxSettingsImportLibraryLabel">Импортировать все игры</sys:String>
-  <sys:String x:Key="LOCXboxPrivateAccount">Приватный профиль</sys:String>
-  <sys:String x:Key="LOCXboxPublicAccount">Публичный профиль</sys:String>
-  <sys:String x:Key="LOCXboxAPIKey">Ключ API</sys:String>
+  <sys:String x:Key="LOCXboxPrivateAccount">Закрытый профиль</sys:String>
+  <sys:String x:Key="LOCXboxPublicAccount">Открытый профиль</sys:String>
+  <sys:String x:Key="LOCXboxAPIKey">API-ключ</sys:String>
   <!--Xbox-->
-  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Запускать Xbox Pass вместо Microsoft Store при открытии клиента</sys:String>
-  <sys:String x:Key="LOCXboxImportConsoleGames">Импортирование игр с Xbox</sys:String>
+  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">При открытии клиента запускать приложение Xbox вместо Microsoft Store</sys:String>
+  <sys:String x:Key="LOCXboxImportConsoleGames">Импорт консольных игр Xbox</sys:String>
 </ResourceDictionary>

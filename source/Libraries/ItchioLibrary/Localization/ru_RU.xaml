@@ -8,15 +8,15 @@
   <sys:String x:Key="LOCitchioNotLoggedIn">Требуется аутентификация</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">Аутентификация</sys:String>
-  <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Запускать игры напрямую, без запуска официального клиента</sys:String>
+  <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingIssues">Устранение неисправностей</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">Импортировать все игры</sys:String>
-  <sys:String x:Key="LOCitchioPrivateAccount">Приватный профиль</sys:String>
-  <sys:String x:Key="LOCitchioPublicAccount">Публичный профиль</sys:String>
-  <sys:String x:Key="LOCitchioAPIKey">Ключ API</sys:String>
+  <sys:String x:Key="LOCitchioPrivateAccount">Закрытый профиль</sys:String>
+  <sys:String x:Key="LOCitchioPublicAccount">Открытый профиль</sys:String>
+  <sys:String x:Key="LOCitchioAPIKey">API-ключ</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">Откроется клиент itch.io. Пожалуйста, войдите в систему и закройте это сообщение.</sys:String>
-  <sys:String x:Key="LOCItchioSignInWaitMessage">Ожидание входа пользователя, пожалуйста, закройте сообщение, когда войдете…</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">Ожидание входа в учетную запись, закройте сообщение по готовности…</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">Приложение Itch.io версии 25 или новее не установлено.</sys:String>
 </ResourceDictionary>

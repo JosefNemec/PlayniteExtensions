@@ -17,5 +17,5 @@
   <sys:String x:Key="LOCXboxAPIKey">API Klíč</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Spustit aplikaci Xbox Pass namísto Microsoft Store při otevírání klienta</sys:String>
-  <sys:String x:Key="LOCXboxImportConsoleGames" />
+  <sys:String x:Key="LOCXboxImportConsoleGames">Importovat hry konzole Xbox</sys:String>
 </ResourceDictionary>

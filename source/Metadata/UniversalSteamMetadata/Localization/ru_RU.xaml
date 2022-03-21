@@ -8,11 +8,11 @@
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedIn">Требуется аутентификация</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateLabel">Аутентификация</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataSettingsStartGameDirectly">Запускать игры напрямую, без запуска официального клиента</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingIssues">Устранение неисправностей</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataSettingsImportLibraryLabel">Импортировать все игры</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Приватный профиль</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Публичный профиль</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">Ключ API</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Закрытый профиль</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Открытый профиль</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API-ключ</sys:String>
 </ResourceDictionary>

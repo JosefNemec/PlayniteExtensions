@@ -62,17 +62,17 @@ Připomínáme, že možnost zadání jména účtu funguje pouze pro ty účty,
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Vyberte obrázek pozadí pro {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorovat hry z obchodů třetích stran</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip"></sys:String>
-    <sys:String x:Key="LOCHumbleGeneralLibrary"></sys:String>
-    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGames">Importovat hry Humble Choice</sys:String>
+    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importovat hry dostupné jako součást předplatného Humble Choice.</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">Importovat hry knihovny Humble</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importovat standardní a bundle nákupy z Humble obchodu.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Povolte pro přeskočení importu her, které vyžadují klienty třetích stran,
 včetně obchodů již spravovaných v Playnite, pro zabránění duplikátům.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importovat, pokud je k dispozici verze bez DRM</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importovat hry vyžadující klient třetí strany, pokud je také dostupná verze bez DRM.</sys:String>
-    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart"></sys:String>
-    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Vždy použít aplikaci Humble pro spouštění her</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Je-li vypnuto, Playnite se pokusí spustit hry přímo a obejít aplikaci Humble.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Spustit aplikaci Xbox Pass namísto Microsoft Store při otevírání klienta</sys:String>
-    <sys:String x:Key="LOCXboxImportConsoleGames"></sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">Importovat hry konzole Xbox</sys:String>
 </ResourceDictionary>
