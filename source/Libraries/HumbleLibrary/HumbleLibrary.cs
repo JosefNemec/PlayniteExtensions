@@ -384,7 +384,7 @@ namespace HumbleLibrary
                 }
                 else
                 {
-                    var installed = GetInstalledGames().FirstOrDefault(a => a.GameId == args.Game.GameId);
+                    var installed = GetInstalledGames().FirstOrDefault(a => a.GameId == args.Game.GameId && a.IsInstalled);
                     if (installed != null)
                     {
                         yield return new AutomaticPlayController(args.Game)
