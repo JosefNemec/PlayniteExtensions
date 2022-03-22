@@ -39,6 +39,7 @@ namespace HumbleLibrary
     [LoadPlugin]
     public class HumbleLibrary : LibraryPluginBase<HumbleLibrarySettingsViewModel>
     {
+        private static readonly ILogger logger = LogManager.GetLogger();
         public string UserAgent { get; }
 
         public HumbleLibrary(IPlayniteAPI api) : base(
@@ -93,12 +94,21 @@ namespace HumbleLibrary
                 }
 
                 var installDir = Path.GetDirectoryName(exePath);
+                var isInstalled = true;
+                if (!Directory.Exists(installDir))
+                {
+                    logger.Error($"{entry.gameName} installation directory {installDir} not detected.");
+                    installDir = string.Empty;
+                    isInstalled = false;
+                }
+
                 games.Add(new InstalledTroveGame
                 {
                     Name = entry.gameName,
                     GameId = entry.machineName,
                     InstallDirectory = installDir,
-                    Executable = exePath
+                    Executable = exePath,
+                    IsInstalled = isInstalled
                 });
             }
 
@@ -279,7 +289,7 @@ namespace HumbleLibrary
                             var installed = installedGames.FirstOrDefault(a => a.GameId == troveGame.GameId);
                             if (installed != null)
                             {
-                                troveGame.IsInstalled = true;
+                                troveGame.IsInstalled = installed.IsInstalled;
                                 troveGame.InstallDirectory = installed.InstallDirectory;
                             }
 
