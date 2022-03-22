@@ -39,7 +39,6 @@ namespace HumbleLibrary
     [LoadPlugin]
     public class HumbleLibrary : LibraryPluginBase<HumbleLibrarySettingsViewModel>
     {
-        private static readonly ILogger logger = LogManager.GetLogger();
         public string UserAgent { get; }
 
         public HumbleLibrary(IPlayniteAPI api) : base(
@@ -97,7 +96,7 @@ namespace HumbleLibrary
                 var isInstalled = true;
                 if (!Directory.Exists(installDir))
                 {
-                    logger.Error($"{entry.gameName} installation directory {installDir} not detected.");
+                    Logger.Error($"{entry.gameName} installation directory {installDir} not detected.");
                     installDir = string.Empty;
                     isInstalled = false;
                 }
