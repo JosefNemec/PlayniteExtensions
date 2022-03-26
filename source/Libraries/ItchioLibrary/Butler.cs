@@ -360,8 +360,8 @@ namespace ItchioLibrary
             if (optionalParameters != null)
             {
                 foreach (var pair in optionalParameters)
-                { 
-                    prms.Add(pair.Key, pair.Value); 
+                {
+                    prms.Add(pair.Key, pair.Value);
                 }
             }
             var gameRecords = client.SendRequest<FetchGameRecords>(Methods.FetchGameRecords, prms);
