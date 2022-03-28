@@ -3,7 +3,9 @@ using Playnite.SDK;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,7 +15,7 @@ namespace GogLibrary
     {
         private static readonly ILogger logger = LogManager.GetLogger();
 
-        public override string Icon => Gog.Icon;
+        public override string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources\galaxyIcon.png");
 
         public override bool IsInstalled => Gog.IsInstalled;
 
