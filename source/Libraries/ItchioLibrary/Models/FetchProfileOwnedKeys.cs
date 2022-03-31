@@ -49,5 +49,9 @@ namespace ItchioLibrary.Models
         /// Download keys fetched for profile
         /// </summary>
         public List<DownloadKey> items;
+        /// <summary>
+        /// True if the info was from local DB and it should be re-queried using “Fresh”.
+        /// </summary>
+        public bool stale;
     }
 }

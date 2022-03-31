@@ -341,37 +341,49 @@ namespace ItchioLibrary
 
         public FetchCollections GetCollection(long id)
         {
-            return client.SendRequest<FetchCollections>(Methods.FetchCollections, new Dictionary<string, object>
+            var prms = new Dictionary<string, object>();
+            prms.Add("profileId",id);
+            var collections = client.SendRequest<FetchCollections>(Methods.FetchCollections, prms);
+            if (collections.stale)
             {
-                {"profileId",id }
-            });
+                prms.Add("fresh", true);
+                collections = client.SendRequest<FetchCollections>(Methods.FetchCollections, prms);
+            }
+            return collections;
         }
 
         public FetchGameRecords GetGameRecords(long id, string source, Dictionary<string, object> optionalParameters = null)
         {
-            var parameters = new Dictionary<string, object>
-            {
-                { "profileId",id },
-                { "source", source },
-            };
+            var prms = new Dictionary<string, object>();
+            prms.Add("profileId", id);
+            prms.Add("source", source);
             if (optionalParameters != null)
             {
                 foreach (var pair in optionalParameters)
                 {
-                    parameters.Add(pair.Key, pair.Value);
+                    prms.Add(pair.Key, pair.Value);
                 }
             }
-
-            return client.SendRequest<FetchGameRecords>(Methods.FetchGameRecords, parameters);
+            var gameRecords = client.SendRequest<FetchGameRecords>(Methods.FetchGameRecords, prms);
+            if (gameRecords.stale)
+            {
+                prms.Add("fresh", true);
+                gameRecords = client.SendRequest<FetchGameRecords>(Methods.FetchGameRecords, prms);
+            }
+            return gameRecords;
         }
 
         public ItchioGame GetGame(int gameId)
         {
-            return client.SendRequest<FetchGame>(Methods.Fetch_Game, new Dictionary<string, object>
+            var prms = new Dictionary<string, object>();
+            prms.Add("gameId", gameId);
+            var game = client.SendRequest<FetchGame>(Methods.Fetch_Game, prms);
+            if (game.stale)
             {
-                { "gameId", gameId },
-                { "fresh", true }
-            }).game;
+                prms.Add("fresh", true);
+                game = client.SendRequest<FetchGame>(Methods.Fetch_Game, prms);
+            }
+            return game.game;
         }
 
         public void Shutdown()
@@ -381,11 +393,15 @@ namespace ItchioLibrary
 
         public List<DownloadKey> GetOwnedKeys(long profileId)
         {
-            return client.SendRequest<FetchProfileOwnedKeys>(Methods.Fetch_ProfileOwnedKeys, new Dictionary<string, object>
+            var prms = new Dictionary<string, object>();
+            prms.Add("profileId", profileId);
+            var ownedKeys = client.SendRequest<FetchProfileOwnedKeys>(Methods.Fetch_ProfileOwnedKeys, prms);
+            if (ownedKeys.stale)
             {
-                { "profileId", profileId },
-                { "fresh", true }
-            }).items;
+                prms.Add("fresh", true);
+                ownedKeys = client.SendRequest<FetchProfileOwnedKeys>(Methods.Fetch_ProfileOwnedKeys, prms);
+            }
+            return ownedKeys.items;
         }
 
         public Task LaunchAsync(string caveId)

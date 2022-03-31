@@ -9,5 +9,9 @@ namespace ItchioLibrary.Models
         /// Requested game records.
         /// </summary>
         public List<GameRecord> records;
+        /// <summary>
+        /// True if the info was from local DB and it should be re-queried using “Fresh”.
+        /// </summary>
+        public bool stale;
     }
 }
