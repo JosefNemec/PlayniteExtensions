@@ -25,3 +25,9 @@ Packages:
     Changelog:
       - Option to select type of items to import (by jakopo87)
       - Option to import items from custom collections (by jakopo87)
+  - Version: 2.4
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-04-01
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/ItchioLibrary_Builtin_2_4.pext
+    Changelog:
+      - Fixed issue that old collections are imported instead of latest collections (by ryouma-aurora)
