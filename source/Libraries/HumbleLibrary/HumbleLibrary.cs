@@ -93,12 +93,9 @@ namespace HumbleLibrary
                 }
 
                 var installDir = Path.GetDirectoryName(exePath);
-                var isInstalled = true;
                 if (!Directory.Exists(installDir))
                 {
-                    Logger.Error($"{entry.gameName} installation directory {installDir} not detected.");
-                    installDir = string.Empty;
-                    isInstalled = false;
+                    continue;
                 }
 
                 games.Add(new InstalledTroveGame
@@ -107,7 +104,7 @@ namespace HumbleLibrary
                     GameId = entry.machineName,
                     InstallDirectory = installDir,
                     Executable = exePath,
-                    IsInstalled = isInstalled
+                    IsInstalled = true
                 });
             }
 
@@ -384,7 +381,7 @@ namespace HumbleLibrary
                 }
                 else
                 {
-                    var installed = GetInstalledGames().FirstOrDefault(a => a.GameId == args.Game.GameId && a.IsInstalled);
+                    var installed = GetInstalledGames().FirstOrDefault(a => a.GameId == args.Game.GameId);
                     if (installed != null)
                     {
                         yield return new AutomaticPlayController(args.Game)
