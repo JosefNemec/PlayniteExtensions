@@ -64,12 +64,10 @@ namespace EpicLibrary
 
                 var gameName = manifest?.DisplayName ?? Path.GetFileName(app.InstallLocation);
                 var installLocation = manifest?.InstallLocation ?? app.InstallLocation;
-                var isInstalled = true;
                 if (!Directory.Exists(installLocation))
                 {
                     logger.Error($"Epic game {gameName} installation directory {installLocation} not detected.");
-                    isInstalled = false;
-                    installLocation = string.Empty;
+                    continue;
                 }
 
                 var game = new GameMetadata()
@@ -78,7 +76,7 @@ namespace EpicLibrary
                     GameId = app.AppName,
                     Name = gameName,
                     InstallDirectory = installLocation,
-                    IsInstalled = isInstalled,
+                    IsInstalled = true,
                     Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
