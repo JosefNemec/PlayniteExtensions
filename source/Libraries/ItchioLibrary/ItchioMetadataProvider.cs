@@ -63,7 +63,11 @@ namespace ItchioLibrary
                 var gamePage = parser.Parse(gamePageSrc);
 
                 // Description
-                gameData.Description = gamePage.QuerySelector(".formatted_description").InnerHtml;
+                var descriptionElement = gamePage.QuerySelector(".formatted_description");
+                if (descriptionElement != null)
+                {
+                    gameData.Description = gamePage.QuerySelector(".formatted_description").InnerHtml;
+                }
 
                 // Background
                 var gameTheme = gamePage.QuerySelector("#game_theme").InnerHtml;
