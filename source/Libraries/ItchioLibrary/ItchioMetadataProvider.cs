@@ -134,6 +134,11 @@ namespace ItchioLibrary
                 }
             }
 
+            if (gameData.ReleaseDate == null && itchGame.publishedAt != null)
+            {
+                gameData.ReleaseDate = new ReleaseDate((DateTime)itchGame.publishedAt);
+            }
+
             return gameData;
         }
 
