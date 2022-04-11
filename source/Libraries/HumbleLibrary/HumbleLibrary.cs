@@ -93,12 +93,18 @@ namespace HumbleLibrary
                 }
 
                 var installDir = Path.GetDirectoryName(exePath);
+                if (!Directory.Exists(installDir))
+                {
+                    continue;
+                }
+
                 games.Add(new InstalledTroveGame
                 {
                     Name = entry.gameName,
                     GameId = entry.machineName,
                     InstallDirectory = installDir,
-                    Executable = exePath
+                    Executable = exePath,
+                    IsInstalled = true
                 });
             }
 
@@ -279,7 +285,7 @@ namespace HumbleLibrary
                             var installed = installedGames.FirstOrDefault(a => a.GameId == troveGame.GameId);
                             if (installed != null)
                             {
-                                troveGame.IsInstalled = true;
+                                troveGame.IsInstalled = installed.IsInstalled;
                                 troveGame.InstallDirectory = installed.InstallDirectory;
                             }
 
