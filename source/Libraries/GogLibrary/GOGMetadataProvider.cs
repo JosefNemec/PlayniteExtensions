@@ -88,7 +88,9 @@ namespace GogLibrary
             {
                 if (gameDetail.links.product_card != @"https://www.gog.com/" && !string.IsNullOrEmpty(gameDetail.links.product_card))
                 {
-                    metadata.StoreDetails = apiClient.GetGameStoreData(gameDetail.links.product_card);
+                    // This removes language component from the URL
+                    var productUrl = @"https://www.gog.com/game" + gameDetail.links.product_card.Substring(gameDetail.links.product_card.LastIndexOf("/"));
+                    metadata.StoreDetails = apiClient.GetGameStoreData(productUrl);
                 }
 
                 metadata.Icon = new MetadataFile("http:" + gameDetail.images.icon);
