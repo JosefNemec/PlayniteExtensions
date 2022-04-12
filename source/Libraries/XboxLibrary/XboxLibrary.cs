@@ -311,7 +311,7 @@ namespace XboxLibrary
                 yield break;
             }
 
-            yield return new XboxInstallController(args.Game);
+            yield return new XboxInstallController(args.Game, SettingsViewModel.Settings.XboxAppClientPriorityLaunch && Xbox.IsXboxPassAppInstalled);
         }
 
         public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
