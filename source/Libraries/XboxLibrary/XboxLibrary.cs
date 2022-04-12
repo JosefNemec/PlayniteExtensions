@@ -227,9 +227,19 @@ namespace XboxLibrary
 
                         if (import)
                         {
+                            var installDir = installedApp.WorkDir;
+                            try
+                            {
+                                installDir = Paths.GetFinalPathName(installedApp.WorkDir);
+                            }
+                            catch (Exception e)
+                            {
+                                Logger.Error(e, $"Failed to get real path for Xbox game {installDir}");
+                            }
+
                             var game = GetGameMetadataFromTitle(libTitle);
                             game.IsInstalled = true;
-                            game.InstallDirectory = installedApp.WorkDir;
+                            game.InstallDirectory = installDir;
                             game.Icon = installedApp.Icon.IsNullOrEmpty() ? null : new MetadataFile(installedApp.Icon);
                             installedGames.Add(libTitle.pfn, game);
                         }
