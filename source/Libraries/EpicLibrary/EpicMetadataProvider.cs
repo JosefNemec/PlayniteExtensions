@@ -34,6 +34,14 @@ namespace EpicLibrary
                         catalog = catalogs[0];
                     }
 
+                    // Some games use completely different way in which the store gets game related data.
+                    // I don't understand why Epic doesn't have this unified, but the other way totally sucks,
+                    // so we are not going to support those games right now.
+                    if (catalog.productSlug.IsNullOrEmpty())
+                    {
+                        throw new Exception("Can't get Epic metadata for this game, use different metadata source.");
+                    }
+
                     var product = client.GetProductInfo(catalog.productSlug).GetAwaiter().GetResult();
                     if (product.pages.HasItems())
                     {
