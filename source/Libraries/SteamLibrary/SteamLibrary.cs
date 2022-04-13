@@ -781,6 +781,18 @@ namespace SteamLibrary
                     var libraryGames = GetLibraryGames(SettingsViewModel.Settings);
                     Logger.Debug($"Found {libraryGames.Count} library Steam games.");
 
+                    if (SettingsViewModel.Settings.IgnoreOtherInstalled)
+                    {
+                        foreach (var installedGameId in installedGames.Keys.ToList())
+                        {
+                            if (libraryGames.FirstOrDefault(a => a.GameId == installedGameId) == null)
+                            {
+                                allGames.Remove(installedGames[installedGameId]);
+                                installedGames.Remove(installedGameId);
+                            }
+                        }
+                    }
+
                     if (!SettingsViewModel.Settings.ImportUninstalledGames)
                     {
                         libraryGames = libraryGames.Where(lg => installedGames.ContainsKey(lg.GameId)).ToList();

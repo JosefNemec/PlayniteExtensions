@@ -45,4 +45,5 @@
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Show friends button on Top panel</sys:String>
   <sys:String x:Key="LOCSteamFriendsTooltip">Steam Friends</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignore installed games from other accounts</sys:String>
 </ResourceDictionary>

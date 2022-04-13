@@ -26,6 +26,9 @@ namespace SteamLibrary
 
     public class SteamLibrarySettings : ObservableObject
     {
+        private bool isPrivateAccount;
+        private string apiKey = string.Empty;
+
         public int Version { get; set; }
         public bool DownloadVerticalCovers { get; set; } = true;
         public bool ImportInstalledGames { get; set; } = true;
@@ -35,30 +38,9 @@ namespace SteamLibrary
         public string UserId { get; set; } = string.Empty;
         public bool IncludeFreeSubGames { get; set; } = false;
         public bool ShowFriendsButton { get; set; } = true;
-
-        private bool isPrivateAccount;
-        public bool IsPrivateAccount
-        {
-            get => isPrivateAccount;
-            set
-            {
-                isPrivateAccount = value;
-                OnPropertyChanged();
-                OnPropertyChanged(nameof(AuthStatus));
-            }
-        }
-
-        private string apiKey = string.Empty;
-        public string ApiKey
-        {
-            get => apiKey;
-            set
-            {
-                apiKey = value;
-                OnPropertyChanged();
-                OnPropertyChanged(nameof(AuthStatus));
-            }
-        }
+        public bool IsPrivateAccount { get => isPrivateAccount; set => SetValue(ref isPrivateAccount, value); }
+        public string ApiKey { get => apiKey; set => SetValue(ref apiKey, value); }
+        public bool IgnoreOtherInstalled { get; set; }
     }
 
     public class SteamLibrarySettingsViewModel : PluginSettingsViewModel<SteamLibrarySettings, SteamLibrary>
@@ -168,6 +150,17 @@ namespace SteamLibrary
             else
             {
                 Settings = new SteamLibrarySettings() { Version = 1 };
+            }
+
+            Settings.PropertyChanged += Settings_PropertyChanged;
+        }
+
+        private void Settings_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(SteamLibrarySettings.IsPrivateAccount) ||
+                e.PropertyName == nameof(SteamLibrarySettings.ApiKey))
+            {
+                OnPropertyChanged(nameof(AuthStatus));
             }
         }
 

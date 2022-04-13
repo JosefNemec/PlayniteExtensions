@@ -185,5 +185,9 @@ namespace System
         /// Steam Friends
         /// </summary>
         public const string SteamFriendsTooltip = "LOCSteamFriendsTooltip";
+        /// <summary>
+        /// Ignore installed games from other accounts
+        /// </summary>
+        public const string SteamIgnoreOtherAccountGames = "LOCSteamIgnoreOtherAccountGames";
     }
 }
