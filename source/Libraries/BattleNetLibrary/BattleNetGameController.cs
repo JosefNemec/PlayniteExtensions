@@ -146,7 +146,7 @@ namespace BattleNetLibrary
 
         public BnetPlayController(Game game) : base(game)
         {
-            Name = game.Name;
+            Name = string.Format(ResourceProvider.GetString(LOC.BattleNetStartUsingClient), "Battle.net");
         }
 
         public override void Dispose()

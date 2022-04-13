@@ -66,6 +66,10 @@ namespace System
         /// </summary>
         public const string HumbleAPIKey = "LOCHumbleAPIKey";
         /// <summary>
+        /// Start using {0} client
+        /// </summary>
+        public const string HumbleStartUsingClient = "LOCHumbleStartUsingClient";
+        /// <summary>
         /// Ignore third party store games
         /// </summary>
         public const string HumbleIgnoreThirdPartyStoreGames = "LOCHumbleIgnoreThirdPartyStoreGames";

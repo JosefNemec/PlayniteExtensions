@@ -79,7 +79,7 @@ namespace GogLibrary
                 {
                     Type = AutomaticPlayActionType.File,
                     TrackingMode = TrackingMode.Directory,
-                    Name = "Start using Galaxy",
+                    Name = ResourceProvider.GetString(LOC.GOGStartUsingClient).Format("Galaxy"),
                     TrackingPath = installEntry.InstallDirectory,
                     Arguments = string.Format(@"/gameId={0} /command=runGame /path=""{1}""", args.Game.GameId, installEntry.InstallDirectory),
                     Path = Path.Combine(Gog.InstallationPath, "GalaxyClient.exe")

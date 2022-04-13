@@ -14,4 +14,5 @@
   <sys:String x:Key="LOCEpicPrivateAccount">Private Account</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">Public Account</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">API Key</sys:String>
+  <sys:String x:Key="LOCEpicStartUsingClient">Start using {0} client</sys:String>
 </ResourceDictionary>

@@ -116,7 +116,7 @@ namespace RockstarGamesLibrary
 
         public RockstarPlayController(Game game) : base(game)
         {
-            Name = "Play using Rockstar client";
+            Name = ResourceProvider.GetString(LOC.RockstarStartUsingClient).Format("Rockstar");
         }
 
         public override void Dispose()

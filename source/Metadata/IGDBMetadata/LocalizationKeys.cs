@@ -66,6 +66,10 @@ namespace System
         /// </summary>
         public const string IGDBAPIKey = "LOCIGDBAPIKey";
         /// <summary>
+        /// Start using {0} client
+        /// </summary>
+        public const string IGDBStartUsingClient = "LOCIGDBStartUsingClient";
+        /// <summary>
         /// Use screenshots if artwork is not available
         /// </summary>
         public const string IgdbUseScreenshotIfNecessary = "LOCIgdbUseScreenshotIfNecessary";

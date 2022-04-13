@@ -65,5 +65,9 @@ namespace System
         /// API Key
         /// </summary>
         public const string UniversalSteamMetadataAPIKey = "LOCUniversalSteamMetadataAPIKey";
+        /// <summary>
+        /// Start using {0} client
+        /// </summary>
+        public const string UniversalSteamMetadataStartUsingClient = "LOCUniversalSteamMetadataStartUsingClient";
     }
 }

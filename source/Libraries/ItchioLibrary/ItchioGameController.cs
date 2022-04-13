@@ -135,7 +135,7 @@ namespace ItchioLibrary
 
         public ItchPlayController(Game game) : base(game)
         {
-            Name = "Play using Itch client";
+            Name = ResourceProvider.GetString(LOC.itchioStartUsingClient).Format("itch.io");
         }
 
         public override void Dispose()

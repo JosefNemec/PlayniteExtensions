@@ -66,6 +66,10 @@ namespace System
         /// </summary>
         public const string SteamAPIKey = "LOCSteamAPIKey";
         /// <summary>
+        /// Start using {0} client
+        /// </summary>
+        public const string SteamStartUsingClient = "LOCSteamStartUsingClient";
+        /// <summary>
         /// What's my account name?
         /// </summary>
         public const string SettingsWhatsSteamName = "LOCSettingsWhatsSteamName";

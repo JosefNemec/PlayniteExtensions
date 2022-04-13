@@ -375,7 +375,7 @@ namespace HumbleLibrary
                         Type = AutomaticPlayActionType.Url,
                         TrackingMode = TrackingMode.Directory,
                         TrackingPath = args.Game.InstallDirectory,
-                        Name = "Start using Humble App",
+                        Name = ResourceProvider.GetString(LOC.HumbleStartUsingClient).Format("Humble"),
                         Path = $"humble://launch/{args.Game.GameId}"
                     };
                 }

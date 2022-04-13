@@ -145,7 +145,7 @@ namespace SteamLibrary
         public SteamPlayController(Game game) : base(game)
         {
             gameId = game.ToSteamGameID();
-            Name = "Play on Steam";
+            Name = string.Format(ResourceProvider.GetString(LOC.SteamStartUsingClient), "Steam");
         }
 
         public override void Dispose()

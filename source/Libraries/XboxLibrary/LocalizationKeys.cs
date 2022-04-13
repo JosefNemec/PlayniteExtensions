@@ -66,6 +66,10 @@ namespace System
         /// </summary>
         public const string XboxAPIKey = "LOCXboxAPIKey";
         /// <summary>
+        /// Start using {0} client
+        /// </summary>
+        public const string XboxStartUsingClient = "LOCXboxStartUsingClient";
+        /// <summary>
         /// Start Xbox Pass app instead of Microsoft Store when opening client
         /// </summary>
         public const string XboxXboxAppClientPriorityLaunch = "LOCXboxXboxAppClientPriorityLaunch";

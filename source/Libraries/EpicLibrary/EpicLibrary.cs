@@ -248,7 +248,7 @@ namespace EpicLibrary
                 TrackingMode = TrackingMode.Directory,
                 TrackingPath = args.Game.InstallDirectory,
                 Path = string.Format(EpicLauncher.GameLaunchUrlMask, args.Game.GameId),
-                Name = "Start using EGS client"
+                Name = ResourceProvider.GetString(LOC.EpicStartUsingClient).Format("Epic")
             };
         }
 

@@ -117,7 +117,7 @@ namespace UplayLibrary
 
         public UplayPlayController(Game game) : base(game)
         {
-            Name = "Play using Ubisoft Connect client";
+            Name = string.Format(ResourceProvider.GetString(LOC.UbisoftStartUsingClient), "Ubisoft Connect");
         }
 
         public override void Dispose()

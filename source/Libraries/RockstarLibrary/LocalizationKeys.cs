@@ -65,5 +65,9 @@ namespace System
         /// API Key
         /// </summary>
         public const string RockstarAPIKey = "LOCRockstarAPIKey";
+        /// <summary>
+        /// Start using {0} client
+        /// </summary>
+        public const string RockstarStartUsingClient = "LOCRockstarStartUsingClient";
     }
 }

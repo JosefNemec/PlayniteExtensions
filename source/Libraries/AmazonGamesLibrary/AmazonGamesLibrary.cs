@@ -74,7 +74,7 @@ namespace AmazonGamesLibrary
                 {
                     Type = AutomaticPlayActionType.Url,
                     TrackingMode = TrackingMode.Directory,
-                    Name = "Start using Amazon client",
+                    Name = ResourceProvider.GetString(LOC.AmazonStartUsingClient).Format("Amazon"),
                     TrackingPath = args.Game.InstallDirectory,
                     Path = $"amazon-games://play/{args.Game.GameId}"
                 };
@@ -85,7 +85,7 @@ namespace AmazonGamesLibrary
                 {
                     Type = AutomaticPlayActionType.File,
                     TrackingMode = TrackingMode.Directory,
-                    Name = $"Start {args.Game.Name}",
+                    Name = args.Game.Name,
                     TrackingPath = args.Game.InstallDirectory,
                     Path = Path.Combine(args.Game.InstallDirectory, gameConfig.Main.Command)
                 };

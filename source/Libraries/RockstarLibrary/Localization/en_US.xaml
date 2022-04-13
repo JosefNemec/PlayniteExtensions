@@ -14,4 +14,5 @@
   <sys:String x:Key="LOCRockstarPrivateAccount">Private Account</sys:String>
   <sys:String x:Key="LOCRockstarPublicAccount">Public Account</sys:String>
   <sys:String x:Key="LOCRockstarAPIKey">API Key</sys:String>
+  <sys:String x:Key="LOCRockstarStartUsingClient">Start using {0} client</sys:String>
 </ResourceDictionary>

@@ -66,6 +66,10 @@ namespace System
         /// </summary>
         public const string GOGAPIKey = "LOCGOGAPIKey";
         /// <summary>
+        /// Start using {0} client
+        /// </summary>
+        public const string GOGStartUsingClient = "LOCGOGStartUsingClient";
+        /// <summary>
         /// Account Login
         /// </summary>
         public const string GOGUseLogin = "LOCGOGUseLogin";

@@ -65,5 +65,9 @@ namespace System
         /// API Key
         /// </summary>
         public const string EpicAPIKey = "LOCEpicAPIKey";
+        /// <summary>
+        /// Start using {0} client
+        /// </summary>
+        public const string EpicStartUsingClient = "LOCEpicStartUsingClient";
     }
 }

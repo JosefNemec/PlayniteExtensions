@@ -14,6 +14,7 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">Private Account</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Public Account</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">API Key</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient">Start using {0} client</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Use screenshots if artwork is not available</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">If multiple images are available then use:</sys:String>

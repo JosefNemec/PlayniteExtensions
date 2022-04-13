@@ -14,4 +14,5 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Private Account</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Public Account</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API Key</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">Start using {0} client</sys:String>
 </ResourceDictionary>

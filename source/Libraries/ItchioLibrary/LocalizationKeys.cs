@@ -66,6 +66,10 @@ namespace System
         /// </summary>
         public const string itchioAPIKey = "LOCitchioAPIKey";
         /// <summary>
+        /// Start using {0} client
+        /// </summary>
+        public const string itchioStartUsingClient = "LOCitchioStartUsingClient";
+        /// <summary>
         /// itch.io will be launched. Please sign in and then close this message.
         /// </summary>
         public const string ItchioSignInNotif = "LOCItchioSignInNotif";

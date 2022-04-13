@@ -14,4 +14,5 @@
   <sys:String x:Key="LOCBethesdaPrivateAccount">Private Account</sys:String>
   <sys:String x:Key="LOCBethesdaPublicAccount">Public Account</sys:String>
   <sys:String x:Key="LOCBethesdaAPIKey">API Key</sys:String>
+  <sys:String x:Key="LOCBethesdaStartUsingClient">Start using {0} client</sys:String>
 </ResourceDictionary>

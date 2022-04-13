@@ -152,7 +152,7 @@ namespace OriginLibrary
 
         public OriginPlayController(Game game) : base(game)
         {
-            Name = game.Name;
+            Name = string.Format(ResourceProvider.GetString(LOC.OriginStartUsingClient), "Origin");
         }
 
         public override void Dispose()

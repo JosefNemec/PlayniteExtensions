@@ -14,6 +14,7 @@
   <sys:String x:Key="LOCSteamPrivateAccount">Private Account</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Public Account</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">API Key</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient">Start using {0} client</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">What's my account name?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Account URL Name</sys:String>

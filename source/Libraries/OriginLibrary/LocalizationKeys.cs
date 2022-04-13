@@ -65,5 +65,9 @@ namespace System
         /// API Key
         /// </summary>
         public const string OriginAPIKey = "LOCOriginAPIKey";
+        /// <summary>
+        /// Start using {0} client
+        /// </summary>
+        public const string OriginStartUsingClient = "LOCOriginStartUsingClient";
     }
 }

@@ -14,6 +14,7 @@
   <sys:String x:Key="LOCHumblePrivateAccount">Private Account</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Public Account</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">API Key</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">Start using {0} client</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignore third party store games</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">Import Humble Choice games</sys:String>
