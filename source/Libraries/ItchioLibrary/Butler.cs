@@ -14,6 +14,9 @@ using System.Threading.Tasks;
 
 namespace ItchioLibrary
 {
+    /// <summary>
+    /// https://docs.itch.ovh/butlerd/master/#/
+    /// </summary>
     public class Butler : IDisposable
     {
         public class Methods

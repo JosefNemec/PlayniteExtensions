@@ -357,7 +357,7 @@ namespace ItchioLibrary
                 yield break;
             }
 
-            yield return new ItchPlayController(args.Game);
+            yield return new ItchPlayController(args.Game, PlayniteApi);
         }
 
         public override LibraryMetadataProvider GetMetadataDownloader()

@@ -12,6 +12,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Media;
 
 namespace ItchioLibrary
 {
@@ -130,12 +132,14 @@ namespace ItchioLibrary
     public class ItchPlayController : PlayController
     {
         private static ILogger logger = LogManager.GetLogger();
+        private readonly IPlayniteAPI api;
         private Stopwatch stopWatch;
         private Butler butler;
 
-        public ItchPlayController(Game game) : base(game)
+        public ItchPlayController(Game game, IPlayniteAPI api) : base(game)
         {
             Name = ResourceProvider.GetString(LOC.itchioStartUsingClient).Format("itch.io");
+            this.api = api;
         }
 
         public override void Dispose()
@@ -195,10 +199,47 @@ namespace ItchioLibrary
             {
                 case Butler.Methods.PickManifestAction:
                     var pick = e.Request.GetParams<PickManifestAction>();
-                    butler.SendResponse(e.Request, new Dictionary<string, int>
+                    var selectedIndex = -1;
+                    if (pick.actions.HasItems())
                     {
-                        { "index",  0 }
-                    });
+                        if (pick.actions.Count == 1)
+                        {
+                            selectedIndex = 0;
+                        }
+                        else
+                        {
+                            var i = 0;
+                            pick.actions.ForEach(a => a.actionIndex = i++);
+                            Application.Current.Dispatcher.Invoke(() =>
+                            {
+                                Window window = null;
+                                if (api.ApplicationInfo.Mode == ApplicationMode.Desktop)
+                                {
+                                    window = api.Dialogs.CreateWindow(new WindowCreationOptions());
+                                }
+                                else
+                                {
+                                    window = new Window();
+                                    window.Background = Brushes.Black;
+                                }
+
+                                window.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+                                window.MinWidth = 300;
+                                window.SizeToContent = SizeToContent.WidthAndHeight;
+                                var startupModel = new StartupSelectionViewModel(window, pick.actions);
+                                window.Content = new StartupSelectionView() { DataContext = startupModel };
+                                window.Owner = api.Dialogs.GetCurrentAppWindow();
+                                window.ShowDialog();
+                                selectedIndex = startupModel.SelectedActionIndex;
+                            });
+                        }
+                    }
+
+                    butler.SendResponse(e.Request, new Dictionary<string, int> { { "index", selectedIndex } });
+                    if (selectedIndex == -1)
+                    {
+                        InvokeOnStopped(new GameStoppedEventArgs(0));
+                    }
                     break;
 
                 case Butler.Methods.HTMLLaunch:

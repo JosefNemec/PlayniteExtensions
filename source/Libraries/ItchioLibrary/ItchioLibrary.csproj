@@ -200,6 +200,10 @@
     <Compile Include="Models\ShellLaunch.cs" />
     <Compile Include="Models\URLLaunch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartupSelectionView.xaml.cs">
+      <DependentUpon>StartupSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StartupSelectionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="addon.yaml" />
@@ -222,6 +226,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="ItchioLibrarySettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StartupSelectionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
