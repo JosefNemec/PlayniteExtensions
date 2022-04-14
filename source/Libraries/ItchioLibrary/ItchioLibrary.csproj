@@ -128,9 +128,6 @@
     <Compile Include="..\..\..\playniterepo\source\playnite\common\IniParser.cs">
       <Link>Shared\IniParser.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\JsonRpcClient.cs">
-      <Link>Shared\JsonRpcClient.cs</Link>
-    </Compile>
     <Compile Include="..\..\..\playniterepo\source\playnite\common\Paths.cs">
       <Link>Shared\Paths.cs</Link>
     </Compile>
@@ -171,6 +168,7 @@
       <Link>Shared\PluginSettingsViewModel.cs</Link>
     </Compile>
     <Compile Include="Butler.cs" />
+    <Compile Include="JsonRpcClient.cs" />
     <Compile Include="Models\FetchGameRecords.cs" />
     <Compile Include="ItchioMetadataProvider.cs" />
     <Compile Include="ItchioGameController.cs" />
