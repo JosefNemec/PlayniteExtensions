@@ -15,6 +15,8 @@
   <sys:String x:Key="LOCSteamPublicAccount">Public Account</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">API Key</sys:String>
   <sys:String x:Key="LOCSteamStartUsingClient">Start using {0} client</sys:String>
+  <sys:String x:Key="LOCSteamImportPlaytime">Import play time</sys:String>
+  <sys:String x:Key="LOCSteamAccountID">Account ID</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">What's my account name?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Account URL Name</sys:String>
@@ -47,4 +49,6 @@
   <sys:String x:Key="LOCSteamShowFriendsButton">Show friends button on Top panel</sys:String>
   <sys:String x:Key="LOCSteamFriendsTooltip">Steam Friends</sys:String>
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignore installed games from other accounts</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">Additional Accounts</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Specify Steam account ID and API key pair of other accounts if you want to import games from them. See Steam troubleshooting wiki page for more information.</sys:String>
 </ResourceDictionary>

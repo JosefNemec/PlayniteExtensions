@@ -419,7 +419,7 @@ namespace SteamLibrary
             }
         }
 
-        internal List<GameMetadata> GetLibraryGames(ulong userId, List<GetOwnedGamesResult.Game> ownedGames)
+        internal List<GameMetadata> GetLibraryGames(ulong userId, List<GetOwnedGamesResult.Game> ownedGames, bool includePlayTime = true)
         {
             if (ownedGames == null)
             {
@@ -429,7 +429,10 @@ namespace SteamLibrary
             IDictionary<string, DateTime> lastActivity = null;
             try
             {
-                lastActivity = GetGamesLastActivity(userId);
+                if (includePlayTime)
+                {
+                    lastActivity = GetGamesLastActivity(userId);
+                }
             }
             catch (Exception exc)
             {
@@ -450,9 +453,13 @@ namespace SteamLibrary
                     Source = new MetadataNameProperty("Steam"),
                     Name = game.name.RemoveTrademarks(),
                     GameId = game.appid.ToString(),
-                    Playtime = (ulong)(game.playtime_forever * 60),
                     Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
+
+                if (includePlayTime)
+                {
+                    newGame.Playtime = (ulong)(game.playtime_forever * 60);
+                }
 
                 if (lastActivity != null && lastActivity.TryGetValue(newGame.GameId, out var gameLastActivity) && newGame.Playtime > 0)
                 {
@@ -779,6 +786,36 @@ namespace SteamLibrary
                 try
                 {
                     var libraryGames = GetLibraryGames(SettingsViewModel.Settings);
+                    if (SettingsViewModel.Settings.AdditionalAccounts.HasItems())
+                    {
+                        foreach (var account in SettingsViewModel.Settings.AdditionalAccounts)
+                        {
+                            if (ulong.TryParse(account.AccountId, out var id))
+                            {
+                                try
+                                {
+                                    var accGames = GetPrivateOwnedGames(id, account.ApiKey, SettingsViewModel.Settings.IncludeFreeSubGames);
+                                    var parsedGames = GetLibraryGames(id, accGames.response.games, account.ImportPlayTime);
+                                    foreach (var accGame in parsedGames)
+                                    {
+                                        if (!libraryGames.Any(a => a.GameId == accGame.GameId))
+                                        {
+                                            libraryGames.Add(accGame);
+                                        }
+                                    }
+                                }
+                                catch
+                                {
+                                    throw new Exception($"Failed to import games from {account.AccountId} Steam account.");
+                                }
+                            }
+                            else
+                            {
+                                Logger.Error("Steam account ID provided is not valid account ID.");
+                            }
+                        }
+                    }
+
                     Logger.Debug($"Found {libraryGames.Count} library Steam games.");
 
                     if (SettingsViewModel.Settings.IgnoreOtherInstalled)

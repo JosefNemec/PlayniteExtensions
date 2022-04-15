@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 using Steam;
+using System.Collections.ObjectModel;
 
 namespace SteamLibrary
 {
@@ -22,6 +23,13 @@ namespace SteamLibrary
         AuthRequired,
         PrivateAccount,
         Failed
+    }
+
+    public class AdditionalSteamAcccount
+    {
+        public string AccountId { get; set; }
+        public string ApiKey { get; set; }
+        public bool ImportPlayTime { get; set; }
     }
 
     public class SteamLibrarySettings : ObservableObject
@@ -41,6 +49,7 @@ namespace SteamLibrary
         public bool IsPrivateAccount { get => isPrivateAccount; set => SetValue(ref isPrivateAccount, value); }
         public string ApiKey { get => apiKey; set => SetValue(ref apiKey, value); }
         public bool IgnoreOtherInstalled { get; set; }
+        public ObservableCollection<AdditionalSteamAcccount> AdditionalAccounts { get; set; } = new ObservableCollection<AdditionalSteamAcccount>();
     }
 
     public class SteamLibrarySettingsViewModel : PluginSettingsViewModel<SteamLibrarySettings, SteamLibrary>
@@ -127,6 +136,22 @@ namespace SteamLibrary
             get => new RelayCommand<LocalSteamUser>((a) =>
             {
                 ImportSteamLastActivity(a);
+            });
+        }
+
+        public RelayCommand AddAccountCommand
+        {
+            get => new RelayCommand(() =>
+            {
+                Settings.AdditionalAccounts.Add(new AdditionalSteamAcccount());
+            });
+        }
+
+        public RelayCommand<AdditionalSteamAcccount> RemoveAccountCommand
+        {
+            get => new RelayCommand<AdditionalSteamAcccount>((a) =>
+            {
+                Settings.AdditionalAccounts.Remove(a);
             });
         }
 

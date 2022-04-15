@@ -70,6 +70,14 @@ namespace System
         /// </summary>
         public const string SteamStartUsingClient = "LOCSteamStartUsingClient";
         /// <summary>
+        /// Import play time
+        /// </summary>
+        public const string SteamImportPlaytime = "LOCSteamImportPlaytime";
+        /// <summary>
+        /// Account ID
+        /// </summary>
+        public const string SteamAccountID = "LOCSteamAccountID";
+        /// <summary>
         /// What's my account name?
         /// </summary>
         public const string SettingsWhatsSteamName = "LOCSettingsWhatsSteamName";
@@ -193,5 +201,13 @@ namespace System
         /// Ignore installed games from other accounts
         /// </summary>
         public const string SteamIgnoreOtherAccountGames = "LOCSteamIgnoreOtherAccountGames";
+        /// <summary>
+        /// Additional Accounts
+        /// </summary>
+        public const string SteamAdditionalAccounts = "LOCSteamAdditionalAccounts";
+        /// <summary>
+        /// Specify Steam account ID and API key pair of other accounts if you want to import games from them. See Steam troubleshooting wiki page for more information.
+        /// </summary>
+        public const string SteamAdditionalAccountsDescription = "LOCSteamAdditionalAccountsDescription";
     }
 }
