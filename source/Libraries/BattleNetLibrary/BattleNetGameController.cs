@@ -197,10 +197,12 @@ namespace BattleNetLibrary
             {
                 logger.Info("Battle.net is not running, starting it first.");
                 BattleNet.StartClient();
-                while (BattleNet.RunningProcessesCount < 3)
+                while (BattleNet.RunningProcessesCount < 4)
                 {
                     await Task.Delay(500);
                 }
+
+                await Task.Delay(4000);
             }
 
             try
