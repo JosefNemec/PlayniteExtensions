@@ -49,3 +49,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_7.pext
     Changelog:
       - Updated icon (by darklinkpower)
+  - Version: 2.8
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-04-16
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_8.pext
+    Changelog:
+      - Fixed metadata not being downloaded in English
