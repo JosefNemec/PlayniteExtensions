@@ -31,3 +31,9 @@ Packages:
     Changelog:
       - Fixed Xbox app not being used for game installations
       - Fixed installed games not being imported under their real location
+  - Version: 2.5
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-04-16
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_5.pext
+    Changelog:
+      - Fixed plugin not working on Windows 11
