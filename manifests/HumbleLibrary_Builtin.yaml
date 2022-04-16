@@ -50,3 +50,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/HumbleLibrary_Builtin_3_4.pext
     Changelog:
       - Certain games don't launch or install
+  - Version: 3.5
+    RequiredApiVersion: 6.2.2
+    ReleaseDate: 2022-04-16
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/HumbleLibrary_Builtin_3_5.pext
+    Changelog:
+      - Fixed games incorrectly marked as installed (by darklinkpower)
