@@ -70,6 +70,14 @@ namespace System
         /// </summary>
         public const string GOGStartUsingClient = "LOCGOGStartUsingClient";
         /// <summary>
+        /// Import play time
+        /// </summary>
+        public const string GOGImportPlaytime = "LOCGOGImportPlaytime";
+        /// <summary>
+        /// Account ID
+        /// </summary>
+        public const string GOGAccountID = "LOCGOGAccountID";
+        /// <summary>
         /// Account Login
         /// </summary>
         public const string GOGUseLogin = "LOCGOGUseLogin";

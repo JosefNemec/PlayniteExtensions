@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCRockstarPrivateAccount">Soukromý Účet</sys:String>
   <sys:String x:Key="LOCRockstarPublicAccount">Veřejný Účet</sys:String>
   <sys:String x:Key="LOCRockstarAPIKey">API Klíč</sys:String>
+  <sys:String x:Key="LOCRockstarStartUsingClient">Začít používat {0} klienta.</sys:String>
+  <sys:String x:Key="LOCRockstarImportPlaytime">Importovat nahraný čas</sys:String>
+  <sys:String x:Key="LOCRockstarAccountID">ID účtu</sys:String>
 </ResourceDictionary>

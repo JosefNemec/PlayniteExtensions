@@ -15,10 +15,13 @@
   <sys:String x:Key="LOCHumblePrivateAccount">Приватний обліковий запис</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Загальнодоступний обліковий запис</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">Ключ API</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">Запустити клієнтом {0}</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">Імпортувати час у грі</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">ID облікового запису</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ігнорувати ігри із стороннього магазину</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGames">Імпортувати ігри з Humble Choice</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Імпортувати ігри доступні у рамках підписки Humble Choice.</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames">Імпортувати ігри з Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Імпортувати ігри доступні у рамках підписки Humble Choice.</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">Імпортувати ігри з Humble Library</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Імпортувати стандартні покупки в магазині Humble, включно з наборами.</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Увімкніть щоб пропустити імпорт ігор, що потребують сторонніх клієнтів,
@@ -27,4 +30,5 @@
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Імпортувати ігри, що потребують стороннього клієнту, якщо також доступна версія без DRM.</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Завжди використовувати додаток Humble для запуску ігор</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Коли вимкнено, Playnite намагатиметься запускати ігри напряму, минаючи додаток Humble.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">Автоматичне встановлення і видалення ігор Humble, які не є частиною підписки, наразі не підтримується.</sys:String>
 </ResourceDictionary>

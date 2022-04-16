@@ -69,5 +69,13 @@ namespace System
         /// Start using {0} client
         /// </summary>
         public const string UbisoftStartUsingClient = "LOCUbisoftStartUsingClient";
+        /// <summary>
+        /// Import play time
+        /// </summary>
+        public const string UbisoftImportPlaytime = "LOCUbisoftImportPlaytime";
+        /// <summary>
+        /// Account ID
+        /// </summary>
+        public const string UbisoftAccountID = "LOCUbisoftAccountID";
     }
 }

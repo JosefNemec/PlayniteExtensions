@@ -2,11 +2,11 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
   <sys:String x:Key="LOCBethesdaSettingsImportInstalledLabel">Installierte Spiele importieren</sys:String>
   <sys:String x:Key="LOCBethesdaSettingsImportUninstalledLabel">Nicht installierte Spiele importieren</sys:String>
-  <sys:String x:Key="LOCBethesdaSettingsConnectAccount">Benutzerkonto verbinden</sys:String>
+  <sys:String x:Key="LOCBethesdaSettingsConnectAccount">Nutzerkonto verbinden</sys:String>
   <sys:String x:Key="LOCBethesdaLoginChecking">Authentifizierungsstatus wird überprüft …</sys:String>
-  <sys:String x:Key="LOCBethesdaLoggedIn">Benutzer ist authentifiziert</sys:String>
+  <sys:String x:Key="LOCBethesdaLoggedIn">Nutzer ist authentifiziert</sys:String>
   <sys:String x:Key="LOCBethesdaNotLoggedIn">Authentifizierung erforderlich</sys:String>
-  <sys:String x:Key="LOCBethesdaNotLoggedInError">Benutzer konnte nicht authentifiziert werden.</sys:String>
+  <sys:String x:Key="LOCBethesdaNotLoggedInError">Nutzer konnte nicht authentifiziert werden.</sys:String>
   <sys:String x:Key="LOCBethesdaAuthenticateLabel">Authentifizieren</sys:String>
   <sys:String x:Key="LOCBethesdaSettingsStartGameDirectly">Spiele direkt starten ohne offiziellen Client</sys:String>
   <sys:String x:Key="LOCBethesdaTroubleShootingAccountLink">Beheben von Problemen mit der Kontosynchronisation</sys:String>
@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCBethesdaPrivateAccount">Privates Konto</sys:String>
   <sys:String x:Key="LOCBethesdaPublicAccount">Öffentliches Konto</sys:String>
   <sys:String x:Key="LOCBethesdaAPIKey">API-Schlüssel</sys:String>
+  <sys:String x:Key="LOCBethesdaStartUsingClient">Mit {0}-Client starten</sys:String>
+  <sys:String x:Key="LOCBethesdaImportPlaytime">Spielzeit importieren</sys:String>
+  <sys:String x:Key="LOCBethesdaAccountID">Konto-ID</sys:String>
 </ResourceDictionary>

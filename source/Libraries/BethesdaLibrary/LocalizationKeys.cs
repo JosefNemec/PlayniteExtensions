@@ -69,5 +69,13 @@ namespace System
         /// Start using {0} client
         /// </summary>
         public const string BethesdaStartUsingClient = "LOCBethesdaStartUsingClient";
+        /// <summary>
+        /// Import play time
+        /// </summary>
+        public const string BethesdaImportPlaytime = "LOCBethesdaImportPlaytime";
+        /// <summary>
+        /// Account ID
+        /// </summary>
+        public const string BethesdaAccountID = "LOCBethesdaAccountID";
     }
 }

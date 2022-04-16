@@ -15,10 +15,13 @@
   <sys:String x:Key="LOCHumblePrivateAccount">Privé-account</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Openbaar Account</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">API Sleutel</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">Starten met {0} client</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">Importeer speeltijd</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">Account ID</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Negeer spellen van derde partij winkels</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGames">Importeer Humble Choice spellen</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importeer spellen die beschikbaar zijn als onderdeel van het Humble Choice abonnement</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames">Importeer Humble Choice spellen</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Importeer spellen die beschikbaar zijn als onderdeel van het Humble Choice abonnement.</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">Importeer Humble Library spellen</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importeer standaard Humble winkel- en bundelaankopen.</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Schakel in om importeren van spellen die derde partij cliënten vereisen over te slaan,
@@ -27,4 +30,5 @@ inclusief winkels die reeds beheerd worden in Playnite, om duplicaten te vermijd
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importeer spellen die cliënt van 3de partij vereist indien DRM vrije versie ook beschikbaar is</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Gebruik altijd de Humble App om spellen te starten</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Indien dit uitstaat zal Playnite pogen spellen direct te lanceren, zonder tussenkomst van de Humble App.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">Automatische (de-)installatie van Humble spellen die niet bij een abonnement horen is op dit moment niet ondersteund.</sys:String>
 </ResourceDictionary>

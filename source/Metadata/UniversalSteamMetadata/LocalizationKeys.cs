@@ -69,5 +69,13 @@ namespace System
         /// Start using {0} client
         /// </summary>
         public const string UniversalSteamMetadataStartUsingClient = "LOCUniversalSteamMetadataStartUsingClient";
+        /// <summary>
+        /// Import play time
+        /// </summary>
+        public const string UniversalSteamMetadataImportPlaytime = "LOCUniversalSteamMetadataImportPlaytime";
+        /// <summary>
+        /// Account ID
+        /// </summary>
+        public const string UniversalSteamMetadataAccountID = "LOCUniversalSteamMetadataAccountID";
     }
 }

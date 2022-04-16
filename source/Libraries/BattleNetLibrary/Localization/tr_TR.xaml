@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCBattleNetPrivateAccount">Özel Hesap</sys:String>
   <sys:String x:Key="LOCBattleNetPublicAccount">Genel Hesap</sys:String>
   <sys:String x:Key="LOCBattleNetAPIKey">API Anahtarı</sys:String>
+  <sys:String x:Key="LOCBattleNetStartUsingClient" />
+  <sys:String x:Key="LOCBattleNetImportPlaytime" />
+  <sys:String x:Key="LOCBattleNetAccountID" />
 </ResourceDictionary>

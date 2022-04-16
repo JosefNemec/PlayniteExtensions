@@ -15,10 +15,15 @@
     <sys:String x:Key="LOCPrivateAccount">Приватний обліковий запис</sys:String>
     <sys:String x:Key="LOCPublicAccount">Загальнодоступний обліковий запис</sys:String>
     <sys:String x:Key="LOCAPIKey">Ключ API</sys:String>
+    <sys:String x:Key="LOCStartUsingClient">Запустити клієнтом {0}</sys:String>
+    <sys:String x:Key="LOCImportPlaytime">Імпортувати час у грі</sys:String>
+    <sys:String x:Key="LOCAccountID">ID облікового запису</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io буде запущено. Будь ласка авторизуйтеся після чого закрийте це повідомлення.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Очікування на вхід користувача, будь ласка закрийте це коли завершите...</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">Клієнт itch.io версії 25 чи новіше не встановлено.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Імпортувати безплатні ігри з колекцій.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Елементи для імпорту:</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Логін облікового запису</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Ім'я облікового запису</sys:String>
@@ -56,14 +61,18 @@
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Фон з магазину</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Банер</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">Показати кнопку друзів на верхній панелі </sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">Друзі в Steam</sys:String>
+    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ігнорувати встановлені ігри з інших облікових записів</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccounts">Додаткові облікові записи</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Визначте пару Steam ID і API-ключа інших облікових записів, якщо хочете імпортувати з них ігри. Для додаткової інформації перегляньте сторінку розв'язання проблем Steam у wiki.</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Використовувати знімки гри якщо немає іншого зображення</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Якщо доступно декілька зображень, використовувати:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Обрати фонове зображення для {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ігнорувати ігри із стороннього магазину</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Імпортувати ігри з Humble Choice</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Імпортувати ігри доступні у рамках підписки Humble Choice.</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames">Імпортувати ігри з Humble Choice</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Імпортувати ігри доступні у рамках підписки Humble Choice.</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">Імпортувати ігри з Humble Library</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Імпортувати стандартні покупки в магазині Humble, включно з наборами.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Увімкніть щоб пропустити імпорт ігор, що потребують сторонніх клієнтів,
@@ -72,6 +81,7 @@
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Імпортувати ігри, що потребують стороннього клієнту, якщо також доступна версія без DRM.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Завжди використовувати додаток Humble для запуску ігор</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Коли вимкнено, Playnite намагатиметься запускати ігри напряму, минаючи додаток Humble.</sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">Автоматичне встановлення і видалення ігор Humble, які не є частиною підписки, наразі не підтримується.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Запускати додаток Xbox Pass замість Microsoft Store під час відкриття клієнта</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Імпортувати ігри з консолі Xbox</sys:String>

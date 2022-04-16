@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API кључ</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient" />
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime" />
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID" />
 </ResourceDictionary>

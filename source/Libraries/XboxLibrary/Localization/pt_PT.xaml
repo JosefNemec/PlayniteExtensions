@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCXboxPrivateAccount" />
   <sys:String x:Key="LOCXboxPublicAccount" />
   <sys:String x:Key="LOCXboxAPIKey" />
+  <sys:String x:Key="LOCXboxStartUsingClient" />
+  <sys:String x:Key="LOCXboxImportPlaytime" />
+  <sys:String x:Key="LOCXboxAccountID" />
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch" />
   <sys:String x:Key="LOCXboxImportConsoleGames">Importar jogos Xbox.</sys:String>

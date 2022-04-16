@@ -15,10 +15,13 @@
   <sys:String x:Key="LOCHumblePrivateAccount">Konto prywatne</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Publiczne konto</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">Klucz API</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">Importuj czasy gier</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">Identyfikator konta</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignoruj gry ze sklepów zewnętrznych</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGames">Importuj gry z Humble Choice</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importuj gry dostępne w ramach subskrypcji Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames">Zaimportuj gry z Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Zaimportuj gry w ramach subskrypcji Humble Choice</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">Importuj gry z Humble Library</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importuj standardowe zakupy w Humble store oraz bundle</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Włącz aby pominąć importowanie gier z zewnętrznych klientów, włączając sklepy obsługiwane przez Playnite. Zapobiegnie to duplikacji.</sys:String>
@@ -26,4 +29,5 @@
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importuj gry wymagające zewnętrznego klienta, jeśli oferują wersję bez zabezpieczeń DRM.</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Zawsze używaj aplikacji Humble do uruchomienia gier</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Kiedy wyłączone, Playnite będzie próbował bezpośrednio uruchamiać gry, omijając aplikację Humble </sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">Automatyczna instalacje oraz deinstalacja niesubskrybowanych gier z Humble nie jest aktualnie wspierana</sys:String>
 </ResourceDictionary>

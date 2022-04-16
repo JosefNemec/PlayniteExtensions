@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount">비공개 계정</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">공개 계정</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">API 키</sys:String>
+  <sys:String x:Key="LOCUbisoftStartUsingClient" />
+  <sys:String x:Key="LOCUbisoftImportPlaytime" />
+  <sys:String x:Key="LOCUbisoftAccountID" />
 </ResourceDictionary>

@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCBethesdaPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCBethesdaPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCBethesdaAPIKey">API кључ</sys:String>
+  <sys:String x:Key="LOCBethesdaStartUsingClient" />
+  <sys:String x:Key="LOCBethesdaImportPlaytime" />
+  <sys:String x:Key="LOCBethesdaAccountID" />
 </ResourceDictionary>

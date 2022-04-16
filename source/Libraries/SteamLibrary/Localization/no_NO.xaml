@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCSteamPrivateAccount">Privat konto</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Offentlig konto</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">API-nøkkel</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient">Begynn å bruke {0}-klient</sys:String>
+  <sys:String x:Key="LOCSteamImportPlaytime">Importer spilletid</sys:String>
+  <sys:String x:Key="LOCSteamAccountID">Konto-ID</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Hva er kontonavnet mitt?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">URL-navn for konto</sys:String>
@@ -45,4 +48,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Butikk-bakgrunn</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Vis Friends-knapp i toppanelet</sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip">Steam-venner</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignorer installerte spill fra andre kontoer</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">Ekstra kontoer</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Spesifiser Steam-konto-ID og API-nøkkel for annen konto hvis du ønsker å importere spill derfra. Besøk Steams wiki-side for feilsøking for mer informasjon.</sys:String>
 </ResourceDictionary>

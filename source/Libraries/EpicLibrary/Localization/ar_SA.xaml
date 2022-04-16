@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCEpicPrivateAccount">حساب خاص</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">حساب عام</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">مفتاح API</sys:String>
+  <sys:String x:Key="LOCEpicStartUsingClient" />
+  <sys:String x:Key="LOCEpicImportPlaytime" />
+  <sys:String x:Key="LOCEpicAccountID" />
 </ResourceDictionary>

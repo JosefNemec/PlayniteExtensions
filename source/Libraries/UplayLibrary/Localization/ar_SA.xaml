@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount">حساب خاص</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">حساب عام</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">مفتاح API</sys:String>
+  <sys:String x:Key="LOCUbisoftStartUsingClient" />
+  <sys:String x:Key="LOCUbisoftImportPlaytime" />
+  <sys:String x:Key="LOCUbisoftAccountID" />
 </ResourceDictionary>

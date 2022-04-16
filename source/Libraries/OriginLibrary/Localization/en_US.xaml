@@ -15,4 +15,6 @@
   <sys:String x:Key="LOCOriginPublicAccount">Public Account</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">API Key</sys:String>
   <sys:String x:Key="LOCOriginStartUsingClient">Start using {0} client</sys:String>
+  <sys:String x:Key="LOCOriginImportPlaytime">Import play time</sys:String>
+  <sys:String x:Key="LOCOriginAccountID">Account ID</sys:String>
 </ResourceDictionary>

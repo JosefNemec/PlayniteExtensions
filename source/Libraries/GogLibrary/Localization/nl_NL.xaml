@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCGOGPrivateAccount">Privé-account</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">Openbaar Account</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">API Sleutel</sys:String>
+  <sys:String x:Key="LOCGOGStartUsingClient">Starten met {0} client</sys:String>
+  <sys:String x:Key="LOCGOGImportPlaytime">Importeer speeltijd</sys:String>
+  <sys:String x:Key="LOCGOGAccountID">Account ID</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Account login</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Accountnaam</sys:String>

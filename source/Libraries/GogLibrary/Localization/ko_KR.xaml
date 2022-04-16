@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCGOGPrivateAccount">비공개 계정</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">공개 계정</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">API 키</sys:String>
+  <sys:String x:Key="LOCGOGStartUsingClient" />
+  <sys:String x:Key="LOCGOGImportPlaytime" />
+  <sys:String x:Key="LOCGOGAccountID" />
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">계정 로그인</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">계정 이름</sys:String>

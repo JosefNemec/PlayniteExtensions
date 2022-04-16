@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCRockstarPrivateAccount">Account privato</sys:String>
   <sys:String x:Key="LOCRockstarPublicAccount">Account pubblico</sys:String>
   <sys:String x:Key="LOCRockstarAPIKey">Chiave API</sys:String>
+  <sys:String x:Key="LOCRockstarStartUsingClient">Avvio del client {0} </sys:String>
+  <sys:String x:Key="LOCRockstarImportPlaytime">Importa tempo di riproduzione</sys:String>
+  <sys:String x:Key="LOCRockstarAccountID">ID account</sys:String>
 </ResourceDictionary>

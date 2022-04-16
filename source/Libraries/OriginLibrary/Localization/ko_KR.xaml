@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCOriginPrivateAccount">비공개 계정</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">공개 계정</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">API 키</sys:String>
+  <sys:String x:Key="LOCOriginStartUsingClient" />
+  <sys:String x:Key="LOCOriginImportPlaytime" />
+  <sys:String x:Key="LOCOriginAccountID" />
 </ResourceDictionary>

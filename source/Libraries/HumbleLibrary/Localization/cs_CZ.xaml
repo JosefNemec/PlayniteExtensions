@@ -15,10 +15,13 @@
   <sys:String x:Key="LOCHumblePrivateAccount">Soukromý Účet</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Veřejný Účet</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">API Klíč</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">Začít používat {0} klienta.</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">Importovat nahraný čas</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">ID účtu</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorovat hry z obchodů třetích stran</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGames">Importovat hry Humble Choice</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importovat hry dostupné jako součást předplatného Humble Choice.</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames">Importovat Humble Choice hry.</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Importovat hry přístupné součástí Humble Choice předplatného.</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">Importovat hry knihovny Humble</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importovat standardní a bundle nákupy z Humble obchodu.</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Povolte pro přeskočení importu her, které vyžadují klienty třetích stran,
@@ -27,4 +30,5 @@ včetně obchodů již spravovaných v Playnite, pro zabránění duplikátům.<
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importovat hry vyžadující klient třetí strany, pokud je také dostupná verze bez DRM.</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Vždy použít aplikaci Humble pro spouštění her</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Je-li vypnuto, Playnite se pokusí spustit hry přímo a obejít aplikaci Humble.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">Automatická instalace a odinstalace nepředplacených Humble her není aktuálně podporována.</sys:String>
 </ResourceDictionary>

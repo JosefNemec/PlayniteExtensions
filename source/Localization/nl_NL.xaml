@@ -15,10 +15,15 @@
     <sys:String x:Key="LOCPrivateAccount">Privé-account</sys:String>
     <sys:String x:Key="LOCPublicAccount">Openbaar Account</sys:String>
     <sys:String x:Key="LOCAPIKey">API Sleutel</sys:String>
+    <sys:String x:Key="LOCStartUsingClient">Starten met {0} client</sys:String>
+    <sys:String x:Key="LOCImportPlaytime">Importeer speeltijd</sys:String>
+    <sys:String x:Key="LOCAccountID">Account ID</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io wordt gestart. Log in a.u.b. en sluit dan dit bericht.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Wachten op aanmelding van gebruiker, sluit alstublieft af wanneer je klaar bent</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io client versie 25 of nieuwer is niet geïnstalleerd.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importeer gratis spellen uit collecties.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Te importeren items:</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Account login</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Accountnaam</sys:String>
@@ -56,14 +61,18 @@ Houd er rekening mee dat de optie Accountnaam alleen werkt voor accounts waarvan
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Sla Achtergrond Op</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">Toon vriendenknop in het top-paneel</sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">Steam Vrienden</sys:String>
+    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Negeer geïnstalleerde spellen van andere accounts</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccounts">Extra Accounts</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Specificeer Steam account ID en API key van andere accounts waar je Steam spellen van wil importeren. Zie Steam troubleshooting wiki pagina voor meer info.</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Gebruik screenshots als illustraties niet beschikbaar zijn</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Wanneer meerdere afbeeldingen beschikbaar zijn gebruik dan:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Selecteer achtergrondafbeelding voor {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Negeer spellen van derde partij winkels</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Importeer Humble Choice spellen</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importeer spellen die beschikbaar zijn als onderdeel van het Humble Choice abonnement</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames">Importeer Humble Choice spellen</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Importeer spellen die beschikbaar zijn als onderdeel van het Humble Choice abonnement.</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">Importeer Humble Library spellen</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importeer standaard Humble winkel- en bundelaankopen.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Schakel in om importeren van spellen die derde partij cliënten vereisen over te slaan,
@@ -72,6 +81,7 @@ inclusief winkels die reeds beheerd worden in Playnite, om duplicaten te vermijd
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importeer spellen die cliënt van 3de partij vereist indien DRM vrije versie ook beschikbaar is</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Gebruik altijd de Humble App om spellen te starten</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Indien dit uitstaat zal Playnite pogen spellen direct te lanceren, zonder tussenkomst van de Humble App.</sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">Automatische (de-)installatie van Humble spellen die niet bij een abonnement horen is op dit moment niet ondersteund.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Start Xbox Pass applicatie in plaats van Microsoft Store wanneer je de client opent</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Importeer Xbox console spellen</sys:String>

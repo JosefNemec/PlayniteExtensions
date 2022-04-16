@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">Cuenta Privada</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Cuenta Pública</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">Clave de API</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient">Iniciar usando el cliente {0}</sys:String>
+  <sys:String x:Key="LOCIGDBImportPlaytime">Importar tiempo de juego</sys:String>
+  <sys:String x:Key="LOCIGDBAccountID">ID de cuenta</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Use capturas de pantalla si la ilustración no está disponible</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Si hay varias imágenes disponibles, utilizar:</sys:String>

@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount">私密帳號</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">公開帳號</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">API 密鑰</sys:String>
+  <sys:String x:Key="LOCUbisoftStartUsingClient">以{0}啟動</sys:String>
+  <sys:String x:Key="LOCUbisoftImportPlaytime" />
+  <sys:String x:Key="LOCUbisoftAccountID" />
 </ResourceDictionary>

@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Cuenta Privada</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Cuenta Pública</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">Clave de API</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">Iniciar usando el cliente {0}</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Importar tiempo de juego</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID">ID de cuenta</sys:String>
 </ResourceDictionary>

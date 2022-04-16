@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Ιδιωτικός Λογαριασμός</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Δημόσιος Λογαριασμός</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">Κλειδί API</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient" />
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime" />
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID" />
 </ResourceDictionary>

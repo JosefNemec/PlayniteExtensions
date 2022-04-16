@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCGOGPrivateAccount">Privat konto</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">Offentlig konto</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">API-nøkkel</sys:String>
+  <sys:String x:Key="LOCGOGStartUsingClient">Begynn å bruke {0}-klient</sys:String>
+  <sys:String x:Key="LOCGOGImportPlaytime">Importer spilletid</sys:String>
+  <sys:String x:Key="LOCGOGAccountID">Konto-ID</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Kontopålogging</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Kontonavn</sys:String>

@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCAmazonPrivateAccount">Ιδιωτικός Λογαριασμός</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">Δημόσιος Λογαριασμός</sys:String>
   <sys:String x:Key="LOCAmazonAPIKey">Κλειδί API</sys:String>
+  <sys:String x:Key="LOCAmazonStartUsingClient" />
+  <sys:String x:Key="LOCAmazonImportPlaytime" />
+  <sys:String x:Key="LOCAmazonAccountID" />
 </ResourceDictionary>

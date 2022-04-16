@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCAmazonPrivateAccount">Soukromý Účet</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">Veřejný Účet</sys:String>
   <sys:String x:Key="LOCAmazonAPIKey">API Klíč</sys:String>
+  <sys:String x:Key="LOCAmazonStartUsingClient">Začít používat {0} klienta.</sys:String>
+  <sys:String x:Key="LOCAmazonImportPlaytime">Importovat nahraný čas</sys:String>
+  <sys:String x:Key="LOCAmazonAccountID">ID účtu</sys:String>
 </ResourceDictionary>

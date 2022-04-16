@@ -10,9 +10,12 @@
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
-  <sys:String x:Key="LOCRockstarTroubleShootingIssues">Устранение неисправностей</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingIssues">Устранение неполадок</sys:String>
   <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">Импортировать все игры</sys:String>
   <sys:String x:Key="LOCRockstarPrivateAccount">Закрытый профиль</sys:String>
   <sys:String x:Key="LOCRockstarPublicAccount">Открытый профиль</sys:String>
   <sys:String x:Key="LOCRockstarAPIKey">API-ключ</sys:String>
+  <sys:String x:Key="LOCRockstarStartUsingClient">Запустить через клиент {0}</sys:String>
+  <sys:String x:Key="LOCRockstarImportPlaytime">Импортировать наигранные часы</sys:String>
+  <sys:String x:Key="LOCRockstarAccountID">ID аккаунта</sys:String>
 </ResourceDictionary>

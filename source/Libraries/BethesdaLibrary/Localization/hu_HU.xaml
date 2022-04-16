@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCBethesdaPrivateAccount">Nem publikus fiók</sys:String>
   <sys:String x:Key="LOCBethesdaPublicAccount">Publikus fiók</sys:String>
   <sys:String x:Key="LOCBethesdaAPIKey">API Kulcs</sys:String>
+  <sys:String x:Key="LOCBethesdaStartUsingClient">{0} használata</sys:String>
+  <sys:String x:Key="LOCBethesdaImportPlaytime">Játékidő importálása</sys:String>
+  <sys:String x:Key="LOCBethesdaAccountID">Fióknév</sys:String>
 </ResourceDictionary>

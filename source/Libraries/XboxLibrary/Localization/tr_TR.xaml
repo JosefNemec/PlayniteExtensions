@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCXboxPrivateAccount">Özel Hesap</sys:String>
   <sys:String x:Key="LOCXboxPublicAccount">Genel Hesap</sys:String>
   <sys:String x:Key="LOCXboxAPIKey">API Anahtarı</sys:String>
+  <sys:String x:Key="LOCXboxStartUsingClient" />
+  <sys:String x:Key="LOCXboxImportPlaytime" />
+  <sys:String x:Key="LOCXboxAccountID" />
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">İstemciyi açarken Microsoft Mağaza'sı yerine Xbox Pass uygulamasını başlat</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">Xbox konsol oyunlarını içe aktar</sys:String>

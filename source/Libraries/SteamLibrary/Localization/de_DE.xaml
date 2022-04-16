@@ -2,11 +2,11 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
   <sys:String x:Key="LOCSteamSettingsImportInstalledLabel">Installierte Spiele importieren</sys:String>
   <sys:String x:Key="LOCSteamSettingsImportUninstalledLabel">Nicht installierte Spiele importieren</sys:String>
-  <sys:String x:Key="LOCSteamSettingsConnectAccount">Benutzerkonto verbinden</sys:String>
+  <sys:String x:Key="LOCSteamSettingsConnectAccount">Nutzerkonto verbinden</sys:String>
   <sys:String x:Key="LOCSteamLoginChecking">Authentifizierungsstatus wird überprüft …</sys:String>
-  <sys:String x:Key="LOCSteamLoggedIn">Benutzer ist authentifiziert</sys:String>
+  <sys:String x:Key="LOCSteamLoggedIn">Nutzer ist authentifiziert</sys:String>
   <sys:String x:Key="LOCSteamNotLoggedIn">Authentifizierung erforderlich</sys:String>
-  <sys:String x:Key="LOCSteamNotLoggedInError">Benutzer konnte nicht authentifiziert werden.</sys:String>
+  <sys:String x:Key="LOCSteamNotLoggedInError">Nutzer konnte nicht authentifiziert werden.</sys:String>
   <sys:String x:Key="LOCSteamAuthenticateLabel">Authentifizieren</sys:String>
   <sys:String x:Key="LOCSteamSettingsStartGameDirectly">Spiele direkt starten ohne offiziellen Client</sys:String>
   <sys:String x:Key="LOCSteamTroubleShootingAccountLink">Beheben von Problemen mit der Kontosynchronisation</sys:String>
@@ -15,10 +15,13 @@
   <sys:String x:Key="LOCSteamPrivateAccount">Privates Konto</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Öffentliches Konto</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">API-Schlüssel</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient">Mit {0}-Client starten</sys:String>
+  <sys:String x:Key="LOCSteamImportPlaytime">Spielzeit importieren</sys:String>
+  <sys:String x:Key="LOCSteamAccountID">Konto-ID</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Wie lautet mein Kontoname?</sys:String>
-  <sys:String x:Key="LOCSteamCustomUrlName">Benutzerkonten-URL</sys:String>
-  <sys:String x:Key="LOCSteamLoggedInUser">Authentifizierter Benutzer</sys:String>
+  <sys:String x:Key="LOCSteamCustomUrlName">Nutzerkonten-URL</sys:String>
+  <sys:String x:Key="LOCSteamLoggedInUser">Authentifizierter Nutzer</sys:String>
   <sys:String x:Key="LOCSteamRequiresApiKey">Das Konto ist privat, der API-Schlüssel ist erforderlich.</sys:String>
   <sys:String x:Key="LOCSteamLinksCommunityHub">Communityhub</sys:String>
   <sys:String x:Key="LOCSteamLinksDiscussions">Diskussionen</sys:String>
@@ -45,4 +48,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Shop-Hintergrund</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Schaltfläche »Freunde« in oberer Leiste anzeigen</sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip">Steam-Freunde</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Installierte Spiele anderer Konten ignorieren</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">Weitere Konten</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Gib die Steam-Konto-ID und das API-Schlüsselpaar anderer Konten an, falls du von diesen Spiele importieren möchtest. Weitere Informationen findest du auf der Wiki-Seite zur Steam-Problembehebung.</sys:String>
 </ResourceDictionary>

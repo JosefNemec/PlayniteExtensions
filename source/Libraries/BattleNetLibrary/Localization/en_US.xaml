@@ -15,4 +15,6 @@
   <sys:String x:Key="LOCBattleNetPublicAccount">Public Account</sys:String>
   <sys:String x:Key="LOCBattleNetAPIKey">API Key</sys:String>
   <sys:String x:Key="LOCBattleNetStartUsingClient">Start using {0} client</sys:String>
+  <sys:String x:Key="LOCBattleNetImportPlaytime">Import play time</sys:String>
+  <sys:String x:Key="LOCBattleNetAccountID">Account ID</sys:String>
 </ResourceDictionary>

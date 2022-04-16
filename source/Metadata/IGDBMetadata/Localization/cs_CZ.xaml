@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">Soukromý Účet</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Veřejný Účet</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">API Klíč</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient">Začít používat {0} klienta.</sys:String>
+  <sys:String x:Key="LOCIGDBImportPlaytime">Importovat nahraný čas</sys:String>
+  <sys:String x:Key="LOCIGDBAccountID">ID účtu</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Použít snímek z hry pokud není k dispozici obrázek</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Pokud je k dispozici víc obrázků, použít:</sys:String>

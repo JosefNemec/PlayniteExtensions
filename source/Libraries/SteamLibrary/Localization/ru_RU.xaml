@@ -10,11 +10,14 @@
   <sys:String x:Key="LOCSteamAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCSteamSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCSteamTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
-  <sys:String x:Key="LOCSteamTroubleShootingIssues">Устранение неисправностей</sys:String>
+  <sys:String x:Key="LOCSteamTroubleShootingIssues">Устранение неполадок</sys:String>
   <sys:String x:Key="LOCSteamSettingsImportLibraryLabel">Импортировать все игры</sys:String>
   <sys:String x:Key="LOCSteamPrivateAccount">Закрытый профиль</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Открытый профиль</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">API-ключ</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient">Запустить через клиент {0}</sys:String>
+  <sys:String x:Key="LOCSteamImportPlaytime">Импортировать наигранные часы</sys:String>
+  <sys:String x:Key="LOCSteamAccountID">ID аккаунта</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Как узнать имя моей учетки?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">URL-адрес аккаунта</sys:String>
@@ -25,7 +28,7 @@
   <sys:String x:Key="LOCSteamLinksGuides">Руководства</sys:String>
   <sys:String x:Key="LOCSteamLinksWorkshop">Мастерская</sys:String>
   <sys:String x:Key="LOCSteamUseVerticalCovers">Загружать вертикальные обложки</sys:String>
-  <sys:String x:Key="LOCSteamImportFreeSubGames">Импорт общих бесплатных элементов</sys:String>
+  <sys:String x:Key="LOCSteamImportFreeSubGames">Импорт общих бесплатных продуктов</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportWarn">Это заменит текущие категории, а также скрытые и избранные состояния во всех играх Steam. Вы хотите продолжить?</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Импортировать категории?</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Не получается импортировать категории - не выбран аккаунт для импортирования</sys:String>
@@ -45,4 +48,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Фон из магазина</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Баннер</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Показывать кнопку "Друзья" на Верхней панели</sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip">Друзья в Steam’е</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Игнорировать установленные игры с других аккаунтов</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">Дополнительные аккаунты</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Введите пару из ID и API-ключа от других аккаунтов Steam, если хотите импортировать из них игры. Больше информации доступно на вики-странице «Устранение неполадок» по Steam.</sys:String>
 </ResourceDictionary>

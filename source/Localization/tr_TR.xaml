@@ -15,10 +15,15 @@
     <sys:String x:Key="LOCPrivateAccount">Özel Hesap</sys:String>
     <sys:String x:Key="LOCPublicAccount">Genel Hesap</sys:String>
     <sys:String x:Key="LOCAPIKey">API Anahtarı</sys:String>
+    <sys:String x:Key="LOCStartUsingClient"></sys:String>
+    <sys:String x:Key="LOCImportPlaytime"></sys:String>
+    <sys:String x:Key="LOCAccountID"></sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io başlatılacaktır. Lütfen oturum açın ve ardından bu mesajı kapatın.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Kullanıcının oturum açmasını bekleyin, tamamladığınızda lütfen bunu kapatın...</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io uygulama sürümü 25 veya daha yenisi yüklü değil.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel"></sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel"></sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Hesap Girişi</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Hesap Adı</sys:String>
@@ -55,14 +60,18 @@
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Mağaza Arka Planı</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Afiş</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">Üst panelde arkadaşlar düğmesi göster </sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames"></sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccounts"></sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Resim kullanılamıyorsa ekran görüntüsü kullan</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Birden fazla resim mevcutsa, şunu kullan:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">{0} için arka plan resmi seç</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Üçüncü parti mağaza oyunlarını yok say</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Humble Choice oyunlarını içe aktar</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Humble Choice aboneliğinde kullanılabilir oyunları içe aktar</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames"></sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip"></sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">Humble Kütüphane oyunlarını içe aktar</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Standart Humble mağazası ve paket satın alımlarını içe aktar.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Üçüncü parti istemcileri gerektiren oyunları içe aktarmayı atlamayı etkinleştirin, Playnite'da halihazırda yönetilen mağazalar dahil (kopyaları önlemek için).</sys:String>
@@ -70,6 +79,7 @@
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">DRM'siz sürümü de mevcutsa, üçüncü parti istemci gerektiren oyunları içe aktarın.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Oyunları başlatmak için her zaman Humble uygulaması kullan</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Devre dışı ise, Playnite, Humble uygulamasını yoksayarak oyunları doğrudan çalıştırmaya çalışacaktır.</sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError"></sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">İstemciyi açarken Microsoft Mağaza'sı yerine Xbox Pass uygulamasını başlat</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Xbox konsol oyunlarını içe aktar</sys:String>

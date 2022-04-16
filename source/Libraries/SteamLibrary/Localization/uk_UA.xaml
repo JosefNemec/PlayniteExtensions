@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCSteamPrivateAccount">Приватний обліковий запис</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Загальнодоступний обліковий запис</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">Ключ API</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient">Запустити клієнтом {0}</sys:String>
+  <sys:String x:Key="LOCSteamImportPlaytime">Імпортувати час у грі</sys:String>
+  <sys:String x:Key="LOCSteamAccountID">ID облікового запису</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Яке ім’я мого облікового запису?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">URL-адреса облікового запису</sys:String>
@@ -45,4 +48,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Фон з магазину</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Банер</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Показати кнопку друзів на верхній панелі </sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip">Друзі в Steam</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ігнорувати встановлені ігри з інших облікових записів</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">Додаткові облікові записи</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Визначте пару Steam ID і API-ключа інших облікових записів, якщо хочете імпортувати з них ігри. Для додаткової інформації перегляньте сторінку розв'язання проблем Steam у wiki.</sys:String>
 </ResourceDictionary>

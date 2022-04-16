@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">حساب خصوصی</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">حساب عمومی</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">کلید API</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient" />
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime" />
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID" />
 </ResourceDictionary>

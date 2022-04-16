@@ -10,9 +10,12 @@
   <sys:String x:Key="LOCOriginAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCOriginSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCOriginTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
-  <sys:String x:Key="LOCOriginTroubleShootingIssues">Устранение неисправностей</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingIssues">Устранение неполадок</sys:String>
   <sys:String x:Key="LOCOriginSettingsImportLibraryLabel">Импортировать все игры</sys:String>
   <sys:String x:Key="LOCOriginPrivateAccount">Закрытый профиль</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">Открытый профиль</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">API-ключ</sys:String>
+  <sys:String x:Key="LOCOriginStartUsingClient">Запустить через клиент {0}</sys:String>
+  <sys:String x:Key="LOCOriginImportPlaytime">Импортировать наигранные часы</sys:String>
+  <sys:String x:Key="LOCOriginAccountID">ID аккаунта</sys:String>
 </ResourceDictionary>

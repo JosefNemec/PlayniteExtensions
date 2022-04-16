@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCIGDBPrivateAccount" />
   <sys:String x:Key="LOCIGDBPublicAccount" />
   <sys:String x:Key="LOCIGDBAPIKey" />
+  <sys:String x:Key="LOCIGDBStartUsingClient" />
+  <sys:String x:Key="LOCIGDBImportPlaytime" />
+  <sys:String x:Key="LOCIGDBAccountID" />
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary" />
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle" />

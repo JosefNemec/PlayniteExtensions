@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">Privé-account</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Openbaar Account</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">API Sleutel</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient">Starten met {0} client</sys:String>
+  <sys:String x:Key="LOCIGDBImportPlaytime">Importeer speeltijd</sys:String>
+  <sys:String x:Key="LOCIGDBAccountID">Account ID</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Gebruik screenshots als illustraties niet beschikbaar zijn</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Wanneer meerdere afbeeldingen beschikbaar zijn gebruik dan:</sys:String>

@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount" />
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount" />
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey" />
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient" />
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime" />
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID" />
 </ResourceDictionary>

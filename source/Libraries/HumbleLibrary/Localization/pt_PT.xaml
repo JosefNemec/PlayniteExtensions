@@ -15,10 +15,13 @@
   <sys:String x:Key="LOCHumblePrivateAccount" />
   <sys:String x:Key="LOCHumblePublicAccount" />
   <sys:String x:Key="LOCHumbleAPIKey" />
+  <sys:String x:Key="LOCHumbleStartUsingClient" />
+  <sys:String x:Key="LOCHumbleImportPlaytime" />
+  <sys:String x:Key="LOCHumbleAccountID" />
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames" />
-  <sys:String x:Key="LOCHumbleImportTroveGames">Importar jogos da Humble Choice</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importar jogos está disponível através da Humble Choice subscrição.</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames" />
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip" />
   <sys:String x:Key="LOCHumbleGeneralLibrary">Importar jogos da Humble Choice</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importar compras padrão da loja e pacotes da Humble.</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve" />
@@ -26,4 +29,5 @@
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip" />
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Usar sempre a aplicação Humble para iniciar jogos.</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Quando desativado, o Playnite irá tentar iniciar jogos diretamente, ignorando a aplicação Humble.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError" />
 </ResourceDictionary>

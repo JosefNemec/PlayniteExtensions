@@ -69,5 +69,13 @@ namespace System
         /// Start using {0} client
         /// </summary>
         public const string AmazonStartUsingClient = "LOCAmazonStartUsingClient";
+        /// <summary>
+        /// Import play time
+        /// </summary>
+        public const string AmazonImportPlaytime = "LOCAmazonImportPlaytime";
+        /// <summary>
+        /// Account ID
+        /// </summary>
+        public const string AmazonAccountID = "LOCAmazonAccountID";
     }
 }

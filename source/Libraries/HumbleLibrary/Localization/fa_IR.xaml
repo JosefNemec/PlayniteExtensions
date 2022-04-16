@@ -15,10 +15,13 @@
   <sys:String x:Key="LOCHumblePrivateAccount">حساب خصوصی</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">حساب عمومی</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">کلید API</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient" />
+  <sys:String x:Key="LOCHumbleImportPlaytime" />
+  <sys:String x:Key="LOCHumbleAccountID" />
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">بازی های فروشگاه شخص ثالث را نادیده بگیرید</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGames">واردات بازی انتخاب فروتنانه</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">وارد کردن بازی‌های موجود به عنوان بخشی از اشتراک انتخاب فروتنانه.</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames" />
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip" />
   <sys:String x:Key="LOCHumbleGeneralLibrary">بازی های کتابخانه فروتنانه را وارد کنید</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">خریدهای استاندارد فروشگاه فروتنانه و خریدهای بسته را وارد کنید.</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">فعال کردن برای ردکردن واردات بازیهایی که به سرویس گیرنده شخص ثالث نیاز دارند،
@@ -27,4 +30,5 @@
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">اگر نسخه رایگان DRM موجود است، بازی های مورد نیاز سرویس گیرنده شخص ثالث را وارد کنید.</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">همیشه از برنامه Humble برای شروع بازی استفاده کنید</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">هنگامی که غیرفعال است، Playnite سعی می کند بازی ها را مستقیماً راه اندازی کند و برنامه Humble را دور بزند.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError" />
 </ResourceDictionary>

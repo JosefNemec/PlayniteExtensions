@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCEpicPrivateAccount">Privé-account</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">Openbaar Account</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">API Sleutel</sys:String>
+  <sys:String x:Key="LOCEpicStartUsingClient">Starten met {0} client</sys:String>
+  <sys:String x:Key="LOCEpicImportPlaytime">Importeer speeltijd</sys:String>
+  <sys:String x:Key="LOCEpicAccountID">Account ID</sys:String>
 </ResourceDictionary>

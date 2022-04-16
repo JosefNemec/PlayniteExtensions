@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCRockstarPrivateAccount">非公開アカウント</sys:String>
   <sys:String x:Key="LOCRockstarPublicAccount">公開アカウント</sys:String>
   <sys:String x:Key="LOCRockstarAPIKey">API キー</sys:String>
+  <sys:String x:Key="LOCRockstarStartUsingClient" />
+  <sys:String x:Key="LOCRockstarImportPlaytime" />
+  <sys:String x:Key="LOCRockstarAccountID" />
 </ResourceDictionary>

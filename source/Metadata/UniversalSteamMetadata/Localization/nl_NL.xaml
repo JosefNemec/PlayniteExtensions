@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Privé-account</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Openbaar Account</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API Sleutel</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">Starten met {0} client</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Importeer speeltijd</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID">Account ID</sys:String>
 </ResourceDictionary>

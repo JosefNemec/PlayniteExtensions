@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">Account privato</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Account pubblico</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">Chiave API</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient">Avvio del client {0} </sys:String>
+  <sys:String x:Key="LOCIGDBImportPlaytime">Importa tempo di riproduzione</sys:String>
+  <sys:String x:Key="LOCIGDBAccountID">ID account</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usa le schermate se l'illustrazione non è disponibile</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Se sono disponibili immagini multiple, usa:</sys:String>

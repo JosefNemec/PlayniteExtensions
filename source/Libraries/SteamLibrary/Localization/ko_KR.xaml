@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCSteamPrivateAccount">비공개 계정</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">공개 계정</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">API 키</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient" />
+  <sys:String x:Key="LOCSteamImportPlaytime" />
+  <sys:String x:Key="LOCSteamAccountID" />
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">계정 이름이 뭐죠?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">계정 URL 이름</sys:String>
@@ -45,4 +48,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">스토어 배경</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">배너</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">상단 패널에 친구 목록을 보여줄 버튼을 표시</sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip" />
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames" />
+  <sys:String x:Key="LOCSteamAdditionalAccounts" />
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
 </ResourceDictionary>

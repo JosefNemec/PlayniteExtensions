@@ -70,6 +70,14 @@ namespace System
         /// </summary>
         public const string itchioStartUsingClient = "LOCitchioStartUsingClient";
         /// <summary>
+        /// Import play time
+        /// </summary>
+        public const string itchioImportPlaytime = "LOCitchioImportPlaytime";
+        /// <summary>
+        /// Account ID
+        /// </summary>
+        public const string itchioAccountID = "LOCitchioAccountID";
+        /// <summary>
         /// itch.io will be launched. Please sign in and then close this message.
         /// </summary>
         public const string ItchioSignInNotif = "LOCItchioSignInNotif";

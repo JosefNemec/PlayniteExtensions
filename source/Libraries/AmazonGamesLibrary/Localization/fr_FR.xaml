@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCAmazonPrivateAccount">Profil privé</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">Profil public</sys:String>
   <sys:String x:Key="LOCAmazonAPIKey">Clé API</sys:String>
+  <sys:String x:Key="LOCAmazonStartUsingClient">Démarrer le client {0}</sys:String>
+  <sys:String x:Key="LOCAmazonImportPlaytime">Importer le temps de jeu</sys:String>
+  <sys:String x:Key="LOCAmazonAccountID">ID du compte</sys:String>
 </ResourceDictionary>

@@ -70,6 +70,14 @@ namespace System
         /// </summary>
         public const string HumbleStartUsingClient = "LOCHumbleStartUsingClient";
         /// <summary>
+        /// Import play time
+        /// </summary>
+        public const string HumbleImportPlaytime = "LOCHumbleImportPlaytime";
+        /// <summary>
+        /// Account ID
+        /// </summary>
+        public const string HumbleAccountID = "LOCHumbleAccountID";
+        /// <summary>
         /// Ignore third party store games
         /// </summary>
         public const string HumbleIgnoreThirdPartyStoreGames = "LOCHumbleIgnoreThirdPartyStoreGames";

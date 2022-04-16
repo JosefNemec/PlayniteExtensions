@@ -2,11 +2,11 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <sys:String x:Key="LOCSettingsImportInstalledLabel">Installierte Spiele importieren</sys:String>
     <sys:String x:Key="LOCSettingsImportUninstalledLabel">Nicht installierte Spiele importieren</sys:String>
-    <sys:String x:Key="LOCSettingsConnectAccount">Benutzerkonto verbinden</sys:String>
+    <sys:String x:Key="LOCSettingsConnectAccount">Nutzerkonto verbinden</sys:String>
     <sys:String x:Key="LOCLoginChecking">Authentifizierungsstatus wird überprüft …</sys:String>
-    <sys:String x:Key="LOCLoggedIn">Benutzer ist authentifiziert</sys:String>
+    <sys:String x:Key="LOCLoggedIn">Nutzer ist authentifiziert</sys:String>
     <sys:String x:Key="LOCNotLoggedIn">Authentifizierung erforderlich</sys:String>
-    <sys:String x:Key="LOCNotLoggedInError">Benutzer konnte nicht authentifiziert werden.</sys:String>
+    <sys:String x:Key="LOCNotLoggedInError">Nutzer konnte nicht authentifiziert werden.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Authentifizieren</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Spiele direkt starten ohne offiziellen Client</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Beheben von Problemen mit der Kontosynchronisation</sys:String>
@@ -15,21 +15,26 @@
     <sys:String x:Key="LOCPrivateAccount">Privates Konto</sys:String>
     <sys:String x:Key="LOCPublicAccount">Öffentliches Konto</sys:String>
     <sys:String x:Key="LOCAPIKey">API-Schlüssel</sys:String>
+    <sys:String x:Key="LOCStartUsingClient">Mit {0}-Client starten</sys:String>
+    <sys:String x:Key="LOCImportPlaytime">Spielzeit importieren</sys:String>
+    <sys:String x:Key="LOCAccountID">Konto-ID</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">Der itch.io-Client wird gestartet. Bitte melde dich dort an und schließe anschließend diese Meldung.</sys:String>
-    <sys:String x:Key="LOCItchioSignInWaitMessage">Es wird auf die Benutzeranmeldung gewartet. Bitte schließen diese Meldung, sobald du damit fertig bist …</sys:String>
+    <sys:String x:Key="LOCItchioSignInWaitMessage">Es wird auf die Nutzeranmeldung gewartet. Bitte schließen diese Meldung, sobald du damit fertig bist …</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">Die itch.io-App in Version 25 oder neuer ist nicht installiert.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Kostenlose Spiele aus Sammlungen importieren.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Zu importierende Elemente:</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Kontoanmeldung</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Kontoname</sys:String>
-    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Melde dich in deinem Benutzerkonto an oder verwende deinen öffentlichen Kontonamen, um deine Bibliothek vollständig zu synchronisieren.
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Melde dich in deinem Nutzerkonto an oder verwende deinen öffentlichen Kontonamen, um deine Bibliothek vollständig zu synchronisieren.
 Beachte, dass die Option des öffentlichen Kontonamens nur bei Konten funktioniert, deren Spielebibliotheken in GOGs Privatsphäreeinstellungen als öffentlich sichtbar festgelegt wurden.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Spiele mit GOG-Galaxy-Client starten</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Dies aktiviert Features von GOG Galaxy wie Cloud-Spielstände, Spielzeiterfassung etc.</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Wie lautet mein Kontoname?</sys:String>
-    <sys:String x:Key="LOCSteamCustomUrlName">Benutzerkonten-URL</sys:String>
-    <sys:String x:Key="LOCSteamLoggedInUser">Authentifizierter Benutzer</sys:String>
+    <sys:String x:Key="LOCSteamCustomUrlName">Nutzerkonten-URL</sys:String>
+    <sys:String x:Key="LOCSteamLoggedInUser">Authentifizierter Nutzer</sys:String>
     <sys:String x:Key="LOCSteamRequiresApiKey">Das Konto ist privat, der API-Schlüssel ist erforderlich.</sys:String>
     <sys:String x:Key="LOCSteamLinksCommunityHub">Communityhub</sys:String>
     <sys:String x:Key="LOCSteamLinksDiscussions">Diskussionen</sys:String>
@@ -56,14 +61,18 @@ Beachte, dass die Option des öffentlichen Kontonamens nur bei Konten funktionie
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Shop-Hintergrund</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">Schaltfläche »Freunde« in oberer Leiste anzeigen</sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">Steam-Freunde</sys:String>
+    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Installierte Spiele anderer Konten ignorieren</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccounts">Weitere Konten</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Gib die Steam-Konto-ID und das API-Schlüsselpaar anderer Konten an, falls du von diesen Spiele importieren möchtest. Weitere Informationen findest du auf der Wiki-Seite zur Steam-Problembehebung.</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Screenshots verwenden, falls kein Bildmaterial verfügbar</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Falls mehrere Bilder verfügbar, das folgende verwenden:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Hintergrundbild für {0} auswählen</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Spiele von Drittanbieter-Shops ignorieren</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Humble-Choice-Spiele importieren</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Spiele importieren, die als Teil des Humble-Choice-Abonnements verfügbar sind.</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames">Humble-Choice-Spiele importieren</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Spiele aus Humble-Choice-Abonnements importieren.</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">Humble-Library-Spiele importieren</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Normale Käufe aus dem Humble Store und aus Bundles importieren.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Aktivieren, um keine Spiele zu importieren, die einen Drittanbieter-Client erfordern. Einschließlich bereits von Playnite verwalteter Shops, um Duplikate zu vermeiden.</sys:String>
@@ -71,6 +80,7 @@ Beachte, dass die Option des öffentlichen Kontonamens nur bei Konten funktionie
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Spiele mit Drittanbieter-Client importieren, falls auch eine DRM-freie Version verfügbar ist.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Immer Humble-App verwenden, um Spiele zu starten</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Falls deaktiviert, versucht Playnite, Spiele direkt zu starten und dabei die Humble-App zu umgehen.</sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">Die automatische Installation und Deinstallation von Humble-Spielen ohne Abonnement wird derzeit nicht unterstützt.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Beim Öffen des Clients App für Xbox Game Pass anstatt Microsoft Store starten</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">XBox-Konsolen-Spiele importieren</sys:String>

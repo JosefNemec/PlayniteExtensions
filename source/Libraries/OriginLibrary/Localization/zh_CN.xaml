@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCOriginPrivateAccount">私密账户</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">公开账户</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">API 密匙</sys:String>
+  <sys:String x:Key="LOCOriginStartUsingClient">开始使用 {0} 客户端</sys:String>
+  <sys:String x:Key="LOCOriginImportPlaytime">导入游戏时间</sys:String>
+  <sys:String x:Key="LOCOriginAccountID">账户 ID</sys:String>
 </ResourceDictionary>

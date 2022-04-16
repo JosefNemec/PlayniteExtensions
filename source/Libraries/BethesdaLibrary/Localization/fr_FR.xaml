@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCBethesdaPrivateAccount">Profil privé</sys:String>
   <sys:String x:Key="LOCBethesdaPublicAccount">Profil public</sys:String>
   <sys:String x:Key="LOCBethesdaAPIKey">Clé API</sys:String>
+  <sys:String x:Key="LOCBethesdaStartUsingClient">Démarrer le client {0}</sys:String>
+  <sys:String x:Key="LOCBethesdaImportPlaytime">Importer le temps de jeu</sys:String>
+  <sys:String x:Key="LOCBethesdaAccountID">ID du compte</sys:String>
 </ResourceDictionary>

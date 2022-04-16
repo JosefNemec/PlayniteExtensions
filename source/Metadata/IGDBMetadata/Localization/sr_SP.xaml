@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">API кључ</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient" />
+  <sys:String x:Key="LOCIGDBImportPlaytime" />
+  <sys:String x:Key="LOCIGDBAccountID" />
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Користи снимке екрана ако слике нису доступне</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Ако је више слика доступно користи:</sys:String>

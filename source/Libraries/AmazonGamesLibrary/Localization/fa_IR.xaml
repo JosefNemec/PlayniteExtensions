@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCAmazonPrivateAccount">حساب خصوصی</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">حساب عمومی</sys:String>
   <sys:String x:Key="LOCAmazonAPIKey">کلید API</sys:String>
+  <sys:String x:Key="LOCAmazonStartUsingClient" />
+  <sys:String x:Key="LOCAmazonImportPlaytime" />
+  <sys:String x:Key="LOCAmazonAccountID" />
 </ResourceDictionary>

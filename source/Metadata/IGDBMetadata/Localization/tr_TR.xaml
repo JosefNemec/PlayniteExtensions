@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">Özel Hesap</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Genel Hesap</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">API Anahtarı</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient" />
+  <sys:String x:Key="LOCIGDBImportPlaytime" />
+  <sys:String x:Key="LOCIGDBAccountID" />
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Resim kullanılamıyorsa ekran görüntüsü kullan</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Birden fazla resim mevcutsa, şunu kullan:</sys:String>

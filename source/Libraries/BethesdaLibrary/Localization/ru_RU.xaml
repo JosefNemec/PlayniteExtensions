@@ -10,9 +10,12 @@
   <sys:String x:Key="LOCBethesdaAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCBethesdaSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCBethesdaTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
-  <sys:String x:Key="LOCBethesdaTroubleShootingIssues">Устранение неисправностей</sys:String>
+  <sys:String x:Key="LOCBethesdaTroubleShootingIssues">Устранение неполадок</sys:String>
   <sys:String x:Key="LOCBethesdaSettingsImportLibraryLabel">Импортировать все игры</sys:String>
   <sys:String x:Key="LOCBethesdaPrivateAccount">Закрытый профиль</sys:String>
   <sys:String x:Key="LOCBethesdaPublicAccount">Открытый профиль</sys:String>
   <sys:String x:Key="LOCBethesdaAPIKey">API-ключ</sys:String>
+  <sys:String x:Key="LOCBethesdaStartUsingClient">Запустить через клиент {0}</sys:String>
+  <sys:String x:Key="LOCBethesdaImportPlaytime">Импортировать наигранные часы</sys:String>
+  <sys:String x:Key="LOCBethesdaAccountID">ID аккаунта</sys:String>
 </ResourceDictionary>

@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Vieša paskyra</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API raktas</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient" />
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime" />
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID" />
 </ResourceDictionary>

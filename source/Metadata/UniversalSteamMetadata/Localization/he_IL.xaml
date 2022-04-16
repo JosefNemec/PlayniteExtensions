@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">חשבון פרטי</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">חשבון ציבורי</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">מפתח API</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient" />
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">יבא זמן משחק</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID">מזהה משתמש</sys:String>
 </ResourceDictionary>

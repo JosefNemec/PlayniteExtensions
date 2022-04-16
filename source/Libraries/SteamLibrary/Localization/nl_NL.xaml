@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCSteamPrivateAccount">Privé-account</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Openbaar Account</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">API Sleutel</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient">Starten met {0} client</sys:String>
+  <sys:String x:Key="LOCSteamImportPlaytime">Importeer speeltijd</sys:String>
+  <sys:String x:Key="LOCSteamAccountID">Account ID</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Wat is mijn accountnaam?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Account URL Naam</sys:String>
@@ -45,4 +48,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Sla Achtergrond Op</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Toon vriendenknop in het top-paneel</sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip">Steam Vrienden</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Negeer geïnstalleerde spellen van andere accounts</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">Extra Accounts</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Specificeer Steam account ID en API key van andere accounts waar je Steam spellen van wil importeren. Zie Steam troubleshooting wiki pagina voor meer info.</sys:String>
 </ResourceDictionary>

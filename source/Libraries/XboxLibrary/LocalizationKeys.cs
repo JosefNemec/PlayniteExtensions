@@ -70,6 +70,14 @@ namespace System
         /// </summary>
         public const string XboxStartUsingClient = "LOCXboxStartUsingClient";
         /// <summary>
+        /// Import play time
+        /// </summary>
+        public const string XboxImportPlaytime = "LOCXboxImportPlaytime";
+        /// <summary>
+        /// Account ID
+        /// </summary>
+        public const string XboxAccountID = "LOCXboxAccountID";
+        /// <summary>
         /// Start Xbox Pass app instead of Microsoft Store when opening client
         /// </summary>
         public const string XboxXboxAppClientPriorityLaunch = "LOCXboxXboxAppClientPriorityLaunch";

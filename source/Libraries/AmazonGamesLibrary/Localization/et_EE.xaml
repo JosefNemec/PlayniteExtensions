@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCAmazonPrivateAccount" />
   <sys:String x:Key="LOCAmazonPublicAccount" />
   <sys:String x:Key="LOCAmazonAPIKey" />
+  <sys:String x:Key="LOCAmazonStartUsingClient" />
+  <sys:String x:Key="LOCAmazonImportPlaytime" />
+  <sys:String x:Key="LOCAmazonAccountID" />
 </ResourceDictionary>

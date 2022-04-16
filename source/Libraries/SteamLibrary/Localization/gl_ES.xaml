@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCSteamPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Conta pública</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">Chave da API</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient" />
+  <sys:String x:Key="LOCSteamImportPlaytime" />
+  <sys:String x:Key="LOCSteamAccountID" />
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">¿Cál é o nome da miña conta?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Nome da ligazón da conta</sys:String>
@@ -45,4 +48,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Imaxe de fondo da tenda</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Mostra o botón de amizades no panel superior</sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip" />
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames" />
+  <sys:String x:Key="LOCSteamAdditionalAccounts" />
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
 </ResourceDictionary>

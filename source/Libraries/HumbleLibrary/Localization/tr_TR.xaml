@@ -15,10 +15,13 @@
   <sys:String x:Key="LOCHumblePrivateAccount">Özel Hesap</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Genel Hesap</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">API Anahtarı</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient" />
+  <sys:String x:Key="LOCHumbleImportPlaytime" />
+  <sys:String x:Key="LOCHumbleAccountID" />
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Üçüncü parti mağaza oyunlarını yok say</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGames">Humble Choice oyunlarını içe aktar</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Humble Choice aboneliğinde kullanılabilir oyunları içe aktar</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames" />
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip" />
   <sys:String x:Key="LOCHumbleGeneralLibrary">Humble Kütüphane oyunlarını içe aktar</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Standart Humble mağazası ve paket satın alımlarını içe aktar.</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Üçüncü parti istemcileri gerektiren oyunları içe aktarmayı atlamayı etkinleştirin, Playnite'da halihazırda yönetilen mağazalar dahil (kopyaları önlemek için).</sys:String>
@@ -26,4 +29,5 @@
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">DRM'siz sürümü de mevcutsa, üçüncü parti istemci gerektiren oyunları içe aktarın.</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Oyunları başlatmak için her zaman Humble uygulaması kullan</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Devre dışı ise, Playnite, Humble uygulamasını yoksayarak oyunları doğrudan çalıştırmaya çalışacaktır.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError" />
 </ResourceDictionary>

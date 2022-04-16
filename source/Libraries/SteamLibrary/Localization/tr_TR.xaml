@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCSteamPrivateAccount">Özel Hesap</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Genel Hesap</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">API Anahtarı</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient" />
+  <sys:String x:Key="LOCSteamImportPlaytime" />
+  <sys:String x:Key="LOCSteamAccountID" />
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Hesap adım ne?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Hesap URL Adı</sys:String>
@@ -45,4 +48,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Mağaza Arka Planı</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Afiş</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Üst panelde arkadaşlar düğmesi göster </sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip" />
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames" />
+  <sys:String x:Key="LOCSteamAdditionalAccounts" />
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
 </ResourceDictionary>

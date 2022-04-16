@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCBattleNetPrivateAccount">Приватний обліковий запис</sys:String>
   <sys:String x:Key="LOCBattleNetPublicAccount">Загальнодоступний обліковий запис</sys:String>
   <sys:String x:Key="LOCBattleNetAPIKey">Ключ API</sys:String>
+  <sys:String x:Key="LOCBattleNetStartUsingClient">Запустити клієнтом {0}</sys:String>
+  <sys:String x:Key="LOCBattleNetImportPlaytime">Імпортувати час у грі</sys:String>
+  <sys:String x:Key="LOCBattleNetAccountID">ID облікового запису</sys:String>
 </ResourceDictionary>

@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">חשבון פרטי</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">חשבון ציבורי</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">מפתח API</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient" />
+  <sys:String x:Key="LOCIGDBImportPlaytime">יבא זמן משחק</sys:String>
+  <sys:String x:Key="LOCIGDBAccountID">מזהה משתמש</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">השתמש בתצלומי מסך אם עטיפה אינה זמינה</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">אם כמה תמונות קיימות אז בחר:</sys:String>

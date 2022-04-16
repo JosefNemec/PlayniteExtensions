@@ -15,8 +15,13 @@
   <sys:String x:Key="LOCitchioPrivateAccount">非公開アカウント</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">公開アカウント</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">API キー</sys:String>
+  <sys:String x:Key="LOCitchioStartUsingClient" />
+  <sys:String x:Key="LOCitchioImportPlaytime" />
+  <sys:String x:Key="LOCitchioAccountID" />
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.ioクライアントが開きます。サインインしてからこのメッセージを閉じてください。</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">ユーザーがログインするのを待っています。完了したら閉じてください。</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">バージョン25以降のItchクライアントがインストールされていません。</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel" />
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel" />
 </ResourceDictionary>

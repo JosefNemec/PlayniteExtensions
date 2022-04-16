@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCGOGPrivateAccount">私密帳號</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">公開帳號</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">API 密鑰</sys:String>
+  <sys:String x:Key="LOCGOGStartUsingClient">以{0}啟動</sys:String>
+  <sys:String x:Key="LOCGOGImportPlaytime" />
+  <sys:String x:Key="LOCGOGAccountID" />
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">帳號登入</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">帳號名稱</sys:String>

@@ -15,8 +15,13 @@
   <sys:String x:Key="LOCitchioPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">Vieša paskyra</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">API raktas</sys:String>
+  <sys:String x:Key="LOCitchioStartUsingClient" />
+  <sys:String x:Key="LOCitchioImportPlaytime" />
+  <sys:String x:Key="LOCitchioAccountID" />
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">bus atidarytas itch.io klientas. Prašome prisijungti ir uždaryti šį pranešimą.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Laukiama vartotojo prisijungimo. Baigus prašome uždaryti šį langą…</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">neįdiegta 25 ar naujesnė itch.io kliento versija.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel" />
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel" />
 </ResourceDictionary>

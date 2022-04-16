@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount">Приватний обліковий запис</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">Загальнодоступний обліковий запис</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">Ключ API</sys:String>
+  <sys:String x:Key="LOCUbisoftStartUsingClient">Запустити клієнтом {0}</sys:String>
+  <sys:String x:Key="LOCUbisoftImportPlaytime">Імпортувати час у грі</sys:String>
+  <sys:String x:Key="LOCUbisoftAccountID">ID облікового запису</sys:String>
 </ResourceDictionary>

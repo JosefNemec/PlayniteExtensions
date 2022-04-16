@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCOriginPrivateAccount">حساب خصوصی</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">حساب عمومی</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">کلید API</sys:String>
+  <sys:String x:Key="LOCOriginStartUsingClient" />
+  <sys:String x:Key="LOCOriginImportPlaytime" />
+  <sys:String x:Key="LOCOriginAccountID" />
 </ResourceDictionary>

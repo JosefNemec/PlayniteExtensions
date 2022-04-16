@@ -15,8 +15,13 @@
   <sys:String x:Key="LOCitchioPrivateAccount">Ιδιωτικός Λογαριασμός</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">Δημόσιος Λογαριασμός</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">Κλειδί API</sys:String>
+  <sys:String x:Key="LOCitchioStartUsingClient" />
+  <sys:String x:Key="LOCitchioImportPlaytime" />
+  <sys:String x:Key="LOCitchioAccountID" />
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif" />
   <sys:String x:Key="LOCItchioSignInWaitMessage" />
   <sys:String x:Key="LOCItchioClientNotInstalledError">Η έκδοση 25 ή νεότερη της εφαρμογής itch.io δεν είναι εγκατεστημένη.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel" />
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel" />
 </ResourceDictionary>

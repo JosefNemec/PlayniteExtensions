@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount">Nem publikus fiók</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">Publikus fiók</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">API Kulcs</sys:String>
+  <sys:String x:Key="LOCUbisoftStartUsingClient">{0} használata</sys:String>
+  <sys:String x:Key="LOCUbisoftImportPlaytime">Játékidő importálása</sys:String>
+  <sys:String x:Key="LOCUbisoftAccountID">Fióknév</sys:String>
 </ResourceDictionary>

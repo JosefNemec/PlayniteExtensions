@@ -15,10 +15,15 @@
     <sys:String x:Key="LOCPrivateAccount">Cuenta Privada</sys:String>
     <sys:String x:Key="LOCPublicAccount">Cuenta Pública</sys:String>
     <sys:String x:Key="LOCAPIKey">Clave de API</sys:String>
+    <sys:String x:Key="LOCStartUsingClient">Iniciar usando el cliente {0}</sys:String>
+    <sys:String x:Key="LOCImportPlaytime">Importar tiempo de juego</sys:String>
+    <sys:String x:Key="LOCAccountID">ID de cuenta</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">Se lanzará itch.io. Por favor inicie sesión y luego cierre este mensaje.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Esperando a que el usuario inicie sesión, por favor, cierre esto cuando hayas terminado…</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">La aplicación itch.io versión 25 o posterior no está instalada.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importar juegos gratuitos de colecciones.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Artículos a importar:</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Iniciar sesión</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Nombre de la cuenta</sys:String>
@@ -56,14 +61,18 @@ La opción de Nombre de Cuenta solo aparece para cuentas cuyas librerías de jue
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Imagen de fondo de la tienda</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">Mostrar botón de amigos en el panel superior</sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">Amigos de Steam</sys:String>
+    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignorar los juegos instalados de otras cuentas</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccounts">Cuentas adicionales</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Especifica el ID de la cuenta de Steam y el par de claves API de otras cuentas si quieres importar juegos desde ellas. Consulta la página wiki de resolución de problemas de Steam para obtener más información.</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Use capturas de pantalla si la ilustración no está disponible</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Si hay varias imágenes disponibles, utilizar:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Seleccionar imagen de fondo para {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorar juegos de la tienda de terceros</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Importar juegos de Humble Choice</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importar juegos disponibles como parte de la suscripción de Humble Choice.</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames">Importar juegos de Humble Choice</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Importar juegos disponibles como parte de la suscripción de Humble Choice.</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">Importar juegos de la biblioteca de Humble</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importar compras estándar y compras de paquete de la tienda de Humble.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Habilite para omitir la importación de juegos que requieren clientes de terceros,
@@ -72,6 +81,7 @@ incluidas las tiendas ya gestionadas en Playnite para evitar duplicados.</sys:St
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importe juegos que requieran un cliente de terceros si la versión sin DRM también está disponible.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Usar siempre la aplicación de Humble para iniciar los juegos.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Cuando está deshabilitado, Playnite intentará lanzar juegos directamente, evitando la aplicación de Humble.</sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">La instalación y desinstalación automática de los juegos de Humble que no son de suscripción no es compatible actualmente.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Iniciar la aplicación Xbox Pass en lugar de Microsoft Store al abrir el cliente</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Importar juegos de consola de Xbox</sys:String>

@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCRockstarPrivateAccount">Privat konto</sys:String>
   <sys:String x:Key="LOCRockstarPublicAccount">Offentlig konto</sys:String>
   <sys:String x:Key="LOCRockstarAPIKey">API-nøkkel</sys:String>
+  <sys:String x:Key="LOCRockstarStartUsingClient">Begynn å bruke {0}-klient</sys:String>
+  <sys:String x:Key="LOCRockstarImportPlaytime">Importer spilletid</sys:String>
+  <sys:String x:Key="LOCRockstarAccountID">Konto-ID</sys:String>
 </ResourceDictionary>

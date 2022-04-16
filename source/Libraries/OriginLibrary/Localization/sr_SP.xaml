@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCOriginPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">API кључ</sys:String>
+  <sys:String x:Key="LOCOriginStartUsingClient" />
+  <sys:String x:Key="LOCOriginImportPlaytime" />
+  <sys:String x:Key="LOCOriginAccountID" />
 </ResourceDictionary>

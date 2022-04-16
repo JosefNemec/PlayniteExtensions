@@ -15,10 +15,13 @@
   <sys:String x:Key="LOCHumblePrivateAccount">Profil privé</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Profil public</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">Clé API</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">Démarrer le client {0}</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">Importer le temps de jeu</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">ID du compte</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorer les jeux dépendant de clients tiers</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGames">Importer les jeux Humble Choice</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Permet d'importer les jeux disponibles dans le service Humble Choice.</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames">Importer les jeux Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Permet d'importer les jeux disponibles dans le service Humble Choice.</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">Importer les jeux depuis la bibliothèque Humble</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Permet d'importer les achats standards et en bundle depuis le Humble Store.</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Lorsque cette option est activée, les jeux nécessitant un client tiers ne seront pas importés.
@@ -27,4 +30,5 @@ Cela inclut les clients déjà supportées par Playnite, de manière à éviter 
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importer les versions requérant un client tiers plutôt que les versions DRM Free</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Lancer les jeux depuis Humble App</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Désactiver ce paramètre pour tenter de lancer les jeux sans passer par l'Humble App.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">L'installation ou la désinstallation automatique n'est actuellement pas supportée pour les jeux Humble non-inclus dans un abonnement.</sys:String>
 </ResourceDictionary>

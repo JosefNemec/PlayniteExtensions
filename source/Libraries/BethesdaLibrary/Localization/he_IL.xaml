@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCBethesdaPrivateAccount">חשבון פרטי</sys:String>
   <sys:String x:Key="LOCBethesdaPublicAccount">חשבון ציבורי</sys:String>
   <sys:String x:Key="LOCBethesdaAPIKey">מפתח API</sys:String>
+  <sys:String x:Key="LOCBethesdaStartUsingClient" />
+  <sys:String x:Key="LOCBethesdaImportPlaytime">יבא זמן משחק</sys:String>
+  <sys:String x:Key="LOCBethesdaAccountID">מזהה משתמש</sys:String>
 </ResourceDictionary>

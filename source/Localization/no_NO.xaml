@@ -15,10 +15,15 @@
     <sys:String x:Key="LOCPrivateAccount">Privat konto</sys:String>
     <sys:String x:Key="LOCPublicAccount">Offentlig konto</sys:String>
     <sys:String x:Key="LOCAPIKey">API-nøkkel</sys:String>
+    <sys:String x:Key="LOCStartUsingClient">Begynn å bruke {0}-klient</sys:String>
+    <sys:String x:Key="LOCImportPlaytime">Importer spilletid</sys:String>
+    <sys:String x:Key="LOCAccountID">Konto-ID</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io-klienten vil starte. Vennligst logg inn, og lukk deretter denne meldingen.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Venter på at brukeren skal logge inn. Vennligst lukk dette vinduet når du er ferdig …</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">Versjon 25 eller nyere av itch.io-klienten er ikke installert.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importer gratis spill fra samlinger.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Gjenstander som skal importeres:</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Kontopålogging</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Kontonavn</sys:String>
@@ -56,14 +61,18 @@ Merk at alternativet Kontonavn bare fungerer for kontoer der spillbibliotekene e
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Butikk-bakgrunn</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">Vis Friends-knapp i toppanelet</sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">Steam-venner</sys:String>
+    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignorer installerte spill fra andre kontoer</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccounts">Ekstra kontoer</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Spesifiser Steam-konto-ID og API-nøkkel for annen konto hvis du ønsker å importere spill derfra. Besøk Steams wiki-side for feilsøking for mer informasjon.</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Bruk skjermbilder hvis bildemateriale ikke er tilgjengelig</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Hvis flere bilder er tilgjengelige, bruk:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Velg bakgrunnsbilde for {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorer tredjeparts butikkspill</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Importer Humble Choice-spill</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importer spill som er tilgjengelig via Humble Choice-abonnement.</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames">Importer Humble Choice-spill</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Importer spill som er tilgjengelig via Humble Choice-abonnement.</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">Importer spill fra Humble-biblioteket.</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importer vanlige kjøp og pakkekjøp fra Humble Store.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Aktiver for å hoppe over import av spill som krever tredjepartsklienter,
@@ -72,6 +81,7 @@ inkludert butikker som allerede er administrert i Playnite, for å forhindre dup
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importer spill som krever tredjepartsklient hvis DRM-fri versjon også er tilgjengelig.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Bruk alltid Humble-appen til å starte spill.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Hvis dette er deaktivert, vil Playnite overse Humble-appen og prøve å starte spill direkte.</sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">Automatisk installering og avinstallering av Humble-spill som ikke er en del av abonnement er for øyeblikket ikke støttet.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Start Xbox Game Pass-appen i stedet for Microsoft Store når du åpner klienten</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Importer konsollspill for Xbox</sys:String>

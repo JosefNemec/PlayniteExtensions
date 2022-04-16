@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCGOGPrivateAccount">Приватний обліковий запис</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">Загальнодоступний обліковий запис</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">Ключ API</sys:String>
+  <sys:String x:Key="LOCGOGStartUsingClient">Запустити клієнтом {0}</sys:String>
+  <sys:String x:Key="LOCGOGImportPlaytime">Імпортувати час у грі</sys:String>
+  <sys:String x:Key="LOCGOGAccountID">ID облікового запису</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Логін облікового запису</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Ім'я облікового запису</sys:String>

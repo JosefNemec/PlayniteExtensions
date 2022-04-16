@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount">私密账户</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">公开账户</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">API 密匙</sys:String>
+  <sys:String x:Key="LOCUbisoftStartUsingClient">开始使用 {0} 客户端</sys:String>
+  <sys:String x:Key="LOCUbisoftImportPlaytime">导入游戏时间</sys:String>
+  <sys:String x:Key="LOCUbisoftAccountID">账户 ID</sys:String>
 </ResourceDictionary>

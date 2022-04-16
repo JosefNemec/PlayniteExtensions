@@ -15,8 +15,13 @@
   <sys:String x:Key="LOCitchioPrivateAccount">私密帳號</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">公開帳號</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">API 密鑰</sys:String>
+  <sys:String x:Key="LOCitchioStartUsingClient">以{0}啟動</sys:String>
+  <sys:String x:Key="LOCitchioImportPlaytime" />
+  <sys:String x:Key="LOCitchioAccountID" />
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io用戶端程式即將啟動，請登入然後關閉此訊息。</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">正在等候用戶登入，完成後請關閉此訊息...</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">未安裝Itch.io 用戶端 25 或更高的版本</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">從蒐藏中匯入免費遊戲</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">以下項目會被匯入:</sys:String>
 </ResourceDictionary>

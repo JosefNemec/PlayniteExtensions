@@ -10,9 +10,12 @@
   <sys:String x:Key="LOCEpicAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
-  <sys:String x:Key="LOCEpicTroubleShootingIssues">Устранение неисправностей</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingIssues">Устранение неполадок</sys:String>
   <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">Импортировать все игры</sys:String>
   <sys:String x:Key="LOCEpicPrivateAccount">Закрытый профиль</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">Открытый профиль</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">API-ключ</sys:String>
+  <sys:String x:Key="LOCEpicStartUsingClient">Запустить через клиент {0}</sys:String>
+  <sys:String x:Key="LOCEpicImportPlaytime">Импортировать наигранные часы</sys:String>
+  <sys:String x:Key="LOCEpicAccountID">ID аккаунта</sys:String>
 </ResourceDictionary>

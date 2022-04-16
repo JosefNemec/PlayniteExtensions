@@ -69,5 +69,13 @@ namespace System
         /// Start using {0} client
         /// </summary>
         public const string EpicStartUsingClient = "LOCEpicStartUsingClient";
+        /// <summary>
+        /// Import play time
+        /// </summary>
+        public const string EpicImportPlaytime = "LOCEpicImportPlaytime";
+        /// <summary>
+        /// Account ID
+        /// </summary>
+        public const string EpicAccountID = "LOCEpicAccountID";
     }
 }

@@ -10,9 +10,12 @@
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
-  <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Устранение неисправностей</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Устранение неполадок</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">Импортировать все игры</sys:String>
   <sys:String x:Key="LOCUbisoftPrivateAccount">Закрытый профиль</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">Открытый профиль</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">API-ключ</sys:String>
+  <sys:String x:Key="LOCUbisoftStartUsingClient">Запустить через клиент {0}</sys:String>
+  <sys:String x:Key="LOCUbisoftImportPlaytime">Импортировать наигранные часы</sys:String>
+  <sys:String x:Key="LOCUbisoftAccountID">ID аккаунта</sys:String>
 </ResourceDictionary>

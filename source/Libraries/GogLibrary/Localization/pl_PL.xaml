@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCGOGPrivateAccount">Konto prywatne</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">Publiczne konto</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">Klucz API</sys:String>
+  <sys:String x:Key="LOCGOGStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
+  <sys:String x:Key="LOCGOGImportPlaytime">Importuj czasy gier</sys:String>
+  <sys:String x:Key="LOCGOGAccountID">Identyfikator konta</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Logowanie do konta</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Nazwa konta</sys:String>

@@ -15,8 +15,13 @@
   <sys:String x:Key="LOCitchioPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">Conta pública</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">Chave da API</sys:String>
+  <sys:String x:Key="LOCitchioStartUsingClient" />
+  <sys:String x:Key="LOCitchioImportPlaytime" />
+  <sys:String x:Key="LOCitchioAccountID" />
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">Lanzaráse itch.io. Por favor, verifícate e despóis pecha esta mensaxe.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Agardando pola verificación do usuario, por favor pecha esta xanela cando remates</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">A versión 25 da aplicación itch.io ou máis nova non está instalada.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel" />
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel" />
 </ResourceDictionary>

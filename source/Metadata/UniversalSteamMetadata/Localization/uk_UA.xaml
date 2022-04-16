@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Приватний обліковий запис</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Загальнодоступний обліковий запис</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">Ключ API</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">Запустити клієнтом {0}</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Імпортувати час у грі</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID">ID облікового запису</sys:String>
 </ResourceDictionary>

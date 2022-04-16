@@ -15,10 +15,13 @@
   <sys:String x:Key="LOCHumblePrivateAccount">Ιδιωτικός Λογαριασμός</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Δημόσιος Λογαριασμός</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">Κλειδί API</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient" />
+  <sys:String x:Key="LOCHumbleImportPlaytime" />
+  <sys:String x:Key="LOCHumbleAccountID" />
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames" />
-  <sys:String x:Key="LOCHumbleImportTroveGames" />
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip" />
+  <sys:String x:Key="LOCHumbleImportChoiceGames" />
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip" />
   <sys:String x:Key="LOCHumbleGeneralLibrary" />
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve" />
@@ -26,4 +29,5 @@
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip" />
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
+  <sys:String x:Key="LOCHumbleNonTroveInstallError" />
 </ResourceDictionary>

@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCBattleNetPrivateAccount">Nem publikus fiók</sys:String>
   <sys:String x:Key="LOCBattleNetPublicAccount">Publikus fiók</sys:String>
   <sys:String x:Key="LOCBattleNetAPIKey">API Kulcs</sys:String>
+  <sys:String x:Key="LOCBattleNetStartUsingClient">{0} használata</sys:String>
+  <sys:String x:Key="LOCBattleNetImportPlaytime">Játékidő importálása</sys:String>
+  <sys:String x:Key="LOCBattleNetAccountID">Fióknév</sys:String>
 </ResourceDictionary>

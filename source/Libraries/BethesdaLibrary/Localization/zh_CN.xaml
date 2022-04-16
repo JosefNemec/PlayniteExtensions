@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCBethesdaPrivateAccount">私密账户</sys:String>
   <sys:String x:Key="LOCBethesdaPublicAccount">公开账户</sys:String>
   <sys:String x:Key="LOCBethesdaAPIKey">API 密匙</sys:String>
+  <sys:String x:Key="LOCBethesdaStartUsingClient">开始使用 {0} 客户端</sys:String>
+  <sys:String x:Key="LOCBethesdaImportPlaytime">导入游戏时间</sys:String>
+  <sys:String x:Key="LOCBethesdaAccountID">账户 ID</sys:String>
 </ResourceDictionary>

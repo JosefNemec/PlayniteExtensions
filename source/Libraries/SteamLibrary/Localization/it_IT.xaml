@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCSteamPrivateAccount">Account privato</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Account pubblico</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">Chiave API</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient">Avvio del client {0} </sys:String>
+  <sys:String x:Key="LOCSteamImportPlaytime">Importa tempo di riproduzione</sys:String>
+  <sys:String x:Key="LOCSteamAccountID">ID account</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Qual è il nome del mio account?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Nome URL dell'account</sys:String>
@@ -45,4 +48,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Sfondo Negozio</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Mostra pulsante amici sul pannello superiore</sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip">Amici di Steam</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignora giochi installati da altri account</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">Account aggiuntivi</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Specificare l'ID dell'account Steam e la coppia di chiavi API di altri account se si desidera importare i giochi da loro. Vedere la pagina wiki per la risoluzione dei problemi di Steam per maggiori informazioni.</sys:String>
 </ResourceDictionary>

@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCOriginPrivateAccount">חשבון פרטי</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">חשבון ציבורי</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">מפתח API</sys:String>
+  <sys:String x:Key="LOCOriginStartUsingClient" />
+  <sys:String x:Key="LOCOriginImportPlaytime">יבא זמן משחק</sys:String>
+  <sys:String x:Key="LOCOriginAccountID">מזהה משתמש</sys:String>
 </ResourceDictionary>

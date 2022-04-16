@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCOriginPrivateAccount">Soukromý Účet</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">Veřejný Účet</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">API Klíč</sys:String>
+  <sys:String x:Key="LOCOriginStartUsingClient">Začít používat {0} klienta.</sys:String>
+  <sys:String x:Key="LOCOriginImportPlaytime">Importovat nahraný čas</sys:String>
+  <sys:String x:Key="LOCOriginAccountID">ID účtu</sys:String>
 </ResourceDictionary>

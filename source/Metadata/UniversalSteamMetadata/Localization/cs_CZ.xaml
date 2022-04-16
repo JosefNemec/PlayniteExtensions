@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Soukromý Účet</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Veřejný Účet</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API Klíč</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">Začít používat {0} klienta.</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Importovat nahraný čas</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID">ID účtu</sys:String>
 </ResourceDictionary>

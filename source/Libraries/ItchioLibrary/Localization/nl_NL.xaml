@@ -15,8 +15,13 @@
   <sys:String x:Key="LOCitchioPrivateAccount">Privé-account</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">Openbaar Account</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">API Sleutel</sys:String>
+  <sys:String x:Key="LOCitchioStartUsingClient">Starten met {0} client</sys:String>
+  <sys:String x:Key="LOCitchioImportPlaytime">Importeer speeltijd</sys:String>
+  <sys:String x:Key="LOCitchioAccountID">Account ID</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io wordt gestart. Log in a.u.b. en sluit dan dit bericht.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Wachten op aanmelding van gebruiker, sluit alstublieft af wanneer je klaar bent</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io client versie 25 of nieuwer is niet geïnstalleerd.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importeer gratis spellen uit collecties.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Te importeren items:</sys:String>
 </ResourceDictionary>

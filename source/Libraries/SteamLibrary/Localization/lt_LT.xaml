@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCSteamPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Vieša paskyra</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">API raktas</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient" />
+  <sys:String x:Key="LOCSteamImportPlaytime" />
+  <sys:String x:Key="LOCSteamAccountID" />
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Koks mano vartotojo vardas?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Vartotojo nuorodos pavadinimas</sys:String>
@@ -45,4 +48,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Saugoti fono paveikslėlį</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Baneris</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton" />
+  <sys:String x:Key="LOCSteamFriendsTooltip" />
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames" />
+  <sys:String x:Key="LOCSteamAdditionalAccounts" />
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
 </ResourceDictionary>

@@ -15,6 +15,8 @@
   <sys:String x:Key="LOCitchioPublicAccount">Public Account</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">API Key</sys:String>
   <sys:String x:Key="LOCitchioStartUsingClient">Start using {0} client</sys:String>
+  <sys:String x:Key="LOCitchioImportPlaytime">Import play time</sys:String>
+  <sys:String x:Key="LOCitchioAccountID">Account ID</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io will be launched. Please sign in and then close this message.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Waiting for user to sign in, please close this when you're done…</sys:String>

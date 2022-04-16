@@ -69,5 +69,13 @@ namespace System
         /// Start using {0} client
         /// </summary>
         public const string RockstarStartUsingClient = "LOCRockstarStartUsingClient";
+        /// <summary>
+        /// Import play time
+        /// </summary>
+        public const string RockstarImportPlaytime = "LOCRockstarImportPlaytime";
+        /// <summary>
+        /// Account ID
+        /// </summary>
+        public const string RockstarAccountID = "LOCRockstarAccountID";
     }
 }

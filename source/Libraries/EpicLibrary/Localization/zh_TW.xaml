@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCEpicPrivateAccount">私密帳號</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">公開帳號</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">API 密鑰</sys:String>
+  <sys:String x:Key="LOCEpicStartUsingClient">以{0}啟動</sys:String>
+  <sys:String x:Key="LOCEpicImportPlaytime" />
+  <sys:String x:Key="LOCEpicAccountID" />
 </ResourceDictionary>

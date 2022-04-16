@@ -15,8 +15,13 @@
   <sys:String x:Key="LOCitchioPrivateAccount">Profil privé</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">Profil public</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">Clé API</sys:String>
+  <sys:String x:Key="LOCitchioStartUsingClient">Démarrer le client {0}</sys:String>
+  <sys:String x:Key="LOCitchioImportPlaytime">Importer le temps de jeu</sys:String>
+  <sys:String x:Key="LOCitchioAccountID">ID du compte</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">Le client itch.io va maintenant démarrer. Veuillez vous identifier avant de fermer la fenêtre de connexion.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">(Fermer cette fenêtre une fois la connexion établie)</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">Le client itch.io n'est pas à jour. La version 25 (ou ultérieur) est requise pour la synchronisation.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importer les jeux gratuits enregistrés dans la collection</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Éléments à importer : </sys:String>
 </ResourceDictionary>

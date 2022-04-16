@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCOriginPrivateAccount">Ιδιωτικός Λογαριασμός</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">Δημόσιος Λογαριασμός</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">Κλειδί API</sys:String>
+  <sys:String x:Key="LOCOriginStartUsingClient" />
+  <sys:String x:Key="LOCOriginImportPlaytime" />
+  <sys:String x:Key="LOCOriginAccountID" />
 </ResourceDictionary>

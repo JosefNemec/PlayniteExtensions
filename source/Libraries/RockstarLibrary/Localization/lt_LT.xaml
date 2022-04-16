@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCRockstarPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCRockstarPublicAccount">Vieša paskyra</sys:String>
   <sys:String x:Key="LOCRockstarAPIKey">API raktas</sys:String>
+  <sys:String x:Key="LOCRockstarStartUsingClient" />
+  <sys:String x:Key="LOCRockstarImportPlaytime" />
+  <sys:String x:Key="LOCRockstarAccountID" />
 </ResourceDictionary>

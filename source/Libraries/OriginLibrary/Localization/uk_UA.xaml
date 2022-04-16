@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCOriginPrivateAccount">Приватний обліковий запис</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">Загальнодоступний обліковий запис</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">Ключ API</sys:String>
+  <sys:String x:Key="LOCOriginStartUsingClient">Запустити клієнтом {0}</sys:String>
+  <sys:String x:Key="LOCOriginImportPlaytime">Імпортувати час у грі</sys:String>
+  <sys:String x:Key="LOCOriginAccountID">ID облікового запису</sys:String>
 </ResourceDictionary>

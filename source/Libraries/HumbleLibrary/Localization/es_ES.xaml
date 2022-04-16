@@ -15,10 +15,13 @@
   <sys:String x:Key="LOCHumblePrivateAccount">Cuenta Privada</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Cuenta Pública</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">Clave de API</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">Iniciar usando el cliente {0}</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">Importar tiempo de juego</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">ID de cuenta</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorar juegos de la tienda de terceros</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGames">Importar juegos de Humble Choice</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importar juegos disponibles como parte de la suscripción de Humble Choice.</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames">Importar juegos de Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Importar juegos disponibles como parte de la suscripción de Humble Choice.</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">Importar juegos de la biblioteca de Humble</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importar compras estándar y compras de paquete de la tienda de Humble.</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Habilite para omitir la importación de juegos que requieren clientes de terceros,
@@ -27,4 +30,5 @@ incluidas las tiendas ya gestionadas en Playnite para evitar duplicados.</sys:St
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importe juegos que requieran un cliente de terceros si la versión sin DRM también está disponible.</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Usar siempre la aplicación de Humble para iniciar los juegos.</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Cuando está deshabilitado, Playnite intentará lanzar juegos directamente, evitando la aplicación de Humble.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">La instalación y desinstalación automática de los juegos de Humble que no son de suscripción no es compatible actualmente.</sys:String>
 </ResourceDictionary>

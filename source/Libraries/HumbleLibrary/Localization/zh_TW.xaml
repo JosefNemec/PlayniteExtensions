@@ -15,10 +15,13 @@
   <sys:String x:Key="LOCHumblePrivateAccount">私密帳號</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">公開帳號</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">API 密鑰</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">以{0}啟動</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime" />
+  <sys:String x:Key="LOCHumbleAccountID" />
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">忽略第三方遊戲平台的遊戲</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGames">匯入Humble Choice 遊戲</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">匯入Humble Choice訂閱包裡面可遊玩的遊戲</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames">匯入Humble Choice 遊戲</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">匯入Humble Choice訂閱包裡面可遊玩的遊戲</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">匯入Humble Choice 遊戲</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">匯入標準Humble商店遊戲以及組合包遊戲</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">啟用以跳過匯入需要第三方用戶端的遊戲，
@@ -28,4 +31,5 @@
 </sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">總是透過Humble App啟動遊戲</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">停用則Playnite會嘗試直接啟動遊戲，不經過Humble App。</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">目前不支援自動安裝與自動移除非訂閱的Humble games遊戲。</sys:String>
 </ResourceDictionary>

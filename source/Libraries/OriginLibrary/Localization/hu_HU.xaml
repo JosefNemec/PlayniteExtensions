@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCOriginPrivateAccount">Nem publikus fiók</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">Publikus fiók</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">API Kulcs</sys:String>
+  <sys:String x:Key="LOCOriginStartUsingClient">{0} használata</sys:String>
+  <sys:String x:Key="LOCOriginImportPlaytime">Játékidő importálása</sys:String>
+  <sys:String x:Key="LOCOriginAccountID">Fióknév</sys:String>
 </ResourceDictionary>

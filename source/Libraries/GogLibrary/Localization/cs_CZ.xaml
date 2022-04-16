@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCGOGPrivateAccount">Soukromý Účet</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">Veřejný Účet</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">API Klíč</sys:String>
+  <sys:String x:Key="LOCGOGStartUsingClient">Začít používat {0} klienta.</sys:String>
+  <sys:String x:Key="LOCGOGImportPlaytime">Importovat nahraný čas</sys:String>
+  <sys:String x:Key="LOCGOGAccountID">ID účtu</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Přihlášení k Účtu</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Název Účtu</sys:String>

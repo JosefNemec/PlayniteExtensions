@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCBattleNetPrivateAccount">حساب خصوصی</sys:String>
   <sys:String x:Key="LOCBattleNetPublicAccount">حساب عمومی</sys:String>
   <sys:String x:Key="LOCBattleNetAPIKey">کلید API</sys:String>
+  <sys:String x:Key="LOCBattleNetStartUsingClient" />
+  <sys:String x:Key="LOCBattleNetImportPlaytime" />
+  <sys:String x:Key="LOCBattleNetAccountID" />
 </ResourceDictionary>

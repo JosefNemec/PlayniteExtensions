@@ -15,8 +15,13 @@
   <sys:String x:Key="LOCitchioPrivateAccount">Privat konto</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">Offentlig konto</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">API-nøkkel</sys:String>
+  <sys:String x:Key="LOCitchioStartUsingClient">Begynn å bruke {0}-klient</sys:String>
+  <sys:String x:Key="LOCitchioImportPlaytime">Importer spilletid</sys:String>
+  <sys:String x:Key="LOCitchioAccountID">Konto-ID</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io-klienten vil starte. Vennligst logg inn, og lukk deretter denne meldingen.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Venter på at brukeren skal logge inn. Vennligst lukk dette vinduet når du er ferdig …</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">Versjon 25 eller nyere av itch.io-klienten er ikke installert.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importer gratis spill fra samlinger.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Gjenstander som skal importeres:</sys:String>
 </ResourceDictionary>

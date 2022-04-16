@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount">Soukromý Účet</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">Veřejný Účet</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">API Klíč</sys:String>
+  <sys:String x:Key="LOCUbisoftStartUsingClient">Začít používat {0} klienta.</sys:String>
+  <sys:String x:Key="LOCUbisoftImportPlaytime">Importovat nahraný čas</sys:String>
+  <sys:String x:Key="LOCUbisoftAccountID">ID účtu</sys:String>
 </ResourceDictionary>

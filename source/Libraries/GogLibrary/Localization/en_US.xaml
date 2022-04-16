@@ -15,6 +15,8 @@
   <sys:String x:Key="LOCGOGPublicAccount">Public Account</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">API Key</sys:String>
   <sys:String x:Key="LOCGOGStartUsingClient">Start using {0} client</sys:String>
+  <sys:String x:Key="LOCGOGImportPlaytime">Import play time</sys:String>
+  <sys:String x:Key="LOCGOGAccountID">Account ID</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Account Login</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Account Name</sys:String>

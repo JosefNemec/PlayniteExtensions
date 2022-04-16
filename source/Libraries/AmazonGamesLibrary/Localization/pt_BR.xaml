@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCAmazonPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">Conta pública</sys:String>
   <sys:String x:Key="LOCAmazonAPIKey">Chave da API</sys:String>
+  <sys:String x:Key="LOCAmazonStartUsingClient" />
+  <sys:String x:Key="LOCAmazonImportPlaytime" />
+  <sys:String x:Key="LOCAmazonAccountID" />
 </ResourceDictionary>

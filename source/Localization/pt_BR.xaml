@@ -15,10 +15,15 @@
     <sys:String x:Key="LOCPrivateAccount">Conta privada</sys:String>
     <sys:String x:Key="LOCPublicAccount">Conta pública</sys:String>
     <sys:String x:Key="LOCAPIKey">Chave da API</sys:String>
+    <sys:String x:Key="LOCStartUsingClient"></sys:String>
+    <sys:String x:Key="LOCImportPlaytime"></sys:String>
+    <sys:String x:Key="LOCAccountID"></sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">O cliente da itch.io será executado agora. Inicie a sessão e então feche esta janela.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Aguardando que o usuário inicie a sessão, feche esta janela quando terminar…</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">Cliente da itch.io versão 25 ou superior não instalado.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel"></sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel"></sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Dados da conta</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Nome da conta</sys:String>
@@ -55,14 +60,18 @@
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Imagem de fundo da loja</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">Mostrar o botão de amigos no painel superior</sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames"></sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccounts"></sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usar capturas de tela se não houver uma capa disponível</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Se houverem várias imagens disponíveis, usar:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Selecionar imagem de fundo para {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorar jogos de lojas de terceiros</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Importar jogos Humble Choice</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importar jogos disponíveis como parte da assinatura Humble Choice.</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames"></sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip"></sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">Importar jogos da Biblioteca Humble</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importar compras padrão da loja Humble e pacotes.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Ative para pular a importação de jogos que precisam de clientes de terceiros,
@@ -71,6 +80,7 @@ incluindo lojas já gerenciadas por Playnite, para previnir duplicação.</sys:S
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importar jogos que precisam de cliente de terceiros se versão sem DRM também estiver disponível.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Sempre usar o Humble App para iniciar jogos</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Quando desativado, Playnite tentará iniciar os jogos diretamente, ignorando Humble App.</sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError"></sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Iniciar o aplicativo do Xbox Game Pass ao invés da Microsoft Store ao abrir o cliente</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Importar jogos de Xbox</sys:String>

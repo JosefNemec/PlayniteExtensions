@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Vieša paskyra</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">API raktas</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient" />
+  <sys:String x:Key="LOCIGDBImportPlaytime" />
+  <sys:String x:Key="LOCIGDBAccountID" />
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary" />
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle" />

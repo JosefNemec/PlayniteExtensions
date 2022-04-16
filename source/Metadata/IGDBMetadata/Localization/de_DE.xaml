@@ -2,11 +2,11 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
   <sys:String x:Key="LOCIGDBSettingsImportInstalledLabel">Installierte Spiele importieren</sys:String>
   <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel">Nicht installierte Spiele importieren</sys:String>
-  <sys:String x:Key="LOCIGDBSettingsConnectAccount">Benutzerkonto verbinden</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsConnectAccount">Nutzerkonto verbinden</sys:String>
   <sys:String x:Key="LOCIGDBLoginChecking">Authentifizierungsstatus wird überprüft …</sys:String>
-  <sys:String x:Key="LOCIGDBLoggedIn">Benutzer ist authentifiziert</sys:String>
+  <sys:String x:Key="LOCIGDBLoggedIn">Nutzer ist authentifiziert</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedIn">Authentifizierung erforderlich</sys:String>
-  <sys:String x:Key="LOCIGDBNotLoggedInError">Benutzer konnte nicht authentifiziert werden.</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedInError">Nutzer konnte nicht authentifiziert werden.</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Authentifizieren</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Spiele direkt starten ohne offiziellen Client</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Beheben von Problemen mit der Kontosynchronisation</sys:String>
@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">Privates Konto</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Öffentliches Konto</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">API-Schlüssel</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient">Mit {0}-Client starten</sys:String>
+  <sys:String x:Key="LOCIGDBImportPlaytime">Spielzeit importieren</sys:String>
+  <sys:String x:Key="LOCIGDBAccountID">Konto-ID</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Screenshots verwenden, falls kein Bildmaterial verfügbar</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Falls mehrere Bilder verfügbar, das folgende verwenden:</sys:String>

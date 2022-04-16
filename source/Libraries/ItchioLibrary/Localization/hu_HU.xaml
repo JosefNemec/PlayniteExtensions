@@ -15,8 +15,13 @@
   <sys:String x:Key="LOCitchioPrivateAccount">Nem publikus fiók</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">Publikus fiók</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">API Kulcs</sys:String>
+  <sys:String x:Key="LOCitchioStartUsingClient">{0} használata</sys:String>
+  <sys:String x:Key="LOCitchioImportPlaytime">Játékidő importálása</sys:String>
+  <sys:String x:Key="LOCitchioAccountID">Fióknév</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">A megnyíló itch.io kliens ablakában jelentkezz be, és zárd be ezt az üzenet.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Felhasználó bejelentkezésére vár, zárd be ezt, miután kész…</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io kliens v25 vagy újabb nincs telepítve.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Ingyenes játékokat is importálja</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">A következő elemek importálása:</sys:String>
 </ResourceDictionary>

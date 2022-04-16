@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCOriginPrivateAccount">私密帳號</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">公開帳號</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">API 密鑰</sys:String>
+  <sys:String x:Key="LOCOriginStartUsingClient">以{0}啟動</sys:String>
+  <sys:String x:Key="LOCOriginImportPlaytime" />
+  <sys:String x:Key="LOCOriginAccountID" />
 </ResourceDictionary>

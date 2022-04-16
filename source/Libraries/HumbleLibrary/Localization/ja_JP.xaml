@@ -15,10 +15,13 @@
   <sys:String x:Key="LOCHumblePrivateAccount">非公開アカウント</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">公開アカウント</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">API キー</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient" />
+  <sys:String x:Key="LOCHumbleImportPlaytime" />
+  <sys:String x:Key="LOCHumbleAccountID" />
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">サードパーティー製のストアのゲームを無視する</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGames">Humble Choiceのゲームをインポートする</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Humble Choiceサブスクリプションを利用可能なゲームとしてインポートする</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames" />
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip" />
   <sys:String x:Key="LOCHumbleGeneralLibrary">Humbleライブラリのゲームをインポートする</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Humbleストアでの標準購入とバンドル購入をインポートする</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">サードパーティのクライアント（すでにPlayniteで管理されているストアを含む）を必要とするゲームのインポートを重複を防ぐためにスキップすることを可能にします。</sys:String>
@@ -26,4 +29,5 @@
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">DRMフリー版も利用可能な場合は、サードパーティ製のクライアントを必要とするゲームをインポートする。</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">常にHumble Appを使ってゲームを開始する</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">無効にすると、PlayniteはHumble Appをバイパスして、直接ゲームを起動しようとします。</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError" />
 </ResourceDictionary>

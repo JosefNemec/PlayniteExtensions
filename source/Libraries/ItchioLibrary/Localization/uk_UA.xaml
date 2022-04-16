@@ -15,8 +15,13 @@
   <sys:String x:Key="LOCitchioPrivateAccount">Приватний обліковий запис</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">Загальнодоступний обліковий запис</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">Ключ API</sys:String>
+  <sys:String x:Key="LOCitchioStartUsingClient">Запустити клієнтом {0}</sys:String>
+  <sys:String x:Key="LOCitchioImportPlaytime">Імпортувати час у грі</sys:String>
+  <sys:String x:Key="LOCitchioAccountID">ID облікового запису</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io буде запущено. Будь ласка авторизуйтеся після чого закрийте це повідомлення.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Очікування на вхід користувача, будь ласка закрийте це коли завершите...</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">Клієнт itch.io версії 25 чи новіше не встановлено.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Імпортувати безплатні ігри з колекцій.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Елементи для імпорту:</sys:String>
 </ResourceDictionary>

@@ -70,6 +70,14 @@ namespace System
         /// </summary>
         public const string IGDBStartUsingClient = "LOCIGDBStartUsingClient";
         /// <summary>
+        /// Import play time
+        /// </summary>
+        public const string IGDBImportPlaytime = "LOCIGDBImportPlaytime";
+        /// <summary>
+        /// Account ID
+        /// </summary>
+        public const string IGDBAccountID = "LOCIGDBAccountID";
+        /// <summary>
         /// Use screenshots if artwork is not available
         /// </summary>
         public const string IgdbUseScreenshotIfNecessary = "LOCIgdbUseScreenshotIfNecessary";

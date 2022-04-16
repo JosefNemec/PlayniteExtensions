@@ -15,10 +15,15 @@
     <sys:String x:Key="LOCPrivateAccount"></sys:String>
     <sys:String x:Key="LOCPublicAccount"></sys:String>
     <sys:String x:Key="LOCAPIKey"></sys:String>
+    <sys:String x:Key="LOCStartUsingClient"></sys:String>
+    <sys:String x:Key="LOCImportPlaytime"></sys:String>
+    <sys:String x:Key="LOCAccountID"></sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif"></sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage"></sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError"></sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel"></sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel"></sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin"></sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Rekeningnaam</sys:String>
@@ -55,14 +60,18 @@
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Stoor Agtergrond</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner"></sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton"></sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames"></sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccounts"></sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"></sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Kies agtergrond prent vir {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignoreer derde party winkel speletjies</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames"></sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames"></sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip"></sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary"></sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip"></sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
@@ -70,6 +79,7 @@
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart"></sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError"></sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames"></sys:String>

@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCBattleNetPrivateAccount">非公開アカウント</sys:String>
   <sys:String x:Key="LOCBattleNetPublicAccount">公開アカウント</sys:String>
   <sys:String x:Key="LOCBattleNetAPIKey">API キー</sys:String>
+  <sys:String x:Key="LOCBattleNetStartUsingClient" />
+  <sys:String x:Key="LOCBattleNetImportPlaytime" />
+  <sys:String x:Key="LOCBattleNetAccountID" />
 </ResourceDictionary>

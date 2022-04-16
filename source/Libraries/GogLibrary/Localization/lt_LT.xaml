@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCGOGPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">Vieša paskyra</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">API raktas</sys:String>
+  <sys:String x:Key="LOCGOGStartUsingClient" />
+  <sys:String x:Key="LOCGOGImportPlaytime" />
+  <sys:String x:Key="LOCGOGAccountID" />
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Vartotojo prisijungimas</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Vartotojo vardas</sys:String>

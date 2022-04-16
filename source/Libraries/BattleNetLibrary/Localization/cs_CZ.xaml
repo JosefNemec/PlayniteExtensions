@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCBattleNetPrivateAccount">Soukromý Účet</sys:String>
   <sys:String x:Key="LOCBattleNetPublicAccount">Veřejný Účet</sys:String>
   <sys:String x:Key="LOCBattleNetAPIKey">API Klíč</sys:String>
+  <sys:String x:Key="LOCBattleNetStartUsingClient">Začít používat {0} klienta.</sys:String>
+  <sys:String x:Key="LOCBattleNetImportPlaytime">Importovat nahraný čas</sys:String>
+  <sys:String x:Key="LOCBattleNetAccountID">ID účtu</sys:String>
 </ResourceDictionary>

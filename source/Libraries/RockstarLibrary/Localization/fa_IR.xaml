@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCRockstarPrivateAccount">حساب خصوصی</sys:String>
   <sys:String x:Key="LOCRockstarPublicAccount">حساب عمومی</sys:String>
   <sys:String x:Key="LOCRockstarAPIKey">کلید API</sys:String>
+  <sys:String x:Key="LOCRockstarStartUsingClient" />
+  <sys:String x:Key="LOCRockstarImportPlaytime" />
+  <sys:String x:Key="LOCRockstarAccountID" />
 </ResourceDictionary>

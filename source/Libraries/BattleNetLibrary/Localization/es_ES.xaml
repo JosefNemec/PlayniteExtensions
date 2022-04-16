@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCBattleNetPrivateAccount">Cuenta Privada</sys:String>
   <sys:String x:Key="LOCBattleNetPublicAccount">Cuenta Pública</sys:String>
   <sys:String x:Key="LOCBattleNetAPIKey">Clave de API</sys:String>
+  <sys:String x:Key="LOCBattleNetStartUsingClient">Iniciar usando el cliente {0}</sys:String>
+  <sys:String x:Key="LOCBattleNetImportPlaytime">Importar tiempo de juego</sys:String>
+  <sys:String x:Key="LOCBattleNetAccountID">ID de cuenta</sys:String>
 </ResourceDictionary>

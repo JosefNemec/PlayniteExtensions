@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Nem publikus fiók</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Publikus fiók</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API Kulcs</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">{0} használata</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Játékidő importálása</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID">Fióknév</sys:String>
 </ResourceDictionary>

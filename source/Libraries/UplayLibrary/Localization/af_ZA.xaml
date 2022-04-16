@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount" />
   <sys:String x:Key="LOCUbisoftPublicAccount" />
   <sys:String x:Key="LOCUbisoftAPIKey" />
+  <sys:String x:Key="LOCUbisoftStartUsingClient" />
+  <sys:String x:Key="LOCUbisoftImportPlaytime" />
+  <sys:String x:Key="LOCUbisoftAccountID" />
 </ResourceDictionary>

@@ -15,8 +15,13 @@
   <sys:String x:Key="LOCitchioPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">Conta pública</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">Chave da API</sys:String>
+  <sys:String x:Key="LOCitchioStartUsingClient" />
+  <sys:String x:Key="LOCitchioImportPlaytime" />
+  <sys:String x:Key="LOCitchioAccountID" />
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">O cliente da itch.io será executado agora. Inicie a sessão e então feche esta janela.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Aguardando que o usuário inicie a sessão, feche esta janela quando terminar…</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">Cliente da itch.io versão 25 ou superior não instalado.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel" />
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel" />
 </ResourceDictionary>

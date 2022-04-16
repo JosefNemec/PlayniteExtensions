@@ -10,21 +10,25 @@
   <sys:String x:Key="LOCHumbleAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
-  <sys:String x:Key="LOCHumbleTroubleShootingIssues">Устранение неисправностей</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">Устранение неполадок</sys:String>
   <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Импортировать все игры</sys:String>
   <sys:String x:Key="LOCHumblePrivateAccount">Закрытый профиль</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Открытый профиль</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">API-ключ</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">Запустить через клиент {0}</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">Импортировать наигранные часы</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">ID аккаунта</sys:String>
   <!--Humble-->
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Игнорировать игры из сторонних магазинов.</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGames">Импортирование игр Humble Choice</sys:String>
-  <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Импортирование игр доступно в рамках подписки Humble Choice.</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Игнорировать игры со сторонних площадок</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames">Импортирование игр Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Импортирование игр, доступных по подписке Humble Choice.</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">Импортирование игр из библиотеки Humble </sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Импортировать стандартные покупки в магазине Humble и покупки бандлов.</sys:String>
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Включите возможность пропустить импортирование игр, для которых требуются сторонние клиенты,
-включая магазины, уже управляемые в Playnite, чтобы предотвратить дубликаты.</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Включает пропуск игр, которым требуются сторонние клиенты,
+в том числе уже доступные в Playnite площадки, чтобы избежать дублирования.</sys:String>
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Импортировать, если доступна версия без DRM</sys:String>
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Импортировать игры, требующие стороннего клиента, если также доступна версия без DRM</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Импортировать игры из стороннего клиента, если также доступна версия без DRM</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Всегда использовать приложение Humble для запуска игр</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Если этот параметр отключен, Playnite будет пытаться запускать игры напрямую, минуя приложение Humble.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">Автоустановка и удаление игр вне подписочного сервиса Humble пока не поддерживается.</sys:String>
 </ResourceDictionary>

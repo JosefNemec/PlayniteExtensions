@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCSteamPrivateAccount">حساب خاص</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">حساب عام</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">مفتاح API</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient" />
+  <sys:String x:Key="LOCSteamImportPlaytime" />
+  <sys:String x:Key="LOCSteamAccountID" />
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">ما اسم حسابي؟</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">اسم رابط الحساب</sys:String>
@@ -46,4 +49,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">تخزين صورة الخلفية</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">شعار</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">إظهار زر الأصدقاء في اللوحة العلوية</sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip" />
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames" />
+  <sys:String x:Key="LOCSteamAdditionalAccounts" />
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
 </ResourceDictionary>

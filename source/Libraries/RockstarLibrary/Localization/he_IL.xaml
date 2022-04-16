@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCRockstarPrivateAccount">חשבון פרטי</sys:String>
   <sys:String x:Key="LOCRockstarPublicAccount">חשבון ציבורי</sys:String>
   <sys:String x:Key="LOCRockstarAPIKey">מפתח API</sys:String>
+  <sys:String x:Key="LOCRockstarStartUsingClient" />
+  <sys:String x:Key="LOCRockstarImportPlaytime">יבא זמן משחק</sys:String>
+  <sys:String x:Key="LOCRockstarAccountID">מזהה משתמש</sys:String>
 </ResourceDictionary>

@@ -69,5 +69,13 @@ namespace System
         /// Start using {0} client
         /// </summary>
         public const string OriginStartUsingClient = "LOCOriginStartUsingClient";
+        /// <summary>
+        /// Import play time
+        /// </summary>
+        public const string OriginImportPlaytime = "LOCOriginImportPlaytime";
+        /// <summary>
+        /// Account ID
+        /// </summary>
+        public const string OriginAccountID = "LOCOriginAccountID";
     }
 }

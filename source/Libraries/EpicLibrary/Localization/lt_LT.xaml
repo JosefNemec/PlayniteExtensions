@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCEpicPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">Vieša paskyra</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">API raktas</sys:String>
+  <sys:String x:Key="LOCEpicStartUsingClient" />
+  <sys:String x:Key="LOCEpicImportPlaytime" />
+  <sys:String x:Key="LOCEpicAccountID" />
 </ResourceDictionary>

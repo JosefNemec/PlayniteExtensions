@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCOriginPrivateAccount">Privat konto</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">Offentlig konto</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">API-nøkkel</sys:String>
+  <sys:String x:Key="LOCOriginStartUsingClient">Begynn å bruke {0}-klient</sys:String>
+  <sys:String x:Key="LOCOriginImportPlaytime">Importer spilletid</sys:String>
+  <sys:String x:Key="LOCOriginAccountID">Konto-ID</sys:String>
 </ResourceDictionary>

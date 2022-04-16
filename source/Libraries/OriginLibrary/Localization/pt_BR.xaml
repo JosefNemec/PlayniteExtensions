@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCOriginPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">Conta pública</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">Chave da API</sys:String>
+  <sys:String x:Key="LOCOriginStartUsingClient" />
+  <sys:String x:Key="LOCOriginImportPlaytime" />
+  <sys:String x:Key="LOCOriginAccountID" />
 </ResourceDictionary>

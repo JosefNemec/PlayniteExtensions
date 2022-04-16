@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCSteamPrivateAccount">Nem publikus fiók</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Publikus fiók</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">API Kulcs</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient">{0} használata</sys:String>
+  <sys:String x:Key="LOCSteamImportPlaytime">Játékidő importálása</sys:String>
+  <sys:String x:Key="LOCSteamAccountID">Fióknév</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Mi a felhasználónevem?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Fiók URL címe</sys:String>
@@ -45,4 +48,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Áruházbeli háttérkép</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Áruházbeli széles borító</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Mutassa a barátok gombot a felső panelen</sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip">Steam barátok</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Más fiókokból telepített játékokat ne vegye figyelembe</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">További fiókok</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Egyéb fiókazonosítók és API kulcsainak megadása, amikből játékot szeretnél beimportálni. Bővebb információt a Steam hibaelhárítós wiki oldalán találsz.</sys:String>
 </ResourceDictionary>

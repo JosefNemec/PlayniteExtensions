@@ -15,10 +15,15 @@
     <sys:String x:Key="LOCPrivateAccount">Soukromý Účet</sys:String>
     <sys:String x:Key="LOCPublicAccount">Veřejný Účet</sys:String>
     <sys:String x:Key="LOCAPIKey">API Klíč</sys:String>
+    <sys:String x:Key="LOCStartUsingClient">Začít používat {0} klienta.</sys:String>
+    <sys:String x:Key="LOCImportPlaytime">Importovat nahraný čas</sys:String>
+    <sys:String x:Key="LOCAccountID">ID účtu</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">Bude spuštěno itch.io. Prosím přihlašte se a pak zavřete tuto zprávu.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Čekám na přihlášení uživatele, zavřete prosím toto okno, až budete hotovi...</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">Aplikace itch.io verze 25 nebo vyšší není nainstalována.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importovat z kolekcí hry zdarma.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Položky k importování.</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Přihlášení k Účtu</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Název Účtu</sys:String>
@@ -56,14 +61,18 @@ Připomínáme, že možnost zadání jména účtu funguje pouze pro ty účty,
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Pozadí z obchodu</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">Zobrazit ikonu přátel na horním panelu</sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">Steam přátelé</sys:String>
+    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignorovat instalované hry z ostatních účtů.</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccounts">Další účty</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Zadejte identifikátor dalších Steam účtů a jejich API klíče, pokud z nich chcete importovat hry. Podívejte se na wiki odkaz řešení problémů pro více informací.</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Použít snímek z hry pokud není k dispozici obrázek</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Pokud je k dispozici víc obrázků, použít:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Vyberte obrázek pozadí pro {0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorovat hry z obchodů třetích stran</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Importovat hry Humble Choice</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Importovat hry dostupné jako součást předplatného Humble Choice.</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames">Importovat Humble Choice hry.</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Importovat hry přístupné součástí Humble Choice předplatného.</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">Importovat hry knihovny Humble</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importovat standardní a bundle nákupy z Humble obchodu.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Povolte pro přeskočení importu her, které vyžadují klienty třetích stran,
@@ -72,6 +81,7 @@ včetně obchodů již spravovaných v Playnite, pro zabránění duplikátům.<
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importovat hry vyžadující klient třetí strany, pokud je také dostupná verze bez DRM.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Vždy použít aplikaci Humble pro spouštění her</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Je-li vypnuto, Playnite se pokusí spustit hry přímo a obejít aplikaci Humble.</sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">Automatická instalace a odinstalace nepředplacených Humble her není aktuálně podporována.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Spustit aplikaci Xbox Pass namísto Microsoft Store při otevírání klienta</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Importovat hry konzole Xbox</sys:String>

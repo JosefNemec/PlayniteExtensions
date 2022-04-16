@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCBattleNetPrivateAccount" />
   <sys:String x:Key="LOCBattleNetPublicAccount" />
   <sys:String x:Key="LOCBattleNetAPIKey" />
+  <sys:String x:Key="LOCBattleNetStartUsingClient" />
+  <sys:String x:Key="LOCBattleNetImportPlaytime" />
+  <sys:String x:Key="LOCBattleNetAccountID" />
 </ResourceDictionary>

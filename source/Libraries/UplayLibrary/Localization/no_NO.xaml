@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount">Privat konto</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">Offentlig konto</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">API-nøkkel</sys:String>
+  <sys:String x:Key="LOCUbisoftStartUsingClient">Begynn å bruke {0}-klient</sys:String>
+  <sys:String x:Key="LOCUbisoftImportPlaytime">Importer spilletid</sys:String>
+  <sys:String x:Key="LOCUbisoftAccountID">Konto-ID</sys:String>
 </ResourceDictionary>

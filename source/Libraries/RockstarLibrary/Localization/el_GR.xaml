@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCRockstarPrivateAccount">Ιδιωτικός Λογαριασμός</sys:String>
   <sys:String x:Key="LOCRockstarPublicAccount">Δημόσιος Λογαριασμός</sys:String>
   <sys:String x:Key="LOCRockstarAPIKey">Κλειδί API</sys:String>
+  <sys:String x:Key="LOCRockstarStartUsingClient" />
+  <sys:String x:Key="LOCRockstarImportPlaytime" />
+  <sys:String x:Key="LOCRockstarAccountID" />
 </ResourceDictionary>

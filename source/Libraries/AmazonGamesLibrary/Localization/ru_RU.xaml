@@ -10,9 +10,12 @@
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
-  <sys:String x:Key="LOCAmazonTroubleShootingIssues">Устранение неисправностей</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingIssues">Устранение неполадок</sys:String>
   <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Импортировать все игры</sys:String>
   <sys:String x:Key="LOCAmazonPrivateAccount">Закрытый профиль</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">Открытый профиль</sys:String>
   <sys:String x:Key="LOCAmazonAPIKey">API-ключ</sys:String>
+  <sys:String x:Key="LOCAmazonStartUsingClient">Запустить через клиент {0}</sys:String>
+  <sys:String x:Key="LOCAmazonImportPlaytime">Импортировать наигранные часы</sys:String>
+  <sys:String x:Key="LOCAmazonAccountID">ID аккаунта</sys:String>
 </ResourceDictionary>

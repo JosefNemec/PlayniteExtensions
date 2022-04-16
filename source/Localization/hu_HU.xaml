@@ -15,10 +15,15 @@
     <sys:String x:Key="LOCPrivateAccount">Nem publikus fiók</sys:String>
     <sys:String x:Key="LOCPublicAccount">Publikus fiók</sys:String>
     <sys:String x:Key="LOCAPIKey">API Kulcs</sys:String>
+    <sys:String x:Key="LOCStartUsingClient">{0} használata</sys:String>
+    <sys:String x:Key="LOCImportPlaytime">Játékidő importálása</sys:String>
+    <sys:String x:Key="LOCAccountID">Fióknév</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">A megnyíló itch.io kliens ablakában jelentkezz be, és zárd be ezt az üzenet.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Felhasználó bejelentkezésére vár, zárd be ezt, miután kész…</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io kliens v25 vagy újabb nincs telepítve.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Ingyenes játékokat is importálja</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">A következő elemek importálása:</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Fiók bejelentkezés</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Fiók neve</sys:String>
@@ -56,14 +61,18 @@ A fióknév opció csak akkor működik, ha a GOG adatvédelmi beállításainá
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Áruházbeli háttérkép</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Áruházbeli széles borító</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">Mutassa a barátok gombot a felső panelen</sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">Steam barátok</sys:String>
+    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Más fiókokból telepített játékokat ne vegye figyelembe</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccounts">További fiókok</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Egyéb fiókazonosítók és API kulcsainak megadása, amikből játékot szeretnél beimportálni. Bővebb információt a Steam hibaelhárítós wiki oldalán találsz.</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Képernyőkép használata, ha nincs játékgrafika</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Ha több találat van, válassza:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">{0} háttérképének kiválasztása</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Harmadik féltől származó játékok figyelmen kívül hagyása</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGames">Humble Choice játékok importálása</sys:String>
-    <sys:String x:Key="LOCHumbleImportTroveGamesTooltip">Játékok importálása amelyek a Humble Choice szolgáltatás részei.</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames">A Humble Choice játékokat is importálja</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">A Humble Choice előfizetés játékait is beimportálja.</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">Humble könyvtárban lévő játékok importálása</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Általános Humble áruházi és csomag vásárlások importálása.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Kliensfüggő játékok nem kerülnek importálásra. A már meglévők sem, hogy ne legyenek duplikátumok.</sys:String>
@@ -71,6 +80,7 @@ A fióknév opció csak akkor működik, ha a GOG adatvédelmi beállításainá
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Kliensfüggő játékok importálása, ha van másolásvédelem-mentes változatuk is.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Mindig indítsa el a Humble alkalmazást a játékok futtatásakor</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Ha ez ki van kapcsolva, akkor a Playnite megpróbálja közvetlenül elindítani a játékokat a Humble alkalmazás nélkül.</sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">A nem előfizetéses Humble játékok automatikus telepítése és eltávolítása egyelőre nem támogatott.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Kliens indításakor az Xbox Pass induljon a Microsoft Áruház helyett</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Xbox konzolos játékok importálása</sys:String>

@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCEpicPrivateAccount">Cuenta Privada</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">Cuenta Pública</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">Clave de API</sys:String>
+  <sys:String x:Key="LOCEpicStartUsingClient">Iniciar usando el cliente {0}</sys:String>
+  <sys:String x:Key="LOCEpicImportPlaytime">Importar tiempo de juego</sys:String>
+  <sys:String x:Key="LOCEpicAccountID">ID de cuenta</sys:String>
 </ResourceDictionary>

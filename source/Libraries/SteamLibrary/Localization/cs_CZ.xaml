@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCSteamPrivateAccount">Soukromý Účet</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Veřejný Účet</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">API Klíč</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient">Začít používat {0} klienta.</sys:String>
+  <sys:String x:Key="LOCSteamImportPlaytime">Importovat nahraný čas</sys:String>
+  <sys:String x:Key="LOCSteamAccountID">ID účtu</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Jaké je jméno mého účtu?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Jméno URL Účtu</sys:String>
@@ -45,4 +48,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Pozadí z obchodu</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Zobrazit ikonu přátel na horním panelu</sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip">Steam přátelé</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignorovat instalované hry z ostatních účtů.</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">Další účty</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Zadejte identifikátor dalších Steam účtů a jejich API klíče, pokud z nich chcete importovat hry. Podívejte se na wiki odkaz řešení problémů pro více informací.</sys:String>
 </ResourceDictionary>

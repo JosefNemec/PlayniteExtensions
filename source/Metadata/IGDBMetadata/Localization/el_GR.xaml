@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">Ιδιωτικός Λογαριασμός</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Δημόσιος Λογαριασμός</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">Κλειδί API</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient" />
+  <sys:String x:Key="LOCIGDBImportPlaytime" />
+  <sys:String x:Key="LOCIGDBAccountID" />
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary" />
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Εάν υπάρχουν διαθέσιμες πολλές εικόνες, τότε θα χρησιμοποιηθεί:</sys:String>

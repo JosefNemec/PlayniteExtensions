@@ -15,6 +15,9 @@
   <sys:String x:Key="LOCXboxPrivateAccount">Приватний обліковий запис</sys:String>
   <sys:String x:Key="LOCXboxPublicAccount">Загальнодоступний обліковий запис</sys:String>
   <sys:String x:Key="LOCXboxAPIKey">Ключ API</sys:String>
+  <sys:String x:Key="LOCXboxStartUsingClient">Запустити клієнтом {0}</sys:String>
+  <sys:String x:Key="LOCXboxImportPlaytime">Імпортувати час у грі</sys:String>
+  <sys:String x:Key="LOCXboxAccountID">ID облікового запису</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Запускати додаток Xbox Pass замість Microsoft Store під час відкриття клієнта</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">Імпортувати ігри з консолі Xbox</sys:String>

@@ -15,4 +15,7 @@
   <sys:String x:Key="LOCRockstarPrivateAccount" />
   <sys:String x:Key="LOCRockstarPublicAccount" />
   <sys:String x:Key="LOCRockstarAPIKey" />
+  <sys:String x:Key="LOCRockstarStartUsingClient" />
+  <sys:String x:Key="LOCRockstarImportPlaytime" />
+  <sys:String x:Key="LOCRockstarAccountID" />
 </ResourceDictionary>
