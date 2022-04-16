@@ -57,3 +57,11 @@ Packages:
     Changelog:
       - Fixed detection of installed games
       - Updated localizations
+  - Version: 2.10
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2022-04-16
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_10.pext
+    Changelog:
+      - Better error reporting when EGS is down
+      - Fixed getting metadata for some games not working
+      - Fixed games incorrectly marked as installed (by darklinkpower)
