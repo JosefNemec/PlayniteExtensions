@@ -31,3 +31,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/ItchioLibrary_Builtin_2_4.pext
     Changelog:
       - Fixed issue that old collections are imported instead of latest collections (by ryouma-aurora)
+  - Version: 2.5
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-04-16
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/ItchioLibrary_Builtin_2_5.pext
+    Changelog:
+      - Show startup selection options if available
