@@ -24,3 +24,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_3.pext
     Changelog:
       - Added support for multiple platform values in games imported from Xbox library
+  - Version: 2.4
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-04-16
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_4.pext
+    Changelog:
+      - Fixed Xbox app not being used for game installations
+      - Fixed installed games not being imported under their real location
