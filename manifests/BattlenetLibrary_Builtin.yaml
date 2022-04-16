@@ -24,3 +24,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_3.pext
     Changelog:
       - Added support for Call of Duty Vanguard
+  - Version: 2.4
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-04-16
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_4.pext
+    Changelog:
+      - Game startup should be more reliable if the client is not running prior to launching a game 
