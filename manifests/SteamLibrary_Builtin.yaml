@@ -36,3 +36,11 @@ Packages:
       - Fixed crash when installing or uninstalling a game and Steam installation is not detected
       - Fixed newly added games have "Last Played" set to date where they were bought
       - Fixed (Re)Import of Steam categories does not take into account games where categories have been removed in Steam
+  - Version: 2.5
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-04-16
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_5.pext
+    Changelog:
+      - Added ability to ignore installed games from other accounts
+      - Added ability to import games from additional Steam accounts
+      
