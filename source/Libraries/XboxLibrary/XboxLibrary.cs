@@ -167,7 +167,7 @@ namespace XboxLibrary
                 return allGames;
             }
 
-            if (Computer.WindowsVersion != WindowsVersion.Win10 || Computer.WindowsVersion != WindowsVersion.Win11)
+            if (Computer.WindowsVersion < WindowsVersion.Win10)
             {
                 throw new Exception("Xbox game library is only supported on Windows 10 and 11.");
             }
