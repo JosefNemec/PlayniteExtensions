@@ -75,6 +75,13 @@ namespace XboxLibrary.Models
             public string developerName;
             public DateTime? releaseDate;
             public int? minAge;
+            public List<Availability> availabilities;
+        }
+
+        public class Availability
+        {
+            public List<string> Platforms;
+            public string ProductId;
         }
 
         public class Title

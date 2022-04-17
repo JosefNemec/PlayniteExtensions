@@ -20,6 +20,7 @@ namespace XboxLibrary
     public class XboxLibrary : LibraryPluginBase<XboxLibrarySettingsViewModel>
     {
         private readonly string pfnInfoCacheDir;
+        private readonly string pcTitlesCachePath;
 
         public override LibraryClient Client => new XboxLibraryClient(SettingsViewModel);
 
@@ -34,6 +35,7 @@ namespace XboxLibrary
         {
             SettingsViewModel = new XboxLibrarySettingsViewModel(this, api);
             pfnInfoCacheDir = Path.Combine(GetPluginUserDataPath(), "PfnInfoCache");
+            pcTitlesCachePath = Path.Combine(GetPluginUserDataPath(), "pcTitlesCache.json");
         }
 
         public override ISettings GetSettings(bool firstRunSettings)
@@ -301,6 +303,24 @@ namespace XboxLibrary
                 PlayniteApi.Notifications.Remove(ImportErrorMessageId);
             }
 
+            foreach (var game in allGames)
+            {
+                if (game.Platforms.Any(x => x.ToString() == "pc_windows"))
+                {
+                    var libTitleCache = pcTitles.FirstOrDefault(a => a.pfn == game.GameId);
+                    if (libTitleCache == null)
+                    {
+                        libTitleCache = client.GetTitleInfo(game.GameId).GetAwaiter().GetResult();
+                        WriteAppDataCache(libTitleCache);
+                        pcTitles.Add(libTitleCache);
+                    }
+                }
+            }
+
+            // Stored so the ProductId info it contains can be used to
+            // start the Xbox app directly on the specific game page
+            FileSystem.WriteStringToFile(pcTitlesCachePath, Serialization.ToJson(pcTitles));
+
             return allGames;
         }
 
@@ -308,10 +328,18 @@ namespace XboxLibrary
         {
             if (args.Game.PluginId != Id || args.Game.GameId.StartsWith("CONSOLE"))
             {
-                yield break;
+                return null;
             }
 
-            yield return new XboxInstallController(args.Game, SettingsViewModel.Settings.XboxAppClientPriorityLaunch && Xbox.IsXboxPassAppInstalled);
+            var productId = string.Empty;
+            if (SettingsViewModel.Settings.XboxAppClientPriorityLaunch && FileSystem.FileExists(pcTitlesCachePath))
+            {
+                var pcTitlesCache = Serialization.FromJsonFile<List<TitleHistoryResponse.Title>>(pcTitlesCachePath);
+                productId = pcTitlesCache.FirstOrDefault(x => x.pfn == args.Game.GameId)?.detail.availabilities
+                    .FirstOrDefault(x => x.Platforms.Any(y => y == "PC"))?.ProductId ?? string.Empty;
+            }
+
+            return new List<InstallController> { new XboxInstallController(args.Game, SettingsViewModel.Settings.XboxAppClientPriorityLaunch && Xbox.IsXboxPassAppInstalled, productId) };
         }
 
         public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)

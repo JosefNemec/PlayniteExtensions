@@ -17,11 +17,13 @@ namespace XboxLibrary
     public class XboxInstallController : InstallController
     {
         private readonly bool userXboxApp;
+        private readonly string productId;
         private CancellationTokenSource watcherToken;
 
-        public XboxInstallController(Game game, bool useXboxApp) : base(game)
+        public XboxInstallController(Game game, bool useXboxApp, string productId) : base(game)
         {
             this.userXboxApp = useXboxApp;
+            this.productId = productId;
             Name = useXboxApp ? "Install using Xbox app" : "Install using MS Store";
         }
 
@@ -35,7 +37,14 @@ namespace XboxLibrary
             Dispose();
             if (userXboxApp)
             {
-                Xbox.OpenXboxPassApp();
+                if (!productId.IsNullOrEmpty())
+                {
+                    ProcessStarter.StartUrl($"msxbox://game/?productId={productId}");
+                }
+                else
+                {
+                    Xbox.OpenXboxPassApp();
+                }
             }
             else
             {
