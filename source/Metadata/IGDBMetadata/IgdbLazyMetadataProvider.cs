@@ -385,6 +385,11 @@ namespace IGDBMetadata
                         {
                             return new List<GenericItemOption>();
                         }
+                        else if (ulong.TryParse(a, out var parsedId))
+                        {
+                            var data = plugin.Client.GetIGDBGameExpanded(parsedId);
+                            return new List<GenericItemOption> { new SearchResult(parsedId.ToString(), data.name) };
+                        }
                         else
                         {
                             var res = plugin.GetSearchResults(a.Replace("\\", "").Replace("/", "").Trim());
