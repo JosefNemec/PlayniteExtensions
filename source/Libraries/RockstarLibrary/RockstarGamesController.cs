@@ -129,13 +129,12 @@ namespace RockstarGamesLibrary
             Dispose();
             if (Directory.Exists(Game.InstallDirectory))
             {
-                stopWatch = Stopwatch.StartNew();
                 procMon = new ProcessMonitor();
                 procMon.TreeStarted += ProcMon_TreeStarted;
                 procMon.TreeDestroyed += Monitor_TreeDestroyed;
                 var rsApp = RockstarGames.Games.First(a => a.TitleId == Game.GameId);
-                ProcessStarter.StartProcess(Path.Combine(Game.InstallDirectory, rsApp.Executable));
-                StartRunningWatcher();
+                var process = ProcessStarter.StartProcess(Path.Combine(Game.InstallDirectory, rsApp.Executable));
+                StartRunningWatcher(process);
             }
             else
             {
@@ -153,10 +152,16 @@ namespace RockstarGamesLibrary
             InvokeOnStopped(new GameStoppedEventArgs(Convert.ToUInt64(stopWatch.Elapsed.TotalSeconds)));
         }
 
-        public async void StartRunningWatcher()
+        public async void StartRunningWatcher(Process initialProcess)
         {
             // Give original process some time to start RS launcher and then kill itself
-            await Task.Delay(10000);
+            await Task.Run(() =>
+            {
+                initialProcess.WaitForExit();
+            });
+
+            // Start Stopwatch here to remove time until initial process exits from game time tracking.
+            stopWatch = Stopwatch.StartNew();
             procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
         }
     }
