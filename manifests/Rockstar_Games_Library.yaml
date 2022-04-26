@@ -37,3 +37,9 @@ Packages:
     Changelog:
       - Fixed detection of installed games
       - Updated localizations
+  - Version: 2.6
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-04-26
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Rockstar_Games_Library_2_6.pext
+    Changelog:
+      - Fixed game tracking (by CanRanBan)
