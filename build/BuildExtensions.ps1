@@ -5,7 +5,7 @@ param(
     [string]$Configuration = "Release",    
     [string]$OutputDir = (Join-Path $PWD $Configuration),
     [string]$TempDir = (Join-Path $env:TEMP "PlayniteBuild"),    
-    [string]$ToolboxPath = "e:\Devel\Playnite\source\Tools\Playnite.Toolbox\bin\x86\Debug\Toolbox.exe",
+    [string]$ToolboxPath = (Join-Path $env:LOCALAPPDATA "Playnite" "Toolbox.exe"),
     [switch]$SkipExtensions,
     [switch]$SkipThemes
 )
