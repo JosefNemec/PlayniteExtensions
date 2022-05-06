@@ -165,7 +165,6 @@ namespace OriginLibrary
             Dispose();
             if (Directory.Exists(Game.InstallDirectory))
             {
-                stopWatch = Stopwatch.StartNew();
                 procMon = new ProcessMonitor();
                 procMon.TreeDestroyed += ProcMon_TreeDestroyed;
                 procMon.TreeStarted += ProcMon_TreeStarted;
@@ -196,6 +195,7 @@ namespace OriginLibrary
 
         private void ProcMon_TreeStarted(object sender, EventArgs args)
         {
+            stopWatch = Stopwatch.StartNew();
             InvokeOnStarted(new GameStartedEventArgs());
         }
 
