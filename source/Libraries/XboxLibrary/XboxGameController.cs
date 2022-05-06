@@ -150,7 +150,6 @@ namespace XboxLibrary
             }
 
             ProcessStarter.StartProcess(prg.Path, prg.Arguments);
-            stopWatch = Stopwatch.StartNew();
             procMon = new ProcessMonitor();
             procMon.TreeDestroyed += Monitor_TreeDestroyed;
             procMon.TreeStarted += ProcMon_TreeStarted;
@@ -169,6 +168,7 @@ namespace XboxLibrary
 
         private void ProcMon_TreeStarted(object sender, EventArgs e)
         {
+            stopWatch = Stopwatch.StartNew();
             InvokeOnStarted(new GameStartedEventArgs());
         }
 
