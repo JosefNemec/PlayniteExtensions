@@ -167,7 +167,6 @@ namespace SteamLibrary
                 }
             }
 
-            stopWatch = Stopwatch.StartNew();
             ProcessStarter.StartUrl($"steam://rungameid/{Game.GameId}");
             procMon = new ProcessMonitor();
             procMon.TreeStarted += ProcMon_TreeStarted;
@@ -184,6 +183,7 @@ namespace SteamLibrary
 
         private void ProcMon_TreeStarted(object sender, EventArgs args)
         {
+            stopWatch = Stopwatch.StartNew();
             InvokeOnStarted(new GameStartedEventArgs());
         }
 
