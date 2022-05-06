@@ -162,7 +162,6 @@ namespace BattleNetLibrary
         public override void Play(PlayActionArgs args)
         {
             ReleaseResources();
-            stopWatch = Stopwatch.StartNew();
             procMon = new ProcessMonitor();
             procMon.TreeDestroyed += Monitor_TreeDestroyed;
             var app = BattleNetGames.GetAppDefinition(Game.GameId);
@@ -229,6 +228,7 @@ namespace BattleNetLibrary
 
         private void ProcMon_TreeStarted(object sender, EventArgs args)
         {
+            stopWatch = Stopwatch.StartNew();
             InvokeOnStarted(new GameStartedEventArgs());
         }
 
