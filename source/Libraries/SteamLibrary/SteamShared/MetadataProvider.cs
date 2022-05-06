@@ -284,6 +284,8 @@ namespace Steam
             }
 
             var features = new HashSet<MetadataProperty>();
+            IEnumerable<string> publishers = null;
+            IEnumerable<string> developers = null;
             if (metadata.StoreDetails != null)
             {
                 metadata.Description = ParseDescription(metadata.StoreDetails.about_the_game);
@@ -302,19 +304,19 @@ namespace Steam
                     metadata.CommunityScore = CalculateUserScore(metadata.UserReviewDetails);
                 }
 
-                if (metadata.StoreDetails.publishers.HasNonEmptyItems())
+                publishers = GetCompaniesFromAppDetails(metadata.StoreDetails.publishers);
+                if (publishers.HasItems())
                 {
-                    metadata.Publishers = metadata.StoreDetails.publishers.
-                        Where(a => !a.IsNullOrWhiteSpace()).
+                    metadata.Publishers = publishers.
                         Select(a => new MetadataNameProperty(a)).
                         Cast<MetadataProperty>().
                         ToHashSet();
                 }
 
-                if (metadata.StoreDetails.developers.HasNonEmptyItems())
+                developers = GetCompaniesFromAppDetails(metadata.StoreDetails.developers);
+                if (developers.HasItems())
                 {
-                    metadata.Developers = metadata.StoreDetails.developers.
-                        Where(a => !a.IsNullOrWhiteSpace()).
+                    metadata.Developers = developers.
                         Select(a => new MetadataNameProperty(a)).
                         Cast<MetadataProperty>().
                         ToHashSet();
@@ -442,13 +444,36 @@ namespace Steam
                 {
                     if (ass["type"].Value == "franchise")
                     {
-                        metadata.Series = new HashSet<MetadataProperty> { new MetadataNameProperty(ass["name"].Value) };
+                        var value = ass["name"].Value;
+                        if (publishers.HasItems() && publishers.Any(x => x.Contains(value, StringComparison.OrdinalIgnoreCase)))
+                        {
+                            logger.Debug($"Franchise value \"{value}\" of game \"{metadata.Name}\" contained a publisher name and was skipped");
+                            continue;
+                        }
+
+                        if (developers.HasItems() && developers.Any(x => x.Contains(value, StringComparison.OrdinalIgnoreCase)))
+                        {
+                            logger.Debug($"Franchise value \"{value}\" of game \"{metadata.Name}\" contained a developer name and was skipped");
+                            continue;
+                        }
+
+                        metadata.Series = new HashSet<MetadataProperty> { new MetadataNameProperty(value) };
                         break;
                     }
                 }
             }
 
             return metadata;
+        }
+
+        private static IEnumerable<string> GetCompaniesFromAppDetails(List<string> companies)
+        {
+            if (!companies.HasNonEmptyItems())
+            {
+                return null;
+            }
+
+            return companies.Where(a => !a.IsNullOrWhiteSpace());
         }
 
         private string GetGameBackground(uint appId)
