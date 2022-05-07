@@ -449,14 +449,14 @@ namespace Steam
                             value.Contains(x, StringComparison.OrdinalIgnoreCase))))
                         {
                             logger.Debug($"Franchise value \"{value}\" of game \"{metadata.Name}\" matched a publisher name and was skipped");
-                            continue;
+                            break;
                         }
 
                         if (developers.HasItems() && developers.Any(x => x.Contains(value, StringComparison.OrdinalIgnoreCase) ||
                             value.Contains(x, StringComparison.OrdinalIgnoreCase)))
                         {
                             logger.Debug($"Franchise value \"{value}\" of game \"{metadata.Name}\" matched a developer name and was skipped");
-                            continue;
+                            break;
                         }
 
                         metadata.Series = new HashSet<MetadataProperty> { new MetadataNameProperty(value) };
