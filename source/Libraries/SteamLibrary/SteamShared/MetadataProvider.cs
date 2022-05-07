@@ -448,14 +448,14 @@ namespace Steam
                         if (publishers.HasItems() && (publishers.Any(x => x.Contains(value, StringComparison.OrdinalIgnoreCase) ||
                             value.Contains(x, StringComparison.OrdinalIgnoreCase))))
                         {
-                            logger.Debug($"Franchise value \"{value}\" of game \"{metadata.Name}\" contained a publisher name and was skipped");
+                            logger.Debug($"Franchise value \"{value}\" of game \"{metadata.Name}\" matched a publisher name and was skipped");
                             continue;
                         }
 
                         if (developers.HasItems() && developers.Any(x => x.Contains(value, StringComparison.OrdinalIgnoreCase) ||
                             value.Contains(x, StringComparison.OrdinalIgnoreCase)))
                         {
-                            logger.Debug($"Franchise value \"{value}\" of game \"{metadata.Name}\" contained a developer name and was skipped");
+                            logger.Debug($"Franchise value \"{value}\" of game \"{metadata.Name}\" matched a developer name and was skipped");
                             continue;
                         }
 
