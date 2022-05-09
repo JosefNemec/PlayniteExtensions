@@ -445,15 +445,15 @@ namespace Steam
                     if (ass["type"].Value == "franchise")
                     {
                         var value = ass["name"].Value;
-                        if (publishers.HasItems() && publishers.Any(x => x.Contains(value, StringComparison.OrdinalIgnoreCase) ||
-                            value.Contains(x, StringComparison.OrdinalIgnoreCase)))
+                        if (publishers?.Any(x => x.Contains(value, StringComparison.OrdinalIgnoreCase) ||
+                            value.Contains(x, StringComparison.OrdinalIgnoreCase)) == true)
                         {
                             logger.Debug($"Franchise value \"{value}\" of game \"{metadata.Name}\" matched a publisher name and was skipped");
                             break;
                         }
 
-                        if (developers.HasItems() && developers.Any(x => x.Contains(value, StringComparison.OrdinalIgnoreCase) ||
-                            value.Contains(x, StringComparison.OrdinalIgnoreCase)))
+                        if (developers?.Any(x => x.Contains(value, StringComparison.OrdinalIgnoreCase) ||
+                            value.Contains(x, StringComparison.OrdinalIgnoreCase)) == true)
                         {
                             logger.Debug($"Franchise value \"{value}\" of game \"{metadata.Name}\" matched a developer name and was skipped");
                             break;
