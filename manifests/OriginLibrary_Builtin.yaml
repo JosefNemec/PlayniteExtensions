@@ -37,3 +37,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/OriginLibrary_Builtin_2_5.pext
     Changelog:
       - Fixed Origin client detection failing
+  - Version: 2.6
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-05-10
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/OriginLibrary_Builtin_2_6.pext
+    Changelog:
+      - Play time tracking could start sooner than it should (by darklinkpower)
