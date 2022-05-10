@@ -284,6 +284,8 @@ namespace Steam
             }
 
             var features = new HashSet<MetadataProperty>();
+            IEnumerable<string> publishers = null;
+            IEnumerable<string> developers = null;
             if (metadata.StoreDetails != null)
             {
                 metadata.Description = ParseDescription(metadata.StoreDetails.about_the_game);
@@ -302,19 +304,19 @@ namespace Steam
                     metadata.CommunityScore = CalculateUserScore(metadata.UserReviewDetails);
                 }
 
-                if (metadata.StoreDetails.publishers.HasNonEmptyItems())
+                publishers = metadata.StoreDetails.publishers?.Where(a => !a.IsNullOrWhiteSpace());
+                if (publishers.HasItems())
                 {
-                    metadata.Publishers = metadata.StoreDetails.publishers.
-                        Where(a => !a.IsNullOrWhiteSpace()).
+                    metadata.Publishers = publishers.
                         Select(a => new MetadataNameProperty(a)).
                         Cast<MetadataProperty>().
                         ToHashSet();
                 }
 
-                if (metadata.StoreDetails.developers.HasNonEmptyItems())
+                developers = metadata.StoreDetails.developers?.Where(a => !a.IsNullOrWhiteSpace());
+                if (developers.HasItems())
                 {
-                    metadata.Developers = metadata.StoreDetails.developers.
-                        Where(a => !a.IsNullOrWhiteSpace()).
+                    metadata.Developers = developers.
                         Select(a => new MetadataNameProperty(a)).
                         Cast<MetadataProperty>().
                         ToHashSet();
@@ -442,7 +444,22 @@ namespace Steam
                 {
                     if (ass["type"].Value == "franchise")
                     {
-                        metadata.Series = new HashSet<MetadataProperty> { new MetadataNameProperty(ass["name"].Value) };
+                        var value = ass["name"].Value;
+                        if (publishers?.Any(x => x.Contains(value, StringComparison.OrdinalIgnoreCase) ||
+                            value.Contains(x, StringComparison.OrdinalIgnoreCase)) == true)
+                        {
+                            logger.Debug($"Franchise value \"{value}\" of game \"{metadata.Name}\" matched a publisher name and was skipped");
+                            break;
+                        }
+
+                        if (developers?.Any(x => x.Contains(value, StringComparison.OrdinalIgnoreCase) ||
+                            value.Contains(x, StringComparison.OrdinalIgnoreCase)) == true)
+                        {
+                            logger.Debug($"Franchise value \"{value}\" of game \"{metadata.Name}\" matched a developer name and was skipped");
+                            break;
+                        }
+
+                        metadata.Series = new HashSet<MetadataProperty> { new MetadataNameProperty(value) };
                         break;
                     }
                 }
