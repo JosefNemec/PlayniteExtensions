@@ -33,3 +33,10 @@ Packages:
     Changelog:
       - Use game descriptions without promotion junk
       - Prioritize English localized game names
+  - Version: 2.5
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-05-10
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_5.pext
+    Changelog:
+      - Ignore Franchises that contain a developer or publisher name from being added as series (by darklinkpower)
+      - Fixed series field being incorrectly imported with encoded HTML characters
