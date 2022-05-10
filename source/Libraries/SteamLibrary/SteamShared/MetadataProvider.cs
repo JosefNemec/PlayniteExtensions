@@ -13,6 +13,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace Steam
 {
@@ -444,7 +445,7 @@ namespace Steam
                 {
                     if (ass["type"].Value == "franchise")
                     {
-                        var value = ass["name"].Value;
+                        var value = HttpUtility.HtmlDecode(ass["name"].Value);
                         if (publishers?.Any(x => x.Contains(value, StringComparison.OrdinalIgnoreCase) ||
                             value.Contains(x, StringComparison.OrdinalIgnoreCase)) == true)
                         {
