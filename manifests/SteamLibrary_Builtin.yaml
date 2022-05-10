@@ -43,4 +43,10 @@ Packages:
     Changelog:
       - Added ability to ignore installed games from other accounts
       - Added ability to import games from additional Steam accounts
-      
+  - Version: 2.6
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-05-10
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_6.pext
+    Changelog:
+      - Play time tracking could start sooner than it should (by darklinkpower)
+      - Ignore Franchises that contain a developer or publisher name from being added as series (by darklinkpower)
