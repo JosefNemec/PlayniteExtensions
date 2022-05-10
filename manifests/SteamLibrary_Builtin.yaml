@@ -50,3 +50,4 @@ Packages:
     Changelog:
       - Play time tracking could start sooner than it should (by darklinkpower)
       - Ignore Franchises that contain a developer or publisher name from being added as series (by darklinkpower)
+      - Fixed series field being incorrectly imported with encoded HTML characters
