@@ -37,3 +37,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_6.pext
     Changelog:
       - Fixed plugin not working on Windows 11
+  - Version: 2.7
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-05-10
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_7.pext
+    Changelog:
+      - Play time tracking could start sooner than it should (by darklinkpower)
