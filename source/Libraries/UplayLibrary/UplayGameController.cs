@@ -131,7 +131,6 @@ namespace UplayLibrary
             Dispose();
             if (Directory.Exists(Game.InstallDirectory))
             {
-                stopWatch = Stopwatch.StartNew();
                 procMon = new ProcessMonitor();
                 procMon.TreeStarted += ProcMon_TreeStarted;
                 procMon.TreeDestroyed += Monitor_TreeDestroyed;
@@ -175,6 +174,7 @@ namespace UplayLibrary
 
         private void ProcMon_TreeStarted(object sender, EventArgs args)
         {
+            stopWatch = Stopwatch.StartNew();
             InvokeOnStarted(new GameStartedEventArgs());
         }
 
