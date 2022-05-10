@@ -304,7 +304,7 @@ namespace Steam
                     metadata.CommunityScore = CalculateUserScore(metadata.UserReviewDetails);
                 }
 
-                publishers = GetCompaniesFromAppDetails(metadata.StoreDetails.publishers);
+                publishers = metadata.StoreDetails.publishers?.Where(a => !a.IsNullOrWhiteSpace());
                 if (publishers.HasItems())
                 {
                     metadata.Publishers = publishers.
@@ -313,7 +313,7 @@ namespace Steam
                         ToHashSet();
                 }
 
-                developers = GetCompaniesFromAppDetails(metadata.StoreDetails.developers);
+                developers = metadata.StoreDetails.developers?.Where(a => !a.IsNullOrWhiteSpace());
                 if (developers.HasItems())
                 {
                     metadata.Developers = developers.
@@ -466,16 +466,6 @@ namespace Steam
             }
 
             return metadata;
-        }
-
-        private static IEnumerable<string> GetCompaniesFromAppDetails(List<string> companies)
-        {
-            if (!companies.HasNonEmptyItems())
-            {
-                return null;
-            }
-
-            return companies.Where(a => !a.IsNullOrWhiteSpace());
         }
 
         private string GetGameBackground(uint appId)
