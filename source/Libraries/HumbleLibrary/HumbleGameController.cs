@@ -86,7 +86,16 @@ namespace HumbleLibrary
                         return;
                     }
 
-                    var installedGame = library.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
+                    InstalledTroveGame installedGame = null;
+                    try
+                    {
+                        installedGame = library.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
+                    }
+                    catch (Exception exc)
+                    {
+                        logger.Error(exc, "Failed to get info about installed Humble games.");
+                    }
+
                     if (installedGame != null)
                     {
                         var installInfo = new GameInstallationData
@@ -106,6 +115,7 @@ namespace HumbleLibrary
 
     public class HumbleUninstallController : UninstallController
     {
+        private static ILogger logger = LogManager.GetLogger();
         private CancellationTokenSource watcherToken;
         private readonly HumbleLibrary library;
 
@@ -149,7 +159,17 @@ namespace HumbleLibrary
                     return;
                 }
 
-                if (library.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId) == null)
+                InstalledTroveGame installedGame = null;
+                try
+                {
+                    installedGame = library.GetInstalledGames().FirstOrDefault(a => a.GameId == Game.GameId);
+                }
+                catch (Exception exc)
+                {
+                    logger.Error(exc, "Failed to get info about installed Humble games.");
+                }
+
+                if (installedGame == null)
                 {
                     InvokeOnUninstalled(new GameUninstalledEventArgs());
                     return;
