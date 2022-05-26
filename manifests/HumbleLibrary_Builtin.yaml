@@ -56,3 +56,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/HumbleLibrary_Builtin_3_5.pext
     Changelog:
       - Fixed games incorrectly marked as installed (by darklinkpower)
+  - Version: 3.6
+    RequiredApiVersion: 6.2.2
+    ReleaseDate: 2022-05-26
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/HumbleLibrary_Builtin_3_6.pext
+    Changelog:
+      - Fixed game import failing
+      - Fixed crash when installing or uninstalling a game
