@@ -63,7 +63,7 @@ namespace HumbleLibrary.Models
         public string downloadSpeed { get; set; }
         public string downloadEta { get; set; }
         public int? downloadedVersion { get; set; }
-        public int latestBuildVersion { get; set; }
+        public int? latestBuildVersion { get; set; }
         public bool isPaused { get; set; }
         public object error { get; set; }
         public bool isAvailable { get; set; }
