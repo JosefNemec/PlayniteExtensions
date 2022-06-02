@@ -22,4 +22,12 @@ namespace AmazonGamesLibrary.Models
         public string SchemaVersion;
         public Config Main;
     }
+
+    public class InstallGameInfo
+    {
+        public string Id { get; set; }
+        public string InstallDirectory { get; set; }
+        public int Installed { get; set; }
+        public string ProductTitle { get; set; }
+    }
 }

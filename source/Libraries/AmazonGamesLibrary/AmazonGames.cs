@@ -74,10 +74,5 @@ namespace AmazonGamesLibrary
             return !config.Main.ClientId.IsNullOrEmpty() &&
                     config.Main.AuthScopes.HasItems();
         }
-
-        public static UninstallProgram GetUninstallRecord(string gameId)
-        {
-            return Programs.GetUnistallProgramsList().FirstOrDefault(a => a.UninstallString?.Contains(gameId) == true);
-        }
     }
 }

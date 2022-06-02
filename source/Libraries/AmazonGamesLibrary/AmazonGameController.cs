@@ -17,11 +17,14 @@ namespace AmazonGamesLibrary
 {
     public class AmazonInstallController : InstallController
     {
+        private static readonly ILogger logger = LogManager.GetLogger();
+        private readonly AmazonGamesLibrary library;
         private CancellationTokenSource watcherToken;
 
-        public AmazonInstallController(Game game) : base(game)
+        public AmazonInstallController(Game game, AmazonGamesLibrary library) : base(game)
         {
             Name = "Install using Amazon client";
+            this.library = library;
         }
 
         public override void Dispose()
@@ -54,16 +57,29 @@ namespace AmazonGamesLibrary
                     {
                         return;
                     }
-                    var program = AmazonGames.GetUninstallRecord(Game.GameId);
-                    if (program != null)
-                    {
-                        var installInfo = new GameInstallationData()
-                        {
-                            InstallDirectory = Paths.FixSeparators(program.InstallLocation)
-                        };
 
-                        InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
-                        return;
+                    Dictionary<string, GameMetadata> installedGames = null;
+                    try
+                    {
+                        installedGames = library.GetInstalledGames();
+                    }
+                    catch (Exception e)
+                    {
+                        logger.Error(e, "Failed to get info about installed Amazon games.");
+                    }
+
+                    if (installedGames != null)
+                    {
+                        if (installedGames.TryGetValue(Game.GameId, out var installData))
+                        {
+                            var installInfo = new GameInstallationData()
+                            {
+                                InstallDirectory = installData.InstallDirectory
+                            };
+
+                            InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
+                            return;
+                        }
                     }
 
                     await Task.Delay(10000);
@@ -74,11 +90,14 @@ namespace AmazonGamesLibrary
 
     public class AmazonUninstallController : UninstallController
     {
+        private static readonly ILogger logger = LogManager.GetLogger();
+        private readonly AmazonGamesLibrary library;
         private CancellationTokenSource watcherToken;
 
-        public AmazonUninstallController(Game game) : base(game)
+        public AmazonUninstallController(Game game, AmazonGamesLibrary library) : base(game)
         {
             Name = "Uninstall using Amazon client";
+            this.library = library;
         }
 
         public override void Dispose()
@@ -88,16 +107,14 @@ namespace AmazonGamesLibrary
 
         public override void Uninstall(UninstallActionArgs args)
         {
-            var uninstallInfo = AmazonGames.GetUninstallRecord(Game.GameId);
-            if (uninstallInfo != null)
+            if (AmazonGames.IsInstalled)
             {
-                var uninstallString = uninstallInfo.UninstallString.Replace(@"\\", @"\");
-                var removerFileName = "Amazon Game Remover.exe";
-                var split = uninstallString.Split(new string[] { removerFileName }, StringSplitOptions.RemoveEmptyEntries);
-                var path = (split[0] + removerFileName).Trim('"');
-                var startArgs = split[1].Trim('"');
-                ProcessStarter.StartProcess(path, startArgs);
+                AmazonGames.StartClient();
                 StartUninstallWatcher();
+            }
+            else
+            {
+                throw new Exception("Can't uninstall game. Amazon Games client not found.");
             }
         }
 
@@ -112,11 +129,23 @@ namespace AmazonGamesLibrary
                     return;
                 }
 
-                var program = AmazonGames.GetUninstallRecord(Game.GameId);
-                if (program == null)
+                Dictionary<string, GameMetadata> installedGames = null;
+                try
                 {
-                    InvokeOnUninstalled(new GameUninstalledEventArgs());
-                    return;
+                    installedGames = library.GetInstalledGames();
+                }
+                catch (Exception e)
+                {
+                    logger.Error(e, "Failed to get info about installed Amazon games.");
+                }
+
+                if (installedGames != null)
+                {
+                    if (!installedGames.TryGetValue(Game.GameId, out var installData))
+                    {
+                        InvokeOnUninstalled(new GameUninstalledEventArgs());
+                        return;
+                    }
                 }
 
                 await Task.Delay(2000);

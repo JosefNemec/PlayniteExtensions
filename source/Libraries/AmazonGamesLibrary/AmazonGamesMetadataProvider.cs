@@ -20,17 +20,6 @@ namespace AmazonGamesLibrary
             };
 
             gameInfo.Links.Add(new Link("PCGamingWiki", @"http://pcgamingwiki.com/w/index.php?search=" + game.Name));
-
-            var program = AmazonGames.GetUninstallRecord(game.GameId);
-            if (program != null)
-            {
-                gameInfo.Name = StringExtensions.NormalizeGameName(program.DisplayName);
-                if (!string.IsNullOrEmpty(program.DisplayIcon) && File.Exists(program.DisplayIcon))
-                {
-                    gameInfo.Icon = new MetadataFile(program.DisplayIcon);
-                }
-            }
-
             return gameInfo;
         }
     }

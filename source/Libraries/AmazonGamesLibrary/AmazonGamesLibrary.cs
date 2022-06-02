@@ -1,4 +1,5 @@
-﻿using AmazonGamesLibrary.Services;
+﻿using AmazonGamesLibrary.Models;
+using AmazonGamesLibrary.Services;
 using Playnite.Common;
 using Playnite.SDK;
 using Playnite.SDK.Models;
@@ -47,7 +48,7 @@ namespace AmazonGamesLibrary
                 yield break;
             }
 
-            yield return new AmazonInstallController(args.Game);
+            yield return new AmazonInstallController(args.Game, this);
         }
 
         public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
@@ -57,7 +58,7 @@ namespace AmazonGamesLibrary
                 yield break;
             }
 
-            yield return new AmazonUninstallController(args.Game);
+            yield return new AmazonUninstallController(args.Game, this);
         }
 
         public override IEnumerable<PlayController> GetPlayActions(GetPlayActionsArgs args)
@@ -107,29 +108,30 @@ namespace AmazonGamesLibrary
         internal Dictionary<string, GameMetadata> GetInstalledGames()
         {
             var games = new Dictionary<string, GameMetadata>();
-            var programs = Programs.GetUnistallProgramsList();
-            foreach (var program in programs)
+            var installSqlPath = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                @"Amazon Games\Data\Games\Sql\GameInstallInfo.sqlite");
+            if (!File.Exists(installSqlPath))
             {
-                if (program.UninstallString?.Contains("Amazon Game Remover.exe") != true)
-                {
-                    continue;
-                }
+                Logger.Warn("Amazon games install game info file not found.");
+                return games;
+            }
 
-                if (!Directory.Exists(program.InstallLocation))
+            using (var sql = Playnite.SDK.Data.SQLite.OpenDatabase(installSqlPath, Playnite.SDK.Data.SqliteOpenFlags.ReadOnly))
+            {
+                foreach (var program in sql.Query<InstallGameInfo>(@"SELECT * FROM DbSet WHERE Installed = 1;"))
                 {
-                    continue;
-                }
+                    if (!Directory.Exists(program.InstallDirectory))
+                    {
+                        continue;
+                    }
 
-                var match = Regex.Match(program.UninstallString, @"-p\s+(\S+)");
-                var gameId = match.Groups[1].Value;
-                if (!games.ContainsKey(gameId))
-                {
                     var game = new GameMetadata()
                     {
-                        InstallDirectory = Paths.FixSeparators(program.InstallLocation),
-                        GameId = gameId,
+                        InstallDirectory = Paths.FixSeparators(program.InstallDirectory),
+                        GameId = program.Id,
                         Source = new MetadataNameProperty("Amazon"),
-                        Name = program.DisplayName.RemoveTrademarks(),
+                        Name = program.ProductTitle.RemoveTrademarks(),
                         IsInstalled = true,
                         Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     };
