@@ -294,6 +294,16 @@ namespace BattleNetLibrary
                 CoverUrl = "https://bnetproduct-a.akamaihd.net//6a/238445d222b2b650eec86a37e4c2ba67-CODVG_Reveal_Ultimate_Keyart_Textless-Bnet-Shop_Card_Product_Vert-700x850_02a.jpg",
                 Name = "Call of Duty: Vanguard",
                 Type = BNetAppType.Default
+            },
+            new BNetApp()
+            {
+                ApiId = 1095647827,
+                ProductId = "ANBS",
+                InternalId = "anbs",
+                BackgroundUrl = @"https://blz-contentstack-images.akamaized.net/v3/assets/blt77f4425de611b362/bltb5cac524dcb261ae/611583c8c8163c2197c3c1f6/di_masthead_desktop-2600.jpg",
+                IconUrl = @"https://blz-contentstack-images.akamaized.net/v3/assets/blt77f4425de611b362/blt7b64284fbcdfaa77/60e75dd92d26525ef67ac8c5/nav-icon.png",
+                Name = "Diablo Immortal",
+                Type = BNetAppType.Default
             }
         };
 
