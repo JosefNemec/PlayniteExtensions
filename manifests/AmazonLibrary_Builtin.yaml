@@ -24,3 +24,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_4.pext
     Changelog:
       - Fixed games not being imported properly
+  - Version: 2.5
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-06-02
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_5.pext
+    Changelog:
+      - Fixed import of installed games not working properly
