@@ -158,38 +158,6 @@ namespace BattleNetLibrary
             },
             new BNetApp()
             {
-                ProductId = "W3",
-                InternalId = "Warcraft III",
-                IconUrl = @"https://blznav.akamaized.net/img/games/logo-w3r-c8a76eea272dbd55.png",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//11/b924dd7257d4728f314822837d9a5e68-prod-mobile-bg.jpg",
-                CoverUrl = "http://bnetproduct-a.akamaihd.net//42/a4e5b0ccd23d09ad34e7c0a074bb4c11-prod-card-tall.jpg",
-                Name = "Warcraft III: Reign of Chaos",
-                Type = BNetAppType.Classic,
-                ClassicExecutable = "Warcraft III Launcher.exe",
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "http://blizzard.com/games/war3/"),
-                    new Link("Forums", "https://us.battle.net/forums/en/bnet/12790218/")
-                }
-            },
-            new BNetApp()
-            {
-                ProductId = "W3X",
-                InternalId = "Warcraft III",
-                IconUrl = @"https://blznav.akamaized.net/img/games/logo-w3r-c8a76eea272dbd55.png",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//7/f79aee74f037d9c3a44736ecccc4373a-prod-mobile-bg.jpg",
-                CoverUrl = "http://bnetproduct-a.akamaihd.net//fd9/a4b9e92295e20508bb62a0756577e925-prod-card-tall.jpg",
-                Name = "Warcraft III: The Frozen Throne",
-                Type = BNetAppType.Classic,
-                ClassicExecutable = "Warcraft III Launcher.exe",
-                Links = new List<Link>()
-                {
-                    new Link("Homepage", "http://blizzard.com/games/war3/"),
-                    new Link("Forums", "https://us.battle.net/forums/en/bnet/12790218/")
-                }
-            },
-            new BNetApp()
-            {
                 ApiId = 1447645266,
                 ProductId = "VIPR",
                 InternalId = "viper",
