@@ -822,6 +822,11 @@ namespace SteamLibrary
                     {
                         foreach (var installedGameId in installedGames.Keys.ToList())
                         {
+                            if (new GameID(ulong.Parse(installedGameId)).IsMod)
+                            {
+                                continue;
+                            }
+
                             if (libraryGames.FirstOrDefault(a => a.GameId == installedGameId) == null)
                             {
                                 allGames.Remove(installedGames[installedGameId]);
