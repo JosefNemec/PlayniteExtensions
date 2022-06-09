@@ -178,7 +178,7 @@ namespace BattleNetLibrary
             else
             {
                 ProcessStarter.StartProcess(app.ClassicExecutable, null, Game.InstallDirectory);
-                InvokeOnStarted(new GameStartedEventArgs());
+                ProcMon_TreeStarted(this, null);
                 if (Directory.Exists(Game.InstallDirectory))
                 {
                     procMon.WatchDirectoryProcesses(Game.InstallDirectory, true, true);
@@ -235,7 +235,7 @@ namespace BattleNetLibrary
         private void Monitor_TreeDestroyed(object sender, EventArgs args)
         {
             stopWatch?.Stop();
-            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToUInt64(stopWatch.Elapsed.TotalSeconds)));
+            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToUInt64(stopWatch?.Elapsed.TotalSeconds ?? 0)));
         }
     }
 }
