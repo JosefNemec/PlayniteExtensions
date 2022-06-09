@@ -201,7 +201,7 @@ namespace OriginLibrary
 
         private void ProcMon_TreeDestroyed(object sender, EventArgs args)
         {
-            stopWatch.Stop();
+            stopWatch?.Stop();
             InvokeOnStopped(new GameStoppedEventArgs(Convert.ToUInt64(stopWatch.Elapsed.TotalSeconds)));
         }
     }
