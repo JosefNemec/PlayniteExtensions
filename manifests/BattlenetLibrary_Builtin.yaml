@@ -42,3 +42,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_6.pext
     Changelog:
       - Added Diablo Immortal support
+  - Version: 2.7
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-06-09
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_7.pext
+    Changelog:
+      - Removed classic Warcraft 3 entires and fixed tracking of Reforged version
+      - Fixed a crash when tracking a game
