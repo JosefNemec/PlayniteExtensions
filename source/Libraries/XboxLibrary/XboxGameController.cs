@@ -175,7 +175,7 @@ namespace XboxLibrary
         private void Monitor_TreeDestroyed(object sender, EventArgs args)
         {
             stopWatch?.Stop();
-            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToUInt64(stopWatch.Elapsed.TotalSeconds)));
+            InvokeOnStopped(new GameStoppedEventArgs(Convert.ToUInt64(stopWatch?.Elapsed.TotalSeconds ?? 0)));
         }
     }
 }
