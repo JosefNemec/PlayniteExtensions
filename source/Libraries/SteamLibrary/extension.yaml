@@ -1,7 +1,7 @@
 ﻿Id: SteamLibrary_Builtin
 Name: Steam library integration
 Author: Playnite
-Version: 2.6
+Version: 2.7
 Module: SteamLibrary.dll
 Type: GameLibrary
 Icon: Resources\steamicon.png
