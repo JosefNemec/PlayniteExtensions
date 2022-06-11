@@ -49,3 +49,9 @@ Packages:
     Changelog:
       - Removed classic Warcraft 3 entires and fixed tracking of Reforged version
       - Fixed a crash when tracking a game
+  - Version: 2.8
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-06-11
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_8.pext
+    Changelog:
+      - Fixed import of uninstalled games failing
