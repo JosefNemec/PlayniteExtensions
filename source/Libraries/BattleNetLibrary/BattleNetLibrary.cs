@@ -182,32 +182,6 @@ namespace BattleNetLibrary
                 var classicGames = api.GetOwnedClassicGames();
                 if (classicGames?.Any() == true)
                 {
-                    // W3
-                    var w3Games = classicGames.Where(a => a.regionalGameFranchiseIconFilename.Contains("warcraft-iii"));
-                    if (w3Games.Any())
-                    {
-                        var w3 = BattleNetGames.Games.FirstOrDefault(a => a.ProductId == "W3");
-                        games.Add(new GameMetadata()
-                        {
-                            Source = new MetadataNameProperty("Battle.net"),
-                            GameId = w3.ProductId,
-                            Name = w3.Name,
-                            Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
-                        });
-
-                        if (w3Games.Count() == 2)
-                        {
-                            var w3x = BattleNetGames.Games.FirstOrDefault(a => a.ProductId == "W3X");
-                            games.Add(new GameMetadata()
-                            {
-                                Source = new MetadataNameProperty("Battle.net"),
-                                GameId = w3x.ProductId,
-                                Name = w3x.Name,
-                                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
-                            });
-                        }
-                    }
-
                     // D2
                     var d2Games = classicGames.Where(a => a.regionalGameFranchiseIconFilename.Contains("diablo-ii"));
                     if (d2Games.Any())
