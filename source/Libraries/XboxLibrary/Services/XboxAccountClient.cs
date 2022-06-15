@@ -258,6 +258,41 @@ namespace XboxLibrary.Services
             }
         }
 
+        public async Task<List<UserStatsResponse.Stats>> GetUserStatsMinutesPlayed(IEnumerable<string> titleIds)
+        {
+            var tokens = GetSavedXstsTokens();
+            if (tokens == null)
+            {
+                throw new Exception("User is not authenticated.");
+            }
+
+            using (var client = new HttpClient())
+            {
+                SetAuthenticationHeaders(client.DefaultRequestHeaders, tokens);
+                var requestData = new UserStatsRequest
+                {
+                    arrangebyfield = "xuid",
+                    stats = titleIds.Select(titleId => new UserStatsRequest.Stats
+                        {
+                            name = "MinutesPlayed",
+                            titleid = titleId
+                        }
+                    ).ToList(),
+                    xuids = new List<string> { tokens.DisplayClaims.xui[0].xid }
+                };
+                var response = await client.PostAsync(@"https://userstats.xboxlive.com/batch",
+                    new StringContent(Serialization.ToJson(requestData), Encoding.UTF8, "application/json"));
+                if (response.StatusCode != System.Net.HttpStatusCode.OK)
+                {
+                    throw new Exception("User is not authenticated.");
+                }
+
+                var cont = await response.Content.ReadAsStringAsync();
+                var userStats = Serialization.FromJson<UserStatsResponse>(cont);
+                return userStats.statlistscollection.First().stats;
+            }
+        }
+
         public async Task<TitleHistoryResponse.Title> GetTitleInfo(string pfn)
         {
             var tokens = GetSavedXstsTokens();

@@ -77,6 +77,11 @@ namespace XboxLibrary.Models
             public int? minAge;
         }
 
+        public class TitleHistory
+        {
+            public DateTime? lastTimePlayed;
+        }
+
         public class Title
         {
             public string titleId;
@@ -88,15 +93,47 @@ namespace XboxLibrary.Models
             public string mediaItemType;
             public Detail detail;
             public List<string> devices;
+            public TitleHistory titleHistory;
 
             public override string ToString()
             {
                 return name;
             }
+
+            public string minutesPlayed;
         }
 
         public string xuid;
         public List<Title> titles;
+    }
+
+    public class UserStatsRequest
+    {
+        public class Stats
+        {
+            public string name;
+            public string titleid;
+        }
+
+        public string arrangebyfield;
+        public List<Stats> stats;
+        public List<string> xuids;
+    }
+
+    public class UserStatsResponse
+    {
+        public class Stats
+        {
+            public string titleid;
+            public string value;
+        }
+
+        public class StatListsCollection
+        {
+            public List<Stats> stats;
+        }
+
+        public List<StatListsCollection> statlistscollection;
     }
 
     public class ProfileRequest

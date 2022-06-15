@@ -82,6 +82,19 @@ namespace XboxLibrary
                 }
             }
 
+            if (title.titleHistory != null)
+            {
+                newGame.LastActivity = title.titleHistory.lastTimePlayed;
+            }
+
+            if (title.minutesPlayed != null)
+            {
+                if (ulong.TryParse(title.minutesPlayed, out ulong minutes))
+                {
+                    newGame.Playtime = minutes * 60;
+                }
+            }
+
             return newGame;
         }
 
@@ -183,6 +196,26 @@ namespace XboxLibrary
             {
                 Logger.Error(e, "Failed to Xbox profile titles.");
                 importError = e;
+            }
+
+            if (titles.Count > 0)
+            {
+                try
+                {
+                    var minutesPlayedStats = client.GetUserStatsMinutesPlayed(titles.Select(t => t.titleId)).GetAwaiter().GetResult().ToDictionary(stat => stat.titleid, stat => stat.value);
+                    foreach (TitleHistoryResponse.Title title in titles)
+                    {
+                        if (minutesPlayedStats.ContainsKey(title.titleId))
+                        {
+                            title.minutesPlayed = minutesPlayedStats[title.titleId];
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    Logger.Error(e, "Failed to import Xbox user stats.");
+                    importError = e;
+                }
             }
 
             var appDataCache = GetAppDataCache();
