@@ -58,3 +58,9 @@ Packages:
     Changelog:
       - Fixed installed source mods not being imported under certain conditions
       - Fixed a crash when tracking a game
+  - Version: 2.8
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-06-21
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_8.pext
+    Changelog:
+      - Small optimization to import of installed games
