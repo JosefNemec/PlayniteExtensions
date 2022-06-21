@@ -123,6 +123,11 @@ namespace SteamLibrary
 
             foreach (var file in Directory.GetFiles(path, @"appmanifest*"))
             {
+                if (file.EndsWith("tmp", StringComparison.OrdinalIgnoreCase))
+                {
+                    continue;
+                }
+
                 try
                 {
                     var game = GetInstalledGameFromFile(Path.Combine(path, file));
