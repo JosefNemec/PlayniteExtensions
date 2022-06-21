@@ -43,3 +43,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_7.pext
     Changelog:
       - Play time tracking could start sooner than it should (by darklinkpower)
+  - Version: 2.8
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-06-21
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_8.pext
+    Changelog:
+      - Added import of time played and last played (by mmasinter)
