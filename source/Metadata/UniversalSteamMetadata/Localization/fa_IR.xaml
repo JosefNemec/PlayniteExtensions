@@ -18,4 +18,39 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">وارد کردن زمان بازی</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">شناسه حساب</sys:String>
+  <!--Steam-->
+  <sys:String x:Key="LOCSettingsWhatsSteamName">حساب من کجاست؟</sys:String>
+  <sys:String x:Key="LOCSteamCustomUrlName">نام آدرس کاربری</sys:String>
+  <sys:String x:Key="LOCSteamLoggedInUser">کاربر معتبر</sys:String>
+  <sys:String x:Key="LOCSteamRequiresApiKey">حساب خصوصی است، کلید API لازم است.</sys:String>
+  <sys:String x:Key="LOCSteamLinksCommunityHub">جامعه</sys:String>
+  <sys:String x:Key="LOCSteamLinksDiscussions">نظرات</sys:String>
+  <sys:String x:Key="LOCSteamLinksGuides">راهنماها</sys:String>
+  <sys:String x:Key="LOCSteamLinksWorkshop">کارگاه</sys:String>
+  <sys:String x:Key="LOCSteamUseVerticalCovers">بارگیری تصاویر جلد عمودی</sys:String>
+  <sys:String x:Key="LOCSteamImportFreeSubGames">وارد کردن موارد رایگان عمومی</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportWarn">با این کار دسته بندی های فعلی و همچنین حالت های پنهان و مورد علاقه در تمام بازی های Steam بازنویسی می شود. می خواهید ادامه دهید؟</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">ورود دسته ها؟</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">دسته بندی ها را نمی توان وارد کرد ، حساب برای واردات انتخاب نشده است.</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Cannot import categories, database is not opened.
+</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportError">واردات دسته های استیم انجام نشد: {0}</sys:String>
+  <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">وارد کردن آخرین اطلاعات بازی شده امکان پذیر نیست، برای واردات حساب انتخاب نشده است.</sys:String>
+  <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">وارد کردن آخرین اطلاعات بازی شده امکان پذیر نیست، بانک اطلاعاتی باز نشده است.</sys:String>
+  <sys:String x:Key="LOCSettingsSteamLastActivityImportError">وارد کردن اطلاعات آخرین بازی Steam انجام نشد: {0}</sys:String>
+  <sys:String x:Key="LOCSettingsApiKeyTooltip">کلید API برای حسابهای خصوصی Steam لازم است</sys:String>
+  <sys:String x:Key="LOCSettingsApiKeyUrlText">گرفتن کلید API</sys:String>
+  <sys:String x:Key="LOCSettingsSteamImportMetadata">وارد کردن ابرداده از حساب Steam:</sys:String>
+  <sys:String x:Key="LOCImportSteamCategoriesLabel">ورود دسته های استیم</sys:String>
+  <sys:String x:Key="LOCImportSteamLastActivityLabel">واردات آخرین بازی استیم</sys:String>
+  <sys:String x:Key="LOCSteamBackgroundSource">منبع تصویر پس‌زمینه:</sys:String>
+  <sys:String x:Key="LOCSteamBackgroundSourceImage">عکس بازی</sys:String>
+  <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">اسکرین شات فروشگاه</sys:String>
+  <sys:String x:Key="LOCSteamBackgroundSourceStore">پس زمینه فروشگاه</sys:String>
+  <sys:String x:Key="LOCSteamBackgroundSourceBanner">بنر</sys:String>
+  <sys:String x:Key="LOCSteamShowFriendsButton">نمایش دکمه دوستان در بالای صفحه</sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip">دوستان استیم</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">بازی های نصب شده از حساب های دیگر را نادیده بگیرید</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">حساب های اضافی</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">اگر می‌خواهید بازی‌ها را از آنها وارد کنید، شناسه حساب Steam و جفت کلید API حساب‌های دیگر را مشخص کنید. برای اطلاعات بیشتر به صفحه ویکی عیب یابی Steam مراجعه کنید.</sys:String>
 </ResourceDictionary>

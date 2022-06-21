@@ -18,4 +18,39 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">بدء باستخدام {0} عميل</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">استيراد وقت التشغيل</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">تعريف الحساب</sys:String>
+  <!--Steam-->
+  <sys:String x:Key="LOCSettingsWhatsSteamName">ما اسم حسابي؟</sys:String>
+  <sys:String x:Key="LOCSteamCustomUrlName">اسم رابط الحساب</sys:String>
+  <sys:String x:Key="LOCSteamLoggedInUser">مستخدم مصادق عليه</sys:String>
+  <sys:String x:Key="LOCSteamRequiresApiKey">الحساب خاص، مطلوب مفتاح API.</sys:String>
+  <sys:String x:Key="LOCSteamLinksCommunityHub">مركز المجتمع</sys:String>
+  <sys:String x:Key="LOCSteamLinksDiscussions">مناقشات</sys:String>
+  <sys:String x:Key="LOCSteamLinksGuides">دليل</sys:String>
+  <sys:String x:Key="LOCSteamLinksWorkshop">ورشة</sys:String>
+  <sys:String x:Key="LOCSteamUseVerticalCovers">تحميل صور غلاف عمودية</sys:String>
+  <sys:String x:Key="LOCSteamImportFreeSubGames">استيراد عناصر مجانية عامة
+</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportWarn">سوف يؤذي هذا إلى استبدال الفئات الحالية وكذلك الحالات المخفية والمفضلة في جميع ألعاب Steam. هل ترغب في الاستمرار؟</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">استيراد الفئات؟</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">تعذر استيراد الفئات، لم يتم تحديد حساب الاستيراد.</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">تعذر استيراد الفئات، قاعدة البيانات غير مفتوحة.</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportError">فشل استيراد فئات Steam: {0}</sys:String>
+  <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">تعذر استيراد معلومات آخر الألعاب التي تم تشغيلها، لم يتم تحديد حساب الاستيراد.</sys:String>
+  <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">لا يمكن استيراد معلومات اللعبة التي تم لعبها مؤخرًا، قاعدة البيانات غير مفتوحة.</sys:String>
+  <sys:String x:Key="LOCSettingsSteamLastActivityImportError">فشل استيراد معلومات آخر لعبة تم تشغيلها على Steam: {0}</sys:String>
+  <sys:String x:Key="LOCSettingsApiKeyTooltip">مفتاح API مطلوب لفتح حسابات Steam الخاصة</sys:String>
+  <sys:String x:Key="LOCSettingsApiKeyUrlText">احصل على مفتاح API</sys:String>
+  <sys:String x:Key="LOCSettingsSteamImportMetadata">استيراد بيانات التعريف من حساب Steam:</sys:String>
+  <sys:String x:Key="LOCImportSteamCategoriesLabel">استيراد تصنيفات Steam</sys:String>
+  <sys:String x:Key="LOCImportSteamLastActivityLabel">استيراد أخر لعبة تم لعبها في Steam</sys:String>
+  <sys:String x:Key="LOCSteamBackgroundSource">مصدر صورة الخلفية:</sys:String>
+  <sys:String x:Key="LOCSteamBackgroundSourceImage">صورة اللعبة</sys:String>
+  <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">تخزين لقطة الشاشة</sys:String>
+  <sys:String x:Key="LOCSteamBackgroundSourceStore">تخزين صورة الخلفية</sys:String>
+  <sys:String x:Key="LOCSteamBackgroundSourceBanner">شعار</sys:String>
+  <sys:String x:Key="LOCSteamShowFriendsButton">إظهار زر الأصدقاء في اللوحة العلوية</sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip">أصدقاء ستيم</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">تجاهل الألعاب المثبتة من حسابات أخرى</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">حسابات إضافية</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">حدد ID حساب ستيم وزوج مفتاح API من الحسابات الأخرى إذا كنت ترغب في استيراد الألعاب منهم. راجع صفحة ويكي Steam troublesbuoting للحصول على مزيد من المعلومات.</sys:String>
 </ResourceDictionary>

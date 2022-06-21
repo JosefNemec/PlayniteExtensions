@@ -39,13 +39,13 @@ foreach ($extension in $extensionPaths.Keys)
             if ($node.Name -eq "#comment")
             {
                 $parsingExt = $node.InnerText.Trim()
-                if ($parsingExt -eq $extension)
+                if ($parsingExt -eq $extension -or ($extension -eq 'UniversalSteamMetadata' -and $parsingExt -eq "Steam"))
                 {
                     $nodeClone = $targetXml.ImportNode($node, $true)
                     $targetXml.ResourceDictionary.AppendChild($nodeClone) | Out-Null
                 }
             }
-            elseif ($parsingExt -eq $extension)
+            elseif ($parsingExt -eq $extension -or ($extension -eq 'UniversalSteamMetadata' -and $parsingExt -eq "Steam"))
             {
                 $nodeClone = $targetXml.ImportNode($node, $true)
                 $targetXml.ResourceDictionary.AppendChild($nodeClone) | Out-Null
