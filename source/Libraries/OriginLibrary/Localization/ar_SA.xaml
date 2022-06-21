@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCOriginPrivateAccount">حساب خاص</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">حساب عام</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">مفتاح API</sys:String>
-  <sys:String x:Key="LOCOriginStartUsingClient" />
-  <sys:String x:Key="LOCOriginImportPlaytime" />
-  <sys:String x:Key="LOCOriginAccountID" />
+  <sys:String x:Key="LOCOriginStartUsingClient">بدء باستخدام {0} عميل</sys:String>
+  <sys:String x:Key="LOCOriginImportPlaytime">استيراد وقت التشغيل</sys:String>
+  <sys:String x:Key="LOCOriginAccountID">تعريف الحساب</sys:String>
 </ResourceDictionary>

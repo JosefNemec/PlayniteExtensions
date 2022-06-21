@@ -16,8 +16,8 @@
   <sys:String x:Key="LOCHumblePublicAccount">公開帳號</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">API 密鑰</sys:String>
   <sys:String x:Key="LOCHumbleStartUsingClient">以{0}啟動</sys:String>
-  <sys:String x:Key="LOCHumbleImportPlaytime" />
-  <sys:String x:Key="LOCHumbleAccountID" />
+  <sys:String x:Key="LOCHumbleImportPlaytime">匯入遊玩時間</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">帳戶ID</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">忽略第三方遊戲平台的遊戲</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">匯入Humble Choice 遊戲</sys:String>

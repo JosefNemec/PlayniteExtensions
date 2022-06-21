@@ -15,9 +15,9 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">非公開アカウント</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">公開アカウント</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">API キー</sys:String>
-  <sys:String x:Key="LOCIGDBStartUsingClient" />
-  <sys:String x:Key="LOCIGDBImportPlaytime" />
-  <sys:String x:Key="LOCIGDBAccountID" />
+  <sys:String x:Key="LOCIGDBStartUsingClient">{0} クライアントの使用を開始</sys:String>
+  <sys:String x:Key="LOCIGDBImportPlaytime">プレイ時間をインポート</sys:String>
+  <sys:String x:Key="LOCIGDBAccountID">アカウントID</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">アートワークが利用できない場合スクリーンショットを使用する</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">

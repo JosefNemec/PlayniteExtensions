@@ -15,15 +15,15 @@
     <sys:String x:Key="LOCPrivateAccount">حساب خصوصی</sys:String>
     <sys:String x:Key="LOCPublicAccount">حساب عمومی</sys:String>
     <sys:String x:Key="LOCAPIKey">کلید API</sys:String>
-    <sys:String x:Key="LOCStartUsingClient"></sys:String>
-    <sys:String x:Key="LOCImportPlaytime"></sys:String>
-    <sys:String x:Key="LOCAccountID"></sys:String>
+    <sys:String x:Key="LOCStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
+    <sys:String x:Key="LOCImportPlaytime">وارد کردن زمان بازی</sys:String>
+    <sys:String x:Key="LOCAccountID">شناسه حساب</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io راه اندازی خواهد شد. لطفاً وارد سیستم شوید و سپس این پیام را ببندید.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">منتظر ورود کاربر هستید، لطفاً این کار را ببندید...</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">برنامه itch.io نسخه 25 یا جدیدتر نصب نشده است.</sys:String>
-    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel"></sys:String>
-    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel"></sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">بازی های رایگان را از مجموعه ها وارد کنید.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">اقلامی که باید وارد شوند:</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">ورود به حساب کاربری</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">نام حساب</sys:String>
@@ -62,18 +62,18 @@
     <sys:String x:Key="LOCSteamBackgroundSourceStore">پس زمینه فروشگاه</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">بنر</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">نمایش دکمه دوستان در بالای صفحه</sys:String>
-    <sys:String x:Key="LOCSteamFriendsTooltip"></sys:String>
-    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames"></sys:String>
-    <sys:String x:Key="LOCSteamAdditionalAccounts"></sys:String>
-    <sys:String x:Key="LOCSteamAdditionalAccountsDescription"></sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">دوستان استیم</sys:String>
+    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">بازی های نصب شده از حساب های دیگر را نادیده بگیرید</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccounts">حساب های اضافی</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">اگر می‌خواهید بازی‌ها را از آنها وارد کنید، شناسه حساب Steam و جفت کلید API حساب‌های دیگر را مشخص کنید. برای اطلاعات بیشتر به صفحه ویکی عیب یابی Steam مراجعه کنید.</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">استفاده از اسکرین شات در صورت نبود اثر هنری</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">در صورت وجود چندین عکس، از این استفاده شود:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">تصویر پس زمینه را برای {0} انتخاب کنید</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">بازی های فروشگاه شخص ثالث را نادیده بگیرید</sys:String>
-    <sys:String x:Key="LOCHumbleImportChoiceGames"></sys:String>
-    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames">واردات بازی انتخاب فروتنانه</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">وارد کردن بازی‌های موجود به عنوان بخشی از اشتراک انتخاب فروتنانه.</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">بازی های کتابخانه فروتنانه را وارد کنید</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">خریدهای استاندارد فروشگاه فروتنانه و خریدهای بسته را وارد کنید.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">فعال کردن برای ردکردن واردات بازیهایی که به سرویس گیرنده شخص ثالث نیاز دارند،
@@ -82,7 +82,7 @@
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">اگر نسخه رایگان DRM موجود است، بازی های مورد نیاز سرویس گیرنده شخص ثالث را وارد کنید.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">همیشه از برنامه Humble برای شروع بازی استفاده کنید</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">هنگامی که غیرفعال است، Playnite سعی می کند بازی ها را مستقیماً راه اندازی کند و برنامه Humble را دور بزند.</sys:String>
-    <sys:String x:Key="LOCHumbleNonTroveInstallError"></sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">نصب و حذف خودکار بازی های Humble بدون اشتراک در حال حاضر پشتیبانی نمی شود.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">هنگام باز کردن، برنامه Xbox Pass را به جای فروشگاه Microsoft شروع کنید</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">واردات بازی های کنسول ایکس باکس</sys:String>

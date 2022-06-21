@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCEpicPrivateAccount">حساب خصوصی</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">حساب عمومی</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">کلید API</sys:String>
-  <sys:String x:Key="LOCEpicStartUsingClient" />
-  <sys:String x:Key="LOCEpicImportPlaytime" />
-  <sys:String x:Key="LOCEpicAccountID" />
+  <sys:String x:Key="LOCEpicStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
+  <sys:String x:Key="LOCEpicImportPlaytime">وارد کردن زمان بازی</sys:String>
+  <sys:String x:Key="LOCEpicAccountID">شناسه حساب</sys:String>
 </ResourceDictionary>

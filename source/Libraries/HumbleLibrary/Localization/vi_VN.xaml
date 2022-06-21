@@ -1,33 +1,34 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCHumbleSettingsConnectAccount" />
-  <sys:String x:Key="LOCHumbleLoginChecking" />
-  <sys:String x:Key="LOCHumbleLoggedIn" />
-  <sys:String x:Key="LOCHumbleNotLoggedIn" />
-  <sys:String x:Key="LOCHumbleNotLoggedInError" />
-  <sys:String x:Key="LOCHumbleAuthenticateLabel" />
-  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCHumbleTroubleShootingIssues" />
-  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCHumblePrivateAccount" />
-  <sys:String x:Key="LOCHumblePublicAccount" />
-  <sys:String x:Key="LOCHumbleAPIKey" />
-  <sys:String x:Key="LOCHumbleStartUsingClient" />
-  <sys:String x:Key="LOCHumbleImportPlaytime" />
-  <sys:String x:Key="LOCHumbleAccountID" />
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">Nhập vào các trò chơi đã được cài đặt</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Nhập vào các trò chơi chưa được cài đặt</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">Kết nối tài khoản</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">Đang kiểm tra trạng thái xác thực…</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">Người dùng được xác thực</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">Yêu cầu xác thực</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">Không xác thực được người dùng.</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">Xác thực</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Bắt đầu trò chơi trực tiếp mà không cần chạy ứng dụng khách chính thức</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Khắc phục sự cố đồng bộ hóa tài khoản</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">Khắc phục sự cố</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Nhập vào tất cả các trò chơi</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">Tài khoản cá nhân</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">Tài khoản công khai</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">Khóa API</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">Bắt đầu sử dụng ứng dụng khách {0}</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">Nhập thời gian chơi</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">ID tài khoản</sys:String>
   <!--Humble-->
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames" />
-  <sys:String x:Key="LOCHumbleImportChoiceGames" />
-  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip" />
-  <sys:String x:Key="LOCHumbleGeneralLibrary" />
-  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve" />
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree" />
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
-  <sys:String x:Key="LOCHumbleNonTroveInstallError" />
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Bỏ qua trò chơi cửa hàng của bên thứ ba</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames">Nhập trò chơi Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Nhập các trò chơi có sẵn như một phần của đăng ký Humble Choice.</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibrary">Nhập trò chơi Thư viện Humble</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Nhập các giao dịch mua tại cửa hàng Humble tiêu chuẩn và mua theo gói.</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Cho phép bỏ qua việc nhập các trò chơi yêu cầu ứng dụng khách của bên thứ ba,
+bao gồm các cửa hàng đã được quản lý trong Playnite, để tránh trùng lặp.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Nhập nếu có phiên bản DRM miễn phí</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Nhập các trò chơi yêu cầu ứng dụng khách của bên thứ 3 nếu cũng có phiên bản DRM miễn phí.</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Luôn sử dụng Ứng dụng Humble để bắt đầu trò chơi</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Khi bị vô hiệu hóa, Playnite sẽ cố gắng khởi chạy trò chơi trực tiếp, bỏ qua Ứng dụng Humble.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">Tự động cài đặt và gỡ cài đặt trò chơi Humble không đăng ký hiện không được hỗ trợ.</sys:String>
 </ResourceDictionary>

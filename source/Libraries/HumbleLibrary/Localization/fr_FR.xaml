@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCHumblePrivateAccount">Profil privé</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Profil public</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">Clé API</sys:String>
-  <sys:String x:Key="LOCHumbleStartUsingClient">Démarrer le client {0}</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">Lancer avec le client {0}</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Importer le temps de jeu</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">ID du compte</sys:String>
   <!--Humble-->

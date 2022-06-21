@@ -15,9 +15,9 @@
   <sys:String x:Key="LOCGOGPrivateAccount">حساب خصوصی</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">حساب عمومی</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">کلید API</sys:String>
-  <sys:String x:Key="LOCGOGStartUsingClient" />
-  <sys:String x:Key="LOCGOGImportPlaytime" />
-  <sys:String x:Key="LOCGOGAccountID" />
+  <sys:String x:Key="LOCGOGStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
+  <sys:String x:Key="LOCGOGImportPlaytime">وارد کردن زمان بازی</sys:String>
+  <sys:String x:Key="LOCGOGAccountID">شناسه حساب</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">ورود به حساب کاربری</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">نام حساب</sys:String>

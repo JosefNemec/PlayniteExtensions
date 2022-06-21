@@ -51,5 +51,5 @@
   <sys:String x:Key="LOCSteamFriendsTooltip">Друзі в Steam</sys:String>
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ігнорувати встановлені ігри з інших облікових записів</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Додаткові облікові записи</sys:String>
-  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Визначте пару Steam ID і API-ключа інших облікових записів, якщо хочете імпортувати з них ігри. Для додаткової інформації перегляньте сторінку розв'язання проблем Steam у wiki.</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Визначте пару Steam ID і API-ключа інших облікових записів, якщо хочете імпортувати з них ігри. Для додаткової інформації перегляньте сторінку вирішення проблем Steam у wiki.</sys:String>
 </ResourceDictionary>

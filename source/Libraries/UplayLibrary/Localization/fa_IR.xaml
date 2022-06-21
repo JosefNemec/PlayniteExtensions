@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount">حساب خصوصی</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">حساب عمومی</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">کلید API</sys:String>
-  <sys:String x:Key="LOCUbisoftStartUsingClient" />
-  <sys:String x:Key="LOCUbisoftImportPlaytime" />
-  <sys:String x:Key="LOCUbisoftAccountID" />
+  <sys:String x:Key="LOCUbisoftStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
+  <sys:String x:Key="LOCUbisoftImportPlaytime">وارد کردن زمان بازی</sys:String>
+  <sys:String x:Key="LOCUbisoftAccountID">شناسه حساب</sys:String>
 </ResourceDictionary>

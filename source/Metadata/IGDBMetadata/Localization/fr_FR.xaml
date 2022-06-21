@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">Profil privé</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Profil public</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">Clé API</sys:String>
-  <sys:String x:Key="LOCIGDBStartUsingClient">Démarrer le client {0}</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient">Lancer avec le client {0}</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Importer le temps de jeu</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">ID du compte</sys:String>
   <!--IGDB-->

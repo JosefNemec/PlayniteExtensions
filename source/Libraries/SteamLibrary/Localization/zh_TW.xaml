@@ -16,8 +16,8 @@
   <sys:String x:Key="LOCSteamPublicAccount">公開帳號</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">API 密鑰</sys:String>
   <sys:String x:Key="LOCSteamStartUsingClient">以{0}啟動</sys:String>
-  <sys:String x:Key="LOCSteamImportPlaytime" />
-  <sys:String x:Key="LOCSteamAccountID" />
+  <sys:String x:Key="LOCSteamImportPlaytime">匯入遊玩時間</sys:String>
+  <sys:String x:Key="LOCSteamAccountID">帳戶ID</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">我的帳號名稱是什麼?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">帳號網址名稱</sys:String>
@@ -50,6 +50,6 @@
   <sys:String x:Key="LOCSteamShowFriendsButton">在頂部面板顯示朋友按鈕</sys:String>
   <sys:String x:Key="LOCSteamFriendsTooltip">Steam好友</sys:String>
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">忽略其他帳號安裝的遊戲</sys:String>
-  <sys:String x:Key="LOCSteamAdditionalAccounts" />
-  <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
+  <sys:String x:Key="LOCSteamAdditionalAccounts">其他帳戶</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">如果你想從其他帳戶匯入遊戲，請提供該Steam帳號以及API密鑰的配對。更多資訊請參考Steam疑難排解Wiki頁面。</sys:String>
 </ResourceDictionary>

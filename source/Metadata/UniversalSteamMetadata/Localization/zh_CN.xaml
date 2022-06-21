@@ -16,6 +16,6 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">公开账户</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API 密匙</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">开始使用 {0} 客户端</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">导入游戏时间</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">账户 ID</sys:String>
 </ResourceDictionary>

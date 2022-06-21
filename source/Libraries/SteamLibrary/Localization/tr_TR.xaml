@@ -15,9 +15,9 @@
   <sys:String x:Key="LOCSteamPrivateAccount">Özel Hesap</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Genel Hesap</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">API Anahtarı</sys:String>
-  <sys:String x:Key="LOCSteamStartUsingClient" />
-  <sys:String x:Key="LOCSteamImportPlaytime" />
-  <sys:String x:Key="LOCSteamAccountID" />
+  <sys:String x:Key="LOCSteamStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
+  <sys:String x:Key="LOCSteamImportPlaytime">Oynama zamanını içe aktar</sys:String>
+  <sys:String x:Key="LOCSteamAccountID">Hesap ID</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Hesap adım ne?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Hesap URL Adı</sys:String>
@@ -48,8 +48,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Mağaza Arka Planı</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Afiş</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Üst panelde arkadaşlar düğmesi göster </sys:String>
-  <sys:String x:Key="LOCSteamFriendsTooltip" />
-  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames" />
-  <sys:String x:Key="LOCSteamAdditionalAccounts" />
-  <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
+  <sys:String x:Key="LOCSteamFriendsTooltip">Steam Arkadaşları</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Diğer hesaplardan yüklenmiş oyunları yok say</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">Ek Hesaplar</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Diğer hesapların oyunları içe aktarmak istiyorsanız onların Steam hesap ID ve API anahtarlarını belirtin. Daha fazla bilgi için Steam sorun giderme wiki sayfasına bakın.</sys:String>
 </ResourceDictionary>

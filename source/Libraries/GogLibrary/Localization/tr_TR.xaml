@@ -15,9 +15,9 @@
   <sys:String x:Key="LOCGOGPrivateAccount">Özel Hesap</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">Genel Hesap</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">API Anahtarı</sys:String>
-  <sys:String x:Key="LOCGOGStartUsingClient" />
-  <sys:String x:Key="LOCGOGImportPlaytime" />
-  <sys:String x:Key="LOCGOGAccountID" />
+  <sys:String x:Key="LOCGOGStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
+  <sys:String x:Key="LOCGOGImportPlaytime">Oynama zamanını içe aktar</sys:String>
+  <sys:String x:Key="LOCGOGAccountID">Hesap ID</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Hesap Girişi</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Hesap Adı</sys:String>

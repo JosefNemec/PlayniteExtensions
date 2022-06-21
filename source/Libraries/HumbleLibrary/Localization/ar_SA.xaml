@@ -15,13 +15,13 @@
   <sys:String x:Key="LOCHumblePrivateAccount">حساب خاص</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">حساب عام</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">مفتاح API</sys:String>
-  <sys:String x:Key="LOCHumbleStartUsingClient" />
-  <sys:String x:Key="LOCHumbleImportPlaytime" />
-  <sys:String x:Key="LOCHumbleAccountID" />
+  <sys:String x:Key="LOCHumbleStartUsingClient">بدء باستخدام {0} عميل</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">استيراد وقت التشغيل</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">تعريف الحساب</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">تجاهُل ألعاب متجر الطرف الثالث</sys:String>
-  <sys:String x:Key="LOCHumbleImportChoiceGames" />
-  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip" />
+  <sys:String x:Key="LOCHumbleImportChoiceGames">استيراد ألعاب Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">استيراد الألعاب المتاحة كجزء من اشتراك Humble Choice.</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">استيراد ألعاب Humble</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">استيراد مشتريات متجر Humble القياسي ومشتريات الحزم.</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">تمكين لتخطي استيراد الألعاب التي تتطلب عملاء من جهات خارجية ،
@@ -32,5 +32,5 @@
 </sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">استخدم دائمًا تطبيق Humble لبدء الألعاب</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">عند التعطيل ، سيحاول Playnite تشغيل الألعاب مباشرة ، متجاوزًا تطبيق Humble.</sys:String>
-  <sys:String x:Key="LOCHumbleNonTroveInstallError" />
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">التثبيت التلقائي وإلغاء التثبيت لألعاب Humble بدون اشتراك غير مدعومين حاليًا.</sys:String>
 </ResourceDictionary>

@@ -3,7 +3,6 @@ $ErrorActionPreference = 'Stop'
 $extensionPaths = @{
     'Amazon' = 'source\Libraries\AmazonGamesLibrary\'
     'BattleNet' = 'source\Libraries\BattleNetLibrary\'
-    'Bethesda' = 'source\Libraries\BethesdaLibrary\'
     'Epic' = 'source\Libraries\EpicLibrary\'
     'GOG' = 'source\Libraries\GogLibrary\'
     'Humble' = 'source\Libraries\HumbleLibrary\'

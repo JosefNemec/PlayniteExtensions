@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCOriginPrivateAccount">حساب خصوصی</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">حساب عمومی</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">کلید API</sys:String>
-  <sys:String x:Key="LOCOriginStartUsingClient" />
-  <sys:String x:Key="LOCOriginImportPlaytime" />
-  <sys:String x:Key="LOCOriginAccountID" />
+  <sys:String x:Key="LOCOriginStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
+  <sys:String x:Key="LOCOriginImportPlaytime">وارد کردن زمان بازی</sys:String>
+  <sys:String x:Key="LOCOriginAccountID">شناسه حساب</sys:String>
 </ResourceDictionary>

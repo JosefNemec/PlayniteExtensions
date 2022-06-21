@@ -16,7 +16,7 @@
     <sys:String x:Key="LOCPublicAccount">公开账户</sys:String>
     <sys:String x:Key="LOCAPIKey">API 密匙</sys:String>
     <sys:String x:Key="LOCStartUsingClient">开始使用 {0} 客户端</sys:String>
-    <sys:String x:Key="LOCImportPlaytime">导入游戏时间</sys:String>
+    <sys:String x:Key="LOCImportPlaytime">导入游玩时间</sys:String>
     <sys:String x:Key="LOCAccountID">账户 ID</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">即将启动 itch.io 客户端，请在登录后关闭此消息。</sys:String>
@@ -61,18 +61,18 @@
     <sys:String x:Key="LOCSteamBackgroundSourceStore">商店背景</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">横幅</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">在顶部面板显示好友按钮</sys:String>
-    <sys:String x:Key="LOCSteamFriendsTooltip">Steam好友</sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">Steam 好友</sys:String>
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">忽略其他账户安装的游戏</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">额外账户</sys:String>
-    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">如果你想从其他Steam账户导入游戏，请指定其他账户的ID和API密钥对。更多信息请参阅Steam疑难解答wiki页面。</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">如果您想从其他 Steam 账户导入游戏，请指定这些账户的 ID 和 API 密钥对。更多信息请参阅 Steam 疑难解答的 wiki 页面。</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">在无法使用艺术作品的时候使用截图</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">如果有多个图像，则使用：</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">选择 {0} 的背景图像</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">忽略第三方商店的游戏</sys:String>
-    <sys:String x:Key="LOCHumbleImportChoiceGames">导入Humble精选游戏</sys:String>
-    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">导入Humble精选订阅中可用的游戏。</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames">导入 Humble 精选游戏</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">导入 Humble 精选订阅中可用的游戏。</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">导入 Humble 库的游戏</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">导入标准的 Humble 商店购买项目和捆绑包购买项目。</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">启用来跳过导入需要第三方客户端的游戏，
@@ -81,7 +81,7 @@
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">导入存在无 DRM 版本但需要第三方客户端的游戏。</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">总是使用 Humble 客户端启动游戏</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">当禁用时，Playnite 会尝试绕过 Humble 客户端，直接启动游戏。</sys:String>
-    <sys:String x:Key="LOCHumbleNonTroveInstallError">目前不支持非订阅Humble游戏的自动安装和卸载。</sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">目前不支持非订阅 Humble 游戏的自动安装和卸载。</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">打开客户端时，启动 Xbox Pass 应用而不是 Microsoft Store。</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">导入 Xbox 游戏机游戏</sys:String>

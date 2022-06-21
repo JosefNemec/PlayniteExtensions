@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">非公開アカウント</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">公開アカウント</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API キー</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient" />
-  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime" />
-  <sys:String x:Key="LOCUniversalSteamMetadataAccountID" />
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">{0} クライアントの使用を開始</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">プレイ時間をインポート</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID">アカウントID</sys:String>
 </ResourceDictionary>

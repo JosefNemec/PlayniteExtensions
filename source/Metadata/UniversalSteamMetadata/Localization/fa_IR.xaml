@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">حساب خصوصی</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">حساب عمومی</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">کلید API</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient" />
-  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime" />
-  <sys:String x:Key="LOCUniversalSteamMetadataAccountID" />
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">وارد کردن زمان بازی</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID">شناسه حساب</sys:String>
 </ResourceDictionary>

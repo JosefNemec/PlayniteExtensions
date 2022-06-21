@@ -15,13 +15,13 @@
   <sys:String x:Key="LOCitchioPrivateAccount">حساب خصوصی</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">حساب عمومی</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">کلید API</sys:String>
-  <sys:String x:Key="LOCitchioStartUsingClient" />
-  <sys:String x:Key="LOCitchioImportPlaytime" />
-  <sys:String x:Key="LOCitchioAccountID" />
+  <sys:String x:Key="LOCitchioStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
+  <sys:String x:Key="LOCitchioImportPlaytime">وارد کردن زمان بازی</sys:String>
+  <sys:String x:Key="LOCitchioAccountID">شناسه حساب</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io راه اندازی خواهد شد. لطفاً وارد سیستم شوید و سپس این پیام را ببندید.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">منتظر ورود کاربر هستید، لطفاً این کار را ببندید...</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">برنامه itch.io نسخه 25 یا جدیدتر نصب نشده است.</sys:String>
-  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel" />
-  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel" />
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">بازی های رایگان را از مجموعه ها وارد کنید.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">اقلامی که باید وارد شوند:</sys:String>
 </ResourceDictionary>

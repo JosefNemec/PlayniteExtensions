@@ -15,9 +15,9 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">حساب خصوصی</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">حساب عمومی</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">کلید API</sys:String>
-  <sys:String x:Key="LOCIGDBStartUsingClient" />
-  <sys:String x:Key="LOCIGDBImportPlaytime" />
-  <sys:String x:Key="LOCIGDBAccountID" />
+  <sys:String x:Key="LOCIGDBStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
+  <sys:String x:Key="LOCIGDBImportPlaytime">وارد کردن زمان بازی</sys:String>
+  <sys:String x:Key="LOCIGDBAccountID">شناسه حساب</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">استفاده از اسکرین شات در صورت نبود اثر هنری</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">در صورت وجود چندین عکس، از این استفاده شود:</sys:String>

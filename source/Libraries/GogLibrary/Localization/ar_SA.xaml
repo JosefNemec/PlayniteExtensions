@@ -15,9 +15,9 @@
   <sys:String x:Key="LOCGOGPrivateAccount">حساب خاص</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">حساب عام</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">مفتاح API</sys:String>
-  <sys:String x:Key="LOCGOGStartUsingClient" />
-  <sys:String x:Key="LOCGOGImportPlaytime" />
-  <sys:String x:Key="LOCGOGAccountID" />
+  <sys:String x:Key="LOCGOGStartUsingClient">بدء باستخدام {0} عميل</sys:String>
+  <sys:String x:Key="LOCGOGImportPlaytime">استيراد وقت التشغيل</sys:String>
+  <sys:String x:Key="LOCGOGAccountID">تعريف الحساب</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">تسجيل الدخول</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">إسم الحساب</sys:String>

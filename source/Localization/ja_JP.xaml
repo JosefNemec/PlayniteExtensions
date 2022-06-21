@@ -15,15 +15,15 @@
     <sys:String x:Key="LOCPrivateAccount">非公開アカウント</sys:String>
     <sys:String x:Key="LOCPublicAccount">公開アカウント</sys:String>
     <sys:String x:Key="LOCAPIKey">API キー</sys:String>
-    <sys:String x:Key="LOCStartUsingClient"></sys:String>
-    <sys:String x:Key="LOCImportPlaytime"></sys:String>
-    <sys:String x:Key="LOCAccountID"></sys:String>
+    <sys:String x:Key="LOCStartUsingClient">{0} クライアントの使用を開始</sys:String>
+    <sys:String x:Key="LOCImportPlaytime">プレイ時間をインポート</sys:String>
+    <sys:String x:Key="LOCAccountID">アカウントID</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.ioクライアントが開きます。サインインしてからこのメッセージを閉じてください。</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">ユーザーがログインするのを待っています。完了したら閉じてください。</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">バージョン25以降のItchクライアントがインストールされていません。</sys:String>
-    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel"></sys:String>
-    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel"></sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">コレクションから無料ゲームをインポート</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">インポートするアイテム:</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">アカウントログイン</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">アカウント名</sys:String>
@@ -61,10 +61,10 @@
     <sys:String x:Key="LOCSteamBackgroundSourceStore">ストアの背景</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">バナー</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">トップパネルにフレンドボタンを表示</sys:String>
-    <sys:String x:Key="LOCSteamFriendsTooltip"></sys:String>
-    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames"></sys:String>
-    <sys:String x:Key="LOCSteamAdditionalAccounts"></sys:String>
-    <sys:String x:Key="LOCSteamAdditionalAccountsDescription"></sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">Steamフレンド</sys:String>
+    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">他のアカウントからインストールされたゲームを無視</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccounts">追加アカウント</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">他のアカウントからゲームをインポートする場合は、他のアカウントのSteamアカウントIDとAPIキーのペアを指定します。詳しくはSteamトラブルシューティングwikiのページをご覧ください。</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">アートワークが利用できない場合スクリーンショットを使用する</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">
@@ -72,8 +72,8 @@
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">背景画像 {0} を選択</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">サードパーティー製のストアのゲームを無視する</sys:String>
-    <sys:String x:Key="LOCHumbleImportChoiceGames"></sys:String>
-    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames">Humble Choiceのゲームをインポート</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Humble Choiceサブスクリプションで利用可能なゲームをインポート</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">Humbleライブラリのゲームをインポートする</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Humbleストアでの標準購入とバンドル購入をインポートする</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">サードパーティのクライアント（すでにPlayniteで管理されているストアを含む）を必要とするゲームのインポートを重複を防ぐためにスキップすることを可能にします。</sys:String>
@@ -81,7 +81,7 @@
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">DRMフリー版も利用可能な場合は、サードパーティ製のクライアントを必要とするゲームをインポートする。</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">常にHumble Appを使ってゲームを開始する</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">無効にすると、PlayniteはHumble Appをバイパスして、直接ゲームを起動しようとします。</sys:String>
-    <sys:String x:Key="LOCHumbleNonTroveInstallError"></sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">サブスクリプション以外のHumbleゲームの自動インストールとアンインストールは現在サポートされていません。</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">クライアントを開くときにMicrosoft StoreではなくXbox Passアプリを起動する</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Xboxシリーズのゲームをインポートする</sys:String>

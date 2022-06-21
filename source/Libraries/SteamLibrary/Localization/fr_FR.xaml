@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCSteamPrivateAccount">Profil privé</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Profil public</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">Clé API</sys:String>
-  <sys:String x:Key="LOCSteamStartUsingClient">Démarrer le client {0}</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient">Lancer avec le client {0}</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Importer le temps de jeu</sys:String>
   <sys:String x:Key="LOCSteamAccountID">ID du compte</sys:String>
   <!--Steam-->

@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCGOGPrivateAccount">Profil privé</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">Profil public</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">Clé API</sys:String>
-  <sys:String x:Key="LOCGOGStartUsingClient">Démarrer le client {0}</sys:String>
+  <sys:String x:Key="LOCGOGStartUsingClient">Lancer avec le client {0}</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Importer le temps de jeu</sys:String>
   <sys:String x:Key="LOCGOGAccountID">ID du compte</sys:String>
   <!--GOG-->

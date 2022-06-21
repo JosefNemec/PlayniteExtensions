@@ -16,6 +16,6 @@
   <sys:String x:Key="LOCBattleNetPublicAccount">公開帳號</sys:String>
   <sys:String x:Key="LOCBattleNetAPIKey">API 密鑰</sys:String>
   <sys:String x:Key="LOCBattleNetStartUsingClient">以{0}啟動</sys:String>
-  <sys:String x:Key="LOCBattleNetImportPlaytime" />
-  <sys:String x:Key="LOCBattleNetAccountID" />
+  <sys:String x:Key="LOCBattleNetImportPlaytime">匯入遊玩時間</sys:String>
+  <sys:String x:Key="LOCBattleNetAccountID">帳戶ID</sys:String>
 </ResourceDictionary>

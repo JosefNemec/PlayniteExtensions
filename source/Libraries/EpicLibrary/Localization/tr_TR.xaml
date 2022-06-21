@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCEpicPrivateAccount">Özel Hesap</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">Genel Hesap</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">API Anahtarı</sys:String>
-  <sys:String x:Key="LOCEpicStartUsingClient" />
-  <sys:String x:Key="LOCEpicImportPlaytime" />
-  <sys:String x:Key="LOCEpicAccountID" />
+  <sys:String x:Key="LOCEpicStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
+  <sys:String x:Key="LOCEpicImportPlaytime">Oynama zamanını içe aktar</sys:String>
+  <sys:String x:Key="LOCEpicAccountID">Hesap ID</sys:String>
 </ResourceDictionary>

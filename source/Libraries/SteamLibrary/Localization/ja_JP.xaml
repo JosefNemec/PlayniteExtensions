@@ -15,9 +15,9 @@
   <sys:String x:Key="LOCSteamPrivateAccount">非公開アカウント</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">公開アカウント</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">API キー</sys:String>
-  <sys:String x:Key="LOCSteamStartUsingClient" />
-  <sys:String x:Key="LOCSteamImportPlaytime" />
-  <sys:String x:Key="LOCSteamAccountID" />
+  <sys:String x:Key="LOCSteamStartUsingClient">{0} クライアントの使用を開始</sys:String>
+  <sys:String x:Key="LOCSteamImportPlaytime">プレイ時間をインポート</sys:String>
+  <sys:String x:Key="LOCSteamAccountID">アカウントID</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">私のアカウント名は何ですか？</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">アカウントURL名</sys:String>
@@ -48,8 +48,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">ストアの背景</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">バナー</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">トップパネルにフレンドボタンを表示</sys:String>
-  <sys:String x:Key="LOCSteamFriendsTooltip" />
-  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames" />
-  <sys:String x:Key="LOCSteamAdditionalAccounts" />
-  <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
+  <sys:String x:Key="LOCSteamFriendsTooltip">Steamフレンド</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">他のアカウントからインストールされたゲームを無視</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">追加アカウント</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">他のアカウントからゲームをインポートする場合は、他のアカウントのSteamアカウントIDとAPIキーのペアを指定します。詳しくはSteamトラブルシューティングwikiのページをご覧ください。</sys:String>
 </ResourceDictionary>

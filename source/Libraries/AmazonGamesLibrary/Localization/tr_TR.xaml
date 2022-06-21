@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCAmazonPrivateAccount">Özel Hesap</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">Genel Hesap</sys:String>
   <sys:String x:Key="LOCAmazonAPIKey">API Anahtarı</sys:String>
-  <sys:String x:Key="LOCAmazonStartUsingClient" />
-  <sys:String x:Key="LOCAmazonImportPlaytime" />
-  <sys:String x:Key="LOCAmazonAccountID" />
+  <sys:String x:Key="LOCAmazonStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
+  <sys:String x:Key="LOCAmazonImportPlaytime">Oynama zamanını içe aktar</sys:String>
+  <sys:String x:Key="LOCAmazonAccountID">Hesap ID</sys:String>
 </ResourceDictionary>

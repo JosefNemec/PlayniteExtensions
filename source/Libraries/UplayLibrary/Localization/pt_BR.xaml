@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">Conta pública</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">Chave da API</sys:String>
-  <sys:String x:Key="LOCUbisoftStartUsingClient" />
-  <sys:String x:Key="LOCUbisoftImportPlaytime" />
-  <sys:String x:Key="LOCUbisoftAccountID" />
+  <sys:String x:Key="LOCUbisoftStartUsingClient">Começar usando cliente {0}</sys:String>
+  <sys:String x:Key="LOCUbisoftImportPlaytime">Importar tempo de jogo</sys:String>
+  <sys:String x:Key="LOCUbisoftAccountID">ID da Conta</sys:String>
 </ResourceDictionary>

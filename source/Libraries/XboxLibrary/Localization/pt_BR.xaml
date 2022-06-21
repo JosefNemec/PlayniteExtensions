@@ -15,9 +15,9 @@
   <sys:String x:Key="LOCXboxPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCXboxPublicAccount">Conta pública</sys:String>
   <sys:String x:Key="LOCXboxAPIKey">Chave da API</sys:String>
-  <sys:String x:Key="LOCXboxStartUsingClient" />
-  <sys:String x:Key="LOCXboxImportPlaytime" />
-  <sys:String x:Key="LOCXboxAccountID" />
+  <sys:String x:Key="LOCXboxStartUsingClient">Começar usando cliente {0}</sys:String>
+  <sys:String x:Key="LOCXboxImportPlaytime">Importar tempo de jogo</sys:String>
+  <sys:String x:Key="LOCXboxAccountID">ID da Conta</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Iniciar o aplicativo do Xbox Game Pass ao invés da Microsoft Store ao abrir o cliente</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">Importar jogos de Xbox</sys:String>

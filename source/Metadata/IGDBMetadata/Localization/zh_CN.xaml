@@ -16,7 +16,7 @@
   <sys:String x:Key="LOCIGDBPublicAccount">公开账户</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">API 密匙</sys:String>
   <sys:String x:Key="LOCIGDBStartUsingClient">开始使用 {0} 客户端</sys:String>
-  <sys:String x:Key="LOCIGDBImportPlaytime">导入游戏时间</sys:String>
+  <sys:String x:Key="LOCIGDBImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">账户 ID</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">在无法使用艺术作品的时候使用截图</sys:String>

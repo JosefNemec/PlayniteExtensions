@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Özel Hesap</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Genel Hesap</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API Anahtarı</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient" />
-  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime" />
-  <sys:String x:Key="LOCUniversalSteamMetadataAccountID" />
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Oynama zamanını içe aktar</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID">Hesap ID</sys:String>
 </ResourceDictionary>

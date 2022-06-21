@@ -16,8 +16,8 @@
   <sys:String x:Key="LOCXboxPublicAccount">公開帳號</sys:String>
   <sys:String x:Key="LOCXboxAPIKey">API 密鑰</sys:String>
   <sys:String x:Key="LOCXboxStartUsingClient">以{0}啟動</sys:String>
-  <sys:String x:Key="LOCXboxImportPlaytime" />
-  <sys:String x:Key="LOCXboxAccountID" />
+  <sys:String x:Key="LOCXboxImportPlaytime">匯入遊玩時間</sys:String>
+  <sys:String x:Key="LOCXboxAccountID">帳戶ID</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">啟動客戶端時開啟Xbox Pass應用程式而非Microsoft商店。</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">匯入Xbox 遊戲</sys:String>

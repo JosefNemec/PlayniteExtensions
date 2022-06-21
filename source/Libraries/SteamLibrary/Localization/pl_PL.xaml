@@ -50,6 +50,6 @@
   <sys:String x:Key="LOCSteamShowFriendsButton">Pokaż przycisk znajomych w panelu górnym</sys:String>
   <sys:String x:Key="LOCSteamFriendsTooltip">Znajomi z Steam</sys:String>
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignoruj zainstalowane gry z innych kont</sys:String>
-  <sys:String x:Key="LOCSteamAdditionalAccounts" />
+  <sys:String x:Key="LOCSteamAdditionalAccounts">Dodatkowe konta</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Wprowadź parę identyfikatorów i kluczy API z innych kont Steam, jeśli chcesz importować z nich gry. Więcej informacji można znaleźć na stronie wiki dotyczącej rozwiązywania problemów na Steam.</sys:String>
 </ResourceDictionary>

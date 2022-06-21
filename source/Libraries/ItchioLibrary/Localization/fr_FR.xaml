@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCitchioPrivateAccount">Profil privé</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">Profil public</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">Clé API</sys:String>
-  <sys:String x:Key="LOCitchioStartUsingClient">Démarrer le client {0}</sys:String>
+  <sys:String x:Key="LOCitchioStartUsingClient">Lancer avec le client {0}</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Importer le temps de jeu</sys:String>
   <sys:String x:Key="LOCitchioAccountID">ID du compte</sys:String>
   <!--itch.io-->

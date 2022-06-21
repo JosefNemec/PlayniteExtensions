@@ -15,17 +15,17 @@
     <sys:String x:Key="LOCPrivateAccount">حساب خاص</sys:String>
     <sys:String x:Key="LOCPublicAccount">حساب عام</sys:String>
     <sys:String x:Key="LOCAPIKey">مفتاح API</sys:String>
-    <sys:String x:Key="LOCStartUsingClient"></sys:String>
-    <sys:String x:Key="LOCImportPlaytime"></sys:String>
-    <sys:String x:Key="LOCAccountID"></sys:String>
+    <sys:String x:Key="LOCStartUsingClient">بدء باستخدام {0} عميل</sys:String>
+    <sys:String x:Key="LOCImportPlaytime">استيراد وقت التشغيل</sys:String>
+    <sys:String x:Key="LOCAccountID">تعريف الحساب</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">سيتم إطلاق itch.io. الرجاء تسجيل الدخول ثم إغلاق هذه الرسالة.
 </sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">في انتظار تسجيل دخول المستخدم، الرجاء إغلاق هذا عند الانتهاء…</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">لم يتم تثبيت الإصدار 25 من تطبيق itch.io أو الأحدث.
 </sys:String>
-    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel"></sys:String>
-    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel"></sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">استيراد الألعاب المجانية من المجموعات.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">العناصر المراد استيرادها:</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">تسجيل الدخول</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">إسم الحساب</sys:String>
@@ -64,18 +64,18 @@
     <sys:String x:Key="LOCSteamBackgroundSourceStore">تخزين صورة الخلفية</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">شعار</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">إظهار زر الأصدقاء في اللوحة العلوية</sys:String>
-    <sys:String x:Key="LOCSteamFriendsTooltip"></sys:String>
-    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames"></sys:String>
-    <sys:String x:Key="LOCSteamAdditionalAccounts"></sys:String>
-    <sys:String x:Key="LOCSteamAdditionalAccountsDescription"></sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">أصدقاء ستيم</sys:String>
+    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">تجاهل الألعاب المثبتة من حسابات أخرى</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccounts">حسابات إضافية</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">حدد ID حساب ستيم وزوج مفتاح API من الحسابات الأخرى إذا كنت ترغب في استيراد الألعاب منهم. راجع صفحة ويكي Steam troublesbuoting للحصول على مزيد من المعلومات.</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">استخدم لقطات الشاشة في حالة عدم توفر العمل الفني</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">اذا اكثر من صورة متاحات اذن استخدم:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">حدد صورة خلفية لـ{0}</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">تجاهُل ألعاب متجر الطرف الثالث</sys:String>
-    <sys:String x:Key="LOCHumbleImportChoiceGames"></sys:String>
-    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames">استيراد ألعاب Humble Choice</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">استيراد الألعاب المتاحة كجزء من اشتراك Humble Choice.</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">استيراد ألعاب Humble</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">استيراد مشتريات متجر Humble القياسي ومشتريات الحزم.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">تمكين لتخطي استيراد الألعاب التي تتطلب عملاء من جهات خارجية ،
@@ -86,7 +86,7 @@
 </sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">استخدم دائمًا تطبيق Humble لبدء الألعاب</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">عند التعطيل ، سيحاول Playnite تشغيل الألعاب مباشرة ، متجاوزًا تطبيق Humble.</sys:String>
-    <sys:String x:Key="LOCHumbleNonTroveInstallError"></sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">التثبيت التلقائي وإلغاء التثبيت لألعاب Humble بدون اشتراك غير مدعومين حاليًا.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">بدء تشغيل Xbox pass بدلاً من متجر Microsoft عند فتح العميل</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">استيراد ألعاب Xbox</sys:String>

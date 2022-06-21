@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCEpicPrivateAccount">حساب خاص</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">حساب عام</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">مفتاح API</sys:String>
-  <sys:String x:Key="LOCEpicStartUsingClient" />
-  <sys:String x:Key="LOCEpicImportPlaytime" />
-  <sys:String x:Key="LOCEpicAccountID" />
+  <sys:String x:Key="LOCEpicStartUsingClient">بدء باستخدام {0} عميل</sys:String>
+  <sys:String x:Key="LOCEpicImportPlaytime">استيراد وقت التشغيل</sys:String>
+  <sys:String x:Key="LOCEpicAccountID">تعريف الحساب</sys:String>
 </ResourceDictionary>

@@ -15,9 +15,9 @@
   <sys:String x:Key="LOCSteamPrivateAccount">حساب خصوصی</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">حساب عمومی</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">کلید API</sys:String>
-  <sys:String x:Key="LOCSteamStartUsingClient" />
-  <sys:String x:Key="LOCSteamImportPlaytime" />
-  <sys:String x:Key="LOCSteamAccountID" />
+  <sys:String x:Key="LOCSteamStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
+  <sys:String x:Key="LOCSteamImportPlaytime">وارد کردن زمان بازی</sys:String>
+  <sys:String x:Key="LOCSteamAccountID">شناسه حساب</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">حساب من کجاست؟</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">نام آدرس کاربری</sys:String>
@@ -49,8 +49,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">پس زمینه فروشگاه</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">بنر</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">نمایش دکمه دوستان در بالای صفحه</sys:String>
-  <sys:String x:Key="LOCSteamFriendsTooltip" />
-  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames" />
-  <sys:String x:Key="LOCSteamAdditionalAccounts" />
-  <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
+  <sys:String x:Key="LOCSteamFriendsTooltip">دوستان استیم</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">بازی های نصب شده از حساب های دیگر را نادیده بگیرید</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">حساب های اضافی</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">اگر می‌خواهید بازی‌ها را از آنها وارد کنید، شناسه حساب Steam و جفت کلید API حساب‌های دیگر را مشخص کنید. برای اطلاعات بیشتر به صفحه ویکی عیب یابی Steam مراجعه کنید.</sys:String>
 </ResourceDictionary>

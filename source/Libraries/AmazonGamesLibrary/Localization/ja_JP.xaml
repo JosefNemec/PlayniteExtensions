@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCAmazonPrivateAccount">非公開アカウント</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">公開アカウント</sys:String>
   <sys:String x:Key="LOCAmazonAPIKey">API キー</sys:String>
-  <sys:String x:Key="LOCAmazonStartUsingClient" />
-  <sys:String x:Key="LOCAmazonImportPlaytime" />
-  <sys:String x:Key="LOCAmazonAccountID" />
+  <sys:String x:Key="LOCAmazonStartUsingClient">{0} クライアントの使用を開始</sys:String>
+  <sys:String x:Key="LOCAmazonImportPlaytime">プレイ時間をインポート</sys:String>
+  <sys:String x:Key="LOCAmazonAccountID">アカウントID</sys:String>
 </ResourceDictionary>

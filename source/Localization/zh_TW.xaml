@@ -16,8 +16,8 @@
     <sys:String x:Key="LOCPublicAccount">公開帳號</sys:String>
     <sys:String x:Key="LOCAPIKey">API 密鑰</sys:String>
     <sys:String x:Key="LOCStartUsingClient">以{0}啟動</sys:String>
-    <sys:String x:Key="LOCImportPlaytime"></sys:String>
-    <sys:String x:Key="LOCAccountID"></sys:String>
+    <sys:String x:Key="LOCImportPlaytime">匯入遊玩時間</sys:String>
+    <sys:String x:Key="LOCAccountID">帳戶ID</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io用戶端程式即將啟動，請登入然後關閉此訊息。</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">正在等候用戶登入，完成後請關閉此訊息...</sys:String>
@@ -63,8 +63,8 @@
     <sys:String x:Key="LOCSteamShowFriendsButton">在頂部面板顯示朋友按鈕</sys:String>
     <sys:String x:Key="LOCSteamFriendsTooltip">Steam好友</sys:String>
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">忽略其他帳號安裝的遊戲</sys:String>
-    <sys:String x:Key="LOCSteamAdditionalAccounts"></sys:String>
-    <sys:String x:Key="LOCSteamAdditionalAccountsDescription"></sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccounts">其他帳戶</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">如果你想從其他帳戶匯入遊戲，請提供該Steam帳號以及API密鑰的配對。更多資訊請參考Steam疑難排解Wiki頁面。</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">如果沒有圖片則使用擷圖</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">有多張圖片時則使用:</sys:String>
