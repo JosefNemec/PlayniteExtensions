@@ -65,3 +65,9 @@ Packages:
       - Better error reporting when EGS is down
       - Fixed getting metadata for some games not working
       - Fixed games incorrectly marked as installed (by darklinkpower)
+  - Version: 2.11
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2022-06-21
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_11.pext
+    Changelog:
+      - Fixed import of installed games failing completely if only some manifests are corrupted
