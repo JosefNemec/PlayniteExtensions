@@ -7,12 +7,14 @@ using System.Text;
 using System.Threading.Tasks;
 using EpicLibrary.Models;
 using Playnite.Common;
+using Playnite.SDK;
 using Playnite.SDK.Data;
 
 namespace EpicLibrary
 {
     public class EpicLauncher
     {
+        private static readonly ILogger logger = LogManager.GetLogger();
         public const string GameLaunchUrlMask = @"com.epicgames.launcher://apps/{0}?action=launch&silent=true";
         public const string GameInstallUrlMask = @"com.epicgames.launcher://apps/{0}?action=install";
         public const string LibraryLaunchUrl = @"com.epicgames.launcher://store/library";
@@ -121,11 +123,19 @@ namespace EpicLibrary
 
             foreach (var manFile in Directory.GetFiles(installListPath, "*.item"))
             {
-                var manifest = Serialization.FromJson<InstalledManifiest>(FileSystem.ReadFileAsStringSafe(manFile));
-                if (manifest != null)
-                // Some weird issue causes manifest to be created empty by Epic client
+                if (Serialization.TryFromJson<InstalledManifiest>(FileSystem.ReadFileAsStringSafe(manFile), out var manifest))
                 {
-                    manifests.Add(manifest);
+                    // Some weird issue causes manifest to be created empty by Epic client
+                    if (manifest != null)
+                    {
+                        manifests.Add(manifest);
+                    }
+                }
+                else
+                {
+                    // This usually happens when user changes manifest manually (for example when moving games to a different drive)
+                    // but they don't know what they are doing and resulting JSON is not a valid JSON anymore...
+                    logger.Error("Failed to parse Epic installed game manifest: " + manFile);
                 }
             }
 
