@@ -289,7 +289,8 @@ namespace XboxLibrary.Services
 
                 var cont = await response.Content.ReadAsStringAsync();
                 var userStats = Serialization.FromJson<UserStatsResponse>(cont);
-                return userStats.statlistscollection.First().stats;
+                // No idea why but this seems to be empty for some people...
+                return userStats?.statlistscollection?.FirstOrDefault()?.stats ?? new List<UserStatsResponse.Stats>();
             }
         }
 
