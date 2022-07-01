@@ -49,3 +49,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_8.pext
     Changelog:
       - Added import of time played and last played (by mmasinter)
+  - Version: 2.9
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-07-01
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_9.pext
+    Changelog:
+      - Fixed library import failing in some cases
