@@ -29,6 +29,7 @@ namespace EpicLibrary.Services
     {
         public string redirectUrl { get; set; }
         public string sid { get; set; }
+        public string authorizationCode { get; set; }
     }
 
     public class EpicAccountClient
@@ -36,7 +37,7 @@ namespace EpicLibrary.Services
         private ILogger logger = LogManager.GetLogger();
         private IPlayniteAPI api;
         private string tokensPath;
-        private readonly string loginUrl = "https://www.epicgames.com/id/login?redirectUrl=https://www.epicgames.com/id/api/redirect";
+        private readonly string loginUrl = "https://www.epicgames.com/id/login?redirectUrl=https%3A//www.epicgames.com/id/api/redirect%3FclientId%3D34a02cf8f4414e29b15921876da36f9a%26responseType%3Dcode";
         private readonly string oauthUrl = @"";
         private readonly string accountUrl = @"";
         private readonly string assetsUrl = @"";
@@ -123,10 +124,9 @@ namespace EpicLibrary.Services
                 return;
             }
 
-            var sid = Serialization.FromJson<ApiRedirectResponse>(apiRedirectContent).sid;
+            var authorizationCode = Serialization.FromJson<ApiRedirectResponse>(apiRedirectContent).authorizationCode;
             FileSystem.DeleteFile(tokensPath);
-            var exchangeKey = getExchangeToken(sid);
-            if (string.IsNullOrEmpty(exchangeKey))
+            if (string.IsNullOrEmpty(authorizationCode))
             {
                 logger.Error("Failed to get login exchange key for Epic account.");
                 return;
@@ -136,7 +136,7 @@ namespace EpicLibrary.Services
             {
                 httpClient.DefaultRequestHeaders.Clear();
                 httpClient.DefaultRequestHeaders.Add("Authorization", "basic " + authEncodedString);
-                using (var content = new StringContent($"grant_type=exchange_code&exchange_code={exchangeKey}&token_type=eg1"))
+                using (var content = new StringContent($"grant_type=authorization_code&code={authorizationCode}&token_type=eg1"))
                 {
                     content.Headers.Clear();
                     content.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
