@@ -70,7 +70,7 @@ namespace GogLibrary
 
             if (!GetInstalledEntries().TryGetValue(args.Game.GameId, out var installEntry))
             {
-                throw new DirectoryNotFoundException("Game installation not found.");
+                yield break;
             }
 
             if (SettingsViewModel.Settings.StartGamesUsingGalaxy)

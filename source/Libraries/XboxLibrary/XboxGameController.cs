@@ -166,7 +166,7 @@ namespace XboxLibrary
             }
         }
 
-        private void ProcMon_TreeStarted(object sender, EventArgs e)
+        private void ProcMon_TreeStarted(object sender, ProcessMonitor.TreeStartedEventArgs e)
         {
             stopWatch = Stopwatch.StartNew();
             InvokeOnStarted(new GameStartedEventArgs());

@@ -181,7 +181,7 @@ namespace SteamLibrary
             }
         }
 
-        private void ProcMon_TreeStarted(object sender, EventArgs args)
+        private void ProcMon_TreeStarted(object sender, ProcessMonitor.TreeStartedEventArgs args)
         {
             stopWatch = Stopwatch.StartNew();
             InvokeOnStarted(new GameStartedEventArgs());
