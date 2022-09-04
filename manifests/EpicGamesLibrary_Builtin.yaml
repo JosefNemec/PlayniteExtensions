@@ -71,3 +71,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_11.pext
     Changelog:
       - Fixed import of installed games failing completely if only some manifests are corrupted
+  - Version: 2.12
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2022-09-04
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_12.pext
+    Changelog:
+      - Fixed authentication not working properly (by Xenor)
