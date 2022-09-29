@@ -32,6 +32,7 @@ namespace GogLibrary.Models
             public string galaxyBackgroundImage;
             public string backgroundImage;
             public string image;
+            public int size;
         }
 
         public ProductDetails cardProduct;

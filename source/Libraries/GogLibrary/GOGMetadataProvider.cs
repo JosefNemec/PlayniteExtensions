@@ -62,6 +62,12 @@ namespace GogLibrary
                 {
                     storeData.ReleaseDate = new ReleaseDate(storeData.StoreDetails.globalReleaseDate.Value);
                 }
+
+                if (storeData.StoreDetails.size > 0)
+                {
+                    //StoreDetails.size is in megabytes, convert to bytes here
+                    storeData.InstallSize = (ulong)storeData.StoreDetails.size * 1024UL * 1024UL;
+                }
             }
 
             return storeData;
