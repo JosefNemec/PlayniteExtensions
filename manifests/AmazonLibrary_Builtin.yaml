@@ -30,3 +30,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_5.pext
     Changelog:
       - Fixed import of installed games not working properly
+  - Version: 2.6
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-09-30
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_6.pext
+    Changelog:
+      - Fixed ScummVM based games not starting properly
