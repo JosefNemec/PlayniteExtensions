@@ -100,6 +100,11 @@ namespace AmazonGamesLibrary
                 {
                     controller.WorkingDir = Path.Combine(args.Game.InstallDirectory, gameConfig.Main.WorkingSubdirOverride);
                 }
+                else if (gameConfig.Main.Command.Contains("scummvm.exe", StringComparison.OrdinalIgnoreCase))
+                {
+                    // scummvm game have to have working directory set to games's install dir otherwise they won't start properly
+                    controller.WorkingDir = args.Game.InstallDirectory;
+                }
 
                 yield return controller;
             }
