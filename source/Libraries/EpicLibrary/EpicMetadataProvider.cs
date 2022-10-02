@@ -31,7 +31,7 @@ namespace EpicLibrary
                     var catalog = catalogs.FirstOrDefault(a => a.title.Equals(game.Name, StringComparison.InvariantCultureIgnoreCase));
                     if (catalog == null)
                     {
-                        catalog = catalogs[0];
+                        return null;
                     }
 
                     // Some games use completely different way in which the store gets game related data.
@@ -39,7 +39,7 @@ namespace EpicLibrary
                     // so we are not going to support those games right now.
                     if (catalog.productSlug.IsNullOrEmpty())
                     {
-                        throw new Exception("Can't get Epic metadata for this game, use different metadata source.");
+                        return null;
                     }
 
                     var product = client.GetProductInfo(catalog.productSlug).GetAwaiter().GetResult();
