@@ -60,7 +60,18 @@ namespace SteamLibrary
                     FontFamily = ResourceProvider.GetResource("FontIcoFont") as FontFamily
                 },
                 Title = ResourceProvider.GetString(LOC.SteamFriendsTooltip),
-                Activated = () => Process.Start(@"steam://open/friends"),
+                Activated = () =>
+                {
+                    try
+                    {
+                        Process.Start(@"steam://open/friends");
+                    }
+                    catch (Exception e)
+                    {
+                        logger.Error(e, "Failed to open Steam friends.");
+                        PlayniteApi.Dialogs.ShowErrorMessage(e.Message, "");
+                    }
+                },
                 Visible = SettingsViewModel.Settings.ShowFriendsButton
             };
         }
