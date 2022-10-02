@@ -1,7 +1,7 @@
 ﻿Id: EpicGamesLibrary_Builtin
 Name: Epic Store library integration
 Author: Playnite
-Version: 2.12
+Version: 2.13
 Module: EpicLibrary.dll
 Type: GameLibrary
 Icon: Resources\epicicon.png

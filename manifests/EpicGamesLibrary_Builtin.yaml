@@ -77,3 +77,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_12.pext
     Changelog:
       - Fixed authentication not working properly (by Xenor)
+  - Version: 2.13
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2022-10-02
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_13.pext
+    Changelog:
+      - Disabled inaccurate Epic metadata matching
