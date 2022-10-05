@@ -182,7 +182,7 @@ namespace XboxLibrary
 
             if (Computer.WindowsVersion < WindowsVersion.Win10)
             {
-                throw new Exception("Xbox game library is only supported on Windows 10 and 11.");
+                throw new Exception("Xbox game library is only supported on Windows 10 and newer.");
             }
 
             var titles = new List<TitleHistoryResponse.Title>();

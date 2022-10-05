@@ -25,7 +25,7 @@ namespace XboxLibrary
                 else
                 {
                     isXboxPassAppInstalled = false;
-                    if (Computer.WindowsVersion == WindowsVersion.Win10)
+                    if (Computer.WindowsVersion >= WindowsVersion.Win10)
                     {
                         var apps = Programs.GetUWPApps();
                         var xboxApp = apps.FirstOrDefault(a => a.AppId == xboxPassAppFN);
@@ -39,7 +39,7 @@ namespace XboxLibrary
 
         public static void OpenXboxPassApp()
         {
-            if (Computer.WindowsVersion == WindowsVersion.Win10)
+            if (Computer.WindowsVersion >= WindowsVersion.Win10)
             {
                 var apps = Programs.GetUWPApps();
                 var xboxApp = apps.FirstOrDefault(a => a.AppId == xboxPassAppFN);
@@ -54,7 +54,7 @@ namespace XboxLibrary
             }
             else
             {
-                throw new NotSupportedException("Only supported on Windows 10.");
+                throw new NotSupportedException("Only supported on Windows 10 and newer.");
             }
         }
 
