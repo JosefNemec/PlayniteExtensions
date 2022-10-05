@@ -55,3 +55,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_9.pext
     Changelog:
       - Fixed library import failing in some cases
+  - Version: 2.10
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-10-05
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_10.pext
+    Changelog:
+      - Fixed Windows 11 being wrongly detected as unsupported system
