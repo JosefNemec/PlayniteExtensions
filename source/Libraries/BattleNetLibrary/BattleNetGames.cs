@@ -114,9 +114,7 @@ namespace BattleNetLibrary
                 ProductId = "Pro",
                 InternalId = "prometheus",
                 IconUrl = @"https://blznav.akamaized.net/img/games/logo-ow-4be5755bc0a4cbaf.png",
-                BackgroundUrl = @"https://bnetproduct-a.akamaihd.net//fc3/e21df4ac2fd75cd9884a55744a1786c3-prod-mobile-bg.jpg",
-                CoverUrl = "http://bnetproduct-a.akamaihd.net//4c/c358d897f1348281ed0b21ea2027059b-prod-card-tall.jpg",
-                Name = "Overwatch",
+                Name = "Overwatch 2",
                 Type = BNetAppType.Default,
                 Links = new List<Link>()
                 {
