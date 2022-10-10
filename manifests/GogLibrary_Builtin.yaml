@@ -61,3 +61,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_9.pext
     Changelog:
       - Install size support for store metadata (by Jeshibu)
+  - Version: 2.10
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2022-10-10
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_10.pext
+    Changelog:
+      - Fixed metadata links not being applied in some cases
