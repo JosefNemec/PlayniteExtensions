@@ -268,10 +268,6 @@ namespace GogLibrary
                     Source = new MetadataNameProperty("GOG"),
                     GameId = game.game.id,
                     Name = game.game.title.RemoveTrademarks(),
-                    Links = new List<Link>()
-                    {
-                        new Link("Store", @"https://www.gog.com" + game.game.url)
-                    },
                     Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
