@@ -95,16 +95,23 @@ namespace UplayLibrary
 
         public static List<ProductInformation> GetLocalProductCache()
         {
+            var initErrorMessage = "Ubisoft Connect client was not initialized, please start the client at least once to generate user library data.";
             var products = new List<ProductInformation>();
             var cachePath = ConfigurationsCachePath;
             if (!File.Exists(cachePath))
             {
-                throw new FileNotFoundException("Uplay client was not initialized, please start the client at least once.");
+                throw new FileNotFoundException(initErrorMessage);
             }
 
             using (var file = File.OpenRead(cachePath))
             {
-                foreach (var item in Serializer.Deserialize<UplayCacheGameCollection>(file).Games)
+                var cacheData = Serializer.Deserialize<UplayCacheGameCollection>(file);
+                if (cacheData?.Games.HasItems() != true)
+                {
+                    throw new FileNotFoundException(initErrorMessage);
+                }
+
+                foreach (var item in cacheData.Games)
                 {
                     if (!item.GameInfo.IsNullOrEmpty())
                     {
