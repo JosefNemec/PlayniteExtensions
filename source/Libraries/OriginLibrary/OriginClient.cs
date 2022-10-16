@@ -26,26 +26,17 @@ namespace OriginLibrary
 
         public override void Shutdown()
         {
-            var mainProc = Process.GetProcessesByName("Origin").FirstOrDefault();
+            var mainProc = Process.GetProcessesByName("EADesktop").FirstOrDefault();
             if (mainProc == null)
             {
-                logger.Info("Origin client is no longer running, no need to shut it down.");
+                logger.Info("EA app is no longer running, no need to shut it down.");
                 return;
             }
 
-            var res = User32.SendMessage(mainProc.MainWindowHandle, Winuser.WM_QUERYENDSESSION, 0, new IntPtr(Winuser.ENDSESSION_CLOSEAPP));
-            if ((uint)res == 0)
+            var procRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/pid {mainProc.Id}", null, out var stdOut, out var stdErr);
+            if (procRes != 0)
             {
-                logger.Error("Failed to close Origin gracefully, shutting it down.");
-                var procRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/f /pid {mainProc.Id}", null, out var stdOut, out var stdErr);
-                if (procRes != 0)
-                {
-                    logger.Error($"Failed to close Origin client: {procRes}, {stdErr}");
-                }
-            }
-            else
-            {
-                User32.SendMessage(mainProc.MainWindowHandle, Winuser.WM_ENDSESSION, 0, new IntPtr(Winuser.ENDSESSION_CLOSEAPP));
+                logger.Error($"Failed to close EA app: {procRes}, {stdErr}");
             }
         }
     }

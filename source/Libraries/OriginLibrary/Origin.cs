@@ -16,7 +16,7 @@ namespace OriginLibrary
     public class Origin
     {
         private static readonly ILogger logger = LogManager.GetLogger();
-        public const string DataPath = @"c:\ProgramData\Origin\";
+        public static readonly string LibraryOpenUri = "origin2://library/open";
 
         public static bool IsRunning
         {
@@ -79,11 +79,6 @@ namespace OriginLibrary
 
         public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources\originicon.png");
 
-        public static string GetCachePath(string rootPath)
-        {
-            return Path.Combine(rootPath, "origincache");
-        }
-
         public static void StartClient()
         {
             ProcessStarter.StartProcess(ClientExecPath, string.Empty);
@@ -109,32 +104,6 @@ namespace OriginLibrary
 
             var fileEnumerator = new SafeFileEnumerator(installDir, "EasyAntiCheat*.dll", SearchOption.AllDirectories);
             return fileEnumerator.Any() == true;
-        }
-
-        public static string GetLaunchString(string offerId)
-        {
-            return $"origin2://game/launch?offerIds={offerId}";
-        }
-
-        public static string GetLaunchString(Game game)
-        {
-            try
-            {
-                var package = OriginLibrary.GetInstallPackages().FirstOrDefault(a => a.ConvertedId == game.GameId || a.OriginalId == game.GameId);
-                if (package == null)
-                {
-                    return GetLaunchString(game.GameId);
-                }
-                else
-                {
-                    return GetLaunchString(game.GameId + package.Source);
-                }
-            }
-            catch (Exception e) when (!Debugger.IsAttached)
-            {
-                logger.Error(e, $"Failed to get Origin game start link {game.GameId}.");
-                return GetLaunchString(game.GameId);
-            }
         }
     }
 }

@@ -4,6 +4,7 @@ using OriginLibrary.Services;
 using Playnite;
 using Playnite.Common;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 using System;
@@ -28,6 +29,8 @@ namespace OriginLibrary
     public class OriginLibrary : LibraryPluginBase<OriginLibrarySettingsViewModel>
     {
         private static readonly ILogger logger = LogManager.GetLogger();
+        private readonly string installManifestCacheDir;
+        private static readonly string fakeOfferType = "none";
 
         public class InstallPackage
         {
@@ -56,7 +59,7 @@ namespace OriginLibrary
         }
 
         public OriginLibrary(IPlayniteAPI api) : base(
-            "Origin",
+            "EA app",
             Guid.Parse("85DD7072-2F20-4E76-A007-41035E390724"),
             new LibraryPluginProperties { CanShutdownClient = true, HasSettings = true },
             new OriginClient(),
@@ -65,6 +68,7 @@ namespace OriginLibrary
             api)
         {
             SettingsViewModel = new OriginLibrarySettingsViewModel(this, PlayniteApi);
+            installManifestCacheDir = Path.Combine(GetPluginUserDataPath(), "installmanifests");
         }
 
         internal PlatformPath GetPathFromPlatformPath(string path, RegistryView platformView)
@@ -176,21 +180,44 @@ namespace OriginLibrary
             return null;
         }
 
-        internal GameLocalDataResponse GetLocalManifest(string id)
+        internal GameLocalDataResponse GetLocalInstallerManifest(string id)
         {
+            GameLocalDataResponse manifest = null;
+            var manifestCacheFile = Path.Combine(installManifestCacheDir, Paths.GetSafePathName(id) + ".json");
+            if (File.Exists(manifestCacheFile))
+            {
+                try
+                {
+                    manifest = Serialization.FromJsonFile<GameLocalDataResponse>(manifestCacheFile);
+                    if (manifest != null)
+                    {
+                        return manifest;
+                    }
+                }
+                catch (Exception e)
+                {
+                    logger.Error(e, "Failed to read installer manifest cache file.");
+                }
+            }
+
+            string origContent = null;
             try
             {
-                return OriginApiClient.GetGameLocalData(id);
+                manifest = OriginApiClient.GetGameLocalData(id, out origContent);
             }
             catch (WebException exc) when ((exc.Response as HttpWebResponse)?.StatusCode == HttpStatusCode.NotFound)
             {
-                Logger.Info($"Origin manifest {id} not found on EA server, generating fake manifest.");
-                return new GameLocalDataResponse
+                logger.Warn($"EA manifest {id} not found on EA server, generating fake manifest.");
+                manifest = new GameLocalDataResponse
                 {
                     offerId = id,
-                    offerType = "Doesn't exist"
+                    offerType = fakeOfferType
                 };
             }
+
+            FileSystem.PrepareSaveFile(manifestCacheFile);
+            File.WriteAllText(manifestCacheFile, origContent ?? Serialization.ToJson(manifest));
+            return manifest;
         }
 
         public GameAction GetGamePlayTask(string installerDataPath)
@@ -202,7 +229,28 @@ namespace OriginLibrary
             }
             else
             {
-                var paths = GetPathFromPlatformPath(data.runtime.launchers.Last().filePath);
+                var launcher = data.runtime.launchers.FirstOrDefault(a => !a.trial);
+                if (data.runtime.launchers.Count > 1)
+                {
+                    if (System.Environment.Is64BitOperatingSystem)
+                    {
+                        var s4 = data.runtime.launchers.FirstOrDefault(a => a.requires64BitOS && !a.trial);
+                        if (s4 != null)
+                        {
+                            launcher = s4;
+                        }
+                    }
+                    else
+                    {
+                        var s3 = data.runtime.launchers.FirstOrDefault(a => !a.requires64BitOS && !a.trial);
+                        if (s3 != null)
+                        {
+                            launcher = s3;
+                        }
+                    }
+                }
+
+                var paths = GetPathFromPlatformPath(launcher.filePath);
                 if (paths.CompletePath.Contains(@"://"))
                 {
                     return new GameAction
@@ -256,15 +304,38 @@ namespace OriginLibrary
                     {
                         return GetGamePlayTask(executePath.CompletePath);
                     }
-                    else
+                    else if (executePath.CompletePath.EndsWith(".exe", StringComparison.OrdinalIgnoreCase))
                     {
                         playAction.WorkingDir = executePath.Root;
                         playAction.Path = executePath.CompletePath;
+                    }
+                    else
+                    {
+                        // This happens in case of Sims 4 for example, where executable path points to generic ClientFullBuild0.package file
+                        // so the actual executable needs to be forced to installerdata.xaml resolution.
+                        return GetGamePlayTask(Path.GetDirectoryName(executePath.CompletePath));
                     }
                 }
             }
 
             return playAction;
+        }
+
+        public GameAction GetGamePlayTaskForGameId(string gameId)
+        {
+            var installManifest = GetLocalInstallerManifest(gameId);
+            if (installManifest.offerType == fakeOfferType)
+            {
+                return new GameAction
+                {
+                    Type = GameActionType.URL,
+                    Path = Origin.LibraryOpenUri
+                };
+            }
+            else
+            {
+                return GetGamePlayTask(installManifest);
+            }
         }
 
         public string GetInstallDirectory(GameLocalDataResponse localData)
@@ -294,60 +365,10 @@ namespace OriginLibrary
             }
         }
 
-        public static List<InstallPackage> GetInstallPackages()
-        {
-            var detectedPackages = new List<InstallPackage>();
-            var contentPath = Path.Combine(Origin.DataPath, "LocalContent");
-            if (Directory.Exists(contentPath))
-            {
-                var packages = Directory.GetFiles(contentPath, "*.mfst", SearchOption.AllDirectories);
-                foreach (var package in packages)
-                {
-                    try
-                    {
-                        var installPackage = new InstallPackage();
-                        var gameId = Path.GetFileNameWithoutExtension(package);
-                        installPackage.OriginalId = gameId;
-                        installPackage.ConvertedId = gameId;
-
-                        if (!gameId.StartsWith("Origin"))
-                        {
-                            // Get game id by fixing file via adding : before integer part of the name
-                            // for example OFB-EAST52017 converts to OFB-EAST:52017
-                            var match = Regex.Match(gameId, @"^(.*?)(\d+)$");
-                            if (!match.Success)
-                            {
-                                logger.Warn("Failed to get game id from file " + package);
-                                continue;
-                            }
-
-                            gameId = match.Groups[1].Value + ":" + match.Groups[2].Value;
-                        }
-
-                        var subTypeIndex = gameId.IndexOf('@');
-                        if (subTypeIndex >= 0)
-                        {
-                            installPackage.Source = gameId.Substring(subTypeIndex);
-                            gameId = gameId.Substring(0, subTypeIndex);
-                        }
-
-                        installPackage.ConvertedId = gameId;
-                        detectedPackages.Add(installPackage);
-                    }
-                    catch (Exception e) when (!Environment.IsDebugBuild)
-                    {
-                        logger.Error(e, $"Failed to parse Origin install pacakge {package}.");
-                    }
-                }
-            }
-
-            return detectedPackages;
-        }
-
-        public Dictionary<string, GameMetadata> GetInstalledGames(CancellationToken cancelToken)
+        public Dictionary<string, GameMetadata> GetInstalledGames(CancellationToken cancelToken, List<GameMetadata> userGames)
         {
             var games = new Dictionary<string, GameMetadata>();
-            foreach (var package in GetInstallPackages())
+            foreach (var userGame in userGames)
             {
                 if (cancelToken.IsCancellationRequested)
                 {
@@ -358,25 +379,14 @@ namespace OriginLibrary
                 {
                     var newGame = new GameMetadata()
                     {
-                        Source = new MetadataNameProperty("Origin"),
-                        GameId = package.ConvertedId,
+                        Source = new MetadataNameProperty("EA app"),
+                        GameId = userGame.GameId,
                         IsInstalled = true,
                         Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     };
 
-                    GameLocalDataResponse localData = null;
-
-                    try
-                    {
-                        localData = GetLocalManifest(package.ConvertedId);
-                    }
-                    catch (Exception e) when (!Environment.IsDebugBuild)
-                    {
-                        logger.Error(e, $"Failed to get Origin manifest for a {package.ConvertedId}, {package}");
-                        continue;
-                    }
-
-                    if (localData == null)
+                    var localData = GetLocalInstallerManifest(userGame.GameId);
+                    if (localData.offerType == fakeOfferType)
                     {
                         continue;
                     }
@@ -402,7 +412,7 @@ namespace OriginLibrary
                 }
                 catch (Exception e) when (!Environment.IsDebugBuild)
                 {
-                    logger.Error(e, $"Failed to import installed Origin game {package}.");
+                    logger.Error(e, $"Failed to import installed EA game {userGame.GameId}.");
                 }
             }
 
@@ -459,7 +469,7 @@ namespace OriginLibrary
                     var gameName = game.offerId;
                     try
                     {
-                        var localData = GetLocalManifest(game.offerId);
+                        var localData = GetLocalInstallerManifest(game.offerId);
                         if (localData != null)
                         {
                             gameName = StringExtensions.NormalizeGameName(localData.localizableAttributes.displayName);
@@ -473,7 +483,7 @@ namespace OriginLibrary
 
                     games.Add(new GameMetadata()
                     {
-                        Source = new MetadataNameProperty("Origin"),
+                        Source = new MetadataNameProperty("EA app"),
                         GameId = game.offerId,
                         Name = gameName,
                         LastActivity = usage?.lastSessionEndTimeStamp,
@@ -488,54 +498,53 @@ namespace OriginLibrary
 
         public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
         {
+            if (!SettingsViewModel.Settings.ConnectAccount)
+            {
+                return null;
+            }
+
             var allGames = new List<GameMetadata>();
             var installedGames = new Dictionary<string, GameMetadata>();
             Exception importError = null;
 
-            if (SettingsViewModel.Settings.ImportInstalledGames)
+            try
             {
-                try
-                {
-                    installedGames = GetInstalledGames(args.CancelToken);
-                    Logger.Debug($"Found {installedGames.Count} installed Origin games.");
-                    allGames.AddRange(installedGames.Values.ToList());
-                }
-                catch (Exception e)
-                {
-                    Logger.Error(e, "Failed to import installed Origin games.");
-                    importError = e;
-                }
+                allGames = GetLibraryGames(args.CancelToken);
+                Logger.Debug($"Found {allGames.Count} library EA games.");
+            }
+            catch (Exception e)
+            {
+                Logger.Error(e, "Failed to import linked account EA games details.");
+                importError = e;
             }
 
-            if (SettingsViewModel.Settings.ConnectAccount && SettingsViewModel.Settings.ImportUninstalledGames)
+            if (importError == null)
             {
-                try
+                if (SettingsViewModel.Settings.ImportInstalledGames)
                 {
-                    var libraryGames = GetLibraryGames(args.CancelToken);
-                    Logger.Debug($"Found {libraryGames.Count} library Origin games.");
-
-                    if (!SettingsViewModel.Settings.ImportUninstalledGames)
+                    try
                     {
-                        libraryGames = libraryGames.Where(lg => installedGames.ContainsKey(lg.GameId)).ToList();
+                        installedGames = GetInstalledGames(args.CancelToken, allGames);
+                        Logger.Debug($"Found {installedGames.Count} installed EA games.");
+                        foreach (var installedGame in installedGames.Values)
+                        {
+                            var libraryGame = allGames.First(a => a.GameId == installedGame.GameId);
+                            allGames.Remove(libraryGame);
+                            installedGame.Playtime = libraryGame.Playtime;
+                            installedGame.LastActivity = libraryGame.LastActivity;
+                            allGames.Add(installedGame);
+                        }
                     }
-
-                    foreach (var game in libraryGames)
+                    catch (Exception e)
                     {
-                        if (installedGames.TryGetValue(game.GameId, out var installed))
-                        {
-                            installed.Playtime = game.Playtime;
-                            installed.LastActivity = game.LastActivity;
-                        }
-                        else
-                        {
-                            allGames.Add(game);
-                        }
+                        Logger.Error(e, "Failed to import installed EA games.");
+                        importError = e;
                     }
                 }
-                catch (Exception e)
+
+                if (!SettingsViewModel.Settings.ImportUninstalledGames)
                 {
-                    Logger.Error(e, "Failed to import linked account Origin games details.");
-                    importError = e;
+                    allGames.RemoveAll(a => !a.IsInstalled);
                 }
             }
 
@@ -583,7 +592,7 @@ namespace OriginLibrary
                 yield break;
             }
 
-            yield return new OriginPlayController(args.Game);
+            yield return new OriginPlayController(args.Game, this);
         }
 
         public override LibraryMetadataProvider GetMetadataDownloader()

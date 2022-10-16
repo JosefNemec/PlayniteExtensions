@@ -39,19 +39,11 @@ namespace OriginLibrary.Services
             }
         }
 
-        public static GameLocalDataResponse GetGameLocalData(string gameId)
+        public static GameLocalDataResponse GetGameLocalData(string gameId, out string origContent)
         {
-            try
-            {
-                var url = string.Format(@"https://api1.origin.com/ecommerce2/public/{0}/en_US", gameId);
-                var stringData = Encoding.UTF8.GetString(HttpDownloader.DownloadData(url));
-                return Serialization.FromJson<GameLocalDataResponse>(stringData);
-            }
-            catch (Exception e)
-            {
-                logger.Error(e, "Failed to get local game Origin manifest.");
-                return null;
-            }
+            var url = string.Format(@"https://api1.origin.com/ecommerce2/public/{0}/en_US", gameId);
+            origContent = Encoding.UTF8.GetString(HttpDownloader.DownloadData(url));
+            return Serialization.FromJson<GameLocalDataResponse>(origContent);
         }
     }
 }
