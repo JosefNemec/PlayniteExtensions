@@ -43,3 +43,11 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/OriginLibrary_Builtin_2_6.pext
     Changelog:
       - Play time tracking could start sooner than it should (by darklinkpower)
+  - Version: 2.7
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-10-19
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/OriginLibrary_Builtin_2_7.pext
+    Changelog:
+      - EA app support
+      - Origin is still mostly supported, but if you haven't updated and you use Origin, DO NOT update to this version for better compatibility
+      - Import of installed games now requires connected account
