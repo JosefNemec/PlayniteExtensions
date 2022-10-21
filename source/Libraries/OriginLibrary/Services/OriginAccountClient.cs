@@ -12,8 +12,9 @@ namespace OriginLibrary.Services
 {
     public class OriginAccountClient
     {
-        private const string loginUrl = @"https://accounts.ea.com/connect/auth?response_type=code&client_id=ORIGIN_SPA_ID&display=originXWeb/login&locale=en_US&redirect_uri=https://www.origin.com/views/login.html";
-        private const string logoutUrl = @"https://accounts.ea.com/connect/logout?client_id=ORIGIN_SPA_ID&redirect_uri=https://www.origin.com/views/social.html";
+        private const string loginUrl = @"https://www.ea.com/login";
+        private const string profileUrl = @"https://myaccount.ea.com/cp-ui/aboutme/index";
+        private const string logoutUrl = @"https://www.ea.com/logout";
         private const string tokenUrl = @"https://accounts.ea.com/connect/auth?client_id=ORIGIN_JS_SDK&response_type=token&redirect_uri=nucleus:rest&prompt=none";
         private ILogger logger = LogManager.GetLogger();
         private IWebView webView;
@@ -70,16 +71,21 @@ namespace OriginLibrary.Services
 
         public void Login()
         {
-            webView.LoadingChanged += (s, e) =>
+            webView.LoadingChanged += async (s, e) =>
             {
-                if (webView.GetCurrentAddress().StartsWith(@"https://www.origin.com/views/login"))
+                var address = webView.GetCurrentAddress();
+                if (address.StartsWith(profileUrl) && (await webView.GetPageTextAsync()).Contains("EA ID"))
                 {
                     webView.Close();
+                    return;
                 }
 
-                if (webView.GetCurrentAddress().StartsWith(@"https://www.origin.com/views/social"))
+                if (address.StartsWith(@"https://www.ea.com/") &&
+                    !address.StartsWith(loginUrl) &&
+                    !address.StartsWith(logoutUrl) &&
+                    !address.StartsWith(profileUrl))
                 {
-                    webView.Navigate(loginUrl);
+                    webView.Navigate(profileUrl);
                 }
             };
 
