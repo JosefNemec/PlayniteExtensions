@@ -51,3 +51,9 @@ Packages:
       - EA app support
       - Origin is still mostly supported, but if you haven't updated and you use Origin, DO NOT update to this version for better compatibility
       - Import of installed games now requires connected account
+  - Version: 2.8
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-10-21
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/OriginLibrary_Builtin_2_8.pext
+    Changelog:
+      - Fixed authentication not working
