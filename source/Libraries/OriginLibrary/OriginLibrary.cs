@@ -498,12 +498,12 @@ namespace OriginLibrary
 
         public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
         {
+            var allGames = new List<GameMetadata>();
             if (!SettingsViewModel.Settings.ConnectAccount)
             {
-                return null;
+                return allGames;
             }
 
-            var allGames = new List<GameMetadata>();
             var installedGames = new Dictionary<string, GameMetadata>();
             Exception importError = null;
 
