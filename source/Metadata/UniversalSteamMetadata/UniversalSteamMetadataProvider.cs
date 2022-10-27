@@ -1,4 +1,5 @@
 ﻿using Playnite.Common;
+using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Data;
 using Playnite.SDK.Models;
@@ -46,7 +47,8 @@ namespace UniversalSteamMetadata
             MetadataField.Features,
             MetadataField.Name,
             MetadataField.Platform,
-            MetadataField.Series
+            MetadataField.Series,
+            MetadataField.Tags,
         };
 
         public UniversalSteamMetadataProvider(MetadataRequestOptions options, UniversalSteamMetadata plugin)
@@ -255,6 +257,17 @@ namespace UniversalSteamMetadata
             return new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") };
         }
 
+        public override IEnumerable<MetadataProperty> GetTags(GetMetadataFieldArgs args)
+        {
+            GetGameData();
+            if (currentMetadata != null)
+            {
+                return currentMetadata.Tags;
+            }
+
+            return base.GetTags(args);
+        }
+
         internal void GetGameData()
         {
             if (currentMetadata != null)
@@ -264,7 +277,7 @@ namespace UniversalSteamMetadata
 
             try
             {
-                var metadataProvider = new MetadataProvider(apiClient, webApiClient);
+                var metadataProvider = new MetadataProvider(apiClient, webApiClient, new SteamLibrary.SteamShared.SteamTagNamer(plugin.GetPluginUserDataPath(), "english", new Downloader()));
                 if (BuiltinExtensions.GetExtensionFromId(options.GameData.PluginId) == BuiltinExtension.SteamLibrary)
                 {
                     var appId = uint.Parse(options.GameData.GameId);

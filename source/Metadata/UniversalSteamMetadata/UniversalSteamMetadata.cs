@@ -48,7 +48,8 @@ namespace UniversalSteamMetadata
                 MetadataField.ReleaseDate,
                 MetadataField.Features,
                 MetadataField.Name,
-                MetadataField.Platform
+                MetadataField.Platform,
+                MetadataField.Tags,
             },
             () => new UniversalSteamMetadataSettingsView(),
             null,

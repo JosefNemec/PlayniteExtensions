@@ -3,6 +3,7 @@ using Playnite.SDK;
 using Playnite.SDK.Models;
 using Steam.Models;
 using SteamKit2;
+using SteamLibrary.SteamShared;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -30,17 +31,18 @@ namespace Steam
         private static readonly ILogger logger = LogManager.GetLogger();
         private readonly SteamApiClient apiClient;
         private readonly WebApiClient webApiClient;
-
+        private readonly SteamTagNamer tagNamer;
         private readonly string[] backgroundUrls = new string[]
         {
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page.bg.jpg",
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page_bg_generated.jpg"
         };
 
-        public MetadataProvider(SteamApiClient apiClient, WebApiClient webApiClient)
+        public MetadataProvider(SteamApiClient apiClient, WebApiClient webApiClient, SteamTagNamer tagNamer)
         {
             this.apiClient = apiClient;
             this.webApiClient = webApiClient;
+            this.tagNamer = tagNamer;
         }
 
         public static string GetWorkshopUrl(uint appId)
@@ -462,6 +464,35 @@ namespace Steam
 
                         metadata.Series = new HashSet<MetadataProperty> { new MetadataNameProperty(value) };
                         break;
+                    }
+                }
+
+                var tagNames = tagNamer.GetTagNames();
+                Dictionary<int, string> newTagNames = null;
+
+                var tagKeyValues = metadata.ProductDetails["common"]["store_tags"]?.Children;
+                if (tagKeyValues != null)
+                {
+                    metadata.Tags = new HashSet<MetadataProperty>();
+                    foreach (var tag in tagKeyValues)
+                    {
+                        if (int.TryParse(tag.Value, out int tagId))
+                        {
+                            if (!tagNames.TryGetValue(tagId, out string name))
+                            {
+                                if (newTagNames == null)
+                                {
+                                    newTagNames = tagNamer.UpdateAndGetTagNames();
+                                }
+                                if (!newTagNames.TryGetValue(tagId, out name))
+                                {
+                                    logger.Warn($"Could not find tag name for tag {tagId}");
+                                    continue;
+                                }
+                            }
+                            name = HttpUtility.HtmlDecode(name);
+                            metadata.Tags.Add(new MetadataNameProperty(name));
+                        }
                     }
                 }
             }

@@ -32,6 +32,9 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Playnite.SDK, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\PlayniteSDK.6.0.0\lib\net462\Playnite.SDK.dll</HintPath>
     </Reference>
@@ -176,6 +179,7 @@
     <Compile Include="Models\LocalSteamUser.cs" />
     <Compile Include="Models\ResolveVanityResult.cs" />
     <Compile Include="SteamShared\SteamGameMetadata.cs" />
+    <Compile Include="SteamShared\SteamTagNamer.cs" />
     <Compile Include="SteamShared\StoreAppDetailsResult.cs" />
     <Compile Include="SteamClient.cs" />
     <Compile Include="Services\SteamServicesClient.cs" />
@@ -203,6 +207,34 @@
     <None Include="extension.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="SteamShared\TagLocalization\brazilian.json" />
+    <None Include="SteamShared\TagLocalization\bulgarian.json" />
+    <None Include="SteamShared\TagLocalization\czech.json" />
+    <None Include="SteamShared\TagLocalization\danish.json" />
+    <None Include="SteamShared\TagLocalization\dutch.json" />
+    <None Include="SteamShared\TagLocalization\english.json" />
+    <None Include="SteamShared\TagLocalization\finnish.json" />
+    <None Include="SteamShared\TagLocalization\french.json" />
+    <None Include="SteamShared\TagLocalization\german.json" />
+    <None Include="SteamShared\TagLocalization\greek.json" />
+    <None Include="SteamShared\TagLocalization\hungarian.json" />
+    <None Include="SteamShared\TagLocalization\italian.json" />
+    <None Include="SteamShared\TagLocalization\japanese.json" />
+    <None Include="SteamShared\TagLocalization\koreana.json" />
+    <None Include="SteamShared\TagLocalization\latam.json" />
+    <None Include="SteamShared\TagLocalization\norwegian.json" />
+    <None Include="SteamShared\TagLocalization\polish.json" />
+    <None Include="SteamShared\TagLocalization\portuguese.json" />
+    <None Include="SteamShared\TagLocalization\romanian.json" />
+    <None Include="SteamShared\TagLocalization\russian.json" />
+    <None Include="SteamShared\TagLocalization\schinese.json" />
+    <None Include="SteamShared\TagLocalization\spanish.json" />
+    <None Include="SteamShared\TagLocalization\swedish.json" />
+    <None Include="SteamShared\TagLocalization\tchinese.json" />
+    <None Include="SteamShared\TagLocalization\thai.json" />
+    <None Include="SteamShared\TagLocalization\turkish.json" />
+    <None Include="SteamShared\TagLocalization\ukrainian.json" />
+    <None Include="SteamShared\TagLocalization\vietnamese.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Localization\*.xaml">
