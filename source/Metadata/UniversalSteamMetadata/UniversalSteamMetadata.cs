@@ -29,6 +29,7 @@ namespace UniversalSteamMetadata
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page.bg.jpg",
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page_bg_generated.jpg"
         };
+        private IDownloader downloader;
 
         public UniversalSteamMetadata(IPlayniteAPI api) : base(
             "Steam Store",
@@ -57,11 +58,12 @@ namespace UniversalSteamMetadata
         {
             Properties = new MetadataPluginProperties { HasSettings = true };
             SettingsViewModel = new UniversalSteamMetadataSettingsViewModel(this, api);
+            downloader = new Downloader();
         }
 
         public override OnDemandMetadataProvider GetMetadataProvider(MetadataRequestOptions options)
         {
-            return new UniversalSteamMetadataProvider(options, this);
+            return new UniversalSteamMetadataProvider(options, this, downloader);
         }
 
         public static List<StoreSearchResult> GetSearchResults(string searchTerm)

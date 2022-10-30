@@ -16,59 +16,27 @@ namespace SteamLibrary.SteamShared
 {
     public class SteamTagNamer
     {
-        public static Dictionary<string, string> Languages = new Dictionary<string, string>
-        {
-            {"schinese","简体中文 (Simplified Chinese)"},
-            {"tchinese","繁體中文 (Traditional Chinese)"},
-            {"japanese","日本語 (Japanese)"},
-            {"koreana","한국어 (Korean)"},
-            {"thai","ไทย (Thai)"},
-            {"bulgarian","Български (Bulgarian)"},
-            {"czech","Čeština (Czech)"},
-            {"danish","Dansk (Danish)"},
-            {"german","Deutsch (German)"},
-            {"english","English"},
-            {"spanish","Español - España (Spanish - Spain)"},
-            {"latam","Español - Latinoamérica (Spanish - Latin America)"},
-            {"greek","Ελληνικά (Greek)"},
-            {"french","Français (French)"},
-            {"italian","Italiano (Italian)"},
-            {"hungarian","Magyar (Hungarian)"},
-            {"dutch","Nederlands (Dutch)"},
-            {"norwegian","Norsk (Norwegian)"},
-            {"polish","Polski (Polish)"},
-            {"portuguese","Português (Portuguese)"},
-            {"brazilian","Português - Brasil (Portuguese - Brazil)"},
-            {"romanian","Română (Romanian)"},
-            {"russian","Русский (Russian)"},
-            {"finnish","Suomi (Finnish)"},
-            {"swedish","Svenska (Swedish)"},
-            {"turkish","Türkçe (Turkish)"},
-            {"vietnamese","Tiếng Việt (Vietnamese)"},
-            {"ukrainian","Українська (Ukrainian)"},
-        };
-
         private readonly string pluginUserDataPath;
-        private readonly string languageKey;
+        private readonly UniversalSteamSettings settings;
         private readonly IDownloader downloader;
         private ILogger logger = LogManager.GetLogger();
 
-        public SteamTagNamer(string pluginUserDataPath, string languageKey, IDownloader downloader)
+        public SteamTagNamer(string pluginUserDataPath, UniversalSteamSettings settings, IDownloader downloader)
         {
             this.pluginUserDataPath = pluginUserDataPath;
-            this.languageKey = languageKey;
+            this.settings = settings;
             this.downloader = downloader;
         }
 
         private string GetTagNameFilePath()
         {
-            return $@"{pluginUserDataPath}\TagLocalization\{languageKey}.json";
+            return $@"{pluginUserDataPath}\TagLocalization\{settings?.LanguageKey}.json";
         }
 
         private string GetPackedTagNameFilePath()
         {
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            return $@"{dir}\SteamShared\TagLocalization\{languageKey}.json";
+            return $@"{dir}\SteamShared\TagLocalization\{settings?.LanguageKey}.json";
         }
 
         public Dictionary<int, string> GetTagNames()
@@ -76,13 +44,13 @@ namespace SteamLibrary.SteamShared
             string fileName = GetTagNameFilePath();
             if (!File.Exists(fileName))
             {
-                logger.Trace($"No new tag names found for '{languageKey}'");
+                logger.Trace($"No new tag names found for '{settings?.LanguageKey}'");
                 fileName = GetPackedTagNameFilePath();
             }
 
             if (!File.Exists(fileName))
             {
-                logger.Warn($"No tag names found for language '{languageKey}'");
+                logger.Warn($"No tag names found for language '{settings?.LanguageKey}'");
                 return new Dictionary<int, string>();
             }
 
@@ -95,7 +63,7 @@ namespace SteamLibrary.SteamShared
 
         public Dictionary<int, string> UpdateAndGetTagNames()
         {
-            string url = "https://store.steampowered.com/search/?l=" + languageKey;
+            string url = $"https://store.steampowered.com/search/?l={settings?.LanguageKey}";
             var content = downloader.DownloadString(url);
             var matches = tagNameRegex.Matches(content);
 
@@ -114,6 +82,12 @@ namespace SteamLibrary.SteamShared
             File.WriteAllText(GetTagNameFilePath(), serialized, Encoding.Unicode);
 
             return output;
+        }
+        public string GetFinalTagName(string tagName)
+        {
+            tagName = HttpUtility.HtmlDecode(tagName).Trim();
+            string computedTagName = settings.UseTagPrefix ? $"{settings.TagPrefix}{tagName}" : tagName;
+            return computedTagName;
         }
     }
 }

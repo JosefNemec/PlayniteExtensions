@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using SteamKit2;
+using SteamLibrary.SteamShared;
 
 namespace Steam
 {
@@ -35,7 +36,7 @@ namespace Steam
             }
         }
 
-        public SteamApiClient()
+        public SteamApiClient(UniversalSteamSettings settings)
         {
             steamClient = new SteamKit2.SteamClient();
             manager = new CallbackManager(steamClient);
@@ -45,6 +46,7 @@ namespace Steam
             manager.Subscribe<SteamKit2.SteamClient.DisconnectedCallback>(onDisconnected);
             manager.Subscribe<SteamUser.LoggedOnCallback>(onLoggedOn);
             manager.Subscribe<SteamUser.LoggedOffCallback>(onLoggedOff);
+            this.settings = settings;
         }
 
         private AutoResetEvent onConnectedEvent = new AutoResetEvent(false);
@@ -73,6 +75,8 @@ namespace Steam
         }
 
         private AutoResetEvent onLoggedOffEvent = new AutoResetEvent(false);
+        private readonly UniversalSteamSettings settings;
+
         private void onLoggedOff(SteamUser.LoggedOffCallback callback)
         {
             onLoggedOffEvent.Set();
@@ -114,7 +118,7 @@ namespace Steam
         public async Task<EResult> Login()
         {
             var result = EResult.OK;
-            steamUser.LogOnAnonymous();
+            steamUser.LogOnAnonymous(new SteamUser.AnonymousLogOnDetails { ClientLanguage = settings.LanguageKey });
 
             await Task.Run(() =>
             {

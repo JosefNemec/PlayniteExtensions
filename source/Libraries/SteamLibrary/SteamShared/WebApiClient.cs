@@ -25,9 +25,9 @@ namespace Steam
             return Serialization.FromJson<AppReviewsResult>(webClient.DownloadString(url));
         }
 
-        public StoreAppDetailsResult.AppDetails GetStoreAppDetail(uint appId)
+        public StoreAppDetailsResult.AppDetails GetStoreAppDetail(uint appId, string languageKey)
         {
-            var url = $"https://store.steampowered.com/api/appdetails?appids={appId}&l=english";
+            var url = $"https://store.steampowered.com/api/appdetails?appids={appId}&l={languageKey}";
             var parsedData = Serialization.FromJson<Dictionary<string, StoreAppDetailsResult>>(webClient.DownloadString(url));
             var response = parsedData[appId.ToString()];
 

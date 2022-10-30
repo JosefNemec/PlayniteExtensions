@@ -32,17 +32,19 @@ namespace Steam
         private readonly SteamApiClient apiClient;
         private readonly WebApiClient webApiClient;
         private readonly SteamTagNamer tagNamer;
+        private readonly UniversalSteamSettings settings;
         private readonly string[] backgroundUrls = new string[]
         {
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page.bg.jpg",
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page_bg_generated.jpg"
         };
 
-        public MetadataProvider(SteamApiClient apiClient, WebApiClient webApiClient, SteamTagNamer tagNamer)
+        public MetadataProvider(SteamApiClient apiClient, WebApiClient webApiClient, SteamTagNamer tagNamer, UniversalSteamSettings settings)
         {
             this.apiClient = apiClient;
             this.webApiClient = webApiClient;
             this.tagNamer = tagNamer;
+            this.settings = settings;
         }
 
         public static string GetWorkshopUrl(uint appId)
@@ -110,7 +112,7 @@ namespace Steam
 
         internal StoreAppDetailsResult.AppDetails GetStoreData(uint appId)
         {
-            return SendDelayedStoreRequest(() => webApiClient.GetStoreAppDetail(appId), appId);
+            return SendDelayedStoreRequest(() => webApiClient.GetStoreAppDetail(appId, settings.LanguageKey), appId);
         }
 
         internal AppReviewsResult.QuerySummary GetUserReviewsData(uint appId)
@@ -474,10 +476,20 @@ namespace Steam
                 if (tagKeyValues != null)
                 {
                     metadata.Tags = new HashSet<MetadataProperty>();
+                    if (settings.LimitTagsToFixedAmount)
+                    {
+                        tagKeyValues = tagKeyValues.Take(settings.FixedTagCount).ToList();
+                    }
+
                     foreach (var tag in tagKeyValues)
                     {
                         if (int.TryParse(tag.Value, out int tagId))
                         {
+                            if (settings.BlacklistedTags.Contains(tagId))
+                            {
+                                continue;
+                            }
+
                             if (!tagNames.TryGetValue(tagId, out string name))
                             {
                                 if (newTagNames == null)
@@ -490,7 +502,7 @@ namespace Steam
                                     continue;
                                 }
                             }
-                            name = HttpUtility.HtmlDecode(name);
+                            name = tagNamer.GetFinalTagName(name);
                             metadata.Tags.Add(new MetadataNameProperty(name));
                         }
                     }
