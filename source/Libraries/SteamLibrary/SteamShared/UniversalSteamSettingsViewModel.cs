@@ -23,7 +23,7 @@ namespace SteamLibrary.SteamShared
             }
             else
             {
-                Settings = new TSettings();
+                Settings = new TSettings() { LanguageKey = GetSteamLanguageForCurrentPlayniteLanguage() };
                 OnInitSettings();
             }
 
@@ -37,6 +37,40 @@ namespace SteamLibrary.SteamShared
                     InitializeTagNames();
                 }
             };
+        }
+
+        private string GetSteamLanguageForCurrentPlayniteLanguage()
+        {
+            switch (PlayniteApi.ApplicationSettings.Language)
+            {
+                case "cs_CZ": return "czech";
+                case "da_DK": return "danish";
+                case "de_DE": return "german";
+                case "el_GR": return "greek";
+                case "es_ES": return "spanish";
+                case "fi_FI": return "finnish";
+                case "fr_FR": return "french";
+                case "hu_HU": return "hungarian";
+                case "it_IT": return "italian";
+                case "ja_JP": return "japanese";
+                case "ko_KR": return "korean";
+                case "nl_NL": return "dutch";
+                case "no_NO": return "norwegian";
+                case "pl_PL": return "polish";
+                case "pt_BR": return "brazilian";
+                case "pt_PT": return "portuguese";
+                case "ro_RO": return "romanian";
+                case "ru_RU": return "russian";
+                case "sv_SE": return "swedish";
+                case "tr_TR": return "turkish";
+                case "uk_UA": return "ukrainian";
+                case "vi_VN": return "vietnamese";
+                case "zh_CN":
+                case "zh_TW": return "schinese";
+                case "en_US":
+                default: return "english";
+                //no cultures for latam, thai, bulgarian, tchinese
+            }
         }
 
         /// <summary>
