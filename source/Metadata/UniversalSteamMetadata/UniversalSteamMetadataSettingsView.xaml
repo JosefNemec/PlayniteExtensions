@@ -32,31 +32,31 @@
                             <RowDefinition Height="10"/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock VerticalAlignment="Center" Text="Tag language:" Margin="0,0,10,0" Grid.Row="0" Grid.Column="0"/>
+                        <TextBlock VerticalAlignment="Center" Text="{DynamicResource LOCSteamLanguageLabel}" Margin="0,0,10,0" Grid.Row="0" Grid.Column="0"/>
                         <ComboBox x:Name="LanguageSelection" DisplayMemberPath="Value" SelectedValuePath="Key"
                                   SelectedValue="{Binding Settings.LanguageKey}" ItemsSource="{Binding Path=Languages}"
                                   IsEditable="false" Grid.Row="0" Grid.Column="1" MinWidth="150"/>
-                        
-                        <TextBlock Text="Background image source:" VerticalAlignment="Center" Margin="0,0,10,0" Grid.Row="2" Grid.Column="0" />
+
+                        <TextBlock Text="{DynamicResource LOCSteamBackgroundSource}" VerticalAlignment="Center" Margin="0,0,10,0" Grid.Row="2" Grid.Column="0" />
                         <ComboBox MinWidth="150" Grid.Row="2" Grid.Column="1"
                                   SelectedValue="{Binding Settings.BackgroundSource}"
                                   ItemsSource="{Binding Source={StaticResource BackgroundSourceEnumValues}}" />
                     </Grid>
-                    <CheckBox Content="Use vertical cover images" IsChecked="{Binding Settings.DownloadVerticalCovers}" Margin="0,12,0,0"/>
+                    <CheckBox Content="{DynamicResource LOCSteamUseVerticalCovers}" IsChecked="{Binding Settings.DownloadVerticalCovers}" Margin="0,12,0,0"/>
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
-                        <CheckBox IsChecked="{Binding Settings.LimitTagsToFixedAmount}" Content="Limit the amount of tags imported to the first " VerticalAlignment="Center"/>
+                        <CheckBox IsChecked="{Binding Settings.LimitTagsToFixedAmount}" Content="{DynamicResource LOCSteamLimitTagCountLabel}" VerticalAlignment="Center"/>
                         <xctk:IntegerUpDown Value="{Binding Settings.FixedTagCount}" Width="50" VerticalAlignment="Center" Minimum="1" x:Name="FixedTagCount" IsEnabled="{Binding Settings.LimitTagsToFixedAmount}"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
-                        <CheckBox IsChecked="{Binding Settings.UseTagPrefix}" Content="Prefix tag names with: " VerticalAlignment="Center"/>
+                        <CheckBox IsChecked="{Binding Settings.UseTagPrefix}" Content="{DynamicResource LOCSteamTagPrefixLabel}" VerticalAlignment="Center"/>
                         <TextBox Text="{Binding Settings.TagPrefix}" Width="200" VerticalAlignment="Center" IsEnabled="{Binding Settings.UseTagPrefix}"/>
                     </StackPanel>
                 </StackPanel>
             </ScrollViewer>
         </TabItem>
-        <TabItem Header="Tag blacklist">
+        <TabItem Header="{DynamicResource LOCSteamTagBlacklistTabLabel}">
             <DockPanel Margin="20">
-                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" DockPanel.Dock="Top">Excluded tags will not be added to games.</TextBlock>
+                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" DockPanel.Dock="Top" Text="{DynamicResource LOCSteamTagBlacklistExplanationLabel}"/>
 
                 <Grid VerticalAlignment="Stretch" Margin="0,10,0,0">
                     <Grid.ColumnDefinitions>
@@ -77,8 +77,8 @@
                             <Setter Property="VerticalContentAlignment" Value="Center"/>
                         </Style>
                     </Grid.Resources>
-                    <TextBlock HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0">Available tags</TextBlock>
-                    <TextBlock HorizontalAlignment="Center" Grid.Column="2" Grid.Row="0">Excluded tags</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0" Text="{DynamicResource LOCSteamTagWhitelistHeader}"/>
+                    <TextBlock HorizontalAlignment="Center" Grid.Column="2" Grid.Row="0" Text="{DynamicResource LOCSteamTagBlacklistHeader}"/>
                     <ListBox DockPanel.Dock="Top" Name="Whitelist"
                              SelectionMode="Extended" MinHeight="220"
                              VerticalAlignment="Stretch"
@@ -92,8 +92,8 @@
                              DisplayMemberPath="Name"
                              Grid.Column="2" Grid.Row="1"/>
                     <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
-                        <Button Content="&#xEA94;" Command="{Binding BlacklistCommand}" CommandParameter="{Binding SelectedItems, ElementName=Whitelist}" ToolTip="Add to excluded tags"/>
-                        <Button Content="&#xEA93;" Command="{Binding WhitelistCommand}" CommandParameter="{Binding SelectedItems, ElementName=Blacklist}" ToolTip="Remove from excluded tags"/>
+                        <Button Content="&#xEA94;" Command="{Binding BlacklistCommand}" CommandParameter="{Binding SelectedItems, ElementName=Whitelist}" ToolTip="{DynamicResource LOCSteamTagBlacklistTooltip}"/>
+                        <Button Content="&#xEA93;" Command="{Binding WhitelistCommand}" CommandParameter="{Binding SelectedItems, ElementName=Blacklist}" ToolTip="{DynamicResource LOCSteamTagWhitelistTooltip}"/>
                     </StackPanel>
                 </Grid>
             </DockPanel>

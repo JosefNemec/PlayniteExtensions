@@ -8,6 +8,7 @@
              xmlns:pcmd="clr-namespace:Playnite.Commands"
              xmlns:pcon="clr-namespace:Playnite.Converters"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d"              
              d:DesignHeight="450" d:DesignWidth="600">
 
@@ -178,17 +179,83 @@
         </TabItem>
         <TabItem Header="{DynamicResource LOCSettingsMetadataLabel}"
                  Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}">
-            <StackPanel Margin="20">
-                <CheckBox Content="{DynamicResource LOCSteamUseVerticalCovers}"
-                          IsChecked="{Binding Settings.DownloadVerticalCovers}" Margin="0,0,0,5" />
-                <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0,5,0,5" HorizontalAlignment="Left"
-                            ToolTipService.InitialShowDelay="0"
-                            Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}">
-                    <TextBlock Text="{DynamicResource LOCSteamBackgroundSource}"
-                               VerticalAlignment="Center"/>
-                    <ContentControl Content="{StaticResource BackgroundSourceBox}" Margin="10,0,0,0" />
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <StackPanel Margin="20" Width="Auto">
+                    <Grid Width="Auto">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock VerticalAlignment="Center" Text="{DynamicResource LOCSteamLanguageLabel}" Margin="0,0,10,0" Grid.Row="0" Grid.Column="0"/>
+                        <ComboBox x:Name="LanguageSelection" DisplayMemberPath="Value" SelectedValuePath="Key"
+                                  SelectedValue="{Binding Settings.LanguageKey}" ItemsSource="{Binding Path=Languages}"
+                                  IsEditable="false" Grid.Row="0" Grid.Column="1" MinWidth="150"/>
+
+                        <TextBlock Text="{DynamicResource LOCSteamBackgroundSource}" VerticalAlignment="Center" Margin="0,0,10,0" Grid.Row="2" Grid.Column="0" />
+                        <ComboBox MinWidth="150" Grid.Row="2" Grid.Column="1"
+                                  SelectedValue="{Binding Settings.BackgroundSource}"
+                                  ItemsSource="{Binding Source={StaticResource BackgroundSourceEnumValues}}" />
+                    </Grid>
+                    <CheckBox Content="{DynamicResource LOCSteamUseVerticalCovers}" IsChecked="{Binding Settings.DownloadVerticalCovers}" Margin="0,12,0,0"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <CheckBox IsChecked="{Binding Settings.LimitTagsToFixedAmount}" Content="{DynamicResource LOCSteamLimitTagCountLabel}" VerticalAlignment="Center"/>
+                        <xctk:IntegerUpDown Value="{Binding Settings.FixedTagCount}" Width="50" VerticalAlignment="Center" Minimum="1" x:Name="FixedTagCount" IsEnabled="{Binding Settings.LimitTagsToFixedAmount}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <CheckBox IsChecked="{Binding Settings.UseTagPrefix}" Content="{DynamicResource LOCSteamTagPrefixLabel}" VerticalAlignment="Center"/>
+                        <TextBox Text="{Binding Settings.TagPrefix}" Width="200" VerticalAlignment="Center" IsEnabled="{Binding Settings.UseTagPrefix}"/>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="{DynamicResource LOCSteamTagBlacklistTabLabel}">
+            <DockPanel Margin="20">
+                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" DockPanel.Dock="Top" Text="{DynamicResource LOCSteamTagBlacklistExplanationLabel}"/>
+
+                <Grid VerticalAlignment="Stretch" Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition x:Name="Left" Width="*"/>
+                        <ColumnDefinition x:Name="Middle" Width="95"/>
+                        <ColumnDefinition x:Name="Right" Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition x:Name="Header" MaxHeight="20"/>
+                        <RowDefinition x:Name="Body"/>
+                    </Grid.RowDefinitions>
+                    <Grid.Resources>
+                        <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                            <Setter Property="FontSize" Value="40"/>
+                            <Setter Property="Margin" Value="20,12"/>
+                            <Setter Property="Padding" Value="8,2"/>
+                            <Setter Property="FontFamily" Value="{DynamicResource FontIcoFont}"/>
+                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                        </Style>
+                    </Grid.Resources>
+                    <TextBlock HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0" Text="{DynamicResource LOCSteamTagWhitelistHeader}"/>
+                    <TextBlock HorizontalAlignment="Center" Grid.Column="2" Grid.Row="0" Text="{DynamicResource LOCSteamTagBlacklistHeader}"/>
+                    <ListBox DockPanel.Dock="Top" Name="Whitelist"
+                             SelectionMode="Extended" MinHeight="220"
+                             VerticalAlignment="Stretch"
+                             ItemsSource="{Binding OkayTags}"
+                             DisplayMemberPath="Name"
+                             Grid.Column="0" Grid.Row="1"/>
+                    <ListBox DockPanel.Dock="Top" Name="Blacklist"
+                             SelectionMode="Extended" MinHeight="220"
+                             VerticalAlignment="Stretch"
+                             ItemsSource="{Binding BlacklistedTags}"
+                             DisplayMemberPath="Name"
+                             Grid.Column="2" Grid.Row="1"/>
+                    <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
+                        <Button Content="&#xEA94;" Command="{Binding BlacklistCommand}" CommandParameter="{Binding SelectedItems, ElementName=Whitelist}" ToolTip="{DynamicResource LOCSteamTagBlacklistTooltip}"/>
+                        <Button Content="&#xEA93;" Command="{Binding WhitelistCommand}" CommandParameter="{Binding SelectedItems, ElementName=Blacklist}" ToolTip="{DynamicResource LOCSteamTagWhitelistTooltip}"/>
+                    </StackPanel>
+                </Grid>
+            </DockPanel>
         </TabItem>
         <TabItem Header="{DynamicResource LOCSettingsAdvancedLabel}"
                  Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}">
