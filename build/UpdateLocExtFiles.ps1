@@ -24,8 +24,8 @@ foreach ($extension in $extensionPaths.Keys)
     foreach ($langFile in  (Get-ChildItem -LiteralPath $langSourceDir -Filter "*.xaml"))
     {
         $targetFile = [System.IO.Path]::Combine($repoPath, $extensionPaths[$extension], "Localization", $langFile.Name)
-        Copy-Item $langFile.FullName $targetFile        
-        [xml]$langXml = Get-Content -LiteralPath $langFile -Raw        
+        Copy-Item $langFile.FullName $targetFile
+        [xml]$langXml = Get-Content -LiteralPath $langFile.FullName -Raw
         [xml]$targetXml = Get-Content -LiteralPath $targetFile -Raw
         
         foreach ($node in $targetXml.ResourceDictionary.ChildNodes | ForEach { $_ })

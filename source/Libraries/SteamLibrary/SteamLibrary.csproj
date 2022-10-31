@@ -224,34 +224,90 @@
     <None Include="extension.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="SteamShared\TagLocalization\brazilian.json" />
-    <None Include="SteamShared\TagLocalization\bulgarian.json" />
-    <None Include="SteamShared\TagLocalization\czech.json" />
-    <None Include="SteamShared\TagLocalization\danish.json" />
-    <None Include="SteamShared\TagLocalization\dutch.json" />
-    <None Include="SteamShared\TagLocalization\english.json" />
-    <None Include="SteamShared\TagLocalization\finnish.json" />
-    <None Include="SteamShared\TagLocalization\french.json" />
-    <None Include="SteamShared\TagLocalization\german.json" />
-    <None Include="SteamShared\TagLocalization\greek.json" />
-    <None Include="SteamShared\TagLocalization\hungarian.json" />
-    <None Include="SteamShared\TagLocalization\italian.json" />
-    <None Include="SteamShared\TagLocalization\japanese.json" />
-    <None Include="SteamShared\TagLocalization\koreana.json" />
-    <None Include="SteamShared\TagLocalization\latam.json" />
-    <None Include="SteamShared\TagLocalization\norwegian.json" />
-    <None Include="SteamShared\TagLocalization\polish.json" />
-    <None Include="SteamShared\TagLocalization\portuguese.json" />
-    <None Include="SteamShared\TagLocalization\romanian.json" />
-    <None Include="SteamShared\TagLocalization\russian.json" />
-    <None Include="SteamShared\TagLocalization\schinese.json" />
-    <None Include="SteamShared\TagLocalization\spanish.json" />
-    <None Include="SteamShared\TagLocalization\swedish.json" />
-    <None Include="SteamShared\TagLocalization\tchinese.json" />
-    <None Include="SteamShared\TagLocalization\thai.json" />
-    <None Include="SteamShared\TagLocalization\turkish.json" />
-    <None Include="SteamShared\TagLocalization\ukrainian.json" />
-    <None Include="SteamShared\TagLocalization\vietnamese.json" />
+    <Content Include="SteamShared\TagLocalization\brazilian.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\bulgarian.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\czech.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\danish.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\dutch.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\english.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\finnish.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\french.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\german.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\greek.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\hungarian.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\italian.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\japanese.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\koreana.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\latam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\norwegian.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\polish.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\portuguese.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\romanian.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\russian.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\schinese.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\spanish.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\swedish.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\tchinese.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\thai.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\turkish.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\ukrainian.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SteamShared\TagLocalization\vietnamese.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Localization\*.xaml">
