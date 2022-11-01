@@ -270,7 +270,15 @@ namespace BattleNetLibrary
                 IconUrl = @"https://blz-contentstack-images.akamaized.net/v3/assets/blt77f4425de611b362/blt7b64284fbcdfaa77/60e75dd92d26525ef67ac8c5/nav-icon.png",
                 Name = "Diablo Immortal",
                 Type = BNetAppType.Default
-            }
+            },
+            new BNetApp()
+            {
+                ApiId = 1096108883,
+                ProductId = "AUKS",
+                InternalId = "auks",
+                Name = "Call of Duty: Modern Warfare II",
+                Type = BNetAppType.Default
+            },
         };
 
         public static BNetApp GetAppDefinition(string productId)
