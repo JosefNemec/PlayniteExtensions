@@ -17,8 +17,16 @@
     </UserControl.Resources>
 
     <StackPanel Margin="20">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock VerticalAlignment="Center" Text="Language:" Margin="0,0,10,0"/>
+            <ComboBox x:Name="LanguageSelection" DisplayMemberPath="Value" SelectedValuePath="Key"
+                                  SelectedValue="{Binding Settings.Locale}" ItemsSource="{Binding Path=Languages}"
+                                  IsEditable="false" MinWidth="150"/>
+        </StackPanel>
+
+
         <CheckBox DockPanel.Dock="Top" Name="CheckGOGImportInstalled"
-                  Margin="0,0,0,15"
+                  Margin="0,15,0,15"
                   IsChecked="{Binding Settings.ImportInstalledGames}"
                   Content="{DynamicResource LOCGOGSettingsImportInstalledLabel}"/>
 

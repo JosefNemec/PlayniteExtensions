@@ -20,6 +20,7 @@ namespace GogLibrary
         public bool ConnectAccount { get; set; } = false;
         public bool ImportUninstalledGames { get; set; } = false;
         public bool StartGamesUsingGalaxy { get; set; } = false;
+        public string Locale { get; set; } = "en";
     }
     public class GogLibrarySettingsViewModel : PluginSettingsViewModel<GogLibrarySettings, GogLibrary>
     {
@@ -63,6 +64,11 @@ namespace GogLibrary
             else
             {
                 Settings = new GogLibrarySettings { Version = 1 };
+                var languageCode = api.ApplicationSettings.Language.Substring(0, 2);
+                if (Languages.ContainsKey(languageCode))
+                {
+                    Settings.Locale = languageCode;
+                }
             }
         }
 
@@ -83,5 +89,15 @@ namespace GogLibrary
                 Logger.Error(e, "Failed to authenticate user.");
             }
         }
+
+        public Dictionary<string, string> Languages { get; } = new Dictionary<string, string>
+        {
+            {"en", "English" },
+            {"de", "Deutsch" },
+            {"fr", "Français" },
+            {"pl", "Polski" },
+            {"ru", "Pусский" },
+            {"zh", "中文(简体)" },
+        };
     }
 }

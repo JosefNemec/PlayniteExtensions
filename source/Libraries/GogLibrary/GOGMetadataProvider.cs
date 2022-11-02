@@ -19,10 +19,12 @@ namespace GogLibrary
         private GogApiClient apiClient = new GogApiClient();
         private ILogger logger = LogManager.GetLogger();
         private IPlayniteAPI api;
+        private readonly GogLibrarySettings settings;
 
-        public GogMetadataProvider(IPlayniteAPI api)
+        public GogMetadataProvider(IPlayniteAPI api, GogLibrarySettings settings)
         {
             this.api = api;
+            this.settings = settings;
         }
 
         public override GameMetadata GetMetadata(Game game)
@@ -76,7 +78,7 @@ namespace GogLibrary
         internal GogGameMetadata DownloadGameMetadata(Game game)
         {
             var metadata = new GogGameMetadata();
-            var gameDetail = apiClient.GetGameDetails(game.GameId);
+            var gameDetail = apiClient.GetGameDetails(game.GameId, settings.Locale);
             if (gameDetail == null)
             {
                 logger.Warn($"Product page for game {game.GameId} not found, using fallback search.");
@@ -84,7 +86,7 @@ namespace GogLibrary
                 var match = search?.FirstOrDefault(a => a.title.Equals(game.Name, StringComparison.InvariantCultureIgnoreCase));
                 if (match != null)
                 {
-                    gameDetail = apiClient.GetGameDetails(match.id.ToString());
+                    gameDetail = apiClient.GetGameDetails(match.id.ToString(), settings.Locale);
                 }
             }
 
@@ -94,8 +96,8 @@ namespace GogLibrary
             {
                 if (gameDetail.links.product_card != @"https://www.gog.com/" && !string.IsNullOrEmpty(gameDetail.links.product_card))
                 {
-                    // This removes language component from the URL
-                    var productUrl = @"https://www.gog.com/game" + gameDetail.links.product_card.Substring(gameDetail.links.product_card.LastIndexOf("/"));
+                    string gamePath = gameDetail.links.product_card.Substring(gameDetail.links.product_card.IndexOf("game/"));
+                    var productUrl = $"https://www.gog.com/{settings.Locale}/{gamePath}";
                     metadata.StoreDetails = apiClient.GetGameStoreData(productUrl);
                 }
 
