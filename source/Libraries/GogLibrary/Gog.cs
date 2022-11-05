@@ -2,6 +2,7 @@
 using Playnite.Common.Web;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -66,6 +67,17 @@ namespace GogLibrary
             }
         }
 
+        public static bool IsRunning
+        {
+            get
+            {
+                // The Notifications Renderer process is used because other Galaxy related process can
+                // be running in the background without the client itself being open for the user
+                return Process.GetProcessesByName("GOG Galaxy Notifications Renderer")?.Any() == true;
+            }
+        }
+
+        public static string ClientInstallationPath => Path.Combine(InstallationPath, "GalaxyClient.exe");
         public static string Icon => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources\gogicon.png");
 
         public static string GetLoginUrl()

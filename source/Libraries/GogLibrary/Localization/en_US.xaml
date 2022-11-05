@@ -24,4 +24,7 @@
 Note that the Account Name option only works for accounts whose game libraries have been set in GOG's privacy settings to be publicly visible.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">Launch games using GOG Galaxy client</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">This will enable GOG Galaxy features like cloud saves, game time tracking, etc.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automatically initiate the install process when installing games on GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">If enabled, the install process will be automatically started without needing user interaction to the configured default install location.
+If disabled, the game page will be opened to manually start the install process.</sys:String>
 </ResourceDictionary>

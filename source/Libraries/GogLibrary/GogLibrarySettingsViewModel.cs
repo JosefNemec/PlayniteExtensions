@@ -20,6 +20,7 @@ namespace GogLibrary
         public bool ConnectAccount { get; set; } = false;
         public bool ImportUninstalledGames { get; set; } = false;
         public bool StartGamesUsingGalaxy { get; set; } = false;
+        public bool UseAutomaticGameInstalls { get; set; } = false;
     }
     public class GogLibrarySettingsViewModel : PluginSettingsViewModel<GogLibrarySettings, GogLibrary>
     {

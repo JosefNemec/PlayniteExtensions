@@ -63,9 +63,12 @@
             </StackPanel>
         </StackPanel>
 
-        <CheckBox IsChecked="{Binding Settings.StartGamesUsingGalaxy}" DockPanel.Dock="Top"
+        <CheckBox IsChecked="{Binding Settings.StartGamesUsingGalaxy}" DockPanel.Dock="Top" Margin="0,0,0,15"
                   Content="{DynamicResource LOCSettingsGOGUseGalaxy}"/>
-
+        <CheckBox IsChecked="{Binding Settings.UseAutomaticGameInstalls}" DockPanel.Dock="Top"
+                  Content="{DynamicResource LOCGOGSettingsUseAutomaticGameInstalls}"
+                  ToolTip="{DynamicResource LOCGOGSettingsUseAutomaticGameInstallsTooltip}"/>
+        
         <TextBlock VerticalAlignment="Center" Margin="0,20,0,0">
             <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/GOG-troubleshooting"
                         Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"

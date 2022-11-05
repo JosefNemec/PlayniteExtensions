@@ -43,7 +43,7 @@ namespace GogLibrary
                 yield break;
             }
 
-            yield return new GogInstallController(args.Game);
+            yield return new GogInstallController(args.Game, this);
         }
 
         public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
@@ -82,7 +82,7 @@ namespace GogLibrary
                     Name = ResourceProvider.GetString(LOC.GOGStartUsingClient).Format("Galaxy"),
                     TrackingPath = installEntry.InstallDirectory,
                     Arguments = string.Format(@"/gameId={0} /command=runGame /path=""{1}""", args.Game.GameId, installEntry.InstallDirectory),
-                    Path = Path.Combine(Gog.InstallationPath, "GalaxyClient.exe")
+                    Path = Gog.ClientInstallationPath
                 };
             }
             else
