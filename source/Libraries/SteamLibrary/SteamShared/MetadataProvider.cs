@@ -466,6 +466,26 @@ namespace Steam
                 }
             }
 
+            string parentStr = metadata.ProductDetails?["common"]["parent"]?.Value;
+
+            if (uint.TryParse(parentStr, out uint parentId))
+            {
+                var parentMetadata = GetGameMetadata(parentId, backgroundSource, downloadVerticalCovers);
+                parentMetadata.GameId = metadata.GameId;
+                parentMetadata.Name = metadata.Name;
+                parentMetadata.Features = metadata.Features;
+                parentMetadata.ReleaseDate = metadata.ReleaseDate;
+                if (metadata.CoverImage.HasContent)
+                {
+                    parentMetadata.CoverImage = metadata.CoverImage;
+                }
+                if (metadata.BackgroundImage.HasContent)
+                {
+                    parentMetadata.BackgroundImage = metadata.BackgroundImage;
+                }
+                return parentMetadata;
+            }
+
             return metadata;
         }
 
