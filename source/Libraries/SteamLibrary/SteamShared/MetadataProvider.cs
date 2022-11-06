@@ -471,19 +471,20 @@ namespace Steam
             if (uint.TryParse(parentStr, out uint parentId))
             {
                 var parentMetadata = GetGameMetadata(parentId, backgroundSource, downloadVerticalCovers);
-                parentMetadata.GameId = metadata.GameId;
-                parentMetadata.Name = metadata.Name;
-                parentMetadata.Features = metadata.Features;
-                parentMetadata.ReleaseDate = metadata.ReleaseDate;
-                if (metadata.CoverImage.HasContent)
+
+                metadata.Links = parentMetadata.Links; //demo appId urls either redirect to the main game or are broken
+                metadata.CoverImage = metadata.CoverImage ?? parentMetadata.CoverImage;
+                metadata.BackgroundImage = metadata.BackgroundImage ?? parentMetadata.BackgroundImage;
+
+                if (string.IsNullOrWhiteSpace(metadata.Description))
                 {
-                    parentMetadata.CoverImage = metadata.CoverImage;
+                    metadata.Description = parentMetadata.Description;
                 }
-                if (metadata.BackgroundImage.HasContent)
+
+                if (metadata.Tags == null || metadata.Tags.Count == 0)
                 {
-                    parentMetadata.BackgroundImage = metadata.BackgroundImage;
+                    metadata.Tags = parentMetadata.Tags;
                 }
-                return parentMetadata;
             }
 
             return metadata;
