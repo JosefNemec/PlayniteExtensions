@@ -258,7 +258,7 @@ namespace Steam
             bool downloadVerticalCovers)
         {
             var metadata = DownloadGameMetadata(appId, backgroundSource, downloadVerticalCovers);
-            var newName = metadata.ProductDetails?["common"]["name_localized"]["english"]?.Value;
+            var newName = metadata.ProductDetails?["common"]["name_localized"][settings.LanguageKey]?.Value;
             if (newName != null)
             {
                 metadata.Name = newName;
