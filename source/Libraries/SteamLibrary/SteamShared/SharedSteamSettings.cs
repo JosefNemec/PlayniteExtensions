@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SteamLibrary.SteamShared
 {
-    public abstract class UniversalSteamSettings : ObservableObject
+    public abstract class SharedSteamSettings : ObservableObject
     {
         private string languageKey = "english";
         private bool limitTagsToFixedAmount = false;

@@ -32,14 +32,14 @@ namespace Steam
         private readonly SteamApiClient apiClient;
         private readonly WebApiClient webApiClient;
         private readonly SteamTagNamer tagNamer;
-        private readonly UniversalSteamSettings settings;
+        private readonly SharedSteamSettings settings;
         private readonly string[] backgroundUrls = new string[]
         {
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page.bg.jpg",
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page_bg_generated.jpg"
         };
 
-        public MetadataProvider(SteamApiClient apiClient, WebApiClient webApiClient, SteamTagNamer tagNamer, UniversalSteamSettings settings)
+        public MetadataProvider(SteamApiClient apiClient, WebApiClient webApiClient, SteamTagNamer tagNamer, SharedSteamSettings settings)
         {
             this.apiClient = apiClient;
             this.webApiClient = webApiClient;

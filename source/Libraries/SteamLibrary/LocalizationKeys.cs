@@ -1,4 +1,4 @@
-///
+﻿///
 /// DO NOT MODIFY! Automatically generated via UpdateLocExtFiles.ps1 script.
 /// 
 namespace System
@@ -18,7 +18,7 @@ namespace System
         /// </summary>
         public const string SteamSettingsConnectAccount = "LOCSteamSettingsConnectAccount";
         /// <summary>
-        /// Checking authentication status…
+        /// Checking authentication statusâ€¦
         /// </summary>
         public const string SteamLoginChecking = "LOCSteamLoginChecking";
         /// <summary>
@@ -77,6 +77,10 @@ namespace System
         /// Account ID
         /// </summary>
         public const string SteamAccountID = "LOCSteamAccountID";
+        /// <summary>
+        /// Metadata language:
+        /// </summary>
+        public const string SteamMetadataLanguageLabel = "LOCSteamMetadataLanguageLabel";
         /// <summary>
         /// What's my account name?
         /// </summary>
@@ -210,10 +214,6 @@ namespace System
         /// </summary>
         public const string SteamAdditionalAccountsDescription = "LOCSteamAdditionalAccountsDescription";
         /// <summary>
-        /// Language:
-        /// </summary>
-        public const string SteamLanguageLabel = "LOCSteamLanguageLabel";
-        /// <summary>
         /// Limit the amount of tags imported to the first 
         /// </summary>
         public const string SteamLimitTagCountLabel = "LOCSteamLimitTagCountLabel";
@@ -245,5 +245,9 @@ namespace System
         /// Add to excluded tags
         /// </summary>
         public const string SteamTagBlacklistTooltip = "LOCSteamTagBlacklistTooltip";
+        /// <summary>
+        /// Fixed tag count must be a valid number
+        /// </summary>
+        public const string SteamValidationFixedTagCount = "LOCSteamValidationFixedTagCount";
     }
 }

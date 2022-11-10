@@ -4,7 +4,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              xmlns:steam="clr-namespace:Steam"
              mc:Ignorable="d"
              d:DesignHeight="400" d:DesignWidth="600">
@@ -32,7 +31,7 @@
                             <RowDefinition Height="10"/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock VerticalAlignment="Center" Text="{DynamicResource LOCSteamLanguageLabel}" Margin="0,0,10,0" Grid.Row="0" Grid.Column="0"/>
+                        <TextBlock VerticalAlignment="Center" Text="{DynamicResource LOCUniversalSteamMetadataMetadataLanguageLabel}" Margin="0,0,10,0" Grid.Row="0" Grid.Column="0"/>
                         <ComboBox x:Name="LanguageSelection" DisplayMemberPath="Value" SelectedValuePath="Key"
                                   SelectedValue="{Binding Settings.LanguageKey}" ItemsSource="{Binding Path=Languages}"
                                   IsEditable="false" Grid.Row="0" Grid.Column="1" MinWidth="150"/>
@@ -45,7 +44,7 @@
                     <CheckBox Content="{DynamicResource LOCSteamUseVerticalCovers}" IsChecked="{Binding Settings.DownloadVerticalCovers}" Margin="0,12,0,0"/>
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
                         <CheckBox IsChecked="{Binding Settings.LimitTagsToFixedAmount}" Content="{DynamicResource LOCSteamLimitTagCountLabel}" VerticalAlignment="Center" Margin="0,0,4,0"/>
-                        <xctk:IntegerUpDown Value="{Binding Settings.FixedTagCount}" Width="50" VerticalAlignment="Center" Minimum="1" x:Name="FixedTagCount" IsEnabled="{Binding Settings.LimitTagsToFixedAmount}"/>
+                        <TextBox Text="{Binding FixedTagCountString}" Width="50" VerticalAlignment="Center" IsEnabled="{Binding Settings.LimitTagsToFixedAmount}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
                         <CheckBox IsChecked="{Binding Settings.UseTagPrefix}" Content="{DynamicResource LOCSteamTagPrefixLabel}" VerticalAlignment="Center" Margin="0,0,4,0"/>

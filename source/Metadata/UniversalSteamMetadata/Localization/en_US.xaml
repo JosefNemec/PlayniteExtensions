@@ -17,6 +17,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">Start using {0} client</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Import play time</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">Metadata language:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">What's my account name?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Account URL Name</sys:String>
@@ -51,7 +52,6 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignore installed games from other accounts</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Additional Accounts</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Specify Steam account ID and API key pair of other accounts if you want to import games from them. See Steam troubleshooting wiki page for more information.</sys:String>
-  <sys:String x:Key="LOCSteamLanguageLabel">Language:</sys:String>
   <sys:String x:Key="LOCSteamLimitTagCountLabel">Limit the amount of tags imported to the first </sys:String>
   <sys:String x:Key="LOCSteamTagPrefixLabel">Prefix tag names with: </sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Tag blacklist</sys:String>
@@ -60,4 +60,5 @@
   <sys:String x:Key="LOCSteamTagBlacklistHeader">Excluded tags</sys:String>
   <sys:String x:Key="LOCSteamTagWhitelistTooltip">Remove from excluded tags</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTooltip">Add to excluded tags</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">Fixed tag count must be a valid number</sys:String>
 </ResourceDictionary>

@@ -17,6 +17,7 @@
     <sys:String x:Key="LOCStartUsingClient">Start using {0} client</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Import play time</sys:String>
     <sys:String x:Key="LOCAccountID">Account ID</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">Metadata language:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io will be launched. Please sign in and then close this message.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Waiting for user to sign in, please close this when you're done…</sys:String>
@@ -64,7 +65,6 @@ Note that the Account Name option only works for accounts whose game libraries h
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignore installed games from other accounts</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Additional Accounts</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Specify Steam account ID and API key pair of other accounts if you want to import games from them. See Steam troubleshooting wiki page for more information.</sys:String>
-    <sys:String x:Key="LOCSteamLanguageLabel">Language:</sys:String>
     <sys:String x:Key="LOCSteamLimitTagCountLabel">Limit the amount of tags imported to the first </sys:String>
     <sys:String x:Key="LOCSteamTagPrefixLabel">Prefix tag names with: </sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Tag blacklist</sys:String>
@@ -73,6 +73,7 @@ Note that the Account Name option only works for accounts whose game libraries h
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Excluded tags</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Remove from excluded tags</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Add to excluded tags</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">Fixed tag count must be a valid number</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Use screenshots if artwork is not available</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">If multiple images are available then use:</sys:String>

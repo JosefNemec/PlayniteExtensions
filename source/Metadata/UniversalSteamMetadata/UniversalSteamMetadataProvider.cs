@@ -280,7 +280,7 @@ namespace UniversalSteamMetadata
 
             try
             {
-                var metadataProvider = new MetadataProvider(apiClient, webApiClient, new SteamTagNamer(plugin.GetPluginUserDataPath(), plugin.SettingsViewModel.Settings, downloader), plugin.SettingsViewModel.Settings);
+                var metadataProvider = new MetadataProvider(apiClient, webApiClient, new SteamTagNamer(plugin, plugin.SettingsViewModel.Settings, downloader), plugin.SettingsViewModel.Settings);
                 if (BuiltinExtensions.GetExtensionFromId(options.GameData.PluginId) == BuiltinExtension.SteamLibrary)
                 {
                     var appId = uint.Parse(options.GameData.GameId);

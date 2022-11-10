@@ -8,10 +8,11 @@
              xmlns:pcmd="clr-namespace:Playnite.Commands"
              xmlns:pcon="clr-namespace:Playnite.Converters"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d"              
              d:DesignHeight="450" d:DesignWidth="600">
 
+    
+    
     <UserControl.Resources>
         <pcon:NegateConverter x:Key="NegateConverter" />
         <pcon:EnumToBooleanConverter x:Key="EnumConverter" />
@@ -191,7 +192,7 @@
                             <RowDefinition Height="10"/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock VerticalAlignment="Center" Text="{DynamicResource LOCSteamLanguageLabel}" Margin="0,0,10,0" Grid.Row="0" Grid.Column="0"/>
+                        <TextBlock VerticalAlignment="Center" Text="{DynamicResource LOCSteamMetadataLanguageLabel}" Margin="0,0,10,0" Grid.Row="0" Grid.Column="0"/>
                         <ComboBox x:Name="LanguageSelection" DisplayMemberPath="Value" SelectedValuePath="Key"
                                   SelectedValue="{Binding Settings.LanguageKey}" ItemsSource="{Binding Path=Languages}"
                                   IsEditable="false" Grid.Row="0" Grid.Column="1" MinWidth="150"/>
@@ -204,7 +205,7 @@
                     <CheckBox Content="{DynamicResource LOCSteamUseVerticalCovers}" IsChecked="{Binding Settings.DownloadVerticalCovers}" Margin="0,12,0,0"/>
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
                         <CheckBox IsChecked="{Binding Settings.LimitTagsToFixedAmount}" Content="{DynamicResource LOCSteamLimitTagCountLabel}" VerticalAlignment="Center" Margin="0,0,4,0"/>
-                        <xctk:IntegerUpDown Value="{Binding Settings.FixedTagCount}" Width="50" VerticalAlignment="Center" Minimum="1" x:Name="FixedTagCount" IsEnabled="{Binding Settings.LimitTagsToFixedAmount}"/>
+                        <TextBox Text="{Binding FixedTagCountString}" Width="50" VerticalAlignment="Center" IsEnabled="{Binding Settings.LimitTagsToFixedAmount}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
                         <CheckBox IsChecked="{Binding Settings.UseTagPrefix}" Content="{DynamicResource LOCSteamTagPrefixLabel}" VerticalAlignment="Center" Margin="0,0,4,0"/>
@@ -213,7 +214,8 @@
                 </StackPanel>
             </ScrollViewer>
         </TabItem>
-        <TabItem Header="{DynamicResource LOCSteamTagBlacklistTabLabel}">
+        <TabItem Header="{DynamicResource LOCSteamTagBlacklistTabLabel}"
+                 Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}">
             <DockPanel Margin="20">
                 <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" DockPanel.Dock="Top" Text="{DynamicResource LOCSteamTagBlacklistExplanationLabel}"/>
 
@@ -243,12 +245,14 @@
                              VerticalAlignment="Stretch"
                              ItemsSource="{Binding OkayTags}"
                              DisplayMemberPath="Name"
+                             MouseDoubleClick="Whitelist_MouseDoubleClick"
                              Grid.Column="0" Grid.Row="1"/>
                     <ListBox DockPanel.Dock="Top" Name="Blacklist"
                              SelectionMode="Extended" MinHeight="220"
                              VerticalAlignment="Stretch"
                              ItemsSource="{Binding BlacklistedTags}"
                              DisplayMemberPath="Name"
+                             MouseDoubleClick="Blacklist_MouseDoubleClick"
                              Grid.Column="2" Grid.Row="1"/>
                     <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
                         <Button Content="&#xEA94;" Command="{Binding BlacklistCommand}" CommandParameter="{Binding SelectedItems, ElementName=Whitelist}" ToolTip="{DynamicResource LOCSteamTagBlacklistTooltip}"/>

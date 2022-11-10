@@ -1,6 +1,6 @@
-﻿using Newtonsoft.Json;
-using Playnite.Common.Web;
+﻿using Playnite.Common.Web;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using Playnite.SDK.Plugins;
 using System;
 using System.Collections.Generic;
@@ -16,27 +16,28 @@ namespace SteamLibrary.SteamShared
 {
     public class SteamTagNamer
     {
+        private static string extensionFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         private readonly string pluginUserDataPath;
-        private readonly UniversalSteamSettings settings;
+        private readonly Plugin plugin;
+        private readonly SharedSteamSettings settings;
         private readonly IDownloader downloader;
         private ILogger logger = LogManager.GetLogger();
 
-        public SteamTagNamer(string pluginUserDataPath, UniversalSteamSettings settings, IDownloader downloader)
+        public SteamTagNamer(Plugin plugin, SharedSteamSettings settings, IDownloader downloader)
         {
-            this.pluginUserDataPath = pluginUserDataPath;
+            this.plugin = plugin;
             this.settings = settings;
             this.downloader = downloader;
         }
 
         private string GetTagNameFilePath()
         {
-            return $@"{pluginUserDataPath}\TagLocalization\{settings?.LanguageKey}.json";
+            return $@"{plugin.GetPluginUserDataPath()}\TagLocalization\{settings?.LanguageKey}.json";
         }
 
         private string GetPackedTagNameFilePath()
         {
-            var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            return $@"{dir}\SteamShared\TagLocalization\{settings?.LanguageKey}.json";
+            return $@"{extensionFolder}\SteamShared\TagLocalization\{settings?.LanguageKey}.json";
         }
 
         public Dictionary<int, string> GetTagNames()
@@ -54,8 +55,7 @@ namespace SteamLibrary.SteamShared
                 return new Dictionary<int, string>();
             }
 
-            string fileContent = File.ReadAllText(fileName);
-            var tagNames = JsonConvert.DeserializeObject<Dictionary<int, string>>(fileContent);
+            var tagNames = Serialization.FromJsonFile<Dictionary<int, string>>(fileName);
             return tagNames;
         }
 
@@ -78,7 +78,7 @@ namespace SteamLibrary.SteamShared
                 }
             }
 
-            string serialized = JsonConvert.SerializeObject(output);
+            string serialized = Serialization.ToJson(output);
             File.WriteAllText(GetTagNameFilePath(), serialized, Encoding.Unicode);
 
             return output;

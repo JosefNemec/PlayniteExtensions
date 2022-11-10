@@ -1,19 +1,21 @@
 ﻿using Playnite.SDK;
 using Playnite.SDK.Plugins;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace SteamLibrary.SteamShared
 {
-    public abstract class UniversalSteamSettingsViewModel<TSettings, TPlugin> : PluginSettingsViewModel<TSettings, TPlugin>
-        where TSettings : UniversalSteamSettings, new()
+    public abstract class SharedSteamSettingsViewModel<TSettings, TPlugin> : PluginSettingsViewModel<TSettings, TPlugin>
+        where TSettings : SharedSteamSettings, new()
         where TPlugin : Plugin
     {
-        public ObservableCollection<TagInfo> okayTags;
-        public ObservableCollection<TagInfo> blacklistedTags;
+        private ObservableCollection<TagInfo> okayTags;
+        private ObservableCollection<TagInfo> blacklistedTags;
+        private string fixedTagCountString;
 
-        protected UniversalSteamSettingsViewModel(TPlugin plugin, IPlayniteAPI playniteApi) : base(plugin, playniteApi)
+        protected SharedSteamSettingsViewModel(TPlugin plugin, IPlayniteAPI playniteApi) : base(plugin, playniteApi)
         {
             var savedSettings = LoadSavedSettings();
             if (savedSettings != null)
@@ -37,6 +39,7 @@ namespace SteamLibrary.SteamShared
                     InitializeTagNames();
                 }
             };
+            FixedTagCountString = Settings.FixedTagCount.ToString();
         }
 
         private string GetSteamLanguageForCurrentPlayniteLanguage()
@@ -89,7 +92,7 @@ namespace SteamLibrary.SteamShared
 
         private void InitializeTagNames()
         {
-            var tagNamer = new SteamTagNamer(Plugin.GetPluginUserDataPath(), Settings, new Playnite.Common.Web.Downloader());
+            var tagNamer = new SteamTagNamer(Plugin, Settings, new Playnite.Common.Web.Downloader());
             var tags = tagNamer.GetTagNames()
                 .Select(t => new TagInfo(t.Key, tagNamer.GetFinalTagName(t.Value)))
                 .OrderBy(t => t.Name).ToList();
@@ -143,6 +146,7 @@ namespace SteamLibrary.SteamShared
 
         public ObservableCollection<TagInfo> OkayTags { get => okayTags; set => SetValue(ref okayTags, value); }
         public ObservableCollection<TagInfo> BlacklistedTags { get => blacklistedTags; set => SetValue(ref blacklistedTags, value); }
+        public string FixedTagCountString { get => fixedTagCountString; set => SetValue(ref fixedTagCountString, value); }
 
         public RelayCommand<IList<object>> WhitelistCommand
         {
@@ -170,6 +174,30 @@ namespace SteamLibrary.SteamShared
                     Settings.BlacklistedTags.Add(sel.Id);
                 }
             }, (a) => a?.Count > 0);
+        }
+
+        public override bool VerifySettings(out List<string> errors)
+        {
+            if (Settings.LimitTagsToFixedAmount)
+            {
+                if (!int.TryParse(FixedTagCountString, out int fixedTagCount) || fixedTagCount < 0)
+                {
+                    errors = new List<string> { PlayniteApi.Resources.GetString(LOC.SteamValidationFixedTagCount) };
+                    return false;
+                }
+            }
+
+            return base.VerifySettings(out errors);
+        }
+
+        public override void EndEdit()
+        {
+            if (int.TryParse(FixedTagCountString, out int fixedTagCount) && fixedTagCount >= 0)
+            {
+                Settings.FixedTagCount = fixedTagCount;
+            }
+
+            base.EndEdit();
         }
     }
 }

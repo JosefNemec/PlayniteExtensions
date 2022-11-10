@@ -33,7 +33,7 @@ namespace SteamLibrary
         public bool ImportPlayTime { get; set; }
     }
 
-    public class SteamLibrarySettings : UniversalSteamSettings
+    public class SteamLibrarySettings : SharedSteamSettings
     {
         private bool isPrivateAccount;
         private string apiKey = string.Empty;
@@ -51,7 +51,7 @@ namespace SteamLibrary
         public ObservableCollection<AdditionalSteamAcccount> AdditionalAccounts { get; set; } = new ObservableCollection<AdditionalSteamAcccount>();
     }
 
-    public class SteamLibrarySettingsViewModel : UniversalSteamSettingsViewModel<SteamLibrarySettings, SteamLibrary>
+    public class SteamLibrarySettingsViewModel : SharedSteamSettingsViewModel<SteamLibrarySettings, SteamLibrary>
     {
         public AuthStatus AuthStatus
         {
@@ -195,8 +195,7 @@ namespace SteamLibrary
                 return false;
             }
 
-            errors = null;
-            return true;
+            return base.VerifySettings(out errors);
         }
 
         public void ImportSteamCategories(LocalSteamUser user)

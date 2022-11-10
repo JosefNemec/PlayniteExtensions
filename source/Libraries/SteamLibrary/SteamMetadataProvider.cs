@@ -59,7 +59,7 @@ namespace SteamLibrary
             }
             else
             {
-                return new MetadataProvider(apiClient, webApiClient, new SteamTagNamer(library.GetPluginUserDataPath(), library.SettingsViewModel.Settings, new Downloader()), library.SettingsViewModel.Settings).GetGameMetadata(
+                return new MetadataProvider(apiClient, webApiClient, new SteamTagNamer(library, library.SettingsViewModel.Settings, new Downloader()), library.SettingsViewModel.Settings).GetGameMetadata(
                     gameId.AppID,
                     library.SettingsViewModel.Settings.BackgroundSource,
                     library.SettingsViewModel.Settings.DownloadVerticalCovers);

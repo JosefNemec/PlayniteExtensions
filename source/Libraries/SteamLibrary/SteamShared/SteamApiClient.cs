@@ -36,7 +36,7 @@ namespace Steam
             }
         }
 
-        public SteamApiClient(UniversalSteamSettings settings)
+        public SteamApiClient(SharedSteamSettings settings)
         {
             steamClient = new SteamKit2.SteamClient();
             manager = new CallbackManager(steamClient);
@@ -75,7 +75,7 @@ namespace Steam
         }
 
         private AutoResetEvent onLoggedOffEvent = new AutoResetEvent(false);
-        private readonly UniversalSteamSettings settings;
+        private readonly SharedSteamSettings settings;
 
         private void onLoggedOff(SteamUser.LoggedOffCallback callback)
         {
