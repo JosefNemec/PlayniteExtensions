@@ -24,6 +24,7 @@ namespace GogLibrary.Models
 
             public List<SluggedName> genres;
             public List<SluggedName> tags;
+            public List<SluggedName> gameTags;
             public List<Feature> features;
             public string publisher;
             public List<SluggedName> developers;

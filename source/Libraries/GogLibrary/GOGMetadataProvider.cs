@@ -19,10 +19,12 @@ namespace GogLibrary
         private GogApiClient apiClient = new GogApiClient();
         private ILogger logger = LogManager.GetLogger();
         private IPlayniteAPI api;
+        private readonly GogLibrarySettings settings;
 
-        public GogMetadataProvider(IPlayniteAPI api)
+        public GogMetadataProvider(IPlayniteAPI api, GogLibrarySettings settings)
         {
             this.api = api;
+            this.settings = settings;
         }
 
         public override GameMetadata GetMetadata(Game game)
@@ -53,11 +55,11 @@ namespace GogLibrary
 
             if (storeData.StoreDetails != null)
             {
-                storeData.Genres = storeData.StoreDetails.genres?.Select(a => new MetadataNameProperty(a.name)).Cast<MetadataProperty>().ToHashSet();
-                storeData.Features = storeData.StoreDetails.features?.Where(a => a.name != "Overlay").Select(a => new MetadataNameProperty(a.name)).Cast<MetadataProperty>().ToHashSet();
-                storeData.Developers = storeData.StoreDetails.developers.Select(a => new MetadataNameProperty(a.name)).Cast<MetadataProperty>().ToHashSet();
+                storeData.Genres = storeData.StoreDetails.genres?.Select(a => new MetadataNameProperty(a.name)).ToHashSet<MetadataProperty>();
+                storeData.Features = storeData.StoreDetails.features?.Where(a => a.name != "Overlay").Select(a => new MetadataNameProperty(a.name)).ToHashSet<MetadataProperty>();
+                storeData.Developers = storeData.StoreDetails.developers.Select(a => new MetadataNameProperty(a.name)).ToHashSet<MetadataProperty>();
                 storeData.Publishers = new HashSet<MetadataProperty>() { new MetadataNameProperty(storeData.StoreDetails.publisher) };
-                var cultInfo = new CultureInfo("en-US", false).TextInfo;
+                storeData.Tags = storeData.StoreDetails.gameTags?.Select(t => new MetadataNameProperty(t.name)).ToHashSet<MetadataProperty>();
                 if (storeData.ReleaseDate == null && storeData.StoreDetails.globalReleaseDate != null)
                 {
                     storeData.ReleaseDate = new ReleaseDate(storeData.StoreDetails.globalReleaseDate.Value);
@@ -76,7 +78,7 @@ namespace GogLibrary
         internal GogGameMetadata DownloadGameMetadata(Game game)
         {
             var metadata = new GogGameMetadata();
-            var gameDetail = apiClient.GetGameDetails(game.GameId);
+            var gameDetail = apiClient.GetGameDetails(game.GameId, settings.Locale);
             if (gameDetail == null)
             {
                 logger.Warn($"Product page for game {game.GameId} not found, using fallback search.");
@@ -84,7 +86,7 @@ namespace GogLibrary
                 var match = search?.FirstOrDefault(a => a.title.Equals(game.Name, StringComparison.InvariantCultureIgnoreCase));
                 if (match != null)
                 {
-                    gameDetail = apiClient.GetGameDetails(match.id.ToString());
+                    gameDetail = apiClient.GetGameDetails(match.id.ToString(), settings.Locale);
                 }
             }
 
@@ -94,8 +96,8 @@ namespace GogLibrary
             {
                 if (gameDetail.links.product_card != @"https://www.gog.com/" && !string.IsNullOrEmpty(gameDetail.links.product_card))
                 {
-                    // This removes language component from the URL
-                    var productUrl = @"https://www.gog.com/game" + gameDetail.links.product_card.Substring(gameDetail.links.product_card.LastIndexOf("/"));
+                    string gamePath = gameDetail.links.product_card.Substring(gameDetail.links.product_card.IndexOf("game/"));
+                    var productUrl = $"https://www.gog.com/{settings.Locale}/{gamePath}";
                     metadata.StoreDetails = apiClient.GetGameStoreData(productUrl);
                 }
 
