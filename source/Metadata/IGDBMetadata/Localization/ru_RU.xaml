@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel">Импортировать неустановленные игры</sys:String>
   <sys:String x:Key="LOCIGDBSettingsConnectAccount">Подключить аккаунт</sys:String>
   <sys:String x:Key="LOCIGDBLoginChecking">Проверка статуса аутентификации…</sys:String>
-  <sys:String x:Key="LOCIGDBLoggedIn">Пользователь аутентифицирован</sys:String>
-  <sys:String x:Key="LOCIGDBNotLoggedIn">Требуется аутентификация</sys:String>
-  <sys:String x:Key="LOCIGDBNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
+  <sys:String x:Key="LOCIGDBLoggedIn">Пользователь авторизован </sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedIn">Требуется авторизация</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedInError">Не удалось авторизовать пользователя.</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>

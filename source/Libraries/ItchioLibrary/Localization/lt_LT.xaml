@@ -15,9 +15,9 @@
   <sys:String x:Key="LOCitchioPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">Vieša paskyra</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">API raktas</sys:String>
-  <sys:String x:Key="LOCitchioStartUsingClient" />
-  <sys:String x:Key="LOCitchioImportPlaytime" />
-  <sys:String x:Key="LOCitchioAccountID" />
+  <sys:String x:Key="LOCitchioStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
+  <sys:String x:Key="LOCitchioImportPlaytime">Importuoti pražaistą laiką</sys:String>
+  <sys:String x:Key="LOCitchioAccountID">Paskyros ID</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">bus atidarytas itch.io klientas. Prašome prisijungti ir uždaryti šį pranešimą.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Laukiama vartotojo prisijungimo. Baigus prašome uždaryti šį langą…</sys:String>

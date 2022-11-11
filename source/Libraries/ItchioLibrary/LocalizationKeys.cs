@@ -78,6 +78,10 @@ namespace System
         /// </summary>
         public const string itchioAccountID = "LOCitchioAccountID";
         /// <summary>
+        /// Metadata language:
+        /// </summary>
+        public const string itchioMetadataLanguageLabel = "LOCitchioMetadataLanguageLabel";
+        /// <summary>
         /// itch.io will be launched. Please sign in and then close this message.
         /// </summary>
         public const string ItchioSignInNotif = "LOCItchioSignInNotif";

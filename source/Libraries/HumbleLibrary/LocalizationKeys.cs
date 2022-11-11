@@ -78,6 +78,10 @@ namespace System
         /// </summary>
         public const string HumbleAccountID = "LOCHumbleAccountID";
         /// <summary>
+        /// Metadata language:
+        /// </summary>
+        public const string HumbleMetadataLanguageLabel = "LOCHumbleMetadataLanguageLabel";
+        /// <summary>
         /// Ignore third party store games
         /// </summary>
         public const string HumbleIgnoreThirdPartyStoreGames = "LOCHumbleIgnoreThirdPartyStoreGames";

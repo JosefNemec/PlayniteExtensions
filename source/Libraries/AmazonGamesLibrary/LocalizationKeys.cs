@@ -77,5 +77,9 @@ namespace System
         /// Account ID
         /// </summary>
         public const string AmazonAccountID = "LOCAmazonAccountID";
+        /// <summary>
+        /// Metadata language:
+        /// </summary>
+        public const string AmazonMetadataLanguageLabel = "LOCAmazonMetadataLanguageLabel";
     }
 }

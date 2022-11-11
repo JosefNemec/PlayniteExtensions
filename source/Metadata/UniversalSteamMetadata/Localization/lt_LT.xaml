@@ -15,9 +15,9 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Vieša paskyra</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API raktas</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient" />
-  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime" />
-  <sys:String x:Key="LOCUniversalSteamMetadataAccountID" />
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Importuoti pražaistą laiką</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID">Paskyros ID</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Koks mano vartotojo vardas?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Vartotojo nuorodos pavadinimas</sys:String>
@@ -36,20 +36,20 @@
   <sys:String x:Key="LOCSettingsSteamCatImportError">Nepavyko įtrauti kategorijų iš Steam: {0}</sys:String>
   <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount" />
   <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb" />
-  <sys:String x:Key="LOCSettingsSteamLastActivityImportError" />
+  <sys:String x:Key="LOCSettingsSteamLastActivityImportError">Nepavyko importuoti Steam paskutinio žaisto informacijos {0} </sys:String>
   <sys:String x:Key="LOCSettingsApiKeyTooltip">API raktas reikalingas privačioms Steam paskyroms</sys:String>
   <sys:String x:Key="LOCSettingsApiKeyUrlText">Gauti API raktą</sys:String>
   <sys:String x:Key="LOCSettingsSteamImportMetadata">Importuoti metaduomenis iš Steam paskyros:</sys:String>
   <sys:String x:Key="LOCImportSteamCategoriesLabel">Įtraukti Steam kategorijas</sys:String>
-  <sys:String x:Key="LOCImportSteamLastActivityLabel" />
+  <sys:String x:Key="LOCImportSteamLastActivityLabel">Importuoti "Steam" Paskutinį Žaistą</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSource">Fono paveikslėlio šaltinis:</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceImage">Žaidimo paveikslėlis</sys:String>
-  <sys:String x:Key="LOCSteamBackgroundSourceScreenshot" />
+  <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Saugoti ekrano kopiją</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Saugoti fono paveikslėlį</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Baneris</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton" />
-  <sys:String x:Key="LOCSteamFriendsTooltip" />
-  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames" />
-  <sys:String x:Key="LOCSteamAdditionalAccounts" />
+  <sys:String x:Key="LOCSteamFriendsTooltip">"Steam" Draugai</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignoruoti įdiegtus žaidimus iš kitų paskyrų</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">Papildomos Paskyros</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
 </ResourceDictionary>

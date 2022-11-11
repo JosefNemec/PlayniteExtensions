@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel" />
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel" />
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">खाते कनेक्ट करा</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking" />
+  <sys:String x:Key="LOCHumbleLoggedIn" />
+  <sys:String x:Key="LOCHumbleNotLoggedIn" />
+  <sys:String x:Key="LOCHumbleNotLoggedInError" />
+  <sys:String x:Key="LOCHumbleAuthenticateLabel" />
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly" />
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink" />
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues" />
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">सर्व गेम आयात करा</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">खाजगी खाते</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">सार्वजनिक खाते</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">API की</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">{0} क्लाएंट वापरून सुरू करा</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">खेळलेल्याची कालावधी आयात करा</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID" />
+  <!--Humble-->
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames" />
+  <sys:String x:Key="LOCHumbleImportChoiceGames">हम्बल चॉइस गेम आयात करा</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip" />
+  <sys:String x:Key="LOCHumbleGeneralLibrary">हम्बल लायब्ररी गेम आयात करा</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve" />
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree" />
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip" />
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">गेम सुरू करताना नेहमीच हम्बल अ‍ॅपचा वापर करा</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
+  <sys:String x:Key="LOCHumbleNonTroveInstallError" />
+</ResourceDictionary>

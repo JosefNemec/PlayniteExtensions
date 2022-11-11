@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCBattleNetSettingsImportUninstalledLabel">Импортировать неустановленные игры</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsConnectAccount">Подключить аккаунт</sys:String>
   <sys:String x:Key="LOCBattleNetLoginChecking">Проверка статуса аутентификации…</sys:String>
-  <sys:String x:Key="LOCBattleNetLoggedIn">Пользователь аутентифицирован</sys:String>
-  <sys:String x:Key="LOCBattleNetNotLoggedIn">Требуется аутентификация</sys:String>
-  <sys:String x:Key="LOCBattleNetNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
+  <sys:String x:Key="LOCBattleNetLoggedIn">Пользователь авторизован </sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedIn">Требуется авторизация</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedInError">Не удалось авторизовать пользователя.</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>

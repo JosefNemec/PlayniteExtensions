@@ -67,3 +67,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_10.pext
     Changelog:
       - Fixed metadata links not being applied in some cases
+  - Version: 2.11
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2022-11-11
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_11.pext
+    Changelog:
+      - Added support for localized metadata (by Jeshibu)
+      - Added support for import of store tags (by Jeshibu)

@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">Импортировать неустановленные игры</sys:String>
   <sys:String x:Key="LOCEpicSettingsConnectAccount">Подключить аккаунт</sys:String>
   <sys:String x:Key="LOCEpicLoginChecking">Проверка статуса аутентификации…</sys:String>
-  <sys:String x:Key="LOCEpicLoggedIn">Пользователь аутентифицирован</sys:String>
-  <sys:String x:Key="LOCEpicNotLoggedIn">Требуется аутентификация</sys:String>
-  <sys:String x:Key="LOCEpicNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
+  <sys:String x:Key="LOCEpicLoggedIn">Пользователь авторизован </sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedIn">Требуется авторизация</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedInError">Не удалось авторизовать пользователя.</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>

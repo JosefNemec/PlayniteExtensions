@@ -58,7 +58,7 @@ namespace GogLibrary
 
         public override LibraryMetadataProvider GetMetadataDownloader()
         {
-            return new GogMetadataProvider(PlayniteApi);
+            return new GogMetadataProvider(PlayniteApi, SettingsViewModel.Settings);
         }
 
         public override IEnumerable<PlayController> GetPlayActions(GetPlayActionsArgs args)

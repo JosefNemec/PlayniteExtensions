@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel">Импортировать неустановленные игры</sys:String>
   <sys:String x:Key="LOCRockstarSettingsConnectAccount">Подключить аккаунт</sys:String>
   <sys:String x:Key="LOCRockstarLoginChecking">Проверка статуса аутентификации…</sys:String>
-  <sys:String x:Key="LOCRockstarLoggedIn">Пользователь аутентифицирован</sys:String>
-  <sys:String x:Key="LOCRockstarNotLoggedIn">Требуется аутентификация</sys:String>
-  <sys:String x:Key="LOCRockstarNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
+  <sys:String x:Key="LOCRockstarLoggedIn">Пользователь авторизован </sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedIn">Требуется авторизация</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedInError">Не удалось авторизовать пользователя.</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>

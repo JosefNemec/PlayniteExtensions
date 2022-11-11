@@ -17,6 +17,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">Start using {0} client</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Import play time</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Metadata language:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignore third party store games</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">Import Humble Choice games</sys:String>

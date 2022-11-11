@@ -15,19 +15,19 @@
   <sys:String x:Key="LOCHumblePrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Vieša paskyra</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">API raktas</sys:String>
-  <sys:String x:Key="LOCHumbleStartUsingClient" />
-  <sys:String x:Key="LOCHumbleImportPlaytime" />
-  <sys:String x:Key="LOCHumbleAccountID" />
+  <sys:String x:Key="LOCHumbleStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">Importuoti pražaistą laiką</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">Paskyros ID</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames" />
-  <sys:String x:Key="LOCHumbleImportChoiceGames" />
+  <sys:String x:Key="LOCHumbleImportChoiceGames">Importuoti "Humble Choice" žaidimus</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip" />
-  <sys:String x:Key="LOCHumbleGeneralLibrary" />
+  <sys:String x:Key="LOCHumbleGeneralLibrary">Importuoti "Humble Library" žaidimus</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve" />
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree" />
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Visada naudoti "Humble" programėlę žaidimų paleidimui</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
   <sys:String x:Key="LOCHumbleNonTroveInstallError" />
 </ResourceDictionary>

@@ -78,6 +78,10 @@ namespace System
         /// </summary>
         public const string SteamAccountID = "LOCSteamAccountID";
         /// <summary>
+        /// Metadata language:
+        /// </summary>
+        public const string SteamMetadataLanguageLabel = "LOCSteamMetadataLanguageLabel";
+        /// <summary>
         /// What's my account name?
         /// </summary>
         public const string SettingsWhatsSteamName = "LOCSettingsWhatsSteamName";

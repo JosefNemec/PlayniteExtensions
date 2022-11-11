@@ -17,6 +17,7 @@
     <sys:String x:Key="LOCStartUsingClient">Start using {0} client</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Import play time</sys:String>
     <sys:String x:Key="LOCAccountID">Account ID</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">Metadata language:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io will be launched. Please sign in and then close this message.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Waiting for user to sign in, please close this when you're done…</sys:String>

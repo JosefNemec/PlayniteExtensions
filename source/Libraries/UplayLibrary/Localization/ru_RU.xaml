@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCUbisoftSettingsImportUninstalledLabel">Импортировать неустановленные игры</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsConnectAccount">Подключить аккаунт</sys:String>
   <sys:String x:Key="LOCUbisoftLoginChecking">Проверка статуса аутентификации…</sys:String>
-  <sys:String x:Key="LOCUbisoftLoggedIn">Пользователь аутентифицирован</sys:String>
-  <sys:String x:Key="LOCUbisoftNotLoggedIn">Требуется аутентификация</sys:String>
-  <sys:String x:Key="LOCUbisoftNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
+  <sys:String x:Key="LOCUbisoftLoggedIn">Пользователь авторизован </sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedIn">Требуется авторизация</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedInError">Не удалось авторизовать пользователя.</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>

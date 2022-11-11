@@ -61,7 +61,7 @@
     <sys:String x:Key="LOCSteamBackgroundSourceStore">商店背景</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">横幅</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">在顶部面板显示好友按钮</sys:String>
-    <sys:String x:Key="LOCSteamFriendsTooltip">Steam 好友</sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">Steam好友</sys:String>
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">忽略其他账户安装的游戏</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">额外账户</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">如果您想从其他 Steam 账户导入游戏，请指定这些账户的 ID 和 API 密钥对。更多信息请参阅 Steam 疑难解答的 wiki 页面。</sys:String>

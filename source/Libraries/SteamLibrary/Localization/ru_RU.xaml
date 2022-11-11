@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCSteamSettingsImportUninstalledLabel">Импортировать неустановленные игры</sys:String>
   <sys:String x:Key="LOCSteamSettingsConnectAccount">Подключить аккаунт</sys:String>
   <sys:String x:Key="LOCSteamLoginChecking">Проверка статуса аутентификации…</sys:String>
-  <sys:String x:Key="LOCSteamLoggedIn">Пользователь аутентифицирован</sys:String>
-  <sys:String x:Key="LOCSteamNotLoggedIn">Требуется аутентификация</sys:String>
-  <sys:String x:Key="LOCSteamNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
+  <sys:String x:Key="LOCSteamLoggedIn">Пользователь авторизован </sys:String>
+  <sys:String x:Key="LOCSteamNotLoggedIn">Требуется авторизация</sys:String>
+  <sys:String x:Key="LOCSteamNotLoggedInError">Не удалось авторизовать пользователя.</sys:String>
   <sys:String x:Key="LOCSteamAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCSteamSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCSteamTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
@@ -40,8 +40,8 @@
   <sys:String x:Key="LOCSettingsApiKeyTooltip">Для закрытых Steam-аккаунтов необходим API-ключ</sys:String>
   <sys:String x:Key="LOCSettingsApiKeyUrlText">Получить API-ключ</sys:String>
   <sys:String x:Key="LOCSettingsSteamImportMetadata">Импортировать метаданные из аккаунта Steam:</sys:String>
-  <sys:String x:Key="LOCImportSteamCategoriesLabel">Импорт. категории из Steam</sys:String>
-  <sys:String x:Key="LOCImportSteamLastActivityLabel">Импорт. из Steam время посл. запуска игр</sys:String>
+  <sys:String x:Key="LOCImportSteamCategoriesLabel">Импортировать категории из Steam</sys:String>
+  <sys:String x:Key="LOCImportSteamLastActivityLabel">Импортировать последнюю запущенную игру из Steam</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSource">Источник фонового изображения</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceImage">Изображение игры</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Скриншот из магазина</sys:String>

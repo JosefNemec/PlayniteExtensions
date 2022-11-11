@@ -17,6 +17,7 @@
   <sys:String x:Key="LOCSteamStartUsingClient">Start using {0} client</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Import play time</sys:String>
   <sys:String x:Key="LOCSteamAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCSteamMetadataLanguageLabel">Metadata language:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">What's my account name?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Account URL Name</sys:String>
