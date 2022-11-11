@@ -77,5 +77,9 @@ namespace System
         /// Account ID
         /// </summary>
         public const string RockstarAccountID = "LOCRockstarAccountID";
+        /// <summary>
+        /// Metadata language:
+        /// </summary>
+        public const string RockstarMetadataLanguageLabel = "LOCRockstarMetadataLanguageLabel";
     }
 }

@@ -17,4 +17,5 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">Start using {0} client</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Import play time</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Metadata language:</sys:String>
 </ResourceDictionary>

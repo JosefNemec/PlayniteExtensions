@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel">Импортировать неустановленные игры</sys:String>
   <sys:String x:Key="LOCAmazonSettingsConnectAccount">Подключить аккаунт</sys:String>
   <sys:String x:Key="LOCAmazonLoginChecking">Проверка статуса аутентификации…</sys:String>
-  <sys:String x:Key="LOCAmazonLoggedIn">Пользователь аутентифицирован</sys:String>
-  <sys:String x:Key="LOCAmazonNotLoggedIn">Требуется аутентификация</sys:String>
-  <sys:String x:Key="LOCAmazonNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
+  <sys:String x:Key="LOCAmazonLoggedIn">Пользователь авторизован </sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedIn">Требуется авторизация</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedInError">Не удалось авторизовать пользователя.</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>

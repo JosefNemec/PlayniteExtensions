@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCBattleNetPrivateAccount">חשבון פרטי</sys:String>
   <sys:String x:Key="LOCBattleNetPublicAccount">חשבון ציבורי</sys:String>
   <sys:String x:Key="LOCBattleNetAPIKey">מפתח API</sys:String>
-  <sys:String x:Key="LOCBattleNetStartUsingClient" />
+  <sys:String x:Key="LOCBattleNetStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">מזהה משתמש</sys:String>
 </ResourceDictionary>

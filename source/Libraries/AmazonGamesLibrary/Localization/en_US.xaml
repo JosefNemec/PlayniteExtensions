@@ -17,4 +17,5 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">Start using {0} client</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Import play time</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Metadata language:</sys:String>
 </ResourceDictionary>

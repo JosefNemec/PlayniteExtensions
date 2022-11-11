@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Импортировать неустановленные игры</sys:String>
   <sys:String x:Key="LOCitchioSettingsConnectAccount">Подключить аккаунт</sys:String>
   <sys:String x:Key="LOCitchioLoginChecking">Проверка статуса аутентификации…</sys:String>
-  <sys:String x:Key="LOCitchioLoggedIn">Пользователь аутентифицирован</sys:String>
-  <sys:String x:Key="LOCitchioNotLoggedIn">Требуется аутентификация</sys:String>
-  <sys:String x:Key="LOCitchioNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">Пользователь авторизован </sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedIn">Требуется авторизация</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">Не удалось авторизовать пользователя.</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
@@ -20,7 +20,7 @@
   <sys:String x:Key="LOCitchioAccountID">ID аккаунта</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">Откроется клиент itch.io. Пожалуйста, войдите в систему и закройте это сообщение.</sys:String>
-  <sys:String x:Key="LOCItchioSignInWaitMessage">Ожидание входа в учетную запись, закройте сообщение по готовности…</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">Ожидание входа в учетную запись, закройте это сообщение, как будете готовы…</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">Приложение Itch.io версии 25 или новее не установлено.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Импорт бесплатных игр из коллекций.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Будут импортированы:</sys:String>
