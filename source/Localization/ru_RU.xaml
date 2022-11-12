@@ -4,9 +4,9 @@
     <sys:String x:Key="LOCSettingsImportUninstalledLabel">Импортировать неустановленные игры</sys:String>
     <sys:String x:Key="LOCSettingsConnectAccount">Подключить аккаунт</sys:String>
     <sys:String x:Key="LOCLoginChecking">Проверка статуса аутентификации…</sys:String>
-    <sys:String x:Key="LOCLoggedIn">Пользователь аутентифицирован</sys:String>
-    <sys:String x:Key="LOCNotLoggedIn">Требуется аутентификация</sys:String>
-    <sys:String x:Key="LOCNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
+    <sys:String x:Key="LOCLoggedIn">Пользователь авторизован </sys:String>
+    <sys:String x:Key="LOCNotLoggedIn">Требуется авторизация</sys:String>
+    <sys:String x:Key="LOCNotLoggedInError">Не удалось авторизовать пользователя.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Аутентификация</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
@@ -20,7 +20,7 @@
     <sys:String x:Key="LOCAccountID">ID аккаунта</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">Откроется клиент itch.io. Пожалуйста, войдите в систему и закройте это сообщение.</sys:String>
-    <sys:String x:Key="LOCItchioSignInWaitMessage">Ожидание входа в учетную запись, закройте сообщение по готовности…</sys:String>
+    <sys:String x:Key="LOCItchioSignInWaitMessage">Ожидание входа в учетную запись, закройте это сообщение, как будете готовы…</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">Приложение Itch.io версии 25 или новее не установлено.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Импорт бесплатных игр из коллекций.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Будут импортированы:</sys:String>
@@ -29,7 +29,7 @@
     <sys:String x:Key="LOCGOGUseAccountName">Имя учетной записи</sys:String>
     <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Войдите в ваш аккаунт или используйте публичное имя вашего аккаунта для синхронизации всей игровой библиотеки.
 Обратите внимание, что использование имени аккаунта работает только для тех аккаунтов, у которых в настройках конфиденциальности GOG выставлена публичная видимость.</sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxy">Запуск игр с помощью клиента GOG Galaxy</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxy">Запускать игры с помощью клиента GOG Galaxy</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Это позволит включить функции GOG Galaxy, такие как облачные сохранения, отслеживание игрового времени и т. д.</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Как узнать имя моей учетки?</sys:String>
@@ -53,8 +53,8 @@
     <sys:String x:Key="LOCSettingsApiKeyTooltip">Для закрытых Steam-аккаунтов необходим API-ключ</sys:String>
     <sys:String x:Key="LOCSettingsApiKeyUrlText">Получить API-ключ</sys:String>
     <sys:String x:Key="LOCSettingsSteamImportMetadata">Импортировать метаданные из аккаунта Steam:</sys:String>
-    <sys:String x:Key="LOCImportSteamCategoriesLabel">Импорт. категории из Steam</sys:String>
-    <sys:String x:Key="LOCImportSteamLastActivityLabel">Импорт. из Steam время посл. запуска игр</sys:String>
+    <sys:String x:Key="LOCImportSteamCategoriesLabel">Импортировать категории из Steam</sys:String>
+    <sys:String x:Key="LOCImportSteamLastActivityLabel">Импортировать последнюю запущенную игру из Steam</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSource">Источник фонового изображения</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceImage">Изображение игры</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Скриншот из магазина</sys:String>
@@ -70,19 +70,18 @@
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">При наличии нескольких изображений используйте:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Выбрать фоновое изображение для {0}</sys:String>
     <!--Humble-->
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Игнорировать игры со сторонних площадок</sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Игнорировать игры из других магазинов</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Импортирование игр Humble Choice</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Импортирование игр, доступных по подписке Humble Choice.</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">Импортирование игр из библиотеки Humble </sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Импортировать стандартные покупки в магазине Humble и покупки бандлов.</sys:String>
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Включает пропуск игр, которым требуются сторонние клиенты,
-в том числе уже доступные в Playnite площадки, чтобы избежать дублирования.</sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Включить возможность пропускать импорт игр, для которых требуются сторонние клиенты, включая магазины, уже доступные в Playnite, для предотвращения появления дубликатов.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Импортировать, если доступна версия без DRM</sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Импортировать игры из стороннего клиента, если также доступна версия без DRM</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Импортировать игры, требующие сторонних клиентов, если доступна версия без DRM.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Всегда использовать приложение Humble для запуска игр</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Если этот параметр отключен, Playnite будет пытаться запускать игры напрямую, минуя приложение Humble.</sys:String>
     <sys:String x:Key="LOCHumbleNonTroveInstallError">Автоустановка и удаление игр вне подписочного сервиса Humble пока не поддерживается.</sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">При открытии клиента запускать приложение Xbox вместо Microsoft Store</sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Запускать приложение Xbox Pass вместо Microsoft Store при открытии клиента</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Импорт консольных игр Xbox</sys:String>
 </ResourceDictionary>

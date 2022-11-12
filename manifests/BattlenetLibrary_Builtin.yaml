@@ -61,3 +61,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_9.pext
     Changelog:
       - Renamed Overwatch to Overwatch 2 (doesn't affect already imported Overwatch entry)
+  - Version: 2.10
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-11-01
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_10.pext
+    Changelog:
+      - Added Modern Warfare II support

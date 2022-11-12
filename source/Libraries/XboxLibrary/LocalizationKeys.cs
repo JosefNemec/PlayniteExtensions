@@ -78,6 +78,10 @@ namespace System
         /// </summary>
         public const string XboxAccountID = "LOCXboxAccountID";
         /// <summary>
+        /// Metadata language:
+        /// </summary>
+        public const string XboxMetadataLanguageLabel = "LOCXboxMetadataLanguageLabel";
+        /// <summary>
         /// Start Xbox Pass app instead of Microsoft Store when opening client
         /// </summary>
         public const string XboxXboxAppClientPriorityLaunch = "LOCXboxXboxAppClientPriorityLaunch";

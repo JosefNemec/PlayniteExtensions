@@ -15,9 +15,9 @@
   <sys:String x:Key="LOCSteamPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Conta pública</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">Chave da API</sys:String>
-  <sys:String x:Key="LOCSteamStartUsingClient" />
-  <sys:String x:Key="LOCSteamImportPlaytime" />
-  <sys:String x:Key="LOCSteamAccountID" />
+  <sys:String x:Key="LOCSteamStartUsingClient">Comezar usando o cliente {0}</sys:String>
+  <sys:String x:Key="LOCSteamImportPlaytime">Importar tempo de xogo</sys:String>
+  <sys:String x:Key="LOCSteamAccountID">ID da conta</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">¿Cál é o nome da miña conta?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Nome da ligazón da conta</sys:String>
@@ -48,8 +48,8 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Imaxe de fondo da tenda</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Banner</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Mostra o botón de amizades no panel superior</sys:String>
-  <sys:String x:Key="LOCSteamFriendsTooltip" />
-  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames" />
-  <sys:String x:Key="LOCSteamAdditionalAccounts" />
-  <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
+  <sys:String x:Key="LOCSteamFriendsTooltip">Amizades de Steam</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignorar os xogos instalados doutras contas</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">Contas adicionais</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Especifique o ID da conta Steam e o par de chaves da API de outras contas se quixeras importar xogos delas. Vai a páxina da wiki de solucións de problemas de Steam para máis información.</sys:String>
 </ResourceDictionary>

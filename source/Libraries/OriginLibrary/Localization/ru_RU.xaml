@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCOriginSettingsImportUninstalledLabel">Импортировать неустановленные игры</sys:String>
   <sys:String x:Key="LOCOriginSettingsConnectAccount">Подключить аккаунт</sys:String>
   <sys:String x:Key="LOCOriginLoginChecking">Проверка статуса аутентификации…</sys:String>
-  <sys:String x:Key="LOCOriginLoggedIn">Пользователь аутентифицирован</sys:String>
-  <sys:String x:Key="LOCOriginNotLoggedIn">Требуется аутентификация</sys:String>
-  <sys:String x:Key="LOCOriginNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
+  <sys:String x:Key="LOCOriginLoggedIn">Пользователь авторизован </sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedIn">Требуется авторизация</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedInError">Не удалось авторизовать пользователя.</sys:String>
   <sys:String x:Key="LOCOriginAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCOriginSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCOriginTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>

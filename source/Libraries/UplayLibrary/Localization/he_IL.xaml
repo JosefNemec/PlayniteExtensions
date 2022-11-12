@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount">חשבון פרטי</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">חשבון ציבורי</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">מפתח API</sys:String>
-  <sys:String x:Key="LOCUbisoftStartUsingClient" />
+  <sys:String x:Key="LOCUbisoftStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">מזהה משתמש</sys:String>
 </ResourceDictionary>

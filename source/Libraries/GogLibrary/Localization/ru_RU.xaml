@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel">Импортировать неустановленные игры</sys:String>
   <sys:String x:Key="LOCGOGSettingsConnectAccount">Подключить аккаунт</sys:String>
   <sys:String x:Key="LOCGOGLoginChecking">Проверка статуса аутентификации…</sys:String>
-  <sys:String x:Key="LOCGOGLoggedIn">Пользователь аутентифицирован</sys:String>
-  <sys:String x:Key="LOCGOGNotLoggedIn">Требуется аутентификация</sys:String>
-  <sys:String x:Key="LOCGOGNotLoggedInError">Не удалось аутентифицировать пользователя.</sys:String>
+  <sys:String x:Key="LOCGOGLoggedIn">Пользователь авторизован </sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedIn">Требуется авторизация</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedInError">Не удалось авторизовать пользователя.</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Аутентификация</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
@@ -23,6 +23,6 @@
   <sys:String x:Key="LOCGOGUseAccountName">Имя учетной записи</sys:String>
   <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Войдите в ваш аккаунт или используйте публичное имя вашего аккаунта для синхронизации всей игровой библиотеки.
 Обратите внимание, что использование имени аккаунта работает только для тех аккаунтов, у которых в настройках конфиденциальности GOG выставлена публичная видимость.</sys:String>
-  <sys:String x:Key="LOCSettingsGOGUseGalaxy">Запуск игр с помощью клиента GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxy">Запускать игры с помощью клиента GOG Galaxy</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Это позволит включить функции GOG Galaxy, такие как облачные сохранения, отслеживание игрового времени и т. д.</sys:String>
 </ResourceDictionary>

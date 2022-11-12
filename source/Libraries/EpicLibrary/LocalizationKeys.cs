@@ -77,5 +77,9 @@ namespace System
         /// Account ID
         /// </summary>
         public const string EpicAccountID = "LOCEpicAccountID";
+        /// <summary>
+        /// Metadata language:
+        /// </summary>
+        public const string EpicMetadataLanguageLabel = "LOCEpicMetadataLanguageLabel";
     }
 }

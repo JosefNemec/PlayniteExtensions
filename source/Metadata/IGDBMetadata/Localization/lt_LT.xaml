@@ -15,11 +15,11 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Vieša paskyra</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">API raktas</sys:String>
-  <sys:String x:Key="LOCIGDBStartUsingClient" />
-  <sys:String x:Key="LOCIGDBImportPlaytime" />
-  <sys:String x:Key="LOCIGDBAccountID" />
+  <sys:String x:Key="LOCIGDBStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
+  <sys:String x:Key="LOCIGDBImportPlaytime">Importuoti pražaistą laiką</sys:String>
+  <sys:String x:Key="LOCIGDBAccountID">Paskyros ID</sys:String>
   <!--IGDB-->
-  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary" />
+  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Naudoti ekrano kopijas jei officiali medžiaga nepasiekiama</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle" />
-  <sys:String x:Key="LOCIgdbSelectBackgroundTitle" />
+  <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Pasirinkti fono nuotrauką {0}</sys:String>
 </ResourceDictionary>

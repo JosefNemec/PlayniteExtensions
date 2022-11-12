@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCAmazonPrivateAccount">חשבון פרטי</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">חשבון ציבורי</sys:String>
   <sys:String x:Key="LOCAmazonAPIKey">מפתח API</sys:String>
-  <sys:String x:Key="LOCAmazonStartUsingClient" />
+  <sys:String x:Key="LOCAmazonStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">מזהה משתמש</sys:String>
 </ResourceDictionary>

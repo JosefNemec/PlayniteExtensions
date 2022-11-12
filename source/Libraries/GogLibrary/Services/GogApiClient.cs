@@ -66,13 +66,13 @@ namespace GogLibrary.Services
             return null;
         }
 
-        public ProductApiDetail GetGameDetails(string id)
+        public ProductApiDetail GetGameDetails(string id, string locale = "en")
         {
-            var baseUrl = @"http://api.gog.com/products/{0}?expand=description";
+            var baseUrl = @"http://api.gog.com/products/{0}?expand=description&locale={1}";
 
             try
             {
-                var stringData = HttpDownloader.DownloadString(string.Format(baseUrl, id), new List<System.Net.Cookie>() { new System.Net.Cookie("gog_lc", Gog.EnStoreLocaleString) });
+                var stringData = HttpDownloader.DownloadString(string.Format(baseUrl, id, locale), new List<Cookie>() { new Cookie("gog_lc", Gog.EnStoreLocaleString) });
                 return Serialization.FromJson<ProductApiDetail>(stringData);
             }
             catch (WebException exc)

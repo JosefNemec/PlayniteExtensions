@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">Vieša paskyra</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">API raktas</sys:String>
-  <sys:String x:Key="LOCUbisoftStartUsingClient" />
-  <sys:String x:Key="LOCUbisoftImportPlaytime" />
-  <sys:String x:Key="LOCUbisoftAccountID" />
+  <sys:String x:Key="LOCUbisoftStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
+  <sys:String x:Key="LOCUbisoftImportPlaytime">Importuoti pražaistą laiką</sys:String>
+  <sys:String x:Key="LOCUbisoftAccountID">Paskyros ID</sys:String>
 </ResourceDictionary>

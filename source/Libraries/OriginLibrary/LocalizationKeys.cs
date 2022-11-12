@@ -77,5 +77,9 @@ namespace System
         /// Account ID
         /// </summary>
         public const string OriginAccountID = "LOCOriginAccountID";
+        /// <summary>
+        /// Metadata language:
+        /// </summary>
+        public const string OriginMetadataLanguageLabel = "LOCOriginMetadataLanguageLabel";
     }
 }

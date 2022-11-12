@@ -15,13 +15,14 @@
   <sys:String x:Key="LOCitchioPrivateAccount">חשבון פרטי</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">חשבון ציבורי</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">מפתח API</sys:String>
-  <sys:String x:Key="LOCitchioStartUsingClient" />
+  <sys:String x:Key="LOCitchioStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCitchioAccountID">מזהה משתמש</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">תוכנת itch.io תפתח כעת. אנא התחבר ואז סגור את הודעה זו.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">מחכה לחיבור משתמש, אנא סגור הודעה זו כשתסיים…</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">תוכנת Itch גירסה 25 או חדשה יותר אינה מותקנת.</sys:String>
-  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel" />
-  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel" />
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">ייבא משחקים בחינם מאוספים.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">פריטים לייבוא:
+</sys:String>
 </ResourceDictionary>

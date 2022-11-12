@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">חשבון פרטי</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">חשבון ציבורי</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">מפתח API</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient" />
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">מזהה משתמש</sys:String>
   <!--Steam-->
@@ -47,9 +47,9 @@
   <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">צילום מסך חנות</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceStore">רקע חנות</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">באנר</sys:String>
-  <sys:String x:Key="LOCSteamShowFriendsButton" />
-  <sys:String x:Key="LOCSteamFriendsTooltip" />
-  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames" />
-  <sys:String x:Key="LOCSteamAdditionalAccounts" />
-  <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
+  <sys:String x:Key="LOCSteamShowFriendsButton">לחצן 'הצג חברים' בחלונית העליונה</sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip">חברים ב-Stream</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">התעלם ממשחקים מותקנים מחשבונות אחרים</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">חשבונות נוספים</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">ציין מזהה חשבון Steam וזוג מפתחות API של חשבונות אחרים אם ברצונך לייבא מהם משחקים. ראה דף ויקי לפתרון בעיות של Steam לקבלת מידע נוסף.</sys:String>
 </ResourceDictionary>

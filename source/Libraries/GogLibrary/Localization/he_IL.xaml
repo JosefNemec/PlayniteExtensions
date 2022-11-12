@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCGOGPrivateAccount">חשבון פרטי</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">חשבון ציבורי</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">מפתח API</sys:String>
-  <sys:String x:Key="LOCGOGStartUsingClient" />
+  <sys:String x:Key="LOCGOGStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCGOGAccountID">מזהה משתמש</sys:String>
   <!--GOG-->

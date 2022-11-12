@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCEpicPrivateAccount">חשבון פרטי</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">חשבון ציבורי</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">מפתח API</sys:String>
-  <sys:String x:Key="LOCEpicStartUsingClient" />
+  <sys:String x:Key="LOCEpicStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCEpicAccountID">מזהה משתמש</sys:String>
 </ResourceDictionary>
