@@ -17,7 +17,6 @@ namespace SteamLibrary.SteamShared
     public class SteamTagNamer
     {
         private static string extensionFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        private readonly string pluginUserDataPath;
         private readonly Plugin plugin;
         private readonly SharedSteamSettings settings;
         private readonly IDownloader downloader;
@@ -64,6 +63,7 @@ namespace SteamLibrary.SteamShared
         public Dictionary<int, string> UpdateAndGetTagNames()
         {
             string url = $"https://store.steampowered.com/search/?l={settings?.LanguageKey}";
+            logger.Debug("Downloading " + url);
             var content = downloader.DownloadString(url);
             var matches = tagNameRegex.Matches(content);
 

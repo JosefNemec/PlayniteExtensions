@@ -257,6 +257,7 @@ namespace Steam
             BackgroundSource backgroundSource,
             bool downloadVerticalCovers)
         {
+            logger.Trace($"Getting metadata for {appId}");
             var metadata = DownloadGameMetadata(appId, backgroundSource, downloadVerticalCovers);
             var newName = metadata.ProductDetails?["common"]["name_localized"][settings.LanguageKey]?.Value;
             if (newName != null)
@@ -473,6 +474,7 @@ namespace Steam
                 Dictionary<int, string> newTagNames = null;
 
                 var tagKeyValues = metadata.ProductDetails["common"]["store_tags"]?.Children;
+                logger.Debug($"Setting tags for {appId}, found {tagKeyValues?.Count}");
                 if (tagKeyValues != null)
                 {
                     metadata.Tags = new HashSet<MetadataProperty>();
@@ -494,6 +496,7 @@ namespace Steam
                             {
                                 if (newTagNames == null)
                                 {
+                                    logger.Debug($"Tag {tagId} not found. Fetching new ones.");
                                     newTagNames = tagNamer.UpdateAndGetTagNames();
                                 }
                                 if (!newTagNames.TryGetValue(tagId, out name))
@@ -506,6 +509,28 @@ namespace Steam
                             metadata.Tags.Add(new MetadataNameProperty(name));
                         }
                     }
+                }
+            }
+
+            string parentStr = metadata.ProductDetails?["common"]["parent"]?.Value;
+
+            if (uint.TryParse(parentStr, out uint parentId))
+            {
+                logger.Debug($"Getting parent metadata for {appId} from {parentId}");
+                var parentMetadata = GetGameMetadata(parentId, backgroundSource, downloadVerticalCovers);
+
+                metadata.Links = parentMetadata.Links; //demo appId urls either redirect to the main game or are broken
+                metadata.CoverImage = metadata.CoverImage ?? parentMetadata.CoverImage;
+                metadata.BackgroundImage = metadata.BackgroundImage ?? parentMetadata.BackgroundImage;
+
+                if (string.IsNullOrWhiteSpace(metadata.Description))
+                {
+                    metadata.Description = parentMetadata.Description;
+                }
+
+                if (metadata.Tags == null || metadata.Tags.Count == 0)
+                {
+                    metadata.Tags = parentMetadata.Tags;
                 }
             }
 

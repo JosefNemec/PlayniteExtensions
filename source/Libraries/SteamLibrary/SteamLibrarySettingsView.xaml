@@ -245,14 +245,12 @@
                              VerticalAlignment="Stretch"
                              ItemsSource="{Binding OkayTags}"
                              DisplayMemberPath="Name"
-                             MouseDoubleClick="Whitelist_MouseDoubleClick"
                              Grid.Column="0" Grid.Row="1"/>
                     <ListBox DockPanel.Dock="Top" Name="Blacklist"
                              SelectionMode="Extended" MinHeight="220"
                              VerticalAlignment="Stretch"
                              ItemsSource="{Binding BlacklistedTags}"
                              DisplayMemberPath="Name"
-                             MouseDoubleClick="Blacklist_MouseDoubleClick"
                              Grid.Column="2" Grid.Row="1"/>
                     <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
                         <Button Content="&#xEA94;" Command="{Binding BlacklistCommand}" CommandParameter="{Binding SelectedItems, ElementName=Whitelist}" ToolTip="{DynamicResource LOCSteamTagBlacklistTooltip}"/>
