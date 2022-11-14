@@ -24,6 +24,7 @@ using Steam;
 using System.Diagnostics;
 using Playnite.SDK.Data;
 using System.Windows.Media;
+using Playnite.Common;
 
 namespace SteamLibrary
 {
@@ -493,6 +494,11 @@ namespace SteamLibrary
             var id = new SteamID(steamId);
             var result = new Dictionary<string, DateTime>();
             var vdf = Path.Combine(Steam.InstallationPath, "userdata", id.AccountID.ToString(), "config", "localconfig.vdf");
+            if (!FileSystem.FileExists(vdf))
+            {
+                return result;
+            }
+
             var sharedconfig = new KeyValue();
             sharedconfig.ReadFileAsText(vdf);
 
