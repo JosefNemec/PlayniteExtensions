@@ -851,11 +851,6 @@ namespace SteamLibrary
                         }
                     }
 
-                    if (!SettingsViewModel.Settings.ImportUninstalledGames)
-                    {
-                        libraryGames = libraryGames.Where(lg => installedGames.ContainsKey(lg.GameId)).ToList();
-                    }
-
                     foreach (var game in libraryGames)
                     {
                         if (installedGames.TryGetValue(game.GameId, out var installed))
@@ -865,7 +860,10 @@ namespace SteamLibrary
                         }
                         else
                         {
-                            allGames.Add(game);
+                            if (SettingsViewModel.Settings.ImportUninstalledGames)
+                            {
+                                allGames.Add(game);
+                            }
                         }
                     }
                 }
