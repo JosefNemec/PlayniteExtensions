@@ -1,4 +1,4 @@
-﻿///
+///
 /// DO NOT MODIFY! Automatically generated via UpdateLocExtFiles.ps1 script.
 /// 
 namespace System

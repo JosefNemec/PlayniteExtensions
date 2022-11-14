@@ -1,4 +1,4 @@
-﻿///
+///
 /// DO NOT MODIFY! Automatically generated via UpdateLocExtFiles.ps1 script.
 /// 
 namespace System
@@ -18,7 +18,7 @@ namespace System
         /// </summary>
         public const string UniversalSteamMetadataSettingsConnectAccount = "LOCUniversalSteamMetadataSettingsConnectAccount";
         /// <summary>
-        /// Checking authentication statusâ€¦
+        /// Checking authentication status…
         /// </summary>
         public const string UniversalSteamMetadataLoginChecking = "LOCUniversalSteamMetadataLoginChecking";
         /// <summary>
