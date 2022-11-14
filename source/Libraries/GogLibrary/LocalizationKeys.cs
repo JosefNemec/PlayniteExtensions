@@ -101,5 +101,13 @@ namespace System
         /// This will enable GOG Galaxy features like cloud saves, game time tracking, etc.
         /// </summary>
         public const string SettingsGOGUseGalaxyTooltip = "LOCSettingsGOGUseGalaxyTooltip";
+        /// <summary>
+        /// Automatically initiate the install process when installing games on GOG Galaxy
+        /// </summary>
+        public const string GOGSettingsUseAutomaticGameInstalls = "LOCGOGSettingsUseAutomaticGameInstalls";
+        /// <summary>
+        /// If enabled, the install process will be automatically started without needing user interaction to the configured default install location.
+        /// </summary>
+        public const string GOGSettingsUseAutomaticGameInstallsTooltip = "LOCGOGSettingsUseAutomaticGameInstallsTooltip";
     }
 }
