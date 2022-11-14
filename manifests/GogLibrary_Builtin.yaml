@@ -74,3 +74,9 @@ Packages:
     Changelog:
       - Added support for localized metadata (by Jeshibu)
       - Added support for import of store tags (by Jeshibu)
+  - Version: 2.12
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2022-11-14
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_12.pext
+    Changelog:
+      - Added an option to start game installations directly in Galaxy (by darklinkpower)
