@@ -18,9 +18,11 @@ namespace GogLibrary
     public class GogInstallController : InstallController
     {
         private CancellationTokenSource watcherToken;
+        private readonly GogLibrary gogLibrary;
 
-        public GogInstallController(Game game) : base(game)
+        public GogInstallController(Game game, GogLibrary gogLibrary) : base(game)
         {
+            this.gogLibrary = gogLibrary;
             if (Gog.IsInstalled)
             {
                 Name = "Install using Galaxy";
@@ -40,7 +42,31 @@ namespace GogLibrary
         {
             if (Gog.IsInstalled)
             {
-                ProcessStarter.StartUrl(@"goggalaxy://openGameView/" + Game.GameId);
+                var startedAutomaticInstall = false;
+                if (gogLibrary.SettingsViewModel.Settings.UseAutomaticGameInstalls)
+                {
+                    var clientPath = Gog.ClientInstallationPath;
+                    if (FileSystem.FileExists(clientPath))
+                    {
+                        var arguments = string.Format(@"/gameId={0} /command=installGame", Game.GameId);
+                        ProcessStarter.StartProcess(clientPath, arguments);
+
+                        // Starting a game install via command will add the game to a queue but Galaxy itself
+                        // won't be started to initiate the download process so we need to start it if it's
+                        // not running already
+                        if (!Gog.IsRunning)
+                        {
+                            ProcessStarter.StartProcess(clientPath);
+                        }
+
+                        startedAutomaticInstall = true;
+                    }
+                }
+
+                if (!startedAutomaticInstall)
+                {
+                    ProcessStarter.StartUrl(@"goggalaxy://openGameView/" + Game.GameId);
+                }
             }
             else
             {
