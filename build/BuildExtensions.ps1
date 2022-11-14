@@ -1,3 +1,4 @@
+#Requires -Version 7
 #Requires -Modules powershell-yaml
 
 param(
