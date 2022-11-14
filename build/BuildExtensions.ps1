@@ -5,9 +5,8 @@ param(
     [string]$Configuration = "Release",    
     [string]$OutputDir = (Join-Path $PWD $Configuration),
     [string]$TempDir = (Join-Path $env:TEMP "PlayniteBuild"),    
-    [string]$ToolboxPath = (Join-Path $env:LOCALAPPDATA "Playnite" "Toolbox.exe"),
-    [switch]$SkipExtensions,
-    [switch]$SkipThemes
+    [string]$ToolboxPath = (Join-Path $env:LOCALAPPDATA "Playnite" "Toolbox.exe"),    
+    [switch]$BuildThemes
 )
 
 $ErrorActionPreference = "Stop"
@@ -20,56 +19,54 @@ if (Test-Path $OutputDir)
 
 $allPassed = $true
 
-if (!$SkipExtensions)
-{
-    $solutionDir = Join-Path $pwd "..\source" 
-    $msbuildpath = Get-MsBuildPath
-    Invoke-Nuget "restore `"..\source\PlayniteExtensions.sln`" -SolutionDirectory `"$solutionDir`""  
 
-    foreach ($extensionMan in (Get-ChildItem "..\source\" -Filter "extension.yaml" -Recurse))
+$solutionDir = Join-Path $pwd "..\source" 
+$msbuildpath = Get-MsBuildPath
+Invoke-Nuget "restore `"..\source\PlayniteExtensions.sln`" -SolutionDirectory `"$solutionDir`""  
+
+foreach ($extensionMan in (Get-ChildItem "..\source\" -Filter "extension.yaml" -Recurse))
+{
+    if ($extensionMan.FullName.Contains('\bin\'))
     {
-        if ($extensionMan.FullName.Contains('\bin\'))
+        continue
+    }
+
+    $extDir = Split-Path $extensionMan -Parent
+    $projectFile = Get-ChildItem $extDir -Filter "*.csproj" | Select-Object -First 1
+
+    if ($projectFile)
+    {
+        if ($projectFile.FullName.Contains(".Tests") -or $projectFile.FullName.Contains(".Common"))
         {
             continue
         }
 
-        $extDir = Split-Path $extensionMan -Parent
-        $projectFile = Get-ChildItem $extDir -Filter "*.csproj" | Select-Object -First 1
-
-        if ($projectFile)
+        $addonManifest = Get-Content (Join-Path $extDir "extension.yaml") | ConvertFrom-Yaml
+        $buildDir = Join-Path $OutputDir $addonManifest.Id
+        $arguments = "-p:OutDir=`"$buildDir`";Configuration=$configuration;AllowedReferenceRelatedFileExtensions=none `"$projectFile`""
+        $compilerResult = StartAndWait $msbuildPath $arguments
+        if ($compilerResult -ne 0)
         {
-            if ($projectFile.FullName.Contains(".Tests") -or $projectFile.FullName.Contains(".Common"))
-            {
-                continue
-            }
-
-            $addonManifest = Get-Content (Join-Path $extDir "extension.yaml") | ConvertFrom-Yaml
-            $buildDir = Join-Path $OutputDir $addonManifest.Id
-            $arguments = "-p:OutDir=`"$buildDir`";Configuration=$configuration;AllowedReferenceRelatedFileExtensions=none `"$projectFile`""
-            $compilerResult = StartAndWait $msbuildPath $arguments
-            if ($compilerResult -ne 0)
-            {
-                $allPassed = $false
-            }
-            else
-            {
-                if ((StartAndWait $ToolboxPath "pack `"$buildDir`" `"$OutputDir`"") -ne 0)
-                {
-                    $allPassed = $false
-                }
-            }
+            $allPassed = $false
         }
         else
         {
-            if ((StartAndWait $ToolboxPath "pack `"$extDir`" `"$OutputDir`"") -ne 0)
+            if ((StartAndWait $ToolboxPath "pack `"$buildDir`" `"$OutputDir`"") -ne 0)
             {
                 $allPassed = $false
-            }         
+            }
         }
+    }
+    else
+    {
+        if ((StartAndWait $ToolboxPath "pack `"$extDir`" `"$OutputDir`"") -ne 0)
+        {
+            $allPassed = $false
+        }         
     }
 }
 
-if (!$SkipThemes)
+if ($BuildThemes)
 {
     foreach ($themeMan in (Get-ChildItem "..\source\Themes\" -Filter "theme.yaml" -Recurse))
     {
