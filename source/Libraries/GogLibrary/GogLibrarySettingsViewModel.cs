@@ -25,6 +25,8 @@ namespace GogLibrary
     }
     public class GogLibrarySettingsViewModel : PluginSettingsViewModel<GogLibrarySettings, GogLibrary>
     {
+        public bool IsFirstRunUse { get; set; }
+
         public bool IsUserLoggedIn
         {
             get

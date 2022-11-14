@@ -359,5 +359,11 @@ namespace GogLibrary
 
             return allGames;
         }
+
+        public override ISettings GetSettings(bool firstRunSettings)
+        {
+            SettingsViewModel.IsFirstRunUse = firstRunSettings;
+            return SettingsViewModel;
+        }
     }
 }

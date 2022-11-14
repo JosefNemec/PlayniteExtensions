@@ -67,9 +67,11 @@
                   Content="{DynamicResource LOCSettingsGOGUseGalaxy}"/>
         <CheckBox IsChecked="{Binding Settings.UseAutomaticGameInstalls}" DockPanel.Dock="Top"
                   Content="{DynamicResource LOCGOGSettingsUseAutomaticGameInstalls}"
-                  ToolTip="{DynamicResource LOCGOGSettingsUseAutomaticGameInstallsTooltip}"/>
+                  ToolTip="{DynamicResource LOCGOGSettingsUseAutomaticGameInstallsTooltip}"
+                  Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}"/>
         
-        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+        <StackPanel Orientation="Horizontal" Margin="0,10,0,0"
+                    Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}">
             <TextBlock VerticalAlignment="Center" Text="{DynamicResource LOCGOGMetadataLanguageLabel}" Margin="0,0,10,0"/>
             <ComboBox x:Name="LanguageSelection" DisplayMemberPath="Value" SelectedValuePath="Key"
                                   SelectedValue="{Binding Settings.Locale}" ItemsSource="{Binding Path=Languages}"
