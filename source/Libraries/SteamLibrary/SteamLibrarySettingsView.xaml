@@ -11,8 +11,6 @@
              mc:Ignorable="d"              
              d:DesignHeight="450" d:DesignWidth="600">
 
-    
-    
     <UserControl.Resources>
         <pcon:NegateConverter x:Key="NegateConverter" />
         <pcon:EnumToBooleanConverter x:Key="EnumConverter" />

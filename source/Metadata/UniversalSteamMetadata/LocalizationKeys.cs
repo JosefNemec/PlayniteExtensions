@@ -214,11 +214,11 @@ namespace System
         /// </summary>
         public const string SteamAdditionalAccountsDescription = "LOCSteamAdditionalAccountsDescription";
         /// <summary>
-        /// Limit the amount of tags imported to the first 
+        /// Limit the amount of tags imported to the first
         /// </summary>
         public const string SteamLimitTagCountLabel = "LOCSteamLimitTagCountLabel";
         /// <summary>
-        /// Prefix tag names with: 
+        /// Prefix tag names with:
         /// </summary>
         public const string SteamTagPrefixLabel = "LOCSteamTagPrefixLabel";
         /// <summary>
