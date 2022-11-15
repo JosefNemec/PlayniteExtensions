@@ -46,3 +46,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_6.pext
     Changelog:
       - Fixed issue with some link names not being imported correctly if Steam library plugin is not installed
+  - Version: 2.7
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-11-15
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_7.pext
+    Changelog:
+      - Added support for localized metadata (by Jeshibu)
+      - Added support for import of store tags (by Jeshibu)
