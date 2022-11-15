@@ -13,6 +13,7 @@ using System.Diagnostics;
 using System.Text.RegularExpressions;
 using Steam;
 using System.Collections.ObjectModel;
+using SteamLibrary.SteamShared;
 
 namespace SteamLibrary
 {
@@ -32,17 +33,15 @@ namespace SteamLibrary
         public bool ImportPlayTime { get; set; }
     }
 
-    public class SteamLibrarySettings : ObservableObject
+    public class SteamLibrarySettings : SharedSteamSettings
     {
         private bool isPrivateAccount;
         private string apiKey = string.Empty;
 
         public int Version { get; set; }
-        public bool DownloadVerticalCovers { get; set; } = true;
         public bool ImportInstalledGames { get; set; } = true;
         public bool ConnectAccount { get; set; } = false;
         public bool ImportUninstalledGames { get; set; } = false;
-        public BackgroundSource BackgroundSource { get; set; } = BackgroundSource.Image;
         public string UserId { get; set; } = string.Empty;
         public bool IncludeFreeSubGames { get; set; } = false;
         public bool ShowFriendsButton { get; set; } = true;
@@ -52,7 +51,7 @@ namespace SteamLibrary
         public ObservableCollection<AdditionalSteamAcccount> AdditionalAccounts { get; set; } = new ObservableCollection<AdditionalSteamAcccount>();
     }
 
-    public class SteamLibrarySettingsViewModel : PluginSettingsViewModel<SteamLibrarySettings, SteamLibrary>
+    public class SteamLibrarySettingsViewModel : SharedSteamSettingsViewModel<SteamLibrarySettings, SteamLibrary>
     {
         public AuthStatus AuthStatus
         {
@@ -157,27 +156,26 @@ namespace SteamLibrary
 
         public SteamLibrarySettingsViewModel(SteamLibrary library, IPlayniteAPI api) : base(library, api)
         {
-            var savedSettings = LoadSavedSettings();
-            if (savedSettings != null)
-            {
-                if (savedSettings.Version == 0)
-                {
-                    Logger.Debug("Updating Steam settings from version 0.");
-                    if (savedSettings.ImportUninstalledGames)
-                    {
-                        savedSettings.ConnectAccount = true;
-                    }
-                }
-
-                savedSettings.Version = 1;
-                Settings = savedSettings;
-            }
-            else
-            {
-                Settings = new SteamLibrarySettings() { Version = 1 };
-            }
-
             Settings.PropertyChanged += Settings_PropertyChanged;
+        }
+
+        protected override void OnLoadSettings()
+        {
+            if (Settings.Version == 0)
+            {
+                Logger.Debug("Updating Steam settings from version 0.");
+                if (Settings.ImportUninstalledGames)
+                {
+                    Settings.ConnectAccount = true;
+                }
+            }
+
+            Settings.Version = 1;
+        }
+
+        protected override void OnInitSettings()
+        {
+            Settings.Version = 1;
         }
 
         private void Settings_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -197,8 +195,7 @@ namespace SteamLibrary
                 return false;
             }
 
-            errors = null;
-            return true;
+            return base.VerifySettings(out errors);
         }
 
         public void ImportSteamCategories(LocalSteamUser user)

@@ -213,5 +213,41 @@ namespace System
         /// Specify Steam account ID and API key pair of other accounts if you want to import games from them. See Steam troubleshooting wiki page for more information.
         /// </summary>
         public const string SteamAdditionalAccountsDescription = "LOCSteamAdditionalAccountsDescription";
+        /// <summary>
+        /// Limit the amount of tags imported to the first
+        /// </summary>
+        public const string SteamLimitTagCountLabel = "LOCSteamLimitTagCountLabel";
+        /// <summary>
+        /// Prefix tag names with:
+        /// </summary>
+        public const string SteamTagPrefixLabel = "LOCSteamTagPrefixLabel";
+        /// <summary>
+        /// Tag blacklist
+        /// </summary>
+        public const string SteamTagBlacklistTabLabel = "LOCSteamTagBlacklistTabLabel";
+        /// <summary>
+        /// Excluded tags will not be added to games.
+        /// </summary>
+        public const string SteamTagBlacklistExplanationLabel = "LOCSteamTagBlacklistExplanationLabel";
+        /// <summary>
+        /// Available tags
+        /// </summary>
+        public const string SteamTagWhitelistHeader = "LOCSteamTagWhitelistHeader";
+        /// <summary>
+        /// Excluded tags
+        /// </summary>
+        public const string SteamTagBlacklistHeader = "LOCSteamTagBlacklistHeader";
+        /// <summary>
+        /// Remove from excluded tags
+        /// </summary>
+        public const string SteamTagWhitelistTooltip = "LOCSteamTagWhitelistTooltip";
+        /// <summary>
+        /// Add to excluded tags
+        /// </summary>
+        public const string SteamTagBlacklistTooltip = "LOCSteamTagBlacklistTooltip";
+        /// <summary>
+        /// Fixed tag count must be a valid number
+        /// </summary>
+        public const string SteamValidationFixedTagCount = "LOCSteamValidationFixedTagCount";
     }
 }

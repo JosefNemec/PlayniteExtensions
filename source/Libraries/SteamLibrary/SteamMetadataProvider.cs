@@ -12,6 +12,8 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Steam;
+using Playnite.Common.Web;
+using SteamLibrary.SteamShared;
 
 namespace SteamLibrary
 {
@@ -25,7 +27,7 @@ namespace SteamLibrary
         public SteamMetadataProvider(SteamLibrary library)
         {
             this.library = library;
-            apiClient = new SteamApiClient();
+            apiClient = new SteamApiClient(library.SettingsViewModel.Settings);
             webApiClient = new WebApiClient();
         }
 
@@ -57,7 +59,7 @@ namespace SteamLibrary
             }
             else
             {
-                return new MetadataProvider(apiClient, webApiClient).GetGameMetadata(
+                return new MetadataProvider(apiClient, webApiClient, new SteamTagNamer(library, library.SettingsViewModel.Settings, new Downloader()), library.SettingsViewModel.Settings).GetGameMetadata(
                     gameId.AppID,
                     library.SettingsViewModel.Settings.BackgroundSource,
                     library.SettingsViewModel.Settings.DownloadVerticalCovers);

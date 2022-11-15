@@ -37,6 +37,9 @@
     <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AngleSharp.0.9.9\lib\net45\AngleSharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
     <Reference Include="Playnite.SDK, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\PlayniteSDK.6.0.0\lib\net462\Playnite.SDK.dll</HintPath>
     </Reference>
@@ -162,11 +165,20 @@
     <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\MetadataProvider.cs">
       <Link>SteamShared\MetadataProvider.cs</Link>
     </Compile>
+    <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\SharedSteamSettings.cs">
+      <Link>SteamShared\SharedSteamSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\SharedSteamSettingsViewModel.cs">
+      <Link>SteamShared\SharedSteamSettingsViewModel.cs</Link>
+    </Compile>
     <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\SteamApiClient.cs">
       <Link>SteamShared\SteamApiClient.cs</Link>
     </Compile>
     <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\SteamGameMetadata.cs">
       <Link>SteamShared\SteamGameMetadata.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\SteamTagNamer.cs">
+      <Link>SteamShared\SteamTagNamer.cs</Link>
     </Compile>
     <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\StoreAppDetailsResult.cs">
       <Link>SteamShared\StoreAppDetailsResult.cs</Link>
@@ -189,6 +201,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <Content Include="..\..\Libraries\SteamLibrary\SteamShared\TagLocalization\**\*.*">
+      <Link>SteamShared\TagLocalization\%(RecursiveDir)%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="icon.png">

@@ -1,10 +1,12 @@
 ﻿using Playnite.Common;
+using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Data;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 using Steam;
 using Steam.Models;
+using SteamLibrary.SteamShared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +28,7 @@ namespace UniversalSteamMetadata
         private static readonly ILogger logger = LogManager.GetLogger();
         private readonly MetadataRequestOptions options;
         private readonly UniversalSteamMetadata plugin;
+        private readonly IDownloader downloader;
         private SteamGameMetadata currentMetadata;
         private readonly SteamApiClient apiClient;
         private readonly WebApiClient webApiClient;
@@ -46,14 +49,16 @@ namespace UniversalSteamMetadata
             MetadataField.Features,
             MetadataField.Name,
             MetadataField.Platform,
-            MetadataField.Series
+            MetadataField.Series,
+            MetadataField.Tags,
         };
 
-        public UniversalSteamMetadataProvider(MetadataRequestOptions options, UniversalSteamMetadata plugin)
+        public UniversalSteamMetadataProvider(MetadataRequestOptions options, UniversalSteamMetadata plugin, IDownloader downloader)
         {
             this.options = options;
             this.plugin = plugin;
-            apiClient = new SteamApiClient();
+            this.downloader = downloader;
+            apiClient = new SteamApiClient(plugin.SettingsViewModel.Settings);
             webApiClient = new WebApiClient();
         }
 
@@ -255,6 +260,17 @@ namespace UniversalSteamMetadata
             return new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") };
         }
 
+        public override IEnumerable<MetadataProperty> GetTags(GetMetadataFieldArgs args)
+        {
+            GetGameData();
+            if (currentMetadata != null)
+            {
+                return currentMetadata.Tags;
+            }
+
+            return base.GetTags(args);
+        }
+
         internal void GetGameData()
         {
             if (currentMetadata != null)
@@ -264,7 +280,7 @@ namespace UniversalSteamMetadata
 
             try
             {
-                var metadataProvider = new MetadataProvider(apiClient, webApiClient);
+                var metadataProvider = new MetadataProvider(apiClient, webApiClient, new SteamTagNamer(plugin, plugin.SettingsViewModel.Settings, downloader), plugin.SettingsViewModel.Settings);
                 if (BuiltinExtensions.GetExtensionFromId(options.GameData.PluginId) == BuiltinExtension.SteamLibrary)
                 {
                     var appId = uint.Parse(options.GameData.GameId);
@@ -298,7 +314,7 @@ namespace UniversalSteamMetadata
                             {
                                 try
                                 {
-                                    var store = webApiClient.GetStoreAppDetail(appId);
+                                    var store = webApiClient.GetStoreAppDetail(appId, plugin.SettingsViewModel.Settings.LanguageKey);
                                     return new List<GenericItemOption> { new StoreSearchResult
                                     {
                                         GameId = appId,

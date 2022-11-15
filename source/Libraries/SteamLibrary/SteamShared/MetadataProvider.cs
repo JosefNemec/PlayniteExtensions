@@ -3,6 +3,7 @@ using Playnite.SDK;
 using Playnite.SDK.Models;
 using Steam.Models;
 using SteamKit2;
+using SteamLibrary.SteamShared;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -30,17 +31,20 @@ namespace Steam
         private static readonly ILogger logger = LogManager.GetLogger();
         private readonly SteamApiClient apiClient;
         private readonly WebApiClient webApiClient;
-
+        private readonly SteamTagNamer tagNamer;
+        private readonly SharedSteamSettings settings;
         private readonly string[] backgroundUrls = new string[]
         {
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page.bg.jpg",
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page_bg_generated.jpg"
         };
 
-        public MetadataProvider(SteamApiClient apiClient, WebApiClient webApiClient)
+        public MetadataProvider(SteamApiClient apiClient, WebApiClient webApiClient, SteamTagNamer tagNamer, SharedSteamSettings settings)
         {
             this.apiClient = apiClient;
             this.webApiClient = webApiClient;
+            this.tagNamer = tagNamer;
+            this.settings = settings;
         }
 
         public static string GetWorkshopUrl(uint appId)
@@ -108,7 +112,7 @@ namespace Steam
 
         internal StoreAppDetailsResult.AppDetails GetStoreData(uint appId)
         {
-            return SendDelayedStoreRequest(() => webApiClient.GetStoreAppDetail(appId), appId);
+            return SendDelayedStoreRequest(() => webApiClient.GetStoreAppDetail(appId, settings.LanguageKey), appId);
         }
 
         internal AppReviewsResult.QuerySummary GetUserReviewsData(uint appId)
@@ -253,8 +257,9 @@ namespace Steam
             BackgroundSource backgroundSource,
             bool downloadVerticalCovers)
         {
+            logger.Trace($"Getting metadata for {appId}");
             var metadata = DownloadGameMetadata(appId, backgroundSource, downloadVerticalCovers);
-            var newName = metadata.ProductDetails?["common"]["name_localized"]["english"]?.Value;
+            var newName = metadata.ProductDetails?["common"]["name_localized"][settings.LanguageKey]?.Value;
             if (newName != null)
             {
                 metadata.Name = newName;
@@ -464,12 +469,54 @@ namespace Steam
                         break;
                     }
                 }
+
+                var tagNames = tagNamer.GetTagNames();
+                Dictionary<int, string> newTagNames = null;
+
+                var tagKeyValues = metadata.ProductDetails["common"]["store_tags"]?.Children;
+                logger.Debug($"Setting tags for {appId}, found {tagKeyValues?.Count}");
+                if (tagKeyValues != null)
+                {
+                    metadata.Tags = new HashSet<MetadataProperty>();
+                    if (settings.LimitTagsToFixedAmount)
+                    {
+                        tagKeyValues = tagKeyValues.Take(settings.FixedTagCount).ToList();
+                    }
+
+                    foreach (var tag in tagKeyValues)
+                    {
+                        if (int.TryParse(tag.Value, out int tagId))
+                        {
+                            if (settings.BlacklistedTags.Contains(tagId))
+                            {
+                                continue;
+                            }
+
+                            if (!tagNames.TryGetValue(tagId, out string name))
+                            {
+                                if (newTagNames == null)
+                                {
+                                    logger.Debug($"Tag {tagId} not found. Fetching new ones.");
+                                    newTagNames = tagNamer.UpdateAndGetTagNames();
+                                }
+                                if (!newTagNames.TryGetValue(tagId, out name))
+                                {
+                                    logger.Warn($"Could not find tag name for tag {tagId}");
+                                    continue;
+                                }
+                            }
+                            name = tagNamer.GetFinalTagName(name);
+                            metadata.Tags.Add(new MetadataNameProperty(name));
+                        }
+                    }
+                }
             }
 
             string parentStr = metadata.ProductDetails?["common"]["parent"]?.Value;
 
             if (uint.TryParse(parentStr, out uint parentId))
             {
+                logger.Debug($"Getting parent metadata for {appId} from {parentId}");
                 var parentMetadata = GetGameMetadata(parentId, backgroundSource, downloadVerticalCovers);
 
                 metadata.Links = parentMetadata.Links; //demo appId urls either redirect to the main game or are broken
