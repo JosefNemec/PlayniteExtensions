@@ -53,3 +53,4 @@ Packages:
     Changelog:
       - Added support for localized metadata (by Jeshibu)
       - Added support for import of store tags (by Jeshibu)
+      - Metadata for demos are now downloaded from main game (by Jeshibu)
