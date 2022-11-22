@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("UplayLibrary")]
-[assembly: AssemblyDescription("Uplay library support plugin for Playnite")]
+[assembly: AssemblyDescription("Ubisoft Connect library support plugin for Playnite")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("UplayLibrary")]
