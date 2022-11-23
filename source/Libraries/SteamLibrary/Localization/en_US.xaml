@@ -61,4 +61,6 @@
   <sys:String x:Key="LOCSteamTagWhitelistTooltip">Remove from excluded tags</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTooltip">Add to excluded tags</sys:String>
   <sys:String x:Key="LOCSteamValidationFixedTagCount">Fixed tag count must be a valid number</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenu">Show game startup selection menu</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreen">Show game startup selection menu in fullscreen mode</sys:String>
 </ResourceDictionary>

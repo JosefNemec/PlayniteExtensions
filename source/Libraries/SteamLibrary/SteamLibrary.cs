@@ -779,7 +779,7 @@ namespace SteamLibrary
                 yield break;
             }
 
-            yield return new SteamPlayController(args.Game);
+            yield return new SteamPlayController(args.Game, SettingsViewModel.Settings, PlayniteApi);
         }
 
         public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)

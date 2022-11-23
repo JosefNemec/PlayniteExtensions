@@ -249,5 +249,13 @@ namespace System
         /// Fixed tag count must be a valid number
         /// </summary>
         public const string SteamValidationFixedTagCount = "LOCSteamValidationFixedTagCount";
+        /// <summary>
+        /// Show game startup selection menu
+        /// </summary>
+        public const string SteamShowGameLaunchMenu = "LOCSteamShowGameLaunchMenu";
+        /// <summary>
+        /// Show game startup selection menu in fullscreen mode
+        /// </summary>
+        public const string SteamShowGameLaunchMenuInFullscreen = "LOCSteamShowGameLaunchMenuInFullscreen";
     }
 }

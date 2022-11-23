@@ -141,11 +141,15 @@ namespace SteamLibrary
         private GameID gameId;
         private ProcessMonitor procMon;
         private Stopwatch stopWatch;
+        private readonly SteamLibrarySettings settings;
+        private readonly IPlayniteAPI playniteAPI;
 
-        public SteamPlayController(Game game) : base(game)
+        public SteamPlayController(Game game, SteamLibrarySettings settings, IPlayniteAPI playniteAPI) : base(game)
         {
             gameId = game.ToSteamGameID();
             Name = string.Format(ResourceProvider.GetString(LOC.SteamStartUsingClient), "Steam");
+            this.settings = settings;
+            this.playniteAPI = playniteAPI;
         }
 
         public override void Dispose()
@@ -158,6 +162,7 @@ namespace SteamLibrary
             Dispose();
 
             var installDirectory = Game.InstallDirectory;
+            string startUrl;
             if (gameId.IsMod)
             {
                 var allGames = SteamLibrary.GetInstalledGames(false);
@@ -165,9 +170,22 @@ namespace SteamLibrary
                 {
                     installDirectory = realGame.InstallDirectory;
                 }
+                startUrl = $"steam://rungameid/{Game.GameId}";
+            }
+            else
+            {
+                if (settings.ShowGameLaunchMenu
+                    && (playniteAPI.ApplicationInfo.Mode != ApplicationMode.Fullscreen || settings.ShowGameLaunchMenuInFullscreen))
+                {
+                    startUrl = $"steam://launch/{Game.GameId}/Dialog";
+                }
+                else
+                {
+                    startUrl = $"steam://run/{Game.GameId}";
+                }
             }
 
-            ProcessStarter.StartUrl($"steam://rungameid/{Game.GameId}");
+            ProcessStarter.StartUrl(startUrl);
             procMon = new ProcessMonitor();
             procMon.TreeStarted += ProcMon_TreeStarted;
             procMon.TreeDestroyed += Monitor_TreeDestroyed;
