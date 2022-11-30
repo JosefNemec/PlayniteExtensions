@@ -129,12 +129,12 @@ namespace UplayLibrary
                 try
                 {
                     installedGames = GetInstalledGames();
-                    Logger.Debug($"Found {installedGames.Count} installed Uplay games.");
+                    Logger.Debug($"Found {installedGames.Count} installed Ubisoft Connect games.");
                     allGames.AddRange(installedGames);
                 }
                 catch (Exception e)
                 {
-                    Logger.Error(e, "Failed to import installed Uplay games.");
+                    Logger.Error(e, "Failed to import installed Ubisoft Connect games.");
                     importError = e;
                 }
             }
@@ -144,7 +144,7 @@ namespace UplayLibrary
                 try
                 {
                     var libraryGames = GetLibraryGames();
-                    Logger.Debug($"Found {libraryGames.Count} library Uplay games.");
+                    Logger.Debug($"Found {libraryGames.Count} library Ubisoft Connect games.");
                     foreach (var libGame in libraryGames)
                     {
                         var installed = installedGames.FirstOrDefault(a => a.GameId == libGame.GameId);
@@ -162,7 +162,7 @@ namespace UplayLibrary
                 }
                 catch (Exception e)
                 {
-                    Logger.Error(e, "Failed to import uninstalled Uplay games.");
+                    Logger.Error(e, "Failed to import uninstalled Ubisoft Connect games.");
                     importError = e;
                 }
             }

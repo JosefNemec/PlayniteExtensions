@@ -28,7 +28,7 @@ namespace UplayLibrary
             var mainProc = Process.GetProcessesByName("upc").FirstOrDefault();
             if (mainProc == null)
             {
-                logger.Info("Uplay client is no longer running, no need to shut it down.");
+                logger.Info("Ubisoft Connect client is no longer running, no need to shut it down.");
                 return;
             }
 
@@ -40,7 +40,7 @@ namespace UplayLibrary
                 var coreRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/pid {mainProc.Id}", null, out var stdOut1, out var stdErr1);
                 if (coreRes != 0)
                 {
-                    logger.Error($"Failed to close uplay UI processes: {coreRes}, {stdErr1}");
+                    logger.Error($"Failed to close Ubisoft Connect UI processes: {coreRes}, {stdErr1}");
                 }
 
                 // TODO change this to proper wait for all processes to close
@@ -50,7 +50,7 @@ namespace UplayLibrary
             var mainRes = ProcessStarter.StartProcessWait(CmdLineTools.TaskKill, $"/f /pid {mainProc.Id}", null, out var stdOut, out var stdErr);
             if (mainRes != 0)
             {
-                logger.Error($"Failed to close uplay client: {mainRes}, {stdErr}");
+                logger.Error($"Failed to close Ubisoft Connect client: {mainRes}, {stdErr}");
             }
         }
     }
