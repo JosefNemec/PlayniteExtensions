@@ -24,3 +24,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/UplayLibrary_Builtin_2_3.pext
     Changelog:
       - Play time tracking could start sooner than it should (by darklinkpower)
+  - Version: 2.4
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-12-01
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/UplayLibrary_Builtin_2_4.pext
+    Changelog:
+      - Removed string references to Uplay client (by Xenor)
