@@ -250,12 +250,16 @@ namespace System
         /// </summary>
         public const string SteamValidationFixedTagCount = "LOCSteamValidationFixedTagCount";
         /// <summary>
-        /// Show game startup selection menu
+        /// Show Steam's game startup selection menu in desktop mode
         /// </summary>
-        public const string SteamShowGameLaunchMenu = "LOCSteamShowGameLaunchMenu";
+        public const string SteamShowGameLaunchMenuInDesktopMode = "LOCSteamShowGameLaunchMenuInDesktopMode";
         /// <summary>
-        /// Show game startup selection menu in fullscreen mode
+        /// Show Steam's game startup selection menu in fullscreen mode
         /// </summary>
-        public const string SteamShowGameLaunchMenuInFullscreen = "LOCSteamShowGameLaunchMenuInFullscreen";
+        public const string SteamShowGameLaunchMenuInFullscreenMode = "LOCSteamShowGameLaunchMenuInFullscreenMode";
+        /// <summary>
+        /// WARNING: Steam's game startup selection menu has a habit of appearing behind the current window.
+        /// </summary>
+        public const string SteamShowGameLaunchMenuWarning = "LOCSteamShowGameLaunchMenuWarning";
     }
 }

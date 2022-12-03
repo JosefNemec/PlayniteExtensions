@@ -162,7 +162,6 @@ namespace SteamLibrary
             Dispose();
 
             var installDirectory = Game.InstallDirectory;
-            string startUrl;
             if (gameId.IsMod)
             {
                 var allGames = SteamLibrary.GetInstalledGames(false);
@@ -170,19 +169,20 @@ namespace SteamLibrary
                 {
                     installDirectory = realGame.InstallDirectory;
                 }
-                startUrl = $"steam://rungameid/{Game.GameId}";
+            }
+
+            string startUrl;
+            if (!gameId.IsMod && !gameId.IsShortcut
+                && (
+                    (playniteAPI.ApplicationInfo.Mode == ApplicationMode.Fullscreen && settings.ShowSteamLaunchMenuInFullscreenMode)
+                    || (playniteAPI.ApplicationInfo.Mode == ApplicationMode.Desktop && settings.ShowSteamLaunchMenuInDesktopMode)
+                ))
+            {
+                startUrl = $"steam://launch/{Game.GameId}/Dialog";
             }
             else
             {
-                if (settings.ShowGameLaunchMenu
-                    && (playniteAPI.ApplicationInfo.Mode != ApplicationMode.Fullscreen || settings.ShowGameLaunchMenuInFullscreen))
-                {
-                    startUrl = $"steam://launch/{Game.GameId}/Dialog";
-                }
-                else
-                {
-                    startUrl = $"steam://run/{Game.GameId}";
-                }
+                startUrl = $"steam://rungameid/{Game.GameId}";
             }
 
             ProcessStarter.StartUrl(startUrl);
