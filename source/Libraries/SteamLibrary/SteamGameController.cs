@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using SteamKit2;
 using System.IO;
 using Playnite.SDK.Plugins;
+using System.Runtime.InteropServices;
 
 namespace SteamLibrary
 {
@@ -141,11 +142,16 @@ namespace SteamLibrary
         private GameID gameId;
         private ProcessMonitor procMon;
         private Stopwatch stopWatch;
+        private readonly SteamLibrarySettings settings;
+        private readonly IPlayniteAPI playniteAPI;
+        private ILogger logger = LogManager.GetLogger();
 
-        public SteamPlayController(Game game) : base(game)
+        public SteamPlayController(Game game, SteamLibrarySettings settings, IPlayniteAPI playniteAPI) : base(game)
         {
             gameId = game.ToSteamGameID();
             Name = string.Format(ResourceProvider.GetString(LOC.SteamStartUsingClient), "Steam");
+            this.settings = settings;
+            this.playniteAPI = playniteAPI;
         }
 
         public override void Dispose()
@@ -167,7 +173,20 @@ namespace SteamLibrary
                 }
             }
 
-            ProcessStarter.StartUrl($"steam://rungameid/{Game.GameId}");
+            if (!gameId.IsMod && !gameId.IsShortcut
+                && (
+                    (playniteAPI.ApplicationInfo.Mode == ApplicationMode.Fullscreen && settings.ShowSteamLaunchMenuInFullscreenMode)
+                    || (playniteAPI.ApplicationInfo.Mode == ApplicationMode.Desktop && settings.ShowSteamLaunchMenuInDesktopMode)
+                ))
+            {
+                ProcessStarter.StartUrl($"steam://launch/{Game.GameId}/Dialog");
+                FocusDialogWindow();
+            }
+            else
+            {
+                ProcessStarter.StartUrl($"steam://rungameid/{Game.GameId}");
+            }
+
             procMon = new ProcessMonitor();
             procMon.TreeStarted += ProcMon_TreeStarted;
             procMon.TreeDestroyed += Monitor_TreeDestroyed;
@@ -192,5 +211,30 @@ namespace SteamLibrary
             stopWatch?.Stop();
             InvokeOnStopped(new GameStoppedEventArgs(Convert.ToUInt64(stopWatch?.Elapsed.TotalSeconds ?? 0)));
         }
+
+        private void FocusDialogWindow()
+        {
+            Thread.Sleep(500); //wait for dialog window to be created
+
+            var steam = Process.GetProcessesByName("steam")?.FirstOrDefault();
+            if (steam == null)
+            {
+                logger.Trace("Couldn't focus: Steam process not running");
+                return;
+            }
+
+            var windowName = steam.MainWindowTitle;
+            if (windowName == null || !windowName.EndsWith(" Steam"))
+            {
+                logger.Trace($"Couldn't focus: Steam main window is {windowName}");
+                return;
+            }
+
+            logger.Trace($"Setting foreground window: {steam.MainWindowTitle}");
+            SetForegroundWindow(steam.MainWindowHandle);
+        }
+
+        [DllImport("user32.dll")]
+        private static extern int SetForegroundWindow(IntPtr hwnd);
     }
 }

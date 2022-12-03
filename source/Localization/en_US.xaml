@@ -77,6 +77,9 @@ If disabled, the game page will be opened to manually start the install process.
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Remove from excluded tags</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Add to excluded tags</sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">Fixed tag count must be a valid number</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Show Steam's game startup selection menu in desktop mode</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Show Steam's game startup selection menu in fullscreen mode</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuWarning">WARNING: Steam's game startup selection menu regularly appears behind the current window.</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Use screenshots if artwork is not available</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">If multiple images are available then use:</sys:String>
