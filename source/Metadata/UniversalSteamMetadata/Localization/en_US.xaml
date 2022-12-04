@@ -63,5 +63,4 @@
   <sys:String x:Key="LOCSteamValidationFixedTagCount">Fixed tag count must be a valid number</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Show Steam's game startup selection menu in desktop mode</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Show Steam's game startup selection menu in fullscreen mode</sys:String>
-  <sys:String x:Key="LOCSteamShowGameLaunchMenuWarning">WARNING: Steam's game startup selection menu has a habit of appearing behind the current window.</sys:String>
 </ResourceDictionary>

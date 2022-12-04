@@ -284,7 +284,6 @@
                           IsChecked="{Binding Settings.ShowSteamLaunchMenuInDesktopMode}"/>
                 <CheckBox Content="{DynamicResource LOCSteamShowGameLaunchMenuInFullscreenMode}"
                           IsChecked="{Binding Settings.ShowSteamLaunchMenuInFullscreenMode}" Margin="0,10,0,10"/>
-                <TextBlock Text="{DynamicResource LOCSteamShowGameLaunchMenuWarning}" TextWrapping="Wrap"/>
             </StackPanel>
         </TabItem>        
     </TabControl>

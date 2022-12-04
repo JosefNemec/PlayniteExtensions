@@ -257,9 +257,5 @@ namespace System
         /// Show Steam's game startup selection menu in fullscreen mode
         /// </summary>
         public const string SteamShowGameLaunchMenuInFullscreenMode = "LOCSteamShowGameLaunchMenuInFullscreenMode";
-        /// <summary>
-        /// WARNING: Steam's game startup selection menu has a habit of appearing behind the current window.
-        /// </summary>
-        public const string SteamShowGameLaunchMenuWarning = "LOCSteamShowGameLaunchMenuWarning";
     }
 }
