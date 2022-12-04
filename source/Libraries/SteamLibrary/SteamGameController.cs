@@ -214,27 +214,144 @@ namespace SteamLibrary
 
         private void FocusDialogWindow()
         {
-            Thread.Sleep(500); //wait for dialog window to be created
+            // Wait for dialog window to be created
+            Thread.Sleep(500);
 
-            var steam = Process.GetProcessesByName("steam")?.FirstOrDefault();
-            if (steam == null)
+            // Retrieve all launch windows (default and dialog) created by Steam (may contain other windows with Steam at the end of their title)
+            var windows = FindWindowsEndingWithText(" Steam");
+
+            // Get Steam's process ID for comparison with child process parent IDs
+            var steamProcess = Process.GetProcessesByName("steam")?.FirstOrDefault();
+            uint steamProcessID = (uint)steamProcess?.Id;
+            uint currentWindowID;
+
+            // Returned order is always front/top (dialog) - higher middle (default) - lower middle (dialog) - back/bottom (default)
+            List<IntPtr> windowList = windows.ToList();
+
+            // If Steam wasn't open do nothing -> the launch dialog will be focused by default
+            if (windowList.Count == 0)
             {
-                logger.Trace("Couldn't focus: Steam process not running");
                 return;
             }
 
-            var windowName = steam.MainWindowTitle;
-            if (windowName == null || !windowName.EndsWith(" Steam"))
+            // Remove windows not belonging to Steam
+            List<IntPtr> filteredWindowList = new List<IntPtr>();
+            foreach (var window in windowList)
             {
-                logger.Trace($"Couldn't focus: Steam main window is {windowName}");
-                return;
+                GetWindowThreadProcessId(window, out currentWindowID);
+
+                if (currentWindowID == steamProcessID)
+                {
+                    filteredWindowList.Add(window);
+                }
             }
 
-            logger.Trace($"Setting foreground window: {steam.MainWindowTitle}");
-            SetForegroundWindow(steam.MainWindowHandle);
+            // Consider users opening more than one Steam launch dialog
+            if (filteredWindowList.Count > 2)
+            {
+                // Reversed order is always back/bottom (default) - lower middle (dialog) - higher middle (default) - front/top (dialog)
+                filteredWindowList.Reverse();
+                // Start from end to bring the most recently launched dialog to top
+                for (int i = 0; i < filteredWindowList.Count; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        // Even entries = 0 back/bottom (default), 2 higher middle (default)
+
+                        // Skip default launch windows
+                    }
+                    else
+                    {
+                        // Odd entries = 1 lower middle (dialog), 3 front/top (dialog)
+
+                        // Multiple games launched = focus every dialog with the most recently launched being top most
+                        logger.Trace($"Setting foreground window: {filteredWindowList[i]}");
+                        SetForegroundWindow(filteredWindowList[i]);
+                    }
+                }
+            }
+            else
+            {
+                // Only one game launched = focus single dialog
+                logger.Trace($"Setting foreground window: {filteredWindowList[0]}");
+                SetForegroundWindow(filteredWindowList[0]);
+            }
         }
 
+        #region FindWindowByTitle
+
+        // Source: https://stackoverflow.com/questions/19867402/how-can-i-use-enumwindows-to-find-windows-with-a-specific-caption-title
+
+        /// <summary> Find all windows that end with the given title text </summary>
+        /// <param name="titleText"> The text that the window title must end with. </param>
+        private static IEnumerable<IntPtr> FindWindowsEndingWithText(string titleText)
+        {
+            return FindWindows(delegate (IntPtr hWnd, IntPtr lParam)
+            {
+                return GetWindowText(hWnd).EndsWith(titleText, StringComparison.InvariantCulture);
+            });
+        }
+
+        /// <summary> Find all windows that match the given filter </summary>
+        /// <param name="filter"> A delegate that returns true for windows
+        ///    that should be returned and false for windows that should
+        ///    not be returned </param>
+        private static IEnumerable<IntPtr> FindWindows(EnumWindowsProc filter)
+        {
+            List<IntPtr> windows = new List<IntPtr>();
+
+            EnumWindows(delegate (IntPtr hWnd, IntPtr lParam)
+            {
+                if (filter(hWnd, lParam))
+                {
+                    // Only add the windows that pass the filter
+                    windows.Add(hWnd);
+                }
+
+                // But return true here so that we iterate all windows
+                return true;
+            }, IntPtr.Zero);
+
+            return windows;
+        }
+
+        /// <summary> Get the text for the window pointed to by hWnd </summary>
+        private static string GetWindowText(IntPtr hWnd)
+        {
+            int size = GetWindowTextLength(hWnd);
+            if (size > 0)
+            {
+                var builder = new StringBuilder(size + 1);
+                GetWindowText(hWnd, builder, builder.Capacity);
+                return builder.ToString();
+            }
+
+            return string.Empty;
+        }
+
+        #endregion FindWindowByTitle
+
+        #region PrivateImports
+
+        private delegate bool EnumWindowsProc(IntPtr hWnd, IntPtr lParam);
+
         [DllImport("user32.dll")]
-        private static extern int SetForegroundWindow(IntPtr hwnd);
+        [return: MarshalAs(UnmanagedType.Bool)]
+        private static extern bool EnumWindows(EnumWindowsProc lpEnumFunc, IntPtr lParam);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern int GetWindowText(IntPtr hWnd, StringBuilder lpString, int nMaxCount);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern int GetWindowTextLength(IntPtr hWnd);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        private static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        private static extern bool SetForegroundWindow(IntPtr hWnd);
+
+        #endregion
     }
 }

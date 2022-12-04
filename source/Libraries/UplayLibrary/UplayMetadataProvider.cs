@@ -23,7 +23,7 @@ namespace UplayLibrary
             }
             catch (Exception e)
             {
-                logger.Error(e, "Failed to get Uplay product info from cache.");
+                logger.Error(e, "Failed to get Ubisoft Connect product info from cache.");
             }
         }
 
