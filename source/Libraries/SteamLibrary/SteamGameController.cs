@@ -227,6 +227,12 @@ namespace SteamLibrary
 
             var windows = GetSteamDialogWindows(steamProcess);
 
+            if (windows.Count == 0)
+            {
+                logger.Info("No Steam dialog windows found to focus.");
+                return;
+            }
+
             // The list has the foremost items first, and we want to focus everything ending with the window that is at the front (the startup choice dialog)
             // So run through it in reverse
             windows.Reverse();
@@ -236,7 +242,7 @@ namespace SteamLibrary
                 // Wait for the previous focus call to resolve
                 // Otherwise this one might be ignored
                 Thread.Sleep(10);
-                logger.Trace($"Setting foreground window: {window.Handle} {window.Title}");
+                logger.Debug($"Setting foreground window: {window.Handle} {window.Title}");
                 SetForegroundWindow(window.Handle);
             }
         }
