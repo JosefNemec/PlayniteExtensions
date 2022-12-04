@@ -230,7 +230,6 @@ namespace SteamLibrary
             foreach (var window in windows)
             {
                 Thread.Sleep(10);
-                //var w = windows2[i];
                 logger.Trace($"Setting foreground window: {window.Handle} {window.Title}");
                 SetForegroundWindow(window.Handle);
             }
