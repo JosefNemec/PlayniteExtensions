@@ -52,15 +52,4 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Negeer geïnstalleerde spellen van andere accounts</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Extra Accounts</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Specificeer Steam account ID en API key van andere accounts waar je Steam spellen van wil importeren. Zie Steam troubleshooting wiki pagina voor meer info.</sys:String>
-  <sys:String x:Key="LOCSteamLimitTagCountLabel">Beperk het aantal tags to de eerste</sys:String>
-  <sys:String x:Key="LOCSteamTagPrefixLabel">Plaats altijd aan het begin van tag namen:</sys:String>
-  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Tag blacklist</sys:String>
-  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Uitgesloten tags zullen niet toegevoegd worden aan spellen.</sys:String>
-  <sys:String x:Key="LOCSteamTagWhitelistHeader">Beschikbare tags</sys:String>
-  <sys:String x:Key="LOCSteamTagBlacklistHeader">Uitgesloten tags</sys:String>
-  <sys:String x:Key="LOCSteamTagWhitelistTooltip">Verwijder van uitgesloten tags</sys:String>
-  <sys:String x:Key="LOCSteamTagBlacklistTooltip">Voeg toe aan uitgesloten tags</sys:String>
-  <sys:String x:Key="LOCSteamValidationFixedTagCount">Maximum aantal tags moet een geldig nummer zijn</sys:String>
-  <sys:String x:Key="LOCSteamShowGameLaunchMenu">Toon Steam keuzemenu bij het opstarten van spellen</sys:String>
-  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreen">Toon Steam keuzemenu bij het opstarten van spellen in fullscreen modus</sys:String>
 </ResourceDictionary>
