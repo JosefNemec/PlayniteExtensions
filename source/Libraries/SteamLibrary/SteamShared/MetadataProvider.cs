@@ -255,7 +255,8 @@ namespace Steam
         public SteamGameMetadata GetGameMetadata(
             uint appId,
             BackgroundSource backgroundSource,
-            bool downloadVerticalCovers)
+            bool downloadVerticalCovers,
+            bool downloadParentMetadata = true)
         {
             logger.Trace($"Getting metadata for {appId}");
             var metadata = DownloadGameMetadata(appId, backgroundSource, downloadVerticalCovers);
@@ -356,50 +357,6 @@ namespace Steam
 
             if (metadata.ProductDetails != null)
             {
-                //var tasks = new List<GameAction>();
-                //var launchList = downloadedMetadata.ProductDetails["config"]["launch"].Children;
-                //foreach (var task in launchList.Skip(1))
-                //{
-                //    var properties = task["config"];
-                //    if (properties.Name != null)
-                //    {
-                //        if (properties["oslist"].Name != null)
-                //        {
-                //            if (properties["oslist"].Value != "windows")
-                //            {
-                //                continue;
-                //            }
-                //        }
-                //    }
-
-                //    // Ignore action without name  - shoudn't be visible to end user
-                //    if (task["description"].Name != null)
-                //    {
-                //        var newTask = new GameAction()
-                //        {
-                //            Name = task["description"].Value,
-                //            Arguments = task["arguments"].Value ?? string.Empty,
-                //            Path = task["executable"].Value,
-                //            WorkingDir = ExpandableVariables.InstallationDirectory
-                //        };
-
-                //        tasks.Add(newTask);
-                //    }
-                //}
-
-                //var manual = downloadedMetadata.ProductDetails["extended"]["gamemanualurl"];
-                //if (manual.Name != null)
-                //{
-                //    tasks.Add((new GameAction()
-                //    {
-                //        Name = "Manual",
-                //        Type = GameActionType.URL,
-                //        Path = manual.Value
-                //    }));
-                //}
-
-                //gameInfo.OtherActions = tasks;
-
                 // VR features
                 var vrSupport = false;
                 foreach (var vrArea in metadata.ProductDetails["common"]["playareavr"].Children)
@@ -512,12 +469,14 @@ namespace Steam
                 }
             }
 
+            string appType = metadata.ProductDetails?["common"]["type"]?.Value;
             string parentStr = metadata.ProductDetails?["common"]["parent"]?.Value;
 
-            if (uint.TryParse(parentStr, out uint parentId))
+            if (new[] { "Demo", "Beta", "Tool", "Video" }.Contains(appType)
+                && uint.TryParse(parentStr, out uint parentId))
             {
                 logger.Debug($"Getting parent metadata for {appId} from {parentId}");
-                var parentMetadata = GetGameMetadata(parentId, backgroundSource, downloadVerticalCovers);
+                var parentMetadata = GetGameMetadata(parentId, backgroundSource, downloadVerticalCovers, downloadParentMetadata: false);
 
                 metadata.Links = parentMetadata.Links; //demo appId urls either redirect to the main game or are broken
                 metadata.CoverImage = metadata.CoverImage ?? parentMetadata.CoverImage;
