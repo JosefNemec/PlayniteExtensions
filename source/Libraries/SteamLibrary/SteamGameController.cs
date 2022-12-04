@@ -215,7 +215,7 @@ namespace SteamLibrary
         private void FocusDialogWindow()
         {
             // Wait for dialog window to be created
-            Thread.Sleep(500);
+            Thread.Sleep(400);
 
             // Get Steam's process ID for comparison with child process parent IDs
             var steamProcess = Process.GetProcessesByName("steam")?.FirstOrDefault();
@@ -227,8 +227,14 @@ namespace SteamLibrary
 
             var windows = GetSteamDialogWindows(steamProcess);
 
+            // The list has the foremost items first, and we want to focus everything ending with the window that is at the front (the startup choice dialog)
+            // So run through it in reverse
+            windows.Reverse();
+
             foreach (var window in windows)
             {
+                // Wait for the previous focus call to resolve
+                // Otherwise this one might be ignored
                 Thread.Sleep(10);
                 logger.Trace($"Setting foreground window: {window.Handle} {window.Title}");
                 SetForegroundWindow(window.Handle);
