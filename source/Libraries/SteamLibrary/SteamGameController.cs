@@ -243,7 +243,7 @@ namespace SteamLibrary
                 // Otherwise this one might be ignored
                 Thread.Sleep(10);
                 logger.Debug($"Setting foreground window: {window.Handle} {window.Title}");
-                SetForegroundWindow(window.Handle);
+                User32.SetForegroundWindow(window.Handle);
             }
         }
 
@@ -265,9 +265,9 @@ namespace SteamLibrary
         {
             var windows = new List<WindowInfo>();
 
-            EnumWindows(delegate (IntPtr hWnd, IntPtr lParam)
+            User32.EnumWindows(delegate (IntPtr hWnd, IntPtr lParam)
             {
-                GetWindowThreadProcessId(hWnd, out uint processId);
+                User32.GetWindowThreadProcessId(hWnd, out uint processId);
                 if (steamProcess.Id != processId)
                 {
                     // Return true here so that we iterate all windows
@@ -290,11 +290,11 @@ namespace SteamLibrary
         /// <summary> Get the text for the window pointed to by hWnd </summary>
         private static string GetWindowText(IntPtr hWnd)
         {
-            int size = GetWindowTextLength(hWnd);
+            int size = User32.GetWindowTextLength(hWnd);
             if (size > 0)
             {
                 var builder = new StringBuilder(size + 1);
-                GetWindowText(hWnd, builder, builder.Capacity);
+                User32.GetWindowText(hWnd, builder, builder.Capacity);
                 return builder.ToString();
             }
 
@@ -302,28 +302,5 @@ namespace SteamLibrary
         }
 
         #endregion FindWindows
-
-        #region PrivateImports
-
-        private delegate bool EnumWindowsProc(IntPtr hWnd, IntPtr lParam);
-
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        private static extern bool EnumWindows(EnumWindowsProc lpEnumFunc, IntPtr lParam);
-
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        private static extern int GetWindowText(IntPtr hWnd, StringBuilder lpString, int nMaxCount);
-
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        private static extern int GetWindowTextLength(IntPtr hWnd);
-
-        [DllImport("user32.dll", SetLastError = true)]
-        private static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
-
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        private static extern bool SetForegroundWindow(IntPtr hWnd);
-
-        #endregion
     }
 }
