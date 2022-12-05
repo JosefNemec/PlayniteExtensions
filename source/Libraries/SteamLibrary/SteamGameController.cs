@@ -214,36 +214,50 @@ namespace SteamLibrary
 
         private void FocusDialogWindow()
         {
-            // Wait for dialog window to be created
-            Thread.Sleep(400);
-
-            // Get Steam's process ID for comparison with child process parent IDs
-            var steamProcess = Process.GetProcessesByName("steam")?.FirstOrDefault();
-            if (steamProcess == null)
+            const int timeoutSeconds = 4;
+            try
             {
-                logger.Info("Couldn't focus Steam dialog - Steam isn't running");
-                return;
+                List<WindowInfo> windows = new List<WindowInfo>();
+
+                var stopwatch = Stopwatch.StartNew();
+                do
+                {
+                    // Wait for dialog window to be created
+                    Thread.Sleep(200);
+
+                    // Get Steam's process ID for comparison with child process parent IDs
+                    var steamProcess = Process.GetProcessesByName("steam")?.FirstOrDefault();
+                    if (steamProcess == null)
+                    {
+                        logger.Trace("Steam isn't running. The Steam dialog window will focus without our help once Steam starts up.");
+                        return;
+                    }
+
+                    windows = GetSteamDialogWindows(steamProcess);
+                }
+                while (windows.Count == 0 && stopwatch.ElapsedMilliseconds < timeoutSeconds * 1000);
+
+                if (windows.Count == 0)
+                {
+                    logger.Trace($"No Steam dialog windows found to focus within {timeoutSeconds} seconds");
+                    return;
+                }
+
+                // The list has the foremost items first, and we want to focus everything ending with the window that is at the front (the startup choice dialog)
+                // So run through it in reverse
+                for (int i = windows.Count - 1; i >= 0; i--)
+                {
+                    // Wait for the previous focus call to resolve
+                    // Otherwise this one might be ignored
+                    Thread.Sleep(10);
+                    var window = windows[i];
+                    logger.Debug($"Setting foreground window: {window.Handle} {window.Title}");
+                    User32.SetForegroundWindow(window.Handle);
+                }
             }
-
-            var windows = GetSteamDialogWindows(steamProcess);
-
-            if (windows.Count == 0)
+            catch (Exception ex)
             {
-                logger.Info("No Steam dialog windows found to focus.");
-                return;
-            }
-
-            // The list has the foremost items first, and we want to focus everything ending with the window that is at the front (the startup choice dialog)
-            // So run through it in reverse
-            windows.Reverse();
-
-            foreach (var window in windows)
-            {
-                // Wait for the previous focus call to resolve
-                // Otherwise this one might be ignored
-                Thread.Sleep(10);
-                logger.Debug($"Setting foreground window: {window.Handle} {window.Title}");
-                User32.SetForegroundWindow(window.Handle);
+                logger.Warn(ex, "Error focusing Steam game startup dialog");
             }
         }
 
