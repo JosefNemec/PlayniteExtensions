@@ -217,21 +217,21 @@ namespace SteamLibrary
             const int timeoutSeconds = 4;
             try
             {
-                List<WindowInfo> windows = new List<WindowInfo>();
+                // Get Steam's process ID for comparison with child process parent IDs
+                var steamProcess = Process.GetProcessesByName("steam")?.FirstOrDefault();
+                if (steamProcess == null)
+                {
+                    logger.Trace("Steam isn't running. The Steam dialog window will focus without our help once Steam starts up.");
+                    return;
+                }
 
+                var windows = new List<WindowInfo>();
                 var stopwatch = Stopwatch.StartNew();
+
                 do
                 {
                     // Wait for dialog window to be created
                     Thread.Sleep(200);
-
-                    // Get Steam's process ID for comparison with child process parent IDs
-                    var steamProcess = Process.GetProcessesByName("steam")?.FirstOrDefault();
-                    if (steamProcess == null)
-                    {
-                        logger.Trace("Steam isn't running. The Steam dialog window will focus without our help once Steam starts up.");
-                        return;
-                    }
 
                     windows = GetSteamDialogWindows(steamProcess);
                 }
