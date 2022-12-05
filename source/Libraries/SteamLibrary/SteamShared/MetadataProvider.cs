@@ -472,7 +472,8 @@ namespace Steam
             string appType = metadata.ProductDetails?["common"]["type"]?.Value;
             string parentStr = metadata.ProductDetails?["common"]["parent"]?.Value;
 
-            if (new[] { "Demo", "Beta", "Tool", "Video" }.Contains(appType)
+            if (downloadParentMetadata
+                && new[] { "Demo", "Beta", "Tool", "Video" }.Contains(appType)
                 && uint.TryParse(parentStr, out uint parentId))
             {
                 logger.Debug($"Getting parent metadata for {appId} from {parentId}");
