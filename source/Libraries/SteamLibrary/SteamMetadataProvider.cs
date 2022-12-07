@@ -47,11 +47,6 @@ namespace SteamLibrary
 
         public override GameMetadata GetMetadata(Game game)
         {
-            var gameData = new Game("SteamGame")
-            {
-                GameId = game.GameId
-            };
-
             var gameId = game.ToSteamGameID();
             if (gameId.IsMod)
             {

@@ -49,6 +49,8 @@ namespace SteamLibrary
         public string ApiKey { get => apiKey; set => SetValue(ref apiKey, value); }
         public bool IgnoreOtherInstalled { get; set; }
         public ObservableCollection<AdditionalSteamAcccount> AdditionalAccounts { get; set; } = new ObservableCollection<AdditionalSteamAcccount>();
+        public bool ShowSteamLaunchMenuInDesktopMode { get; set; } = false;
+        public bool ShowSteamLaunchMenuInFullscreenMode { get; set; } = false;
     }
 
     public class SteamLibrarySettingsViewModel : SharedSteamSettingsViewModel<SteamLibrarySettings, SteamLibrary>

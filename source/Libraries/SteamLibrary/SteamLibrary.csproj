@@ -200,6 +200,7 @@
     </Compile>
     <Compile Include="SteamMetadataProvider.cs" />
     <Compile Include="ModInfo.cs" />
+    <Compile Include="User32.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="addon.yaml" />
