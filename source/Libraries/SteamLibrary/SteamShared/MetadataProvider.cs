@@ -33,11 +33,13 @@ namespace Steam
         private readonly WebApiClient webApiClient;
         private readonly SteamTagNamer tagNamer;
         private readonly SharedSteamSettings settings;
-        private readonly string[] backgroundUrls = new string[]
+        private static readonly string[] backgroundUrls = new string[]
         {
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page.bg.jpg",
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page_bg_generated.jpg"
         };
+
+        private static readonly string[] childGameTypes = new[] { "Demo", "Beta", "Tool", "Video" };
 
         public MetadataProvider(SteamApiClient apiClient, WebApiClient webApiClient, SteamTagNamer tagNamer, SharedSteamSettings settings)
         {
@@ -473,7 +475,7 @@ namespace Steam
             string parentStr = metadata.ProductDetails?["common"]["parent"]?.Value;
 
             if (downloadParentMetadata
-                && new[] { "Demo", "Beta", "Tool", "Video" }.Contains(appType)
+                && childGameTypes.Contains(appType)
                 && uint.TryParse(parentStr, out uint parentId))
             {
                 logger.Debug($"Getting parent metadata for {appId} from {parentId}");

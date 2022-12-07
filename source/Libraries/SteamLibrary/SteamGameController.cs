@@ -144,7 +144,7 @@ namespace SteamLibrary
         private Stopwatch stopWatch;
         private readonly SteamLibrarySettings settings;
         private readonly IPlayniteAPI playniteAPI;
-        private ILogger logger = LogManager.GetLogger();
+        private static readonly ILogger logger = LogManager.GetLogger();
 
         public SteamPlayController(Game game, SteamLibrarySettings settings, IPlayniteAPI playniteAPI) : base(game)
         {
