@@ -72,3 +72,10 @@ Packages:
       - Added support for localized metadata (by Jeshibu)
       - Added support for import of store tags (by Jeshibu)
       - Metadata for demos are now downloaded from main game (by Jeshibu)
+  - Version: 2.10
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-12-07
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_10.pext
+    Changelog:
+      - Added an option to show Steam game startup selection dialog (by Jeshibu)
+      - Fixed metadata download issues related to some games (by Jeshibu)
