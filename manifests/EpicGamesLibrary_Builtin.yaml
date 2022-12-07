@@ -90,3 +90,9 @@ Packages:
     Changelog:
       - Library import speed improvements
       - Temporarily disabled Epic store metadata download support
+  - Version: 2.15
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2022-12-07
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_15.pext
+    Changelog:
+      - Updated web view user agent to potentially fix issues with captcha during login
