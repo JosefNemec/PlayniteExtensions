@@ -57,3 +57,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/OriginLibrary_Builtin_2_8.pext
     Changelog:
       - Fixed authentication not working
+  - Version: 2.9
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-01-12
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/OriginLibrary_Builtin_2_9.pext
+    Changelog:
+      - Fixed authentication not working
