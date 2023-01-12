@@ -14,7 +14,7 @@ namespace OriginLibrary.Services
     {
         private const string loginUrl = @"https://www.ea.com/login";
         private const string profileUrl = @"https://myaccount.ea.com/cp-ui/aboutme/index";
-        private const string logoutUrl = @"https://www.ea.com/logout";
+        private const string logoutUrl = @"https://accounts.ea.com/connect/logout?client_id=EADOTCOM-WEB-SERVER&locale=en_US&redirect_uri=https%3A%2F%2Fwww.ea.com";
         private const string tokenUrl = @"https://accounts.ea.com/connect/auth?client_id=ORIGIN_JS_SDK&response_type=token&redirect_uri=nucleus:rest&prompt=none";
         private ILogger logger = LogManager.GetLogger();
         private IWebView webView;
