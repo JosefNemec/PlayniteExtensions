@@ -121,8 +121,21 @@ namespace GogLibrary
                 return new List<GameAction>();
             }
 
-            var playTasks = gameTaskData.playTasks?.Where(a => a.isPrimary).Select(a => a.ConvertToGenericTask(installDir)).ToList();
-            return playTasks ?? new List<GameAction>();
+            if (gameTaskData == null)
+            {
+                return new List<GameAction>();
+            }
+
+            try
+            {
+                var playTasks = gameTaskData.playTasks?.Where(a => a.isPrimary).Select(a => a.ConvertToGenericTask(installDir)).ToList();
+                return playTasks ?? new List<GameAction>();
+            }
+            catch (Exception e)
+            {
+                logger.Error(e, $"Failed to get GOG play task: {gameId} {installDir}");
+                return new List<GameAction>();
+            }
         }
 
         internal static List<GameAction> GetOtherTasks(string gameId, string installDir)
@@ -144,21 +157,34 @@ namespace GogLibrary
                 return new List<GameAction>();
             }
 
-            var otherTasks = new List<GameAction>();
-            foreach (var task in gameTaskData.playTasks.Where(a => !a.isPrimary))
+            if (gameTaskData == null)
             {
-                otherTasks.Add(task.ConvertToGenericTask(installDir));
+                return new List<GameAction>();
             }
 
-            if (gameTaskData.supportTasks != null)
+            try
             {
-                foreach (var task in gameTaskData.supportTasks)
+                var otherTasks = new List<GameAction>();
+                foreach (var task in gameTaskData.playTasks.Where(a => !a.isPrimary))
                 {
                     otherTasks.Add(task.ConvertToGenericTask(installDir));
                 }
-            }
 
-            return otherTasks;
+                if (gameTaskData.supportTasks != null)
+                {
+                    foreach (var task in gameTaskData.supportTasks)
+                    {
+                        otherTasks.Add(task.ConvertToGenericTask(installDir));
+                    }
+                }
+
+                return otherTasks;
+            }
+            catch (Exception e)
+            {
+                logger.Error(e, $"Failed to get GOG game tasks: {gameId} {installDir}");
+                return new List<GameAction>();
+            }
         }
 
         internal static Dictionary<string, GameMetadata> GetInstalledEntries()
