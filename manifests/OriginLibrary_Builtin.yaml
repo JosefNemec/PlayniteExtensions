@@ -63,3 +63,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/OriginLibrary_Builtin_2_9.pext
     Changelog:
       - Fixed authentication not working
+  - Version: 2.10
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-01-21
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/OriginLibrary_Builtin_2_10.pext
+    Changelog:
+      - Fixed issue with games using EasyAntiCheat not starting properly
