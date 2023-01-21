@@ -156,6 +156,7 @@
     <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginSettingsViewModel.cs">
       <Link>Shared\PluginSettingsViewModel.cs</Link>
     </Compile>
+    <Compile Include="EAC.cs" />
     <Compile Include="Environment.cs" />
     <Compile Include="LocalizationKeys.cs" />
     <Compile Include="Models\GameInstallerData.cs" />

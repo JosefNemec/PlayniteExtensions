@@ -171,13 +171,36 @@ namespace OriginLibrary
                 procMon.TreeDestroyed += ProcMon_TreeDestroyed;
                 procMon.TreeStarted += ProcMon_TreeStarted;
                 var startAction = originLibrary.GetGamePlayTaskForGameId(Game.GameId);
-                if (startAction.Type == GameActionType.URL)
+                if (Origin.GetGameUsesEasyAntiCheat(Game.InstallDirectory))
                 {
-                    ProcessStarter.StartUrl(startAction.Path);
+                    var eac = EasyAntiCheat.GetLauncherSettings(Game.InstallDirectory);
+                    if (!eac.parameters.IsNullOrEmpty() && eac.use_cmdline_parameters == "1")
+                    {
+                        startAction.Arguments = eac.parameters;
+                    }
+
+                    if (!eac.working_directory.IsNullOrEmpty())
+                    {
+                        startAction.WorkingDir = Path.Combine(Game.InstallDirectory, eac.working_directory);
+                    }
+                    else
+                    {
+                        startAction.WorkingDir = Game.InstallDirectory;
+                    }
+
+                    startAction.Path = eac.executable;
+                    ProcessStarter.StartProcess(startAction.Path, startAction.Arguments, startAction.WorkingDir);
                 }
                 else
                 {
-                    ProcessStarter.StartProcess(startAction.Path, startAction.Arguments, startAction.WorkingDir);
+                    if (startAction.Type == GameActionType.URL)
+                    {
+                        ProcessStarter.StartUrl(startAction.Path);
+                    }
+                    else
+                    {
+                        ProcessStarter.StartProcess(startAction.Path, startAction.Arguments, startAction.WorkingDir);
+                    }
                 }
 
                 StartRunningWatcher();
