@@ -21,7 +21,7 @@ namespace RockstarGamesLibrary
         public RockstarGamesLibrary(IPlayniteAPI api) : base(
             "Rockstar Games",
             Guid.Parse("88409022-088a-4de8-805a-fdbac291f00a"),
-            new LibraryPluginProperties { CanShutdownClient = true, HasSettings = true },
+            new LibraryPluginProperties { CanShutdownClient = true, HasSettings = false },
             new RockstarGamesLibraryClient(),
             RockstarGames.Icon,
             null,
