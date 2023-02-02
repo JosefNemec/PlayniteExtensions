@@ -355,6 +355,30 @@ namespace Steam
                 {
                     metadata.Genres = metadata.StoreDetails.genres.Select(a => new MetadataNameProperty(a.description)).Cast<MetadataProperty>().ToHashSet();
                 }
+
+                if (metadata.StoreDetails.platforms != null)
+                {
+                    metadata.Platforms = new HashSet<MetadataProperty>();
+
+                    if (metadata.StoreDetails.platforms.windows)
+                    {
+                        metadata.Platforms.Add(new MetadataSpecProperty("pc_windows"));
+                    }
+
+                    if (metadata.StoreDetails.platforms.mac)
+                    {
+                        metadata.Platforms.Add(new MetadataSpecProperty("macintosh"));
+                    }
+
+                    if (metadata.StoreDetails.platforms.linux)
+                    {
+                        metadata.Platforms.Add(new MetadataSpecProperty("pc_linux"));
+                    }
+                }
+                else
+                {
+                    metadata.Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") };
+                }
             }
 
             if (metadata.ProductDetails != null)
