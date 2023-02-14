@@ -248,6 +248,10 @@ namespace SteamLibrary
 
                     view.DeleteDomainCookies(".steamcommunity.com");
                     view.DeleteDomainCookies("steamcommunity.com");
+                    view.DeleteDomainCookies("steampowered.com");
+                    view.DeleteDomainCookies("store.steampowered.com");
+                    view.DeleteDomainCookies("help.steampowered.com");
+                    view.DeleteDomainCookies("login.steampowered.com");
                     view.Navigate(@"https://steamcommunity.com/login/home/?goto=");
                     view.OpenDialog();
                 }
