@@ -68,7 +68,7 @@ namespace GogLibrary.Services
 
         public ProductApiDetail GetGameDetails(string id, string locale = "en")
         {
-            var baseUrl = @"http://api.gog.com/products/{0}?expand=description&locale={1}";
+            var baseUrl = @"https://api.gog.com/products/{0}?expand=description&locale={1}";
 
             try
             {
