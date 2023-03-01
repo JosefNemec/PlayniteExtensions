@@ -316,5 +316,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Generic\PlayniteExtensions.Common\PlayniteExtensions.Common.csproj">
+      <Project>{EC61901F-C040-4A87-A5A9-7C2C5AD52E7D}</Project>
+      <Name>PlayniteExtensions.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

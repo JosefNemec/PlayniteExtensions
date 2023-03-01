@@ -226,5 +226,11 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Generic\PlayniteExtensions.Common\PlayniteExtensions.Common.csproj">
+      <Project>{ec61901f-c040-4a87-a5a9-7c2c5ad52e7d}</Project>
+      <Name>PlayniteExtensions.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
