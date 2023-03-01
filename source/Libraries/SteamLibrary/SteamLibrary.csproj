@@ -162,6 +162,9 @@
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Services\GenericResponse.cs">
       <Link>Services\GenericResponse.cs</Link>
     </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\DateHelper.cs">
+      <Link>Shared\DateHelper.cs</Link>
+    </Compile>
     <Compile Include="..\..\Generic\PlayniteExtensions.Common\GlobalCommands.cs">
       <Link>Shared\GlobalCommands.cs</Link>
     </Compile>
@@ -315,12 +318,6 @@
     <None Include="Resources\steamicon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Generic\PlayniteExtensions.Common\PlayniteExtensions.Common.csproj">
-      <Project>{EC61901F-C040-4A87-A5A9-7C2C5AD52E7D}</Project>
-      <Name>PlayniteExtensions.Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
