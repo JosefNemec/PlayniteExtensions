@@ -79,3 +79,11 @@ Packages:
     Changelog:
       - Added an option to show Steam game startup selection dialog (by Jeshibu and CanRanBan)
       - Fixed metadata download issues related to some games (by Jeshibu)
+  - Version: 2.11
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-03-04
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_11.pext
+    Changelog:
+      - Added support for download of supported platforms (by Jeshibu)
+      - Fixed imprecise release date parsing (by Jeshibu)
+      - Fixed issue with being unable to re-authenticate under a different Steam account

@@ -60,3 +60,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_8.pext
     Changelog:
       - Fixed metadata download issues related to some games (by Jeshibu)
+  - Version: 2.9
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-03-04
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_9.pext
+    Changelog:
+      - Added support for download of supported platforms (by Jeshibu)
+      - Fixed imprecise release date parsing (by Jeshibu)
