@@ -1,6 +1,7 @@
 ﻿using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Models;
+using PlayniteExtensions.Common;
 using Steam.Models;
 using SteamKit2;
 using SteamLibrary.SteamShared;
@@ -299,14 +300,8 @@ namespace Steam
             {
                 metadata.Description = ParseDescription(metadata.StoreDetails.about_the_game);
                 var cultInfo = new CultureInfo("en-US", false).TextInfo;
-                if (metadata.StoreDetails.release_date.date?.IsNullOrEmpty() == false)
-                {
-                    if (DateTime.TryParse(metadata.StoreDetails.release_date.date, out var date))
-                    {
-                        metadata.ReleaseDate = new ReleaseDate(date);
-                    }
-                }
 
+                metadata.ReleaseDate = DateHelper.ParseReleaseDate(metadata.StoreDetails.release_date.date);
                 metadata.CriticScore = metadata.StoreDetails.metacritic?.score;
                 if (metadata.UserReviewDetails?.total_reviews > 0)
                 {

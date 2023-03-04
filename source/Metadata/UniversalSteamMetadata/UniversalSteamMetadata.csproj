@@ -153,6 +153,9 @@
     <Compile Include="..\..\..\playniterepo\source\playnite\converters\NegateConverter.cs">
       <Link>Shared\NegateConverter.cs</Link>
     </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\DateHelper.cs">
+      <Link>Shared\DateHelper.cs</Link>
+    </Compile>
     <Compile Include="..\..\Generic\PlayniteExtensions.Common\GlobalCommands.cs">
       <Link>Shared\GlobalCommands.cs</Link>
     </Compile>
