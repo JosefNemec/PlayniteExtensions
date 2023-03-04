@@ -92,3 +92,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_14.pext
     Changelog:
       - Fixed import of installed games failing in some cases
+  - Version: 2.15
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2023-03-04
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_15.pext
+    Changelog:
+      - Fixed issue with one API call not using https address (by Crwmy)
