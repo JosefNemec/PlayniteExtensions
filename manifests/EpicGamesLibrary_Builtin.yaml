@@ -96,3 +96,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_15.pext
     Changelog:
       - Updated web view user agent to potentially fix issues with captcha during login
+  - Version: 2.16
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2023-03-04
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_16.pext
+    Changelog:
+      - Small fix to detection of installed games
