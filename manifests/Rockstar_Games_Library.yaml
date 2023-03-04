@@ -43,3 +43,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Rockstar_Games_Library_2_6.pext
     Changelog:
       - Fixed game tracking (by CanRanBan)
+  - Version: 2.7
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-03-04
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Rockstar_Games_Library_2_7.pext
+    Changelog:
+      - Settings section should not be shown because plugin has no settings (by Jeshibu)
