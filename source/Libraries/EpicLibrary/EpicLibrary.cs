@@ -64,6 +64,12 @@ namespace EpicLibrary
 
                 var gameName = manifest?.DisplayName ?? Path.GetFileName(app.InstallLocation);
                 var installLocation = manifest?.InstallLocation ?? app.InstallLocation;
+                if (installLocation.IsNullOrEmpty())
+                {
+                    continue;
+                }
+
+                installLocation = Paths.FixSeparators(installLocation);
                 if (!Directory.Exists(installLocation))
                 {
                     logger.Error($"Epic game {gameName} installation directory {installLocation} not detected.");
