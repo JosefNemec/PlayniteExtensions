@@ -61,3 +61,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_10.pext
     Changelog:
       - Fixed Windows 11 being wrongly detected as unsupported system
+  - Version: 2.11
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-03-06
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_11.pext
+    Changelog:
+      - Fixed issue when trying to reauthenticate under a different Xbox account
