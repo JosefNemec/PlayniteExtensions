@@ -159,7 +159,9 @@ namespace UplayLibrary
 
                     if (ProcessExtensions.IsRunning("UbisoftGameLauncher"))
                     {
-                        procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
+                        // R6 Siege is just weird...
+                        var trackingDelay = Game.GameId == "635" ? 10000 : 2000;
+                        procMon.WatchDirectoryProcesses(Game.InstallDirectory, false, false, trackingDelay);
                         return;
                     }
 
