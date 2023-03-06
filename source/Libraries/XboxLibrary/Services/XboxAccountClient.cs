@@ -58,10 +58,12 @@ namespace XboxLibrary.Services
                 }
 
                 webView.DeleteDomainCookies(".live.com");
+                webView.DeleteDomainCookies(".login.live.com");
+                webView.DeleteDomainCookies("live.com");
+                webView.DeleteDomainCookies("login.live.com");
                 webView.DeleteDomainCookies(".xboxlive.com");
                 webView.DeleteDomainCookies(".xbox.com");
                 webView.DeleteDomainCookies(".microsoft.com");
-                webView.DeleteDomainCookies(".login.live.com");
                 webView.Navigate(loginUrl);
                 webView.OpenDialog();
             }
