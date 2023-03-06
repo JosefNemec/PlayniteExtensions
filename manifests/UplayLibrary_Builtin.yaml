@@ -30,3 +30,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/UplayLibrary_Builtin_2_4.pext
     Changelog:
       - Removed string references to Uplay client (by Xenor)
+  - Version: 2.5
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-03-06
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/UplayLibrary_Builtin_2_5.pext
+    Changelog:
+      - Fixed R6 Siege not being tracked properly
