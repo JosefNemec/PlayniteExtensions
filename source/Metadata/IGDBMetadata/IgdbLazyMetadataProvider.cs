@@ -7,6 +7,7 @@ using Playnite.SDK.Plugins;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -108,13 +109,12 @@ namespace IGDBMetadata
 
                     if (selected != null && !selected.url.IsNullOrEmpty())
                     {
-                        if (selected.height > 1080)
+                        var url = GetImageUrl(selected, selected.height > 1080 ? ImageSizes.p1080 : ImageSizes.original);
+                        var name = Path.GetFileName(url);
+                        var file = new MetadataFile(name, HttpDownloader.DownloadData(url, args.CancelToken));
+                        if (!args.CancelToken.IsCancellationRequested)
                         {
-                            return new MetadataFile(GetImageUrl(selected, ImageSizes.p1080));
-                        }
-                        else
-                        {
-                            return new MetadataFile(GetImageUrl(selected, ImageSizes.original));
+                            return file;
                         }
                     }
                 }
@@ -137,13 +137,12 @@ namespace IGDBMetadata
         {
             if (AvailableFields.Contains(MetadataField.CoverImage) && !IgdbData.cover.url.IsNullOrEmpty())
             {
-                if (IgdbData.cover.height > 1080)
+                var url = GetImageUrl(IgdbData.cover, IgdbData.cover.height > 1080 ? ImageSizes.p1080 : ImageSizes.original);
+                var name = Path.GetFileName(url);
+                var file = new MetadataFile(name, HttpDownloader.DownloadData(url, args.CancelToken));
+                if (!args.CancelToken.IsCancellationRequested)
                 {
-                    return new MetadataFile(GetImageUrl(IgdbData.cover, ImageSizes.p1080));
-                }
-                else
-                {
-                    return new MetadataFile(GetImageUrl(IgdbData.cover, ImageSizes.original));
+                    return file;
                 }
             }
 
