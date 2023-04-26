@@ -87,3 +87,9 @@ Packages:
       - Added support for download of supported platforms (by Jeshibu)
       - Fixed imprecise release date parsing (by Jeshibu)
       - Fixed issue with being unable to re-authenticate under a different Steam account
+  - Version: 2.12
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-04-26
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_12.pext
+    Changelog:
+      - Fixed games being detected as installed before fully downloaded
