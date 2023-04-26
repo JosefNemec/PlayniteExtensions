@@ -69,7 +69,7 @@ namespace SteamLibrary
                         return;
                     }
 
-                    await Task.Delay(10000);
+                    await Task.Delay(10_000);
                 }
             });
         }
@@ -120,14 +120,14 @@ namespace SteamLibrary
                     return;
                 }
 
-                var gameState = Steam.GetAppState(id);
-                if (gameState.Installed == false)
+                var installed = SteamLibrary.GetInstalledGames(false);
+                if (!installed.ContainsKey(id))
                 {
                     InvokeOnUninstalled(new GameUninstalledEventArgs());
                     return;
                 }
 
-                await Task.Delay(5000);
+                await Task.Delay(5_000);
             }
         }
     }

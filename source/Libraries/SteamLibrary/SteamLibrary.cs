@@ -28,6 +28,33 @@ using Playnite.Common;
 
 namespace SteamLibrary
 {
+    [Flags]
+    public enum AppStateFlags
+    {
+        Invalid = 0,
+        Uninstalled = 1,
+        UpdateRequired = 2,
+        FullyInstalled = 4,
+        Encrypted = 8,
+        Locked = 16,
+        FilesMissing = 32,
+        AppRunning = 64,
+        FilesCorrupt = 128,
+        UpdateRunning = 256,
+        UpdatePaused = 512,
+        UpdateStarted = 1024,
+        Uninstalling = 2048,
+        BackupRunning = 4096,
+        Reconfiguring = 65536,
+        Validating = 131072,
+        AddingFiles = 262144,
+        Preallocating = 524288,
+        Downloading = 1048576,
+        Staging = 2097152,
+        Committing = 4194304,
+        UpdateStopping = 8388608
+    }
+
     [LoadPlugin]
     public class SteamLibrary : LibraryPluginBase<SteamLibrarySettingsViewModel>
     {
@@ -90,7 +117,22 @@ namespace SteamLibrary
         internal static GameMetadata GetInstalledGameFromFile(string path)
         {
             var kv = new KeyValue();
-            kv.ReadFileAsText(path);
+            using (var fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            {
+                kv.ReadAsText(fs);
+            }
+
+            if (!kv["StateFlags"].Value.IsNullOrEmpty() && Enum.TryParse<AppStateFlags>(kv["StateFlags"].Value, out var appState))
+            {
+                if (!appState.HasFlag(AppStateFlags.FullyInstalled))
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                return null;
+            }
 
             var name = string.Empty;
             if (string.IsNullOrEmpty(kv["name"].Value))
@@ -143,6 +185,11 @@ namespace SteamLibrary
                 try
                 {
                     var game = GetInstalledGameFromFile(Path.Combine(path, file));
+                    if (game == null)
+                    {
+                        continue;
+                    }
+
                     if (game.InstallDirectory.IsNullOrEmpty() || game.InstallDirectory.Contains(@"steamapps\music"))
                     {
                         logger.Info($"Steam game {game.Name} is not properly installed or it's a soundtrack, skipping.");
@@ -337,9 +384,9 @@ namespace SteamLibrary
             return dbs;
         }
 
-        internal static List<string> GetLibraryFolders()
+        internal static HashSet<string> GetLibraryFolders()
         {
-            var dbs = new List<string>() { Steam.InstallationPath };
+            var dbs = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { Steam.InstallationPath };
             var configPath = Path.Combine(Steam.InstallationPath, "steamapps", "libraryfolders.vdf");
             if (!File.Exists(configPath))
             {
@@ -348,7 +395,7 @@ namespace SteamLibrary
 
             try
             {
-                using (var fs = new FileStream(configPath, FileMode.Open, FileAccess.Read))
+                using (var fs = new FileStream(configPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                 {
                     var kv = new KeyValue();
                     kv.ReadAsText(fs);
