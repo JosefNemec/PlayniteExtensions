@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">وارد کردن زمان بازی</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">شناسه حساب</sys:String>
+  <sys:String x:Key="LOCRockstarMetadataLanguageLabel">زبان فراداده:</sys:String>
 </ResourceDictionary>

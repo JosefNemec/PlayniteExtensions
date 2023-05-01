@@ -1,33 +1,35 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCHumbleSettingsConnectAccount" />
-  <sys:String x:Key="LOCHumbleLoginChecking" />
-  <sys:String x:Key="LOCHumbleLoggedIn" />
-  <sys:String x:Key="LOCHumbleNotLoggedIn" />
-  <sys:String x:Key="LOCHumbleNotLoggedInError" />
-  <sys:String x:Key="LOCHumbleAuthenticateLabel" />
-  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCHumbleTroubleShootingIssues" />
-  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCHumblePrivateAccount" />
-  <sys:String x:Key="LOCHumblePublicAccount" />
-  <sys:String x:Key="LOCHumbleAPIKey" />
-  <sys:String x:Key="LOCHumbleStartUsingClient" />
-  <sys:String x:Key="LOCHumbleImportPlaytime" />
-  <sys:String x:Key="LOCHumbleAccountID" />
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">Importar jocs instal·lats</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Importar jocs no instal·lats</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">Connectar compte</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">Comprovant estat d'autenticació...</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">L'usuari està autenticat</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">Requereix autenticació</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">No s’ha pogut autenticar l’usuari.</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">Autenticar</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Arrencar jocs directament sense executar el client oficial</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Resolució de problemes de sincronització del compte</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">Resolució de problemes</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Importar tots els jocs</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">Compte privat</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">Compte públic</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">Clau API</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">Iniciar mitjançant el client de {0}</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">Importar temps de joc</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">ID del compte</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Idioma de les metadades:</sys:String>
   <!--Humble-->
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames" />
-  <sys:String x:Key="LOCHumbleImportChoiceGames" />
-  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip" />
-  <sys:String x:Key="LOCHumbleGeneralLibrary" />
-  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve" />
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree" />
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
-  <sys:String x:Key="LOCHumbleNonTroveInstallError" />
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorar jocs de botigues de tercers</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames">Importar jocs de Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Importar jocs disponibles com a part de la subscripció a Humble Choice.</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibrary">Importar jocs de la biblioteca de Humble</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importar compres estàndard de la tenda i de paquets de Humble.</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Activar per ometre la importació de jocs que requereixin clients de tercers,
+incloses les botigues ja gestionades a Playnite, per evitar duplicats.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importar si hi ha disponible la versió sense DRM</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importar jocs que requereixin client de tercers si també hi ha disponible la versió sense DRM.</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Utilitzar sempre l'aplicació de Humble per iniciar els jocs</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Quan es desactivi, Playnite intentarà arrencar els jocs directament, ignorant l'aplicació Humble App.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">La instal·lació i la desinstal·lació automàtica de jocs de Humble que siguin de subscripció no és ara mateix compatible.</sys:String>
 </ResourceDictionary>

@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCOriginStartUsingClient" />
   <sys:String x:Key="LOCOriginImportPlaytime" />
   <sys:String x:Key="LOCOriginAccountID" />
+  <sys:String x:Key="LOCOriginMetadataLanguageLabel" />
 </ResourceDictionary>

@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">Starten met {0} client</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Importeer speeltijd</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Metadata taal:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Negeer spellen van derde partij winkels</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">Importeer Humble Choice spellen</sys:String>

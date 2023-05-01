@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCitchioAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">Мова метаданих:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io буде запущено. Будь ласка авторизуйтеся після чого закрийте це повідомлення.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Очікування на вхід користувача, будь ласка закрийте це коли завершите...</sys:String>

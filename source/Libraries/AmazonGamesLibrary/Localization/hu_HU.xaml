@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">{0} használata</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Játékidő importálása</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">Fióknév</sys:String>
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Metaadat nyelve:</sys:String>
 </ResourceDictionary>

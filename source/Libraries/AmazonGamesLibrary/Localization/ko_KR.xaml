@@ -15,7 +15,8 @@
   <sys:String x:Key="LOCAmazonPrivateAccount">비공개 계정</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">공개 계정</sys:String>
   <sys:String x:Key="LOCAmazonAPIKey">API 키</sys:String>
-  <sys:String x:Key="LOCAmazonStartUsingClient" />
-  <sys:String x:Key="LOCAmazonImportPlaytime" />
-  <sys:String x:Key="LOCAmazonAccountID" />
+  <sys:String x:Key="LOCAmazonStartUsingClient">{0} 클라이언트 사용 시작</sys:String>
+  <sys:String x:Key="LOCAmazonImportPlaytime">플레이 시간 가져오기</sys:String>
+  <sys:String x:Key="LOCAmazonAccountID">계정 ID</sys:String>
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">메타데이터 언어:</sys:String>
 </ResourceDictionary>

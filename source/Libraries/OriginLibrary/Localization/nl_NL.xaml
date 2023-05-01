@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCOriginStartUsingClient">Starten met {0} client</sys:String>
   <sys:String x:Key="LOCOriginImportPlaytime">Importeer speeltijd</sys:String>
   <sys:String x:Key="LOCOriginAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCOriginMetadataLanguageLabel">Metadata taal:</sys:String>
 </ResourceDictionary>

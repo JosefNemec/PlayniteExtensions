@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">وارد کردن زمان بازی</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">شناسه حساب</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">زبان فراداده:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">بازی های فروشگاه شخص ثالث را نادیده بگیرید</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">واردات بازی انتخاب فروتنانه</sys:String>

@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Bắt đầu sử dụng ứng dụng khách {0}</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Nhập thời gian chơi</sys:String>
   <sys:String x:Key="LOCitchioAccountID">ID tài khoản</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">Ngôn ngữ siêu dữ liệu</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io sẽ được khởi chạy. Vui lòng đăng nhập và sau đó đóng thông báo này.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Đang đợi người dùng đăng nhập, vui lòng đóng phần này khi bạn hoàn tất…</sys:String>

@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Starten met {0} client</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Importeer speeltijd</sys:String>
   <sys:String x:Key="LOCitchioAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">Metadata taal:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io wordt gestart. Log in a.u.b. en sluit dan dit bericht.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Wachten op aanmelding van gebruiker, sluit alstublieft af wanneer je klaar bent</sys:String>

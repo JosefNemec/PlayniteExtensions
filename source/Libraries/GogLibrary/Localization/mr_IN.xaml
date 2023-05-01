@@ -18,10 +18,13 @@
   <sys:String x:Key="LOCGOGStartUsingClient">{0} क्लाएंट वापरून सुरू करा</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">खेळलेल्याची कालावधी आयात करा</sys:String>
   <sys:String x:Key="LOCGOGAccountID" />
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel" />
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">खात्याचा लॉगइन</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">खात्याचे नाव</sys:String>
   <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve" />
   <sys:String x:Key="LOCSettingsGOGUseGalaxy" />
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip" />
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls" />
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve" />
 </ResourceDictionary>

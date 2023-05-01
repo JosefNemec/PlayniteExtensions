@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCSteamStartUsingClient">Comezar usando o cliente {0}</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Importar tempo de xogo</sys:String>
   <sys:String x:Key="LOCSteamAccountID">ID da conta</sys:String>
+  <sys:String x:Key="LOCSteamMetadataLanguageLabel" />
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">¿Cál é o nome da miña conta?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Nome da ligazón da conta</sys:String>
@@ -52,4 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignorar os xogos instalados doutras contas</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Contas adicionais</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Especifique o ID da conta Steam e o par de chaves da API de outras contas se quixeras importar xogos delas. Vai a páxina da wiki de solucións de problemas de Steam para máis información.</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel" />
+  <sys:String x:Key="LOCSteamTagPrefixLabel" />
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel" />
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel" />
+  <sys:String x:Key="LOCSteamTagWhitelistHeader" />
+  <sys:String x:Key="LOCSteamTagBlacklistHeader" />
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip" />
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip" />
+  <sys:String x:Key="LOCSteamValidationFixedTagCount" />
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode" />
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode" />
 </ResourceDictionary>

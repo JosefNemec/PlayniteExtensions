@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">Starten met {0} client</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Importeer speeltijd</sys:String>
   <sys:String x:Key="LOCXboxAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCXboxMetadataLanguageLabel">Metadata taal:</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Start Xbox Pass applicatie in plaats van Microsoft Store wanneer je de client opent</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">Importeer Xbox console spellen</sys:String>

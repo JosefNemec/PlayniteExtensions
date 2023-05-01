@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">وارد کردن زمان بازی</sys:String>
   <sys:String x:Key="LOCGOGAccountID">شناسه حساب</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">زبان فراداده:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">ورود به حساب کاربری</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">نام حساب</sys:String>
@@ -25,4 +26,7 @@
 توجه داشته باشید که گزینه نام حساب فقط برای حسابهایی کار می کند که کتابخانه های بازی آنها در تنظیمات حریم خصوصی GOG تنظیم شده اند تا در معرض دید عموم قرار گیرند.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">بازی ها را با استفاده از سرویس گیرنده GOG Galaxy راه اندازی کنید</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">این ویژگی های GOG Galaxy مانند ذخیره ابری، ردیابی زمان بازی و غیره را فعال می کند.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">هنگام نصب بازی‌ها در GOG Galaxy، فرآیند نصب را به‌طور خودکار آغاز کنید</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">اگر فعال باشد، فرآیند نصب به طور خودکار بدون نیاز به تعامل کاربر با محل نصب پیش‌فرض پیکربندی شده آغاز می‌شود.
+اگر غیرفعال باشد، صفحه بازی باز می شود تا به صورت دستی فرآیند نصب شروع شود.</sys:String>
 </ResourceDictionary>

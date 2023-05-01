@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">{0} क्लाएंट वापरून सुरू करा</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">खेळलेल्याची कालावधी आयात करा</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID" />
+  <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel" />
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">माझ्या खात्याचे नाव काय आहे?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">खात्याचे यू.आर.एल. नाव</sys:String>
@@ -52,4 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames" />
   <sys:String x:Key="LOCSteamAdditionalAccounts" />
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
+  <sys:String x:Key="LOCSteamLimitTagCountLabel" />
+  <sys:String x:Key="LOCSteamTagPrefixLabel" />
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel" />
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel" />
+  <sys:String x:Key="LOCSteamTagWhitelistHeader" />
+  <sys:String x:Key="LOCSteamTagBlacklistHeader" />
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip" />
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip" />
+  <sys:String x:Key="LOCSteamValidationFixedTagCount" />
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode" />
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode" />
 </ResourceDictionary>

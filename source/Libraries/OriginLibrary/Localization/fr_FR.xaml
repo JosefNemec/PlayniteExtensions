@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCOriginStartUsingClient">Lancer avec le client {0}</sys:String>
   <sys:String x:Key="LOCOriginImportPlaytime">Importer le temps de jeu</sys:String>
   <sys:String x:Key="LOCOriginAccountID">ID du compte</sys:String>
+  <sys:String x:Key="LOCOriginMetadataLanguageLabel">Langue des métadonnées :</sys:String>
 </ResourceDictionary>

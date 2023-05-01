@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">Začít používat {0} klienta.</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importovat nahraný čas</sys:String>
     <sys:String x:Key="LOCAccountID">ID účtu</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel"></sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">Bude spuštěno itch.io. Prosím přihlašte se a pak zavřete tuto zprávu.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Čekám na přihlášení uživatele, zavřete prosím toto okno, až budete hotovi...</sys:String>
@@ -31,6 +32,8 @@
 Připomínáme, že možnost zadání jména účtu funguje pouze pro ty účty, které mají v nastavení GOG v sekci soukromí nastavenou veřejnou viditelnost knihovny.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Spustit hry pomocí klienta GOG Galaxy</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Toto umožní schopnosti GOG Galaxy jako cloud ukládání, sledování herního času atd.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls"></sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Jaké je jméno mého účtu?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Jméno URL Účtu</sys:String>
@@ -65,6 +68,17 @@ Připomínáme, že možnost zadání jména účtu funguje pouze pro ty účty,
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignorovat instalované hry z ostatních účtů.</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Další účty</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Zadejte identifikátor dalších Steam účtů a jejich API klíče, pokud z nich chcete importovat hry. Podívejte se na wiki odkaz řešení problémů pro více informací.</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader"></sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount"></sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode"></sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Použít snímek z hry pokud není k dispozici obrázek</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Pokud je k dispozici víc obrázků, použít:</sys:String>

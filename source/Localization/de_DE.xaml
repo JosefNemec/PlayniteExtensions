@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">Mit {0}-Client starten</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Spielzeit importieren</sys:String>
     <sys:String x:Key="LOCAccountID">Konto-ID</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">Metadatensprache:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">Der itch.io-Client wird gestartet. Bitte melde dich dort an und schließe anschließend diese Meldung.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Es wird auf die Nutzeranmeldung gewartet. Bitte schließen diese Meldung, sobald du damit fertig bist …</sys:String>
@@ -31,12 +32,16 @@
 Beachte, dass die Option des öffentlichen Kontonamens nur bei Konten funktioniert, deren Spielebibliotheken in GOGs Privatsphäreeinstellungen als öffentlich sichtbar festgelegt wurden.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Spiele mit GOG-Galaxy-Client starten</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Dies aktiviert Features von GOG Galaxy wie Cloud-Spielstände, Spielzeiterfassung etc.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Beim Installieren von Spielen auf GOG Galaxy den Installationsvorgang automatisch starten</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Falls aktiviert, wird der Installationsvorgang automatisch und ohne Benutzerinteraktion am konfigurierten Standardinstallationsort gestartet.
+Falls deaktiviert, wird die Spieleseite geöffnet, um den Installationsvorgang manuell zu starten.
+</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Wie lautet mein Kontoname?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Nutzerkonten-URL</sys:String>
     <sys:String x:Key="LOCSteamLoggedInUser">Authentifizierter Nutzer</sys:String>
-    <sys:String x:Key="LOCSteamRequiresApiKey">Das Konto ist privat, der API-Schlüssel ist erforderlich.</sys:String>
-    <sys:String x:Key="LOCSteamLinksCommunityHub">Communityhub</sys:String>
+    <sys:String x:Key="LOCSteamRequiresApiKey">Konto ist privat, API-Schlüssel erforderlich.</sys:String>
+    <sys:String x:Key="LOCSteamLinksCommunityHub">Community-Hub</sys:String>
     <sys:String x:Key="LOCSteamLinksDiscussions">Diskussionen</sys:String>
     <sys:String x:Key="LOCSteamLinksGuides">Guides</sys:String>
     <sys:String x:Key="LOCSteamLinksWorkshop">Workshop</sys:String>
@@ -50,7 +55,7 @@ Beachte, dass die Option des öffentlichen Kontonamens nur bei Konten funktionie
     <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">»Zuletzt gespielt«-Informationen können nicht importiert werden, da kein Konto für den Import ausgewählt ist.</sys:String>
     <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">»Zuletzt gespielt«-Informationen können nicht importiert werden, da die Datenbank nicht geöffnet ist.</sys:String>
     <sys:String x:Key="LOCSettingsSteamLastActivityImportError">»Zuletzt gespielt«-Informationen konnten nicht von Steam importiert werden: {0}</sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyTooltip">Für private Steam-Konten ist ein API-Schlüssel notwendig</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyTooltip">Für private Steam-Konten ist ein API-Schlüssel erforderlich</sys:String>
     <sys:String x:Key="LOCSettingsApiKeyUrlText">API-Schlüssel beziehen</sys:String>
     <sys:String x:Key="LOCSettingsSteamImportMetadata">Metadaten aus Steam-Konto importieren:</sys:String>
     <sys:String x:Key="LOCImportSteamCategoriesLabel">Steam-Kategorien importieren</sys:String>
@@ -65,6 +70,17 @@ Beachte, dass die Option des öffentlichen Kontonamens nur bei Konten funktionie
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Installierte Spiele anderer Konten ignorieren</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Weitere Konten</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Gib die Steam-Konto-ID und das API-Schlüsselpaar anderer Konten an, falls du von diesen Spiele importieren möchtest. Weitere Informationen findest du auf der Wiki-Seite zur Steam-Problembehebung.</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">Importierte Schlagwörter begrenzen auf die ersten</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">Schlagwortnamen voranstellen:</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Schlagwort-Ausschlussliste</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Ausgeschlossenen Schlagwörter werden nicht zu Spielen hinzugefügt.</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">Verfügbare Schlagwörter</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader">Ausgeschlossene Schlagwörter</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip">Von ausgeschlossenen Schlagwörtern entfernen</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip">Zu ausgeschlossenen Schlagwörtern hinzufügen</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">Feste Schlagwortanzahl muss eine gültige Zahl sein</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Steams Auswahldialog beim Spielstart im Desktop-Modus anzeigen</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Steams Auswahldialog beim Spielstart im Vollbild-Modus anzeigen</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Screenshots verwenden, falls kein Bildmaterial verfügbar</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Falls mehrere Bilder verfügbar, das folgende verwenden:</sys:String>
@@ -72,7 +88,7 @@ Beachte, dass die Option des öffentlichen Kontonamens nur bei Konten funktionie
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Spiele von Drittanbieter-Shops ignorieren</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Humble-Choice-Spiele importieren</sys:String>
-    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Spiele aus Humble-Choice-Abonnements importieren.</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Spiele aus Humble-Choice-Abonnement importieren.</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">Humble-Library-Spiele importieren</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Normale Käufe aus dem Humble Store und aus Bundles importieren.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Aktivieren, um keine Spiele zu importieren, die einen Drittanbieter-Client erfordern. Einschließlich bereits von Playnite verwalteter Shops, um Duplikate zu vermeiden.</sys:String>

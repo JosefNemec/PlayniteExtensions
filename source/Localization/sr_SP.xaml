@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient"></sys:String>
     <sys:String x:Key="LOCImportPlaytime"></sys:String>
     <sys:String x:Key="LOCAccountID"></sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel"></sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io клијент ће бити отворен. Молимо Вас да се пријавите, затим затворите ову поруку.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Чекање да се корисник пријави, молимо затворите ову поруку када завршите</sys:String>
@@ -31,6 +32,8 @@
 Запамтите да опција &quot;Корисничко име&quot; ради само за налоге чије су библиотеке игара подешене као јавно видљиве у подешевањима приватности GOG-а.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Покрени игре користећи GOG галаксија клијент</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Ово ће омогућити GOG галаксија својства као што на чување серверу, праћење времена играња итд.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls"></sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Које је моје корисничко име?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">УРЛ корсиника</sys:String>
@@ -65,6 +68,17 @@
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames"></sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts"></sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription"></sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader"></sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount"></sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode"></sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Користи снимке екрана ако слике нису доступне</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Ако је више слика доступно користи:</sys:String>

@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCSteamStartUsingClient">Starten met {0} client</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Importeer speeltijd</sys:String>
   <sys:String x:Key="LOCSteamAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCSteamMetadataLanguageLabel">Metadata taal:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Wat is mijn accountnaam?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Account URL Naam</sys:String>
@@ -52,4 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Negeer geïnstalleerde spellen van andere accounts</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Extra Accounts</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Specificeer Steam account ID en API key van andere accounts waar je Steam spellen van wil importeren. Zie Steam troubleshooting wiki pagina voor meer info.</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">Beperk het aantal geïmporteerde tags naar de eerste</sys:String>
+  <sys:String x:Key="LOCSteamTagPrefixLabel">Begin tags met:</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Geblokkeerde tags</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Uitgesloten tags zullen niet worden toegevoegd aan games.</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">Beschikbare tags</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">Uitgesloten tags</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip">Verwijder van uitgesloten tags</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip">Voeg toe aan uitgesloten tags</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">Vast tag aantal moet een geldig nummer zijn</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Toon het Steam spel opstart menu in bureaublad modus</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Toon het Steam spel opstart menu in volledig scherm modus</sys:String>
 </ResourceDictionary>

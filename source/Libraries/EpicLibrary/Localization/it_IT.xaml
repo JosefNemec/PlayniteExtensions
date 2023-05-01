@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCEpicStartUsingClient">Avvio del client {0} </sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Importa tempo di riproduzione</sys:String>
   <sys:String x:Key="LOCEpicAccountID">ID account</sys:String>
+  <sys:String x:Key="LOCEpicMetadataLanguageLabel">Lingua dei metadati:</sys:String>
 </ResourceDictionary>

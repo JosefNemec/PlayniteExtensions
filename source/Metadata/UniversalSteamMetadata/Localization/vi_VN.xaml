@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">Bắt đầu sử dụng ứng dụng khách {0}</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Nhập thời gian chơi</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">ID tài khoản</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">Ngôn ngữ siêu dữ liệu</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Tên tài khoản của tôi là gì?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Tên URL tài khoản</sys:String>
@@ -52,4 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Bỏ qua các trò chơi đã cài đặt từ các tài khoản khác</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Tài khoản bổ sung</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Chỉ định ID tài khoản Steam và cặp khóa API của các tài khoản khác nếu bạn muốn nhập trò chơi từ chúng. Xem trang wiki khắc phục sự cố Steam để biết thêm thông tin.</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">Giới hạn số lượng thẻ tag được nhập còn 50 thẻ đầu tiên</sys:String>
+  <sys:String x:Key="LOCSteamTagPrefixLabel">Tiền tố thẻ tag với:</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Danh sách đen của thẻ tag</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Những tag loại trừ sẽ không được thêm vào game.</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">Thẻ tag có sẵn</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">Thẻ tag được loại trừ</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip">Gỡ bỏ thẻ tag khỏi danh sách loại trừ</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip">Thêm thẻ tag vào danh sách loại trừ</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">Số tượng tag phải là một số cụ thể</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Hiển thị menu lựa chọn khi khởi động game của Steam ở chế độ desktop</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Hiển thị menu lựa chọn khi khởi động game của Steam ở chế độ toàn màn hình</sys:String>
 </ResourceDictionary>

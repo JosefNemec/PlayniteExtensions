@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">Запустить через клиент {0}</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Импортировать наигранные часы</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">ID аккаунта</sys:String>
+  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Язык метаданных:</sys:String>
 </ResourceDictionary>

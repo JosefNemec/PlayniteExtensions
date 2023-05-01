@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-    <sys:String x:Key="LOCSettingsImportInstalledLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsImportUninstalledLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsConnectAccount"></sys:String>
-    <sys:String x:Key="LOCLoginChecking"></sys:String>
-    <sys:String x:Key="LOCLoggedIn"></sys:String>
-    <sys:String x:Key="LOCNotLoggedIn"></sys:String>
-    <sys:String x:Key="LOCNotLoggedInError"></sys:String>
-    <sys:String x:Key="LOCAuthenticateLabel"></sys:String>
+    <sys:String x:Key="LOCSettingsImportInstalledLabel">Importer installerede spil</sys:String>
+    <sys:String x:Key="LOCSettingsImportUninstalledLabel">Importer ikke installerede spil</sys:String>
+    <sys:String x:Key="LOCSettingsConnectAccount">Forbind konto</sys:String>
+    <sys:String x:Key="LOCLoginChecking">Tjekker godkendelsesstatus…</sys:String>
+    <sys:String x:Key="LOCLoggedIn">Brugeren er verificeret</sys:String>
+    <sys:String x:Key="LOCNotLoggedIn">Kræver verificering</sys:String>
+    <sys:String x:Key="LOCNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
+    <sys:String x:Key="LOCAuthenticateLabel">Verificering</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly"></sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink"></sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues"></sys:String>
@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient"></sys:String>
     <sys:String x:Key="LOCImportPlaytime"></sys:String>
     <sys:String x:Key="LOCAccountID"></sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel"></sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif"></sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage"></sys:String>
@@ -30,6 +31,8 @@
     <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy"></sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip"></sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls"></sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName"></sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName"></sys:String>
@@ -64,6 +67,17 @@
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames"></sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts"></sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription"></sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader"></sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount"></sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode"></sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"></sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>

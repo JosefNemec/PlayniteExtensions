@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Avvio del client {0} </sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Importa tempo di riproduzione</sys:String>
   <sys:String x:Key="LOCitchioAccountID">ID account</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">Lingua dei metadati:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">Il client di itch.io sarà aperto. Accedi e chiudi questo messaggio.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Attendere per l'accesso dell'utente, chiudi quando hai finito…</sys:String>

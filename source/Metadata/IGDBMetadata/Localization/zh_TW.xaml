@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">以{0}啟動</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">匯入遊玩時間</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">帳戶ID</sys:String>
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel">元資料語言:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">如果沒有圖片則使用擷圖</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">有多張圖片時則使用:</sys:String>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCGOGSettingsImportInstalledLabel">Импортиране на инсталирани игри</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel">Импортиране на неинсталирани игри</sys:String>
+  <sys:String x:Key="LOCGOGSettingsConnectAccount">Свързване на акаун</sys:String>
+  <sys:String x:Key="LOCGOGLoginChecking">Проверява се състоянието на удостоверяване...</sys:String>
+  <sys:String x:Key="LOCGOGLoggedIn">Потребителят е удостоверен</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedIn">Изисква удостоверяване</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedInError">Неуспешно удостоверяване на потребителя.</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateLabel">Удостоверяване</sys:String>
+  <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Стартиране на игри директно без стартиране на официален клиен</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Отстраняване на проблеми със синхронизирането на акаун</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingIssues">Отстраняване на проблеми</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">Импортиране на всички игри</sys:String>
+  <sys:String x:Key="LOCGOGPrivateAccount">Личен акаун</sys:String>
+  <sys:String x:Key="LOCGOGPublicAccount">Публичен акаун</sys:String>
+  <sys:String x:Key="LOCGOGAPIKey">API клю</sys:String>
+  <sys:String x:Key="LOCGOGStartUsingClient">Започнете да използвате {0} клиен</sys:String>
+  <sys:String x:Key="LOCGOGImportPlaytime">Импортиране на изиграното време</sys:String>
+  <sys:String x:Key="LOCGOGAccountID">ИД на акаун</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Език на метаданните:</sys:String>
+  <!--GOG-->
+  <sys:String x:Key="LOCGOGUseLogin">Влизане в акаун</sys:String>
+  <sys:String x:Key="LOCGOGUseAccountName">Име на акаун</sys:String>
+  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Влезте в акаунта си или използвайте името на публичния си акаунт, за да синхронизирате пълната си библиотека.
+Имайте предвид, че опцията за име на акаунт работи само за акаунти, чиито библиотеки с игри са зададени в настройките за поверителност на GOG да бъдат публично видими.</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxy">Стартиране на игри чрез GOG Galaxy клиент</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Това ще активира функции на GOG Galaxy като запазване в облак, проследяване на времето за игра и т.н.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Автоматично стартиране на процеса на инсталиране при инсталиране на игри на GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Ако е разрешено, процесът на инсталиране ще бъде стартиран автоматично, без да е необходимо взаимодействие с потребителя към конфигурираното място за инсталиране по подразбиране.
+Ако е деактивирано, страницата на играта ще се отвори за ръчно стартиране на процеса на инсталиране.</sys:String>
+</ResourceDictionary>

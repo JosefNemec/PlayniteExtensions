@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">Hesap ID</sys:String>
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Meta veri dili:</sys:String>
 </ResourceDictionary>

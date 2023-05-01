@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">بدء باستخدام {0} عميل</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">استيراد وقت التشغيل</sys:String>
   <sys:String x:Key="LOCGOGAccountID">تعريف الحساب</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">تسجيل الدخول</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">إسم الحساب</sys:String>
@@ -25,4 +26,7 @@
 يرجى الملاحظة أن خيار اسم الحساب يعمل فقط للحسابات التي تم تعيين مكتبة ألعابها في إعدادات خصوصية GOG لتكون مرئية للعامة.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">قم بتشغيل الألعاب بأستخدام منصة GOG Galaxy </sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">سيؤدي هذا إلى تمكين ميزات GOG Galaxy مثل الحفظ السحابي وتتبع وقت اللعبة وما إلى ذلك.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">بدء عملية التثبيت تلقائياً عند تثبيت الألعاب على GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">إذا تم تفعيله، سيتم بدء عملية التثبيت تلقائيًا دون الحاجة إلى تفاعل المستخدم مع موقع التثبيت الافتراضي المكون.
+إذا تم تعطيله، سيتم فتح صفحة اللعبة لبدء عملية التثبيت يدوياً.</sys:String>
 </ResourceDictionary>

@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">Begynn å bruke {0}-klient</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importer spilletid</sys:String>
     <sys:String x:Key="LOCAccountID">Konto-ID</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">Språk for metadata:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io-klienten vil starte. Vennligst logg inn, og lukk deretter denne meldingen.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Venter på at brukeren skal logge inn. Vennligst lukk dette vinduet når du er ferdig …</sys:String>
@@ -31,6 +32,9 @@
 Merk at alternativet Kontonavn bare fungerer for kontoer der spillbibliotekene er gjort offentlig synlige i GOGs personverninnstillinger.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Start spill ved hjelp av GOG Galaxy-klienten</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Dette vil aktivere GOG Galaxy-funksjoner som skylagring, sporing av spilletid osv.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Start installasjonsprosessen automatisk når du installerer spill på GOG Galaxy</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Hvis aktivert startes installasjonsprosessen automatisk uten behov for brukerinteraksjon, og den konfigurerte installasjonsplasseringen brukes.
+Hvis deaktivert, vil spillsiden bli åpnet så  installasjonsprosessen kan startes manuelt.</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Hva er kontonavnet mitt?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">URL-navn for konto</sys:String>
@@ -65,6 +69,17 @@ Merk at alternativet Kontonavn bare fungerer for kontoer der spillbibliotekene e
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignorer installerte spill fra andre kontoer</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Ekstra kontoer</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Spesifiser Steam-konto-ID og API-nøkkel for annen konto hvis du ønsker å importere spill derfra. Besøk Steams wiki-side for feilsøking for mer informasjon.</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">Begrens mengden stikkord som importeres til kun den første</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">Legg til dette foran stikkord:</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Stikkordsvarteliste</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Ekskluderte stikkord vil ikke bli lagt til spill.</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">Tilgjengelige stikkord</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader">Ekskluderte stikkord</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip">Fjern fra ekskluderte stikkord</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip">Legg til ekskluderte stikkord</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">Låst stikkordantall må være et gyldig tall</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Vis Steams oppstartsmeny for spill i skrivebordsmodus</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Vis Steams oppstartsmeny for spill i fullskjermmodus</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Bruk skjermbilder hvis bildemateriale ikke er tilgjengelig</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Hvis flere bilder er tilgjengelige, bruk:</sys:String>

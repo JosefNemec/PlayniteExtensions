@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">Bắt đầu sử dụng ứng dụng khách {0}</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Nhập thời gian chơi</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">ID tài khoản</sys:String>
+  <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Ngôn ngữ siêu dữ liệu</sys:String>
 </ResourceDictionary>

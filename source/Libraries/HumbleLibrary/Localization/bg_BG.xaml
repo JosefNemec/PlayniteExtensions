@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">Импортиране на инсталирани игри</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Импортиране на неинсталирани игри</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">Свързване на акаун</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">Проверява се състоянието на удостоверяване...</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">Потребителят е удостоверен</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">Изисква удостоверяване</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">Неуспешно удостоверяване на потребителя.</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">Удостоверяване</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Стартиране на игри директно без стартиране на официален клиен</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Отстраняване на проблеми със синхронизирането на акаун</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">Отстраняване на проблеми</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Импортиране на всички игри</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">Личен акаун</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">Публичен акаун</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">API клю</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">Започнете да използвате {0} клиен</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">Импортиране на изиграното време</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">ИД на акаун</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Език на метаданните:</sys:String>
+  <!--Humble-->
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Игнориране на игри от магазина на трети страни</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames">Импортиране на игри Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Импортиране на игри, достъпно като част от абонамента за Humble Choice.</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibrary">Импортиране на игри от Humble Library</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Импортирайте стандартни покупки от Humble store и пакетни покупки.</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Активирайте, за да пропуснете импортирането на игри, които изискват клиенти на трети страни, включително магазини, които вече се управляват в Playnite, за предотвратяване на дублиране.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Импортиране, ако е налична безплатна DRM версия</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Импортирайте игри, изискващи клиент на трета страна, ако е налична и безплатна версия за DRM.</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Винаги използвайте приложението Humble за стартиране на игри</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Когато е деактивирано, Playnite ще се опита да стартира игри директно, заобикаляйки приложението Humble.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">Автоматичното инсталиране и деинсталиране на Humble игри без абонамент в момента не се поддържа.</sys:String>
+</ResourceDictionary>

@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Мова метаданих:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Використовувати знімки гри якщо немає іншого зображення</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Якщо доступно декілька зображень, використовувати:</sys:String>

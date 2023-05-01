@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCUniversalSteamMetadataSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCUniversalSteamMetadataSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCUniversalSteamMetadataSettingsConnectAccount" />
-  <sys:String x:Key="LOCUniversalSteamMetadataLoginChecking" />
-  <sys:String x:Key="LOCUniversalSteamMetadataLoggedIn" />
-  <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedIn" />
-  <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedInError" />
-  <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateLabel" />
+  <sys:String x:Key="LOCUniversalSteamMetadataSettingsImportInstalledLabel">Importer installerede spil</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataSettingsImportUninstalledLabel">Importer ikke installerede spil</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataSettingsConnectAccount">Forbind konto</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataLoginChecking">Tjekker godkendelsesstatus…</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataLoggedIn">Brugeren er verificeret</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedIn">Kræver verificering</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateLabel">Verificering</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataSettingsStartGameDirectly" />
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingAccountLink" />
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingIssues" />
@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient" />
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime" />
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID" />
+  <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel" />
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName" />
   <sys:String x:Key="LOCSteamCustomUrlName" />
@@ -52,4 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames" />
   <sys:String x:Key="LOCSteamAdditionalAccounts" />
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
+  <sys:String x:Key="LOCSteamLimitTagCountLabel" />
+  <sys:String x:Key="LOCSteamTagPrefixLabel" />
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel" />
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel" />
+  <sys:String x:Key="LOCSteamTagWhitelistHeader" />
+  <sys:String x:Key="LOCSteamTagBlacklistHeader" />
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip" />
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip" />
+  <sys:String x:Key="LOCSteamValidationFixedTagCount" />
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode" />
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode" />
 </ResourceDictionary>

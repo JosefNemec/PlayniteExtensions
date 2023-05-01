@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCOriginStartUsingClient">{0} használata</sys:String>
   <sys:String x:Key="LOCOriginImportPlaytime">Játékidő importálása</sys:String>
   <sys:String x:Key="LOCOriginAccountID">Fióknév</sys:String>
+  <sys:String x:Key="LOCOriginMetadataLanguageLabel">Metaadat nyelve:</sys:String>
 </ResourceDictionary>

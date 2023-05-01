@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">ID účtu</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel" />
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorovat hry z obchodů třetích stran</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">Importovat Humble Choice hry.</sys:String>

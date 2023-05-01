@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">Começar usando cliente {0}</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Importar tempo de jogo</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">ID da Conta</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">Idioma dos metadados:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Qual o nome da minha conta?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Nome da conta na URL</sys:String>
@@ -52,4 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignorar jogos instalados de outras contas</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Contas Adicionais</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Especifique o ID da conta Steam e o par de chaves da API de outras contas se você quiser importar jogos delas. Veja a página da wiki de solução de problemas do Steam para mais informações.</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">Limitar a quantidade de tags importadas à primeira</sys:String>
+  <sys:String x:Key="LOCSteamTagPrefixLabel">Adicionar ao nome das tags o prefixo:</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Lista negra de tags</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Tags excluídas não serão adicionadas aos jogos.</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">Tags disponíveis</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">Tags excluídas</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip">Remover das tags excluídas</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip">Adicionar às tags excluídas</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">O número de tags fixas deve ser um número válido</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Mostrar menu de seleção de inicialização de jogo do Steam em modo desktop</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Mostrar menu de seleção de inicialização de jogo do Steam em modo tela cheia</sys:String>
 </ResourceDictionary>

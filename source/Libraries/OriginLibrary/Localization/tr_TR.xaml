@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCOriginStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCOriginImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCOriginAccountID">Hesap ID</sys:String>
+  <sys:String x:Key="LOCOriginMetadataLanguageLabel">Meta veri dili:</sys:String>
 </ResourceDictionary>

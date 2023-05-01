@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient" />
   <sys:String x:Key="LOCitchioImportPlaytime" />
   <sys:String x:Key="LOCitchioAccountID" />
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel" />
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io клијент ће бити отворен. Молимо Вас да се пријавите, затим затворите ову поруку.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Чекање да се корисник пријави, молимо затворите ову поруку када завршите</sys:String>

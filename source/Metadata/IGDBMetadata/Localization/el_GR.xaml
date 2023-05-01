@@ -3,23 +3,24 @@
   <sys:String x:Key="LOCIGDBSettingsImportInstalledLabel">Εισαγωγή εγκατεστημένων παιχνιδιών</sys:String>
   <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel">Εισαγωγή μη εγκατεστημένων παιχνιδιών</sys:String>
   <sys:String x:Key="LOCIGDBSettingsConnectAccount">Σύνδεση λογαριασμού</sys:String>
-  <sys:String x:Key="LOCIGDBLoginChecking">Έλεγχος κατάστασης ταυτοποίησης...</sys:String>
+  <sys:String x:Key="LOCIGDBLoginChecking">Έλεγχος κατάστασης πιστοποίησης...</sys:String>
   <sys:String x:Key="LOCIGDBLoggedIn">Ο χρήστης είναι πιστοποιημένος</sys:String>
-  <sys:String x:Key="LOCIGDBNotLoggedIn">Απαιτείται Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedIn">Απαιτείται πιστοποίηση</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
-  <sys:String x:Key="LOCIGDBAuthenticateLabel">Επικύρωση</sys:String>
-  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Απευθείας εκκίνηση παιχνιδιού χωρίς την χρήση του επίσημου client</sys:String>
-  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρόνισης λογαριασμού</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateLabel">Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Απευθείας εκκίνηση των παιχνιδιών χωρίς τη χρήση της επίσημης εφαρμογής</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρονισμού του λογαριασμού</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
   <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel">Εισαγωγή όλων των παιχνιδιών</sys:String>
   <sys:String x:Key="LOCIGDBPrivateAccount">Ιδιωτικός Λογαριασμός</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Δημόσιος Λογαριασμός</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">Κλειδί API</sys:String>
-  <sys:String x:Key="LOCIGDBStartUsingClient" />
-  <sys:String x:Key="LOCIGDBImportPlaytime" />
-  <sys:String x:Key="LOCIGDBAccountID" />
+  <sys:String x:Key="LOCIGDBStartUsingClient">Ξεκινήστε να χρησιμοποιείτε την εφαρμογή {0}</sys:String>
+  <sys:String x:Key="LOCIGDBImportPlaytime">Εισαγωγή ωρών παιχνιδιού</sys:String>
+  <sys:String x:Key="LOCIGDBAccountID">ID Λογαριασμού</sys:String>
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Γλώσσα μεταδεδόμενων:</sys:String>
   <!--IGDB-->
-  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary" />
-  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Εάν υπάρχουν διαθέσιμες πολλές εικόνες, τότε θα χρησιμοποιηθεί:</sys:String>
-  <sys:String x:Key="LOCIgdbSelectBackgroundTitle" />
+  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Χρήση στιγμιότυπων οθόνης αν το εξώφυλλο δεν είναι διαθέσιμο</sys:String>
+  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Εάν υπάρχουν πολλές εικόνες διαθέσιμες, τότε θα χρησιμοποιηθεί:</sys:String>
+  <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Επιλέξτε εικόνα παρασκηνίου για {0}</sys:String>
 </ResourceDictionary>

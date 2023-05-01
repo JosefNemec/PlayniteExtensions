@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCEpicStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCEpicAccountID">מזהה משתמש</sys:String>
+  <sys:String x:Key="LOCEpicMetadataLanguageLabel" />
 </ResourceDictionary>

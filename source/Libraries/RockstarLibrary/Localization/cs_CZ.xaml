@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">ID účtu</sys:String>
+  <sys:String x:Key="LOCRockstarMetadataLanguageLabel" />
 </ResourceDictionary>

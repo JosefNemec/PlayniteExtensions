@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">{0} क्लाएंट वापरून सुरू करा</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">खेळलेल्याची कालावधी आयात करा</sys:String>
   <sys:String x:Key="LOCRockstarAccountID" />
+  <sys:String x:Key="LOCRockstarMetadataLanguageLabel" />
 </ResourceDictionary>

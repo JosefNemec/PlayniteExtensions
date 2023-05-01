@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Begynn å bruke {0}-klient</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCitchioAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">Språk for metadata:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io-klienten vil starte. Vennligst logg inn, og lukk deretter denne meldingen.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Venter på at brukeren skal logge inn. Vennligst lukk dette vinduet når du er ferdig …</sys:String>

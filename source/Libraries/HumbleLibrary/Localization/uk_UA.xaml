@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Мова метаданих:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ігнорувати ігри із стороннього магазину</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">Імпортувати ігри з Humble Choice</sys:String>
@@ -28,7 +29,7 @@
 включно з магазинами, якими вже керує Playnite, щоб уникнути дублікатів.</sys:String>
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Імпортувати якщо доступна версія без DRM</sys:String>
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Імпортувати ігри, що потребують стороннього клієнту, якщо також доступна версія без DRM.</sys:String>
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Завжди використовувати додаток Humble для запуску ігор</sys:String>
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Коли вимкнено, Playnite намагатиметься запускати ігри напряму, минаючи додаток Humble.</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Завжди використовувати застосунок Humble для запуску ігор</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Коли вимкнено, Playnite намагатиметься запускати ігри напряму, минаючи застосунок Humble.</sys:String>
   <sys:String x:Key="LOCHumbleNonTroveInstallError">Автоматичне встановлення і видалення ігор Humble, які не є частиною підписки, наразі не підтримується.</sys:String>
 </ResourceDictionary>

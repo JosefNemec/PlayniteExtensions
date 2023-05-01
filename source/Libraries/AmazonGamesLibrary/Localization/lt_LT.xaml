@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Importuoti pražaistą laiką</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">Paskyros ID</sys:String>
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel" />
 </ResourceDictionary>

@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importuoti pražaistą laiką</sys:String>
     <sys:String x:Key="LOCAccountID">Paskyros ID</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel"></sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">bus atidarytas itch.io klientas. Prašome prisijungti ir uždaryti šį pranešimą.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Laukiama vartotojo prisijungimo. Baigus prašome uždaryti šį langą…</sys:String>
@@ -30,6 +31,8 @@
     <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Paleisti žaidimus naudojant GOG Galaxy klientą</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip"></sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls"></sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Koks mano vartotojo vardas?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Vartotojo nuorodos pavadinimas</sys:String>
@@ -64,6 +67,17 @@
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignoruoti įdiegtus žaidimus iš kitų paskyrų</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Papildomos Paskyros</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription"></sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader"></sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount"></sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode"></sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Naudoti ekrano kopijas jei officiali medžiaga nepasiekiama</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>

@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCSteamStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCSteamAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCSteamMetadataLanguageLabel">Мова метаданих:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Яке ім’я мого облікового запису?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">URL-адреса облікового запису</sys:String>
@@ -52,4 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ігнорувати встановлені ігри з інших облікових записів</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Додаткові облікові записи</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Визначте пару Steam ID і API-ключа інших облікових записів, якщо хочете імпортувати з них ігри. Для додаткової інформації перегляньте сторінку вирішення проблем Steam у wiki.</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">Обмежити кількість імпортованих тегів до першого</sys:String>
+  <sys:String x:Key="LOCSteamTagPrefixLabel">Додавати до імен тегів префікс:</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Чорний список тегів</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Виключені теги не будуть додані до ігор.</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">Доступні теги</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">Виключені теги</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip">Прибрати з виключених тегів</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip">Додати до виключених тегів</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">Фіксована кількість тегів має бути дійсним номером</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Показувати меню вибору при запуску гри Steam в режимі робочого столу</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Показувати меню вибору при запуску гри Steam в повноекранному режимі</sys:String>
 </ResourceDictionary>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCBattleNetSettingsImportInstalledLabel">Импортиране на инсталирани игри</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportUninstalledLabel">Импортиране на неинсталирани игри</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsConnectAccount">Свързване на акаун</sys:String>
+  <sys:String x:Key="LOCBattleNetLoginChecking">Проверява се състоянието на удостоверяване...</sys:String>
+  <sys:String x:Key="LOCBattleNetLoggedIn">Потребителят е удостоверен</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedIn">Изисква удостоверяване</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedInError">Неуспешно удостоверяване на потребителя.</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateLabel">Удостоверяване</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Стартиране на игри директно без стартиране на официален клиен</sys:String>
+  <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Отстраняване на проблеми със синхронизирането на акаун</sys:String>
+  <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Отстраняване на проблеми</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel">Импортиране на всички игри</sys:String>
+  <sys:String x:Key="LOCBattleNetPrivateAccount">Личен акаун</sys:String>
+  <sys:String x:Key="LOCBattleNetPublicAccount">Публичен акаун</sys:String>
+  <sys:String x:Key="LOCBattleNetAPIKey">API клю</sys:String>
+  <sys:String x:Key="LOCBattleNetStartUsingClient">Започнете да използвате {0} клиен</sys:String>
+  <sys:String x:Key="LOCBattleNetImportPlaytime">Импортиране на изиграното време</sys:String>
+  <sys:String x:Key="LOCBattleNetAccountID">ИД на акаун</sys:String>
+  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Език на метаданните:</sys:String>
+</ResourceDictionary>

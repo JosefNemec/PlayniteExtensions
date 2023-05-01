@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">{0} क्लाएंट वापरून सुरू करा</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">खेळलेल्याची कालावधी आयात करा</sys:String>
   <sys:String x:Key="LOCitchioAccountID" />
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel" />
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io चालू केले जाईल. कृपया साइन इन करा आणि मग हा संदेश बंद करा.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage" />

@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Importuj czasy gier</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">Identyfikator konta</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Język metadanych:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignoruj gry ze sklepów zewnętrznych</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">Zaimportuj gry z Humble Choice</sys:String>

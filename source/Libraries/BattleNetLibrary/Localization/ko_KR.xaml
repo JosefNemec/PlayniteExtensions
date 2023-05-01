@@ -15,7 +15,8 @@
   <sys:String x:Key="LOCBattleNetPrivateAccount">비공개 계정</sys:String>
   <sys:String x:Key="LOCBattleNetPublicAccount">공개 계정</sys:String>
   <sys:String x:Key="LOCBattleNetAPIKey">API 키</sys:String>
-  <sys:String x:Key="LOCBattleNetStartUsingClient" />
-  <sys:String x:Key="LOCBattleNetImportPlaytime" />
-  <sys:String x:Key="LOCBattleNetAccountID" />
+  <sys:String x:Key="LOCBattleNetStartUsingClient">{0} 클라이언트 사용 시작</sys:String>
+  <sys:String x:Key="LOCBattleNetImportPlaytime">플레이 시간 가져오기</sys:String>
+  <sys:String x:Key="LOCBattleNetAccountID">계정 ID</sys:String>
+  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">메타데이터 언어:</sys:String>
 </ResourceDictionary>

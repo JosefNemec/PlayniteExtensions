@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">{0} használata</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Játékidő importálása</sys:String>
     <sys:String x:Key="LOCAccountID">Fióknév</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">Metaadat nyelve:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">A megnyíló itch.io kliens ablakában jelentkezz be, és zárd be ezt az üzenet.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Felhasználó bejelentkezésére vár, zárd be ezt, miután kész…</sys:String>
@@ -31,6 +32,9 @@
 A fióknév opció csak akkor működik, ha a GOG adatvédelmi beállításainál a fiók nyilvánosra van állítva.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Játékok futtatása a GOG Galaxy klienssel</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Bekapcsolja a GOG Galaxy szolgáltatásokat, mint a felhő mentés, játékidő számlálók, stb.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automatikusan elindítja a játéktelepítést a GOG Galaxy-ból történő telepítés esetén</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Ha be van kapcsolva, felhasználói beavatkozás nélkül indítja a játék telepítését az alapértelmezett helyre.
+Kikapcsolása esetén a játék oldala fog megnyílni, hogy kézzel tudjuk indítani a telepítést.</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Mi a felhasználónevem?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Fiók URL címe</sys:String>
@@ -65,6 +69,17 @@ A fióknév opció csak akkor működik, ha a GOG adatvédelmi beállításainá
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Más fiókokból telepített játékokat ne vegye figyelembe</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">További fiókok</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Egyéb fiókazonosítók és API kulcsainak megadása, amikből játékot szeretnél beimportálni. Bővebb információt a Steam hibaelhárítós wiki oldalán találsz.</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">Csak az első címkét veszi figyelembe</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">A címkék elé beszúrja:</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Tiltott címkék</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Ezek a címkék nem lesznek hozzáadva a játékokhoz.</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">Elérhető címkék</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader">Kizárt címkék</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip">Eltávolítás a tiltott címkékből</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip">Hozzáadja a tiltott címkékhez</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">A címkék összege csak valós szám lehet</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Asztali módban mutassa a Steam játékindításkori menüjét</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Teljesképernyős módban mutassa a Steam játékindításkori menüjét</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Képernyőkép használata, ha nincs játékgrafika</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Ha több találat van, válassza:</sys:String>

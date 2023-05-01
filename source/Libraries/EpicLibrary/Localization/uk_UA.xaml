@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCEpicStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCEpicAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCEpicMetadataLanguageLabel">Мова метаданих:</sys:String>
 </ResourceDictionary>

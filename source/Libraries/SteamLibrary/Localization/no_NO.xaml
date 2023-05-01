@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCSteamStartUsingClient">Begynn å bruke {0}-klient</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCSteamAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCSteamMetadataLanguageLabel">Språk for metadata:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Hva er kontonavnet mitt?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">URL-navn for konto</sys:String>
@@ -52,4 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignorer installerte spill fra andre kontoer</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Ekstra kontoer</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Spesifiser Steam-konto-ID og API-nøkkel for annen konto hvis du ønsker å importere spill derfra. Besøk Steams wiki-side for feilsøking for mer informasjon.</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">Begrens mengden stikkord som importeres til kun den første</sys:String>
+  <sys:String x:Key="LOCSteamTagPrefixLabel">Legg til dette foran stikkord:</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Stikkordsvarteliste</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Ekskluderte stikkord vil ikke bli lagt til spill.</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">Tilgjengelige stikkord</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">Ekskluderte stikkord</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip">Fjern fra ekskluderte stikkord</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip">Legg til ekskluderte stikkord</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">Låst stikkordantall må være et gyldig tall</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Vis Steams oppstartsmeny for spill i skrivebordsmodus</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Vis Steams oppstartsmeny for spill i fullskjermmodus</sys:String>
 </ResourceDictionary>

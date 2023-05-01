@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">开始使用 {0} 客户端</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">元数据语言：</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">忽略第三方商店的游戏</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">导入 Humble 精选游戏</sys:String>

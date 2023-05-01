@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">以{0}啟動</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">匯入遊玩時間</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">帳戶ID</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">元資料語言:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">我的帳號名稱是什麼?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">帳號網址名稱</sys:String>
@@ -52,4 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">忽略其他帳號安裝的遊戲</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">其他帳戶</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">如果你想從其他帳戶匯入遊戲，請提供該Steam帳號以及API密鑰的配對。更多資訊請參考Steam疑難排解Wiki頁面。</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">僅限匯入第一個標籤</sys:String>
+  <sys:String x:Key="LOCSteamTagPrefixLabel">為標籤名稱加入前綴:</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">標籤黑名單</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">已除外的標籤將不會被添加到遊戲</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">可用標籤</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">除外標籤</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip">從除外標籤中移除</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip">加入除外標籤</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">固定標籤數量必須是有效數字</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">在桌面模式中顯示Steam遊戲啟動選單</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">在全螢幕模式中顯示Steam遊戲啟動選單</sys:String>
 </ResourceDictionary>

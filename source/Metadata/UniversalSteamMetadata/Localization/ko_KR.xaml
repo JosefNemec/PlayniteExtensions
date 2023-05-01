@@ -15,9 +15,10 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">비공개 계정</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">공개 계정</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API 키</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient" />
-  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime" />
-  <sys:String x:Key="LOCUniversalSteamMetadataAccountID" />
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">{0} 클라이언트 사용 시작</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">플레이 시간 가져오기</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID">계정 ID</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">메타데이터 언어:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">계정 이름이 뭐죠?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">계정 URL 이름</sys:String>
@@ -48,8 +49,19 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">스토어 배경</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">배너</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">상단 패널에 친구 목록을 보여줄 버튼을 표시</sys:String>
-  <sys:String x:Key="LOCSteamFriendsTooltip" />
-  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames" />
-  <sys:String x:Key="LOCSteamAdditionalAccounts" />
-  <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
+  <sys:String x:Key="LOCSteamFriendsTooltip">Stream 친구</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">다른 계정에서 설치된 게임 무시</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">추가 계정</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">다른 계정에서 게임을 가져오려면 Stream 계정 ID와 API 키 쌍을 지정하십시오. 자세한 내용은 스팀 문제 해결 Wiki 페이지를 참조하십시오.</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">첫 번째로 가져온 태그 수 제한</sys:String>
+  <sys:String x:Key="LOCSteamTagPrefixLabel">태그 이름 접두사:</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">태그 블랙리스트</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">제외된 태그는 게임에 추가되지 않습니다.</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">사용가능한 태그</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">제외된 태그</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip">제외된 태그에서 제외</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip">제외된 태그로 추가</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">고정 태그 수는 숫자여야 합니다.</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">데스크톱 모드에서 Steam의 게임의 시작 선택 메뉴 표시</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">전체화면 모드에서 Steam의 게임의 시작 선택 메뉴 표시</sys:String>
 </ResourceDictionary>

@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">{0} használata</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Játékidő importálása</sys:String>
   <sys:String x:Key="LOCitchioAccountID">Fióknév</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">Metaadat nyelve:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">A megnyíló itch.io kliens ablakában jelentkezz be, és zárd be ezt az üzenet.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Felhasználó bejelentkezésére vár, zárd be ezt, miután kész…</sys:String>

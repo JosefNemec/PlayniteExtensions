@@ -18,10 +18,14 @@
   <sys:String x:Key="LOCGOGStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCGOGAccountID">Hesap ID</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Meta veri dili:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Hesap Girişi</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Hesap Adı</sys:String>
   <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Bütün kütüphaneni eşitlemek için hesabına giriş yap ya da herkese açık hesap ismini kullan. Not: Hesap ismi seçeneği sadece GOG'un gizlilik seçeneğinin herkese görünür olduğu hesaplar için çalışır.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">GOG Galaxy istemcisini kullanarak oyunları başlatın</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Bu, bulut kayıtları, oyun süresi takibi vb. GOG Galaxy özelliklerini etkinleştirecektir.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">GOG Galaxy'ye oyun yüklerken yükleme işlemini otomatik olarak başlat</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Etkinleştirilirse, yükleme işlemi, yapılandırılan varsayılan yükleme konumunda kullanıcı etkileşimine ihtiyaç duymadan otomatik olarak başlatılacaktır.
+Devre dışı bırakılırsa, yükleme işlemini manuel olarak başlatmak için oyun sayfası açılacaktır.</sys:String>
 </ResourceDictionary>

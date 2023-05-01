@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">以{0}啟動</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">匯入遊玩時間</sys:String>
   <sys:String x:Key="LOCitchioAccountID">帳戶ID</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">元資料語言:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io用戶端程式即將啟動，請登入然後關閉此訊息。</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">正在等候用戶登入，完成後請關閉此訊息...</sys:String>

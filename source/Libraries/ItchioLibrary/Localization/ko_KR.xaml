@@ -15,13 +15,14 @@
   <sys:String x:Key="LOCitchioPrivateAccount">비공개 계정</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">공개 계정</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">API 키</sys:String>
-  <sys:String x:Key="LOCitchioStartUsingClient" />
-  <sys:String x:Key="LOCitchioImportPlaytime" />
-  <sys:String x:Key="LOCitchioAccountID" />
+  <sys:String x:Key="LOCitchioStartUsingClient">{0} 클라이언트 사용 시작</sys:String>
+  <sys:String x:Key="LOCitchioImportPlaytime">플레이 시간 가져오기</sys:String>
+  <sys:String x:Key="LOCitchioAccountID">계정 ID</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">메타데이터 언어:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io가 실행됩니다. 로그인한 후에 이 메시지를 닫아주세요.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">로그인을 기다리고 있습니다. 로그인 후 이 창을 닫아주십시오…</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io 앱 버전 25 이상의 최신 버전이 설치되지 않았습니다.</sys:String>
-  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel" />
-  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel" />
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">컬렉션에서 무료 게임을 가져옵니다.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">가져올 항목:</sys:String>
 </ResourceDictionary>

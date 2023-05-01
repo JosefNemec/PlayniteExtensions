@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">Запустить через клиент {0}</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Импортировать наигранные часы</sys:String>
   <sys:String x:Key="LOCXboxAccountID">ID аккаунта</sys:String>
+  <sys:String x:Key="LOCXboxMetadataLanguageLabel">Язык метаданных:</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Запускать приложение Xbox Pass вместо Microsoft Store при открытии клиента</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">Импорт консольных игр Xbox</sys:String>

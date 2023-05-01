@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">Hesap ID</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Meta veri dili:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Üçüncü parti mağaza oyunlarını yok say</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">Humble Choice oyunlarını içe aktar</sys:String>

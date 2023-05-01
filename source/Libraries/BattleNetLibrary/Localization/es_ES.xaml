@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">Iniciar usando el cliente {0}</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Importar tiempo de juego</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">ID de cuenta</sys:String>
+  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Idioma de metadatos:</sys:String>
 </ResourceDictionary>

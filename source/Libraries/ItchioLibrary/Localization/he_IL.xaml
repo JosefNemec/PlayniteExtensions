@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCitchioAccountID">מזהה משתמש</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel" />
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">תוכנת itch.io תפתח כעת. אנא התחבר ואז סגור את הודעה זו.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">מחכה לחיבור משתמש, אנא סגור הודעה זו כשתסיים…</sys:String>

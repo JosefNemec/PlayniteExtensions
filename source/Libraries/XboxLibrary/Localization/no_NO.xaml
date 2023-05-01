@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">Begynn å bruke {0}-klient</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCXboxAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCXboxMetadataLanguageLabel">Språk for metadata:</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Start Xbox Game Pass-appen i stedet for Microsoft Store når du åpner klienten</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">Importer konsollspill for Xbox</sys:String>

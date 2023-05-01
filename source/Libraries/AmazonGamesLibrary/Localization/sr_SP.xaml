@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCAmazonStartUsingClient" />
   <sys:String x:Key="LOCAmazonImportPlaytime" />
   <sys:String x:Key="LOCAmazonAccountID" />
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel" />
 </ResourceDictionary>

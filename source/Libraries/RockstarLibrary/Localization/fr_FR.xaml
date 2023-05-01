@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">Lancer avec le client {0}</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Importer le temps de jeu</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">ID du compte</sys:String>
+  <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Langue des métadonnées :</sys:String>
 </ResourceDictionary>

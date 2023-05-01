@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">بدء باستخدام {0} عميل</sys:String>
     <sys:String x:Key="LOCImportPlaytime">استيراد وقت التشغيل</sys:String>
     <sys:String x:Key="LOCAccountID">تعريف الحساب</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">سيتم إطلاق itch.io. الرجاء تسجيل الدخول ثم إغلاق هذه الرسالة.
 </sys:String>
@@ -33,6 +34,9 @@
 يرجى الملاحظة أن خيار اسم الحساب يعمل فقط للحسابات التي تم تعيين مكتبة ألعابها في إعدادات خصوصية GOG لتكون مرئية للعامة.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">قم بتشغيل الألعاب بأستخدام منصة GOG Galaxy </sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">سيؤدي هذا إلى تمكين ميزات GOG Galaxy مثل الحفظ السحابي وتتبع وقت اللعبة وما إلى ذلك.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">بدء عملية التثبيت تلقائياً عند تثبيت الألعاب على GOG Galaxy</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">إذا تم تفعيله، سيتم بدء عملية التثبيت تلقائيًا دون الحاجة إلى تفاعل المستخدم مع موقع التثبيت الافتراضي المكون.
+إذا تم تعطيله، سيتم فتح صفحة اللعبة لبدء عملية التثبيت يدوياً.</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">ما اسم حسابي؟</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">اسم رابط الحساب</sys:String>
@@ -68,6 +72,17 @@
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">تجاهل الألعاب المثبتة من حسابات أخرى</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">حسابات إضافية</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">حدد ID حساب ستيم وزوج مفتاح API من الحسابات الأخرى إذا كنت ترغب في استيراد الألعاب منهم. راجع صفحة ويكي Steam troublesbuoting للحصول على مزيد من المعلومات.</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">الحد من كمية الشعارات المستوردة إلى الأول</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">أسماء الشعارات البادئة بـ:</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">قائمة الشعارات المحظورة</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">الشعارات المستبعدة لن تضاف إلى الألعاب.</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">الشعارات المتاحة</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader">الشعارات المستبعدة</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip">إزالة من الشعارات المستبعدة</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip">إضافة إلى الشعارات المستبعدة</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">عدد الشعارات الثابتة يجب أن يكون رقماً صحيحاً</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">إظهار قائمة اختيار بدء التشغيل لألعاب Steam في وضع سطح المكتب</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">إظهار قائمة اختيار بدء التشغيل لألعاب Steam في وضع ملء الشاشة</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">استخدم لقطات الشاشة في حالة عدم توفر العمل الفني</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">اذا اكثر من صورة متاحات اذن استخدم:</sys:String>

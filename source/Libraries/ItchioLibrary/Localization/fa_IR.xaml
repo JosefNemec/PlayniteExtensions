@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">وارد کردن زمان بازی</sys:String>
   <sys:String x:Key="LOCitchioAccountID">شناسه حساب</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">زبان فراداده:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io راه اندازی خواهد شد. لطفاً وارد سیستم شوید و سپس این پیام را ببندید.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">منتظر ورود کاربر هستید، لطفاً این کار را ببندید...</sys:String>

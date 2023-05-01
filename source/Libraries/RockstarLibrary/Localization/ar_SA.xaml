@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">بدء باستخدام {0} عميل</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">استيراد وقت التشغيل</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">تعريف الحساب</sys:String>
+  <sys:String x:Key="LOCRockstarMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
 </ResourceDictionary>

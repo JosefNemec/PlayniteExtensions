@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">{0} क्लाएंट वापरून सुरू करा</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">खेळलेल्याची कालावधी आयात करा</sys:String>
   <sys:String x:Key="LOCIGDBAccountID" />
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel" />
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary" />
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle" />

@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Importuoti pražaistą laiką</sys:String>
   <sys:String x:Key="LOCXboxAccountID">Paskyros ID</sys:String>
+  <sys:String x:Key="LOCXboxMetadataLanguageLabel" />
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch" />
   <sys:String x:Key="LOCXboxImportConsoleGames">Importuoti "Xbox" konsolės žaidimus</sys:String>

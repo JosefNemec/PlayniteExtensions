@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">Começar usando cliente {0}</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Importar tempo de jogo</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">ID da Conta</sys:String>
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Idioma dos metadados:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usar capturas de tela se não houver uma capa disponível</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Se houverem várias imagens disponíveis, usar:</sys:String>

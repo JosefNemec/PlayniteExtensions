@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">以{0}啟動</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">匯入遊玩時間</sys:String>
   <sys:String x:Key="LOCGOGAccountID">帳戶ID</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">元資料語言:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">帳號登入</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">帳號名稱</sys:String>
@@ -25,4 +26,7 @@
 請注意，帳號名稱選項只對曾在GOG隱私設定中設為公開的帳號有效。</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">使用GOG Galaxy用戶端啟動遊戲</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">這將啟用GOG Galaxy功能，如雲端存檔，遊玩時間紀錄等</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">安裝GOG Galaxy遊戲時自動開始安裝</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">啟動時，將會跳過用戶自訂安裝位置流程並自動開始安裝。
+停用時，會跳出遊戲安裝頁面讓玩家手動進行安裝。</sys:String>
 </ResourceDictionary>

@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">Começar usando cliente {0}</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importar tempo de jogo</sys:String>
     <sys:String x:Key="LOCAccountID">ID da Conta</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">Idioma dos metadados:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">O cliente da itch.io será executado agora. Inicie a sessão e então feche esta janela.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Aguardando que o usuário inicie a sessão, feche esta janela quando terminar…</sys:String>
@@ -30,6 +31,9 @@
     <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Inicie uma sessão com a sua conta ou use o nome de usuário da sua conta pública para sincronizar a sua biblioteca completa. Observe que o nome de usuário da conta só funciona para contas cujas bibliotecas de jogos foram definidas nas configurações de privacidade da GOG para serem visíveis publicamente.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Abrir jogos utilizando o cliente GOG Galaxy</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Isso irá habilitar funções do GOG Galaxy como salvamento na nuvem, contador de tempo de jogo, etc.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Iniciar automaticamente o processo de instalação ao instalar jogos no GOG Galaxy</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Se ativado, o processo de instalação será iniciado automaticamente sem precisar de interação do usuário com o local de instalação padrão configurado.
+Se desativado, a página do jogo será aberta para iniciar manualmente o processo de instalação.</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Qual o nome da minha conta?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Nome da conta na URL</sys:String>
@@ -64,6 +68,17 @@
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignorar jogos instalados de outras contas</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Contas Adicionais</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Especifique o ID da conta Steam e o par de chaves da API de outras contas se você quiser importar jogos delas. Veja a página da wiki de solução de problemas do Steam para mais informações.</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">Limitar a quantidade de tags importadas à primeira</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">Adicionar ao nome das tags o prefixo:</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Lista negra de tags</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Tags excluídas não serão adicionadas aos jogos.</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">Tags disponíveis</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader">Tags excluídas</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip">Remover das tags excluídas</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip">Adicionar às tags excluídas</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">O número de tags fixas deve ser um número válido</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Mostrar menu de seleção de inicialização de jogo do Steam em modo desktop</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Mostrar menu de seleção de inicialização de jogo do Steam em modo tela cheia</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usar capturas de tela se não houver uma capa disponível</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Se houverem várias imagens disponíveis, usar:</sys:String>

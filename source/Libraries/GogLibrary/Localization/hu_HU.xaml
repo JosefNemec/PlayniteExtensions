@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">{0} használata</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Játékidő importálása</sys:String>
   <sys:String x:Key="LOCGOGAccountID">Fióknév</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Metaadat nyelve:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Fiók bejelentkezés</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Fiók neve</sys:String>
@@ -25,4 +26,7 @@
 A fióknév opció csak akkor működik, ha a GOG adatvédelmi beállításainál a fiók nyilvánosra van állítva.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">Játékok futtatása a GOG Galaxy klienssel</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Bekapcsolja a GOG Galaxy szolgáltatásokat, mint a felhő mentés, játékidő számlálók, stb.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automatikusan elindítja a játéktelepítést a GOG Galaxy-ból történő telepítés esetén</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Ha be van kapcsolva, felhasználói beavatkozás nélkül indítja a játék telepítését az alapértelmezett helyre.
+Kikapcsolása esetén a játék oldala fog megnyílni, hogy kézzel tudjuk indítani a telepítést.</sys:String>
 </ResourceDictionary>

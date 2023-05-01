@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Mit {0}-Client starten</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Spielzeit importieren</sys:String>
   <sys:String x:Key="LOCGOGAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Metadatensprache:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Kontoanmeldung</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Kontoname</sys:String>
@@ -25,4 +26,8 @@
 Beachte, dass die Option des öffentlichen Kontonamens nur bei Konten funktioniert, deren Spielebibliotheken in GOGs Privatsphäreeinstellungen als öffentlich sichtbar festgelegt wurden.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">Spiele mit GOG-Galaxy-Client starten</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Dies aktiviert Features von GOG Galaxy wie Cloud-Spielstände, Spielzeiterfassung etc.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Beim Installieren von Spielen auf GOG Galaxy den Installationsvorgang automatisch starten</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Falls aktiviert, wird der Installationsvorgang automatisch und ohne Benutzerinteraktion am konfigurierten Standardinstallationsort gestartet.
+Falls deaktiviert, wird die Spieleseite geöffnet, um den Installationsvorgang manuell zu starten.
+</sys:String>
 </ResourceDictionary>

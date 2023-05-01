@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">Avvio del client {0} </sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Importa tempo di riproduzione</sys:String>
   <sys:String x:Key="LOCXboxAccountID">ID account</sys:String>
+  <sys:String x:Key="LOCXboxMetadataLanguageLabel">Lingua dei metadati:</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Avvia l'app Xbox Pass invece di Microsoft Store all'avvio del client</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">Importa giochi da console Xbox </sys:String>

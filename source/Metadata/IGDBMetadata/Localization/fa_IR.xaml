@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">وارد کردن زمان بازی</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">شناسه حساب</sys:String>
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel">زبان فراداده:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">استفاده از اسکرین شات در صورت نبود اثر هنری</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">در صورت وجود چندین عکس، از این استفاده شود:</sys:String>

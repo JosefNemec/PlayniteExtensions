@@ -3,31 +3,32 @@
   <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">Εισαγωγή εγκατεστημένων παιχνιδιών</sys:String>
   <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Εισαγωγή μη εγκατεστημένων παιχνιδιών</sys:String>
   <sys:String x:Key="LOCHumbleSettingsConnectAccount">Σύνδεση λογαριασμού</sys:String>
-  <sys:String x:Key="LOCHumbleLoginChecking">Έλεγχος κατάστασης ταυτοποίησης...</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">Έλεγχος κατάστασης πιστοποίησης...</sys:String>
   <sys:String x:Key="LOCHumbleLoggedIn">Ο χρήστης είναι πιστοποιημένος</sys:String>
-  <sys:String x:Key="LOCHumbleNotLoggedIn">Απαιτείται Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">Απαιτείται πιστοποίηση</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
-  <sys:String x:Key="LOCHumbleAuthenticateLabel">Επικύρωση</sys:String>
-  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Απευθείας εκκίνηση παιχνιδιού χωρίς την χρήση του επίσημου client</sys:String>
-  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρόνισης λογαριασμού</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Απευθείας εκκίνηση των παιχνιδιών χωρίς τη χρήση της επίσημης εφαρμογής</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρονισμού του λογαριασμού</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
   <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Εισαγωγή όλων των παιχνιδιών</sys:String>
   <sys:String x:Key="LOCHumblePrivateAccount">Ιδιωτικός Λογαριασμός</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Δημόσιος Λογαριασμός</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">Κλειδί API</sys:String>
-  <sys:String x:Key="LOCHumbleStartUsingClient" />
-  <sys:String x:Key="LOCHumbleImportPlaytime" />
-  <sys:String x:Key="LOCHumbleAccountID" />
+  <sys:String x:Key="LOCHumbleStartUsingClient">Ξεκινήστε να χρησιμοποιείτε την εφαρμογή {0}</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">Εισαγωγή ωρών παιχνιδιού</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">ID Λογαριασμού</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Γλώσσα μεταδεδόμενων:</sys:String>
   <!--Humble-->
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames" />
-  <sys:String x:Key="LOCHumbleImportChoiceGames" />
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Αγνοήστε παιχνίδια από καταστήματα τρίτων</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames">Εισαγωγή παιχνιδιών από το Humble Choice</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip" />
-  <sys:String x:Key="LOCHumbleGeneralLibrary" />
+  <sys:String x:Key="LOCHumbleGeneralLibrary">Εισαγωγή παιχνιδιών από τη βιβλιοθήκη του Humble</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve" />
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Εισαγωγή παιχνιδιού εάν υπάρχει διαθέσιμη έκδοση χωρις DRM</sys:String>
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
-  <sys:String x:Key="LOCHumbleNonTroveInstallError" />
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Χρησιμοποιείτε πάντα το Humble App για να εκκινήσετε παιχνίδια</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Αν απενεργοποιηθεί, το Playnite θα προσπαθήσει να ξεκινήσει τα παιχνίδια άμεσα, παρακάμπτοντας το Humble App.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">Η αυτόματη εγκατάσταση και απεγκατάσταση των μη συνδρομητικών παιχνιδιών στο Humble δεν υποστηρίζεται αυτή τη στιγμή.</sys:String>
 </ResourceDictionary>

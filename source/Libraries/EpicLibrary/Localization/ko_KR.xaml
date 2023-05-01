@@ -15,7 +15,8 @@
   <sys:String x:Key="LOCEpicPrivateAccount">비공개 계정</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">공개 계정</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">API 키</sys:String>
-  <sys:String x:Key="LOCEpicStartUsingClient" />
-  <sys:String x:Key="LOCEpicImportPlaytime" />
-  <sys:String x:Key="LOCEpicAccountID" />
+  <sys:String x:Key="LOCEpicStartUsingClient">{0} 클라이언트 사용 시작</sys:String>
+  <sys:String x:Key="LOCEpicImportPlaytime">플레이 시간 가져오기</sys:String>
+  <sys:String x:Key="LOCEpicAccountID">계정 ID</sys:String>
+  <sys:String x:Key="LOCEpicMetadataLanguageLabel">메타데이터 언어:</sys:String>
 </ResourceDictionary>

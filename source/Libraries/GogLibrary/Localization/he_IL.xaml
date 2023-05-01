@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCGOGAccountID">מזהה משתמש</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel" />
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">כניסה לחשבון</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">שם חשבון</sys:String>
@@ -25,4 +26,6 @@
 שים לב שאפשרות שם החשבון תעבוד רק עבור חשבונות שספריות המשחק שלהם נקבעו להיות פומביות לתצוגה בהגדרות הפרטיות ב GOG.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">הפעל משחקים באמצעות GOG Galaxy</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">זה יאפשר תכונות GOG Galaxy כמו שמירה בענן, מעכב אחרי זמן משחק וכו'.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls" />
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve" />
 </ResourceDictionary>

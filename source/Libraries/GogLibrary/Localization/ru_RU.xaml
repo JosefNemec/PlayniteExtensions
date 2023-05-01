@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Запустить через клиент {0}</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Импортировать наигранные часы</sys:String>
   <sys:String x:Key="LOCGOGAccountID">ID аккаунта</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Язык метаданных:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Логин учетной записи</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Имя учетной записи</sys:String>
@@ -25,4 +26,7 @@
 Обратите внимание, что использование имени аккаунта работает только для тех аккаунтов, у которых в настройках конфиденциальности GOG выставлена публичная видимость.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">Запускать игры с помощью клиента GOG Galaxy</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Это позволит включить функции GOG Galaxy, такие как облачные сохранения, отслеживание игрового времени и т. д.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">При установке игр из GOG Galaxy устанавливать игры в автоматическом режиме</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Если включено, процесс установки будет запущен автоматически без взаимодействия с пользователем, установка будет произведена в место установки по умолчанию.
+Если выключено, откроется страница игры, чтобы начать процесс установки вручную.</sys:String>
 </ResourceDictionary>

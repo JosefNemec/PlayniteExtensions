@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
     <sys:String x:Key="LOCImportPlaytime">יבא זמן משחק</sys:String>
     <sys:String x:Key="LOCAccountID">מזהה משתמש</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel"></sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">תוכנת itch.io תפתח כעת. אנא התחבר ואז סגור את הודעה זו.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">מחכה לחיבור משתמש, אנא סגור הודעה זו כשתסיים…</sys:String>
@@ -32,6 +33,8 @@
 שים לב שאפשרות שם החשבון תעבוד רק עבור חשבונות שספריות המשחק שלהם נקבעו להיות פומביות לתצוגה בהגדרות הפרטיות ב GOG.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">הפעל משחקים באמצעות GOG Galaxy</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">זה יאפשר תכונות GOG Galaxy כמו שמירה בענן, מעכב אחרי זמן משחק וכו'.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls"></sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">מה שם החשבון שלי?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">שם URL חשבון</sys:String>
@@ -66,6 +69,17 @@
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">התעלם ממשחקים מותקנים מחשבונות אחרים</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">חשבונות נוספים</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">ציין מזהה חשבון Steam וזוג מפתחות API של חשבונות אחרים אם ברצונך לייבא מהם משחקים. ראה דף ויקי לפתרון בעיות של Steam לקבלת מידע נוסף.</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader"></sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount"></sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode"></sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">השתמש בתצלומי מסך אם עטיפה אינה זמינה</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">אם כמה תמונות קיימות אז בחר:</sys:String>

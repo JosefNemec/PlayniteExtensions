@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Bắt đầu sử dụng ứng dụng khách {0}</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Nhập thời gian chơi</sys:String>
   <sys:String x:Key="LOCGOGAccountID">ID tài khoản</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Ngôn ngữ siêu dữ liệu</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Đăng nhập tài khoản</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Tên tài khoản</sys:String>
@@ -25,4 +26,7 @@
 Lưu ý rằng tùy chọn Tên tài khoản chỉ hoạt động đối với các tài khoản có thư viện trò chơi đã được đặt trong cài đặt quyền riêng tư của GOG để hiển thị công khai.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">Khởi chạy trò chơi bằng ứng dụng khách GOG Galaxy</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Điều này sẽ kích hoạt các tính năng của GOG Galaxy như tiết kiệm đám mây, theo dõi thời gian trò chơi, v.v.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Tự động chạy tiến trình cài đặt khi cài game từ GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Khi được bật, tiến trình cài đặt sẽ tự động bắt đầu mà không cần tới sự can thiệp của người dùng về đường dẫn cài đặt mặc định.
+Khi bị tắt, màn hình game sẽ được mở lên để khởi động tiến trình một cách thủ công.</sys:String>
 </ResourceDictionary>

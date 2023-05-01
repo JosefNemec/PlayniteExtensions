@@ -1,33 +1,35 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCHumbleSettingsConnectAccount" />
-  <sys:String x:Key="LOCHumbleLoginChecking" />
-  <sys:String x:Key="LOCHumbleLoggedIn" />
-  <sys:String x:Key="LOCHumbleNotLoggedIn" />
-  <sys:String x:Key="LOCHumbleNotLoggedInError" />
-  <sys:String x:Key="LOCHumbleAuthenticateLabel" />
-  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCHumbleTroubleShootingIssues" />
-  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCHumblePrivateAccount" />
-  <sys:String x:Key="LOCHumblePublicAccount" />
-  <sys:String x:Key="LOCHumbleAPIKey" />
-  <sys:String x:Key="LOCHumbleStartUsingClient" />
-  <sys:String x:Key="LOCHumbleImportPlaytime" />
-  <sys:String x:Key="LOCHumbleAccountID" />
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">Impor game yang terpasang</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Impor game tidak terpasang</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsConnectAccount">Hubungkan akun</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">Mengecek status autentikasi…</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">Pengguna terautentikasi</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">Memerlukan autentikasi</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">Gagal mengautentikasi pengguna</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateLabel">Autentikasi</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Mulai game langsung tanpa menjalankan klien resmi</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Memecahkan masalah sinkronisasi akun</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">Memecahkan masalah</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Impor semua game</sys:String>
+  <sys:String x:Key="LOCHumblePrivateAccount">Akun Privat</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">Akun Publik</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">Kunci API</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">Mulai menggunakan klien {0}</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">Impor waktu main</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">ID Akun</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Bahasa metadata:</sys:String>
   <!--Humble-->
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames" />
-  <sys:String x:Key="LOCHumbleImportChoiceGames" />
-  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip" />
-  <sys:String x:Key="LOCHumbleGeneralLibrary" />
-  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve" />
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree" />
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
-  <sys:String x:Key="LOCHumbleNonTroveInstallError" />
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Abaikan game store pihak ketiga</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames">Impor game Humble Choice</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Impor game tersedia sebagai bagian dari langganan Humble Choice.</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibrary">Impor game Pustaka Humble</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Impor pembelian dari toko Humble standar dan pembelian bundel.</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Memungkinkan untuk melewati impor game yang memerlukan klien pihak ketiga,
+termasuk toko yang sudah dikelola di Playnite, untuk mencegah duplikat.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Impor jika DRM versi gratis tersedia</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Impor game yang membutuhkan klien pihak ketiga jika versi gratis DRM juga tersedia.</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Selalu gunakan Aplikasi Humble untuk memulai game</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Saat dinonaktifkan, Playnite akan mencoba menjalankan game secara langsung, melalui Aplikasi Humble.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">Penginstalan dan pencopotan otomatis game Humble non-langganan saat ini tidak didukung.</sys:String>
 </ResourceDictionary>

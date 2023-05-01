@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Мова метаданих:</sys:String>
 </ResourceDictionary>

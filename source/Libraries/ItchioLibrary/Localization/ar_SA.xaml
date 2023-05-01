@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">بدء باستخدام {0} عميل</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">استيراد وقت التشغيل</sys:String>
   <sys:String x:Key="LOCitchioAccountID">تعريف الحساب</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">سيتم إطلاق itch.io. الرجاء تسجيل الدخول ثم إغلاق هذه الرسالة.
 </sys:String>

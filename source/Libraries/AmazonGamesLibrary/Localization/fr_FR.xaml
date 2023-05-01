@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">Lancer avec le client {0}</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Importer le temps de jeu</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">ID du compte</sys:String>
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Langue des métadonnées :</sys:String>
 </ResourceDictionary>

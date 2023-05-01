@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCOriginStartUsingClient">Bắt đầu sử dụng ứng dụng khách {0}</sys:String>
   <sys:String x:Key="LOCOriginImportPlaytime">Nhập thời gian chơi</sys:String>
   <sys:String x:Key="LOCOriginAccountID">ID tài khoản</sys:String>
+  <sys:String x:Key="LOCOriginMetadataLanguageLabel">Ngôn ngữ siêu dữ liệu</sys:String>
 </ResourceDictionary>

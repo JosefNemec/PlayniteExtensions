@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCSteamStartUsingClient">Запустить через клиент {0}</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Импортировать наигранные часы</sys:String>
   <sys:String x:Key="LOCSteamAccountID">ID аккаунта</sys:String>
+  <sys:String x:Key="LOCSteamMetadataLanguageLabel">Язык метаданных:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Как узнать имя моей учетки?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">URL-адрес аккаунта</sys:String>
@@ -52,4 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Игнорировать установленные игры с других аккаунтов</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Дополнительные аккаунты</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Введите пару из ID и API-ключа от других аккаунтов Steam, если хотите импортировать из них игры. Больше информации доступно на вики-странице «Устранение неполадок» по Steam.</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">Ограничить количество импортируемых тегов до самого первого</sys:String>
+  <sys:String x:Key="LOCSteamTagPrefixLabel">Префикс для тегов:</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Запрещённые теги</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Исключаемые теги не будут добавлены к играм.</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">Доступные теги</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">Исключаемые теги</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip">Удалить из исключаемых тегов</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip">Добавить в исключаемые теги</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">Фиксированное число тегов должно быть допустимым числом</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Показывать меню при запуске игры в Steam в оконном режиме</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Показывать меню при запуске игры в Steam в полноэкранном режиме</sys:String>
 </ResourceDictionary>

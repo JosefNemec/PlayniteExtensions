@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">开始使用 {0} 客户端</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">元数据语言：</sys:String>
 </ResourceDictionary>

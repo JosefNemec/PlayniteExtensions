@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCSteamStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Importuoti pražaistą laiką</sys:String>
   <sys:String x:Key="LOCSteamAccountID">Paskyros ID</sys:String>
+  <sys:String x:Key="LOCSteamMetadataLanguageLabel" />
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Koks mano vartotojo vardas?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Vartotojo nuorodos pavadinimas</sys:String>
@@ -52,4 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignoruoti įdiegtus žaidimus iš kitų paskyrų</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Papildomos Paskyros</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
+  <sys:String x:Key="LOCSteamLimitTagCountLabel" />
+  <sys:String x:Key="LOCSteamTagPrefixLabel" />
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel" />
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel" />
+  <sys:String x:Key="LOCSteamTagWhitelistHeader" />
+  <sys:String x:Key="LOCSteamTagBlacklistHeader" />
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip" />
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip" />
+  <sys:String x:Key="LOCSteamValidationFixedTagCount" />
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode" />
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode" />
 </ResourceDictionary>

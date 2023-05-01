@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Importuoti pražaistą laiką</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">Paskyros ID</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel" />
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames" />
   <sys:String x:Key="LOCHumbleImportChoiceGames">Importuoti "Humble Choice" žaidimus</sys:String>

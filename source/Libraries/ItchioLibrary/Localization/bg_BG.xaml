@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">Импортиране на инсталирани игри</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Импортиране на неинсталирани игри</sys:String>
+  <sys:String x:Key="LOCitchioSettingsConnectAccount">Свързване на акаун</sys:String>
+  <sys:String x:Key="LOCitchioLoginChecking">Проверява се състоянието на удостоверяване...</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">Потребителят е удостоверен</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedIn">Изисква удостоверяване</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">Неуспешно удостоверяване на потребителя.</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateLabel">Удостоверяване</sys:String>
+  <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Стартиране на игри директно без стартиране на официален клиен</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Отстраняване на проблеми със синхронизирането на акаун</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingIssues">Отстраняване на проблеми</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">Импортиране на всички игри</sys:String>
+  <sys:String x:Key="LOCitchioPrivateAccount">Личен акаун</sys:String>
+  <sys:String x:Key="LOCitchioPublicAccount">Публичен акаун</sys:String>
+  <sys:String x:Key="LOCitchioAPIKey">API клю</sys:String>
+  <sys:String x:Key="LOCitchioStartUsingClient">Започнете да използвате {0} клиен</sys:String>
+  <sys:String x:Key="LOCitchioImportPlaytime">Импортиране на изиграното време</sys:String>
+  <sys:String x:Key="LOCitchioAccountID">ИД на акаун</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">Език на метаданните:</sys:String>
+  <!--itch.io-->
+  <sys:String x:Key="LOCItchioSignInNotif">itch.io ще бъде стартиран. Моля, влезте и затворете това съобщение.</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">Изчакване потребителят да влезе, моля, затворете това, когато сте готови...</sys:String>
+  <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io приложение версия 25 или по-нова не е инсталирано.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Импортирайте безплатни игри от колекции.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Елементи за импортиране:</sys:String>
+</ResourceDictionary>

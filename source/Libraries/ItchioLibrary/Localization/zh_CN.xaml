@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">开始使用 {0} 客户端</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCitchioAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">元数据语言：</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">即将启动 itch.io 客户端，请在登录后关闭此消息。</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">正在等待用户登录，请您在完成后关闭此消息…</sys:String>

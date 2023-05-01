@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCRockstarStartUsingClient" />
   <sys:String x:Key="LOCRockstarImportPlaytime" />
   <sys:String x:Key="LOCRockstarAccountID" />
+  <sys:String x:Key="LOCRockstarMetadataLanguageLabel" />
 </ResourceDictionary>

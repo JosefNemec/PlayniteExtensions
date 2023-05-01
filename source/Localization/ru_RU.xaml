@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">Запустить через клиент {0}</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Импортировать наигранные часы</sys:String>
     <sys:String x:Key="LOCAccountID">ID аккаунта</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">Язык метаданных:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">Откроется клиент itch.io. Пожалуйста, войдите в систему и закройте это сообщение.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Ожидание входа в учетную запись, закройте это сообщение, как будете готовы…</sys:String>
@@ -31,6 +32,9 @@
 Обратите внимание, что использование имени аккаунта работает только для тех аккаунтов, у которых в настройках конфиденциальности GOG выставлена публичная видимость.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Запускать игры с помощью клиента GOG Galaxy</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Это позволит включить функции GOG Galaxy, такие как облачные сохранения, отслеживание игрового времени и т. д.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">При установке игр из GOG Galaxy устанавливать игры в автоматическом режиме</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Если включено, процесс установки будет запущен автоматически без взаимодействия с пользователем, установка будет произведена в место установки по умолчанию.
+Если выключено, откроется страница игры, чтобы начать процесс установки вручную.</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Как узнать имя моей учетки?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">URL-адрес аккаунта</sys:String>
@@ -65,6 +69,17 @@
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Игнорировать установленные игры с других аккаунтов</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Дополнительные аккаунты</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Введите пару из ID и API-ключа от других аккаунтов Steam, если хотите импортировать из них игры. Больше информации доступно на вики-странице «Устранение неполадок» по Steam.</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">Ограничить количество импортируемых тегов до самого первого</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">Префикс для тегов:</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Запрещённые теги</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Исключаемые теги не будут добавлены к играм.</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">Доступные теги</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader">Исключаемые теги</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip">Удалить из исключаемых тегов</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip">Добавить в исключаемые теги</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">Фиксированное число тегов должно быть допустимым числом</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Показывать меню при запуске игры в Steam в оконном режиме</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Показывать меню при запуске игры в Steam в полноэкранном режиме</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Использовать скриншоты из игры при отсутствии обложки </sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">При наличии нескольких изображений используйте:</sys:String>

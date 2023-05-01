@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Iniciar usando el cliente {0}</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Importar tiempo de juego</sys:String>
   <sys:String x:Key="LOCitchioAccountID">ID de cuenta</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">Idioma de metadatos:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">Se lanzará itch.io. Por favor inicie sesión y luego cierre este mensaje.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Esperando a que el usuario inicie sesión, por favor, cierre esto cuando hayas terminado…</sys:String>

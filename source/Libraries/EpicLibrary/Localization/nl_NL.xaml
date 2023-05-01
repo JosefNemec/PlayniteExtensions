@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCEpicStartUsingClient">Starten met {0} client</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Importeer speeltijd</sys:String>
   <sys:String x:Key="LOCEpicAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCEpicMetadataLanguageLabel">Metadata taal:</sys:String>
 </ResourceDictionary>

@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCSteamStartUsingClient">{0} クライアントの使用を開始</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">プレイ時間をインポート</sys:String>
   <sys:String x:Key="LOCSteamAccountID">アカウントID</sys:String>
+  <sys:String x:Key="LOCSteamMetadataLanguageLabel">メタデータの言語</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">私のアカウント名は何ですか？</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">アカウントURL名</sys:String>
@@ -52,4 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">他のアカウントからインストールされたゲームを無視</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">追加アカウント</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">他のアカウントからゲームをインポートする場合は、他のアカウントのSteamアカウントIDとAPIキーのペアを指定します。詳しくはSteamトラブルシューティングwikiのページをご覧ください。</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel" />
+  <sys:String x:Key="LOCSteamTagPrefixLabel" />
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">タグのブラックリスト</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">除外されたタグはゲームに追加されません。</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">使用可能なタグ</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">除外するタグ</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip">除外するタグから削除</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip">除外するタグに追加</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">固定タグ数は有効な数字でなければなりません</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">デスクトップモードでSteamの起動メニューを表示する</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Steamの起動メニューをフルスクリーンモードで表示する</sys:String>
 </ResourceDictionary>

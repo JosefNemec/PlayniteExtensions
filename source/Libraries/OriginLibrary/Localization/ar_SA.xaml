@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCOriginStartUsingClient">بدء باستخدام {0} عميل</sys:String>
   <sys:String x:Key="LOCOriginImportPlaytime">استيراد وقت التشغيل</sys:String>
   <sys:String x:Key="LOCOriginAccountID">تعريف الحساب</sys:String>
+  <sys:String x:Key="LOCOriginMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
 </ResourceDictionary>

@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">开始使用 {0} 客户端</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">元数据语言：</sys:String>
 </ResourceDictionary>

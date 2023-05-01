@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">Bắt đầu sử dụng ứng dụng khách {0}</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Nhập thời gian chơi</sys:String>
     <sys:String x:Key="LOCAccountID">ID tài khoản</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">Ngôn ngữ siêu dữ liệu</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io sẽ được khởi chạy. Vui lòng đăng nhập và sau đó đóng thông báo này.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Đang đợi người dùng đăng nhập, vui lòng đóng phần này khi bạn hoàn tất…</sys:String>
@@ -31,6 +32,9 @@
 Lưu ý rằng tùy chọn Tên tài khoản chỉ hoạt động đối với các tài khoản có thư viện trò chơi đã được đặt trong cài đặt quyền riêng tư của GOG để hiển thị công khai.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Khởi chạy trò chơi bằng ứng dụng khách GOG Galaxy</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Điều này sẽ kích hoạt các tính năng của GOG Galaxy như tiết kiệm đám mây, theo dõi thời gian trò chơi, v.v.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Tự động chạy tiến trình cài đặt khi cài game từ GOG Galaxy</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Khi được bật, tiến trình cài đặt sẽ tự động bắt đầu mà không cần tới sự can thiệp của người dùng về đường dẫn cài đặt mặc định.
+Khi bị tắt, màn hình game sẽ được mở lên để khởi động tiến trình một cách thủ công.</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Tên tài khoản của tôi là gì?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Tên URL tài khoản</sys:String>
@@ -65,6 +69,17 @@ Lưu ý rằng tùy chọn Tên tài khoản chỉ hoạt động đối với c
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Bỏ qua các trò chơi đã cài đặt từ các tài khoản khác</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Tài khoản bổ sung</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Chỉ định ID tài khoản Steam và cặp khóa API của các tài khoản khác nếu bạn muốn nhập trò chơi từ chúng. Xem trang wiki khắc phục sự cố Steam để biết thêm thông tin.</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">Giới hạn số lượng thẻ tag được nhập còn 50 thẻ đầu tiên</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">Tiền tố thẻ tag với:</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Danh sách đen của thẻ tag</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Những tag loại trừ sẽ không được thêm vào game.</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">Thẻ tag có sẵn</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader">Thẻ tag được loại trừ</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip">Gỡ bỏ thẻ tag khỏi danh sách loại trừ</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip">Thêm thẻ tag vào danh sách loại trừ</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">Số tượng tag phải là một số cụ thể</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Hiển thị menu lựa chọn khi khởi động game của Steam ở chế độ desktop</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Hiển thị menu lựa chọn khi khởi động game của Steam ở chế độ toàn màn hình</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Sử dụng ảnh chụp màn hình nếu không có tác phẩm nghệ thuật</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Nếu có nhiều hình ảnh thì hãy sử dụng:</sys:String>

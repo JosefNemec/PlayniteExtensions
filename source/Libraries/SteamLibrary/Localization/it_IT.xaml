@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCSteamStartUsingClient">Avvio del client {0} </sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Importa tempo di riproduzione</sys:String>
   <sys:String x:Key="LOCSteamAccountID">ID account</sys:String>
+  <sys:String x:Key="LOCSteamMetadataLanguageLabel">Lingua dei metadati:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Qual è il nome del mio account?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Nome URL dell'account</sys:String>
@@ -52,4 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignora giochi installati da altri account</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Account aggiuntivi</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Specificare l'ID dell'account Steam e la coppia di chiavi API di altri account se si desidera importare i giochi da loro. Vedere la pagina wiki per la risoluzione dei problemi di Steam per maggiori informazioni.</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">Limitare la quantità di tag importati alla prima</sys:String>
+  <sys:String x:Key="LOCSteamTagPrefixLabel">I nomi dei tag sono preceduti dal prefisso:</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Lista nera dei tag</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">I tag esclusi non verranno aggiunti ai giochi.</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">Tag disponibili</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">Tag esclusi</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip">Rimuovi dai tag esclusi</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip">Aggiungi ai tag esclusi</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">Il conteggio dei tag fissi deve essere un numero valido</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Mostra il menu di selezione avvio di Steam in modalità desktop</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Mostra il menu di selezione avvio del gioco di Steam in modalità schermo intero</sys:String>
 </ResourceDictionary>

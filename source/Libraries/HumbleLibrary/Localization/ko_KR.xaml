@@ -15,19 +15,21 @@
   <sys:String x:Key="LOCHumblePrivateAccount">비공개 계정</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">공개 계정</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">API 키</sys:String>
-  <sys:String x:Key="LOCHumbleStartUsingClient" />
-  <sys:String x:Key="LOCHumbleImportPlaytime" />
-  <sys:String x:Key="LOCHumbleAccountID" />
+  <sys:String x:Key="LOCHumbleStartUsingClient">{0} 클라이언트 사용 시작</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">플레이 시간 가져오기</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">계정 ID</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">메타데이터 언어:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">서드파티 스토어 게임 무시</sys:String>
-  <sys:String x:Key="LOCHumbleImportChoiceGames" />
-  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip" />
-  <sys:String x:Key="LOCHumbleGeneralLibrary">Humble 라이브러리 게임 가져오기</sys:String>
-  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve" />
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree" />
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip" />
+  <sys:String x:Key="LOCHumbleImportChoiceGames">Humble Choice 게임 가져오기</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Humble Choice 구독용 게임을 가져옵니다.</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibrary">Humble Library 게임 가져오기</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">기본 Humble 스토어 및 번들 구매내역을 가져옵니다.</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">중복을 방지하기 위해  Playnite에서 이미 관리되는 스토어 등 서드파티 클라이언트가 필요한 게임은 가져오기를 건너뜁니다.
+</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">가능하다면 DRM이 적용되지 않은 버전을 가져오기</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">DRM이 없는 버전이 존재하면 타사 클라이언트를 요구하는 게임도 가져옵니다.</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">게임 실행 시 항상 Humble App을 사용해 실행</sys:String>
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip" />
-  <sys:String x:Key="LOCHumbleNonTroveInstallError" />
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">비활성화 시 Playnite는 Humble App을 우회하여 직접 게임을 시작하려고 시도합니다.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">구동중이 아니 Humble 게임의 자동 설치 및 제거는 현재 지원되지 않습니다.</sys:String>
 </ResourceDictionary>

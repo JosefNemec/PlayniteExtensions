@@ -18,10 +18,13 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Comezar usando o cliente {0}</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Importar tempo de xogo</sys:String>
   <sys:String x:Key="LOCGOGAccountID">ID da conta</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel" />
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Verificación de conta</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Nome da conta</sys:String>
   <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Verifica a túa conta ou usa o teu nome de conta pública para sincronizar toda a túa biblioteca.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">Arrinca xogos empregando o cliente GOG Galaxy</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Isto activará as funcións de GOG Galaxy como as partidas salvadas na nube, o seguimento de tempo de xogo, etc.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls" />
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve" />
 </ResourceDictionary>

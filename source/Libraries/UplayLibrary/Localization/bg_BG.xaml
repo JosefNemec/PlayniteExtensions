@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCUbisoftSettingsImportInstalledLabel">Импортиране на инсталирани игри</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportUninstalledLabel">Импортиране на неинсталирани игри</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsConnectAccount">Свързване на акаун</sys:String>
+  <sys:String x:Key="LOCUbisoftLoginChecking">Проверява се състоянието на удостоверяване...</sys:String>
+  <sys:String x:Key="LOCUbisoftLoggedIn">Потребителят е удостоверен</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedIn">Изисква удостоверяване</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedInError">Неуспешно удостоверяване на потребителя.</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateLabel">Удостоверяване</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Стартиране на игри директно без стартиране на официален клиен</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Отстраняване на проблеми със синхронизирането на акаун</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Отстраняване на проблеми</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">Импортиране на всички игри</sys:String>
+  <sys:String x:Key="LOCUbisoftPrivateAccount">Личен акаун</sys:String>
+  <sys:String x:Key="LOCUbisoftPublicAccount">Публичен акаун</sys:String>
+  <sys:String x:Key="LOCUbisoftAPIKey">API клю</sys:String>
+  <sys:String x:Key="LOCUbisoftStartUsingClient">Започнете да използвате {0} клиен</sys:String>
+  <sys:String x:Key="LOCUbisoftImportPlaytime">Импортиране на изиграното време</sys:String>
+  <sys:String x:Key="LOCUbisoftAccountID">ИД на акаун</sys:String>
+  <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Език на метаданните:</sys:String>
+</ResourceDictionary>

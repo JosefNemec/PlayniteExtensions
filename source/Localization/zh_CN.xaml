@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">开始使用 {0} 客户端</sys:String>
     <sys:String x:Key="LOCImportPlaytime">导入游玩时间</sys:String>
     <sys:String x:Key="LOCAccountID">账户 ID</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">元数据语言：</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">即将启动 itch.io 客户端，请在登录后关闭此消息。</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">正在等待用户登录，请您在完成后关闭此消息…</sys:String>
@@ -31,6 +32,9 @@
 请注意，“账户名称”选项只对在 GOG 隐私设置中设置游戏库公开可见的账户有效。</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">使用 GOG Galaxy 客户端启动游戏</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">这可启用 GOG Galaxy 的云存档、游戏时间追踪等功能。</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">在 GOG Galaxy 安装游戏时启用静默安装</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">如果启用，安装过程将自动开始并安装到默认位置，不需要用户交互。
+如果禁用，游戏页面将被打开以手动开始安装过程。</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">我的账户名称是什么？</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">账户网址名称</sys:String>
@@ -61,10 +65,21 @@
     <sys:String x:Key="LOCSteamBackgroundSourceStore">商店背景</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">横幅</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">在顶部面板显示好友按钮</sys:String>
-    <sys:String x:Key="LOCSteamFriendsTooltip">Steam好友</sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">Steam 好友</sys:String>
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">忽略其他账户安装的游戏</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">额外账户</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">如果您想从其他 Steam 账户导入游戏，请指定这些账户的 ID 和 API 密钥对。更多信息请参阅 Steam 疑难解答的 wiki 页面。</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">将导入的标签数量限制为第一个</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">标签名称前缀：</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">标签黑名单</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">已排除标签将不会被添加到游戏。</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">可用标签</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader">已排除标签</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip">从已排除标签中移除</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip">添加到已排除标签</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">固定标签数量必须是一个有效的数字</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">在桌面模式下显示 Steam 游戏启动选择菜单</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">在全屏模式下显示 Steam 游戏启动选择菜单</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">在无法使用艺术作品的时候使用截图</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">如果有多个图像，则使用：</sys:String>

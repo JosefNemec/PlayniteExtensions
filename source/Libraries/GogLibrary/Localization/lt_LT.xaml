@@ -18,10 +18,13 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Importuoti pražaistą laiką</sys:String>
   <sys:String x:Key="LOCGOGAccountID">Paskyros ID</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel" />
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Vartotojo prisijungimas</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Vartotojo vardas</sys:String>
   <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve" />
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">Paleisti žaidimus naudojant GOG Galaxy klientą</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip" />
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls" />
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve" />
 </ResourceDictionary>

@@ -1,25 +1,26 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCIGDBSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCIGDBSettingsConnectAccount" />
-  <sys:String x:Key="LOCIGDBLoginChecking" />
-  <sys:String x:Key="LOCIGDBLoggedIn" />
-  <sys:String x:Key="LOCIGDBNotLoggedIn" />
-  <sys:String x:Key="LOCIGDBNotLoggedInError" />
-  <sys:String x:Key="LOCIGDBAuthenticateLabel" />
-  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCIGDBTroubleShootingIssues" />
-  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCIGDBPrivateAccount" />
-  <sys:String x:Key="LOCIGDBPublicAccount" />
-  <sys:String x:Key="LOCIGDBAPIKey" />
-  <sys:String x:Key="LOCIGDBStartUsingClient" />
-  <sys:String x:Key="LOCIGDBImportPlaytime" />
-  <sys:String x:Key="LOCIGDBAccountID" />
+  <sys:String x:Key="LOCIGDBSettingsImportInstalledLabel">Impor game yang terpasang</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel">Impor game tidak terpasang</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsConnectAccount">Hubungkan akun</sys:String>
+  <sys:String x:Key="LOCIGDBLoginChecking">Mengecek status autentikasi…</sys:String>
+  <sys:String x:Key="LOCIGDBLoggedIn">Pengguna terautentikasi</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedIn">Memerlukan autentikasi</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedInError">Gagal mengautentikasi pengguna</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateLabel">Autentikasi</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Mulai game langsung tanpa menjalankan klien resmi</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Memecahkan masalah sinkronisasi akun</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingIssues">Memecahkan masalah</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel">Impor semua game</sys:String>
+  <sys:String x:Key="LOCIGDBPrivateAccount">Akun Privat</sys:String>
+  <sys:String x:Key="LOCIGDBPublicAccount">Akun Publik</sys:String>
+  <sys:String x:Key="LOCIGDBAPIKey">Kunci API</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient">Mulai menggunakan klien {0}</sys:String>
+  <sys:String x:Key="LOCIGDBImportPlaytime">Impor waktu main</sys:String>
+  <sys:String x:Key="LOCIGDBAccountID">ID Akun</sys:String>
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Bahasa metadata:</sys:String>
   <!--IGDB-->
-  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary" />
-  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle" />
-  <sys:String x:Key="LOCIgdbSelectBackgroundTitle" />
+  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Gunakan tangkapan layar jika gambar ilustrasi tidak tersedia</sys:String>
+  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Jika beberapa gambar tersedia maka gunakan:</sys:String>
+  <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Pilih gambar latar untuk {0}</sys:String>
 </ResourceDictionary>

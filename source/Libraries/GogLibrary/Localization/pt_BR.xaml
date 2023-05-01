@@ -18,10 +18,14 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Começar usando cliente {0}</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Importar tempo de jogo</sys:String>
   <sys:String x:Key="LOCGOGAccountID">ID da Conta</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Idioma dos metadados:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Dados da conta</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Nome da conta</sys:String>
   <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Inicie uma sessão com a sua conta ou use o nome de usuário da sua conta pública para sincronizar a sua biblioteca completa. Observe que o nome de usuário da conta só funciona para contas cujas bibliotecas de jogos foram definidas nas configurações de privacidade da GOG para serem visíveis publicamente.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">Abrir jogos utilizando o cliente GOG Galaxy</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Isso irá habilitar funções do GOG Galaxy como salvamento na nuvem, contador de tempo de jogo, etc.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Iniciar automaticamente o processo de instalação ao instalar jogos no GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Se ativado, o processo de instalação será iniciado automaticamente sem precisar de interação do usuário com o local de instalação padrão configurado.
+Se desativado, a página do jogo será aberta para iniciar manualmente o processo de instalação.</sys:String>
 </ResourceDictionary>

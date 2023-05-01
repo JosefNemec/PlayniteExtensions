@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">{0} használata</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Játékidő importálása</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">Fióknév</sys:String>
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Metaadat nyelve:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Képernyőkép használata, ha nincs játékgrafika</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Ha több találat van, válassza:</sys:String>

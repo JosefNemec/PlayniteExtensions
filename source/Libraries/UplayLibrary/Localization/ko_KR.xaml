@@ -15,7 +15,8 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount">비공개 계정</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">공개 계정</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">API 키</sys:String>
-  <sys:String x:Key="LOCUbisoftStartUsingClient" />
-  <sys:String x:Key="LOCUbisoftImportPlaytime" />
-  <sys:String x:Key="LOCUbisoftAccountID" />
+  <sys:String x:Key="LOCUbisoftStartUsingClient">{0} 클라이언트 사용 시작</sys:String>
+  <sys:String x:Key="LOCUbisoftImportPlaytime">플레이 시간 가져오기</sys:String>
+  <sys:String x:Key="LOCUbisoftAccountID">계정 ID</sys:String>
+  <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">메타데이터 언어:</sys:String>
 </ResourceDictionary>

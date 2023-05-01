@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">Starten met {0} client</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importeer speeltijd</sys:String>
     <sys:String x:Key="LOCAccountID">Account ID</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">Metadata taal:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io wordt gestart. Log in a.u.b. en sluit dan dit bericht.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Wachten op aanmelding van gebruiker, sluit alstublieft af wanneer je klaar bent</sys:String>
@@ -31,6 +32,9 @@
 Houd er rekening mee dat de optie Accountnaam alleen werkt voor accounts waarvan de spelbibliotheken zijn ingesteld  om openbaar zichtbaar te zijn in de privacy-instellingen van GOG.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Start games met GOG Galaxy client</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Dit zal GOG Galaxy features zoals cloud saves, game tijd tracking, etc aanzetten.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automatisch start het installatieproces bij het installeren van spellen op GOG Galaxy</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Indien ingeschakeld, zal het installatieproces automatisch worden gestart zonder gebruikersinteractie nodig te hebben op de geconfigureerde standaardinstallatie-locatie.
+Als dit is uitgeschakeld, wordt de spelpagina geopend om het installatieproces handmatig te starten.</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Wat is mijn accountnaam?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Account URL Naam</sys:String>
@@ -65,6 +69,17 @@ Houd er rekening mee dat de optie Accountnaam alleen werkt voor accounts waarvan
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Negeer geïnstalleerde spellen van andere accounts</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Extra Accounts</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Specificeer Steam account ID en API key van andere accounts waar je Steam spellen van wil importeren. Zie Steam troubleshooting wiki pagina voor meer info.</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">Beperk het aantal geïmporteerde tags naar de eerste</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">Begin tags met:</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Geblokkeerde tags</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Uitgesloten tags zullen niet worden toegevoegd aan games.</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">Beschikbare tags</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader">Uitgesloten tags</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip">Verwijder van uitgesloten tags</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip">Voeg toe aan uitgesloten tags</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">Vast tag aantal moet een geldig nummer zijn</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Toon het Steam spel opstart menu in bureaublad modus</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Toon het Steam spel opstart menu in volledig scherm modus</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Gebruik screenshots als illustraties niet beschikbaar zijn</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Wanneer meerdere afbeeldingen beschikbaar zijn gebruik dan:</sys:String>

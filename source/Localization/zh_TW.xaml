@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">以{0}啟動</sys:String>
     <sys:String x:Key="LOCImportPlaytime">匯入遊玩時間</sys:String>
     <sys:String x:Key="LOCAccountID">帳戶ID</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">元資料語言:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io用戶端程式即將啟動，請登入然後關閉此訊息。</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">正在等候用戶登入，完成後請關閉此訊息...</sys:String>
@@ -31,6 +32,9 @@
 請注意，帳號名稱選項只對曾在GOG隱私設定中設為公開的帳號有效。</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">使用GOG Galaxy用戶端啟動遊戲</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">這將啟用GOG Galaxy功能，如雲端存檔，遊玩時間紀錄等</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">安裝GOG Galaxy遊戲時自動開始安裝</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">啟動時，將會跳過用戶自訂安裝位置流程並自動開始安裝。
+停用時，會跳出遊戲安裝頁面讓玩家手動進行安裝。</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">我的帳號名稱是什麼?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">帳號網址名稱</sys:String>
@@ -65,6 +69,17 @@
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">忽略其他帳號安裝的遊戲</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">其他帳戶</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">如果你想從其他帳戶匯入遊戲，請提供該Steam帳號以及API密鑰的配對。更多資訊請參考Steam疑難排解Wiki頁面。</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">僅限匯入第一個標籤</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">為標籤名稱加入前綴:</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">標籤黑名單</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">已除外的標籤將不會被添加到遊戲</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">可用標籤</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader">除外標籤</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip">從除外標籤中移除</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip">加入除外標籤</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">固定標籤數量必須是有效數字</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">在桌面模式中顯示Steam遊戲啟動選單</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">在全螢幕模式中顯示Steam遊戲啟動選單</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">如果沒有圖片則使用擷圖</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">有多張圖片時則使用:</sys:String>

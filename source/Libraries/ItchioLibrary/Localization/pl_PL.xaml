@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Importuj czasy gier</sys:String>
   <sys:String x:Key="LOCitchioAccountID">Identyfikator konta</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">Język metadanych:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io zostanie uruchomiony. Zaloguj się, a następnie zamknij ten komunikat.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Oczekiwanie na zalogowanie się użytkownika. Zamknij tą wiadomość, gdy skończysz…</sys:String>

@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">开始使用 {0} 客户端</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCXboxAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCXboxMetadataLanguageLabel">元数据语言：</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">打开客户端时，启动 Xbox Pass 应用而不是 Microsoft Store。</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">导入 Xbox 游戏机游戏</sys:String>

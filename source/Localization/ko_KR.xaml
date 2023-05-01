@@ -15,15 +15,16 @@
     <sys:String x:Key="LOCPrivateAccount">비공개 계정</sys:String>
     <sys:String x:Key="LOCPublicAccount">공개 계정</sys:String>
     <sys:String x:Key="LOCAPIKey">API 키</sys:String>
-    <sys:String x:Key="LOCStartUsingClient"></sys:String>
-    <sys:String x:Key="LOCImportPlaytime"></sys:String>
-    <sys:String x:Key="LOCAccountID"></sys:String>
+    <sys:String x:Key="LOCStartUsingClient">{0} 클라이언트 사용 시작</sys:String>
+    <sys:String x:Key="LOCImportPlaytime">플레이 시간 가져오기</sys:String>
+    <sys:String x:Key="LOCAccountID">계정 ID</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">메타데이터 언어:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io가 실행됩니다. 로그인한 후에 이 메시지를 닫아주세요.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">로그인을 기다리고 있습니다. 로그인 후 이 창을 닫아주십시오…</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io 앱 버전 25 이상의 최신 버전이 설치되지 않았습니다.</sys:String>
-    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel"></sys:String>
-    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel"></sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">컬렉션에서 무료 게임을 가져옵니다.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">가져올 항목:</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">계정 로그인</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">계정 이름</sys:String>
@@ -31,6 +32,9 @@
 공개 계정 이름을 사용할 경우, GOG 개인정보 설정에 라이브러리 공개로 설정되어 있어야 합니다.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">GOG Galaxy 클라이언트를 사용해서 게임 실행하기</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">클라우드 저장, 게임 시간 추적 등 GOG Galaxy의 기능을 활성화합니다.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">GOG Galaxy에 게임을 설치할 때 자동으로 설치 프로세스 시작</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">이 옵션을 설정하면 구성된 기본 설치 위치에 대한 사용자 작업 없이 설치 프로세스가 자동으로 시작됩니다.
+설정하지 않으면 게임 페이지가 열려 수동으로 설치 프로세스를 시작합니다.</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">계정 이름이 뭐죠?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">계정 URL 이름</sys:String>
@@ -61,26 +65,38 @@
     <sys:String x:Key="LOCSteamBackgroundSourceStore">스토어 배경</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">배너</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">상단 패널에 친구 목록을 보여줄 버튼을 표시</sys:String>
-    <sys:String x:Key="LOCSteamFriendsTooltip"></sys:String>
-    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames"></sys:String>
-    <sys:String x:Key="LOCSteamAdditionalAccounts"></sys:String>
-    <sys:String x:Key="LOCSteamAdditionalAccountsDescription"></sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">Stream 친구</sys:String>
+    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">다른 계정에서 설치된 게임 무시</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccounts">추가 계정</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">다른 계정에서 게임을 가져오려면 Stream 계정 ID와 API 키 쌍을 지정하십시오. 자세한 내용은 스팀 문제 해결 Wiki 페이지를 참조하십시오.</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">첫 번째로 가져온 태그 수 제한</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">태그 이름 접두사:</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">태그 블랙리스트</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">제외된 태그는 게임에 추가되지 않습니다.</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">사용가능한 태그</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader">제외된 태그</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip">제외된 태그에서 제외</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip">제외된 태그로 추가</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">고정 태그 수는 숫자여야 합니다.</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">데스크톱 모드에서 Steam의 게임의 시작 선택 메뉴 표시</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">전체화면 모드에서 Steam의 게임의 시작 선택 메뉴 표시</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">아트워크를 사용할 수 없을 경우 스크린샷 사용</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">사용할 수 있는 이미지가 여러장 있을때 사용할 이미지</sys:String>
-    <sys:String x:Key="LOCIgdbSelectBackgroundTitle"></sys:String>
+    <sys:String x:Key="LOCIgdbSelectBackgroundTitle">{0}의 배경 이미지 선택</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">서드파티 스토어 게임 무시</sys:String>
-    <sys:String x:Key="LOCHumbleImportChoiceGames"></sys:String>
-    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip"></sys:String>
-    <sys:String x:Key="LOCHumbleGeneralLibrary">Humble 라이브러리 게임 가져오기</sys:String>
-    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip"></sys:String>
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames">Humble Choice 게임 가져오기</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Humble Choice 구독용 게임을 가져옵니다.</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">Humble Library 게임 가져오기</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">기본 Humble 스토어 및 번들 구매내역을 가져옵니다.</sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">중복을 방지하기 위해  Playnite에서 이미 관리되는 스토어 등 서드파티 클라이언트가 필요한 게임은 가져오기를 건너뜁니다.
+</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">가능하다면 DRM이 적용되지 않은 버전을 가져오기</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">DRM이 없는 버전이 존재하면 타사 클라이언트를 요구하는 게임도 가져옵니다.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">게임 실행 시 항상 Humble App을 사용해 실행</sys:String>
-    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip"></sys:String>
-    <sys:String x:Key="LOCHumbleNonTroveInstallError"></sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">비활성화 시 Playnite는 Humble App을 우회하여 직접 게임을 시작하려고 시도합니다.</sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">구동중이 아니 Humble 게임의 자동 설치 및 제거는 현재 지원되지 않습니다.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">클라이언트 실행 시 마이크로소프트 스토어 대신 Xbox Pass 실행</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Xbox 콘솔 게임 가져오기</sys:String>

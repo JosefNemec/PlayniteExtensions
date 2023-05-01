@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCSteamStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCSteamAccountID">Hesap ID</sys:String>
+  <sys:String x:Key="LOCSteamMetadataLanguageLabel">Meta veri dili:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Hesap adım ne?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Hesap URL Adı</sys:String>
@@ -52,4 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Diğer hesaplardan yüklenmiş oyunları yok say</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Ek Hesaplar</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Diğer hesapların oyunları içe aktarmak istiyorsanız onların Steam hesap ID ve API anahtarlarını belirtin. Daha fazla bilgi için Steam sorun giderme wiki sayfasına bakın.</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">İçe aktarılan etiketlerin miktarını ilk etiketle sınırlayın</sys:String>
+  <sys:String x:Key="LOCSteamTagPrefixLabel">Etiket adlarını şu önek ile kullan:</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Etiket karalistesi</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Hariç tutulan etiketler oyunlara eklenmeyecektir.</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">Mevcut etiketler</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">Hariç tutulan etiketler</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip">Hariç tutulan etiketlerden kaldır</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip">Hariç tutulan etiketlere ekle</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">Sabit etiket sayısı geçerli bir sayı olmalıdır</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Steam'in oyun başlatma seçim menüsünü masaüstü modunda göster</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Steam'in oyun başlatma seçim menüsünü tam ekran modunda göster</sys:String>
 </ResourceDictionary>

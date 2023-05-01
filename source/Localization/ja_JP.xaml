@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">{0} クライアントの使用を開始</sys:String>
     <sys:String x:Key="LOCImportPlaytime">プレイ時間をインポート</sys:String>
     <sys:String x:Key="LOCAccountID">アカウントID</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">メタデータの言語</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.ioクライアントが開きます。サインインしてからこのメッセージを閉じてください。</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">ユーザーがログインするのを待っています。完了したら閉じてください。</sys:String>
@@ -31,6 +32,9 @@
 [アカウント名]オプションは、ゲームライブラリがGOGのプライバシー設定で公開されて表示されるように設定されているアカウントに対してのみ機能することに注意してください。</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Galaxyクライアントを使用してゲームを開始する</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">これにより、クラウドセーブやゲームタイムトラッキングなどのGOG Galaxyの機能が利用できるようになります。</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">GOG Galaxy へのゲームインストール時にインストールを自動的に開始する</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">有効にすると、インストール先の設定に関する操作を求められずにインストールが始まります。
+無効にすると、手動でインストールを行うためのゲームページが開きます。</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">私のアカウント名は何ですか？</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">アカウントURL名</sys:String>
@@ -65,6 +69,17 @@
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">他のアカウントからインストールされたゲームを無視</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">追加アカウント</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">他のアカウントからゲームをインポートする場合は、他のアカウントのSteamアカウントIDとAPIキーのペアを指定します。詳しくはSteamトラブルシューティングwikiのページをご覧ください。</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">タグのブラックリスト</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">除外されたタグはゲームに追加されません。</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">使用可能なタグ</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader">除外するタグ</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip">除外するタグから削除</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip">除外するタグに追加</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">固定タグ数は有効な数字でなければなりません</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">デスクトップモードでSteamの起動メニューを表示する</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Steamの起動メニューをフルスクリーンモードで表示する</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">アートワークが利用できない場合スクリーンショットを使用する</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">

@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCOriginStartUsingClient">以{0}啟動</sys:String>
   <sys:String x:Key="LOCOriginImportPlaytime">匯入遊玩時間</sys:String>
   <sys:String x:Key="LOCOriginAccountID">帳戶ID</sys:String>
+  <sys:String x:Key="LOCOriginMetadataLanguageLabel">元資料語言:</sys:String>
 </ResourceDictionary>

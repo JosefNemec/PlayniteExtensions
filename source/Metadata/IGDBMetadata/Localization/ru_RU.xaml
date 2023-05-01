@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">Запустить через клиент {0}</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Импортировать наигранные часы</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">ID аккаунта</sys:String>
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Язык метаданных:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Использовать скриншоты из игры при отсутствии обложки </sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">При наличии нескольких изображений используйте:</sys:String>

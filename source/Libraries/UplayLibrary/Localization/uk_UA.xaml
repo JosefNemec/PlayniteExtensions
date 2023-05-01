@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Мова метаданих:</sys:String>
 </ResourceDictionary>

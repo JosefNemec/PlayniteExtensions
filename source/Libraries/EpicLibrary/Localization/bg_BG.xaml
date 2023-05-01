@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCEpicSettingsImportInstalledLabel">Импортиране на инсталирани игри</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">Импортиране на неинсталирани игри</sys:String>
+  <sys:String x:Key="LOCEpicSettingsConnectAccount">Свързване на акаун</sys:String>
+  <sys:String x:Key="LOCEpicLoginChecking">Проверява се състоянието на удостоверяване...</sys:String>
+  <sys:String x:Key="LOCEpicLoggedIn">Потребителят е удостоверен</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedIn">Изисква удостоверяване</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedInError">Неуспешно удостоверяване на потребителя.</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateLabel">Удостоверяване</sys:String>
+  <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Стартиране на игри директно без стартиране на официален клиен</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Отстраняване на проблеми със синхронизирането на акаун</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingIssues">Отстраняване на проблеми</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">Импортиране на всички игри</sys:String>
+  <sys:String x:Key="LOCEpicPrivateAccount">Личен акаун</sys:String>
+  <sys:String x:Key="LOCEpicPublicAccount">Публичен акаун</sys:String>
+  <sys:String x:Key="LOCEpicAPIKey">API клю</sys:String>
+  <sys:String x:Key="LOCEpicStartUsingClient">Започнете да използвате {0} клиен</sys:String>
+  <sys:String x:Key="LOCEpicImportPlaytime">Импортиране на изиграното време</sys:String>
+  <sys:String x:Key="LOCEpicAccountID">ИД на акаун</sys:String>
+  <sys:String x:Key="LOCEpicMetadataLanguageLabel">Език на метаданните:</sys:String>
+</ResourceDictionary>

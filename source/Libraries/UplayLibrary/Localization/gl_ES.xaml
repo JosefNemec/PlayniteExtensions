@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">Comezar usando o cliente {0}</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Importar tempo de xogo</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">ID da conta</sys:String>
+  <sys:String x:Key="LOCUbisoftMetadataLanguageLabel" />
 </ResourceDictionary>

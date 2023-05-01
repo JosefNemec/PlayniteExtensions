@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">开始使用 {0} 客户端</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">元数据语言：</sys:String>
 </ResourceDictionary>

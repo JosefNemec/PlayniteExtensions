@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">开始使用 {0} 客户端</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCRockstarMetadataLanguageLabel">元数据语言：</sys:String>
 </ResourceDictionary>

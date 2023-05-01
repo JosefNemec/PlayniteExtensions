@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Mit {0}-Client starten</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Spielzeit importieren</sys:String>
   <sys:String x:Key="LOCitchioAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">Metadatensprache:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">Der itch.io-Client wird gestartet. Bitte melde dich dort an und schließe anschließend diese Meldung.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Es wird auf die Nutzeranmeldung gewartet. Bitte schließen diese Meldung, sobald du damit fertig bist …</sys:String>

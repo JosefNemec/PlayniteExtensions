@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">Запустити клієнтом {0}</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Імпортувати час у грі</sys:String>
     <sys:String x:Key="LOCAccountID">ID облікового запису</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">Мова метаданих:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io буде запущено. Будь ласка авторизуйтеся після чого закрийте це повідомлення.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Очікування на вхід користувача, будь ласка закрийте це коли завершите...</sys:String>
@@ -31,6 +32,9 @@
 Зауважте, що параметр «Ім'я облікового запису» працює лише для тих облікових записів, чиї ігрові бібліотеки були встановлені в налаштуваннях конфіденційності GOG, як загальнодоступні.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Запускати ігри використовуючи клієнт GOG Galaxy</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Це увімкне такі функції GOG Galaxy, як хмарні збереження, фіксація ігрового часу тощо.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Автоматично запускати процес встановлення під час встановлення ігор у GOG Galaxy</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Якщо ввімкнено, процес встановлення буде розпочато автоматично без необхідності втручання користувача до налаштованого за замовчуванням місця встановлення.
+Якщо вимкнено, буде відкрито сторінку гри, щоб вручну розпочати процес встановлення.</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Яке ім’я мого облікового запису?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">URL-адреса облікового запису</sys:String>
@@ -65,6 +69,17 @@
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ігнорувати встановлені ігри з інших облікових записів</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Додаткові облікові записи</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Визначте пару Steam ID і API-ключа інших облікових записів, якщо хочете імпортувати з них ігри. Для додаткової інформації перегляньте сторінку вирішення проблем Steam у wiki.</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">Обмежити кількість імпортованих тегів до першого</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">Додавати до імен тегів префікс:</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Чорний список тегів</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Виключені теги не будуть додані до ігор.</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">Доступні теги</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader">Виключені теги</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip">Прибрати з виключених тегів</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip">Додати до виключених тегів</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">Фіксована кількість тегів має бути дійсним номером</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Показувати меню вибору при запуску гри Steam в режимі робочого столу</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Показувати меню вибору при запуску гри Steam в повноекранному режимі</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Використовувати знімки гри якщо немає іншого зображення</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Якщо доступно декілька зображень, використовувати:</sys:String>
@@ -79,10 +94,10 @@
 включно з магазинами, якими вже керує Playnite, щоб уникнути дублікатів.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Імпортувати якщо доступна версія без DRM</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Імпортувати ігри, що потребують стороннього клієнту, якщо також доступна версія без DRM.</sys:String>
-    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Завжди використовувати додаток Humble для запуску ігор</sys:String>
-    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Коли вимкнено, Playnite намагатиметься запускати ігри напряму, минаючи додаток Humble.</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Завжди використовувати застосунок Humble для запуску ігор</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Коли вимкнено, Playnite намагатиметься запускати ігри напряму, минаючи застосунок Humble.</sys:String>
     <sys:String x:Key="LOCHumbleNonTroveInstallError">Автоматичне встановлення і видалення ігор Humble, які не є частиною підписки, наразі не підтримується.</sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Запускати додаток Xbox Pass замість Microsoft Store під час відкриття клієнта</sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Запускати застосунок Xbox Pass замість Microsoft Store під час відкриття клієнта</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Імпортувати ігри з консолі Xbox</sys:String>
 </ResourceDictionary>

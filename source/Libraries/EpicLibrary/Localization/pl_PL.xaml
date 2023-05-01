@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCEpicStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Importuj czasy gier</sys:String>
   <sys:String x:Key="LOCEpicAccountID">Identyfikator konta</sys:String>
+  <sys:String x:Key="LOCEpicMetadataLanguageLabel">Język metadanych:</sys:String>
 </ResourceDictionary>

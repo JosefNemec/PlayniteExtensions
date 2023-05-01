@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">{0} クライアントの使用を開始</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">プレイ時間をインポート</sys:String>
   <sys:String x:Key="LOCGOGAccountID">アカウントID</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">メタデータの言語</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">アカウントログイン</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">アカウント名</sys:String>
@@ -25,4 +26,7 @@
 [アカウント名]オプションは、ゲームライブラリがGOGのプライバシー設定で公開されて表示されるように設定されているアカウントに対してのみ機能することに注意してください。</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">Galaxyクライアントを使用してゲームを開始する</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">これにより、クラウドセーブやゲームタイムトラッキングなどのGOG Galaxyの機能が利用できるようになります。</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">GOG Galaxy へのゲームインストール時にインストールを自動的に開始する</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">有効にすると、インストール先の設定に関する操作を求められずにインストールが始まります。
+無効にすると、手動でインストールを行うためのゲームページが開きます。</sys:String>
 </ResourceDictionary>

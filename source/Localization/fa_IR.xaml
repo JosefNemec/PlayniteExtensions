@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">شروع به استفاده از سرویس گیرنده {0} کنید</sys:String>
     <sys:String x:Key="LOCImportPlaytime">وارد کردن زمان بازی</sys:String>
     <sys:String x:Key="LOCAccountID">شناسه حساب</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">زبان فراداده:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io راه اندازی خواهد شد. لطفاً وارد سیستم شوید و سپس این پیام را ببندید.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">منتظر ورود کاربر هستید، لطفاً این کار را ببندید...</sys:String>
@@ -31,6 +32,9 @@
 توجه داشته باشید که گزینه نام حساب فقط برای حسابهایی کار می کند که کتابخانه های بازی آنها در تنظیمات حریم خصوصی GOG تنظیم شده اند تا در معرض دید عموم قرار گیرند.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">بازی ها را با استفاده از سرویس گیرنده GOG Galaxy راه اندازی کنید</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">این ویژگی های GOG Galaxy مانند ذخیره ابری، ردیابی زمان بازی و غیره را فعال می کند.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">هنگام نصب بازی‌ها در GOG Galaxy، فرآیند نصب را به‌طور خودکار آغاز کنید</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">اگر فعال باشد، فرآیند نصب به طور خودکار بدون نیاز به تعامل کاربر با محل نصب پیش‌فرض پیکربندی شده آغاز می‌شود.
+اگر غیرفعال باشد، صفحه بازی باز می شود تا به صورت دستی فرآیند نصب شروع شود.</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">حساب من کجاست؟</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">نام آدرس کاربری</sys:String>
@@ -66,6 +70,17 @@
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">بازی های نصب شده از حساب های دیگر را نادیده بگیرید</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">حساب های اضافی</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">اگر می‌خواهید بازی‌ها را از آنها وارد کنید، شناسه حساب Steam و جفت کلید API حساب‌های دیگر را مشخص کنید. برای اطلاعات بیشتر به صفحه ویکی عیب یابی Steam مراجعه کنید.</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">مقدار برچسب های وارد شده را به اولی محدود کنید</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">نام  برچسب های پیشوند با:</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">لیست سیاه برچسب</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">برچسب های حذف شده به بازی ها اضافه نمی شوند.</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">برچسب های موجود</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader">برچسب های حذف شده</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip">حذف از برچسب های حذف شده</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip">به برچسب های حذف شده اضافه کنید</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">تعداد تگ های ثابت باید یک عدد معتبر باشد</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">نمایش منوی انتخاب راه‌اندازی بازی Steam در حالت دسکتاپ</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">منوی انتخاب راه‌اندازی بازی Steam را در حالت تمام صفحه نمایش دهید</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">استفاده از اسکرین شات در صورت نبود اثر هنری</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">در صورت وجود چندین عکس، از این استفاده شود:</sys:String>

@@ -18,10 +18,11 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">Mit {0}-Client starten</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Spielzeit importieren</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Metadatensprache:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Spiele von Drittanbieter-Shops ignorieren</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">Humble-Choice-Spiele importieren</sys:String>
-  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Spiele aus Humble-Choice-Abonnements importieren.</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Spiele aus Humble-Choice-Abonnement importieren.</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">Humble-Library-Spiele importieren</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Normale Käufe aus dem Humble Store und aus Bundles importieren.</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Aktivieren, um keine Spiele zu importieren, die einen Drittanbieter-Client erfordern. Einschließlich bereits von Playnite verwalteter Shops, um Duplikate zu vermeiden.</sys:String>

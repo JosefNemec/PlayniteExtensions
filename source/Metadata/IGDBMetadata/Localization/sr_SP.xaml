@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient" />
   <sys:String x:Key="LOCIGDBImportPlaytime" />
   <sys:String x:Key="LOCIGDBAccountID" />
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel" />
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Користи снимке екрана ако слике нису доступне</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Ако је више слика доступно користи:</sys:String>

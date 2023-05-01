@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">{0} használata</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Játékidő importálása</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">Fióknév</sys:String>
+  <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Metaadat nyelve:</sys:String>
 </ResourceDictionary>

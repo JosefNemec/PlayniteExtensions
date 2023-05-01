@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCSteamStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Importuj czasy gier</sys:String>
   <sys:String x:Key="LOCSteamAccountID">Identyfikator konta</sys:String>
+  <sys:String x:Key="LOCSteamMetadataLanguageLabel">Język metadanych:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Jaka jest nazwa mojego konta?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">URL konta</sys:String>
@@ -48,8 +49,19 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Tło z oficjalnego sklepu</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Baner</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Pokaż przycisk znajomych w panelu górnym</sys:String>
-  <sys:String x:Key="LOCSteamFriendsTooltip">Znajomi z Steam</sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip">Znajomi ze Steam</sys:String>
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignoruj zainstalowane gry z innych kont</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Dodatkowe konta</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Wprowadź parę identyfikatorów i kluczy API z innych kont Steam, jeśli chcesz importować z nich gry. Więcej informacji można znaleźć na stronie wiki dotyczącej rozwiązywania problemów na Steam.</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">Ogranicz ilość tagów zaimportowanych do pierwszego</sys:String>
+  <sys:String x:Key="LOCSteamTagPrefixLabel">Dodaj prefiks do tagów:</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Blokowane tagi</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Wykluczone tagi nie będą dodawane do gier.</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">Dostępne tagi</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">Wykluczone tagi</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip">Usuń z wykluczonych tagów</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip">Dodaj do wykluczonych tagów</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">Stała liczba tagów musi być poprawną liczbą</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Pokaż menu startu gry Steam w trybie pulpitu</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Pokaż menu startu gry Steam w trybie pełnoekranowym</sys:String>
 </ResourceDictionary>

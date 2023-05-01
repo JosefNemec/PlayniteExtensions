@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel">Импортиране на инсталирани игри</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel">Импортиране на неинсталирани игри</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsConnectAccount">Свързване на акаун</sys:String>
+  <sys:String x:Key="LOCAmazonLoginChecking">Проверява се състоянието на удостоверяване...</sys:String>
+  <sys:String x:Key="LOCAmazonLoggedIn">Потребителят е удостоверен</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedIn">Изисква удостоверяване</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedInError">Неуспешно удостоверяване на потребителя.</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateLabel">Удостоверяване</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Стартиране на игри директно без стартиране на официален клиен</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Отстраняване на проблеми със синхронизирането на акаун</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingIssues">Отстраняване на проблеми</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Импортиране на всички игри</sys:String>
+  <sys:String x:Key="LOCAmazonPrivateAccount">Личен акаун</sys:String>
+  <sys:String x:Key="LOCAmazonPublicAccount">Публичен акаун</sys:String>
+  <sys:String x:Key="LOCAmazonAPIKey">API клю</sys:String>
+  <sys:String x:Key="LOCAmazonStartUsingClient">Започнете да използвате {0} клиен</sys:String>
+  <sys:String x:Key="LOCAmazonImportPlaytime">Импортиране на изиграното време</sys:String>
+  <sys:String x:Key="LOCAmazonAccountID">ИД на акаун</sys:String>
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Език на метаданните:</sys:String>
+</ResourceDictionary>

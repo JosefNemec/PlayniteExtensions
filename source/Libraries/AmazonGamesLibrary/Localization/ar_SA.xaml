@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">بدء باستخدام {0} عميل</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">استيراد وقت التشغيل</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">تعريف الحساب</sys:String>
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
 </ResourceDictionary>

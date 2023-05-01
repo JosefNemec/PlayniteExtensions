@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">{0} クライアントの使用を開始</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">プレイ時間をインポート</sys:String>
   <sys:String x:Key="LOCitchioAccountID">アカウントID</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">メタデータの言語</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.ioクライアントが開きます。サインインしてからこのメッセージを閉じてください。</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">ユーザーがログインするのを待っています。完了したら閉じてください。</sys:String>

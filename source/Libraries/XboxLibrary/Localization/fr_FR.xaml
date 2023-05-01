@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">Lancer avec le client {0}</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Importer le temps de jeu</sys:String>
   <sys:String x:Key="LOCXboxAccountID">ID du compte</sys:String>
+  <sys:String x:Key="LOCXboxMetadataLanguageLabel">Langue des métadonnées :</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Lancer l'application Xbox Game Pass plutôt que le Microsoft Store</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">Importer les jeux des consoles Xbox</sys:String>

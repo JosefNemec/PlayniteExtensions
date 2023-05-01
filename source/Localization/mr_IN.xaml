@@ -18,6 +18,7 @@
     <sys:String x:Key="LOCStartUsingClient">{0} क्लाएंट वापरून सुरू करा</sys:String>
     <sys:String x:Key="LOCImportPlaytime">खेळलेल्याची कालावधी आयात करा</sys:String>
     <sys:String x:Key="LOCAccountID"></sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel"></sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io चालू केले जाईल. कृपया साइन इन करा आणि मग हा संदेश बंद करा.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage"></sys:String>
@@ -30,6 +31,8 @@
     <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy"></sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip"></sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls"></sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">माझ्या खात्याचे नाव काय आहे?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">खात्याचे यू.आर.एल. नाव</sys:String>
@@ -64,6 +67,17 @@
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames"></sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts"></sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription"></sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader"></sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount"></sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode"></sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"></sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>

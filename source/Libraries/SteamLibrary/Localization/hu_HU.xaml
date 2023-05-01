@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCSteamStartUsingClient">{0} használata</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Játékidő importálása</sys:String>
   <sys:String x:Key="LOCSteamAccountID">Fióknév</sys:String>
+  <sys:String x:Key="LOCSteamMetadataLanguageLabel">Metaadat nyelve:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Mi a felhasználónevem?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Fiók URL címe</sys:String>
@@ -52,4 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Más fiókokból telepített játékokat ne vegye figyelembe</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">További fiókok</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Egyéb fiókazonosítók és API kulcsainak megadása, amikből játékot szeretnél beimportálni. Bővebb információt a Steam hibaelhárítós wiki oldalán találsz.</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">Csak az első címkét veszi figyelembe</sys:String>
+  <sys:String x:Key="LOCSteamTagPrefixLabel">A címkék elé beszúrja:</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Tiltott címkék</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Ezek a címkék nem lesznek hozzáadva a játékokhoz.</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">Elérhető címkék</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">Kizárt címkék</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip">Eltávolítás a tiltott címkékből</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip">Hozzáadja a tiltott címkékhez</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">A címkék összege csak valós szám lehet</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Asztali módban mutassa a Steam játékindításkori menüjét</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Teljesképernyős módban mutassa a Steam játékindításkori menüjét</sys:String>
 </ResourceDictionary>

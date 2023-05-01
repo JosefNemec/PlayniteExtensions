@@ -3,22 +3,23 @@
   <sys:String x:Key="LOCXboxSettingsImportInstalledLabel">Εισαγωγή εγκατεστημένων παιχνιδιών</sys:String>
   <sys:String x:Key="LOCXboxSettingsImportUninstalledLabel">Εισαγωγή μη εγκατεστημένων παιχνιδιών</sys:String>
   <sys:String x:Key="LOCXboxSettingsConnectAccount">Σύνδεση λογαριασμού</sys:String>
-  <sys:String x:Key="LOCXboxLoginChecking">Έλεγχος κατάστασης ταυτοποίησης...</sys:String>
+  <sys:String x:Key="LOCXboxLoginChecking">Έλεγχος κατάστασης πιστοποίησης...</sys:String>
   <sys:String x:Key="LOCXboxLoggedIn">Ο χρήστης είναι πιστοποιημένος</sys:String>
-  <sys:String x:Key="LOCXboxNotLoggedIn">Απαιτείται Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCXboxNotLoggedIn">Απαιτείται πιστοποίηση</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
-  <sys:String x:Key="LOCXboxAuthenticateLabel">Επικύρωση</sys:String>
-  <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Απευθείας εκκίνηση παιχνιδιού χωρίς την χρήση του επίσημου client</sys:String>
-  <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρόνισης λογαριασμού</sys:String>
+  <sys:String x:Key="LOCXboxAuthenticateLabel">Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Απευθείας εκκίνηση των παιχνιδιών χωρίς τη χρήση της επίσημης εφαρμογής</sys:String>
+  <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρονισμού του λογαριασμού</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
   <sys:String x:Key="LOCXboxSettingsImportLibraryLabel">Εισαγωγή όλων των παιχνιδιών</sys:String>
   <sys:String x:Key="LOCXboxPrivateAccount">Ιδιωτικός Λογαριασμός</sys:String>
   <sys:String x:Key="LOCXboxPublicAccount">Δημόσιος Λογαριασμός</sys:String>
   <sys:String x:Key="LOCXboxAPIKey">Κλειδί API</sys:String>
-  <sys:String x:Key="LOCXboxStartUsingClient" />
-  <sys:String x:Key="LOCXboxImportPlaytime" />
-  <sys:String x:Key="LOCXboxAccountID" />
+  <sys:String x:Key="LOCXboxStartUsingClient">Ξεκινήστε να χρησιμοποιείτε την εφαρμογή {0}</sys:String>
+  <sys:String x:Key="LOCXboxImportPlaytime">Εισαγωγή ωρών παιχνιδιού</sys:String>
+  <sys:String x:Key="LOCXboxAccountID">ID Λογαριασμού</sys:String>
+  <sys:String x:Key="LOCXboxMetadataLanguageLabel">Γλώσσα μεταδεδόμενων:</sys:String>
   <!--Xbox-->
-  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch" />
+  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Εκκίνηση της εφαρμογής Xbox Pass αντί του Microsoft Store κατά την εκκίνηση της εφαρμογής</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">Εισαγωγή παιχνιδιών Xbox</sys:String>
 </ResourceDictionary>

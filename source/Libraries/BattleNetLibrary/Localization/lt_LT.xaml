@@ -18,4 +18,5 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Importuoti pražaistą laiką</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">Paskyros ID</sys:String>
+  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel" />
 </ResourceDictionary>
