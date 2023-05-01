@@ -36,7 +36,6 @@ namespace Steam
         private readonly SharedSteamSettings settings;
         private static readonly string[] backgroundUrls = new string[]
         {
-            @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page.bg.jpg",
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page_bg_generated.jpg"
         };
 
