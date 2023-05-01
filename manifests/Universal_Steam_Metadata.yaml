@@ -67,3 +67,9 @@ Packages:
     Changelog:
       - Added support for download of supported platforms (by Jeshibu)
       - Fixed imprecise release date parsing (by Jeshibu)
+  - Version: 2.10
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-05-01
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_10.pext
+    Changelog:
+      - Removed problematic background image source

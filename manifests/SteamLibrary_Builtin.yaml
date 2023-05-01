@@ -93,3 +93,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_12.pext
     Changelog:
       - Fixed games being detected as installed before fully downloaded
+  - Version: 2.13
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-05-01
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_13.pext
+    Changelog:
+      - Removed problematic background image source
