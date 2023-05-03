@@ -99,3 +99,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_13.pext
     Changelog:
       - Removed problematic background image source
+  - Version: 2.14
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-05-03
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_14.pext
+    Changelog:
+      - Better handling of problematic sources for background image
+      - Fixed issue slowing down metadata download in some cases

@@ -73,3 +73,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_10.pext
     Changelog:
       - Removed problematic background image source
+  - Version: 2.11
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-05-03
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_11.pext
+    Changelog:
+      - Better handling of problematic sources for background image
+      - Fixed issue slowing down metadata download in some cases
