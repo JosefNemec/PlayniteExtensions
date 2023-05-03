@@ -28,7 +28,7 @@ namespace OriginLibrary.Services
             var match = Regex.Match(offerPath, @"(\/(.+?)\/(.+?))\/");
             var offer = match.Groups[1].Value.ToString();
             var url = string.Format(@"https://data3.origin.com/ocd{0}.en-us.irl.ocd", offer);
-            if (HttpDownloader.GetResponseCode(url) == System.Net.HttpStatusCode.OK)
+            if (HttpDownloader.GetResponseCode(url, out var _) == System.Net.HttpStatusCode.OK)
             {
                 var stringData = Encoding.UTF8.GetString(HttpDownloader.DownloadData(url));
                 return Serialization.FromJson<StorePageMetadata>(stringData);
