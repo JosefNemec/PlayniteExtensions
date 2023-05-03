@@ -36,6 +36,7 @@ namespace Steam
         private readonly SharedSteamSettings settings;
         private static readonly string[] backgroundUrls = new string[]
         {
+            @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page.bg.jpg",
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page_bg_generated.jpg"
         };
 
@@ -189,7 +190,7 @@ namespace Steam
             {
                 var imageRoot = @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/library_600x900_2x.jpg";
                 var imageUrl = string.Format(imageRoot, appId);
-                if (HttpDownloader.GetResponseCode(imageUrl) == HttpStatusCode.OK)
+                if (HttpDownloader.GetResponseCode(imageUrl, out var _).IsSuccess())
                 {
                     metadata.CoverImage = new MetadataFile(imageUrl);
                 }
@@ -198,7 +199,7 @@ namespace Steam
             {
                 var imageRoot = @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/header.jpg";
                 var imageUrl = string.Format(imageRoot, appId);
-                if (HttpDownloader.GetResponseCode(imageUrl) == HttpStatusCode.OK)
+                if (HttpDownloader.GetResponseCode(imageUrl, out var _).IsSuccess())
                 {
                     metadata.CoverImage = new MetadataFile(imageUrl);
                 }
@@ -214,10 +215,7 @@ namespace Steam
                     var bk = GetGameBackground(appId);
                     if (string.IsNullOrEmpty(bk))
                     {
-                        if (HttpDownloader.GetResponseCode(bannerBk) == HttpStatusCode.OK)
-                        {
-                            metadata.BackgroundImage = new MetadataFile(bannerBk);
-                        }
+                        metadata.BackgroundImage = new MetadataFile(bannerBk);
                     }
                     else
                     {
@@ -231,13 +229,13 @@ namespace Steam
                     }
                     break;
                 case BackgroundSource.StoreBackground:
-                    if (HttpDownloader.GetResponseCode(storeBk) == HttpStatusCode.OK)
+                    if (HttpDownloader.GetResponseCode(storeBk, out var _).IsSuccess())
                     {
                         metadata.BackgroundImage = new MetadataFile(storeBk);
                     }
                     break;
                 case BackgroundSource.Banner:
-                    if (HttpDownloader.GetResponseCode(bannerBk) == HttpStatusCode.OK)
+                    if (HttpDownloader.GetResponseCode(bannerBk, out var _).IsSuccess())
                     {
                         metadata.BackgroundImage = new MetadataFile(bannerBk);
                     }
@@ -522,9 +520,16 @@ namespace Steam
             foreach (var url in backgroundUrls)
             {
                 var bk = string.Format(url, appId);
-                if (HttpDownloader.GetResponseCode(bk) == HttpStatusCode.OK)
+                if (HttpDownloader.GetResponseCode(bk, out var headers).IsSuccess())
                 {
-                    return bk;
+                    // One of these sources sometimes returns images that are badly encoded and are 20MBs and more.
+                    // 10MBs should be safe limit.
+                    if (headers.TryGetValue("Content-Length", out var ln) &&
+                        int.TryParse(ln, out var length) &&
+                        length < 10_000_000)
+                    {
+                        return bk;
+                    }
                 }
             }
 

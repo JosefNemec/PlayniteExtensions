@@ -66,6 +66,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Extensions\NetExtensions.cs">
+      <Link>Shared\NetExtensions.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\PlayniteRepo\source\playnite\native\Fileapi.cs">
       <Link>Shared\Native\Fileapi.cs</Link>
     </Compile>
