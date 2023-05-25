@@ -31,7 +31,7 @@ namespace SteamLibrary.SteamShared
 
         private string GetTagNameFilePath()
         {
-            return $@"{plugin.GetPluginUserDataPath()}\TagLocalization\{settings?.LanguageKey}.json";
+            return $@"{plugin.GetPluginUserDataPath()}\tagnames-{settings?.LanguageKey}.json";
         }
 
         private string GetPackedTagNameFilePath()
