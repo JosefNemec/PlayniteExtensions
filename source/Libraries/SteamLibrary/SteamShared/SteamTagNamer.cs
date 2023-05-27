@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -46,48 +47,88 @@ namespace SteamLibrary.SteamShared
             {
                 logger.Trace($"No new tag names found for '{settings?.LanguageKey}'");
                 fileName = GetPackedTagNameFilePath();
-            }
 
-            if (!File.Exists(fileName))
-            {
-                logger.Warn($"No tag names found for language '{settings?.LanguageKey}'");
-                return new Dictionary<int, string>();
+                if (!File.Exists(fileName))
+                {
+                    logger.Warn($"No tag names found for language '{settings?.LanguageKey}'");
+                    return new Dictionary<int, string>();
+                }
             }
+            var content = GetFileContents(fileName);
 
-            var tagNames = Serialization.FromJsonFile<Dictionary<int, string>>(fileName);
-            return tagNames;
+            return content.response.tags.ToDictionary(x => x.tagid, x => x.name);
         }
 
-        private static Regex tagNameRegex = new Regex(@"data-param=""tags"" data-value=""(?<id>[0-9]+)"" data-loc=""(?<name>.+?)""", RegexOptions.Compiled);
+        private SteamTagFile GetFileContents()
+        {
+            return GetFileContents(GetTagNameFilePath()) ?? GetFileContents(GetPackedTagNameFilePath());
+        }
+
+        private SteamTagFile GetFileContents(string path)
+        {
+            if (!File.Exists(path))
+                return null;
+
+            logger.Debug("Opening " + path);
+            try
+            {
+                var content = File.ReadAllText(path, Encoding.UTF8);
+                return Serialization.FromJson<SteamTagFile>(content);
+            }
+            catch (Exception e)
+            {
+                logger.Error(e, "Failed to read " + path);
+                throw;
+            }
+        }
 
         public Dictionary<int, string> UpdateAndGetTagNames()
         {
-            string url = $"https://store.steampowered.com/search/?l={settings?.LanguageKey}";
-            logger.Debug("Downloading " + url);
-            var content = downloader.DownloadString(url);
-            var matches = tagNameRegex.Matches(content);
+            var existingFile = GetFileContents();
 
-            var output = new Dictionary<int, string>();
-            foreach (var match in matches.Cast<Match>())
+            string url = $"https://api.steampowered.com/IStoreService/GetTagList/v1?language={settings?.LanguageKey}&have_version_hash={existingFile?.response?.version_hash}";
+
+            logger.Debug("Downloading " + url);
+            var httpClient = new HttpClient();
+            var downloadTask = httpClient.GetAsync(url);
+            downloadTask.Wait();
+            var downloadResult = downloadTask.Result;
+            var contentTask = downloadResult.Content.ReadAsStringAsync();
+            contentTask.Wait();
+
+            var filePath = GetTagNameFilePath();
+
+            if (downloadResult.StatusCode != System.Net.HttpStatusCode.NotModified && !string.IsNullOrWhiteSpace(contentTask.Result))
             {
-                int id = int.Parse(match.Groups["id"].Value);
-                if (!output.ContainsKey(id))
-                {
-                    string name = match.Groups["name"].Value;
-                    output.Add(id, name);
-                }
+                File.WriteAllText(filePath, contentTask.Result, Encoding.UTF8);
             }
 
-            string serialized = Serialization.ToJson(output);
-            File.WriteAllText(GetTagNameFilePath(), serialized, Encoding.Unicode);
-
-            return output;
+            var tagFile = GetFileContents();
+            return tagFile.response.tags.ToDictionary(x => x.tagid, x => x.name);
         }
+
         public string GetFinalTagName(string tagName)
         {
             tagName = HttpUtility.HtmlDecode(tagName).Trim();
             string computedTagName = settings.UseTagPrefix ? $"{settings.TagPrefix}{tagName}" : tagName;
             return computedTagName;
         }
+    }
+
+    public class SteamTagFile
+    {
+        public SteamTagResponse response { get; set; } = new SteamTagResponse();
+    }
+
+    public class SteamTagResponse
+    {
+        public string version_hash { get; set; }
+        public List<SteamTag> tags { get; set; } = new List<SteamTag>();
+    }
+
+    public class SteamTag
+    {
+        public int tagid { get; set; }
+        public string name { get; set; }
     }
 }
