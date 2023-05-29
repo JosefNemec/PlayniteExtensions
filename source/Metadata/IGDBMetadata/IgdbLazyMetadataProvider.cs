@@ -1,28 +1,58 @@
-﻿using IGDBMetadata.Models;
-using Playnite.Common;
+﻿using Playnite.Common;
 using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
+using PlayniteServices.Controllers.IGDB;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using static IGDBMetadata.IgdbMetadataPlugin;
-using IgdbServerModels = PlayniteServices.Models.IGDB;
+using Igdb = PlayniteServices.Controllers.IGDB;
 
 namespace IGDBMetadata
 {
     public class IgdbLazyMetadataProvider : OnDemandMetadataProvider
     {
         private static readonly ILogger logger = LogManager.GetLogger();
+        private static readonly CultureInfo cultInfo = new CultureInfo("en-US", false);
         private readonly MetadataRequestOptions options;
         private readonly IgdbMetadataPlugin plugin;
-        internal IgdbServerModels.ExpandedGame IgdbData { get; private set; }
+        private Igdb.Game GameData;
+
+        private readonly static Dictionary<AgeRatingRatingEnum, string> pegiRatingToStr = new Dictionary<AgeRatingRatingEnum, string>()
+        {
+            [AgeRatingRatingEnum.THREE] = "3",
+            [AgeRatingRatingEnum.SEVEN] = "7",
+            [AgeRatingRatingEnum.TWELVE] = "12",
+            [AgeRatingRatingEnum.SIXTEEN] = "16",
+            [AgeRatingRatingEnum.EIGHTEEN] = "18"
+        }; 
+        
+        private readonly static Dictionary<WebsiteCategoryEnum, string> websiteCategoryToStr = new Dictionary<WebsiteCategoryEnum, string>()
+        {
+            [WebsiteCategoryEnum.WEBSITE_ANDROID] = "Android",
+            [WebsiteCategoryEnum.WEBSITE_DISCORD] = "Discord",
+            [WebsiteCategoryEnum.WEBSITE_EPICGAMES] = "Epic",
+            [WebsiteCategoryEnum.WEBSITE_FACEBOOK] = "Facebook",
+            [WebsiteCategoryEnum.WEBSITE_GOG] = "GOG",
+            [WebsiteCategoryEnum.WEBSITE_INSTAGRAM] = "Instagram",
+            [WebsiteCategoryEnum.WEBSITE_IPAD] = "iPad",
+            [WebsiteCategoryEnum.WEBSITE_IPHONE] = "iPhone",
+            [WebsiteCategoryEnum.WEBSITE_ITCH] = "Itch",
+            [WebsiteCategoryEnum.WEBSITE_OFFICIAL] = "Official",
+            [WebsiteCategoryEnum.WEBSITE_REDDIT] = "Reddit",
+            [WebsiteCategoryEnum.WEBSITE_STEAM] = "Steam",
+            [WebsiteCategoryEnum.WEBSITE_TWITCH] = "Twitch",
+            [WebsiteCategoryEnum.WEBSITE_TWITTER] = "Twitter",
+            [WebsiteCategoryEnum.WEBSITE_WIKIA] = "Wikia",
+            [WebsiteCategoryEnum.WEBSITE_WIKIPEDIA] = "Wikipedia",
+            [WebsiteCategoryEnum.WEBSITE_YOUTUBE] = "YouTube",
+        };
 
         private List<MetadataField> availableFields;
         public override List<MetadataField> AvailableFields
@@ -44,79 +74,96 @@ namespace IGDBMetadata
             this.plugin = plugin;
         }
 
-        private IgdbImageOption GetBackgroundManually(List<IgdbServerModels.GameImage> possibleBackgrounds)
+        private IIgdbItem GetBackgroundManually(List<IIgdbItem> possibleBackgrounds)
         {
             var selection = new List<ImageFileOption>();
-            foreach (var artwork in possibleBackgrounds)
+            foreach (var image in possibleBackgrounds)
             {
-                selection.Add(new IgdbImageOption
+                if (image is Artwork artwork)
                 {
-                    Path = IgdbMetadataPlugin.GetImageUrl(artwork, ImageSizes.screenshot_med),
-                    Image = artwork
-                });
+                    selection.Add(new IgdbImageSlectItem(artwork));
+                }
+                else if (image is Screenshot screenshot)
+                {
+                    selection.Add(new IgdbImageSlectItem(screenshot));
+                }
             }
-            return plugin.PlayniteApi.Dialogs.ChooseImageFile(
+
+            var res = plugin.PlayniteApi.Dialogs.ChooseImageFile(
                 selection,
-                string.Format(plugin.PlayniteApi.Resources.GetString(LOC.IgdbSelectBackgroundTitle), IgdbData.name)) as IgdbImageOption;
+                string.Format(plugin.PlayniteApi.Resources.GetString(LOC.IgdbSelectBackgroundTitle), GameData.name));
+            if (res == null)
+            {
+                return null;
+            }
+            else
+            {
+                return (res as IgdbImageSlectItem).Image;
+            }
         }
 
         public override MetadataFile GetBackgroundImage(GetMetadataFieldArgs args)
         {
-            var settings = plugin.SettingsViewModel.Settings;
-            if (AvailableFields.Contains(MetadataField.BackgroundImage))
+            if (!AvailableFields.Contains(MetadataField.BackgroundImage))
             {
-                List<IgdbServerModels.GameImage> possibleBackgrounds = null;
-                if (IgdbData.artworks.HasItems())
-                {
-                    possibleBackgrounds = IgdbData.artworks.Where(a => !a.url.IsNullOrEmpty()).ToList();
-                }
-                else if (settings.UseScreenshotsIfNecessary && IgdbData.screenshots.HasItems())
-                {
-                    possibleBackgrounds = IgdbData.screenshots.Where(a => !a.url.IsNullOrEmpty()).ToList();
-                }
+                return base.GetBackgroundImage(args);
+            }
 
-                if (possibleBackgrounds.HasItems())
+            var settings = plugin.SettingsViewModel.Settings;
+            var possibleBackgrounds = new List<IIgdbItem>();
+            if (GameData.artworks_expanded.HasItems())
+            {
+                possibleBackgrounds.AddRange(GameData.artworks_expanded.Where(a => !a.url.IsNullOrEmpty()));
+            }
+            else if (settings.UseScreenshotsIfNecessary && GameData.screenshots_expanded.HasItems())
+            {
+                possibleBackgrounds.AddRange(GameData.screenshots_expanded.Where(a => !a.url.IsNullOrEmpty()));
+            }
+
+            if (!possibleBackgrounds.HasItems())
+            {
+                return base.GetBackgroundImage(args);
+            }
+
+            IIgdbItem selected = null;
+            if (possibleBackgrounds.Count == 1)
+            {
+                selected = possibleBackgrounds[0];
+            }
+            else
+            {
+                if (options.IsBackgroundDownload)
                 {
-                    IgdbServerModels.GameImage selected = null;
-                    if (possibleBackgrounds.Count == 1)
+                    if (settings.ImageSelectionPriority == MultiImagePriority.First)
                     {
                         selected = possibleBackgrounds[0];
                     }
-                    else
+                    else if (settings.ImageSelectionPriority == MultiImagePriority.Random ||
+                        (settings.ImageSelectionPriority == MultiImagePriority.Select && plugin.PlayniteApi.ApplicationInfo.Mode == ApplicationMode.Fullscreen))
                     {
-                        if (options.IsBackgroundDownload)
-                        {
-                            if (settings.ImageSelectionPriority == MultiImagePriority.First)
-                            {
-                                selected = possibleBackgrounds[0];
-                            }
-                            else if (settings.ImageSelectionPriority == MultiImagePriority.Random ||
-                                (settings.ImageSelectionPriority == MultiImagePriority.Select && plugin.PlayniteApi.ApplicationInfo.Mode == ApplicationMode.Fullscreen))
-                            {
-                                var index = GlobalRandom.Next(0, possibleBackgrounds.Count - 1);
-                                selected = possibleBackgrounds[index];
-                            }
-                            else if (settings.ImageSelectionPriority == MultiImagePriority.Select && plugin.PlayniteApi.ApplicationInfo.Mode == ApplicationMode.Desktop)
-                            {
-                                selected = GetBackgroundManually(possibleBackgrounds)?.Image;
-                            }
-                        }
-                        else
-                        {
-                            selected = GetBackgroundManually(possibleBackgrounds)?.Image;
-                        }
+                        var index = GlobalRandom.Next(0, possibleBackgrounds.Count - 1);
+                        selected = possibleBackgrounds[index];
                     }
+                    else if (settings.ImageSelectionPriority == MultiImagePriority.Select && plugin.PlayniteApi.ApplicationInfo.Mode == ApplicationMode.Desktop)
+                    {
+                        selected = GetBackgroundManually(possibleBackgrounds);
+                    }
+                }
+                else
+                {
+                    selected = GetBackgroundManually(possibleBackgrounds);
+                }
+            }
 
-                    if (selected != null && !selected.url.IsNullOrEmpty())
-                    {
-                        var url = GetImageUrl(selected, selected.height > 1080 ? ImageSizes.p1080 : ImageSizes.original);
-                        var name = Path.GetFileName(url);
-                        var file = new MetadataFile(name, HttpDownloader.DownloadData(url, args.CancelToken));
-                        if (!args.CancelToken.IsCancellationRequested)
-                        {
-                            return file;
-                        }
-                    }
+            if (selected != null)
+            {
+                if (selected is Artwork artwork)
+                {
+                    return new MetadataFile(GetImageUrl(artwork.url, artwork.height > 1080 ? ImageSizes.p1080 : ImageSizes.original));
+                }
+                else if (selected is Screenshot screenshot)
+                {
+                    return new MetadataFile(GetImageUrl(screenshot.url, screenshot.height > 1080 ? ImageSizes.p1080 : ImageSizes.original));
                 }
             }
 
@@ -125,95 +172,111 @@ namespace IGDBMetadata
 
         public override int? GetCommunityScore(GetMetadataFieldArgs args)
         {
-            if (AvailableFields.Contains(MetadataField.CommunityScore))
+            if (!AvailableFields.Contains(MetadataField.CommunityScore))
             {
-                return Convert.ToInt32(IgdbData.rating);
+                return base.GetCommunityScore(args);
             }
 
-            return base.GetCommunityScore(args);
+            return Convert.ToInt32(GameData.rating);
         }
 
         public override MetadataFile GetCoverImage(GetMetadataFieldArgs args)
         {
-            if (AvailableFields.Contains(MetadataField.CoverImage) && !IgdbData.cover.url.IsNullOrEmpty())
+            if (!AvailableFields.Contains(MetadataField.CoverImage))
             {
-                var url = GetImageUrl(IgdbData.cover, IgdbData.cover.height > 1080 ? ImageSizes.p1080 : ImageSizes.original);
-                var name = Path.GetFileName(url);
-                var file = new MetadataFile(name, HttpDownloader.DownloadData(url, args.CancelToken));
-                if (!args.CancelToken.IsCancellationRequested)
-                {
-                    return file;
-                }
+                return base.GetCoverImage(args);
             }
 
-            return base.GetCoverImage(args);
+            return new MetadataFile(GetImageUrl(GameData.cover_expanded.url, GameData.cover_expanded.height > 1080 ? ImageSizes.p1080 : ImageSizes.original));
         }
 
         public override int? GetCriticScore(GetMetadataFieldArgs args)
         {
-            if (AvailableFields.Contains(MetadataField.CriticScore))
+            if (!AvailableFields.Contains(MetadataField.CriticScore))
             {
-                return Convert.ToInt32(IgdbData.aggregated_rating);
+                return base.GetCriticScore(args);
             }
 
-            return base.GetCriticScore(args);
+            return Convert.ToInt32(GameData.aggregated_rating);
         }
 
         public override string GetDescription(GetMetadataFieldArgs args)
         {
-            if (AvailableFields.Contains(MetadataField.Description))
+            if (!AvailableFields.Contains(MetadataField.Description))
             {
-                return IgdbData.summary.Replace("\n", "\n<br>");
+                return base.GetDescription(args);
             }
 
-            return base.GetDescription(args);
+            return GameData.summary.Replace("\n", "\n<br>");
         }
 
         public override IEnumerable<MetadataProperty> GetDevelopers(GetMetadataFieldArgs args)
         {
-            if (AvailableFields.Contains(MetadataField.Developers))
+            if (!AvailableFields.Contains(MetadataField.Developers))
             {
-                return IgdbData.involved_companies?.Where(a => a.developer).Select(a => new MetadataNameProperty(a.company.name)).ToList();
+                return base.GetDevelopers(args);
             }
 
-            return base.GetDevelopers(args);
-        }
+            return GameData.involved_companies_expanded?.
+                Where(a => a.developer && a.company_expanded != null).
+                Select(a => new MetadataNameProperty(a.company_expanded.name)).
+                ToList();
 
-        public override IEnumerable<MetadataProperty> GetGenres(GetMetadataFieldArgs args)
-        {
-            if (AvailableFields.Contains(MetadataField.Genres))
-            {
-                return IgdbData.genres?.Select(a => new MetadataNameProperty(a.name)).ToList();
-            }
-
-            return base.GetGenres(args);
-        }
-
-        public override string GetName(GetMetadataFieldArgs args)
-        {
-            if (AvailableFields.Contains(MetadataField.Name))
-            {
-                return IgdbData.name;
-            }
-
-            return base.GetName(args);
         }
 
         public override IEnumerable<MetadataProperty> GetPublishers(GetMetadataFieldArgs args)
         {
-            if (AvailableFields.Contains(MetadataField.Publishers))
+            if (!AvailableFields.Contains(MetadataField.Publishers))
             {
-                return IgdbData.involved_companies?.Where(a => a.publisher).Select(a => new MetadataNameProperty(a.company.name)).ToList();
+                return base.GetPublishers(args);
             }
 
-            return base.GetPublishers(args);
+            return GameData.involved_companies_expanded?.
+                Where(a => a.publisher && a.company_expanded != null).
+                Select(a => new MetadataNameProperty(a.company_expanded.name)).
+                ToList();
+        }
+
+        public override IEnumerable<MetadataProperty> GetGenres(GetMetadataFieldArgs args)
+        {
+            if (!AvailableFields.Contains(MetadataField.Genres))
+            {
+                return base.GetGenres(args);
+            }
+
+            return GameData.genres_expanded?.Select(a => new MetadataNameProperty(a.name)).ToList();
+        }
+
+        public override string GetName(GetMetadataFieldArgs args)
+        {
+            if (!AvailableFields.Contains(MetadataField.Name))
+            {
+                return base.GetName(args);
+            }
+
+            return GameData.name;
         }
 
         public override IEnumerable<MetadataProperty> GetAgeRatings(GetMetadataFieldArgs args)
         {
-            if (AvailableFields.Contains(MetadataField.AgeRating))
+            if (!AvailableFields.Contains(MetadataField.AgeRating))
             {
-                return IgdbData.age_ratings.Select(a => new MetadataNameProperty(a.category + " " + a.rating.GetDescription())).ToList();
+                return base.GetAgeRatings(args);
+            }
+
+            if (plugin.PlayniteApi.ApplicationSettings.AgeRatingOrgPriority == AgeRatingOrg.ESRB)
+            {
+                return GameData.age_ratings_expanded.
+                    Where(a => a.category == AgeRatingCategoryEnum.ESRB).
+                    Select(a => new MetadataNameProperty($"ESRB {a.rating}")).
+                    ToList();
+            }
+            else if (plugin.PlayniteApi.ApplicationSettings.AgeRatingOrgPriority == AgeRatingOrg.PEGI)
+            {
+                return GameData.age_ratings_expanded.
+                    Where(a => a.category == AgeRatingCategoryEnum.PEGI).
+                    Select(a => new MetadataNameProperty("PEGI " + (pegiRatingToStr.TryGetValue(a.rating, out var val) ? val : "None"))).
+                    ToList();
             }
 
             return base.GetAgeRatings(args);
@@ -221,130 +284,132 @@ namespace IGDBMetadata
 
         public override IEnumerable<MetadataProperty> GetSeries(GetMetadataFieldArgs args)
         {
-            if (AvailableFields.Contains(MetadataField.Series))
+            if (!AvailableFields.Contains(MetadataField.Series))
             {
-                return new HashSet<MetadataProperty> { new MetadataNameProperty(IgdbData.collection.name) };
+                return base.GetSeries(args);
             }
 
-            return base.GetSeries(args);
+            return new HashSet<MetadataProperty> { new MetadataNameProperty(GameData.collection_expanded.name) };
         }
 
-        public override ReleaseDate? GetReleaseDate(GetMetadataFieldArgs args)
+        public override Playnite.SDK.Models.ReleaseDate? GetReleaseDate(GetMetadataFieldArgs args)
         {
-            if (AvailableFields.Contains(MetadataField.ReleaseDate))
+            if (!AvailableFields.Contains(MetadataField.ReleaseDate))
             {
-                return new ReleaseDate(DateTimeOffset.FromUnixTimeMilliseconds(IgdbData.first_release_date).DateTime);
+                return base.GetReleaseDate(args);
             }
 
-            return base.GetReleaseDate(args);
+            return new Playnite.SDK.Models.ReleaseDate(DateTimeOffset.FromUnixTimeSeconds(GameData.first_release_date).DateTime);
         }
 
         public override IEnumerable<MetadataProperty> GetFeatures(GetMetadataFieldArgs args)
         {
-            if (AvailableFields.Contains(MetadataField.Features))
+            if (!AvailableFields.Contains(MetadataField.Features))
             {
-                var cultInfo = new CultureInfo("en-US", false).TextInfo;
-                var features = IgdbData.game_modes.Select(a => new MetadataNameProperty(cultInfo.ToTitleCase(a.name))).ToList();
-                if (IgdbData.player_perspectives.HasItems() &&
-                    IgdbData.player_perspectives.FirstOrDefault(a => a.name == "Virtual Reality") != null)
-                {
-                    features.Add(new MetadataNameProperty("VR"));
-                }
-
-                return features;
+                return base.GetFeatures(args);
             }
-            return base.GetFeatures(args);
+
+            var features = GameData.game_modes_expanded.Select(a => new MetadataNameProperty(cultInfo.TextInfo.ToTitleCase(a.name))).ToList();
+            if (GameData.player_perspectives_expanded?.FirstOrDefault(a => a.name == "Virtual Reality") != null)
+            {
+                features.Add(new MetadataNameProperty("VR"));
+            }
+
+            return features;
         }
 
         public override IEnumerable<Link> GetLinks(GetMetadataFieldArgs args)
         {
-            if (AvailableFields.Contains(MetadataField.Links))
+            if (!AvailableFields.Contains(MetadataField.Links))
             {
-                return IgdbData.websites.Where(a => !a.url.IsNullOrEmpty()).Select(a => new Link(a.category.GetDescription(), a.url)).ToList();
+                return base.GetLinks(args);
             }
 
-            return base.GetLinks(args);
+            return GameData.websites_expanded.
+                Where(a => !a.url.IsNullOrEmpty()).
+                Select(a => new Link(websiteCategoryToStr.TryGetValue(a.category, out var val) ? val : "Uknown", a.url)).
+                ToList();
         }
 
         private List<MetadataField> GetAvailableFields()
         {
-            if (IgdbData == null)
+            if (GameData == null)
             {
                 GetIgdbMetadata();
             }
 
-            if (IgdbData.id == 0)
+            if (GameData.id == 0)
             {
                 return new List<MetadataField>();
             }
             else
             {
                 var fields = new List<MetadataField> { MetadataField.Name };
-                if (!IgdbData.summary.IsNullOrEmpty())
+                if (!GameData.summary.IsNullOrEmpty())
                 {
                     fields.Add(MetadataField.Description);
                 }
 
-                if (IgdbData.cover != null)
+                if (GameData.cover_expanded != null && !GameData.cover_expanded.url.IsNullOrEmpty())
                 {
                     fields.Add(MetadataField.CoverImage);
                 }
 
-                if (IgdbData.artworks.HasItems())
+                if (GameData.artworks_expanded.HasItems())
                 {
                     fields.Add(MetadataField.BackgroundImage);
                 }
-                else if (IgdbData.screenshots.HasItems() && plugin.SettingsViewModel.Settings.UseScreenshotsIfNecessary)
+                else if (GameData.screenshots_expanded.HasItems() && plugin.SettingsViewModel.Settings.UseScreenshotsIfNecessary)
                 {
                     fields.Add(MetadataField.BackgroundImage);
                 }
 
-                if (IgdbData.first_release_date != 0)
+                if (GameData.first_release_date != 0)
                 {
                     fields.Add(MetadataField.ReleaseDate);
                 }
 
-                if (IgdbData.involved_companies.HasItems(a => a.developer))
+                if (GameData.involved_companies_expanded.HasItems(a => a.developer))
                 {
                     fields.Add(MetadataField.Developers);
                 }
 
-                if (IgdbData.involved_companies.HasItems(a => a.publisher))
+                if (GameData.involved_companies_expanded.HasItems(a => a.publisher))
                 {
                     fields.Add(MetadataField.Publishers);
                 }
 
-                if (IgdbData.genres.HasItems())
+                if (GameData.genres_expanded.HasItems())
                 {
                     fields.Add(MetadataField.Genres);
                 }
 
-                if (IgdbData.websites.HasItems())
+                if (GameData.websites_expanded.HasItems())
                 {
                     fields.Add(MetadataField.Links);
                 }
 
-                if (IgdbData.game_modes.HasItems())
+                if (GameData.game_modes_expanded.HasItems())
                 {
                     fields.Add(MetadataField.Features);
                 }
 
-                if (IgdbData.aggregated_rating != 0)
+                if (GameData.aggregated_rating != 0)
                 {
                     fields.Add(MetadataField.CriticScore);
                 }
 
-                if (IgdbData.rating != 0)
+                if (GameData.rating != 0)
                 {
                     fields.Add(MetadataField.CommunityScore);
                 }
 
-                if (IgdbData.age_ratings.HasItems())
+                if (GameData.age_ratings_expanded.HasItems())
                 {
                     fields.Add(MetadataField.AgeRating);
                 }
 
-                if (IgdbData.collection != null)
+                if (GameData.collection_expanded != null)
                 {
                     fields.Add(MetadataField.Series);
                 }
@@ -355,22 +420,48 @@ namespace IGDBMetadata
 
         private void GetIgdbMetadata()
         {
-            if (IgdbData != null)
+            if (GameData != null)
             {
                 return;
             }
 
-            if (!options.IsBackgroundDownload)
+            if (options.IsBackgroundDownload)
+            {
+                try
+                {
+                    GameData = plugin.Client.GetMetadata(new MetadataRequest(options.GameData.Name)
+                    {
+                        ReleaseYear = options.GameData.ReleaseYear ?? 0,
+                        LibraryId = options.GameData.PluginId,
+                        GameId = options.GameData.GameId                        
+                    }).GetAwaiter().GetResult();
+
+                    if (GameData == null)
+                    {
+                        GameData = new Igdb.Game() { id = 0 };
+                    }
+                }
+                catch (Exception e)
+                {
+                    logger.Error(e, "Failed to get IGDB metadata.");
+                    GameData = new Igdb.Game() { id = 0 };
+                }
+            }
+            else
             {
                 var item = plugin.PlayniteApi.Dialogs.ChooseItemWithSearch(null, (a) =>
                 {
-                    if (a.StartsWith("http", StringComparison.OrdinalIgnoreCase))
+                    if (a.IsNullOrWhiteSpace())
+                    {
+                        return new List<GenericItemOption>();
+                    }
+                    
+                    if (ulong.TryParse(a, out var parsedId))
                     {
                         try
                         {
-                            var gameId = GetGameInfoFromUrl(a);
-                            var data = plugin.Client.GetIGDBGameExpanded(ulong.Parse(gameId));
-                            return new List<GenericItemOption> { new SearchResult(gameId, data.name) };
+                            var game = plugin.Client.GetGame(parsedId).GetAwaiter().GetResult();
+                            return new List<GenericItemOption> { new IgdbGameSelectItem(game) };
                         }
                         catch (Exception e)
                         {
@@ -380,51 +471,19 @@ namespace IGDBMetadata
                     }
                     else
                     {
-                        if (a.IsNullOrWhiteSpace())
-                        {
-                            return new List<GenericItemOption>();
-                        }
-                        else if (ulong.TryParse(a, out var parsedId))
-                        {
-                            var data = plugin.Client.GetIGDBGameExpanded(parsedId);
-                            return new List<GenericItemOption> { new SearchResult(parsedId.ToString(), data.name) };
-                        }
-                        else
-                        {
-                            var res = plugin.GetSearchResults(a.Replace("\\", "").Replace("/", "").Trim());
-                            return res.Select(b => b as GenericItemOption).ToList();
-                        }
-                    }
+                        var res = plugin.Client.SearchGames(new SearchRequest(a)).GetAwaiter().GetResult();
+                        return res.Select(b => new IgdbGameSelectItem(b)).Cast<GenericItemOption>().ToList();
+                    }                    
                 }, options.GameData.Name);
 
                 if (item != null)
                 {
-                    var searchItem = item as SearchResult;
-                    IgdbData = plugin.Client.GetIGDBGameExpanded(ulong.Parse(searchItem.Id));
+                    var searchItem = item as IgdbGameSelectItem;
+                    GameData = plugin.Client.GetGame(searchItem.Game.id).GetAwaiter().GetResult();
                 }
                 else
                 {
-                    IgdbData = new IgdbServerModels.ExpandedGame() { id = 0 };
-                }
-            }
-            else
-            {
-                try
-                {
-                    var metadata = plugin.Client.GetMetadata(options.GameData);
-                    if (metadata.id > 0)
-                    {
-                        IgdbData = metadata;
-                    }
-                    else
-                    {
-                        IgdbData = new IgdbServerModels.ExpandedGame() { id = 0 };
-                    }
-                }
-                catch (Exception e)
-                {
-                    logger.Error(e, "Failed to get IGDB metadata.");
-                    IgdbData = new IgdbServerModels.ExpandedGame() { id = 0 };
+                    GameData = new Igdb.Game() { id = 0 };
                 }
             }
         }

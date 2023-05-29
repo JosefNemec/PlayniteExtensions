@@ -1,29 +1,25 @@
-﻿using IGDBMetadata.Models;
-using IGDBMetadata.Services;
-using Playnite.SDK;
+﻿using Playnite.SDK;
 using Playnite.SDK.Plugins;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Controls;
 
 namespace IGDBMetadata
 {
+    public class Configuration
+    {
+        public string BackendEndpoint { get; set; }
+    }    
+
     [LoadPlugin]
     public class IgdbMetadataPlugin : MetadataPluginBase<IgdbMetadataSettingsViewModel>
     {
-        public class IgdbImageOption : ImageFileOption
-        {
-            public PlayniteServices.Models.IGDB.GameImage Image { get; set; }
-        }
-
-        public readonly IgdbServiceClient Client;
+        public readonly IgdbClient Client;
+        private readonly Configuration pluginConfig;
 
         public IgdbMetadataPlugin(IPlayniteAPI api) : base(
             "IGDB",
@@ -49,9 +45,11 @@ namespace IGDBMetadata
             null,
             api)
         {
+            pluginConfig = GetPluginConfiguration<Configuration>();
+            Client = new IgdbClient(pluginConfig.BackendEndpoint);
             Properties = new MetadataPluginProperties { HasSettings = true };
-            Client = new IgdbServiceClient(api.ApplicationInfo.ApplicationVersion);
             SettingsViewModel = new IgdbMetadataSettingsViewModel(this, api);
+            Searches = new List<SearchSupport> { new SearchSupport("i", "IGDB", new IgdbSearchContext(Client)) };
         }
 
         public override OnDemandMetadataProvider GetMetadataProvider(MetadataRequestOptions options)
@@ -59,9 +57,8 @@ namespace IGDBMetadata
             return new IgdbLazyMetadataProvider(options, this);
         }
 
-        internal static string GetImageUrl(PlayniteServices.Models.IGDB.GameImage image, string imageSize)
+        internal static string GetImageUrl(string url, string imageSize)
         {
-            var url = image.url;
             if (!url.StartsWith("https:", StringComparison.OrdinalIgnoreCase))
             {
                 url = "https:" + url;
@@ -69,30 +66,6 @@ namespace IGDBMetadata
 
             url = Regex.Replace(url, @"\/t_[^\/]+", "/t_" + imageSize);
             return url;
-        }
-
-        public List<SearchResult> GetSearchResults(string gameName)
-        {
-            var results = new List<SearchResult>();
-            foreach (var game in Client.GetIGDBGames(gameName))
-            {
-                DateTime? releaseDate = null;
-                string description = null;
-                if (game.first_release_date != 0)
-                {
-                    releaseDate = DateTimeOffset.FromUnixTimeMilliseconds(game.first_release_date).DateTime;
-                    description = $"({releaseDate.Value.Year})";
-                }
-
-                results.Add(new SearchResult(
-                    game.id.ToString(),
-                    game.name.RemoveTrademarks(),
-                    releaseDate,
-                    game.alternative_names?.Any() == true ? game.alternative_names.Select(name => name.name.RemoveTrademarks()).ToList() : null,
-                    description));
-            }
-
-            return results;
         }
     }
 }
