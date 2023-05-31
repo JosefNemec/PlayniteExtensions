@@ -3,7 +3,7 @@ using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
-using PlayniteServices.Controllers.IGDB;
+using PlayniteServices.IGDB;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -12,7 +12,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using static IGDBMetadata.IgdbMetadataPlugin;
-using Igdb = PlayniteServices.Controllers.IGDB;
+using Igdb = PlayniteServices.IGDB;
 
 namespace IGDBMetadata
 {

@@ -1,5 +1,5 @@
 ﻿using Playnite.SDK;
-using PlayniteServices.Controllers.IGDB;
+using PlayniteServices.IGDB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
