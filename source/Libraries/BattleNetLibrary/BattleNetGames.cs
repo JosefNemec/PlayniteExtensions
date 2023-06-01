@@ -279,6 +279,14 @@ namespace BattleNetLibrary
                 Name = "Call of Duty: Modern Warfare II",
                 Type = BNetAppType.Default
             },
+            new BNetApp()
+            {
+                ApiId = 4613486,
+                ProductId = "Fen",
+                InternalId = "Fen",
+                Name = "Diablo IV",
+                Type = BNetAppType.Default
+            },
         };
 
         public static BNetApp GetAppDefinition(string productId)

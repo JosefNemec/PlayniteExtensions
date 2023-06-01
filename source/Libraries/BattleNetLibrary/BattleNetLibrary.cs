@@ -48,7 +48,7 @@ namespace BattleNetLibrary
                         continue;
                     }
 
-                    var match = Regex.Match(prog.UninstallString, string.Format(@"Battle\.net.*--uid={0}.*\s", app.InternalId));
+                    var match = Regex.Match(prog.UninstallString, string.Format(@"Battle\.net.*--uid={0}.*\s", app.InternalId), RegexOptions.IgnoreCase);
                     if (match.Success)
                     {
                         return prog;
@@ -110,7 +110,7 @@ namespace BattleNetLibrary
                     }
 
                     var iId = match.Groups[1].Value;
-                    var product = BattleNetGames.Games.FirstOrDefault(a => a.Type == BNetAppType.Default && iId.StartsWith(a.InternalId));
+                    var product = BattleNetGames.Games.FirstOrDefault(a => a.Type == BNetAppType.Default && iId.StartsWith(a.InternalId, StringComparison.OrdinalIgnoreCase));
                     if (product == null)
                     {
                         continue;
