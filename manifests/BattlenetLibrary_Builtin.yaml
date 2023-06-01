@@ -67,3 +67,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_10.pext
     Changelog:
       - Added Modern Warfare II support
+  - Version: 2.11
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-06-01
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_11.pext
+    Changelog:
+      - Added Diablo IV support
