@@ -20,8 +20,9 @@ namespace IGDBMetadata
 
     public class IgdbMetadataSettings
     {
-        public bool UseScreenshotsIfNecessary { get; set; }
-        public MultiImagePriority ImageSelectionPriority { get; set; }
+        public bool UseScreenshotsIfNecessary { get; set; } = false;
+        public MultiImagePriority ImageSelectionPriority { get; set; } = MultiImagePriority.First;
+        public bool UseCoverAsIcon { get; set; } = false;
     }
 
     public class IgdbMetadataSettingsViewModel : PluginSettingsViewModel<IgdbMetadataSettings, IgdbMetadataPlugin>

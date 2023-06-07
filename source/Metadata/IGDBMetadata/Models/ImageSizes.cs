@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IGDBMetadata.Models
+namespace IGDBMetadata
 {
     public class ImageSizes
     {
@@ -31,7 +31,7 @@ namespace IGDBMetadata.Models
         /// <summary>
         // 889 x 500 	Lfill, Center gravity
         /// </summary>
-        public const string screenshot_big = "cover_small";
+        public const string screenshot_big = "screenshot_big";
 
         /// <summary>
         // 1280 x 720 	Lfill, Center gravity

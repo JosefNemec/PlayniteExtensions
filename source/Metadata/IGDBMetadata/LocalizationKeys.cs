@@ -93,5 +93,9 @@ namespace System
         /// Select background image for {0}
         /// </summary>
         public const string IgdbSelectBackgroundTitle = "LOCIgdbSelectBackgroundTitle";
+        /// <summary>
+        /// Substitute cropped cover image for icon
+        /// </summary>
+        public const string IgdbCoverAsIcon = "LOCIgdbCoverAsIcon";
     }
 }

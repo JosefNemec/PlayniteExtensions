@@ -2,3 +2,6 @@
 	path = PlayniteRepo
 	url = https://github.com/JosefNemec/Playnite.git
 	branch = master
+[submodule "PlayniteBackendRepo"]
+	path = PlayniteBackendRepo
+	url = https://github.com/JosefNemec/PlayniteBackend.git

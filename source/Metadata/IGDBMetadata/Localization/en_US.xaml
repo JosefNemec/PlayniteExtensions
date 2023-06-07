@@ -22,4 +22,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Use screenshots if artwork is not available</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">If multiple images are available then use:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Select background image for {0}</sys:String>
+  <sys:String x:Key="LOCIgdbCoverAsIcon">Substitute cropped cover image for icon</sys:String>
 </ResourceDictionary>
