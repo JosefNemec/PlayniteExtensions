@@ -31,8 +31,8 @@ namespace IGDBMetadata
             [AgeRatingRatingEnum.TWELVE] = "12",
             [AgeRatingRatingEnum.SIXTEEN] = "16",
             [AgeRatingRatingEnum.EIGHTEEN] = "18"
-        }; 
-        
+        };
+
         private readonly static Dictionary<WebsiteCategoryEnum, string> websiteCategoryToStr = new Dictionary<WebsiteCategoryEnum, string>()
         {
             [WebsiteCategoryEnum.WEBSITE_ANDROID] = "Android",
@@ -188,6 +188,16 @@ namespace IGDBMetadata
             }
 
             return new MetadataFile(GetImageUrl(GameData.cover_expanded.url, GameData.cover_expanded.height > 1080 ? ImageSizes.p1080 : ImageSizes.original));
+        }
+
+        public override MetadataFile GetIcon(GetMetadataFieldArgs args)
+        {
+            if (!AvailableFields.Contains(MetadataField.Icon))
+            {
+                return base.GetCoverImage(args);
+            }
+
+            return new MetadataFile(GetImageUrl(GameData.cover_expanded.url, ImageSizes.thumb + "_2x"));
         }
 
         public override int? GetCriticScore(GetMetadataFieldArgs args)
@@ -353,6 +363,10 @@ namespace IGDBMetadata
                 if (GameData.cover_expanded != null && !GameData.cover_expanded.url.IsNullOrEmpty())
                 {
                     fields.Add(MetadataField.CoverImage);
+                    if (plugin.SettingsViewModel.Settings.UseCoverAsIcon)
+                    {
+                        fields.Add(MetadataField.Icon);
+                    }
                 }
 
                 if (GameData.artworks_expanded.HasItems())
@@ -433,7 +447,7 @@ namespace IGDBMetadata
                     {
                         ReleaseYear = options.GameData.ReleaseYear ?? 0,
                         LibraryId = options.GameData.PluginId,
-                        GameId = options.GameData.GameId                        
+                        GameId = options.GameData.GameId
                     }).GetAwaiter().GetResult();
 
                     if (GameData == null)
@@ -455,7 +469,7 @@ namespace IGDBMetadata
                     {
                         return new List<GenericItemOption>();
                     }
-                    
+
                     if (ulong.TryParse(a, out var parsedId))
                     {
                         try
@@ -473,7 +487,7 @@ namespace IGDBMetadata
                     {
                         var res = plugin.Client.SearchGames(new SearchRequest(a)).GetAwaiter().GetResult();
                         return res.Select(b => new IgdbGameSelectItem(b)).Cast<GenericItemOption>().ToList();
-                    }                    
+                    }
                 }, options.GameData.Name);
 
                 if (item != null)

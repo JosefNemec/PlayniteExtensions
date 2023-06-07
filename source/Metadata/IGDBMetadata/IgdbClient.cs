@@ -1,5 +1,4 @@
 ﻿using Playnite.SDK.Data;
-using PlayniteServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +9,13 @@ using Igdb = PlayniteServices.IGDB;
 
 namespace IGDBMetadata
 {
-    public class DataResponse<T>
+    public class ResponseBase
     {
         public string Error { get; set; }
+    }
+
+    public class DataResponse<T> : ResponseBase
+    {
         public T Data { get; set; }
     }
 
@@ -22,8 +25,21 @@ namespace IGDBMetadata
 
         public IgdbClient(string endpoint)
         {
-            httpClient = new HttpClient();
-            httpClient.BaseAddress = new Uri(endpoint);
+            if (endpoint.IsNullOrWhiteSpace())
+            {
+                throw new ArgumentNullException(nameof(endpoint));
+            }
+
+            if (!endpoint.EndsWith("/"))
+            {
+                endpoint += '/';
+            }
+
+            httpClient = new HttpClient
+            {
+                Timeout = new TimeSpan(0, 0, 30),
+                BaseAddress = new Uri(endpoint)
+            };
         }
 
         public void Dispose()
@@ -33,27 +49,55 @@ namespace IGDBMetadata
 
         private async Task<T> PostRequest<T>(string url, object payload)
         {
-            var content = new StringContent(Serialization.ToJson(payload), Encoding.UTF8, "application/json");
-            var response = await httpClient.PostAsync(url, content);
-            var data = Serialization.FromJson<DataResponse<T>>(await response.Content.ReadAsStringAsync());
-            if (!data.Error.IsNullOrEmpty())
+            HttpContent content = null;
+            if (payload != null)
             {
-                throw new Exception(data.Error);
+                content = new StringContent(Serialization.ToJson(payload), Encoding.UTF8, "application/json");
             }
 
-            return data.Data!;
+            var response = await httpClient.PostAsync(url, content);
+            var strResponse = await response.Content.ReadAsStringAsync();
+            CheckResponse(response, strResponse);
+            var data = Serialization.FromJson<DataResponse<T>>(strResponse);
+            if (data == null)
+            {
+                return default;
+            }
+
+            return data.Data;
         }
 
         private async Task<T> GetRequest<T>(string url)
         {
             var response = await httpClient.GetAsync(url);
-            var data = Serialization.FromJson<DataResponse<T>>(await response.Content.ReadAsStringAsync());
-            if (!data.Error.IsNullOrEmpty())
+            var content = await response.Content.ReadAsStringAsync();
+            CheckResponse(response, content);
+            var data = Serialization.FromJson<DataResponse<T>>(content);
+            if (data == null)
             {
-                throw new Exception(data.Error);
+                return default;
             }
 
-            return data.Data!;
+            return data.Data;
+        }
+
+        private static void CheckResponse(HttpResponseMessage message, string content)
+        {
+            ResponseBase response = null;
+            if (!content.IsNullOrWhiteSpace())
+            {
+                Serialization.TryFromJson(content, out response, out var _);
+            }
+
+            if (!message.IsSuccessStatusCode)
+            {
+                throw new Exception($"Server returned failure {message.StatusCode}: {response?.Error}");
+            }
+
+            if (response?.Error.IsNullOrEmpty() == false)
+            {
+                throw new Exception(response.Error);
+            }
         }
 
         public async Task<List<Igdb.Game>> SearchGames(Igdb.SearchRequest request)

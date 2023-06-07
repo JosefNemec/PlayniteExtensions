@@ -13,7 +13,7 @@ namespace IGDBMetadata
     public class Configuration
     {
         public string BackendEndpoint { get; set; }
-    }    
+    }
 
     [LoadPlugin]
     public class IgdbMetadataPlugin : MetadataPluginBase<IgdbMetadataSettingsViewModel>
@@ -28,6 +28,7 @@ namespace IGDBMetadata
             {
                 MetadataField.Name,
                 MetadataField.Description,
+                MetadataField.Icon,
                 MetadataField.CoverImage,
                 MetadataField.BackgroundImage,
                 MetadataField.ReleaseDate,

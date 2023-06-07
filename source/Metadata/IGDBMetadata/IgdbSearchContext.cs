@@ -45,7 +45,7 @@ namespace IGDBMetadata
                 ToList();
             if (developers.HasItems())
             {
-                desc += string.Join(", ", developers);
+                desc += string.Join(", ", developers!);
             }
 
             return desc;
@@ -67,7 +67,7 @@ namespace IGDBMetadata
                         GetSearchItemName(game),
                         new SearchItemAction(
                             "Open page",
-                            () =>  Process.Start(game.url.IsNullOrWhiteSpace() ? @"https://www.igdb.com" : game.url)));
+                            () =>  Process.Start(game.url.IsNullOrWhiteSpace() ? @"https://www.igdb.com" : game.url!)));
                     item.Description = GetSearchItemDescription(game);
                     if (game.cover_expanded?.url.IsNullOrWhiteSpace() == false)
                     {
