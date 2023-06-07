@@ -101,5 +101,41 @@ namespace System
         /// Items to be imported:
         /// </summary>
         public const string itchioSettingsImportGameClassificationLabel = "LOCitchioSettingsImportGameClassificationLabel";
+        /// <summary>
+        /// Games
+        /// </summary>
+        public const string itchioItemClassificationGames = "LOCitchioItemClassificationGames";
+        /// <summary>
+        /// Tools
+        /// </summary>
+        public const string itchioItemClassificationTools = "LOCitchioItemClassificationTools";
+        /// <summary>
+        /// Assets
+        /// </summary>
+        public const string itchioItemClassificationAssets = "LOCitchioItemClassificationAssets";
+        /// <summary>
+        /// Mods
+        /// </summary>
+        public const string itchioItemClassificationMods = "LOCitchioItemClassificationMods";
+        /// <summary>
+        /// Physical games
+        /// </summary>
+        public const string itchioItemClassificationPhysicalGames = "LOCitchioItemClassificationPhysicalGames";
+        /// <summary>
+        /// Soundtracks
+        /// </summary>
+        public const string itchioItemClassificationSoundtracks = "LOCitchioItemClassificationSoundtracks";
+        /// <summary>
+        /// Others
+        /// </summary>
+        public const string itchioItemClassificationOthers = "LOCitchioItemClassificationOthers";
+        /// <summary>
+        /// Comics
+        /// </summary>
+        public const string itchioItemClassificationComics = "LOCitchioItemClassificationComics";
+        /// <summary>
+        /// Books
+        /// </summary>
+        public const string itchioItemClassificationBooks = "LOCitchioItemClassificationBooks";
     }
 }
