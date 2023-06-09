@@ -25,4 +25,13 @@
   <sys:String x:Key="LOCItchioClientNotInstalledError">未安装 25 或更高版本的 itch.io 客户端。</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">从收藏中导入免费游戏。</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">将要导入的项目：</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationGames">游戏</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationTools">工具</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationAssets">素材</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationMods">模组</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">实体版游戏</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks">音轨</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationOthers">其他</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationComics">漫画</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationBooks">书籍</sys:String>
 </ResourceDictionary>

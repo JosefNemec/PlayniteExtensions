@@ -23,4 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">如果沒有圖片則使用擷圖</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">有多張圖片時則使用:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">選擇 {0} 的背景圖片</sys:String>
+  <sys:String x:Key="LOCIgdbCoverAsIcon">改用剪裁後的封面圖像作為圖示</sys:String>
 </ResourceDictionary>

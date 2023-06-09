@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCSteamSettingsImportInstalledLabel">Yüklü oyunları içeri aktar</sys:String>
-  <sys:String x:Key="LOCSteamSettingsImportUninstalledLabel">Yüklü olmayan oyunları içe aktar</sys:String>
+  <sys:String x:Key="LOCSteamSettingsImportInstalledLabel">Kurulu oyunları içeri aktar</sys:String>
+  <sys:String x:Key="LOCSteamSettingsImportUninstalledLabel">Kurulu olmayan oyunları içe aktar</sys:String>
   <sys:String x:Key="LOCSteamSettingsConnectAccount">Hesap bağla</sys:String>
-  <sys:String x:Key="LOCSteamLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
+  <sys:String x:Key="LOCSteamLoginChecking">Kimlik doğrulaması kontrol ediliyor…</sys:String>
   <sys:String x:Key="LOCSteamLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
-  <sys:String x:Key="LOCSteamNotLoggedIn">Kimlik doğrulama gerektiriyor</sys:String>
+  <sys:String x:Key="LOCSteamNotLoggedIn">Kimlik doğrulaması gerekiyor</sys:String>
   <sys:String x:Key="LOCSteamNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCSteamAuthenticateLabel">Kimlik Doğrulaması</sys:String>
   <sys:String x:Key="LOCSteamSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
@@ -18,7 +18,7 @@
   <sys:String x:Key="LOCSteamStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCSteamAccountID">Hesap ID</sys:String>
-  <sys:String x:Key="LOCSteamMetadataLanguageLabel">Meta veri dili:</sys:String>
+  <sys:String x:Key="LOCSteamMetadataLanguageLabel">Üst veri dili:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Hesap adım ne?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Hesap URL Adı</sys:String>
@@ -31,7 +31,7 @@
   <sys:String x:Key="LOCSteamUseVerticalCovers">Dikey kapak resimlerini indir</sys:String>
   <sys:String x:Key="LOCSteamImportFreeSubGames">Jenerik içermeyen öğeleri içe aktarın</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportWarn">Bu, tüm Steam oyunlarındaki gizli ve favori durumları da dahil geçerli kategorilerin üzerine yazacaktır. Devam etmek istiyor musun?</sys:String>
-  <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Kategoriler İçe Aktarılsın mı?</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Kategorileri İçe Aktar?</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Kategoriler alınamıyor, hesap seçilmedi.</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Kategoriler alınamıyor, veritabanı açılmadı.</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportError">Steam kategorileri içe aktarılamadı: {0}</sys:String>
@@ -48,20 +48,20 @@
   <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Mağaza Ekran Görüntüsü</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Mağaza Arka Planı</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Afiş</sys:String>
-  <sys:String x:Key="LOCSteamShowFriendsButton">Üst panelde arkadaşlar düğmesi göster </sys:String>
+  <sys:String x:Key="LOCSteamShowFriendsButton">Üst panelde arkadaşlar düğmesi göster</sys:String>
   <sys:String x:Key="LOCSteamFriendsTooltip">Steam Arkadaşları</sys:String>
-  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Diğer hesaplardan yüklenmiş oyunları yok say</sys:String>
+  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Diğer hesaplardan kurulmuş oyunları yok say</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Ek Hesaplar</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Diğer hesapların oyunları içe aktarmak istiyorsanız onların Steam hesap ID ve API anahtarlarını belirtin. Daha fazla bilgi için Steam sorun giderme wiki sayfasına bakın.</sys:String>
   <sys:String x:Key="LOCSteamLimitTagCountLabel">İçe aktarılan etiketlerin miktarını ilk etiketle sınırlayın</sys:String>
   <sys:String x:Key="LOCSteamTagPrefixLabel">Etiket adlarını şu önek ile kullan:</sys:String>
-  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Etiket karalistesi</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Etiket kara listesi</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Hariç tutulan etiketler oyunlara eklenmeyecektir.</sys:String>
   <sys:String x:Key="LOCSteamTagWhitelistHeader">Mevcut etiketler</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistHeader">Hariç tutulan etiketler</sys:String>
   <sys:String x:Key="LOCSteamTagWhitelistTooltip">Hariç tutulan etiketlerden kaldır</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTooltip">Hariç tutulan etiketlere ekle</sys:String>
   <sys:String x:Key="LOCSteamValidationFixedTagCount">Sabit etiket sayısı geçerli bir sayı olmalıdır</sys:String>
-  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Steam'in oyun başlatma seçim menüsünü masaüstü modunda göster</sys:String>
-  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Steam'in oyun başlatma seçim menüsünü tam ekran modunda göster</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Steam oyun başlatıcı seçim menüsünü masaüstü kipinde göster</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Steam oyun başlatıcı seçim menüsünü tam ekran kipinde göster</sys:String>
 </ResourceDictionary>

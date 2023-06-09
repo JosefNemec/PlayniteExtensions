@@ -18,7 +18,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCGOGAccountID">ID účtu</sys:String>
-  <sys:String x:Key="LOCGOGMetadataLanguageLabel" />
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Jazyk metadat:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Přihlášení k Účtu</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Název Účtu</sys:String>
@@ -26,6 +26,7 @@
 Připomínáme, že možnost zadání jména účtu funguje pouze pro ty účty, které mají v nastavení GOG v sekci soukromí nastavenou veřejnou viditelnost knihovny.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">Spustit hry pomocí klienta GOG Galaxy</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Toto umožní schopnosti GOG Galaxy jako cloud ukládání, sledování herního času atd.</sys:String>
-  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls" />
-  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve" />
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automaticky spustit proces instalace při instalaci přes GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Pokud je povoleno, instalační proces bude automaticky spuštěn bez nutnosti uživatelské interakce s nastavením instalačního adresáře.
+Pokud je vypnuto, stránka hry bude otevřena pro ruční spuštění instalačního procesu.</sys:String>
 </ResourceDictionary>

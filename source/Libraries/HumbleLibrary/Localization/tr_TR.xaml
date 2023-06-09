@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">Yüklü oyunları içeri aktar</sys:String>
-  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Yüklü olmayan oyunları içe aktar</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">Kurulu oyunları içeri aktar</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Kurulu olmayan oyunları içe aktar</sys:String>
   <sys:String x:Key="LOCHumbleSettingsConnectAccount">Hesap bağla</sys:String>
-  <sys:String x:Key="LOCHumbleLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
+  <sys:String x:Key="LOCHumbleLoginChecking">Kimlik doğrulaması kontrol ediliyor…</sys:String>
   <sys:String x:Key="LOCHumbleLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
-  <sys:String x:Key="LOCHumbleNotLoggedIn">Kimlik doğrulama gerektiriyor</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedIn">Kimlik doğrulaması gerekiyor</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">Kimlik Doğrulaması</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
@@ -18,7 +18,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">Hesap ID</sys:String>
-  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Meta veri dili:</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Üst veri dili:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Üçüncü parti mağaza oyunlarını yok say</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">Humble Choice oyunlarını içe aktar</sys:String>
@@ -26,8 +26,8 @@
   <sys:String x:Key="LOCHumbleGeneralLibrary">Humble Kütüphane oyunlarını içe aktar</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Standart Humble mağazası ve paket satın alımlarını içe aktar.</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Üçüncü parti istemcileri gerektiren oyunları içe aktarmayı atlamayı etkinleştirin, Playnite'da halihazırda yönetilen mağazalar dahil (kopyaları önlemek için).</sys:String>
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">DRM'siz sürümü mevcutsa içe aktarın</sys:String>
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">DRM'siz sürümü de mevcutsa, üçüncü parti istemci gerektiren oyunları içe aktarın.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">DRM içermeyen sürüm mevcutsa içe aktar</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">DRM içermeyen sürüm mevcutsa, üçüncü parti istemci gerektiren oyunları içe aktarın.</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Oyunları başlatmak için her zaman Humble uygulaması kullan</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Devre dışı ise, Playnite, Humble uygulamasını yoksayarak oyunları doğrudan çalıştırmaya çalışacaktır.</sys:String>
   <sys:String x:Key="LOCHumbleNonTroveInstallError">Abonelik dışı Humble oyunlarının otomatik kurulumu ve kaldırılması şu anda desteklenmemektedir.</sys:String>

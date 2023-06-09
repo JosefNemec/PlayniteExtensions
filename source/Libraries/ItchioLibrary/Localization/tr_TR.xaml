@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">Yüklü oyunları içeri aktar</sys:String>
-  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Yüklü olmayan oyunları içe aktar</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">Kurulu oyunları içeri aktar</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Kurulu olmayan oyunları içe aktar</sys:String>
   <sys:String x:Key="LOCitchioSettingsConnectAccount">Hesap bağla</sys:String>
-  <sys:String x:Key="LOCitchioLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
+  <sys:String x:Key="LOCitchioLoginChecking">Kimlik doğrulaması kontrol ediliyor…</sys:String>
   <sys:String x:Key="LOCitchioLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
-  <sys:String x:Key="LOCitchioNotLoggedIn">Kimlik doğrulama gerektiriyor</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedIn">Kimlik doğrulaması gerekiyor</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">Kimlik Doğrulaması</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
@@ -18,11 +18,20 @@
   <sys:String x:Key="LOCitchioStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCitchioAccountID">Hesap ID</sys:String>
-  <sys:String x:Key="LOCitchioMetadataLanguageLabel">Meta veri dili:</sys:String>
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">Üst veri dili:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io başlatılacaktır. Lütfen oturum açın ve ardından bu mesajı kapatın.</sys:String>
-  <sys:String x:Key="LOCItchioSignInWaitMessage">Kullanıcının oturum açmasını bekleyin, tamamladığınızda lütfen bunu kapatın...</sys:String>
-  <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io uygulama sürümü 25 veya daha yenisi yüklü değil.</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">Kullanıcının oturum açmasını bekleyin, tamamladığınızda lütfen bunu kapatın…</sys:String>
+  <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io uygulama sürümü 25 veya daha yenisi kurulu değil.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Koleksiyonlardaki ücretsiz oyunları içe aktar.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">İçe aktarılacak öğeler:</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationGames">Oyunlar</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationTools">Araçlar</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationAssets">Materyaller</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationMods">Modlar</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Fiziksel oyunlar</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Müzikler</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationOthers">Diğerleri</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationComics">Çizgi romanlar</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationBooks">Kitaplar</sys:String>
 </ResourceDictionary>

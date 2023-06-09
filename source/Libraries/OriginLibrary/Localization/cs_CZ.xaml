@@ -18,5 +18,5 @@
   <sys:String x:Key="LOCOriginStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCOriginImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCOriginAccountID">ID účtu</sys:String>
-  <sys:String x:Key="LOCOriginMetadataLanguageLabel" />
+  <sys:String x:Key="LOCOriginMetadataLanguageLabel">Jazyk metadat:</sys:String>
 </ResourceDictionary>

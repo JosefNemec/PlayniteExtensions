@@ -23,4 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Використовувати знімки гри якщо немає іншого зображення</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Якщо доступно декілька зображень, використовувати:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Обрати фонове зображення для {0}</sys:String>
+  <sys:String x:Key="LOCIgdbCoverAsIcon">Замінити значок обрізаною обкладинкою</sys:String>
 </ResourceDictionary>

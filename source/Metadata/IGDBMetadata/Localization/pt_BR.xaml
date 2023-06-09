@@ -23,4 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usar capturas de tela se não houver uma capa disponível</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Se houverem várias imagens disponíveis, usar:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Selecionar imagem de fundo para {0}</sys:String>
+  <sys:String x:Key="LOCIgdbCoverAsIcon">Usar imagem de capa cortada como ícone</sys:String>
 </ResourceDictionary>

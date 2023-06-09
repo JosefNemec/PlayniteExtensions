@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCGOGSettingsImportInstalledLabel">Yüklü oyunları içeri aktar</sys:String>
-  <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel">Yüklü olmayan oyunları içe aktar</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportInstalledLabel">Kurulu oyunları içeri aktar</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel">Kurulu olmayan oyunları içe aktar</sys:String>
   <sys:String x:Key="LOCGOGSettingsConnectAccount">Hesap bağla</sys:String>
-  <sys:String x:Key="LOCGOGLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
+  <sys:String x:Key="LOCGOGLoginChecking">Kimlik doğrulaması kontrol ediliyor…</sys:String>
   <sys:String x:Key="LOCGOGLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
-  <sys:String x:Key="LOCGOGNotLoggedIn">Kimlik doğrulama gerektiriyor</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedIn">Kimlik doğrulaması gerekiyor</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Kimlik Doğrulaması</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
@@ -18,14 +18,13 @@
   <sys:String x:Key="LOCGOGStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCGOGAccountID">Hesap ID</sys:String>
-  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Meta veri dili:</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Üst veri dili:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Hesap Girişi</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Hesap Adı</sys:String>
   <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Bütün kütüphaneni eşitlemek için hesabına giriş yap ya da herkese açık hesap ismini kullan. Not: Hesap ismi seçeneği sadece GOG'un gizlilik seçeneğinin herkese görünür olduğu hesaplar için çalışır.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">GOG Galaxy istemcisini kullanarak oyunları başlatın</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Bu, bulut kayıtları, oyun süresi takibi vb. GOG Galaxy özelliklerini etkinleştirecektir.</sys:String>
-  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">GOG Galaxy'ye oyun yüklerken yükleme işlemini otomatik olarak başlat</sys:String>
-  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Etkinleştirilirse, yükleme işlemi, yapılandırılan varsayılan yükleme konumunda kullanıcı etkileşimine ihtiyaç duymadan otomatik olarak başlatılacaktır.
-Devre dışı bırakılırsa, yükleme işlemini manuel olarak başlatmak için oyun sayfası açılacaktır.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">GOG Galaxy için oyun kurarken kurulum işlemini otomatik olarak başlat</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Etkinleştirilirse, kurulum işlemi yapılandırılan varsayılan kurulum konumunda kullanıcı etkileşimine ihtiyaç duymadan otomatik olarak başlatılacaktır. Devre dışı bırakılırsa, kurulum işlemini el ile başlatmak için oyun sayfası açılacaktır.</sys:String>
 </ResourceDictionary>

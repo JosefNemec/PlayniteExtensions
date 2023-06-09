@@ -25,4 +25,13 @@
   <sys:String x:Key="LOCItchioClientNotInstalledError">Versjon 25 eller nyere av itch.io-klienten er ikke installert.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importer gratis spill fra samlinger.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Gjenstander som skal importeres:</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationGames">Spill</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationTools">Verktøy</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationAssets">Ressurser</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationMods">Modifikasjoner</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Fysiske spill</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Spillmusikk</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationOthers">Annet</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationComics">Tegneserier</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationBooks">Bøker</sys:String>
 </ResourceDictionary>

@@ -25,4 +25,13 @@
   <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io 앱 버전 25 이상의 최신 버전이 설치되지 않았습니다.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">컬렉션에서 무료 게임을 가져옵니다.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">가져올 항목:</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationGames" />
+  <sys:String x:Key="LOCitchioItemClassificationTools" />
+  <sys:String x:Key="LOCitchioItemClassificationAssets" />
+  <sys:String x:Key="LOCitchioItemClassificationMods" />
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames" />
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks" />
+  <sys:String x:Key="LOCitchioItemClassificationOthers" />
+  <sys:String x:Key="LOCitchioItemClassificationComics" />
+  <sys:String x:Key="LOCitchioItemClassificationBooks" />
 </ResourceDictionary>

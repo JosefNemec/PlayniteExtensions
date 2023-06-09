@@ -23,4 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Χρήση στιγμιότυπων οθόνης αν το εξώφυλλο δεν είναι διαθέσιμο</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Εάν υπάρχουν πολλές εικόνες διαθέσιμες, τότε θα χρησιμοποιηθεί:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Επιλέξτε εικόνα παρασκηνίου για {0}</sys:String>
+  <sys:String x:Key="LOCIgdbCoverAsIcon" />
 </ResourceDictionary>

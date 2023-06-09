@@ -23,4 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Kasuta kunstiteose puudumisel ekraanipilte</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle" />
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle" />
+  <sys:String x:Key="LOCIgdbCoverAsIcon" />
 </ResourceDictionary>

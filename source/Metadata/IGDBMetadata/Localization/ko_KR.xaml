@@ -23,4 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">아트워크를 사용할 수 없을 경우 스크린샷 사용</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">사용할 수 있는 이미지가 여러장 있을때 사용할 이미지</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">{0}의 배경 이미지 선택</sys:String>
+  <sys:String x:Key="LOCIgdbCoverAsIcon" />
 </ResourceDictionary>

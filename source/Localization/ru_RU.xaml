@@ -25,6 +25,15 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError">Приложение Itch.io версии 25 или новее не установлено.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Импорт бесплатных игр из коллекций.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Будут импортированы:</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">Игры</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">Инструменты</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">Ресурсы</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">Моды</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Физические игры</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Саундтреки</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">Прочее</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">Комиксы</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">Книги</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Логин учетной записи</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Имя учетной записи</sys:String>
@@ -36,7 +45,7 @@
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Если включено, процесс установки будет запущен автоматически без взаимодействия с пользователем, установка будет произведена в место установки по умолчанию.
 Если выключено, откроется страница игры, чтобы начать процесс установки вручную.</sys:String>
     <!--Steam-->
-    <sys:String x:Key="LOCSettingsWhatsSteamName">Как узнать имя моей учетки?</sys:String>
+    <sys:String x:Key="LOCSettingsWhatsSteamName">Как узнать имя моего аккаунта?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">URL-адрес аккаунта</sys:String>
     <sys:String x:Key="LOCSteamLoggedInUser">Авторизованный пользователь</sys:String>
     <sys:String x:Key="LOCSteamRequiresApiKey">Аккаунт закрыт, требуется API-ключ.</sys:String>
@@ -84,6 +93,7 @@
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Использовать скриншоты из игры при отсутствии обложки </sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">При наличии нескольких изображений используйте:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Выбрать фоновое изображение для {0}</sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">Использовать обрезанное изображение обложки для иконки</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Игнорировать игры из других магазинов</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Импортирование игр Humble Choice</sys:String>

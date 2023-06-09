@@ -25,6 +25,15 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError">Versjon 25 eller nyere av itch.io-klienten er ikke installert.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importer gratis spill fra samlinger.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Gjenstander som skal importeres:</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">Spill</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">Verktøy</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">Ressurser</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">Modifikasjoner</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Fysiske spill</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Spillmusikk</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">Annet</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">Tegneserier</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">Bøker</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Kontopålogging</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Kontonavn</sys:String>
@@ -84,6 +93,7 @@ Hvis deaktivert, vil spillsiden bli åpnet så  installasjonsprosessen kan start
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Bruk skjermbilder hvis bildemateriale ikke er tilgjengelig</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Hvis flere bilder er tilgjengelige, bruk:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Velg bakgrunnsbilde for {0}</sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorer tredjeparts butikkspill</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Importer Humble Choice-spill</sys:String>

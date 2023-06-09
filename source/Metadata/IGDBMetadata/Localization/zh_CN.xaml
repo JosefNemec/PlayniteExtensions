@@ -23,4 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">在无法使用艺术作品的时候使用截图</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">如果有多个图像，则使用：</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">选择 {0} 的背景图像</sys:String>
+  <sys:String x:Key="LOCIgdbCoverAsIcon">用裁剪的封面图像替换图标</sys:String>
 </ResourceDictionary>

@@ -18,7 +18,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">ID účtu</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel" />
+  <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">Jazyk metadat:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Jaké je jméno mého účtu?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Jméno URL Účtu</sys:String>
@@ -53,15 +53,15 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignorovat instalované hry z ostatních účtů.</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Další účty</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Zadejte identifikátor dalších Steam účtů a jejich API klíče, pokud z nich chcete importovat hry. Podívejte se na wiki odkaz řešení problémů pro více informací.</sys:String>
-  <sys:String x:Key="LOCSteamLimitTagCountLabel" />
-  <sys:String x:Key="LOCSteamTagPrefixLabel" />
-  <sys:String x:Key="LOCSteamTagBlacklistTabLabel" />
-  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel" />
-  <sys:String x:Key="LOCSteamTagWhitelistHeader" />
-  <sys:String x:Key="LOCSteamTagBlacklistHeader" />
-  <sys:String x:Key="LOCSteamTagWhitelistTooltip" />
-  <sys:String x:Key="LOCSteamTagBlacklistTooltip" />
-  <sys:String x:Key="LOCSteamValidationFixedTagCount" />
-  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode" />
-  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode" />
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">Omezit počet importovaných štítků na první v seznamu</sys:String>
+  <sys:String x:Key="LOCSteamTagPrefixLabel">Přidat předponu k názvu štítku:</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">List vyjímek štítků</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Vyloučené štítky nebudou přidány do her.</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">Dostupné štítky</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">Vyloučené štítky</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip">Odstranit z vyloučených štítků</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip">Přidat do vyloučených štítků</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">Počet štítků musí být platné číslo</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Zobrazit nabídku spuštění hry Steamem v režimu plochy</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Zobrazit nabídku spuštění hry Steamem v režimu celé obrazovky</sys:String>
 </ResourceDictionary>

@@ -25,10 +25,19 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError">Η έκδοση 25 ή νεότερη της εφαρμογής itch.io δεν είναι εγκατεστημένη.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Εισαγωγή δωρεάν παιχνιδιών από συλλογές.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Στοιχεία προς εισαγωγή:</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks"></sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Είσοδος Χρήστη</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Όνομα Χρήστη</sys:String>
-    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Συνδεθείτε στον λογαριασμό σας ή χρησιμοποιείστε το όνομα του δημοσίου λογαριασμού σας για τον πλήρη συγχρονισμό της βιβλιοθήκης σας. Να σημειωθεί πως η επιλογή &quot;Όνομα Λογαριασμού&quot; λειτουργεί μόνο όταν οι βιβλιοθήκες παιχνιδιών έχουν οριστεί ως δημοσίως ορατές στις ρυθμίσεις απορρήτου του GOG.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Εκκινήστε τα παιχνίδια με το GOG Galaxy</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Αυτό θα ενεργοποιήσει δυνατότητες του GOG Galaxy όπως αποθήκευση στο νέφος, χρονομέτρηση παιχνιδιών, κλπ.</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Αυτόματη εκκίνηση της διαδικασίας εγκατάστασης παιχνιδιών όταν επιλέγεται &quot;εγκατάσταση&quot; στο GOG Galaxy</sys:String>
@@ -44,56 +53,57 @@
     <sys:String x:Key="LOCSteamLinksGuides">Οδηγοί</sys:String>
     <sys:String x:Key="LOCSteamLinksWorkshop">Εργαστήριο</sys:String>
     <sys:String x:Key="LOCSteamUseVerticalCovers">Λήψη κατακόρυφων εικόνων εξωφύλλου</sys:String>
-    <sys:String x:Key="LOCSteamImportFreeSubGames"></sys:String>
+    <sys:String x:Key="LOCSteamImportFreeSubGames">Εισαγωγή δωρεάν αντικειμένων γενικού είδους</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportWarn">Αυτό θα αντικαταστήσει τις τρέχουσες κατηγορίες, καθώς και τις ρυθμίσεις στις κατηγορίες κρυμμένα και αγαπημένα σε όλα τα παιχνίδια στο Steam. Θέλετε να συνεχίσετε;</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Εισαγωγή κατηγοριών;</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Δεν είναι δυνατή η εισαγωγή κατηγοριών, δεν έχει επιλεγεί λογαριασμός.</sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb"></sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Δεν είναι δυνατή η εισαγωγή κατηγοριών, η βάση δεδομένων δεν είναι ανοιχτή.</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportError">Αποτυχία εισαγωγής κατηγοριών Steam: {0}</sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportError"></sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyTooltip"></sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">Δεν είναι δυνατή η εισαγωγή πληροφοριών τελευταίας δραστηριότητας παιχνιδιού, δεν έχει επιλεγεί λογαριασμός.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">Δεν είναι δυνατή η εισαγωγή πληροφοριών τελευταίας δραστηριότητας παιχνιδιού, η βάση δεδομένων δεν είναι ανοιχτή.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportError">Αποτυχία εισαγωγής πληροφοριών τελευταίας δραστηριότητας παιχνιδιού του Steam: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyTooltip">Απαιτείται κλειδί API για ιδιωτικούς λογαριασμούς Steam</sys:String>
     <sys:String x:Key="LOCSettingsApiKeyUrlText">Αποκτήστε κλειδί API</sys:String>
-    <sys:String x:Key="LOCSettingsSteamImportMetadata"></sys:String>
+    <sys:String x:Key="LOCSettingsSteamImportMetadata">Εισαγωγή μεταδεδομένων από λογαριασμό Steam:</sys:String>
     <sys:String x:Key="LOCImportSteamCategoriesLabel">Εισαγωγή κατηγοριών από το Steam</sys:String>
-    <sys:String x:Key="LOCImportSteamLastActivityLabel"></sys:String>
+    <sys:String x:Key="LOCImportSteamLastActivityLabel">Εισαγωγή τελευταίας δραστηριότητας παιχνιδιού Steam</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSource">Πηγή εικόνας παρασκηνίου:</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceImage">Εικόνα Παιχνιδιού</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Αποθήκευση Στιγμιότυπου Οθόνης</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Αποθήκευση Παρασκηνίου</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Επιγραφή</sys:String>
-    <sys:String x:Key="LOCSteamShowFriendsButton"></sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton">Εμφάνιση κουμπιού φίλων στον Άνω πίνακα</sys:String>
     <sys:String x:Key="LOCSteamFriendsTooltip">Φίλοι στο Steam</sys:String>
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Αγνοήστε εγκατεστημένα παιχνίδια από άλλους λογαριασμούς</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Πρόσθετοι Λογαριασμοί</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Καθορίστε το ID λογαριασμού Steam και το κλειδί API άλλων λογαριασμών αν θέλετε να εισαγάγετε παιχνίδια από αυτούς. Δείτε τη σελίδα αντιμετώπισης προβλημάτων του Steam για περισσότερες πληροφορίες.</sys:String>
-    <sys:String x:Key="LOCSteamLimitTagCountLabel"></sys:String>
-    <sys:String x:Key="LOCSteamTagPrefixLabel"></sys:String>
-    <sys:String x:Key="LOCSteamTagBlacklistTabLabel"></sys:String>
-    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel"></sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">Περιορισμός της ποσότητας των εισαγόμενων ετικετών στις</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">Ορισμός προθέματος στα ονόματα ετικετών με:</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Επισύναψη στη μαύρη λίστα</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Οι εξαιρούμενες ετικέτες δε θα προστεθούν στα παιχνίδια. </sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistHeader">Διαθέσιμες ετικέτες</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Εξαιρούμενες ετικέτες</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Αφαίρεση από τις εξαιρούμενες ετικέτες</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Προσθήκη στις εξαιρούμενες ετικέτες</sys:String>
-    <sys:String x:Key="LOCSteamValidationFixedTagCount"></sys:String>
-    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode"></sys:String>
-    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode"></sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">Ο σταθερός αριθμός ετικετών πρέπει να περιλαμβάνει έγκυρη τιμή</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Εμφάνιση μενού εκκίνησης του Steam στη λειτουργία επιφάνειας εργασίας</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Εμφάνιση μενού εκκίνησης του Steam στη λειτουργία πλήρους οθόνης</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Χρήση στιγμιότυπων οθόνης αν το εξώφυλλο δεν είναι διαθέσιμο</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Εάν υπάρχουν πολλές εικόνες διαθέσιμες, τότε θα χρησιμοποιηθεί:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Επιλέξτε εικόνα παρασκηνίου για {0}</sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Αγνοήστε παιχνίδια από καταστήματα τρίτων</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Εισαγωγή παιχνιδιών από το Humble Choice</sys:String>
-    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Εισαγωγή διαθέσιμων παιχνιδιών της συνδρομής Humble Choice.</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">Εισαγωγή παιχνιδιών από τη βιβλιοθήκη του Humble</sys:String>
-    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip"></sys:String>
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Εισαγωγή των κανονικών αγορών του Humble καταστήματος και των συνδυαστικών πακέτων.</sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Ενεργοποιήστε για να παρακάμψετε την εισαγωγή παιχνιδιών που απαιτούν προγράμματα τρίτων, συμπεριλαμβανομένων των καταστημάτων που ήδη διαχειρίζεται το Playnite, προς αποφυγήν διπλοτύπων.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Εισαγωγή παιχνιδιού εάν υπάρχει διαθέσιμη έκδοση χωρις DRM</sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
-    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Χρησιμοποιείτε πάντα το Humble App για να εκκινήσετε παιχνίδια</sys:String>
-    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Αν απενεργοποιηθεί, το Playnite θα προσπαθήσει να ξεκινήσει τα παιχνίδια άμεσα, παρακάμπτοντας το Humble App.</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Εισαγωγή παιχνιδιών από προγράμματα τρίτων όταν η DRM-free έκδοση δεν είναι διαθέσιμη.</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Χρησιμοποιείτε πάντα την εφαρμογή του Humble για να εκκινήσετε παιχνίδια</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Αν απενεργοποιηθεί, το Playnite θα προσπαθήσει να ξεκινήσει τα παιχνίδια άμεσα, παρακάμπτοντας την εφαρμογή Humble.</sys:String>
     <sys:String x:Key="LOCHumbleNonTroveInstallError">Η αυτόματη εγκατάσταση και απεγκατάσταση των μη συνδρομητικών παιχνιδιών στο Humble δεν υποστηρίζεται αυτή τη στιγμή.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Εκκίνηση της εφαρμογής Xbox Pass αντί του Microsoft Store κατά την εκκίνηση της εφαρμογής</sys:String>

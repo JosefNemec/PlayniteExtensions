@@ -23,4 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Използване на екранни снимки, ако не е налична илюстрация</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Ако са налични няколко изображения, използвайте:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Изберете фоново изображение за {0}</sys:String>
+  <sys:String x:Key="LOCIgdbCoverAsIcon" />
 </ResourceDictionary>

@@ -23,4 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Naudoti ekrano kopijas jei officiali medžiaga nepasiekiama</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle" />
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Pasirinkti fono nuotrauką {0}</sys:String>
+  <sys:String x:Key="LOCIgdbCoverAsIcon" />
 </ResourceDictionary>

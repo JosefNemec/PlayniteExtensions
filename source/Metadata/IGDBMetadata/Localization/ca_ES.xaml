@@ -23,4 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usar captures de pantalla si l'art no està disponible</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Si hi ha diverses imatges disponibles llavors utilitzar:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Seleccionar imatge de fons per {0}</sys:String>
+  <sys:String x:Key="LOCIgdbCoverAsIcon">Substituir imatge de caràtula retallada per icona</sys:String>
 </ResourceDictionary>

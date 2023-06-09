@@ -25,4 +25,13 @@
   <sys:String x:Key="LOCItchioClientNotInstalledError">El client de itch.io versió 25 o més recent no està instal·lat.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importar jocs gratuïts de col·leccions.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Elements a importar</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationGames">Jocs</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationTools">Eines</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationAssets">Recursos</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationMods">Mods</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Jocs físics</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Bandes sonores</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationOthers">Altres</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationComics">Còmics</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationBooks">Llibres</sys:String>
 </ResourceDictionary>

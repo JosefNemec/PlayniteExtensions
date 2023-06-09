@@ -23,4 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Emprega capturas de pantalla se non hai ilustracións dispoñibles</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Se houbese varias imaxes dispoñibles, entón emprega:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Escoller imaxe de fondo para {0}</sys:String>
+  <sys:String x:Key="LOCIgdbCoverAsIcon" />
 </ResourceDictionary>

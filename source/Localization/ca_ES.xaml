@@ -25,6 +25,15 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError">El client de itch.io versió 25 o més recent no està instal·lat.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importar jocs gratuïts de col·leccions.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Elements a importar</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">Jocs</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">Eines</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">Recursos</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">Mods</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Jocs físics</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Bandes sonores</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">Altres</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">Còmics</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">Llibres</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Iniciar sessió al compte</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Nom del compte</sys:String>
@@ -84,6 +93,7 @@ Si es desactiva, la pàgina del joc s'obrirà per iniciar el procés d'instal·l
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usar captures de pantalla si l'art no està disponible</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Si hi ha diverses imatges disponibles llavors utilitzar:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Seleccionar imatge de fons per {0}</sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">Substituir imatge de caràtula retallada per icona</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorar jocs de botigues de tercers</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Importar jocs de Humble Choice</sys:String>

@@ -25,6 +25,15 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError">Le client itch.io n'est pas à jour. La version 25 (ou ultérieur) est requise pour la synchronisation.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importer les jeux gratuits enregistrés dans la collection</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Éléments à importer : </sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">Jeux</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">Utilitaires</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">Ressources</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">Mods</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Jeux physiques</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Bandes originales</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">Autres</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">BD</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">Livres</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Connexion au compte</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Nom d'utilisateur</sys:String>
@@ -83,6 +92,7 @@ Lorsque cette option est désactivée, la fiche du jeu sera ouverte, permettant 
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Utiliser des captures d'écran si aucune image de fond n'est disponible</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">À choisir si plusieurs images sont disponibles :</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Sélectionner une image de fond pour {0}</sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">Utiliser la couverture recadrée en tant qu'icône</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorer les jeux dépendant de clients tiers</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Importer les jeux Humble Choice</sys:String>

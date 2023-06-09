@@ -25,6 +25,15 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError">バージョン25以降のItchクライアントがインストールされていません。</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">コレクションから無料ゲームをインポート</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">インポートするアイテム:</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks"></sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">アカウントログイン</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">アカウント名</sys:String>
@@ -85,6 +94,7 @@
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">
 複数の画像が利用可能な場合は、次を使用します：</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">背景画像 {0} を選択</sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">サードパーティー製のストアのゲームを無視する</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Humble Choiceのゲームをインポート</sys:String>

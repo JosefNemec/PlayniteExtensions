@@ -25,4 +25,13 @@
   <sys:String x:Key="LOCItchioClientNotInstalledError">Die itch.io-App in Version 25 oder neuer ist nicht installiert.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Kostenlose Spiele aus Sammlungen importieren.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Zu importierende Elemente:</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationGames" />
+  <sys:String x:Key="LOCitchioItemClassificationTools" />
+  <sys:String x:Key="LOCitchioItemClassificationAssets" />
+  <sys:String x:Key="LOCitchioItemClassificationMods" />
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames" />
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks" />
+  <sys:String x:Key="LOCitchioItemClassificationOthers" />
+  <sys:String x:Key="LOCitchioItemClassificationComics" />
+  <sys:String x:Key="LOCitchioItemClassificationBooks" />
 </ResourceDictionary>

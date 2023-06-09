@@ -23,4 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Использовать скриншоты из игры при отсутствии обложки </sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">При наличии нескольких изображений используйте:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Выбрать фоновое изображение для {0}</sys:String>
+  <sys:String x:Key="LOCIgdbCoverAsIcon">Использовать обрезанное изображение обложки для иконки</sys:String>
 </ResourceDictionary>

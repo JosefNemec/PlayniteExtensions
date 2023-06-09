@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCEpicSettingsImportInstalledLabel">Yüklü oyunları içeri aktar</sys:String>
-  <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">Yüklü olmayan oyunları içe aktar</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportInstalledLabel">Kurulu oyunları içeri aktar</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">Kurulu olmayan oyunları içe aktar</sys:String>
   <sys:String x:Key="LOCEpicSettingsConnectAccount">Hesap bağla</sys:String>
-  <sys:String x:Key="LOCEpicLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
+  <sys:String x:Key="LOCEpicLoginChecking">Kimlik doğrulaması kontrol ediliyor…</sys:String>
   <sys:String x:Key="LOCEpicLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
-  <sys:String x:Key="LOCEpicNotLoggedIn">Kimlik doğrulama gerektiriyor</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedIn">Kimlik doğrulaması gerekiyor</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Kimlik Doğrulaması</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
@@ -18,5 +18,5 @@
   <sys:String x:Key="LOCEpicStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCEpicAccountID">Hesap ID</sys:String>
-  <sys:String x:Key="LOCEpicMetadataLanguageLabel">Meta veri dili:</sys:String>
+  <sys:String x:Key="LOCEpicMetadataLanguageLabel">Üst veri dili:</sys:String>
 </ResourceDictionary>

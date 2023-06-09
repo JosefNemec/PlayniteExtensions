@@ -25,4 +25,13 @@
   <sys:String x:Key="LOCItchioClientNotInstalledError">Le client itch.io n'est pas à jour. La version 25 (ou ultérieur) est requise pour la synchronisation.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importer les jeux gratuits enregistrés dans la collection</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Éléments à importer : </sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationGames">Jeux</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationTools">Utilitaires</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationAssets">Ressources</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationMods">Mods</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Jeux physiques</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Bandes originales</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationOthers">Autres</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationComics">BD</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationBooks">Livres</sys:String>
 </ResourceDictionary>

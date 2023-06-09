@@ -22,7 +22,7 @@
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Είσοδος Χρήστη</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Όνομα Χρήστη</sys:String>
-  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve" />
+  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Συνδεθείτε στον λογαριασμό σας ή χρησιμοποιείστε το όνομα του δημοσίου λογαριασμού σας για τον πλήρη συγχρονισμό της βιβλιοθήκης σας. Να σημειωθεί πως η επιλογή "Όνομα Λογαριασμού" λειτουργεί μόνο όταν οι βιβλιοθήκες παιχνιδιών έχουν οριστεί ως δημοσίως ορατές στις ρυθμίσεις απορρήτου του GOG.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">Εκκινήστε τα παιχνίδια με το GOG Galaxy</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Αυτό θα ενεργοποιήσει δυνατότητες του GOG Galaxy όπως αποθήκευση στο νέφος, χρονομέτρηση παιχνιδιών, κλπ.</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Αυτόματη εκκίνηση της διαδικασίας εγκατάστασης παιχνιδιών όταν επιλέγεται "εγκατάσταση" στο GOG Galaxy</sys:String>

@@ -25,4 +25,13 @@
   <sys:String x:Key="LOCItchioClientNotInstalledError">برنامه itch.io نسخه 25 یا جدیدتر نصب نشده است.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">بازی های رایگان را از مجموعه ها وارد کنید.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">اقلامی که باید وارد شوند:</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationGames" />
+  <sys:String x:Key="LOCitchioItemClassificationTools" />
+  <sys:String x:Key="LOCitchioItemClassificationAssets" />
+  <sys:String x:Key="LOCitchioItemClassificationMods" />
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames" />
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks" />
+  <sys:String x:Key="LOCitchioItemClassificationOthers" />
+  <sys:String x:Key="LOCitchioItemClassificationComics" />
+  <sys:String x:Key="LOCitchioItemClassificationBooks" />
 </ResourceDictionary>

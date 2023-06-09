@@ -18,9 +18,10 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">ID účtu</sys:String>
-  <sys:String x:Key="LOCIGDBMetadataLanguageLabel" />
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Jazyk metadat:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Použít snímek z hry pokud není k dispozici obrázek</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Pokud je k dispozici víc obrázků, použít:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Vyberte obrázek pozadí pro {0}</sys:String>
+  <sys:String x:Key="LOCIgdbCoverAsIcon">Použít oříznutý obrázek obalu jako ikonu</sys:String>
 </ResourceDictionary>

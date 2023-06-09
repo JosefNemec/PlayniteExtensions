@@ -18,5 +18,5 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">ID účtu</sys:String>
-  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel" />
+  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Jazyk metadat:</sys:String>
 </ResourceDictionary>

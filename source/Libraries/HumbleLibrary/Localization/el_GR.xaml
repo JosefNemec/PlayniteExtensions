@@ -22,13 +22,13 @@
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Αγνοήστε παιχνίδια από καταστήματα τρίτων</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">Εισαγωγή παιχνιδιών από το Humble Choice</sys:String>
-  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip" />
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Εισαγωγή διαθέσιμων παιχνιδιών της συνδρομής Humble Choice.</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">Εισαγωγή παιχνιδιών από τη βιβλιοθήκη του Humble</sys:String>
-  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip" />
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve" />
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Εισαγωγή των κανονικών αγορών του Humble καταστήματος και των συνδυαστικών πακέτων.</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Ενεργοποιήστε για να παρακάμψετε την εισαγωγή παιχνιδιών που απαιτούν προγράμματα τρίτων, συμπεριλαμβανομένων των καταστημάτων που ήδη διαχειρίζεται το Playnite, προς αποφυγήν διπλοτύπων.</sys:String>
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Εισαγωγή παιχνιδιού εάν υπάρχει διαθέσιμη έκδοση χωρις DRM</sys:String>
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip" />
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Χρησιμοποιείτε πάντα το Humble App για να εκκινήσετε παιχνίδια</sys:String>
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Αν απενεργοποιηθεί, το Playnite θα προσπαθήσει να ξεκινήσει τα παιχνίδια άμεσα, παρακάμπτοντας το Humble App.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Εισαγωγή παιχνιδιών από προγράμματα τρίτων όταν η DRM-free έκδοση δεν είναι διαθέσιμη.</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Χρησιμοποιείτε πάντα την εφαρμογή του Humble για να εκκινήσετε παιχνίδια</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Αν απενεργοποιηθεί, το Playnite θα προσπαθήσει να ξεκινήσει τα παιχνίδια άμεσα, παρακάμπτοντας την εφαρμογή Humble.</sys:String>
   <sys:String x:Key="LOCHumbleNonTroveInstallError">Η αυτόματη εγκατάσταση και απεγκατάσταση των μη συνδρομητικών παιχνιδιών στο Humble δεν υποστηρίζεται αυτή τη στιγμή.</sys:String>
 </ResourceDictionary>

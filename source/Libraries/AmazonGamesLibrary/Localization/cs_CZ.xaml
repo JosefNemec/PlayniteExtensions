@@ -18,5 +18,5 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">ID účtu</sys:String>
-  <sys:String x:Key="LOCAmazonMetadataLanguageLabel" />
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Jazyk metadat:</sys:String>
 </ResourceDictionary>

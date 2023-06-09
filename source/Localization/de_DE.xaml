@@ -25,6 +25,15 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError">Die itch.io-App in Version 25 oder neuer ist nicht installiert.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Kostenlose Spiele aus Sammlungen importieren.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Zu importierende Elemente:</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks"></sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Kontoanmeldung</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Kontoname</sys:String>
@@ -85,6 +94,7 @@ Falls deaktiviert, wird die Spieleseite geöffnet, um den Installationsvorgang m
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Screenshots verwenden, falls kein Bildmaterial verfügbar</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Falls mehrere Bilder verfügbar, das folgende verwenden:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Hintergrundbild für {0} auswählen</sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Spiele von Drittanbieter-Shops ignorieren</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Humble-Choice-Spiele importieren</sys:String>

@@ -18,5 +18,5 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">ID účtu</sys:String>
-  <sys:String x:Key="LOCUbisoftMetadataLanguageLabel" />
+  <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Jazyk metadat:</sys:String>
 </ResourceDictionary>

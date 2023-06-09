@@ -27,4 +27,13 @@
 </sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">استيراد الألعاب المجانية من المجموعات.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">العناصر المراد استيرادها:</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationGames" />
+  <sys:String x:Key="LOCitchioItemClassificationTools" />
+  <sys:String x:Key="LOCitchioItemClassificationAssets" />
+  <sys:String x:Key="LOCitchioItemClassificationMods" />
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames" />
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks" />
+  <sys:String x:Key="LOCitchioItemClassificationOthers" />
+  <sys:String x:Key="LOCitchioItemClassificationComics" />
+  <sys:String x:Key="LOCitchioItemClassificationBooks" />
 </ResourceDictionary>

@@ -18,11 +18,20 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCitchioAccountID">ID účtu</sys:String>
-  <sys:String x:Key="LOCitchioMetadataLanguageLabel" />
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">Jazyk metadat:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">Bude spuštěno itch.io. Prosím přihlašte se a pak zavřete tuto zprávu.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Čekám na přihlášení uživatele, zavřete prosím toto okno, až budete hotovi...</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">Aplikace itch.io verze 25 nebo vyšší není nainstalována.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importovat z kolekcí hry zdarma.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Položky k importování.</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationGames">Hry</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationTools">Nástroje</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationAssets">Assety</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationMods">Módy</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Fyzické hry</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Soundtracky</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationOthers">Ostatní</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationComics">Komiksy</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationBooks">Knihy</sys:String>
 </ResourceDictionary>

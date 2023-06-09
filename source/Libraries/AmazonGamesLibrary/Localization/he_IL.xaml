@@ -18,5 +18,5 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">מזהה משתמש</sys:String>
-  <sys:String x:Key="LOCAmazonMetadataLanguageLabel" />
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">שפת מטא-נתונים:</sys:String>
 </ResourceDictionary>

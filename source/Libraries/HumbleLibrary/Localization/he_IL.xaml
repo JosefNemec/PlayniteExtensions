@@ -18,7 +18,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">מזהה משתמש</sys:String>
-  <sys:String x:Key="LOCHumbleMetadataLanguageLabel" />
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">שפת מטא-נתונים:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">התעלם ממשחקי חנויות חיצוניות</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">יבא משחקי Humble Choice</sys:String>

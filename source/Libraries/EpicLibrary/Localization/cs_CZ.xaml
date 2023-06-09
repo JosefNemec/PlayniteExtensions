@@ -18,5 +18,5 @@
   <sys:String x:Key="LOCEpicStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCEpicAccountID">ID účtu</sys:String>
-  <sys:String x:Key="LOCEpicMetadataLanguageLabel" />
+  <sys:String x:Key="LOCEpicMetadataLanguageLabel">Jazyk metadat:</sys:String>
 </ResourceDictionary>

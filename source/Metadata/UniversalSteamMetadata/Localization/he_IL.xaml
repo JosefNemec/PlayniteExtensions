@@ -18,7 +18,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">מזהה משתמש</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel" />
+  <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">שפת מטא-נתונים:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">מה שם החשבון שלי?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">שם URL חשבון</sys:String>
@@ -53,14 +53,14 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">התעלם ממשחקים מותקנים מחשבונות אחרים</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">חשבונות נוספים</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">ציין מזהה חשבון Steam וזוג מפתחות API של חשבונות אחרים אם ברצונך לייבא מהם משחקים. ראה דף ויקי לפתרון בעיות של Steam לקבלת מידע נוסף.</sys:String>
-  <sys:String x:Key="LOCSteamLimitTagCountLabel" />
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">כמות תגים מקסימלית לייבוא</sys:String>
   <sys:String x:Key="LOCSteamTagPrefixLabel" />
-  <sys:String x:Key="LOCSteamTagBlacklistTabLabel" />
-  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel" />
-  <sys:String x:Key="LOCSteamTagWhitelistHeader" />
-  <sys:String x:Key="LOCSteamTagBlacklistHeader" />
-  <sys:String x:Key="LOCSteamTagWhitelistTooltip" />
-  <sys:String x:Key="LOCSteamTagBlacklistTooltip" />
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">רשימת תגים אסורים</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">תגים אסורים לא יתווספו למשחקים.</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">תגים זמינים</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">תגים אסורים:</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistTooltip">הסר מהתגים האסורים</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTooltip">הוסף לתגים האסורים</sys:String>
   <sys:String x:Key="LOCSteamValidationFixedTagCount" />
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode" />
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode" />

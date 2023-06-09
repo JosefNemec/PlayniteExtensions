@@ -20,7 +20,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">ID аккаунта</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">Язык метаданных:</sys:String>
   <!--Steam-->
-  <sys:String x:Key="LOCSettingsWhatsSteamName">Как узнать имя моей учетки?</sys:String>
+  <sys:String x:Key="LOCSettingsWhatsSteamName">Как узнать имя моего аккаунта?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">URL-адрес аккаунта</sys:String>
   <sys:String x:Key="LOCSteamLoggedInUser">Авторизованный пользователь</sys:String>
   <sys:String x:Key="LOCSteamRequiresApiKey">Аккаунт закрыт, требуется API-ключ.</sys:String>

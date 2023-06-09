@@ -18,5 +18,5 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">מזהה משתמש</sys:String>
-  <sys:String x:Key="LOCRockstarMetadataLanguageLabel" />
+  <sys:String x:Key="LOCRockstarMetadataLanguageLabel">שפת מטא-נתונים:</sys:String>
 </ResourceDictionary>

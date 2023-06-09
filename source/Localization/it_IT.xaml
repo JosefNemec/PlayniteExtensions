@@ -25,6 +25,15 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError">la versione 25 o superiore del client Itch.io non è installata.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importa giochi gratuiti dalle collezioni.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Gli oggetti da importare:</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">Giochi</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">Strumenti</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">Asset</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">Mods</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Giochi fisici</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Colonne sonore</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">Altri</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">Fumetti</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">Libri</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Login dell'account</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Nome dell'account</sys:String>
@@ -84,6 +93,7 @@ Se è disattivato, la pagina del gioco verrà aperta per avviare manualmente il 
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usa le schermate se l'illustrazione non è disponibile</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Se sono disponibili immagini multiple, usa:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Seleziona l'Immagine di sfondo per {0}</sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">Sostituisci l'immagine di copertina ritagliata per l'icona</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignora i giochi dei negozi di terze parti</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Importa giochi Humble Choice</sys:String>

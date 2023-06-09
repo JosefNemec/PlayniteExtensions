@@ -18,5 +18,5 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">מזהה משתמש</sys:String>
-  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel" />
+  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">שפת מטא-נתונים:</sys:String>
 </ResourceDictionary>

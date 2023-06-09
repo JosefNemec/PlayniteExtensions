@@ -25,6 +25,15 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError">A versión 25 da aplicación itch.io ou máis nova non está instalada.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importar os xogos de balde das coleccións.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Artigos a importar:</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks"></sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Verificación de conta</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Nome da conta</sys:String>
@@ -82,6 +91,7 @@
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Emprega capturas de pantalla se non hai ilustracións dispoñibles</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Se houbese varias imaxes dispoñibles, entón emprega:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Escoller imaxe de fondo para {0}</sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorar xogos de tendas de terceiros </sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Importar xogos de Humble Choice</sys:String>

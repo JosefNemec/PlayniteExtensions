@@ -18,5 +18,5 @@
   <sys:String x:Key="LOCOriginStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
   <sys:String x:Key="LOCOriginImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCOriginAccountID">מזהה משתמש</sys:String>
-  <sys:String x:Key="LOCOriginMetadataLanguageLabel" />
+  <sys:String x:Key="LOCOriginMetadataLanguageLabel">שפת מטא-נתונים:</sys:String>
 </ResourceDictionary>

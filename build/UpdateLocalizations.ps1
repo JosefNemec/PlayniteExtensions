@@ -27,10 +27,13 @@ foreach ($lng in $locProgress.data)
     $locDownloadData = Invoke-RestMethod -Method Post -Headers $requestHeaders -Uri "$urlRoot/projects/$playnitePrjId/translations/builds/files/33" `
                                          -Body "{`"targetLanguageId`":`"$($lng.data.languageId)`"}" -ContentType "application/json"
     
-    $locDownload = Invoke-WebRequest -Uri $locDownloadData.data.url
+    $tempFile = Join-Path $locDir "temp.xaml"
+    Remove-Item $tempFile -EA 0
+    $locDownload = Invoke-WebRequest -Uri $locDownloadData.data.url -OutFile $tempFile -PassThru
     $locDownload.Headers["Content-Disposition"][0] -match '"(.+)"' | Out-Null
     $fileName = $Matches[1]
-    [System.IO.File]::WriteAllBytes((Join-Path $locDir $fileName), $locDownload.Content)
+    
+    Move-Item $tempFile (Join-Path $locDir $fileName) -Force
 }
 
 $allOk = $true

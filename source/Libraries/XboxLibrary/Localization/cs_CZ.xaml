@@ -18,7 +18,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCXboxAccountID">ID účtu</sys:String>
-  <sys:String x:Key="LOCXboxMetadataLanguageLabel" />
+  <sys:String x:Key="LOCXboxMetadataLanguageLabel">Jazyk metadat:</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Spustit aplikaci Xbox Pass namísto Microsoft Store při otevírání klienta</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">Importovat hry konzole Xbox</sys:String>

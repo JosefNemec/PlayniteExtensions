@@ -25,6 +25,15 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError">Cliente da itch.io versão 25 ou superior não instalado.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importar jogos gratuitos das coleções.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Itens a serem importados:</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">Jogos</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">Ferramentas</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">Recursos</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">Mods</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Jogos físicos</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Trilhas sonoras</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">Outros</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">Quadrinhos</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">Livros</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Dados da conta</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Nome da conta</sys:String>
@@ -83,6 +92,7 @@ Se desativado, a página do jogo será aberta para iniciar manualmente o process
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usar capturas de tela se não houver uma capa disponível</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Se houverem várias imagens disponíveis, usar:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Selecionar imagem de fundo para {0}</sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">Usar imagem de capa cortada como ícone</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorar jogos de lojas de terceiros</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Importar jogos Humble Choice</sys:String>
