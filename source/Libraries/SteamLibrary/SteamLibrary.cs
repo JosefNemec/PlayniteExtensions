@@ -887,7 +887,7 @@ namespace SteamLibrary
 
                     Logger.Debug($"Found {libraryGames.Count} library Steam games.");
 
-                    if (SettingsViewModel.Settings.IgnoreOtherInstalled)
+                    if (SettingsViewModel.Settings.IgnoreOtherInstalled && SettingsViewModel.Settings.AdditionalAccounts.HasItems())
                     {
                         foreach (var installedGameId in installedGames.Keys.ToList())
                         {
