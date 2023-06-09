@@ -98,3 +98,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_15.pext
     Changelog:
       - Fixed issue with one API call not using https address (by Crwmy)
+  - Version: 2.16
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2023-06-09
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_16.pext
+    Changelog:
+      - Fixed some string not using localized variants
