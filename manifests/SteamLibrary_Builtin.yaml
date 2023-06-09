@@ -106,3 +106,9 @@ Packages:
     Changelog:
       - Better handling of problematic sources for background image
       - Fixed issue slowing down metadata download in some cases
+  - Version: 2.15
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-06-09
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_15.pext
+    Changelog:
+      - Fixed "Ignore installed games from other accounts" option not working properly if no additional accounts are set
