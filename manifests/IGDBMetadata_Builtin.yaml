@@ -44,3 +44,11 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/IGDBMetadata_Builtin_2_6.pext
     Changelog:
       - Fixed image downloads not working
+  - Version: 2.7
+    RequiredApiVersion: 6.9.0
+    ReleaseDate: 2023-06-09
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/IGDBMetadata_Builtin_2_7.pext
+    Changelog:
+      - Completely reworked game matching and search
+      - Added support for searching games via global search ("i" as default keyword)
+      - Added option to use cropped cover images as icons (opt in)
