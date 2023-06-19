@@ -89,18 +89,11 @@ namespace SteamLibrary.SteamShared
             string url = $"https://api.steampowered.com/IStoreService/GetTagList/v1?language={settings?.LanguageKey}&have_version_hash={existingFile?.response?.version_hash}";
 
             logger.Debug("Downloading " + url);
-            var httpClient = new HttpClient();
-            var downloadTask = httpClient.GetAsync(url);
-            downloadTask.Wait();
-            var downloadResult = downloadTask.Result;
-            var contentTask = downloadResult.Content.ReadAsStringAsync();
-            contentTask.Wait();
+            var content = downloader.DownloadString(url);
 
-            var filePath = GetTagNameFilePath();
-
-            if (downloadResult.StatusCode != System.Net.HttpStatusCode.NotModified && !string.IsNullOrWhiteSpace(contentTask.Result))
+            if (!string.IsNullOrWhiteSpace(content))
             {
-                File.WriteAllText(filePath, contentTask.Result, Encoding.UTF8);
+                File.WriteAllText(GetTagNameFilePath(), content, Encoding.UTF8);
             }
 
             var tagFile = GetFileContents();
