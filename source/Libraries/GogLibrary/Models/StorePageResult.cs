@@ -32,6 +32,7 @@ namespace GogLibrary.Models
             public string id;
             public string galaxyBackgroundImage;
             public string backgroundImage;
+            public string boxArtImage;
             public string image;
             public int size;
         }

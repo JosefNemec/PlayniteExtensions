@@ -70,6 +70,11 @@ namespace GogLibrary
                     //StoreDetails.size is in megabytes, convert to bytes here
                     storeData.InstallSize = (ulong)storeData.StoreDetails.size * 1024UL * 1024UL;
                 }
+
+                if(settings.UseVerticalCovers && storeData.StoreDetails.boxArtImage != null)
+                {
+                    storeData.CoverImage = new MetadataFile(storeData.StoreDetails.boxArtImage);
+                }
             }
 
             return storeData;
@@ -102,14 +107,17 @@ namespace GogLibrary
                 }
 
                 metadata.Icon = new MetadataFile("http:" + gameDetail.images.icon);
-                if (metadata.StoreDetails != null)
+                if (!settings.UseVerticalCovers)
                 {
-                    var imageUrl = metadata.StoreDetails.image + "_product_card_v2_mobile_slider_639.jpg";
-                    metadata.CoverImage = new MetadataFile(imageUrl);
-                }
-                else
-                {
-                    metadata.CoverImage = new MetadataFile("http:" + gameDetail.images.logo2x);
+                    if (metadata.StoreDetails != null)
+                    {
+                        var imageUrl = metadata.StoreDetails.image + "_product_card_v2_mobile_slider_639.jpg";
+                        metadata.CoverImage = new MetadataFile(imageUrl);
+                    }
+                    else
+                    {
+                        metadata.CoverImage = new MetadataFile("http:" + gameDetail.images.logo2x);
+                    }
                 }
 
                 if (metadata.StoreDetails != null)
