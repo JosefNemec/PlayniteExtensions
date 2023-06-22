@@ -25,15 +25,15 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io 앱 버전 25 이상의 최신 버전이 설치되지 않았습니다.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">컬렉션에서 무료 게임을 가져옵니다.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">가져올 항목:</sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationOthers"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationBooks"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">게임</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">도구</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">에셋</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">모드</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">실제 게임</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">사운드트랙</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">기타</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">코믹스</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">서적</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">계정 로그인</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">계정 이름</sys:String>
@@ -93,7 +93,7 @@
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">아트워크를 사용할 수 없을 경우 스크린샷 사용</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">사용할 수 있는 이미지가 여러장 있을때 사용할 이미지</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">{0}의 배경 이미지 선택</sys:String>
-    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">커버 이미지를 아이콘으로 대체</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">서드파티 스토어 게임 무시</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Humble Choice 게임 가져오기</sys:String>

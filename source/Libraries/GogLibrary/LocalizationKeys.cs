@@ -109,5 +109,9 @@ namespace System
         /// If enabled, the install process will be automatically started without needing user interaction to the configured default install location.
         /// </summary>
         public const string GOGSettingsUseAutomaticGameInstallsTooltip = "LOCGOGSettingsUseAutomaticGameInstallsTooltip";
+        /// <summary>
+        /// Use vertical covers
+        /// </summary>
+        public const string GOGSettingsUseVerticalCovers = "LOCGOGSettingsUseVerticalCovers";
     }
 }

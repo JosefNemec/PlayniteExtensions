@@ -43,6 +43,7 @@ Note that the Account Name option only works for accounts whose game libraries h
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automatically initiate the install process when installing games on GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">If enabled, the install process will be automatically started without needing user interaction to the configured default install location.
 If disabled, the game page will be opened to manually start the install process.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Use vertical covers</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">What's my account name?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Account URL Name</sys:String>

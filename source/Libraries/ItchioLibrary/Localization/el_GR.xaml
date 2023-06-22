@@ -25,13 +25,13 @@
   <sys:String x:Key="LOCItchioClientNotInstalledError">Η έκδοση 25 ή νεότερη της εφαρμογής itch.io δεν είναι εγκατεστημένη.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Εισαγωγή δωρεάν παιχνιδιών από συλλογές.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Στοιχεία προς εισαγωγή:</sys:String>
-  <sys:String x:Key="LOCitchioItemClassificationGames" />
-  <sys:String x:Key="LOCitchioItemClassificationTools" />
-  <sys:String x:Key="LOCitchioItemClassificationAssets" />
-  <sys:String x:Key="LOCitchioItemClassificationMods" />
-  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames" />
-  <sys:String x:Key="LOCitchioItemClassificationSoundtracks" />
-  <sys:String x:Key="LOCitchioItemClassificationOthers" />
-  <sys:String x:Key="LOCitchioItemClassificationComics" />
-  <sys:String x:Key="LOCitchioItemClassificationBooks" />
+  <sys:String x:Key="LOCitchioItemClassificationGames">Παιχνίδια</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationTools">Εργαλεία</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationAssets">Στοιχεία</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationMods">Τροποποιήσεις</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Παιχνίδια Φυσικής Μορφής</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Μουσική Επένδυση</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationOthers">Άλλα</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationComics">Κόμικ</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationBooks">Βιβλία</sys:String>
 </ResourceDictionary>

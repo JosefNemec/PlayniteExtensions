@@ -25,13 +25,13 @@
   <sys:String x:Key="LOCItchioClientNotInstalledError">Die itch.io-App in Version 25 oder neuer ist nicht installiert.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Kostenlose Spiele aus Sammlungen importieren.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Zu importierende Elemente:</sys:String>
-  <sys:String x:Key="LOCitchioItemClassificationGames" />
-  <sys:String x:Key="LOCitchioItemClassificationTools" />
-  <sys:String x:Key="LOCitchioItemClassificationAssets" />
-  <sys:String x:Key="LOCitchioItemClassificationMods" />
-  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames" />
-  <sys:String x:Key="LOCitchioItemClassificationSoundtracks" />
-  <sys:String x:Key="LOCitchioItemClassificationOthers" />
-  <sys:String x:Key="LOCitchioItemClassificationComics" />
-  <sys:String x:Key="LOCitchioItemClassificationBooks" />
+  <sys:String x:Key="LOCitchioItemClassificationGames">Spiele</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationTools">Werkzeuge</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationAssets">Assets</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationMods">Mods</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Physische Spiele</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Soundtracks</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationOthers">Andere</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationComics">Comics</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationBooks">Bücher</sys:String>
 </ResourceDictionary>
