@@ -75,7 +75,7 @@ namespace Steam
 
         private T SendDelayedStoreRequest<T>(Func<T> request, uint appId) where T : class
         {
-            // Steam may return 429 if we put too many request
+            // Steam may return 429 if we send too many requests
             for (int i = 0; i < 10; i++)
             {
                 try
@@ -460,29 +460,26 @@ namespace Steam
 
                     foreach (var tag in tagKeyValues)
                     {
-                        if (int.TryParse(tag.Value, out int tagId))
+                        if (!int.TryParse(tag.Value, out int tagId) || settings.BlacklistedTags.Contains(tagId))
                         {
-                            if (settings.BlacklistedTags.Contains(tagId))
+                            continue;
+                        }
+
+                        if (!tagNames.TryGetValue(tagId, out string name))
+                        {
+                            if (newTagNames == null)
                             {
+                                logger.Debug($"Tag {tagId} not found. Fetching new ones.");
+                                newTagNames = tagNamer.UpdateAndGetTagNames();
+                            }
+                            if (!newTagNames.TryGetValue(tagId, out name))
+                            {
+                                logger.Warn($"Could not find tag name for tag {tagId}");
                                 continue;
                             }
-
-                            if (!tagNames.TryGetValue(tagId, out string name))
-                            {
-                                if (newTagNames == null)
-                                {
-                                    logger.Debug($"Tag {tagId} not found. Fetching new ones.");
-                                    newTagNames = tagNamer.UpdateAndGetTagNames();
-                                }
-                                if (!newTagNames.TryGetValue(tagId, out name))
-                                {
-                                    logger.Warn($"Could not find tag name for tag {tagId}");
-                                    continue;
-                                }
-                            }
-                            name = tagNamer.GetFinalTagName(name);
-                            metadata.Tags.Add(new MetadataNameProperty(name));
                         }
+                        name = tagNamer.GetFinalTagName(name);
+                        metadata.Tags.Add(new MetadataNameProperty(name));
                     }
                 }
             }
