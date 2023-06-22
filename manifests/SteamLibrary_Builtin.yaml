@@ -112,3 +112,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_15.pext
     Changelog:
       - Fixed "Ignore installed games from other accounts" option not working properly if no additional accounts are set
+  - Version: 2.16
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-06-22
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_16.pext
+    Changelog:
+      - Tag handling fixes by Jeshibu

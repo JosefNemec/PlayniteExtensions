@@ -80,3 +80,9 @@ Packages:
     Changelog:
       - Better handling of problematic sources for background image
       - Fixed issue slowing down metadata download in some cases
+  - Version: 2.12
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-06-22
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_12.pext
+    Changelog:
+      - Tag handling fixes by Jeshibu
