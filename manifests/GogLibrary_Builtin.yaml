@@ -104,3 +104,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_16.pext
     Changelog:
       - Fixed some string not using localized variants
+  - Version: 2.17
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2023-06-22
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_17.pext
+    Changelog:
+      - Added option to choose between vertical and horizontal cover images (by Jeshibu)
