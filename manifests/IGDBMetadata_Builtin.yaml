@@ -52,3 +52,9 @@ Packages:
       - Completely reworked game matching and search
       - Added support for searching games via global search ("i" as default keyword)
       - Added option to use cropped cover images as icons (opt in)
+  - Version: 2.8
+    RequiredApiVersion: 6.5.0
+    ReleaseDate: 2023-06-26
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/IGDBMetadata_Builtin_2_8.pext
+    Changelog:
+      - Lowered minimum required Playnite version
