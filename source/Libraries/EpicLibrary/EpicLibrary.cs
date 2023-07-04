@@ -49,6 +49,10 @@ namespace EpicLibrary
                 }
 
                 var manifest = manifests.FirstOrDefault(a => a.AppName == app.AppName);
+                if (manifest == null)
+                {
+                    continue;
+                }
 
                 // DLC
                 if (manifest.AppName != manifest.MainGameAppName)
