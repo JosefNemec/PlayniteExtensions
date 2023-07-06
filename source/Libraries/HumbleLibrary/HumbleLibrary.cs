@@ -187,6 +187,8 @@ namespace HumbleLibrary
                 orders = api.GetOrders(keys);
             }
 
+            // Humble will return null items in library response on some accounts
+            orders = orders.Where(a => a != null).ToList();
             var selectedProducts = new List<Order.SubProduct>();
             var allTpks = orders.SelectMany(a => a.tpkd_dict?.all_tpks).ToList();
 
