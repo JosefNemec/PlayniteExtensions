@@ -63,3 +63,9 @@ Packages:
     Changelog:
       - Fixed game import failing
       - Fixed crash when installing or uninstalling a game
+  - Version: 3.7
+    RequiredApiVersion: 6.2.2
+    ReleaseDate: 2022-07-06
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/HumbleLibrary_Builtin_3_7.pext
+    Changelog:
+      - Fixed library import failing with some accounts

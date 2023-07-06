@@ -1,7 +1,7 @@
 ﻿Id: HumbleLibrary_Builtin
 Name: Humble library integration
 Author: Playnite
-Version: 3.6
+Version: 3.7
 Module: HumbleLibrary.dll
 Type: GameLibrary
 Icon: Resources\icon.png
