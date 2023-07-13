@@ -73,3 +73,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_11.pext
     Changelog:
       - Added Diablo IV support
+  - Version: 2.12
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-07-13
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_12.pext
+    Changelog:
+      - Restored support for classic (pre Reforged) Warcraft 3 versions
