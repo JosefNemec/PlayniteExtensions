@@ -69,41 +69,9 @@ namespace BattleNetLibrary
                     continue;
                 }
 
-                if (prog.Publisher == "Blizzard Entertainment" && BattleNetGames.Games.Any(a => a.Type == BNetAppType.Classic && prog.DisplayName == a.InternalId))
+                var match = Regex.Match(prog.UninstallString, @"Battle\.net.*--uid=(.*?)\s");
+                if (match.Success)
                 {
-                    var products = BattleNetGames.Games.Where(a => a.Type == BNetAppType.Classic && prog.DisplayName == a.InternalId);
-                    foreach (var product in products)
-                    {
-                        if (!Directory.Exists(prog.InstallLocation))
-                        {
-                            continue;
-                        }
-
-                        var game = new GameMetadata()
-                        {
-                            GameId = product.ProductId,
-                            Source = new MetadataNameProperty("Battle.net"),
-                            Name = product.Name.RemoveTrademarks(),
-                            InstallDirectory = prog.InstallLocation,
-                            IsInstalled = true,
-                            Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
-                        };
-
-                        // Check in case there are more versions of single games installed.
-                        if (!games.TryGetValue(game.GameId, out var _))
-                        {
-                            games.Add(game.GameId, game);
-                        }
-                    }
-                }
-                else
-                {
-                    var match = Regex.Match(prog.UninstallString, @"Battle\.net.*--uid=(.*?)\s");
-                    if (!match.Success)
-                    {
-                        continue;
-                    }
-
                     if (prog.DisplayName.EndsWith("Test") || prog.DisplayName.EndsWith("Beta"))
                     {
                         continue;
@@ -135,6 +103,34 @@ namespace BattleNetLibrary
                     if (!games.TryGetValue(game.GameId, out var _))
                     {
                         games.Add(game.GameId, game);
+                    }
+                }
+                else if (prog.Publisher == "Blizzard Entertainment" && BattleNetGames.Games.Any(a => a.Type == BNetAppType.Classic && prog.DisplayName == a.InternalId))
+                {
+                    var products = BattleNetGames.Games.Where(a => a.Type == BNetAppType.Classic && prog.DisplayName == a.InternalId);
+                    foreach (var product in products)
+                    {
+                        var exe = Path.Combine(prog.InstallLocation, product.ClassicExecutable);
+                        if (!File.Exists(exe))
+                        {
+                            continue;
+                        }
+
+                        var game = new GameMetadata()
+                        {
+                            GameId = product.ProductId,
+                            Source = new MetadataNameProperty("Battle.net"),
+                            Name = product.Name.RemoveTrademarks(),
+                            InstallDirectory = prog.InstallLocation,
+                            IsInstalled = true,
+                            Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                        };
+
+                        // Check in case there are more versions of single games installed.
+                        if (!games.TryGetValue(game.GameId, out var _))
+                        {
+                            games.Add(game.GameId, game);
+                        }
                     }
                 }
             }
@@ -182,6 +178,32 @@ namespace BattleNetLibrary
                 var classicGames = api.GetOwnedClassicGames();
                 if (classicGames?.Any() == true)
                 {
+                    // W3
+                    var w3Games = classicGames.Where(a => a.regionalGameFranchiseIconFilename.Contains("warcraft-iii"));
+                    if (w3Games.Any())
+                    {
+                        var w3 = BattleNetGames.Games.FirstOrDefault(a => a.ProductId == "W3C");
+                        games.Add(new GameMetadata()
+                        {
+                            Source = new MetadataNameProperty("Battle.net"),
+                            GameId = w3.ProductId,
+                            Name = w3.Name,
+                            Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                        });
+
+                        if (w3Games.Count() == 2)
+                        {
+                            var w3x = BattleNetGames.Games.FirstOrDefault(a => a.ProductId == "W3CX");
+                            games.Add(new GameMetadata()
+                            {
+                                Source = new MetadataNameProperty("Battle.net"),
+                                GameId = w3x.ProductId,
+                                Name = w3x.Name,
+                                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                            });
+                        }
+                    }
+
                     // D2
                     var d2Games = classicGames.Where(a => a.regionalGameFranchiseIconFilename.Contains("diablo-ii"));
                     if (d2Games.Any())

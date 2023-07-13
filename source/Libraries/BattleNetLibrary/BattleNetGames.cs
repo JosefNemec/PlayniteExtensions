@@ -186,6 +186,32 @@ namespace BattleNetLibrary
             },
             new BNetApp()
             {
+                ProductId = "W3C",
+                InternalId = "Warcraft III",
+                Name = "Warcraft III: Reign of Chaos",
+                Type = BNetAppType.Classic,
+                ClassicExecutable = "Warcraft III.exe",
+                Links = new List<Link>()
+                {
+                    new Link("Homepage", "http://blizzard.com/games/war3/"),
+                    new Link("Forums", "https://us.battle.net/forums/en/bnet/12790218/")
+                }
+            },
+            new BNetApp()
+            {
+                ProductId = "W3CX",
+                InternalId = "Warcraft III",
+                Name = "Warcraft III: The Frozen Throne",
+                Type = BNetAppType.Classic,
+                ClassicExecutable = "Frozen Throne.exe",
+                Links = new List<Link>()
+                {
+                    new Link("Homepage", "http://blizzard.com/games/war3/"),
+                    new Link("Forums", "https://us.battle.net/forums/en/bnet/12790218/")
+                }
+            },
+            new BNetApp()
+            {
                 ApiId = 22323,
                 ProductId = "W3",
                 InternalId = "w3",

@@ -31,6 +31,17 @@ namespace BattleNetLibrary
             {
                 gameInfo.Icon = new MetadataFile(product.IconUrl);
             }
+            else
+            {
+                if (product.Type == Models.BNetAppType.Classic && game.IsInstalled)
+                {
+                    var exe = Path.Combine(game.InstallDirectory, product.ClassicExecutable);
+                    if (File.Exists(exe))
+                    {
+                        gameInfo.Icon = new MetadataFile(exe);
+                    }
+                }
+            }
 
             if (!string.IsNullOrEmpty(product.CoverUrl))
             {
