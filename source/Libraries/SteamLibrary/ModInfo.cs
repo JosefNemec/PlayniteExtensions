@@ -195,6 +195,10 @@ namespace SteamLibrary
                         {
                             modInfo.Links.Add(new Link("Manual", match.Groups[2].Value));
                         }
+                        else if (match.Groups[1].Value == "developer")
+                        {
+                            modInfo.Developer = match.Groups[2].Value;
+                        }
                         else if (match.Groups[1].Value == "developer_url")
                         {
                             modInfo.Links.Add(new Link("Developer URL", match.Groups[2].Value));
