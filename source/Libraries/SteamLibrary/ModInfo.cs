@@ -123,6 +123,12 @@ namespace SteamLibrary
 
         static private uint GetModFolderCRC(string folder)
         {
+            int lastDotPos = folder.LastIndexOf('.');
+            if (lastDotPos != -1)
+            {
+                folder = folder.Substring(0, lastDotPos);
+            }
+
             uint crc = BitConverter.ToUInt32(CryptoHelper.CRCHash(Encoding.ASCII.GetBytes(folder)), 0);
 
             // For mods and shortcut game IDs, the high bit is always set. SteamKit doesn't do this automatically (yet).
