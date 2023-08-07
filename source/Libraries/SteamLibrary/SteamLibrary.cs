@@ -1,30 +1,21 @@
-﻿using Playnite.SDK;
+﻿using Playnite.Common;
+using Playnite.SDK;
+using Playnite.SDK.Data;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
+using SteamKit2;
 using SteamLibrary.Models;
 using SteamLibrary.Services;
-using SteamKit2;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-using Playnite;
 using System.Windows;
-using System.Reflection;
-using System.Collections.ObjectModel;
-using Playnite.Common.Web;
-using Steam;
-using System.Diagnostics;
-using Playnite.SDK.Data;
+using System.Windows.Controls;
 using System.Windows.Media;
-using Playnite.Common;
 
 namespace SteamLibrary
 {
