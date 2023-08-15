@@ -1,11 +1,10 @@
-﻿using System;
+﻿using Playnite.SDK.Models;
+using SteamKit2;
+using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
-using Playnite.SDK.Models;
-using SteamKit2;
 
 namespace SteamLibrary
 {
@@ -26,7 +25,7 @@ namespace SteamLibrary
         public string IconPath { get; private set; }
         private readonly ModType modType;
 
-        static private Dictionary<ModType, string> infoFileName = new Dictionary<ModType, string>()
+        static private  readonly Dictionary<ModType, string> infoFileName = new Dictionary<ModType, string>()
         {
             { ModType.HL, "liblist.gam"},
             { ModType.HL2, "gameinfo.txt"}
@@ -123,9 +122,15 @@ namespace SteamLibrary
 
         static private uint GetModFolderCRC(string folder)
         {
+            int lastDotPos = folder.LastIndexOf('.');
+            if (lastDotPos != -1)
+            {
+                folder = folder.Substring(0, lastDotPos);
+            }
+
             uint crc = BitConverter.ToUInt32(CryptoHelper.CRCHash(Encoding.ASCII.GetBytes(folder)), 0);
 
-            // For mods and shortcut game IDs, the high bit is always set. SteamKit doesn't do this automatically (yet).
+            // For mods and shortcut game IDs, the high bit is always set. SteamKit doesn't do this automatically prior to v2.2.0.
             crc |= 0x80000000;
 
             return crc;
@@ -188,6 +193,10 @@ namespace SteamLibrary
                         else if (match.Groups[1].Value == "manual")
                         {
                             modInfo.Links.Add(new Link("Manual", match.Groups[2].Value));
+                        }
+                        else if (match.Groups[1].Value == "developer")
+                        {
+                            modInfo.Developer = match.Groups[2].Value;
                         }
                         else if (match.Groups[1].Value == "developer_url")
                         {

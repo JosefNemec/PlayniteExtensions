@@ -1,30 +1,21 @@
-﻿using Playnite.SDK;
+﻿using Playnite.Common;
+using Playnite.SDK;
+using Playnite.SDK.Data;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
+using SteamKit2;
 using SteamLibrary.Models;
 using SteamLibrary.Services;
-using SteamKit2;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-using Playnite;
 using System.Windows;
-using System.Reflection;
-using System.Collections.ObjectModel;
-using Playnite.Common.Web;
-using Steam;
-using System.Diagnostics;
-using Playnite.SDK.Data;
+using System.Windows.Controls;
 using System.Windows.Media;
-using Playnite.Common;
 
 namespace SteamLibrary
 {
@@ -62,6 +53,8 @@ namespace SteamLibrary
         private readonly Configuration config;
         internal SteamServicesClient ServicesClient;
         internal TopPanelItem TopPanelFriendsButton;
+
+        private static readonly string[] firstPartyModPrefixes = new string[] { "bshift", "cstrike", "czero", "dmc", "dod", "gearbox", "ricochet", "tfc", "valve" };
 
         public SteamLibrary(IPlayniteAPI api) : base(
             "Steam",
@@ -211,10 +204,9 @@ namespace SteamLibrary
         internal static List<GameMetadata> GetInstalledGoldSrcModsFromFolder(string path)
         {
             var games = new List<GameMetadata>();
-            var firstPartyMods = new string[] { "bshift", "cstrike", "czero", "czeror", "dmc", "dod", "gearbox", "ricochet", "tfc", "valve" };
             var dirInfo = new DirectoryInfo(path);
 
-            foreach (var folder in dirInfo.GetDirectories().Where(a => !firstPartyMods.Contains(a.Name)).Select(a => a.FullName))
+            foreach (var folder in dirInfo.GetDirectories().Where(a => !firstPartyModPrefixes.Any(prefix => a.Name.StartsWith(prefix))).Select(a => a.FullName))
             {
                 try
                 {
