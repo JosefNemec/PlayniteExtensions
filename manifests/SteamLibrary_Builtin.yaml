@@ -118,3 +118,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_16.pext
     Changelog:
       - Tag handling fixes by Jeshibu
+  - Version: 2.17
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-08-15
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_17.pext
+    Changelog:
+      - Fix detection of some Half-Life mods (by psychonic)
