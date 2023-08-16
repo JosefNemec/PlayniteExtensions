@@ -124,3 +124,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_17.pext
     Changelog:
       - Fix detection of some Half-Life mods (by psychonic)
+  - Version: 2.18
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-08-16
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_18.pext
+    Changelog:
+      - Force Steam to launch minimized when starting a game while Steam is not running
