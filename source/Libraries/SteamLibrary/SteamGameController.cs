@@ -157,6 +157,12 @@ namespace SteamLibrary
         {
             Dispose();
 
+            var steamExe = Steam.ClientExecPath;
+            if (steamExe.IsNullOrEmpty() || !File.Exists(steamExe))
+            {
+                throw new Exception("Can't start game, Steam install not found");
+            }
+
             var installDirectory = Game.InstallDirectory;
             if (gameId.IsMod)
             {
@@ -173,11 +179,11 @@ namespace SteamLibrary
                     || (playniteAPI.ApplicationInfo.Mode == ApplicationMode.Desktop && settings.ShowSteamLaunchMenuInDesktopMode)
                 ))
             {
-                ProcessStarter.StartUrl($"steam://launch/{Game.GameId}/Dialog");
+                ProcessStarter.StartProcess(steamExe, $"-silent \"steam://launch/{Game.GameId}/Dialog\"");
             }
             else
             {
-                ProcessStarter.StartUrl($"steam://rungameid/{Game.GameId}");
+                ProcessStarter.StartProcess(steamExe, $"-silent \"steam://rungameid/{Game.GameId}\"");
             }
 
             procMon = new ProcessMonitor();
