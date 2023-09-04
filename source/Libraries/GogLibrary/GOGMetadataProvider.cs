@@ -172,7 +172,6 @@ namespace GogLibrary
             // Remove initial opening element and return description without promo
             document.Body.RemoveChild(firstChild);
             return document.Body.InnerHtml;
-
         }
     }
 }
