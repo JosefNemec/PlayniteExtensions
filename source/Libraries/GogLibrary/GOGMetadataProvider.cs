@@ -11,6 +11,7 @@ using Playnite;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using GogLibrary.Services;
+using System.Text.RegularExpressions;
 
 namespace GogLibrary
 {
@@ -38,7 +39,7 @@ namespace GogLibrary
             }
 
             storeData.Name = StringExtensions.NormalizeGameName(storeData.GameDetails.title);
-            storeData.Description = storeData.GameDetails.description.full;
+            storeData.Description = RemoveDescriptionPromos(storeData.GameDetails.description.full);
             storeData.Links = new List<Link>();
 
             if (!string.IsNullOrEmpty(storeData.GameDetails.links.forum))
@@ -132,6 +133,72 @@ namespace GogLibrary
             }
 
             return metadata;
+        }
+
+        internal string RemoveDescriptionPromos(string originalDescription)
+        {
+            if (originalDescription.IsNullOrEmpty())
+            {
+                return originalDescription;
+            }
+
+            // It's possible to check if a description has a promo if they contain known promo image urls
+            if (!Regex.IsMatch(originalDescription, @"<img src=""https:\/\/items.gog.com\/(promobanners|autumn|fall|summer|winter)\/"))
+            {
+                return originalDescription;
+            }
+
+            // Get opening element in description. Promos are always at the start of description.
+            // It has been seen that descriptions start with <a> or <div> elements
+            var openingTagMatch = Regex.Match(originalDescription, @"^<(\w+)");
+            if (!openingTagMatch.Success)
+            {
+                return originalDescription;
+            }
+
+            var openingTagElement = openingTagMatch.Groups[1];
+            var openingTag = string.Format("<{0}", openingTagElement);
+            var closingTag = string.Format("</{0}>", openingTagElement);
+
+            var openingTagsCount = 1;
+            var closingTagsCount = 0;
+            var newDescription = originalDescription.Substring(openingTag.Length);
+
+            // Although not seen yet in promo blocks, check for nested elements of the same tag by
+            // counting number of opening and closing elements to prevent not removing all the promo
+            while (true)
+            {
+                var openingIndex = newDescription.IndexOf(openingTag);
+                var closingIndex = newDescription.IndexOf(closingTag);
+                if (closingIndex == -1)
+                {
+                    // Return original description if for some reason closing tag is not found
+                    return originalDescription;
+                }
+
+                if (openingIndex != -1 && openingIndex < closingIndex)
+                {
+                    // This means there's a nested element with the same tag
+                    openingTagsCount++;
+
+                    // Store description after nested element to keep checking
+                    newDescription = newDescription.Substring(openingIndex + openingTag.Length);
+                }
+                else
+                {
+                    closingTagsCount++;
+                    newDescription = newDescription.Substring(closingIndex + closingTag.Length);
+                    if (openingTagsCount == closingTagsCount)
+                    {
+                        // Same number of elements means the whole promo block has been detected
+                        break;
+                    }
+                }
+            }
+
+            // Remove all starting <hr> and <br> elements that GOG adds after a promo
+            newDescription = Regex.Replace(newDescription, @"^(<hr>|<br>)+", string.Empty);
+            return newDescription.Trim();
         }
     }
 }
