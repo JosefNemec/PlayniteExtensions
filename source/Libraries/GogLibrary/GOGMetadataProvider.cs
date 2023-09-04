@@ -12,6 +12,9 @@ using System.Collections.ObjectModel;
 using System.Globalization;
 using GogLibrary.Services;
 using System.Text.RegularExpressions;
+using AngleSharp.Parser.Html;
+using AngleSharp.Dom.Html;
+using AngleSharp.Dom;
 
 namespace GogLibrary
 {
@@ -39,7 +42,7 @@ namespace GogLibrary
             }
 
             storeData.Name = StringExtensions.NormalizeGameName(storeData.GameDetails.title);
-            storeData.Description = RemoveDescriptionPromos(storeData.GameDetails.description.full);
+            storeData.Description = RemoveDescriptionPromos(storeData.GameDetails.description.full).Trim();
             storeData.Links = new List<Link>();
 
             if (!string.IsNullOrEmpty(storeData.GameDetails.links.forum))
@@ -150,55 +153,26 @@ namespace GogLibrary
 
             // Get opening element in description. Promos are always at the start of description.
             // It has been seen that descriptions start with <a> or <div> elements
-            var openingTagMatch = Regex.Match(originalDescription, @"^<(\w+)");
-            if (!openingTagMatch.Success)
+            var parser = new HtmlParser();
+            var document = parser.Parse(originalDescription);
+            var firstChild = document.Body.FirstChild;
+            if (firstChild == null || firstChild.NodeType != NodeType.Element)
             {
                 return originalDescription;
             }
 
-            var openingTagElement = openingTagMatch.Groups[1];
-            var openingTag = string.Format("<{0}", openingTagElement);
-            var closingTag = string.Format("</{0}>", openingTagElement);
-
-            var openingTagsCount = 1;
-            var closingTagsCount = 0;
-            var newDescription = originalDescription.Substring(openingTag.Length);
-
-            // Although not seen yet in promo blocks, check for nested elements of the same tag by
-            // counting number of opening and closing elements to prevent not removing all the promo
-            while (true)
+            // Remove all following <hr> and <br> elements that GOG adds after a promo
+            var nextSibling = firstChild.NextSibling;
+            while (nextSibling != null && (nextSibling is IHtmlHrElement || nextSibling is IHtmlBreakRowElement))
             {
-                var openingIndex = newDescription.IndexOf(openingTag);
-                var closingIndex = newDescription.IndexOf(closingTag);
-                if (closingIndex == -1)
-                {
-                    // Return original description if for some reason closing tag is not found
-                    return originalDescription;
-                }
-
-                if (openingIndex != -1 && openingIndex < closingIndex)
-                {
-                    // This means there's a nested element with the same tag
-                    openingTagsCount++;
-
-                    // Store description after nested element to keep checking
-                    newDescription = newDescription.Substring(openingIndex + openingTag.Length);
-                }
-                else
-                {
-                    closingTagsCount++;
-                    newDescription = newDescription.Substring(closingIndex + closingTag.Length);
-                    if (openingTagsCount == closingTagsCount)
-                    {
-                        // Same number of elements means the whole promo block has been detected
-                        break;
-                    }
-                }
+                document.Body.RemoveChild(nextSibling);
+                nextSibling = firstChild.NextSibling;
             }
 
-            // Remove all starting <hr> and <br> elements that GOG adds after a promo
-            newDescription = Regex.Replace(newDescription, @"^(<hr>|<br>)+", string.Empty);
-            return newDescription.Trim();
+            // Remove initial opening element and return description without promo
+            document.Body.RemoveChild(firstChild);
+            return document.Body.InnerHtml;
+
         }
     }
 }
