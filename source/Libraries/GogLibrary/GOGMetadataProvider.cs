@@ -146,7 +146,7 @@ namespace GogLibrary
             }
 
             // It's possible to check if a description has a promo if they contain known promo image urls
-            if (!Regex.IsMatch(originalDescription, @"<img src=""https:\/\/items.gog.com\/(promobanners|autumn|fall|summer|winter)\/"))
+            if (!Regex.IsMatch(originalDescription, @"<img src=""https:\/\/items.gog.com\/(promobanners|autumn|fall|summer|winter)\/", RegexOptions.IgnoreCase))
             {
                 return originalDescription;
             }
