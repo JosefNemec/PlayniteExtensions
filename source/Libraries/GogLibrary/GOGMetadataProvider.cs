@@ -145,18 +145,23 @@ namespace GogLibrary
                 return originalDescription;
             }
 
-            // It's possible to check if a description has a promo if they contain known promo image urls
-            if (!Regex.IsMatch(originalDescription, @"<img src=""https:\/\/items.gog.com\/(promobanners|autumn|fall|summer|winter)\/", RegexOptions.IgnoreCase))
-            {
-                return originalDescription;
-            }
-
             // Get opening element in description. Promos are always at the start of description.
             // It has been seen that descriptions start with <a> or <div> elements
             var parser = new HtmlParser();
             var document = parser.Parse(originalDescription);
             var firstChild = document.Body.FirstChild;
-            if (firstChild == null || firstChild.NodeType != NodeType.Element)
+            if (firstChild == null || firstChild.NodeType != NodeType.Element || !firstChild.HasChildNodes)
+            {
+                return originalDescription;
+            }
+
+            // It's possible to check if a description has a promo if the first element contains
+            // a child img element with a src that points to know promo image url patterns
+            var htmlElement = firstChild as IHtmlElement;
+            var promoUrlsRegex = @"https:\/\/items.gog.com\/(promobanners|autumn|fall|summer|winter)\/";
+            var containsPromoImage = htmlElement.QuerySelectorAll("img")
+                        .Any(img => img.HasAttribute("src") && Regex.IsMatch(img.GetAttribute("src"), promoUrlsRegex, RegexOptions.IgnoreCase));
+            if (!containsPromoImage)
             {
                 return originalDescription;
             }
