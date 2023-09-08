@@ -572,7 +572,11 @@ namespace SteamLibrary
                     }
                 }
 
-                result.Add(gameId, DateTimeOffset.FromUnixTimeSeconds(app["LastPlayed"].AsLong()).LocalDateTime);
+                var dt = DateTimeOffset.FromUnixTimeSeconds(app["LastPlayed"].AsLong()).LocalDateTime;
+                if (dt.Year > 1970)
+                {
+                    result.Add(gameId, dt);
+                }
             }
 
             return result;
