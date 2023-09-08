@@ -11,6 +11,10 @@ using Playnite;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using GogLibrary.Services;
+using System.Text.RegularExpressions;
+using AngleSharp.Parser.Html;
+using AngleSharp.Dom.Html;
+using AngleSharp.Dom;
 
 namespace GogLibrary
 {
@@ -38,7 +42,7 @@ namespace GogLibrary
             }
 
             storeData.Name = StringExtensions.NormalizeGameName(storeData.GameDetails.title);
-            storeData.Description = storeData.GameDetails.description.full;
+            storeData.Description = RemoveDescriptionPromos(storeData.GameDetails.description.full).Trim();
             storeData.Links = new List<Link>();
 
             if (!string.IsNullOrEmpty(storeData.GameDetails.links.forum))
@@ -132,6 +136,47 @@ namespace GogLibrary
             }
 
             return metadata;
+        }
+
+        internal string RemoveDescriptionPromos(string originalDescription)
+        {
+            if (originalDescription.IsNullOrEmpty())
+            {
+                return originalDescription;
+            }
+
+            // Get opening element in description. Promos are always at the start of description.
+            // It has been seen that descriptions start with <a> or <div> elements
+            var parser = new HtmlParser();
+            var document = parser.Parse(originalDescription);
+            var firstChild = document.Body.FirstChild;
+            if (firstChild == null || firstChild.NodeType != NodeType.Element || !firstChild.HasChildNodes)
+            {
+                return originalDescription;
+            }
+
+            // It's possible to check if a description has a promo if the first element contains
+            // a child img element with a src that points to know promo image url patterns
+            var htmlElement = firstChild as IHtmlElement;
+            var promoUrlsRegex = @"https:\/\/items.gog.com\/(promobanners|autumn|fall|summer|winter)\/";
+            var containsPromoImage = htmlElement.QuerySelectorAll("img")
+                        .Any(img => img.HasAttribute("src") && Regex.IsMatch(img.GetAttribute("src"), promoUrlsRegex, RegexOptions.IgnoreCase));
+            if (!containsPromoImage)
+            {
+                return originalDescription;
+            }
+
+            // Remove all following <hr> and <br> elements that GOG adds after a promo
+            var nextSibling = firstChild.NextSibling;
+            while (nextSibling != null && (nextSibling is IHtmlHrElement || nextSibling is IHtmlBreakRowElement))
+            {
+                document.Body.RemoveChild(nextSibling);
+                nextSibling = firstChild.NextSibling;
+            }
+
+            // Remove initial opening element and return description without promo
+            document.Body.RemoveChild(firstChild);
+            return document.Body.InnerHtml;
         }
     }
 }
