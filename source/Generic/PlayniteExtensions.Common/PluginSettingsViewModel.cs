@@ -35,12 +35,12 @@ namespace Playnite.SDK
             PlayniteApi = playniteApi;
         }
 
-        public void BeginEdit()
+        public virtual void BeginEdit()
         {
             EditingClone = Serialization.GetClone(Settings);
         }
 
-        public void CancelEdit()
+        public virtual void CancelEdit()
         {
             Settings = EditingClone;
         }

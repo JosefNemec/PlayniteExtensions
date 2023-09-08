@@ -452,7 +452,7 @@ namespace SteamLibrary
             var userId = ulong.Parse(settings.UserId);
             if (settings.IsPrivateAccount)
             {
-                return GetLibraryGames(userId, GetPrivateOwnedGames(userId, settings.ApiKey, settings.IncludeFreeSubGames)?.response?.games);
+                return GetLibraryGames(userId, GetPrivateOwnedGames(userId, settings.RutnimeApiKey, settings.IncludeFreeSubGames)?.response?.games);
             }
             else
             {
@@ -859,7 +859,7 @@ namespace SteamLibrary
                             {
                                 try
                                 {
-                                    var accGames = GetPrivateOwnedGames(id, account.ApiKey, SettingsViewModel.Settings.IncludeFreeSubGames);
+                                    var accGames = GetPrivateOwnedGames(id, account.RutnimeApiKey, SettingsViewModel.Settings.IncludeFreeSubGames);
                                     var parsedGames = GetLibraryGames(id, accGames.response.games, account.ImportPlayTime);
                                     foreach (var accGame in parsedGames)
                                     {

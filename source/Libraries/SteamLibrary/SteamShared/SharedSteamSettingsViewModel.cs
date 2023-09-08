@@ -3,6 +3,7 @@ using Playnite.SDK.Plugins;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 
 namespace SteamLibrary.SteamShared
@@ -14,9 +15,11 @@ namespace SteamLibrary.SteamShared
         private ObservableCollection<TagInfo> okayTags;
         private ObservableCollection<TagInfo> blacklistedTags;
         private string fixedTagCountString;
+        internal readonly string ApiKeysPath;
 
         protected SharedSteamSettingsViewModel(TPlugin plugin, IPlayniteAPI playniteApi) : base(plugin, playniteApi)
         {
+            ApiKeysPath = Path.Combine(plugin.GetPluginUserDataPath(), "keys.dat");
             var savedSettings = LoadSavedSettings();
             if (savedSettings != null)
             {

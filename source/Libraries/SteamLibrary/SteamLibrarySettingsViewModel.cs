@@ -14,6 +14,10 @@ using System.Text.RegularExpressions;
 using Steam;
 using System.Collections.ObjectModel;
 using SteamLibrary.SteamShared;
+using Playnite.SDK.Data;
+using PlayniteExtensions.Common;
+using System.Security.Principal;
+using Playnite.Common;
 
 namespace SteamLibrary
 {
@@ -29,8 +33,9 @@ namespace SteamLibrary
     public class AdditionalSteamAcccount
     {
         public string AccountId { get; set; }
-        public string ApiKey { get; set; }
         public bool ImportPlayTime { get; set; }
+        [Obsolete] public string ApiKey { get; set; }
+        [DontSerialize] public string RutnimeApiKey { get; set; }
     }
 
     public class SteamLibrarySettings : SharedSteamSettings
@@ -46,11 +51,18 @@ namespace SteamLibrary
         public bool IncludeFreeSubGames { get; set; } = false;
         public bool ShowFriendsButton { get; set; } = true;
         public bool IsPrivateAccount { get => isPrivateAccount; set => SetValue(ref isPrivateAccount, value); }
-        public string ApiKey { get => apiKey; set => SetValue(ref apiKey, value); }
         public bool IgnoreOtherInstalled { get; set; }
         public ObservableCollection<AdditionalSteamAcccount> AdditionalAccounts { get; set; } = new ObservableCollection<AdditionalSteamAcccount>();
         public bool ShowSteamLaunchMenuInDesktopMode { get; set; } = true;
         public bool ShowSteamLaunchMenuInFullscreenMode { get; set; } = false;
+        [Obsolete] public string ApiKey { get; set; }
+        [DontSerialize] public string RutnimeApiKey { get => apiKey; set => SetValue(ref apiKey, value); }
+    }
+
+    public class ApiKeyInfo
+    {
+        public string MainAccount { get; set; }
+        public Dictionary<string, string> Accounts { get; set; } = new Dictionary<string, string>();
     }
 
     public class SteamLibrarySettingsViewModel : SharedSteamSettingsViewModel<SteamLibrarySettings, SteamLibrary>
@@ -68,14 +80,14 @@ namespace SteamLibrary
                 {
                     if (Settings.IsPrivateAccount)
                     {
-                        if (Settings.UserId.IsNullOrEmpty() || Settings.ApiKey.IsNullOrEmpty())
+                        if (Settings.UserId.IsNullOrEmpty() || Settings.RutnimeApiKey.IsNullOrEmpty())
                         {
                             return AuthStatus.PrivateAccount;
                         }
 
                         try
                         {
-                            var games = Plugin.GetPrivateOwnedGames(ulong.Parse(Settings.UserId), Settings.ApiKey, false);
+                            var games = Plugin.GetPrivateOwnedGames(ulong.Parse(Settings.UserId), Settings.RutnimeApiKey, false);
                             if (games?.response?.games.HasItems() == true)
                             {
                                 return AuthStatus.Ok;
@@ -158,7 +170,6 @@ namespace SteamLibrary
 
         public SteamLibrarySettingsViewModel(SteamLibrary library, IPlayniteAPI api) : base(library, api)
         {
-            Settings.PropertyChanged += Settings_PropertyChanged;
         }
 
         protected override void OnLoadSettings()
@@ -171,19 +182,79 @@ namespace SteamLibrary
                     Settings.ConnectAccount = true;
                 }
             }
+            else if (Settings.Version == 1)
+            {
+#pragma warning disable CS0612 // Type or member is obsolete
+                Settings.RutnimeApiKey = Settings.ApiKey;
+                Settings.AdditionalAccounts.ForEach(a => a.RutnimeApiKey = a.ApiKey);
+                Settings.ApiKey = null;
+                Settings.AdditionalAccounts.ForEach(a => a.ApiKey = null);
+#pragma warning restore CS0612 // Type or member is obsolete
 
-            Settings.Version = 1;
+                SaveKeys();
+                Settings.Version = 2;
+                Plugin.SavePluginSettings(Settings);
+            }
+
+            Settings.Version = 2;
+            LoadKeys();
+        }
+
+        private void LoadKeys()
+        {
+            if (!FileSystem.FileExists(ApiKeysPath))
+            {
+                return;
+            }
+
+            try
+            {
+
+                var str = Encryption.DecryptFromFile(
+                    ApiKeysPath,
+                    Encoding.UTF8,
+                    WindowsIdentity.GetCurrent().User.Value);
+                var keys = Serialization.FromJson<ApiKeyInfo>(str);
+                Settings.RutnimeApiKey = keys.MainAccount;
+                Settings.AdditionalAccounts.ForEach(a =>
+                { 
+                    if (keys.Accounts.TryGetValue(a.AccountId, out var key))
+                    {
+                        a.RutnimeApiKey = key;
+                    }
+                });
+            }
+            catch (Exception e)
+            {
+                Logger.Error(e, "Failed to load Steam API keys.");
+            }
+        }
+
+        private void SaveKeys()
+        {
+            var keys = new ApiKeyInfo
+            {
+                MainAccount = Settings.RutnimeApiKey
+            };
+
+            Settings.AdditionalAccounts?.ForEach(a => keys.Accounts.Add(a.AccountId, a.RutnimeApiKey));
+            FileSystem.PrepareSaveFile(ApiKeysPath);
+            Encryption.EncryptToFile(
+                ApiKeysPath,
+                Serialization.ToJson(keys),
+                Encoding.UTF8,
+                WindowsIdentity.GetCurrent().User.Value);
         }
 
         protected override void OnInitSettings()
         {
-            Settings.Version = 1;
+            Settings.Version = 2;
         }
 
         private void Settings_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == nameof(SteamLibrarySettings.IsPrivateAccount) ||
-                e.PropertyName == nameof(SteamLibrarySettings.ApiKey))
+                e.PropertyName == nameof(SteamLibrarySettings.RutnimeApiKey))
             {
                 OnPropertyChanged(nameof(AuthStatus));
             }
@@ -191,7 +262,7 @@ namespace SteamLibrary
 
         public override bool VerifySettings(out List<string> errors)
         {
-            if (Settings.IsPrivateAccount && Settings.ApiKey.IsNullOrEmpty())
+            if (Settings.IsPrivateAccount && Settings.RutnimeApiKey.IsNullOrEmpty())
             {
                 errors = new List<string>{ "Steam API key must be specified when using private accounts!" };
                 return false;
@@ -270,8 +341,28 @@ namespace SteamLibrary
             }
         }
 
+        public override void BeginEdit()
+        {
+            base.BeginEdit();
+            EditingClone.RutnimeApiKey = Settings.RutnimeApiKey;
+            for (int i = 0; i < Settings.AdditionalAccounts.Count; i++)
+            {
+                EditingClone.AdditionalAccounts[i].RutnimeApiKey = Settings.AdditionalAccounts[i].RutnimeApiKey;
+            }
+
+            Settings.PropertyChanged += Settings_PropertyChanged;
+        }
+
+        public override void CancelEdit()
+        {
+            Settings.PropertyChanged -= Settings_PropertyChanged;
+            base.CancelEdit();
+        }
+
         public override void EndEdit()
         {
+            Settings.PropertyChanged -= Settings_PropertyChanged;
+            SaveKeys();
             base.EndEdit();
             Plugin.TopPanelFriendsButton.Visible = Settings.ShowFriendsButton;
         }
