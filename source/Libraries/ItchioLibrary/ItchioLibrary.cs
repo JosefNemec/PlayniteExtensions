@@ -115,7 +115,6 @@ namespace ItchioLibrary
                         Name = cave.game.title.RemoveTrademarks(),
                         InstallDirectory = installDir,
                         IsInstalled = true,
-                        CoverImage = cave.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(cave.game.coverUrl),
                         Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     };
                     if (cave.game.publishedAt != null)
@@ -191,7 +190,6 @@ namespace ItchioLibrary
                                     Source = new MetadataNameProperty("itch.io"),
                                     GameId = game.id.ToString(),
                                     Name = game.title.RemoveTrademarks(),
-                                    CoverImage = game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(game.coverUrl),
                                     Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                                 };
                                 if (game.publishedAt != null)
@@ -231,7 +229,6 @@ namespace ItchioLibrary
                             Source = new MetadataNameProperty("itch.io"),
                             GameId = key.game.id.ToString(),
                             Name = key.game.title.RemoveTrademarks(),
-                            CoverImage = key.game.coverUrl.IsNullOrEmpty() ? null : new MetadataFile(key.game.coverUrl),
                             Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                         };
                         if (key.game.publishedAt != null)
