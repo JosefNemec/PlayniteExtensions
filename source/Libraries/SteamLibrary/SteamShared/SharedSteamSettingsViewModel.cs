@@ -119,6 +119,7 @@ namespace SteamLibrary.SteamShared
             {"latam","Español - Latinoamérica (Spanish - Latin America)"},
             {"greek","Ελληνικά (Greek)"},
             {"french","Français (French)"},
+            {"indonesian","Bahasa Indonesia (Indonesian)"},
             {"italian","Italiano (Italian)"},
             {"hungarian","Magyar (Hungarian)"},
             {"dutch","Nederlands (Dutch)"},
