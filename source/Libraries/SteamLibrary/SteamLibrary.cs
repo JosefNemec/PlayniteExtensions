@@ -158,7 +158,6 @@ namespace SteamLibrary
                 Name = name.RemoveTrademarks(),
                 InstallDirectory = installDir,
                 IsInstalled = true,
-                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
             };
 
             return game;
@@ -509,7 +508,6 @@ namespace SteamLibrary
                     Source = new MetadataNameProperty("Steam"),
                     Name = game.name.RemoveTrademarks(),
                     GameId = game.appid.ToString(),
-                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
 
                 if (includePlayTime)
@@ -698,7 +696,6 @@ namespace SteamLibrary
                     Categories = appData.Select(a => new MetadataNameProperty(a)).Cast<MetadataProperty>().ToHashSet(),
                     Hidden = app["hidden"].AsInteger() == 1,
                     Favorite = isFavorite,
-                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 });
             }
 
