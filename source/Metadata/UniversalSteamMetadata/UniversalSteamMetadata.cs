@@ -71,7 +71,7 @@ namespace UniversalSteamMetadata
             var results = new List<StoreSearchResult>();
             using (var webClient = new WebClient { Encoding = Encoding.UTF8 })
             {
-                var searchPageSrc = webClient.DownloadString(string.Format(searchUrl, searchTerm));
+                var searchPageSrc = webClient.DownloadString(string.Format(searchUrl, Uri.EscapeDataString(searchTerm)));
                 var parser = new HtmlParser();
                 var searchPage = parser.Parse(searchPageSrc);
                 foreach (var gameElem in searchPage.QuerySelectorAll(".search_result_row"))
