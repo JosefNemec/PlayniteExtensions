@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCSteamPrivateAccount">私密账户</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">公开账户</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">API 密匙</sys:String>
-  <sys:String x:Key="LOCSteamStartUsingClient">开始使用 {0} 客户端</sys:String>
+  <sys:String x:Key="LOCSteamStartUsingClient">使用 {0} 客户端启动</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCSteamAccountID">账户 ID</sys:String>
   <sys:String x:Key="LOCSteamMetadataLanguageLabel">元数据语言：</sys:String>

@@ -23,5 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">השתמש בתצלומי מסך אם עטיפה אינה זמינה</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">אם כמה תמונות קיימות אז בחר:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">בחר תמונת רקע עבור {0}</sys:String>
-  <sys:String x:Key="LOCIgdbCoverAsIcon" />
+  <sys:String x:Key="LOCIgdbCoverAsIcon">החלף תמונות כיסוי חתוכה באיקון</sys:String>
 </ResourceDictionary>

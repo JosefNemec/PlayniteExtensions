@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">私密账户</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">公开账户</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">API 密匙</sys:String>
-  <sys:String x:Key="LOCIGDBStartUsingClient">开始使用 {0} 客户端</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient">使用 {0} 客户端启动</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">账户 ID</sys:String>
   <sys:String x:Key="LOCIGDBMetadataLanguageLabel">元数据语言：</sys:String>

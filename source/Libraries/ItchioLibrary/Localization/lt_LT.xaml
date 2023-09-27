@@ -10,7 +10,7 @@
   <sys:String x:Key="LOCitchioAuthenticateLabel">Autentifikuoti</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Paleisti žaidimus tiesiogiai, nenaudojant oficialaus kliento</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Spręsti vartotojo sinchronizacijos problemas</sys:String>
-  <sys:String x:Key="LOCitchioTroubleShootingIssues" />
+  <sys:String x:Key="LOCitchioTroubleShootingIssues">Tvarkoma klaidas</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">Importuoti visus žaidimus</sys:String>
   <sys:String x:Key="LOCitchioPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">Vieša paskyra</sys:String>
@@ -18,20 +18,20 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Importuoti pražaistą laiką</sys:String>
   <sys:String x:Key="LOCitchioAccountID">Paskyros ID</sys:String>
-  <sys:String x:Key="LOCitchioMetadataLanguageLabel" />
+  <sys:String x:Key="LOCitchioMetadataLanguageLabel">Metadata kalba:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">bus atidarytas itch.io klientas. Prašome prisijungti ir uždaryti šį pranešimą.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Laukiama vartotojo prisijungimo. Baigus prašome uždaryti šį langą…</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">neįdiegta 25 ar naujesnė itch.io kliento versija.</sys:String>
-  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel" />
-  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel" />
-  <sys:String x:Key="LOCitchioItemClassificationGames" />
-  <sys:String x:Key="LOCitchioItemClassificationTools" />
-  <sys:String x:Key="LOCitchioItemClassificationAssets" />
-  <sys:String x:Key="LOCitchioItemClassificationMods" />
-  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames" />
-  <sys:String x:Key="LOCitchioItemClassificationSoundtracks" />
-  <sys:String x:Key="LOCitchioItemClassificationOthers" />
-  <sys:String x:Key="LOCitchioItemClassificationComics" />
-  <sys:String x:Key="LOCitchioItemClassificationBooks" />
+  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importuoti nemokamus žaidimus iš kolekcijų.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Daiktai skirti importavimui:</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationGames">Žaidimai</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationTools">Įrankiai</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationAssets">Duomenys</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationMods">Modifikacijos</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Fiziniai žaidimai</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Garso takeliai</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationOthers">Kiti</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationComics">Komiksai</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationBooks">Knygos</sys:String>
 </ResourceDictionary>

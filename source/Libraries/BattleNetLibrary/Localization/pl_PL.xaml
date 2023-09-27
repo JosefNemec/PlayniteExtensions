@@ -13,7 +13,7 @@
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel">Importuj wszystkie gry</sys:String>
   <sys:String x:Key="LOCBattleNetPrivateAccount">Konto prywatne</sys:String>
-  <sys:String x:Key="LOCBattleNetPublicAccount">Publiczne konto</sys:String>
+  <sys:String x:Key="LOCBattleNetPublicAccount">Konto publiczne</sys:String>
   <sys:String x:Key="LOCBattleNetAPIKey">Klucz API</sys:String>
   <sys:String x:Key="LOCBattleNetStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Importuj czasy gier</sys:String>

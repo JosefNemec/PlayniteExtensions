@@ -9,14 +9,14 @@
   <sys:String x:Key="LOCAmazonNotLoggedInError">Erro na verificación do usuario</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Verificar</sys:String>
   <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Comezar xogos dereitamente sen arrincar o cliente oficial</sys:String>
-  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Solución de problemas ca sincronización da conta</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Solución de problemas coa sincronización da conta</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingIssues">Solución de problemas</sys:String>
-  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Importar todos os xogos</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Importar tódolos xogos</sys:String>
   <sys:String x:Key="LOCAmazonPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">Conta pública</sys:String>
-  <sys:String x:Key="LOCAmazonAPIKey">Chave da API</sys:String>
+  <sys:String x:Key="LOCAmazonAPIKey">Clave da API</sys:String>
   <sys:String x:Key="LOCAmazonStartUsingClient">Comezar usando o cliente {0}</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Importar tempo de xogo</sys:String>
-  <sys:String x:Key="LOCAmazonAccountID">ID da conta</sys:String>
-  <sys:String x:Key="LOCAmazonMetadataLanguageLabel" />
+  <sys:String x:Key="LOCAmazonAccountID">Id. da conta</sys:String>
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Idioma dos metadatos:</sys:String>
 </ResourceDictionary>

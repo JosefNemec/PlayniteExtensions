@@ -54,14 +54,14 @@
   <sys:String x:Key="LOCSteamAdditionalAccounts">חשבונות נוספים</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">ציין מזהה חשבון Steam וזוג מפתחות API של חשבונות אחרים אם ברצונך לייבא מהם משחקים. ראה דף ויקי לפתרון בעיות של Steam לקבלת מידע נוסף.</sys:String>
   <sys:String x:Key="LOCSteamLimitTagCountLabel">כמות תגים מקסימלית לייבוא</sys:String>
-  <sys:String x:Key="LOCSteamTagPrefixLabel" />
+  <sys:String x:Key="LOCSteamTagPrefixLabel">הקדם תגי שמות עם:</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTabLabel">רשימת תגים אסורים</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">תגים אסורים לא יתווספו למשחקים.</sys:String>
   <sys:String x:Key="LOCSteamTagWhitelistHeader">תגים זמינים</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistHeader">תגים אסורים:</sys:String>
   <sys:String x:Key="LOCSteamTagWhitelistTooltip">הסר מהתגים האסורים</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTooltip">הוסף לתגים האסורים</sys:String>
-  <sys:String x:Key="LOCSteamValidationFixedTagCount" />
-  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode" />
-  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode" />
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">ספירת התג המתוקנת חייבת להיות מספר תקין</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">הצג את תפריט התחלת משחק של סטים במצב דסקטופ</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">הצג את תפריט התחלת משחק של סטים במצב מסך מלא</sys:String>
 </ResourceDictionary>

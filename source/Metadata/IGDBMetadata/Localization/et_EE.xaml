@@ -3,25 +3,23 @@
   <sys:String x:Key="LOCIGDBSettingsImportInstalledLabel">Impordi paigaldatud mängud</sys:String>
   <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel">Impordi paigaldamata mängud</sys:String>
   <sys:String x:Key="LOCIGDBSettingsConnectAccount">Ühenda konto</sys:String>
-  <sys:String x:Key="LOCIGDBLoginChecking" />
-  <sys:String x:Key="LOCIGDBLoggedIn" />
-  <sys:String x:Key="LOCIGDBNotLoggedIn" />
-  <sys:String x:Key="LOCIGDBNotLoggedInError" />
-  <sys:String x:Key="LOCIGDBAuthenticateLabel" />
-  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly" />
+  <sys:String x:Key="LOCIGDBLoginChecking">Autentimise oleku kontrollimine…</sys:String>
+  <sys:String x:Key="LOCIGDBLoggedIn">Kasutaja on autenditud</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedIn">Vajalik on autentimine</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedInError">Kasutaja autentimine ebaõnnestus.</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateLabel">Autendi</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Käivita mängud otseselt, ilma ametlikku klienti avamata</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Konto sünkroonimise probleemide tõrkeotsing</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">Probleemide tõrkeotsing</sys:String>
-  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel" />
+  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel">Impordi kõik mängud</sys:String>
   <sys:String x:Key="LOCIGDBPrivateAccount">Privaatne konto</sys:String>
-  <sys:String x:Key="LOCIGDBPublicAccount" />
+  <sys:String x:Key="LOCIGDBPublicAccount">Avalik konto</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">API võti</sys:String>
-  <sys:String x:Key="LOCIGDBStartUsingClient" />
-  <sys:String x:Key="LOCIGDBImportPlaytime" />
+  <sys:String x:Key="LOCIGDBStartUsingClient">Käivita klienti {0} kasutades</sys:String>
+  <sys:String x:Key="LOCIGDBImportPlaytime">Impordi mänguaeg</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">Konto ID</sys:String>
-  <sys:String x:Key="LOCIGDBMetadataLanguageLabel" />
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Metaandmete keel:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Kasuta kunstiteose puudumisel ekraanipilte</sys:String>
-  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle" />
-  <sys:String x:Key="LOCIgdbSelectBackgroundTitle" />
-  <sys:String x:Key="LOCIgdbCoverAsIcon" />
+  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Kui saadaval on mitu pilti, siis kasuta:</sys:String>
 </ResourceDictionary>

@@ -1,22 +1,10 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCBattleNetSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCBattleNetSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCBattleNetSettingsConnectAccount" />
-  <sys:String x:Key="LOCBattleNetLoginChecking" />
-  <sys:String x:Key="LOCBattleNetLoggedIn" />
-  <sys:String x:Key="LOCBattleNetNotLoggedIn" />
-  <sys:String x:Key="LOCBattleNetNotLoggedInError" />
-  <sys:String x:Key="LOCBattleNetAuthenticateLabel" />
-  <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCBattleNetTroubleShootingIssues" />
-  <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCBattleNetPrivateAccount" />
-  <sys:String x:Key="LOCBattleNetPublicAccount" />
-  <sys:String x:Key="LOCBattleNetAPIKey" />
-  <sys:String x:Key="LOCBattleNetStartUsingClient" />
-  <sys:String x:Key="LOCBattleNetImportPlaytime" />
-  <sys:String x:Key="LOCBattleNetAccountID" />
-  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel" />
+  <sys:String x:Key="LOCBattleNetSettingsImportInstalledLabel">Importar jogos instalados</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportUninstalledLabel">Importar jogos não instalados</sys:String>
+  <sys:String x:Key="LOCBattleNetLoggedIn">O utilizador já está autenticado</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedIn">Requer autenticação</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel">Importar todos os jogos</sys:String>
+  <sys:String x:Key="LOCBattleNetPrivateAccount">Conta Privada</sys:String>
+  <sys:String x:Key="LOCBattleNetPublicAccount">Conta Pública</sys:String>
 </ResourceDictionary>

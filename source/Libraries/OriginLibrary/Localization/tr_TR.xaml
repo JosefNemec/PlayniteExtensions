@@ -3,9 +3,9 @@
   <sys:String x:Key="LOCOriginSettingsImportInstalledLabel">Kurulu oyunları içeri aktar</sys:String>
   <sys:String x:Key="LOCOriginSettingsImportUninstalledLabel">Kurulu olmayan oyunları içe aktar</sys:String>
   <sys:String x:Key="LOCOriginSettingsConnectAccount">Hesap bağla</sys:String>
-  <sys:String x:Key="LOCOriginLoginChecking">Kimlik doğrulaması kontrol ediliyor…</sys:String>
+  <sys:String x:Key="LOCOriginLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
   <sys:String x:Key="LOCOriginLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
-  <sys:String x:Key="LOCOriginNotLoggedIn">Kimlik doğrulaması gerekiyor</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
   <sys:String x:Key="LOCOriginNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCOriginAuthenticateLabel">Kimlik Doğrulaması</sys:String>
   <sys:String x:Key="LOCOriginSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
@@ -15,8 +15,8 @@
   <sys:String x:Key="LOCOriginPrivateAccount">Özel Hesap</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">Genel Hesap</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">API Anahtarı</sys:String>
-  <sys:String x:Key="LOCOriginStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
+  <sys:String x:Key="LOCOriginStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCOriginImportPlaytime">Oynama zamanını içe aktar</sys:String>
-  <sys:String x:Key="LOCOriginAccountID">Hesap ID</sys:String>
+  <sys:String x:Key="LOCOriginAccountID">Hesap kimliği</sys:String>
   <sys:String x:Key="LOCOriginMetadataLanguageLabel">Üst veri dili:</sys:String>
 </ResourceDictionary>

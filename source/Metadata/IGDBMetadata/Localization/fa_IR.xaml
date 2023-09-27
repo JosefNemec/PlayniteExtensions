@@ -23,5 +23,4 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">استفاده از اسکرین شات در صورت نبود اثر هنری</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">در صورت وجود چندین عکس، از این استفاده شود:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">تصویر پس زمینه را برای {0} انتخاب کنید</sys:String>
-  <sys:String x:Key="LOCIgdbCoverAsIcon" />
 </ResourceDictionary>

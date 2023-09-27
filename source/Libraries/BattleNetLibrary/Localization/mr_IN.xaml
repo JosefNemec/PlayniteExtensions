@@ -1,22 +1,11 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCBattleNetSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCBattleNetSettingsImportUninstalledLabel" />
   <sys:String x:Key="LOCBattleNetSettingsConnectAccount">खाते कनेक्ट करा</sys:String>
-  <sys:String x:Key="LOCBattleNetLoginChecking" />
-  <sys:String x:Key="LOCBattleNetLoggedIn" />
-  <sys:String x:Key="LOCBattleNetNotLoggedIn" />
-  <sys:String x:Key="LOCBattleNetNotLoggedInError" />
-  <sys:String x:Key="LOCBattleNetAuthenticateLabel" />
-  <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCBattleNetTroubleShootingIssues" />
   <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel">सर्व गेम आयात करा</sys:String>
   <sys:String x:Key="LOCBattleNetPrivateAccount">खाजगी खाते</sys:String>
   <sys:String x:Key="LOCBattleNetPublicAccount">सार्वजनिक खाते</sys:String>
   <sys:String x:Key="LOCBattleNetAPIKey">API की</sys:String>
   <sys:String x:Key="LOCBattleNetStartUsingClient">{0} क्लाएंट वापरून सुरू करा</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">खेळलेल्याची कालावधी आयात करा</sys:String>
-  <sys:String x:Key="LOCBattleNetAccountID" />
-  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel" />
+  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">मेटाडेटा भाषा:</sys:String>
 </ResourceDictionary>

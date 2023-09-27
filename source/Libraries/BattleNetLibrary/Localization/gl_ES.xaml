@@ -9,14 +9,14 @@
   <sys:String x:Key="LOCBattleNetNotLoggedInError">Erro na verificación do usuario</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Verificar</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Comezar xogos dereitamente sen arrincar o cliente oficial</sys:String>
-  <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Solución de problemas ca sincronización da conta</sys:String>
+  <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Solución de problemas coa sincronización da conta</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Solución de problemas</sys:String>
-  <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel">Importar todos os xogos</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel">Importar tódolos xogos</sys:String>
   <sys:String x:Key="LOCBattleNetPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCBattleNetPublicAccount">Conta pública</sys:String>
-  <sys:String x:Key="LOCBattleNetAPIKey">Chave da API</sys:String>
+  <sys:String x:Key="LOCBattleNetAPIKey">Clave da API</sys:String>
   <sys:String x:Key="LOCBattleNetStartUsingClient">Comezar usando o cliente {0}</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Importar tempo de xogo</sys:String>
-  <sys:String x:Key="LOCBattleNetAccountID">ID da conta</sys:String>
-  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel" />
+  <sys:String x:Key="LOCBattleNetAccountID">Id. da conta</sys:String>
+  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Idioma dos metadatos:</sys:String>
 </ResourceDictionary>

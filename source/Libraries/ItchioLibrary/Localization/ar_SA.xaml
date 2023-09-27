@@ -27,13 +27,13 @@
 </sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">استيراد الألعاب المجانية من المجموعات.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">العناصر المراد استيرادها:</sys:String>
-  <sys:String x:Key="LOCitchioItemClassificationGames" />
-  <sys:String x:Key="LOCitchioItemClassificationTools" />
-  <sys:String x:Key="LOCitchioItemClassificationAssets" />
-  <sys:String x:Key="LOCitchioItemClassificationMods" />
-  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames" />
-  <sys:String x:Key="LOCitchioItemClassificationSoundtracks" />
-  <sys:String x:Key="LOCitchioItemClassificationOthers" />
-  <sys:String x:Key="LOCitchioItemClassificationComics" />
-  <sys:String x:Key="LOCitchioItemClassificationBooks" />
+  <sys:String x:Key="LOCitchioItemClassificationGames">ألعاب</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationTools">أدوات</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationAssets">موارد</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationMods">مودات</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">ألعاب مادية</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks">مقطوعات موسيقية</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationOthers">أخرى</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationComics">مجلات مصوره</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationBooks">كتب</sys:String>
 </ResourceDictionary>

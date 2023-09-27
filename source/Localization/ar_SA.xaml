@@ -27,15 +27,15 @@
 </sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">استيراد الألعاب المجانية من المجموعات.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">العناصر المراد استيرادها:</sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationOthers"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationBooks"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">ألعاب</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">أدوات</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">موارد</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">مودات</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">ألعاب مادية</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">مقطوعات موسيقية</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">أخرى</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">مجلات مصوره</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">كتب</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">تسجيل الدخول</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">إسم الحساب</sys:String>
@@ -96,7 +96,7 @@
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">استخدم لقطات الشاشة في حالة عدم توفر العمل الفني</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">اذا اكثر من صورة متاحات اذن استخدم:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">حدد صورة خلفية لـ{0}</sys:String>
-    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">استبدال صورة الغلاف المزروعة للأيقونة</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">تجاهُل ألعاب متجر الطرف الثالث</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">استيراد ألعاب Humble Choice</sys:String>

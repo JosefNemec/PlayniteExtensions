@@ -15,14 +15,8 @@
   <sys:String x:Key="LOCHumblePrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">API кључ</sys:String>
-  <sys:String x:Key="LOCHumbleStartUsingClient" />
-  <sys:String x:Key="LOCHumbleImportPlaytime" />
-  <sys:String x:Key="LOCHumbleAccountID" />
-  <sys:String x:Key="LOCHumbleMetadataLanguageLabel" />
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Игнориши игре из осталих продавница</sys:String>
-  <sys:String x:Key="LOCHumbleImportChoiceGames" />
-  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip" />
   <sys:String x:Key="LOCHumbleGeneralLibrary">Увези Хамбл библиотеку игара</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Увези стандардне и пакет куповине из Хамбл продавнице</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Укључите да бисте прескочили увод игара које захтевају клијенте треће стране, укључујући и продавнице већ руковођене од стране Playnite-а, да бисте спречили дупликате.</sys:String>
@@ -30,5 +24,4 @@
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Увези игре које захтевају остале клијенте ако је и верзија без ДРМ-а доступна.</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Увек користи Хамбл апликацију за покретање игара</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Када је опција искључена,  неће се покретати игре директно, занемарујући Хамбл апликацију.</sys:String>
-  <sys:String x:Key="LOCHumbleNonTroveInstallError" />
 </ResourceDictionary>

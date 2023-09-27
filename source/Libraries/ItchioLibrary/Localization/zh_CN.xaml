@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCitchioPrivateAccount">私密账户</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">公开账户</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">API 密匙</sys:String>
-  <sys:String x:Key="LOCitchioStartUsingClient">开始使用 {0} 客户端</sys:String>
+  <sys:String x:Key="LOCitchioStartUsingClient">使用 {0} 客户端启动</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCitchioAccountID">账户 ID</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">元数据语言：</sys:String>

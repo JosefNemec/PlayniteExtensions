@@ -8,20 +8,15 @@
   <sys:String x:Key="LOCIGDBNotLoggedIn">Kræver verificering</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Verificering</sys:String>
-  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCIGDBTroubleShootingIssues" />
-  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCIGDBPrivateAccount" />
-  <sys:String x:Key="LOCIGDBPublicAccount" />
-  <sys:String x:Key="LOCIGDBAPIKey" />
-  <sys:String x:Key="LOCIGDBStartUsingClient" />
-  <sys:String x:Key="LOCIGDBImportPlaytime" />
-  <sys:String x:Key="LOCIGDBAccountID" />
-  <sys:String x:Key="LOCIGDBMetadataLanguageLabel" />
+  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Start spil direkte uden at køre officiel klient</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Fejlfinding for konto synkroniserings problemer</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel">Importer alle spil</sys:String>
+  <sys:String x:Key="LOCIGDBPrivateAccount">Privat konto</sys:String>
+  <sys:String x:Key="LOCIGDBPublicAccount">Offentlig Konto</sys:String>
+  <sys:String x:Key="LOCIGDBAPIKey">API Nøgle</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient">Begynd at bruge {0} klient</sys:String>
+  <sys:String x:Key="LOCIGDBImportPlaytime">Importer spilletid</sys:String>
+  <sys:String x:Key="LOCIGDBAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Metadata sprog:</sys:String>
   <!--IGDB-->
-  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary" />
-  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle" />
-  <sys:String x:Key="LOCIgdbSelectBackgroundTitle" />
-  <sys:String x:Key="LOCIgdbCoverAsIcon" />
 </ResourceDictionary>

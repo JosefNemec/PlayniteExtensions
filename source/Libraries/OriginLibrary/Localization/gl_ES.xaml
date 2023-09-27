@@ -9,14 +9,14 @@
   <sys:String x:Key="LOCOriginNotLoggedInError">Erro na verificación do usuario</sys:String>
   <sys:String x:Key="LOCOriginAuthenticateLabel">Verificar</sys:String>
   <sys:String x:Key="LOCOriginSettingsStartGameDirectly">Comezar xogos dereitamente sen arrincar o cliente oficial</sys:String>
-  <sys:String x:Key="LOCOriginTroubleShootingAccountLink">Solución de problemas ca sincronización da conta</sys:String>
+  <sys:String x:Key="LOCOriginTroubleShootingAccountLink">Solución de problemas coa sincronización da conta</sys:String>
   <sys:String x:Key="LOCOriginTroubleShootingIssues">Solución de problemas</sys:String>
-  <sys:String x:Key="LOCOriginSettingsImportLibraryLabel">Importar todos os xogos</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportLibraryLabel">Importar tódolos xogos</sys:String>
   <sys:String x:Key="LOCOriginPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">Conta pública</sys:String>
-  <sys:String x:Key="LOCOriginAPIKey">Chave da API</sys:String>
+  <sys:String x:Key="LOCOriginAPIKey">Clave da API</sys:String>
   <sys:String x:Key="LOCOriginStartUsingClient">Comezar usando o cliente {0}</sys:String>
   <sys:String x:Key="LOCOriginImportPlaytime">Importar tempo de xogo</sys:String>
-  <sys:String x:Key="LOCOriginAccountID">ID da conta</sys:String>
-  <sys:String x:Key="LOCOriginMetadataLanguageLabel" />
+  <sys:String x:Key="LOCOriginAccountID">Id. da conta</sys:String>
+  <sys:String x:Key="LOCOriginMetadataLanguageLabel">Idioma dos metadatos:</sys:String>
 </ResourceDictionary>

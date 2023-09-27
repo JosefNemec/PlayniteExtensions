@@ -9,17 +9,17 @@
   <sys:String x:Key="LOCXboxNotLoggedInError">Erro na verificación do usuario</sys:String>
   <sys:String x:Key="LOCXboxAuthenticateLabel">Verificar</sys:String>
   <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Comezar xogos dereitamente sen arrincar o cliente oficial</sys:String>
-  <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Solución de problemas ca sincronización da conta</sys:String>
+  <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Solución de problemas coa sincronización da conta</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingIssues">Solución de problemas</sys:String>
-  <sys:String x:Key="LOCXboxSettingsImportLibraryLabel">Importar todos os xogos</sys:String>
+  <sys:String x:Key="LOCXboxSettingsImportLibraryLabel">Importar tódolos xogos</sys:String>
   <sys:String x:Key="LOCXboxPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCXboxPublicAccount">Conta pública</sys:String>
-  <sys:String x:Key="LOCXboxAPIKey">Chave da API</sys:String>
+  <sys:String x:Key="LOCXboxAPIKey">Clave da API</sys:String>
   <sys:String x:Key="LOCXboxStartUsingClient">Comezar usando o cliente {0}</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Importar tempo de xogo</sys:String>
-  <sys:String x:Key="LOCXboxAccountID">ID da conta</sys:String>
-  <sys:String x:Key="LOCXboxMetadataLanguageLabel" />
+  <sys:String x:Key="LOCXboxAccountID">Id. da conta</sys:String>
+  <sys:String x:Key="LOCXboxMetadataLanguageLabel">Idioma dos metadatos:</sys:String>
   <!--Xbox-->
-  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Iniciar o aplicativo Xbox Pass no canto da Microsoft Store ó abrir o cliente</sys:String>
+  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Iniciar a aplicación de Xbox Game Pass no canto da Microsoft Store ao abrir o cliente</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">Importar xogos da Xbox</sys:String>
 </ResourceDictionary>

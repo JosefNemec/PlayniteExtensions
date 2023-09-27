@@ -9,14 +9,14 @@
   <sys:String x:Key="LOCRockstarNotLoggedInError">Erro na verificación do usuario</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Verificar</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Comezar xogos dereitamente sen arrincar o cliente oficial</sys:String>
-  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Solución de problemas ca sincronización da conta</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Solución de problemas coa sincronización da conta</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues">Solución de problemas</sys:String>
-  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">Importar todos os xogos</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">Importar tódolos xogos</sys:String>
   <sys:String x:Key="LOCRockstarPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCRockstarPublicAccount">Conta pública</sys:String>
-  <sys:String x:Key="LOCRockstarAPIKey">Chave da API</sys:String>
+  <sys:String x:Key="LOCRockstarAPIKey">Clave da API</sys:String>
   <sys:String x:Key="LOCRockstarStartUsingClient">Comezar usando o cliente {0}</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Importar tempo de xogo</sys:String>
-  <sys:String x:Key="LOCRockstarAccountID">ID da conta</sys:String>
-  <sys:String x:Key="LOCRockstarMetadataLanguageLabel" />
+  <sys:String x:Key="LOCRockstarAccountID">Id. da conta</sys:String>
+  <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Idioma dos metadatos:</sys:String>
 </ResourceDictionary>

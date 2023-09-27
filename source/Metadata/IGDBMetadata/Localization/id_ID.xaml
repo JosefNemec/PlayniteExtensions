@@ -23,5 +23,4 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Gunakan tangkapan layar jika gambar ilustrasi tidak tersedia</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Jika beberapa gambar tersedia maka gunakan:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Pilih gambar latar untuk {0}</sys:String>
-  <sys:String x:Key="LOCIgdbCoverAsIcon" />
 </ResourceDictionary>

@@ -8,18 +8,15 @@
   <sys:String x:Key="LOCXboxNotLoggedIn">Kræver verificering</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
   <sys:String x:Key="LOCXboxAuthenticateLabel">Verificering</sys:String>
-  <sys:String x:Key="LOCXboxSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCXboxTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCXboxTroubleShootingIssues" />
-  <sys:String x:Key="LOCXboxSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCXboxPrivateAccount" />
-  <sys:String x:Key="LOCXboxPublicAccount" />
-  <sys:String x:Key="LOCXboxAPIKey" />
-  <sys:String x:Key="LOCXboxStartUsingClient" />
-  <sys:String x:Key="LOCXboxImportPlaytime" />
-  <sys:String x:Key="LOCXboxAccountID" />
-  <sys:String x:Key="LOCXboxMetadataLanguageLabel" />
+  <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Start spil direkte uden at køre officiel klient</sys:String>
+  <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Fejlfinding for konto synkroniserings problemer</sys:String>
+  <sys:String x:Key="LOCXboxSettingsImportLibraryLabel">Importer alle spil</sys:String>
+  <sys:String x:Key="LOCXboxPrivateAccount">Privat konto</sys:String>
+  <sys:String x:Key="LOCXboxPublicAccount">Offentlig Konto</sys:String>
+  <sys:String x:Key="LOCXboxAPIKey">API Nøgle</sys:String>
+  <sys:String x:Key="LOCXboxStartUsingClient">Begynd at bruge {0} klient</sys:String>
+  <sys:String x:Key="LOCXboxImportPlaytime">Importer spilletid</sys:String>
+  <sys:String x:Key="LOCXboxAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCXboxMetadataLanguageLabel">Metadata sprog:</sys:String>
   <!--Xbox-->
-  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch" />
-  <sys:String x:Key="LOCXboxImportConsoleGames" />
 </ResourceDictionary>

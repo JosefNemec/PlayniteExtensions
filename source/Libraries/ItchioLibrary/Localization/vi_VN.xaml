@@ -25,13 +25,4 @@
   <sys:String x:Key="LOCItchioClientNotInstalledError">Ứng dụng itch.io phiên bản 25 hoặc mới hơn chưa được cài đặt.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Nhập trò chơi miễn phí từ bộ sưu tập.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Các tiện ích được nhập:</sys:String>
-  <sys:String x:Key="LOCitchioItemClassificationGames" />
-  <sys:String x:Key="LOCitchioItemClassificationTools" />
-  <sys:String x:Key="LOCitchioItemClassificationAssets" />
-  <sys:String x:Key="LOCitchioItemClassificationMods" />
-  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames" />
-  <sys:String x:Key="LOCitchioItemClassificationSoundtracks" />
-  <sys:String x:Key="LOCitchioItemClassificationOthers" />
-  <sys:String x:Key="LOCitchioItemClassificationComics" />
-  <sys:String x:Key="LOCitchioItemClassificationBooks" />
 </ResourceDictionary>

@@ -9,19 +9,19 @@
   <sys:String x:Key="LOCIGDBNotLoggedInError">Erro na verificación do usuario</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Verificar</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Comezar xogos dereitamente sen arrincar o cliente oficial</sys:String>
-  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Solución de problemas ca sincronización da conta</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Solución de problemas coa sincronización da conta</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">Solución de problemas</sys:String>
-  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel">Importar todos os xogos</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel">Importar tódolos xogos</sys:String>
   <sys:String x:Key="LOCIGDBPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Conta pública</sys:String>
-  <sys:String x:Key="LOCIGDBAPIKey">Chave da API</sys:String>
+  <sys:String x:Key="LOCIGDBAPIKey">Clave da API</sys:String>
   <sys:String x:Key="LOCIGDBStartUsingClient">Comezar usando o cliente {0}</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Importar tempo de xogo</sys:String>
-  <sys:String x:Key="LOCIGDBAccountID">ID da conta</sys:String>
-  <sys:String x:Key="LOCIGDBMetadataLanguageLabel" />
+  <sys:String x:Key="LOCIGDBAccountID">Id. da conta</sys:String>
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Idioma dos metadatos:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Emprega capturas de pantalla se non hai ilustracións dispoñibles</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Se houbese varias imaxes dispoñibles, entón emprega:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Escoller imaxe de fondo para {0}</sys:String>
-  <sys:String x:Key="LOCIgdbCoverAsIcon" />
+  <sys:String x:Key="LOCIgdbCoverAsIcon">Trocar as portadas cortadas por iconas</sys:String>
 </ResourceDictionary>

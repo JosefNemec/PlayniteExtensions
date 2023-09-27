@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCHumblePrivateAccount">私密账户</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">公开账户</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">API 密匙</sys:String>
-  <sys:String x:Key="LOCHumbleStartUsingClient">开始使用 {0} 客户端</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">使用 {0} 客户端启动</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">账户 ID</sys:String>
   <sys:String x:Key="LOCHumbleMetadataLanguageLabel">元数据语言：</sys:String>

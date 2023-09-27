@@ -29,7 +29,7 @@
   <sys:String x:Key="LOCitchioItemClassificationTools">Ferramentas</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationAssets">Recursos</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationMods">Mods</sys:String>
-  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Jogos físicos</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Mídia física</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Trilhas sonoras</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationOthers">Outros</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationComics">Quadrinhos</sys:String>

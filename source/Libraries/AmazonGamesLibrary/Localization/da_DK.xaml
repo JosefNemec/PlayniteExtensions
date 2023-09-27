@@ -8,15 +8,14 @@
   <sys:String x:Key="LOCAmazonNotLoggedIn">Kræver verificering</sys:String>
   <sys:String x:Key="LOCAmazonNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Verificering</sys:String>
-  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCAmazonTroubleShootingIssues" />
-  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCAmazonPrivateAccount" />
-  <sys:String x:Key="LOCAmazonPublicAccount" />
-  <sys:String x:Key="LOCAmazonAPIKey" />
-  <sys:String x:Key="LOCAmazonStartUsingClient" />
-  <sys:String x:Key="LOCAmazonImportPlaytime" />
-  <sys:String x:Key="LOCAmazonAccountID" />
-  <sys:String x:Key="LOCAmazonMetadataLanguageLabel" />
+  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Start spil direkte uden at køre officiel klient</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Fejlfinding for konto synkroniserings problemer</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Importer alle spil</sys:String>
+  <sys:String x:Key="LOCAmazonPrivateAccount">Privat konto</sys:String>
+  <sys:String x:Key="LOCAmazonPublicAccount">Offentlig Konto</sys:String>
+  <sys:String x:Key="LOCAmazonAPIKey">API Nøgle</sys:String>
+  <sys:String x:Key="LOCAmazonStartUsingClient">Begynd at bruge {0} klient</sys:String>
+  <sys:String x:Key="LOCAmazonImportPlaytime">Importer spilletid</sys:String>
+  <sys:String x:Key="LOCAmazonAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Metadata sprog:</sys:String>
 </ResourceDictionary>

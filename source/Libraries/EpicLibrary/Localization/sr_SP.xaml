@@ -15,8 +15,4 @@
   <sys:String x:Key="LOCEpicPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">API кључ</sys:String>
-  <sys:String x:Key="LOCEpicStartUsingClient" />
-  <sys:String x:Key="LOCEpicImportPlaytime" />
-  <sys:String x:Key="LOCEpicAccountID" />
-  <sys:String x:Key="LOCEpicMetadataLanguageLabel" />
 </ResourceDictionary>

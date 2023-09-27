@@ -15,23 +15,8 @@
   <sys:String x:Key="LOCitchioPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">API кључ</sys:String>
-  <sys:String x:Key="LOCitchioStartUsingClient" />
-  <sys:String x:Key="LOCitchioImportPlaytime" />
-  <sys:String x:Key="LOCitchioAccountID" />
-  <sys:String x:Key="LOCitchioMetadataLanguageLabel" />
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io клијент ће бити отворен. Молимо Вас да се пријавите, затим затворите ову поруку.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Чекање да се корисник пријави, молимо затворите ову поруку када завршите</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io апликација верзије 25 или новија није инсталирана.</sys:String>
-  <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel" />
-  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel" />
-  <sys:String x:Key="LOCitchioItemClassificationGames" />
-  <sys:String x:Key="LOCitchioItemClassificationTools" />
-  <sys:String x:Key="LOCitchioItemClassificationAssets" />
-  <sys:String x:Key="LOCitchioItemClassificationMods" />
-  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames" />
-  <sys:String x:Key="LOCitchioItemClassificationSoundtracks" />
-  <sys:String x:Key="LOCitchioItemClassificationOthers" />
-  <sys:String x:Key="LOCitchioItemClassificationComics" />
-  <sys:String x:Key="LOCitchioItemClassificationBooks" />
 </ResourceDictionary>

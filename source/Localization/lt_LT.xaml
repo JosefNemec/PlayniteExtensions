@@ -10,7 +10,7 @@
     <sys:String x:Key="LOCAuthenticateLabel">Autentifikuoti</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Paleisti žaidimus tiesiogiai, nenaudojant oficialaus kliento</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Spręsti vartotojo sinchronizacijos problemas</sys:String>
-    <sys:String x:Key="LOCTroubleShootingIssues"></sys:String>
+    <sys:String x:Key="LOCTroubleShootingIssues">Tvarkoma klaidas</sys:String>
     <sys:String x:Key="LOCSettingsImportLibraryLabel">Importuoti visus žaidimus</sys:String>
     <sys:String x:Key="LOCPrivateAccount">Privatus paskyra</sys:String>
     <sys:String x:Key="LOCPublicAccount">Vieša paskyra</sys:String>
@@ -18,30 +18,32 @@
     <sys:String x:Key="LOCStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importuoti pražaistą laiką</sys:String>
     <sys:String x:Key="LOCAccountID">Paskyros ID</sys:String>
-    <sys:String x:Key="LOCMetadataLanguageLabel"></sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">Metadata kalba:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">bus atidarytas itch.io klientas. Prašome prisijungti ir uždaryti šį pranešimą.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">Laukiama vartotojo prisijungimo. Baigus prašome uždaryti šį langą…</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">neįdiegta 25 ar naujesnė itch.io kliento versija.</sys:String>
-    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel"></sys:String>
-    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationOthers"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationBooks"></sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importuoti nemokamus žaidimus iš kolekcijų.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Daiktai skirti importavimui:</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">Žaidimai</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">Įrankiai</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">Duomenys</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">Modifikacijos</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Fiziniai žaidimai</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Garso takeliai</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">Kiti</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">Komiksai</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">Knygos</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Vartotojo prisijungimas</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Vartotojo vardas</sys:String>
-    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Prisijunkite prie paskyros ar nadokite savo paskyros pavidinima ,kad su sinchronizuoti biblioteka pilnai.
+Bet paskyros pavadinimo metodas veikia tik jeigu paskyra nustatyta į ne privačia per GOG privatumo nustatymus.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Paleisti žaidimus naudojant GOG Galaxy klientą</sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip"></sys:String>
-    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls"></sys:String>
-    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Tai įjungs GOG Galaxy funkcijas kaip cloud saugokima, žaidimų sekima ir t.t</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automatiškas pradėti instaliacijos procesa kai žaidimai instaliuojami per GOG Galaxy</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Jei įjungta, instaliacijos procesas bus automatiškai pradėtas ir naudotojoįvesties nereikės ir žaidimai bus suinstaliuoti iš anksto nustatyta vieta.
+Jei išjungta, žaidimo puslapis bus atidarytas automatiškai ,kad pradėti instaliacijos procesa.  </sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Koks mano vartotojo vardas?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Vartotojo nuorodos pavadinimas</sys:String>
@@ -51,15 +53,15 @@
     <sys:String x:Key="LOCSteamLinksDiscussions">Diskusijos</sys:String>
     <sys:String x:Key="LOCSteamLinksGuides">Vadovas</sys:String>
     <sys:String x:Key="LOCSteamLinksWorkshop">Dirbtuvės</sys:String>
-    <sys:String x:Key="LOCSteamUseVerticalCovers"></sys:String>
-    <sys:String x:Key="LOCSteamImportFreeSubGames"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarn"></sys:String>
+    <sys:String x:Key="LOCSteamUseVerticalCovers">Atsiųsti vertikalias viršelio nuotraukas</sys:String>
+    <sys:String x:Key="LOCSteamImportFreeSubGames">Importuoti &quot;generic&quot; nemokamus dalykus</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarn">Tai perrašys dabartines kategorijas ir paslėptus ir mėgstamus Steam žaidimus. Ar norite testi?</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Įtraukti kategorijas?</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Nepavyko įtraukti kategorijų, nepasirinkta importavimo paskyra.</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Nepavyko įtraukti kategorijų, duombazė nėra atidaryta.</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportError">Nepavyko įtrauti kategorijų iš Steam: {0}</sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb"></sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">Nepavyko importuoti ankščiau žaistų žaidimų informacija, paskyra importavimui nepasirinkta.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">Nepavyko importuoti ankščiau žaistų žaidimų informacija, databazė ne atidaryta.</sys:String>
     <sys:String x:Key="LOCSettingsSteamLastActivityImportError">Nepavyko importuoti Steam paskutinio žaisto informacijos {0} </sys:String>
     <sys:String x:Key="LOCSettingsApiKeyTooltip">API raktas reikalingas privačioms Steam paskyroms</sys:String>
     <sys:String x:Key="LOCSettingsApiKeyUrlText">Gauti API raktą</sys:String>
@@ -71,40 +73,41 @@
     <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Saugoti ekrano kopiją</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Saugoti fono paveikslėlį</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Baneris</sys:String>
-    <sys:String x:Key="LOCSteamShowFriendsButton"></sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton">Rodyti draugų mygtuką ant viršutinės panelės</sys:String>
     <sys:String x:Key="LOCSteamFriendsTooltip">&quot;Steam&quot; Draugai</sys:String>
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignoruoti įdiegtus žaidimus iš kitų paskyrų</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Papildomos Paskyros</sys:String>
-    <sys:String x:Key="LOCSteamAdditionalAccountsDescription"></sys:String>
-    <sys:String x:Key="LOCSteamLimitTagCountLabel"></sys:String>
-    <sys:String x:Key="LOCSteamTagPrefixLabel"></sys:String>
-    <sys:String x:Key="LOCSteamTagBlacklistTabLabel"></sys:String>
-    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel"></sys:String>
-    <sys:String x:Key="LOCSteamTagWhitelistHeader"></sys:String>
-    <sys:String x:Key="LOCSteamTagBlacklistHeader"></sys:String>
-    <sys:String x:Key="LOCSteamTagWhitelistTooltip"></sys:String>
-    <sys:String x:Key="LOCSteamTagBlacklistTooltip"></sys:String>
-    <sys:String x:Key="LOCSteamValidationFixedTagCount"></sys:String>
-    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode"></sys:String>
-    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode"></sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Parašykite Steam paskyros ID ir API raktą iš kitų paskyrų jei norite iš jų importuoti žaidimų. Paskaitykite Steam troubleshooting wiki puslapį ,kad gauti daugiau informacija.</sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">Limituokite pirmų importuojamų tag kiekį</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">Prefix tag pavadinimai su:</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Tag juodasis sarašas</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Išimti tag nebus pridėti prie žaidimų.</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">Prieinami tag</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistHeader">Išimti tags</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistTooltip">Pašallinti iš išimtų tags</sys:String>
+    <sys:String x:Key="LOCSteamTagBlacklistTooltip">Pridėti prie išimtų tags</sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">Fiksuotas tag skaičius turi būti skaičius</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Parodyti Steam žaidimų paleidimo pasirinkimo menių darbalaukio režimu</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Parodyti Steam žaidimų paleidimo pasirinkimo menių  pilno ekrano režimu</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Naudoti ekrano kopijas jei officiali medžiaga nepasiekiama</sys:String>
-    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>
+    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Jei kelios nuotraukos yra pasiekemos tada naudoti:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Pasirinkti fono nuotrauką {0}</sys:String>
-    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">Pakeiskite apkarpytą viršelio vaizdą ikona</sys:String>
     <!--Humble-->
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames"></sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignoriti trečiūjų šalių parduotuvių žaidimus</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Importuoti &quot;Humble Choice&quot; žaidimus</sys:String>
-    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Importuoti žaidimus pasiekimus Humble Choice prenumeratoje.</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">Importuoti &quot;Humble Library&quot; žaidimus</sys:String>
-    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip"></sys:String>
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree"></sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importuoti standartines Humble parduotuvės pirkimus ir bundle pirkinius.</sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Leisti praleisti žaidimų importavima kuriem reikia trečiūjų šalių paleidėjus,
+įskaitant parduotuves kurios jau yra Playnite ,kad išvengti dviejų tokių pačių žaidmų.</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importuoti jei DRM neturanti versija pasiekiama</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importuoti žaidimus kuriem reikia trečiūjų šalių paleidėjo jei ir DRM neturinti versija yra irgi pasiekiama.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Visada naudoti &quot;Humble&quot; programėlę žaidimų paleidimui</sys:String>
-    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip"></sys:String>
-    <sys:String x:Key="LOCHumbleNonTroveInstallError"></sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Kada išjungta, Playnite bandys paleisti žaidimus tiesiogiai, praleidžiant Humble programėle.</sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">Automatinė instaliacija ir ištrinimas ne prenumeratos Humble žaidimų yra kol kas nepalaikomas.</sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Paleisti Xbox Pass programėle vietoj Microsoft parduotuvės kai paleidžiamas paleidėjas</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Importuoti &quot;Xbox&quot; konsolės žaidimus</sys:String>
 </ResourceDictionary>

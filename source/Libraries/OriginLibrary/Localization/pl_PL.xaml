@@ -13,7 +13,7 @@
   <sys:String x:Key="LOCOriginTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
   <sys:String x:Key="LOCOriginSettingsImportLibraryLabel">Importuj wszystkie gry</sys:String>
   <sys:String x:Key="LOCOriginPrivateAccount">Konto prywatne</sys:String>
-  <sys:String x:Key="LOCOriginPublicAccount">Publiczne konto</sys:String>
+  <sys:String x:Key="LOCOriginPublicAccount">Konto publiczne</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">Klucz API</sys:String>
   <sys:String x:Key="LOCOriginStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCOriginImportPlaytime">Importuj czasy gier</sys:String>

@@ -13,7 +13,7 @@
   <sys:String x:Key="LOCitchioTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">Importuj wszystkie gry</sys:String>
   <sys:String x:Key="LOCitchioPrivateAccount">Konto prywatne</sys:String>
-  <sys:String x:Key="LOCitchioPublicAccount">Publiczne konto</sys:String>
+  <sys:String x:Key="LOCitchioPublicAccount">Konto publiczne</sys:String>
   <sys:String x:Key="LOCitchioAPIKey">Klucz API</sys:String>
   <sys:String x:Key="LOCitchioStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Importuj czasy gier</sys:String>
@@ -25,13 +25,13 @@
   <sys:String x:Key="LOCItchioClientNotInstalledError">Aplikacja itch.io w wersji 25 lub nowszej nie jest zainstalowana.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Zaimportuj darmowe gry z kolekcji.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Zostaną zaimportowane:</sys:String>
-  <sys:String x:Key="LOCitchioItemClassificationGames" />
-  <sys:String x:Key="LOCitchioItemClassificationTools" />
-  <sys:String x:Key="LOCitchioItemClassificationAssets" />
-  <sys:String x:Key="LOCitchioItemClassificationMods" />
-  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames" />
-  <sys:String x:Key="LOCitchioItemClassificationSoundtracks" />
-  <sys:String x:Key="LOCitchioItemClassificationOthers" />
-  <sys:String x:Key="LOCitchioItemClassificationComics" />
-  <sys:String x:Key="LOCitchioItemClassificationBooks" />
+  <sys:String x:Key="LOCitchioItemClassificationGames">Gry</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationTools">Narzędzia</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationAssets">Zasoby</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationMods">Modyfikacje</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Gry fizyczne</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Ścieżki dźwiękowe</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationOthers">Inne</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationComics">Komiksy</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationBooks">Książki</sys:String>
 </ResourceDictionary>

@@ -26,15 +26,15 @@
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">ייבא משחקים בחינם מאוספים.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">פריטים לייבוא:
 </sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationOthers"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationBooks"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">משחקים</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">כלים</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">נכסים</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">מודים</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">משחקים פיזיים</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">פסקולים</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">אחרים</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">קומיקס</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">ספרים</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">כניסה לחשבון</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">שם חשבון</sys:String>
@@ -80,21 +80,21 @@
     <sys:String x:Key="LOCSteamAdditionalAccounts">חשבונות נוספים</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">ציין מזהה חשבון Steam וזוג מפתחות API של חשבונות אחרים אם ברצונך לייבא מהם משחקים. ראה דף ויקי לפתרון בעיות של Steam לקבלת מידע נוסף.</sys:String>
     <sys:String x:Key="LOCSteamLimitTagCountLabel">כמות תגים מקסימלית לייבוא</sys:String>
-    <sys:String x:Key="LOCSteamTagPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">הקדם תגי שמות עם:</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTabLabel">רשימת תגים אסורים</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">תגים אסורים לא יתווספו למשחקים.</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistHeader">תגים זמינים</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistHeader">תגים אסורים:</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">הסר מהתגים האסורים</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">הוסף לתגים האסורים</sys:String>
-    <sys:String x:Key="LOCSteamValidationFixedTagCount"></sys:String>
-    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode"></sys:String>
-    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode"></sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">ספירת התג המתוקנת חייבת להיות מספר תקין</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">הצג את תפריט התחלת משחק של סטים במצב דסקטופ</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">הצג את תפריט התחלת משחק של סטים במצב מסך מלא</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">השתמש בתצלומי מסך אם עטיפה אינה זמינה</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">אם כמה תמונות קיימות אז בחר:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">בחר תמונת רקע עבור {0}</sys:String>
-    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">החלף תמונות כיסוי חתוכה באיקון</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">התעלם ממשחקי חנויות חיצוניות</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">יבא משחקי Humble Choice</sys:String>

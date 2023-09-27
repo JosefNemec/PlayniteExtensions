@@ -13,7 +13,7 @@
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
   <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Importuj wszystkie gry</sys:String>
   <sys:String x:Key="LOCHumblePrivateAccount">Konto prywatne</sys:String>
-  <sys:String x:Key="LOCHumblePublicAccount">Publiczne konto</sys:String>
+  <sys:String x:Key="LOCHumblePublicAccount">Konto publiczne</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">Klucz API</sys:String>
   <sys:String x:Key="LOCHumbleStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Importuj czasy gier</sys:String>

@@ -10,7 +10,7 @@
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Autentifikuoti</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Paleisti žaidimus tiesiogiai, nenaudojant oficialaus kliento</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Spręsti vartotojo sinchronizacijos problemas</sys:String>
-  <sys:String x:Key="LOCRockstarTroubleShootingIssues" />
+  <sys:String x:Key="LOCRockstarTroubleShootingIssues">Tvarkoma klaidas</sys:String>
   <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">Importuoti visus žaidimus</sys:String>
   <sys:String x:Key="LOCRockstarPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCRockstarPublicAccount">Vieša paskyra</sys:String>
@@ -18,5 +18,5 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Importuoti pražaistą laiką</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">Paskyros ID</sys:String>
-  <sys:String x:Key="LOCRockstarMetadataLanguageLabel" />
+  <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Metadata kalba:</sys:String>
 </ResourceDictionary>

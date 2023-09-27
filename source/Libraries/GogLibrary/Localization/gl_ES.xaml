@@ -9,22 +9,24 @@
   <sys:String x:Key="LOCGOGNotLoggedInError">Erro na verificación do usuario</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Verificar</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Comezar xogos dereitamente sen arrincar o cliente oficial</sys:String>
-  <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Solución de problemas ca sincronización da conta</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Solución de problemas coa sincronización da conta</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues">Solución de problemas</sys:String>
-  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">Importar todos os xogos</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">Importar tódolos xogos</sys:String>
   <sys:String x:Key="LOCGOGPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">Conta pública</sys:String>
-  <sys:String x:Key="LOCGOGAPIKey">Chave da API</sys:String>
+  <sys:String x:Key="LOCGOGAPIKey">Clave da API</sys:String>
   <sys:String x:Key="LOCGOGStartUsingClient">Comezar usando o cliente {0}</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Importar tempo de xogo</sys:String>
-  <sys:String x:Key="LOCGOGAccountID">ID da conta</sys:String>
-  <sys:String x:Key="LOCGOGMetadataLanguageLabel" />
+  <sys:String x:Key="LOCGOGAccountID">Id. da conta</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Idioma dos metadatos:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Verificación de conta</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Nome da conta</sys:String>
-  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Verifica a túa conta ou usa o teu nome de conta pública para sincronizar toda a túa biblioteca.</sys:String>
-  <sys:String x:Key="LOCSettingsGOGUseGalaxy">Arrinca xogos empregando o cliente GOG Galaxy</sys:String>
-  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Isto activará as funcións de GOG Galaxy como as partidas salvadas na nube, o seguimento de tempo de xogo, etc.</sys:String>
-  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls" />
-  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve" />
+  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Inicia sesión na túa conta ou usa o teu nome de conta pública para sincronizar toda a túa biblioteca.
+A opción do nome de conta só funciona con contas cuxas bibliotecas de xogos están configuradas como públicas na configuración de privacidade de GOG.</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxy">Inicia os xogos empregando o cliente GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Isto activará as funcións de GOG Galaxy como as partidas gardadas na nube, o seguimento de tempo de xogo, etc.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Iniciar automaticamente o proceso de instalación ao instalar xogos en GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Se esta opción está activada, o proceso de instalación iniciarase automaticamente sen interacción do usuario na localización de instalación predeterminada.
+Se esta opción está desactivada, abrirase a páxina do xogo para iniciar manualmente o proceso de instalación.</sys:String>
 </ResourceDictionary>

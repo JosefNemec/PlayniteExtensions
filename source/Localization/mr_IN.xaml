@@ -18,27 +18,27 @@
     <sys:String x:Key="LOCStartUsingClient">{0} क्लाएंट वापरून सुरू करा</sys:String>
     <sys:String x:Key="LOCImportPlaytime">खेळलेल्याची कालावधी आयात करा</sys:String>
     <sys:String x:Key="LOCAccountID"></sys:String>
-    <sys:String x:Key="LOCMetadataLanguageLabel"></sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">मेटाडेटा भाषा:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io चालू केले जाईल. कृपया साइन इन करा आणि मग हा संदेश बंद करा.</sys:String>
-    <sys:String x:Key="LOCItchioSignInWaitMessage"></sys:String>
+    <sys:String x:Key="LOCItchioSignInWaitMessage">प्रयोक्ता साइन-इन होण्यास थांबले आहे. तसे झाल्यावर हा संदेश बंद करा…</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">आवृत्ती २५ किंवा नवीन असलेले itch.io अ‍ॅप स्थापित नाही.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel"></sys:String>
-    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">आयात करायच्या वस्तू:</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">गेम्स</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">साधने</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">मॉड</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationOthers"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationBooks"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">साऊंडट्रॅक्स</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">इतर</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">कॉमिक्स</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">पुस्तके</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">खात्याचा लॉगइन</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">खात्याचे नाव</sys:String>
     <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxy"></sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxy">GOG गॅलॅक्सी क्लाएंट वापरून गेम सुरू करा</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip"></sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls"></sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve"></sys:String>
@@ -54,7 +54,7 @@
     <sys:String x:Key="LOCSteamUseVerticalCovers"></sys:String>
     <sys:String x:Key="LOCSteamImportFreeSubGames"></sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportWarn"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle"></sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">कॅटेगरी आयात करायच्या का?</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount"></sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorDb"></sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportError"></sys:String>
@@ -64,12 +64,12 @@
     <sys:String x:Key="LOCSettingsApiKeyTooltip"></sys:String>
     <sys:String x:Key="LOCSettingsApiKeyUrlText">API की मिळवा</sys:String>
     <sys:String x:Key="LOCSettingsSteamImportMetadata"></sys:String>
-    <sys:String x:Key="LOCImportSteamCategoriesLabel"></sys:String>
+    <sys:String x:Key="LOCImportSteamCategoriesLabel">स्टीम कॅटेगरी आयात करा</sys:String>
     <sys:String x:Key="LOCImportSteamLastActivityLabel">स्टीमवर याआधी खेळलेले आयात करा</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSource"></sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceImage">गेम प्रतिमा</sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot"></sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceStore"></sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">स्टोअर स्क्रीनशॉट</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceStore">स्टोअर पार्श्वभूमी</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">बॅनर</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton"></sys:String>
     <sys:String x:Key="LOCSteamFriendsTooltip">स्टीम फ्रेंड्झ</sys:String>
@@ -89,8 +89,8 @@
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"></sys:String>
-    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>
-    <sys:String x:Key="LOCIgdbSelectBackgroundTitle"></sys:String>
+    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">अनेक चित्र उपलब्ध असल्यास याचा वापर करा:</sys:String>
+    <sys:String x:Key="LOCIgdbSelectBackgroundTitle">{0} यासाठी पार्श्वभूमी चित्र निवडा</sys:String>
     <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames"></sys:String>

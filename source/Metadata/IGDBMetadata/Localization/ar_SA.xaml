@@ -23,5 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">استخدم لقطات الشاشة في حالة عدم توفر العمل الفني</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">اذا اكثر من صورة متاحات اذن استخدم:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">حدد صورة خلفية لـ{0}</sys:String>
-  <sys:String x:Key="LOCIgdbCoverAsIcon" />
+  <sys:String x:Key="LOCIgdbCoverAsIcon">استبدال صورة الغلاف المزروعة للأيقونة</sys:String>
 </ResourceDictionary>

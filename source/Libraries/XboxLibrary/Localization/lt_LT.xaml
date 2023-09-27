@@ -10,7 +10,7 @@
   <sys:String x:Key="LOCXboxAuthenticateLabel">Autentifikuoti</sys:String>
   <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Paleisti žaidimus tiesiogiai, nenaudojant oficialaus kliento</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Spręsti vartotojo sinchronizacijos problemas</sys:String>
-  <sys:String x:Key="LOCXboxTroubleShootingIssues" />
+  <sys:String x:Key="LOCXboxTroubleShootingIssues">Tvarkoma klaidas</sys:String>
   <sys:String x:Key="LOCXboxSettingsImportLibraryLabel">Importuoti visus žaidimus</sys:String>
   <sys:String x:Key="LOCXboxPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCXboxPublicAccount">Vieša paskyra</sys:String>
@@ -18,8 +18,8 @@
   <sys:String x:Key="LOCXboxStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Importuoti pražaistą laiką</sys:String>
   <sys:String x:Key="LOCXboxAccountID">Paskyros ID</sys:String>
-  <sys:String x:Key="LOCXboxMetadataLanguageLabel" />
+  <sys:String x:Key="LOCXboxMetadataLanguageLabel">Metadata kalba:</sys:String>
   <!--Xbox-->
-  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch" />
+  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Paleisti Xbox Pass programėle vietoj Microsoft parduotuvės kai paleidžiamas paleidėjas</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">Importuoti "Xbox" konsolės žaidimus</sys:String>
 </ResourceDictionary>

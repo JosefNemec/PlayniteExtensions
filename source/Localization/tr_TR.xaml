@@ -3,9 +3,9 @@
     <sys:String x:Key="LOCSettingsImportInstalledLabel">Kurulu oyunları içeri aktar</sys:String>
     <sys:String x:Key="LOCSettingsImportUninstalledLabel">Kurulu olmayan oyunları içe aktar</sys:String>
     <sys:String x:Key="LOCSettingsConnectAccount">Hesap bağla</sys:String>
-    <sys:String x:Key="LOCLoginChecking">Kimlik doğrulaması kontrol ediliyor…</sys:String>
+    <sys:String x:Key="LOCLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
     <sys:String x:Key="LOCLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
-    <sys:String x:Key="LOCNotLoggedIn">Kimlik doğrulaması gerekiyor</sys:String>
+    <sys:String x:Key="LOCNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Kimlik Doğrulaması</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
@@ -15,13 +15,13 @@
     <sys:String x:Key="LOCPrivateAccount">Özel Hesap</sys:String>
     <sys:String x:Key="LOCPublicAccount">Genel Hesap</sys:String>
     <sys:String x:Key="LOCAPIKey">API Anahtarı</sys:String>
-    <sys:String x:Key="LOCStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
+    <sys:String x:Key="LOCStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Oynama zamanını içe aktar</sys:String>
-    <sys:String x:Key="LOCAccountID">Hesap ID</sys:String>
+    <sys:String x:Key="LOCAccountID">Hesap kimliği</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Üst veri dili:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io başlatılacaktır. Lütfen oturum açın ve ardından bu mesajı kapatın.</sys:String>
-    <sys:String x:Key="LOCItchioSignInWaitMessage">Kullanıcının oturum açmasını bekleyin, tamamladığınızda lütfen bunu kapatın…</sys:String>
+    <sys:String x:Key="LOCItchioSignInWaitMessage">Kullanıcının oturum açması bekleniyor, tamamladığınızda lütfen bunu kapatın…</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io uygulama sürümü 25 veya daha yenisi kurulu değil.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Koleksiyonlardaki ücretsiz oyunları içe aktar.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">İçe aktarılacak öğeler:</sys:String>
@@ -37,11 +37,13 @@
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Hesap Girişi</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Hesap Adı</sys:String>
-    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Bütün kütüphaneni eşitlemek için hesabına giriş yap ya da herkese açık hesap ismini kullan. Not: Hesap ismi seçeneği sadece GOG'un gizlilik seçeneğinin herkese görünür olduğu hesaplar için çalışır.</sys:String>
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Kütüphanenin tamamını eşitlemek için hesabına giriş yap ya da herkese açık hesap adını kullan.
+Not: Hesap Adı seçeneği, sadece GOG' un gizlilik ayarlarında kütüphanesi herkese görünür olarak ayarlanan hesaplarda çalışır.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">GOG Galaxy istemcisini kullanarak oyunları başlatın</sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Bu, bulut kayıtları, oyun süresi takibi vb. GOG Galaxy özelliklerini etkinleştirecektir.</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Bu; bulut kayıtları, oyun süresi takibi gibi GOG Galaxy özelliklerini etkinleştirecektir.</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">GOG Galaxy için oyun kurarken kurulum işlemini otomatik olarak başlat</sys:String>
-    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Etkinleştirilirse, kurulum işlemi yapılandırılan varsayılan kurulum konumunda kullanıcı etkileşimine ihtiyaç duymadan otomatik olarak başlatılacaktır. Devre dışı bırakılırsa, kurulum işlemini el ile başlatmak için oyun sayfası açılacaktır.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Etkinleştirilirse; kurulum işlemi, kullanıcı etkileşimi gerekmeksizin yapılandırılmış öntanımlı kurulum konumunda kendiliğinden başlatılacaktır.
+Devre dışı bırakılırsa, kurulum işlemini elle başlatmak için oyun sayfası açılacaktır.</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Hesap adım ne?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Hesap URL Adı</sys:String>
@@ -51,31 +53,31 @@
     <sys:String x:Key="LOCSteamLinksDiscussions">Tartışmalar</sys:String>
     <sys:String x:Key="LOCSteamLinksGuides">Rehberler</sys:String>
     <sys:String x:Key="LOCSteamLinksWorkshop">Atölye</sys:String>
-    <sys:String x:Key="LOCSteamUseVerticalCovers">Dikey kapak resimlerini indir</sys:String>
+    <sys:String x:Key="LOCSteamUseVerticalCovers">Dikey kapak görsellerini indir</sys:String>
     <sys:String x:Key="LOCSteamImportFreeSubGames">Jenerik içermeyen öğeleri içe aktarın</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportWarn">Bu, tüm Steam oyunlarındaki gizli ve favori durumları da dahil geçerli kategorilerin üzerine yazacaktır. Devam etmek istiyor musun?</sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Kategorileri İçe Aktar?</sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Kategoriler alınamıyor, hesap seçilmedi.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Kategoriler İçe Aktarılsın mı?</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Kategoriler alınamıyor, içeri aktarmak üzere hesap seçilmedi.</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Kategoriler alınamıyor, veritabanı açılmadı.</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportError">Steam kategorileri içe aktarılamadı: {0}</sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">En son oynanma bilgileri alınamıyor, hesap seçilmedi.</sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">En son oynatılan bilgiler alınamıyor, veritabanı açılmadı.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">En son oynanma bilgileri alınamıyor, içeri aktarmak üzere hesap seçilmedi.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">En son oynanma bilgileri alınamıyor, veritabanı açılmadı.</sys:String>
     <sys:String x:Key="LOCSettingsSteamLastActivityImportError">Steam en son oynanma bilgileri alınamadı: {0}</sys:String>
     <sys:String x:Key="LOCSettingsApiKeyTooltip">Steam özel hesapları için API Anahtarı gerekir</sys:String>
     <sys:String x:Key="LOCSettingsApiKeyUrlText">API anahtarını al</sys:String>
     <sys:String x:Key="LOCSettingsSteamImportMetadata">Steam hesabından üst verileri içe aktar:</sys:String>
     <sys:String x:Key="LOCImportSteamCategoriesLabel">Steam Kategorilerini İçe Aktar</sys:String>
     <sys:String x:Key="LOCImportSteamLastActivityLabel">Steam En Son Oynananları İçeri Aktar</sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSource">Arka plan resmi kaynağı:</sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceImage">Oyun Resmi</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSource">Arka plan görseli kaynağı:</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceImage">Oyun Görseli</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">Mağaza Ekran Görüntüsü</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Mağaza Arka Planı</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Afiş</sys:String>
-    <sys:String x:Key="LOCSteamShowFriendsButton">Üst panelde arkadaşlar düğmesi göster</sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton">Üst panelde arkadaşlar düğmesi göster </sys:String>
     <sys:String x:Key="LOCSteamFriendsTooltip">Steam Arkadaşları</sys:String>
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Diğer hesaplardan kurulmuş oyunları yok say</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Ek Hesaplar</sys:String>
-    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Diğer hesapların oyunları içe aktarmak istiyorsanız onların Steam hesap ID ve API anahtarlarını belirtin. Daha fazla bilgi için Steam sorun giderme wiki sayfasına bakın.</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Diğer hesaplardan oyunları içe aktarmak istiyorsanız onların Steam hesap ID ve API anahtarlarını belirtin. Daha fazla bilgi için Steam sorun giderme wiki sayfasına bakın.</sys:String>
     <sys:String x:Key="LOCSteamLimitTagCountLabel">İçe aktarılan etiketlerin miktarını ilk etiketle sınırlayın</sys:String>
     <sys:String x:Key="LOCSteamTagPrefixLabel">Etiket adlarını şu önek ile kullan:</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Etiket kara listesi</sys:String>
@@ -88,23 +90,24 @@
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Steam oyun başlatıcı seçim menüsünü masaüstü kipinde göster</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Steam oyun başlatıcı seçim menüsünü tam ekran kipinde göster</sys:String>
     <!--IGDB-->
-    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Resim kullanılamıyorsa ekran görüntüsü kullan</sys:String>
+    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"> Görsel kullanılamıyorsa ekran görüntüsü kullan</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Birden fazla resim mevcutsa, şunu kullan:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">{0} için arka plan resmi seç</sys:String>
-    <sys:String x:Key="LOCIgdbCoverAsIcon">Kırpılmış kapak resmini simge olarak kullan</sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">Kırpılmış kapak görselini simge olarak kullan</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Üçüncü parti mağaza oyunlarını yok say</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Humble Choice oyunlarını içe aktar</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Humble Choice aboneliğinin bir parçası olan oyunları içe aktar.</sys:String>
-    <sys:String x:Key="LOCHumbleGeneralLibrary">Humble Kütüphane oyunlarını içe aktar</sys:String>
-    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Standart Humble mağazası ve paket satın alımlarını içe aktar.</sys:String>
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Üçüncü parti istemcileri gerektiren oyunları içe aktarmayı atlamayı etkinleştirin, Playnite'da halihazırda yönetilen mağazalar dahil (kopyaları önlemek için).</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">Humble Kütüphanesindeki oyunları içe aktar</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Standart Humble mağazası satın alımları ile paket satın alımlarını içe aktar.</sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Playnite' da halihazırda yönetilen mağazalar da çiftleri önlemek için dahil olmak üzere,
+üçüncü parti istemcileri gerektiren oyunları içe aktarmayı atlamayı etkinleştirin.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">DRM içermeyen sürüm mevcutsa içe aktar</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">DRM içermeyen sürüm mevcutsa, üçüncü parti istemci gerektiren oyunları içe aktarın.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Oyunları başlatmak için her zaman Humble uygulaması kullan</sys:String>
-    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Devre dışı ise, Playnite, Humble uygulamasını yoksayarak oyunları doğrudan çalıştırmaya çalışacaktır.</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Devre dışı bırakıldığında Playnite, Humble uygulamasını atlayarak oyunları doğrudan çalıştırmayı deneyecektir.</sys:String>
     <sys:String x:Key="LOCHumbleNonTroveInstallError">Abonelik dışı Humble oyunlarının otomatik kurulumu ve kaldırılması şu anda desteklenmemektedir.</sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">İstemciyi açarken Microsoft Mağaza'sı yerine Xbox Pass uygulamasını başlat</sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">İstemciyi açarken Microsoft Mağaza' sı yerine Xbox Pass uygulamasını başlat</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Xbox konsol oyunlarını içe aktar</sys:String>
 </ResourceDictionary>

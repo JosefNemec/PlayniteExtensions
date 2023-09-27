@@ -25,15 +25,15 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io kliens v25 vagy újabb nincs telepítve.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Ingyenes játékokat is importálja</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">A következő elemek importálása:</sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationOthers"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationBooks"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">Játékok</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">Eszközök</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">Értékek</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">Modok</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Fizikai játékok</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Játékzenék</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">Egyebek</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">Képregények</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">Könyvek</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Fiók bejelentkezés</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Fiók neve</sys:String>
@@ -93,7 +93,7 @@ Kikapcsolása esetén a játék oldala fog megnyílni, hogy kézzel tudjuk indí
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Képernyőkép használata, ha nincs játékgrafika</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Ha több találat van, válassza:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">{0} háttérképének kiválasztása</sys:String>
-    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">Ikon behelyettesítése kivágott képpel</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Harmadik féltől származó játékok figyelmen kívül hagyása</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">A Humble Choice játékokat is importálja</sys:String>

@@ -13,7 +13,7 @@
   <sys:String x:Key="LOCEpicTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
   <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">Importuj wszystkie gry</sys:String>
   <sys:String x:Key="LOCEpicPrivateAccount">Konto prywatne</sys:String>
-  <sys:String x:Key="LOCEpicPublicAccount">Publiczne konto</sys:String>
+  <sys:String x:Key="LOCEpicPublicAccount">Konto publiczne</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">Klucz API</sys:String>
   <sys:String x:Key="LOCEpicStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Importuj czasy gier</sys:String>

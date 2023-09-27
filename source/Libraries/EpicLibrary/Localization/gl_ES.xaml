@@ -9,14 +9,14 @@
   <sys:String x:Key="LOCEpicNotLoggedInError">Erro na verificación do usuario</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Verificar</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Comezar xogos dereitamente sen arrincar o cliente oficial</sys:String>
-  <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Solución de problemas ca sincronización da conta</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Solución de problemas coa sincronización da conta</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">Solución de problemas</sys:String>
-  <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">Importar todos os xogos</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">Importar tódolos xogos</sys:String>
   <sys:String x:Key="LOCEpicPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">Conta pública</sys:String>
-  <sys:String x:Key="LOCEpicAPIKey">Chave da API</sys:String>
+  <sys:String x:Key="LOCEpicAPIKey">Clave da API</sys:String>
   <sys:String x:Key="LOCEpicStartUsingClient">Comezar usando o cliente {0}</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Importar tempo de xogo</sys:String>
-  <sys:String x:Key="LOCEpicAccountID">ID da conta</sys:String>
-  <sys:String x:Key="LOCEpicMetadataLanguageLabel" />
+  <sys:String x:Key="LOCEpicAccountID">Id. da conta</sys:String>
+  <sys:String x:Key="LOCEpicMetadataLanguageLabel">Idioma dos metadatos:</sys:String>
 </ResourceDictionary>

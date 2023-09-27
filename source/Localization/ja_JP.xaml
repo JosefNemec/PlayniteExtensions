@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-    <sys:String x:Key="LOCSettingsImportInstalledLabel">インストール済みのゲームをインポートする</sys:String>
-    <sys:String x:Key="LOCSettingsImportUninstalledLabel">インストールされていないゲームをインポートする</sys:String>
+    <sys:String x:Key="LOCSettingsImportInstalledLabel">インストール済みのゲームをインポート</sys:String>
+    <sys:String x:Key="LOCSettingsImportUninstalledLabel">インストールされていないゲームをインポート</sys:String>
     <sys:String x:Key="LOCSettingsConnectAccount">アカウントに接続</sys:String>
     <sys:String x:Key="LOCLoginChecking">認証ステータスを確認しています...</sys:String>
-    <sys:String x:Key="LOCLoggedIn">ユーザー認証済み</sys:String>
-    <sys:String x:Key="LOCNotLoggedIn">認証が必要</sys:String>
+    <sys:String x:Key="LOCLoggedIn">ユーザーは認証されています</sys:String>
+    <sys:String x:Key="LOCNotLoggedIn">認証が必要です</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
-    <sys:String x:Key="LOCAuthenticateLabel">認証する</sys:String>
+    <sys:String x:Key="LOCAuthenticateLabel">認証</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
-    <sys:String x:Key="LOCTroubleShootingIssues">問題解決</sys:String>
-    <sys:String x:Key="LOCSettingsImportLibraryLabel">すべてのゲームをインポートする</sys:String>
+    <sys:String x:Key="LOCTroubleShootingIssues">問題のトラブルシューティング</sys:String>
+    <sys:String x:Key="LOCSettingsImportLibraryLabel">すべてのゲームをインポート</sys:String>
     <sys:String x:Key="LOCPrivateAccount">非公開アカウント</sys:String>
     <sys:String x:Key="LOCPublicAccount">公開アカウント</sys:String>
     <sys:String x:Key="LOCAPIKey">API キー</sys:String>
@@ -20,94 +20,94 @@
     <sys:String x:Key="LOCAccountID">アカウントID</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">メタデータの言語</sys:String>
     <!--itch.io-->
-    <sys:String x:Key="LOCItchioSignInNotif">itch.ioクライアントが開きます。サインインしてからこのメッセージを閉じてください。</sys:String>
+    <sys:String x:Key="LOCItchioSignInNotif">itch.io クライアントが開きます。サインインしてからこのメッセージを閉じてください。</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">ユーザーがログインするのを待っています。完了したら閉じてください。</sys:String>
-    <sys:String x:Key="LOCItchioClientNotInstalledError">バージョン25以降のItchクライアントがインストールされていません。</sys:String>
+    <sys:String x:Key="LOCItchioClientNotInstalledError">バージョン 25 以降の Itch クライアントがインストールされていません。</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">コレクションから無料ゲームをインポート</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">インポートするアイテム:</sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationOthers"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationBooks"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">ゲーム</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">ツール</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">アセット</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">MOD</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">物理ゲーム</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">サウンドトラック</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">その他</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">漫画</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">書籍</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">アカウントログイン</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">アカウント名</sys:String>
     <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">あなたのアカウントにログインするか、あなたの公開アカウントの名前を使って、すべてのライブラリを同期させてください。
 [アカウント名]オプションは、ゲームライブラリがGOGのプライバシー設定で公開されて表示されるように設定されているアカウントに対してのみ機能することに注意してください。</sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxy">Galaxyクライアントを使用してゲームを開始する</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxy">Galaxy クライアントを使用してゲームを開始する</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">これにより、クラウドセーブやゲームタイムトラッキングなどのGOG Galaxyの機能が利用できるようになります。</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">GOG Galaxy へのゲームインストール時にインストールを自動的に開始する</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">有効にすると、インストール先の設定に関する操作を求められずにインストールが始まります。
 無効にすると、手動でインストールを行うためのゲームページが開きます。</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">私のアカウント名は何ですか？</sys:String>
-    <sys:String x:Key="LOCSteamCustomUrlName">アカウントURL名</sys:String>
+    <sys:String x:Key="LOCSteamCustomUrlName">アカウント URL 名</sys:String>
     <sys:String x:Key="LOCSteamLoggedInUser">認証済みユーザー</sys:String>
-    <sys:String x:Key="LOCSteamRequiresApiKey">非公開アカウントにはAPIキーが必要です</sys:String>
+    <sys:String x:Key="LOCSteamRequiresApiKey">非公開アカウントには API キーが必要です。</sys:String>
     <sys:String x:Key="LOCSteamLinksCommunityHub">コミュニティハブ </sys:String>
     <sys:String x:Key="LOCSteamLinksDiscussions">ディスカッション</sys:String>
     <sys:String x:Key="LOCSteamLinksGuides">ガイド</sys:String>
     <sys:String x:Key="LOCSteamLinksWorkshop">ワークショップ</sys:String>
     <sys:String x:Key="LOCSteamUseVerticalCovers">縦カバー画像をダウンロードする</sys:String>
     <sys:String x:Key="LOCSteamImportFreeSubGames">一般的な無料アイテムをインポート</sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarn">すべてのSteamゲームで現在のカテゴリーを非表示やお気に入りの状態と同様に上書きします。よろしいですか？</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarn">すべての Steam ゲームで現在のカテゴリーを非表示やお気に入りの状態と同様に上書きします。よろしいですか？</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">カテゴリーをインポートしますか？</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">カテゴリーをインポートできません。インポートするアカウントが選択されていません。</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">カテゴリーをインポートできません。データベースが開かれていません。</sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportError">Steamカテゴリーをインポートできませんでした: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportError">Steam カテゴリーをインポートできませんでした: {0}</sys:String>
     <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">カテゴリーをインポートできません。インポートするアカウントが選択されていません。</sys:String>
     <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">カテゴリーをインポートできません。データベースが開かれていません。</sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportError">Steamの最後のプレイの情報のインポートに失敗しました:{0}</sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyTooltip">Steam非公開アカウントにはAPIキーが必要です。</sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyUrlText">APIキーを取得</sys:String>
-    <sys:String x:Key="LOCSettingsSteamImportMetadata">Steamアカウントからメタデータをインポート</sys:String>
-    <sys:String x:Key="LOCImportSteamCategoriesLabel">Steamのカテゴリーをインポート</sys:String>
-    <sys:String x:Key="LOCImportSteamLastActivityLabel">Steamの最後のプレイをインポート</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportError">Steam の最後のプレイの情報のインポートに失敗しました: {0}</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyTooltip">Steam 非公開アカウントには API キーが必要です。</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyUrlText">API キーを取得</sys:String>
+    <sys:String x:Key="LOCSettingsSteamImportMetadata">Steam アカウントからメタデータをインポート:</sys:String>
+    <sys:String x:Key="LOCImportSteamCategoriesLabel">Steam のカテゴリーをインポート</sys:String>
+    <sys:String x:Key="LOCImportSteamLastActivityLabel">Steam の最後のプレイをインポート</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSource">背景画像のソース:</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceImage">ゲームイメージ</sys:String>
-    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">ストア のスクリーンショット</sys:String>
+    <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">ストアのスクリーンショット</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceStore">ストアの背景</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">バナー</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">トップパネルにフレンドボタンを表示</sys:String>
-    <sys:String x:Key="LOCSteamFriendsTooltip">Steamフレンド</sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">Steam フレンド</sys:String>
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">他のアカウントからインストールされたゲームを無視</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">追加アカウント</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">他のアカウントからゲームをインポートする場合は、他のアカウントのSteamアカウントIDとAPIキーのペアを指定します。詳しくはSteamトラブルシューティングwikiのページをご覧ください。</sys:String>
-    <sys:String x:Key="LOCSteamLimitTagCountLabel"></sys:String>
-    <sys:String x:Key="LOCSteamTagPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamLimitTagCountLabel">最初にインポートされたタグの量を制限する</sys:String>
+    <sys:String x:Key="LOCSteamTagPrefixLabel">プレフィックスタグ名:</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTabLabel">タグのブラックリスト</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">除外されたタグはゲームに追加されません。</sys:String>
-    <sys:String x:Key="LOCSteamTagWhitelistHeader">使用可能なタグ</sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">利用可能なタグ</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistHeader">除外するタグ</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">除外するタグから削除</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">除外するタグに追加</sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">固定タグ数は有効な数字でなければなりません</sys:String>
-    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">デスクトップモードでSteamの起動メニューを表示する</sys:String>
-    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Steamの起動メニューをフルスクリーンモードで表示する</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">デスクトップモードで Steam の起動メニューを表示</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Steam の起動メニューをフルスクリーンモードで表示</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">アートワークが利用できない場合スクリーンショットを使用する</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">
 複数の画像が利用可能な場合は、次を使用します：</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">背景画像 {0} を選択</sys:String>
-    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">トリミングしたカバー画像をアイコンに代用</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">サードパーティー製のストアのゲームを無視する</sys:String>
-    <sys:String x:Key="LOCHumbleImportChoiceGames">Humble Choiceのゲームをインポート</sys:String>
-    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Humble Choiceサブスクリプションで利用可能なゲームをインポート</sys:String>
-    <sys:String x:Key="LOCHumbleGeneralLibrary">Humbleライブラリのゲームをインポートする</sys:String>
-    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Humbleストアでの標準購入とバンドル購入をインポートする</sys:String>
-    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">サードパーティのクライアント（すでにPlayniteで管理されているストアを含む）を必要とするゲームのインポートを重複を防ぐためにスキップすることを可能にします。</sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">DRMフリーバージョンが利用可能ならインポート</sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">DRMフリー版も利用可能な場合は、サードパーティ製のクライアントを必要とするゲームをインポートする。</sys:String>
-    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">常にHumble Appを使ってゲームを開始する</sys:String>
-    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">無効にすると、PlayniteはHumble Appをバイパスして、直接ゲームを起動しようとします。</sys:String>
-    <sys:String x:Key="LOCHumbleNonTroveInstallError">サブスクリプション以外のHumbleゲームの自動インストールとアンインストールは現在サポートされていません。</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGames">Humble Choice のゲームをインポート</sys:String>
+    <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Humble Choice サブスクリプションで利用可能なゲームをインポート</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">Humble ライブラリのゲームをインポート</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Humble Store での一般購入とバンドル購入をインポート</sys:String>
+    <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">サードパーティのクライアント（すでに Playnite で管理されているストアを含む）を必要とするゲームのインポートを重複を防ぐためにスキップすることを可能にします。</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">DRM フリーバージョンが利用可能ならインポート</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">DRM フリー版も利用可能な場合は、サードパーティ製のクライアントを必要とするゲームをインポートします。</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">常に Humble App を使ってゲームを開始</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">無効にすると、Playnite は Humble App をバイパスして、直接ゲームを起動しようとします。</sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">サブスクリプション以外の Humble ゲームの自動インストールとアンインストールは現在サポートされていません。</sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">クライアントを開くときにMicrosoft StoreではなくXbox Passアプリを起動する</sys:String>
-    <sys:String x:Key="LOCXboxImportConsoleGames">Xboxシリーズのゲームをインポートする</sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">クライアントを開くときに Microsoft Store ではなく Xbox Pass アプリを起動する</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">Xbox シリーズのゲームをインポート</sys:String>
 </ResourceDictionary>

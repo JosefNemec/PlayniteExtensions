@@ -15,10 +15,6 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API кључ</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient" />
-  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime" />
-  <sys:String x:Key="LOCUniversalSteamMetadataAccountID" />
-  <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel" />
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Које је моје корисничко име?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">УРЛ корсиника</sys:String>
@@ -49,19 +45,4 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Позадина из продавнице</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Банер</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Прикажи дугме "Пријатељи" на горњем панелу</sys:String>
-  <sys:String x:Key="LOCSteamFriendsTooltip" />
-  <sys:String x:Key="LOCSteamIgnoreOtherAccountGames" />
-  <sys:String x:Key="LOCSteamAdditionalAccounts" />
-  <sys:String x:Key="LOCSteamAdditionalAccountsDescription" />
-  <sys:String x:Key="LOCSteamLimitTagCountLabel" />
-  <sys:String x:Key="LOCSteamTagPrefixLabel" />
-  <sys:String x:Key="LOCSteamTagBlacklistTabLabel" />
-  <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel" />
-  <sys:String x:Key="LOCSteamTagWhitelistHeader" />
-  <sys:String x:Key="LOCSteamTagBlacklistHeader" />
-  <sys:String x:Key="LOCSteamTagWhitelistTooltip" />
-  <sys:String x:Key="LOCSteamTagBlacklistTooltip" />
-  <sys:String x:Key="LOCSteamValidationFixedTagCount" />
-  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode" />
-  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode" />
 </ResourceDictionary>

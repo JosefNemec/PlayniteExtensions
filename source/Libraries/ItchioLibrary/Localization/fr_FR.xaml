@@ -26,7 +26,7 @@
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importer les jeux gratuits enregistrés dans la collection</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Éléments à importer : </sys:String>
   <sys:String x:Key="LOCitchioItemClassificationGames">Jeux</sys:String>
-  <sys:String x:Key="LOCitchioItemClassificationTools">Utilitaires</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationTools">Outils</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationAssets">Ressources</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationMods">Mods</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Jeux physiques</sys:String>

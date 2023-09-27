@@ -24,7 +24,7 @@
   <sys:String x:Key="LOCSteamCustomUrlName">URL perso.</sys:String>
   <sys:String x:Key="LOCSteamLoggedInUser">Nom d'utilisateur</sys:String>
   <sys:String x:Key="LOCSteamRequiresApiKey">Le compte est privé et requiert la clé API.</sys:String>
-  <sys:String x:Key="LOCSteamLinksCommunityHub">Hub de la communauté</sys:String>
+  <sys:String x:Key="LOCSteamLinksCommunityHub">Hub communautaire</sys:String>
   <sys:String x:Key="LOCSteamLinksDiscussions">Discussions</sys:String>
   <sys:String x:Key="LOCSteamLinksGuides">Guides</sys:String>
   <sys:String x:Key="LOCSteamLinksWorkshop">Workshop</sys:String>

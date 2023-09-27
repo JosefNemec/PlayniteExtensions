@@ -3,9 +3,9 @@
   <sys:String x:Key="LOCXboxSettingsImportInstalledLabel">Kurulu oyunları içeri aktar</sys:String>
   <sys:String x:Key="LOCXboxSettingsImportUninstalledLabel">Kurulu olmayan oyunları içe aktar</sys:String>
   <sys:String x:Key="LOCXboxSettingsConnectAccount">Hesap bağla</sys:String>
-  <sys:String x:Key="LOCXboxLoginChecking">Kimlik doğrulaması kontrol ediliyor…</sys:String>
+  <sys:String x:Key="LOCXboxLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
   <sys:String x:Key="LOCXboxLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
-  <sys:String x:Key="LOCXboxNotLoggedIn">Kimlik doğrulaması gerekiyor</sys:String>
+  <sys:String x:Key="LOCXboxNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCXboxAuthenticateLabel">Kimlik Doğrulaması</sys:String>
   <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
@@ -15,11 +15,11 @@
   <sys:String x:Key="LOCXboxPrivateAccount">Özel Hesap</sys:String>
   <sys:String x:Key="LOCXboxPublicAccount">Genel Hesap</sys:String>
   <sys:String x:Key="LOCXboxAPIKey">API Anahtarı</sys:String>
-  <sys:String x:Key="LOCXboxStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
+  <sys:String x:Key="LOCXboxStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Oynama zamanını içe aktar</sys:String>
-  <sys:String x:Key="LOCXboxAccountID">Hesap ID</sys:String>
+  <sys:String x:Key="LOCXboxAccountID">Hesap kimliği</sys:String>
   <sys:String x:Key="LOCXboxMetadataLanguageLabel">Üst veri dili:</sys:String>
   <!--Xbox-->
-  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">İstemciyi açarken Microsoft Mağaza'sı yerine Xbox Pass uygulamasını başlat</sys:String>
+  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">İstemciyi açarken Microsoft Mağaza' sı yerine Xbox Pass uygulamasını başlat</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">Xbox konsol oyunlarını içe aktar</sys:String>
 </ResourceDictionary>

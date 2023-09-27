@@ -10,7 +10,7 @@
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Autentifikuoti</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Paleisti žaidimus tiesiogiai, nenaudojant oficialaus kliento</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Spręsti vartotojo sinchronizacijos problemas</sys:String>
-  <sys:String x:Key="LOCBattleNetTroubleShootingIssues" />
+  <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Tvarkoma klaidas</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel">Importuoti visus žaidimus</sys:String>
   <sys:String x:Key="LOCBattleNetPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCBattleNetPublicAccount">Vieša paskyra</sys:String>
@@ -18,5 +18,5 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Importuoti pražaistą laiką</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">Paskyros ID</sys:String>
-  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel" />
+  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Metadata kalba:</sys:String>
 </ResourceDictionary>

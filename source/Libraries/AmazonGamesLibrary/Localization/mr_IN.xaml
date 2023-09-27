@@ -1,22 +1,11 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel" />
   <sys:String x:Key="LOCAmazonSettingsConnectAccount">खाते कनेक्ट करा</sys:String>
-  <sys:String x:Key="LOCAmazonLoginChecking" />
-  <sys:String x:Key="LOCAmazonLoggedIn" />
-  <sys:String x:Key="LOCAmazonNotLoggedIn" />
-  <sys:String x:Key="LOCAmazonNotLoggedInError" />
-  <sys:String x:Key="LOCAmazonAuthenticateLabel" />
-  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCAmazonTroubleShootingIssues" />
   <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">सर्व गेम आयात करा</sys:String>
   <sys:String x:Key="LOCAmazonPrivateAccount">खाजगी खाते</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">सार्वजनिक खाते</sys:String>
   <sys:String x:Key="LOCAmazonAPIKey">API की</sys:String>
   <sys:String x:Key="LOCAmazonStartUsingClient">{0} क्लाएंट वापरून सुरू करा</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">खेळलेल्याची कालावधी आयात करा</sys:String>
-  <sys:String x:Key="LOCAmazonAccountID" />
-  <sys:String x:Key="LOCAmazonMetadataLanguageLabel" />
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">मेटाडेटा भाषा:</sys:String>
 </ResourceDictionary>

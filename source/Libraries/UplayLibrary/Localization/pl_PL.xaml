@@ -13,7 +13,7 @@
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">Importuj wszystkie gry</sys:String>
   <sys:String x:Key="LOCUbisoftPrivateAccount">Konto prywatne</sys:String>
-  <sys:String x:Key="LOCUbisoftPublicAccount">Publiczne konto</sys:String>
+  <sys:String x:Key="LOCUbisoftPublicAccount">Konto publiczne</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">Klucz API</sys:String>
   <sys:String x:Key="LOCUbisoftStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Importuj czasy gier</sys:String>

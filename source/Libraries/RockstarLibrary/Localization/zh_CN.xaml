@@ -15,7 +15,7 @@
   <sys:String x:Key="LOCRockstarPrivateAccount">私密账户</sys:String>
   <sys:String x:Key="LOCRockstarPublicAccount">公开账户</sys:String>
   <sys:String x:Key="LOCRockstarAPIKey">API 密匙</sys:String>
-  <sys:String x:Key="LOCRockstarStartUsingClient">开始使用 {0} 客户端</sys:String>
+  <sys:String x:Key="LOCRockstarStartUsingClient">使用 {0} 客户端启动</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">账户 ID</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">元数据语言：</sys:String>

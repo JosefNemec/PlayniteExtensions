@@ -9,26 +9,27 @@
   <sys:String x:Key="LOCHumbleNotLoggedInError">Erro na verificación do usuario</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">Verificar</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Comezar xogos dereitamente sen arrincar o cliente oficial</sys:String>
-  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Solución de problemas ca sincronización da conta</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Solución de problemas coa sincronización da conta</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">Solución de problemas</sys:String>
-  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Importar todos os xogos</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Importar tódolos xogos</sys:String>
   <sys:String x:Key="LOCHumblePrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Conta pública</sys:String>
-  <sys:String x:Key="LOCHumbleAPIKey">Chave da API</sys:String>
+  <sys:String x:Key="LOCHumbleAPIKey">Clave da API</sys:String>
   <sys:String x:Key="LOCHumbleStartUsingClient">Comezar usando o cliente {0}</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Importar tempo de xogo</sys:String>
-  <sys:String x:Key="LOCHumbleAccountID">ID da conta</sys:String>
-  <sys:String x:Key="LOCHumbleMetadataLanguageLabel" />
+  <sys:String x:Key="LOCHumbleAccountID">Id. da conta</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Idioma dos metadatos:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorar xogos de tendas de terceiros </sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">Importar xogos de Humble Choice</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Importa xogos dispoñibles como parte da subscrición a Humble Choice.</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">Importar xogos de Humble Choice</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importa compras estándar da tenda Humble e compras en paquete.</sys:String>
-  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Habilitar para omitir a importación de xogos que requiren clientes de terceiros, incluidas as tendas xa xestionadas en Playnite, para precaver duplicados.</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Activa esta opción para omitir a importación de xogos que requiren clientes de terceiros,
+incluídas as tendas xa xestionadas en Playnite, para evitar duplicados.</sys:String>
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importar se a versión sen DRM está dispoñible</sys:String>
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importar xogos que requiren cliente de terceiros se a versión sen DRM está tamén dispoñible.</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importar xogos que requiren un cliente de terceiros se a versión sen DRM está tamén dispoñible.</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Usa sempre a aplicación Humble para iniciar xogos</sys:String>
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Cando estea desactivado, Playnite tentará lanzar xogos directamente, evitando a aplicación Humble.</sys:String>
-  <sys:String x:Key="LOCHumbleNonTroveInstallError">Instalación e desinstalación automática de xogos de Humble sen subscrición non está soportada actualmente.</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Cando esta opción está desactivada, Playnite tentará iniciar os xogos directamente, evitando a aplicación Humble.</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">A instalación e desinstalación automática de xogos de Humble sen subscrición non se admite actualmente.</sys:String>
 </ResourceDictionary>

@@ -10,7 +10,7 @@
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Autentifikuoti</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Paleisti žaidimus tiesiogiai, nenaudojant oficialaus kliento</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Spręsti vartotojo sinchronizacijos problemas</sys:String>
-  <sys:String x:Key="LOCIGDBTroubleShootingIssues" />
+  <sys:String x:Key="LOCIGDBTroubleShootingIssues">Tvarkoma klaidas</sys:String>
   <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel">Importuoti visus žaidimus</sys:String>
   <sys:String x:Key="LOCIGDBPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Vieša paskyra</sys:String>
@@ -18,10 +18,10 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Importuoti pražaistą laiką</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">Paskyros ID</sys:String>
-  <sys:String x:Key="LOCIGDBMetadataLanguageLabel" />
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Metadata kalba:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Naudoti ekrano kopijas jei officiali medžiaga nepasiekiama</sys:String>
-  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle" />
+  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Jei kelios nuotraukos yra pasiekemos tada naudoti:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Pasirinkti fono nuotrauką {0}</sys:String>
-  <sys:String x:Key="LOCIgdbCoverAsIcon" />
+  <sys:String x:Key="LOCIgdbCoverAsIcon">Pakeiskite apkarpytą viršelio vaizdą ikona</sys:String>
 </ResourceDictionary>

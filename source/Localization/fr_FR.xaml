@@ -26,7 +26,7 @@
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importer les jeux gratuits enregistrés dans la collection</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Éléments à importer : </sys:String>
     <sys:String x:Key="LOCitchioItemClassificationGames">Jeux</sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationTools">Utilitaires</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">Outils</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationAssets">Ressources</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationMods">Mods</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Jeux physiques</sys:String>
@@ -48,7 +48,7 @@ Lorsque cette option est désactivée, la fiche du jeu sera ouverte, permettant 
     <sys:String x:Key="LOCSteamCustomUrlName">URL perso.</sys:String>
     <sys:String x:Key="LOCSteamLoggedInUser">Nom d'utilisateur</sys:String>
     <sys:String x:Key="LOCSteamRequiresApiKey">Le compte est privé et requiert la clé API.</sys:String>
-    <sys:String x:Key="LOCSteamLinksCommunityHub">Hub de la communauté</sys:String>
+    <sys:String x:Key="LOCSteamLinksCommunityHub">Hub communautaire</sys:String>
     <sys:String x:Key="LOCSteamLinksDiscussions">Discussions</sys:String>
     <sys:String x:Key="LOCSteamLinksGuides">Guides</sys:String>
     <sys:String x:Key="LOCSteamLinksWorkshop">Workshop</sys:String>

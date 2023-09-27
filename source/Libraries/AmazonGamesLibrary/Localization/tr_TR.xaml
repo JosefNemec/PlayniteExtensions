@@ -3,9 +3,9 @@
   <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel">Kurulu oyunları içeri aktar</sys:String>
   <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel">Kurulu olmayan oyunları içe aktar</sys:String>
   <sys:String x:Key="LOCAmazonSettingsConnectAccount">Hesap bağla</sys:String>
-  <sys:String x:Key="LOCAmazonLoginChecking">Kimlik doğrulaması kontrol ediliyor…</sys:String>
+  <sys:String x:Key="LOCAmazonLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
   <sys:String x:Key="LOCAmazonLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
-  <sys:String x:Key="LOCAmazonNotLoggedIn">Kimlik doğrulaması gerekiyor</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
   <sys:String x:Key="LOCAmazonNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Kimlik Doğrulaması</sys:String>
   <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
@@ -15,8 +15,8 @@
   <sys:String x:Key="LOCAmazonPrivateAccount">Özel Hesap</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">Genel Hesap</sys:String>
   <sys:String x:Key="LOCAmazonAPIKey">API Anahtarı</sys:String>
-  <sys:String x:Key="LOCAmazonStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
+  <sys:String x:Key="LOCAmazonStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Oynama zamanını içe aktar</sys:String>
-  <sys:String x:Key="LOCAmazonAccountID">Hesap ID</sys:String>
+  <sys:String x:Key="LOCAmazonAccountID">Hesap kimliği</sys:String>
   <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Üst veri dili:</sys:String>
 </ResourceDictionary>

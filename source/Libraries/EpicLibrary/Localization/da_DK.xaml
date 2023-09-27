@@ -8,15 +8,14 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">Kræver verificering</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Verificering</sys:String>
-  <sys:String x:Key="LOCEpicSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCEpicTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCEpicTroubleShootingIssues" />
-  <sys:String x:Key="LOCEpicSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCEpicPrivateAccount" />
-  <sys:String x:Key="LOCEpicPublicAccount" />
-  <sys:String x:Key="LOCEpicAPIKey" />
-  <sys:String x:Key="LOCEpicStartUsingClient" />
-  <sys:String x:Key="LOCEpicImportPlaytime" />
-  <sys:String x:Key="LOCEpicAccountID" />
-  <sys:String x:Key="LOCEpicMetadataLanguageLabel" />
+  <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Start spil direkte uden at køre officiel klient</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Fejlfinding for konto synkroniserings problemer</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">Importer alle spil</sys:String>
+  <sys:String x:Key="LOCEpicPrivateAccount">Privat konto</sys:String>
+  <sys:String x:Key="LOCEpicPublicAccount">Offentlig Konto</sys:String>
+  <sys:String x:Key="LOCEpicAPIKey">API Nøgle</sys:String>
+  <sys:String x:Key="LOCEpicStartUsingClient">Begynd at bruge {0} klient</sys:String>
+  <sys:String x:Key="LOCEpicImportPlaytime">Importer spilletid</sys:String>
+  <sys:String x:Key="LOCEpicAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCEpicMetadataLanguageLabel">Metadata sprog:</sys:String>
 </ResourceDictionary>

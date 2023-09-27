@@ -8,15 +8,14 @@
   <sys:String x:Key="LOCRockstarNotLoggedIn">Kræver verificering</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Verificering</sys:String>
-  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCRockstarTroubleShootingIssues" />
-  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCRockstarPrivateAccount" />
-  <sys:String x:Key="LOCRockstarPublicAccount" />
-  <sys:String x:Key="LOCRockstarAPIKey" />
-  <sys:String x:Key="LOCRockstarStartUsingClient" />
-  <sys:String x:Key="LOCRockstarImportPlaytime" />
-  <sys:String x:Key="LOCRockstarAccountID" />
-  <sys:String x:Key="LOCRockstarMetadataLanguageLabel" />
+  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Start spil direkte uden at køre officiel klient</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Fejlfinding for konto synkroniserings problemer</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">Importer alle spil</sys:String>
+  <sys:String x:Key="LOCRockstarPrivateAccount">Privat konto</sys:String>
+  <sys:String x:Key="LOCRockstarPublicAccount">Offentlig Konto</sys:String>
+  <sys:String x:Key="LOCRockstarAPIKey">API Nøgle</sys:String>
+  <sys:String x:Key="LOCRockstarStartUsingClient">Begynd at bruge {0} klient</sys:String>
+  <sys:String x:Key="LOCRockstarImportPlaytime">Importer spilletid</sys:String>
+  <sys:String x:Key="LOCRockstarAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Metadata sprog:</sys:String>
 </ResourceDictionary>

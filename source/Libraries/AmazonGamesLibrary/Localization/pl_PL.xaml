@@ -13,7 +13,7 @@
   <sys:String x:Key="LOCAmazonTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
   <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Importuj wszystkie gry</sys:String>
   <sys:String x:Key="LOCAmazonPrivateAccount">Konto prywatne</sys:String>
-  <sys:String x:Key="LOCAmazonPublicAccount">Publiczne konto</sys:String>
+  <sys:String x:Key="LOCAmazonPublicAccount">Konto publiczne</sys:String>
   <sys:String x:Key="LOCAmazonAPIKey">Klucz API</sys:String>
   <sys:String x:Key="LOCAmazonStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Importuj czasy gier</sys:String>

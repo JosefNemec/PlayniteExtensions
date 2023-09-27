@@ -1,22 +1,11 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCEpicSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel" />
   <sys:String x:Key="LOCEpicSettingsConnectAccount">खाते कनेक्ट करा</sys:String>
-  <sys:String x:Key="LOCEpicLoginChecking" />
-  <sys:String x:Key="LOCEpicLoggedIn" />
-  <sys:String x:Key="LOCEpicNotLoggedIn" />
-  <sys:String x:Key="LOCEpicNotLoggedInError" />
-  <sys:String x:Key="LOCEpicAuthenticateLabel" />
-  <sys:String x:Key="LOCEpicSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCEpicTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCEpicTroubleShootingIssues" />
   <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">सर्व गेम आयात करा</sys:String>
   <sys:String x:Key="LOCEpicPrivateAccount">खाजगी खाते</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">सार्वजनिक खाते</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">API की</sys:String>
   <sys:String x:Key="LOCEpicStartUsingClient">{0} क्लाएंट वापरून सुरू करा</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">खेळलेल्याची कालावधी आयात करा</sys:String>
-  <sys:String x:Key="LOCEpicAccountID" />
-  <sys:String x:Key="LOCEpicMetadataLanguageLabel" />
+  <sys:String x:Key="LOCEpicMetadataLanguageLabel">मेटाडेटा भाषा:</sys:String>
 </ResourceDictionary>

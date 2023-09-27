@@ -10,7 +10,7 @@
   <sys:String x:Key="LOCOriginAuthenticateLabel">Autentifikuoti</sys:String>
   <sys:String x:Key="LOCOriginSettingsStartGameDirectly">Paleisti žaidimus tiesiogiai, nenaudojant oficialaus kliento</sys:String>
   <sys:String x:Key="LOCOriginTroubleShootingAccountLink">Spręsti vartotojo sinchronizacijos problemas</sys:String>
-  <sys:String x:Key="LOCOriginTroubleShootingIssues" />
+  <sys:String x:Key="LOCOriginTroubleShootingIssues">Tvarkoma klaidas</sys:String>
   <sys:String x:Key="LOCOriginSettingsImportLibraryLabel">Importuoti visus žaidimus</sys:String>
   <sys:String x:Key="LOCOriginPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">Vieša paskyra</sys:String>
@@ -18,5 +18,5 @@
   <sys:String x:Key="LOCOriginStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
   <sys:String x:Key="LOCOriginImportPlaytime">Importuoti pražaistą laiką</sys:String>
   <sys:String x:Key="LOCOriginAccountID">Paskyros ID</sys:String>
-  <sys:String x:Key="LOCOriginMetadataLanguageLabel" />
+  <sys:String x:Key="LOCOriginMetadataLanguageLabel">Metadata kalba:</sys:String>
 </ResourceDictionary>

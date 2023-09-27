@@ -3,9 +3,9 @@
   <sys:String x:Key="LOCUbisoftSettingsImportInstalledLabel">Kurulu oyunları içeri aktar</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsImportUninstalledLabel">Kurulu olmayan oyunları içe aktar</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsConnectAccount">Hesap bağla</sys:String>
-  <sys:String x:Key="LOCUbisoftLoginChecking">Kimlik doğrulaması kontrol ediliyor…</sys:String>
+  <sys:String x:Key="LOCUbisoftLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
   <sys:String x:Key="LOCUbisoftLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
-  <sys:String x:Key="LOCUbisoftNotLoggedIn">Kimlik doğrulaması gerekiyor</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Kimlik Doğrulaması</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
@@ -15,8 +15,8 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount">Özel Hesap</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">Genel Hesap</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">API Anahtarı</sys:String>
-  <sys:String x:Key="LOCUbisoftStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
+  <sys:String x:Key="LOCUbisoftStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Oynama zamanını içe aktar</sys:String>
-  <sys:String x:Key="LOCUbisoftAccountID">Hesap ID</sys:String>
+  <sys:String x:Key="LOCUbisoftAccountID">Hesap kimliği</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Üst veri dili:</sys:String>
 </ResourceDictionary>

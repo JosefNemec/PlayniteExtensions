@@ -49,11 +49,21 @@ foreach ($extension in $extensionPaths.Keys)
             }
             elseif ($parsingExt -eq $extension -or ($extension -eq 'UniversalSteamMetadata' -and $parsingExt -eq "Steam"))
             {
+                if ($null -eq $node.'#text')
+                {
+                    continue;
+                }
+
                 $nodeClone = $targetXml.ImportNode($node, $true)
                 $targetXml.ResourceDictionary.AppendChild($nodeClone) | Out-Null
             }
             elseif ($null -eq $parsingExt)
-            {           
+            {                
+                if ($null -eq $node.'#text')
+                {
+                    continue;
+                }
+                
                 $nodeClone = $targetXml.ImportNode($node, $true)
                 $nodeClone.SetAttribute('x:Key', "LOC" + $extension.Replace('.', '') + $nodeClone.GetAttribute('x:Key').Substring(3))
                 $targetXml.ResourceDictionary.AppendChild($nodeClone) | Out-Null

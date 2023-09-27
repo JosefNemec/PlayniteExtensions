@@ -1,22 +1,10 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel" />
-  <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel" />
-  <sys:String x:Key="LOCAmazonSettingsConnectAccount" />
-  <sys:String x:Key="LOCAmazonLoginChecking" />
-  <sys:String x:Key="LOCAmazonLoggedIn" />
-  <sys:String x:Key="LOCAmazonNotLoggedIn" />
-  <sys:String x:Key="LOCAmazonNotLoggedInError" />
-  <sys:String x:Key="LOCAmazonAuthenticateLabel" />
-  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCAmazonTroubleShootingIssues" />
-  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCAmazonPrivateAccount" />
-  <sys:String x:Key="LOCAmazonPublicAccount" />
-  <sys:String x:Key="LOCAmazonAPIKey" />
-  <sys:String x:Key="LOCAmazonStartUsingClient" />
-  <sys:String x:Key="LOCAmazonImportPlaytime" />
-  <sys:String x:Key="LOCAmazonAccountID" />
-  <sys:String x:Key="LOCAmazonMetadataLanguageLabel" />
+  <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel">Importar jogos instalados</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel">Importar jogos não instalados</sys:String>
+  <sys:String x:Key="LOCAmazonLoggedIn">O utilizador já está autenticado</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedIn">Requer autenticação</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Importar todos os jogos</sys:String>
+  <sys:String x:Key="LOCAmazonPrivateAccount">Conta Privada</sys:String>
+  <sys:String x:Key="LOCAmazonPublicAccount">Conta Pública</sys:String>
 </ResourceDictionary>

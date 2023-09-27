@@ -8,15 +8,14 @@
   <sys:String x:Key="LOCUbisoftNotLoggedIn">Kræver verificering</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Verificering</sys:String>
-  <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCUbisoftTroubleShootingIssues" />
-  <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCUbisoftPrivateAccount" />
-  <sys:String x:Key="LOCUbisoftPublicAccount" />
-  <sys:String x:Key="LOCUbisoftAPIKey" />
-  <sys:String x:Key="LOCUbisoftStartUsingClient" />
-  <sys:String x:Key="LOCUbisoftImportPlaytime" />
-  <sys:String x:Key="LOCUbisoftAccountID" />
-  <sys:String x:Key="LOCUbisoftMetadataLanguageLabel" />
+  <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Start spil direkte uden at køre officiel klient</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Fejlfinding for konto synkroniserings problemer</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">Importer alle spil</sys:String>
+  <sys:String x:Key="LOCUbisoftPrivateAccount">Privat konto</sys:String>
+  <sys:String x:Key="LOCUbisoftPublicAccount">Offentlig Konto</sys:String>
+  <sys:String x:Key="LOCUbisoftAPIKey">API Nøgle</sys:String>
+  <sys:String x:Key="LOCUbisoftStartUsingClient">Begynd at bruge {0} klient</sys:String>
+  <sys:String x:Key="LOCUbisoftImportPlaytime">Importer spilletid</sys:String>
+  <sys:String x:Key="LOCUbisoftAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Metadata sprog:</sys:String>
 </ResourceDictionary>

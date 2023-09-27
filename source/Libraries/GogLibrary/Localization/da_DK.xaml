@@ -8,23 +8,15 @@
   <sys:String x:Key="LOCGOGNotLoggedIn">Kræver verificering</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Verificering</sys:String>
-  <sys:String x:Key="LOCGOGSettingsStartGameDirectly" />
-  <sys:String x:Key="LOCGOGTroubleShootingAccountLink" />
-  <sys:String x:Key="LOCGOGTroubleShootingIssues" />
-  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel" />
-  <sys:String x:Key="LOCGOGPrivateAccount" />
-  <sys:String x:Key="LOCGOGPublicAccount" />
-  <sys:String x:Key="LOCGOGAPIKey" />
-  <sys:String x:Key="LOCGOGStartUsingClient" />
-  <sys:String x:Key="LOCGOGImportPlaytime" />
-  <sys:String x:Key="LOCGOGAccountID" />
-  <sys:String x:Key="LOCGOGMetadataLanguageLabel" />
+  <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Start spil direkte uden at køre officiel klient</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Fejlfinding for konto synkroniserings problemer</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">Importer alle spil</sys:String>
+  <sys:String x:Key="LOCGOGPrivateAccount">Privat konto</sys:String>
+  <sys:String x:Key="LOCGOGPublicAccount">Offentlig Konto</sys:String>
+  <sys:String x:Key="LOCGOGAPIKey">API Nøgle</sys:String>
+  <sys:String x:Key="LOCGOGStartUsingClient">Begynd at bruge {0} klient</sys:String>
+  <sys:String x:Key="LOCGOGImportPlaytime">Importer spilletid</sys:String>
+  <sys:String x:Key="LOCGOGAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Metadata sprog:</sys:String>
   <!--GOG-->
-  <sys:String x:Key="LOCGOGUseLogin" />
-  <sys:String x:Key="LOCGOGUseAccountName" />
-  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve" />
-  <sys:String x:Key="LOCSettingsGOGUseGalaxy" />
-  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip" />
-  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls" />
-  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve" />
 </ResourceDictionary>

@@ -13,7 +13,7 @@
   <sys:String x:Key="LOCSteamTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
   <sys:String x:Key="LOCSteamSettingsImportLibraryLabel">Importuj wszystkie gry</sys:String>
   <sys:String x:Key="LOCSteamPrivateAccount">Konto prywatne</sys:String>
-  <sys:String x:Key="LOCSteamPublicAccount">Publiczne konto</sys:String>
+  <sys:String x:Key="LOCSteamPublicAccount">Konto publiczne</sys:String>
   <sys:String x:Key="LOCSteamAPIKey">Klucz API</sys:String>
   <sys:String x:Key="LOCSteamStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Importuj czasy gier</sys:String>

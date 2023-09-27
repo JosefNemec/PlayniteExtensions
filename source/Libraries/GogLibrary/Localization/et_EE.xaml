@@ -3,28 +3,25 @@
   <sys:String x:Key="LOCGOGSettingsImportInstalledLabel">Impordi paigaldatud mängud</sys:String>
   <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel">Impordi paigaldamata mängud</sys:String>
   <sys:String x:Key="LOCGOGSettingsConnectAccount">Ühenda konto</sys:String>
-  <sys:String x:Key="LOCGOGLoginChecking" />
-  <sys:String x:Key="LOCGOGLoggedIn" />
-  <sys:String x:Key="LOCGOGNotLoggedIn" />
-  <sys:String x:Key="LOCGOGNotLoggedInError" />
-  <sys:String x:Key="LOCGOGAuthenticateLabel" />
-  <sys:String x:Key="LOCGOGSettingsStartGameDirectly" />
+  <sys:String x:Key="LOCGOGLoginChecking">Autentimise oleku kontrollimine…</sys:String>
+  <sys:String x:Key="LOCGOGLoggedIn">Kasutaja on autenditud</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedIn">Vajalik on autentimine</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedInError">Kasutaja autentimine ebaõnnestus.</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateLabel">Autendi</sys:String>
+  <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Käivita mängud otseselt, ilma ametlikku klienti avamata</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Konto sünkroonimise probleemide tõrkeotsing</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues">Probleemide tõrkeotsing</sys:String>
-  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel" />
+  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">Impordi kõik mängud</sys:String>
   <sys:String x:Key="LOCGOGPrivateAccount">Privaatne konto</sys:String>
-  <sys:String x:Key="LOCGOGPublicAccount" />
+  <sys:String x:Key="LOCGOGPublicAccount">Avalik konto</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">API võti</sys:String>
-  <sys:String x:Key="LOCGOGStartUsingClient" />
-  <sys:String x:Key="LOCGOGImportPlaytime" />
+  <sys:String x:Key="LOCGOGStartUsingClient">Käivita klienti {0} kasutades</sys:String>
+  <sys:String x:Key="LOCGOGImportPlaytime">Impordi mänguaeg</sys:String>
   <sys:String x:Key="LOCGOGAccountID">Konto ID</sys:String>
-  <sys:String x:Key="LOCGOGMetadataLanguageLabel" />
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Metaandmete keel:</sys:String>
   <!--GOG-->
-  <sys:String x:Key="LOCGOGUseLogin" />
-  <sys:String x:Key="LOCGOGUseAccountName" />
-  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve" />
-  <sys:String x:Key="LOCSettingsGOGUseGalaxy" />
-  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip" />
-  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls" />
-  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve" />
+  <sys:String x:Key="LOCGOGUseLogin">Kontosse sisselogimine</sys:String>
+  <sys:String x:Key="LOCGOGUseAccountName">Konto nimi</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxy">Käivita mängud klienti GOG Galaxy kasutades</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">See võimaldab kasutada GOG Galaxy võimalusi, nagu pilves salvestamine, mänguaja jälgimine jne.</sys:String>
 </ResourceDictionary>

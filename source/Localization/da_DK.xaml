@@ -8,17 +8,17 @@
     <sys:String x:Key="LOCNotLoggedIn">Kræver verificering</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Verificering</sys:String>
-    <sys:String x:Key="LOCSettingsStartGameDirectly"></sys:String>
-    <sys:String x:Key="LOCTroubleShootingAccountLink"></sys:String>
+    <sys:String x:Key="LOCSettingsStartGameDirectly">Start spil direkte uden at køre officiel klient</sys:String>
+    <sys:String x:Key="LOCTroubleShootingAccountLink">Fejlfinding for konto synkroniserings problemer</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues"></sys:String>
-    <sys:String x:Key="LOCSettingsImportLibraryLabel"></sys:String>
-    <sys:String x:Key="LOCPrivateAccount"></sys:String>
-    <sys:String x:Key="LOCPublicAccount"></sys:String>
-    <sys:String x:Key="LOCAPIKey"></sys:String>
-    <sys:String x:Key="LOCStartUsingClient"></sys:String>
-    <sys:String x:Key="LOCImportPlaytime"></sys:String>
-    <sys:String x:Key="LOCAccountID"></sys:String>
-    <sys:String x:Key="LOCMetadataLanguageLabel"></sys:String>
+    <sys:String x:Key="LOCSettingsImportLibraryLabel">Importer alle spil</sys:String>
+    <sys:String x:Key="LOCPrivateAccount">Privat konto</sys:String>
+    <sys:String x:Key="LOCPublicAccount">Offentlig Konto</sys:String>
+    <sys:String x:Key="LOCAPIKey">API Nøgle</sys:String>
+    <sys:String x:Key="LOCStartUsingClient">Begynd at bruge {0} klient</sys:String>
+    <sys:String x:Key="LOCImportPlaytime">Importer spilletid</sys:String>
+    <sys:String x:Key="LOCAccountID">Konto ID</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">Metadata sprog:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif"></sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage"></sys:String>

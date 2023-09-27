@@ -3,9 +3,9 @@
   <sys:String x:Key="LOCEpicSettingsImportInstalledLabel">Kurulu oyunları içeri aktar</sys:String>
   <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">Kurulu olmayan oyunları içe aktar</sys:String>
   <sys:String x:Key="LOCEpicSettingsConnectAccount">Hesap bağla</sys:String>
-  <sys:String x:Key="LOCEpicLoginChecking">Kimlik doğrulaması kontrol ediliyor…</sys:String>
+  <sys:String x:Key="LOCEpicLoginChecking">Kimlik doğrulama durumu kontrol ediliyor…</sys:String>
   <sys:String x:Key="LOCEpicLoggedIn">Kullanıcı kimliği doğrulandı</sys:String>
-  <sys:String x:Key="LOCEpicNotLoggedIn">Kimlik doğrulaması gerekiyor</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Kimlik Doğrulaması</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
@@ -15,8 +15,8 @@
   <sys:String x:Key="LOCEpicPrivateAccount">Özel Hesap</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">Genel Hesap</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">API Anahtarı</sys:String>
-  <sys:String x:Key="LOCEpicStartUsingClient">{0} istemicisini kullanarak başlat</sys:String>
+  <sys:String x:Key="LOCEpicStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Oynama zamanını içe aktar</sys:String>
-  <sys:String x:Key="LOCEpicAccountID">Hesap ID</sys:String>
+  <sys:String x:Key="LOCEpicAccountID">Hesap kimliği</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Üst veri dili:</sys:String>
 </ResourceDictionary>

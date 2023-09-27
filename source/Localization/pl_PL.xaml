@@ -13,7 +13,7 @@
     <sys:String x:Key="LOCTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
     <sys:String x:Key="LOCSettingsImportLibraryLabel">Importuj wszystkie gry</sys:String>
     <sys:String x:Key="LOCPrivateAccount">Konto prywatne</sys:String>
-    <sys:String x:Key="LOCPublicAccount">Publiczne konto</sys:String>
+    <sys:String x:Key="LOCPublicAccount">Konto publiczne</sys:String>
     <sys:String x:Key="LOCAPIKey">Klucz API</sys:String>
     <sys:String x:Key="LOCStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importuj czasy gier</sys:String>
@@ -25,22 +25,22 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError">Aplikacja itch.io w wersji 25 lub nowszej nie jest zainstalowana.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Zaimportuj darmowe gry z kolekcji.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Zostaną zaimportowane:</sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationOthers"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationBooks"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">Gry</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">Narzędzia</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">Zasoby</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">Modyfikacje</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Gry fizyczne</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Ścieżki dźwiękowe</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">Inne</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">Komiksy</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">Książki</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Logowanie do konta</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Nazwa konta</sys:String>
     <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Zaloguj się do konta lub podaj nazwę konta, jeżeli jest publiczne, aby zsynchronizować bibliotekę.
 Pamiętaj, że opcja Nazwa konta działa tylko w przypadku kont, których konta GOG są ustawione na publiczne.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Uruchamiaj gry za pomocą klienta GOG Galaxy</sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Ta opcja włączy funkcje GOG Galaxy takie jak zapis w chmurze, licznik czasu w grze itd.</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Ta opcja włączy funkcje GOG Galaxy, takie jak zapis w chmurze, licznik czasu w grze itd.</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automatycznie uruchom proces instalacji podczas instalacji gier na GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Jeśli opcja jest włączona, proces instalacji zostanie automatycznie uruchomiony bez konieczności interakcji użytkownika ze skonfigurowaną domyślną lokalizacją instalacji.
 Jeśli wyłączone, strona gry zostanie otwarta do ręcznego rozpoczęcia procesu instalacji.</sys:String>
@@ -93,7 +93,7 @@ Jeśli wyłączone, strona gry zostanie otwarta do ręcznego rozpoczęcia proces
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Użyj zrzutów ekranu, jeśli grafika nie jest dostępna</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Jeśli dostępnych jest wiele obrazów, używaj:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Wybierz obraz tła dla: {0}</sys:String>
-    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">Zastępcza przycięta okładka ikony</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignoruj gry ze sklepów zewnętrznych</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Zaimportuj gry z Humble Choice</sys:String>

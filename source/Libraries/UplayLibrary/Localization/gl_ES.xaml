@@ -9,14 +9,14 @@
   <sys:String x:Key="LOCUbisoftNotLoggedInError">Erro na verificación do usuario</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Verificar</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Comezar xogos dereitamente sen arrincar o cliente oficial</sys:String>
-  <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Solución de problemas ca sincronización da conta</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Solución de problemas coa sincronización da conta</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Solución de problemas</sys:String>
-  <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">Importar todos os xogos</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">Importar tódolos xogos</sys:String>
   <sys:String x:Key="LOCUbisoftPrivateAccount">Conta privada</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">Conta pública</sys:String>
-  <sys:String x:Key="LOCUbisoftAPIKey">Chave da API</sys:String>
+  <sys:String x:Key="LOCUbisoftAPIKey">Clave da API</sys:String>
   <sys:String x:Key="LOCUbisoftStartUsingClient">Comezar usando o cliente {0}</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Importar tempo de xogo</sys:String>
-  <sys:String x:Key="LOCUbisoftAccountID">ID da conta</sys:String>
-  <sys:String x:Key="LOCUbisoftMetadataLanguageLabel" />
+  <sys:String x:Key="LOCUbisoftAccountID">Id. da conta</sys:String>
+  <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Idioma dos metadatos:</sys:String>
 </ResourceDictionary>

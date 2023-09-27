@@ -25,13 +25,13 @@
   <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io приложение версия 25 или по-нова не е инсталирано.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Импортирайте безплатни игри от колекции.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Елементи за импортиране:</sys:String>
-  <sys:String x:Key="LOCitchioItemClassificationGames" />
-  <sys:String x:Key="LOCitchioItemClassificationTools" />
-  <sys:String x:Key="LOCitchioItemClassificationAssets" />
-  <sys:String x:Key="LOCitchioItemClassificationMods" />
-  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames" />
-  <sys:String x:Key="LOCitchioItemClassificationSoundtracks" />
-  <sys:String x:Key="LOCitchioItemClassificationOthers" />
-  <sys:String x:Key="LOCitchioItemClassificationComics" />
-  <sys:String x:Key="LOCitchioItemClassificationBooks" />
+  <sys:String x:Key="LOCitchioItemClassificationGames">Игри</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationTools">Инструменти</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationAssets">Активи</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationMods">Модификации</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Физически игри</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Саундтракoве</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationOthers">Други</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationComics">Комикси</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationBooks">Книги</sys:String>
 </ResourceDictionary>

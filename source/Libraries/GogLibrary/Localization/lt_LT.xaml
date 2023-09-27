@@ -10,7 +10,7 @@
   <sys:String x:Key="LOCGOGAuthenticateLabel">Autentifikuoti</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Paleisti žaidimus tiesiogiai, nenaudojant oficialaus kliento</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Spręsti vartotojo sinchronizacijos problemas</sys:String>
-  <sys:String x:Key="LOCGOGTroubleShootingIssues" />
+  <sys:String x:Key="LOCGOGTroubleShootingIssues">Tvarkoma klaidas</sys:String>
   <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">Importuoti visus žaidimus</sys:String>
   <sys:String x:Key="LOCGOGPrivateAccount">Privatus paskyra</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">Vieša paskyra</sys:String>
@@ -18,13 +18,15 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Importuoti pražaistą laiką</sys:String>
   <sys:String x:Key="LOCGOGAccountID">Paskyros ID</sys:String>
-  <sys:String x:Key="LOCGOGMetadataLanguageLabel" />
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Metadata kalba:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Vartotojo prisijungimas</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Vartotojo vardas</sys:String>
-  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve" />
+  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Prisijunkite prie paskyros ar nadokite savo paskyros pavidinima ,kad su sinchronizuoti biblioteka pilnai.
+Bet paskyros pavadinimo metodas veikia tik jeigu paskyra nustatyta į ne privačia per GOG privatumo nustatymus.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">Paleisti žaidimus naudojant GOG Galaxy klientą</sys:String>
-  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip" />
-  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls" />
-  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve" />
+  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Tai įjungs GOG Galaxy funkcijas kaip cloud saugokima, žaidimų sekima ir t.t</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automatiškas pradėti instaliacijos procesa kai žaidimai instaliuojami per GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Jei įjungta, instaliacijos procesas bus automatiškai pradėtas ir naudotojoįvesties nereikės ir žaidimai bus suinstaliuoti iš anksto nustatyta vieta.
+Jei išjungta, žaidimo puslapis bus atidarytas automatiškai ,kad pradėti instaliacijos procesa.  </sys:String>
 </ResourceDictionary>
