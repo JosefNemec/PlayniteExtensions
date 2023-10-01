@@ -46,7 +46,20 @@
                         <CheckBox IsChecked="{Binding Settings.LimitTagsToFixedAmount}" Content="{DynamicResource LOCSteamLimitTagCountLabel}" VerticalAlignment="Center" Margin="0,0,4,0"/>
                         <TextBox Text="{Binding FixedTagCountString}" Width="50" VerticalAlignment="Center" IsEnabled="{Binding Settings.LimitTagsToFixedAmount}" />
                     </StackPanel>
+                    <CheckBox x:Name="cbTagCategoryPrefix" IsChecked="{Binding Settings.SetTagCategoryAsPrefix}"
+                              Content="{DynamicResource LOCSteamSetTagCategoryAsPrefixLabel}"
+                              ToolTip="{DynamicResource LOCSteamSetTagCategoryAsPrefixTooltip}"
+                              VerticalAlignment="Center" Margin="0,12,4,0"/>
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <StackPanel.Style>
+                            <Style TargetType="StackPanel">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsChecked, ElementName=cbTagCategoryPrefix}" Value="True">
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </StackPanel.Style>
                         <CheckBox IsChecked="{Binding Settings.UseTagPrefix}" Content="{DynamicResource LOCSteamTagPrefixLabel}" VerticalAlignment="Center" Margin="0,0,4,0"/>
                         <TextBox Text="{Binding Settings.TagPrefix}" Width="200" VerticalAlignment="Center" IsEnabled="{Binding Settings.UseTagPrefix}"/>
                     </StackPanel>

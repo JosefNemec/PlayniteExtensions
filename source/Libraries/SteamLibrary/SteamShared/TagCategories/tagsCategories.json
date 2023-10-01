@@ -1,0 +1,1682 @@
+﻿[
+  {
+    "Id": 19,
+    "Category": "TopLevelGenres"
+  },
+  {
+    "Id": 21,
+    "Category": "TopLevelGenres"
+  },
+  {
+    "Id": 597,
+    "Category": "TopLevelGenres"
+  },
+  {
+    "Id": 13782,
+    "Category": "TopLevelGenres"
+  },
+  {
+    "Id": 1664,
+    "Category": "TopLevelGenres"
+  },
+  {
+    "Id": 699,
+    "Category": "TopLevelGenres"
+  },
+  {
+    "Id": 122,
+    "Category": "TopLevelGenres"
+  },
+  {
+    "Id": 599,
+    "Category": "TopLevelGenres"
+  },
+  {
+    "Id": 701,
+    "Category": "TopLevelGenres"
+  },
+  {
+    "Id": 9,
+    "Category": "TopLevelGenres"
+  },
+  {
+    "Id": 17389,
+    "Category": "TopLevelGenres"
+  },
+  {
+    "Id": 4231,
+    "Category": "Genres"
+  },
+  {
+    "Id": 4106,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1773,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1084988,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1100687,
+    "Category": "Genres"
+  },
+  {
+    "Id": 7332,
+    "Category": "Genres"
+  },
+  {
+    "Id": 5727,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1746,
+    "Category": "Genres"
+  },
+  {
+    "Id": 176981,
+    "Category": "Genres"
+  },
+  {
+    "Id": 252854,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1770,
+    "Category": "Genres"
+  },
+  {
+    "Id": 7328,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1643,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1666,
+    "Category": "Genres"
+  },
+  {
+    "Id": 3955,
+    "Category": "Genres"
+  },
+  {
+    "Id": 4184,
+    "Category": "Genres"
+  },
+  {
+    "Id": 379975,
+    "Category": "Genres"
+  },
+  {
+    "Id": 19568,
+    "Category": "Genres"
+  },
+  {
+    "Id": 6310,
+    "Category": "Genres"
+  },
+  {
+    "Id": 5055,
+    "Category": "Genres"
+  },
+  {
+    "Id": 13782,
+    "Category": "Genres"
+  },
+  {
+    "Id": 3834,
+    "Category": "Genres"
+  },
+  {
+    "Id": 87918,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1743,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1254552,
+    "Category": "Genres"
+  },
+  {
+    "Id": 5300,
+    "Category": "Genres"
+  },
+  {
+    "Id": 7038,
+    "Category": "Genres"
+  },
+  {
+    "Id": 5502,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1738,
+    "Category": "Genres"
+  },
+  {
+    "Id": 324176,
+    "Category": "Genres"
+  },
+  {
+    "Id": 615955,
+    "Category": "Genres"
+  },
+  {
+    "Id": 11014,
+    "Category": "Genres"
+  },
+  {
+    "Id": 12472,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1665,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1100688,
+    "Category": "Genres"
+  },
+  {
+    "Id": 22955,
+    "Category": "Genres"
+  },
+  {
+    "Id": 5981,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1754,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1718,
+    "Category": "Genres"
+  },
+  {
+    "Id": 15868,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1695,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1100686,
+    "Category": "Genres"
+  },
+  {
+    "Id": 10695,
+    "Category": "Genres"
+  },
+  {
+    "Id": 6621,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1625,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1698,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1752,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1716,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1676,
+    "Category": "Genres"
+  },
+  {
+    "Id": 3810,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1774,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1753,
+    "Category": "Genres"
+  },
+  {
+    "Id": 96359,
+    "Category": "Genres"
+  },
+  {
+    "Id": 7309,
+    "Category": "Genres"
+  },
+  {
+    "Id": 28444,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1254546,
+    "Category": "Genres"
+  },
+  {
+    "Id": 16598,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1687,
+    "Category": "Genres"
+  },
+  {
+    "Id": 17305,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1662,
+    "Category": "Genres"
+  },
+  {
+    "Id": 5914,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1645,
+    "Category": "Genres"
+  },
+  {
+    "Id": 10437,
+    "Category": "Genres"
+  },
+  {
+    "Id": 1741,
+    "Category": "Genres"
+  },
+  {
+    "Id": 3799,
+    "Category": "Genres"
+  },
+  {
+    "Id": 5900,
+    "Category": "Genres"
+  },
+  {
+    "Id": 24003,
+    "Category": "Genres"
+  },
+  {
+    "Id": 47827,
+    "Category": "Genres"
+  },
+  {
+    "Id": 4736,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 5379,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 6506,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 5395,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 1670,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 42804,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 5547,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 4158,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 4885,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 791774,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 4486,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 4328,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 5652,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 220585,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 4102,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 4474,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 9551,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 1720,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 1036,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 15045,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 1663,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 4364,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 1646,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 1680,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 620519,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 1667,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 9204,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 8369,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 4434,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 10235,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 353880,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 1628,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 198631,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 56690,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 1100689,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 26921,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 3877,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 5432,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 3813,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 3959,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 922563,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 8666,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 4255,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 3798,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 1730,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 13070,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 29482,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 4777,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 71389,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 3978,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 21725,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 3814,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 16689,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 4637,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 4202,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 9271,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 454187,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 14139,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 4758,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 1674,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 4684,
+    "Category": "SubGenres"
+  },
+  {
+    "Id": 4975,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 3871,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 776177,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 4191,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 29363,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 4400,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 4085,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 4562,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 4195,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 4145,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 4305,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 1751,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 4726,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 3839,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 18594,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 6815,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 5851,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 4094,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 6052,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 3964,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 1714,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 4175,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 10816,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 4252,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 31275,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 1697,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 4791,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 1732,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 21978,
+    "Category": "VisualsViewpoint"
+  },
+  {
+    "Id": 7743,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 6691,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 22602,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1673,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4598,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 13190,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4166,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4376,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 123332,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4845,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 17894,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 5179,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1751,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 5372,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 6378,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4115,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4342,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4604,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 9541,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 5363,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 5613,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 5160,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 6310,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1638,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4046,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 9592,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4695,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1036,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 180368,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 5350,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1684,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 51306,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4295,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 16250,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 13906,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 3952,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1680,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 3987,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 6041,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 7478,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 8369,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 92092,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 17337,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 44868,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 6129,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4236,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 7432,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4057,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 12472,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 6702,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4821,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4172,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 10397,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4168,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 5673,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 198913,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 5716,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 16094,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 30358,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 6910,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1688,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 7622,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 3916,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 31579,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4036,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 15277,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1681,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4853,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4754,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 17927,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 3835,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 5432,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4004,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 5752,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4947,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 6948,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1651,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 5794,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 3942,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 7423,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 9803,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1755,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1687,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1777,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 19780,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1671,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 10808,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1710,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1662,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4608,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1708,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 13276,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4064,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 10679,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1616,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4137,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 10383,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 21006,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 9157,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4018,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1678,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 17015,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 1647,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 5382,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4150,
+    "Category": "ThemesMoods"
+  },
+  {
+    "Id": 4835,
+    "Category": "Features"
+  },
+  {
+    "Id": 13382,
+    "Category": "Features"
+  },
+  {
+    "Id": 7926,
+    "Category": "Features"
+  },
+  {
+    "Id": 856791,
+    "Category": "Features"
+  },
+  {
+    "Id": 129761,
+    "Category": "Features"
+  },
+  {
+    "Id": 255534,
+    "Category": "Features"
+  },
+  {
+    "Id": 7332,
+    "Category": "Features"
+  },
+  {
+    "Id": 12190,
+    "Category": "Features"
+  },
+  {
+    "Id": 1643,
+    "Category": "Features"
+  },
+  {
+    "Id": 5796,
+    "Category": "Features"
+  },
+  {
+    "Id": 4747,
+    "Category": "Features"
+  },
+  {
+    "Id": 6426,
+    "Category": "Features"
+  },
+  {
+    "Id": 4155,
+    "Category": "Features"
+  },
+  {
+    "Id": 3993,
+    "Category": "Features"
+  },
+  {
+    "Id": 15172,
+    "Category": "Features"
+  },
+  {
+    "Id": 1702,
+    "Category": "Features"
+  },
+  {
+    "Id": 32322,
+    "Category": "Features"
+  },
+  {
+    "Id": 1644,
+    "Category": "Features"
+  },
+  {
+    "Id": 15564,
+    "Category": "Features"
+  },
+  {
+    "Id": 15045,
+    "Category": "Features"
+  },
+  {
+    "Id": 18594,
+    "Category": "Features"
+  },
+  {
+    "Id": 7569,
+    "Category": "Features"
+  },
+  {
+    "Id": 5765,
+    "Category": "Features"
+  },
+  {
+    "Id": 1646,
+    "Category": "Features"
+  },
+  {
+    "Id": 5502,
+    "Category": "Features"
+  },
+  {
+    "Id": 1717,
+    "Category": "Features"
+  },
+  {
+    "Id": 9564,
+    "Category": "Features"
+  },
+  {
+    "Id": 6276,
+    "Category": "Features"
+  },
+  {
+    "Id": 8122,
+    "Category": "Features"
+  },
+  {
+    "Id": 7250,
+    "Category": "Features"
+  },
+  {
+    "Id": 6915,
+    "Category": "Features"
+  },
+  {
+    "Id": 5981,
+    "Category": "Features"
+  },
+  {
+    "Id": 1669,
+    "Category": "Features"
+  },
+  {
+    "Id": 6971,
+    "Category": "Features"
+  },
+  {
+    "Id": 8253,
+    "Category": "Features"
+  },
+  {
+    "Id": 5094,
+    "Category": "Features"
+  },
+  {
+    "Id": 4994,
+    "Category": "Features"
+  },
+  {
+    "Id": 6869,
+    "Category": "Features"
+  },
+  {
+    "Id": 1695,
+    "Category": "Features"
+  },
+  {
+    "Id": 1759,
+    "Category": "Features"
+  },
+  {
+    "Id": 3968,
+    "Category": "Features"
+  },
+  {
+    "Id": 5125,
+    "Category": "Features"
+  },
+  {
+    "Id": 6730,
+    "Category": "Features"
+  },
+  {
+    "Id": 1775,
+    "Category": "Features"
+  },
+  {
+    "Id": 4559,
+    "Category": "Features"
+  },
+  {
+    "Id": 8945,
+    "Category": "Features"
+  },
+  {
+    "Id": 13577,
+    "Category": "Features"
+  },
+  {
+    "Id": 5154,
+    "Category": "Features"
+  },
+  {
+    "Id": 1687,
+    "Category": "Features"
+  },
+  {
+    "Id": 1742,
+    "Category": "Features"
+  },
+  {
+    "Id": 17389,
+    "Category": "Features"
+  },
+  {
+    "Id": 5711,
+    "Category": "Features"
+  },
+  {
+    "Id": 31275,
+    "Category": "Features"
+  },
+  {
+    "Id": 6625,
+    "Category": "Features"
+  },
+  {
+    "Id": 4202,
+    "Category": "Features"
+  },
+  {
+    "Id": 4325,
+    "Category": "Features"
+  },
+  {
+    "Id": 14139,
+    "Category": "Features"
+  },
+  {
+    "Id": 12057,
+    "Category": "Features"
+  },
+  {
+    "Id": 11104,
+    "Category": "Features"
+  },
+  {
+    "Id": 7208,
+    "Category": "Features"
+  },
+  {
+    "Id": 15954,
+    "Category": "Features"
+  },
+  {
+    "Id": 11333,
+    "Category": "Features"
+  },
+  {
+    "Id": 8093,
+    "Category": "Features"
+  },
+  {
+    "Id": 14906,
+    "Category": "Features"
+  },
+  {
+    "Id": 4840,
+    "Category": "Players"
+  },
+  {
+    "Id": 17770,
+    "Category": "Players"
+  },
+  {
+    "Id": 1685,
+    "Category": "Players"
+  },
+  {
+    "Id": 4508,
+    "Category": "Players"
+  },
+  {
+    "Id": 3841,
+    "Category": "Players"
+  },
+  {
+    "Id": 7368,
+    "Category": "Players"
+  },
+  {
+    "Id": 128,
+    "Category": "Players"
+  },
+  {
+    "Id": 3859,
+    "Category": "Players"
+  },
+  {
+    "Id": 3843,
+    "Category": "Players"
+  },
+  {
+    "Id": 4182,
+    "Category": "Players"
+  },
+  {
+    "Id": 3796,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 15339,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 5984,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 14153,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 4242,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 9994,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 233824,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 5310,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 492,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 1736,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 5348,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 4700,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 1621,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 4161,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 7107,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 5708,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 5230,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 7948,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 5390,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 1677,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 12286,
+    "Category": "OtherTags"
+  },
+  {
+    "Id": 872,
+    "Category": "Software"
+  },
+  {
+    "Id": 1027,
+    "Category": "Software"
+  },
+  {
+    "Id": 5407,
+    "Category": "Software"
+  },
+  {
+    "Id": 84,
+    "Category": "Software"
+  },
+  {
+    "Id": 1649,
+    "Category": "Software"
+  },
+  {
+    "Id": 150626,
+    "Category": "Software"
+  },
+  {
+    "Id": 809,
+    "Category": "Software"
+  },
+  {
+    "Id": 5577,
+    "Category": "Software"
+  },
+  {
+    "Id": 8013,
+    "Category": "Software"
+  },
+  {
+    "Id": 1445,
+    "Category": "Software"
+  },
+  {
+    "Id": 87,
+    "Category": "Software"
+  },
+  {
+    "Id": 784,
+    "Category": "Software"
+  },
+  {
+    "Id": 1038,
+    "Category": "Software"
+  },
+  {
+    "Id": 4190,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 5411,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 1693,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 3878,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 7782,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 4026,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 5608,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 3965,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 1734,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 4136,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 1756,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 3854,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 5144,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 5186,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 1654,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 4711,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 4234,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 1733,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 1719,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 19995,
+    "Category": "Assessments"
+  },
+  {
+    "Id": 5228,
+    "Category": "RatingsEtc"
+  },
+  {
+    "Id": 4345,
+    "Category": "RatingsEtc"
+  },
+  {
+    "Id": 5611,
+    "Category": "RatingsEtc"
+  },
+  {
+    "Id": 24904,
+    "Category": "RatingsEtc"
+  },
+  {
+    "Id": 6650,
+    "Category": "RatingsEtc"
+  },
+  {
+    "Id": 12095,
+    "Category": "RatingsEtc"
+  },
+  {
+    "Id": 4667,
+    "Category": "RatingsEtc"
+  },
+  {
+    "Id": 7481,
+    "Category": "HardwareInput"
+  },
+  {
+    "Id": 603297,
+    "Category": "HardwareInput"
+  },
+  {
+    "Id": 11123,
+    "Category": "HardwareInput"
+  },
+  {
+    "Id": 348922,
+    "Category": "HardwareInput"
+  },
+  {
+    "Id": 25085,
+    "Category": "HardwareInput"
+  },
+  {
+    "Id": 8075,
+    "Category": "HardwareInput"
+  },
+  {
+    "Id": 27758,
+    "Category": "HardwareInput"
+  },
+  {
+    "Id": 7113,
+    "Category": "FundingEtc"
+  },
+  {
+    "Id": 493,
+    "Category": "FundingEtc"
+  },
+  {
+    "Id": 113,
+    "Category": "FundingEtc"
+  },
+  {
+    "Id": 5153,
+    "Category": "FundingEtc"
+  }
+]
