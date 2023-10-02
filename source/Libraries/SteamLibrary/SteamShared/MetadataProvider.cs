@@ -544,10 +544,6 @@ namespace Steam
             if (int.TryParse(categoryStr, out int category) && Enum.IsDefined(typeof(SteamDeckCompatibility), category))
                 compatibility = (SteamDeckCompatibility)category;
 
-            var compatSetting = settings.SteamDeckCompatibilitySettings.FirstOrDefault(x => x.Compatibility == compatibility);
-            if (compatSetting == null || !compatSetting.IsChecked)
-                return null;
-
             return $"Steam Deck {compatibility}";
         }
 

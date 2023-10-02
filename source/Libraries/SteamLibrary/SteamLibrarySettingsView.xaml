@@ -216,15 +216,6 @@
                         <TextBlock VerticalAlignment="Center" Text="{DynamicResource LOCSteamImportSteamDeckCompatibilityAs}"/>
                         <ComboBox IsEditable="False" ItemsSource="{Binding SteamDeckCompatibilityFieldOptions}" SelectedValue="{Binding Settings.SteamDeckCompatibilityField}" DisplayMemberPath="Name" SelectedValuePath="Field" Margin="6,0"/>
                     </StackPanel>
-                    <ListBox ItemsSource="{Binding Settings.SteamDeckCompatibilitySettings}" d:ItemsSource="{d:SampleData ItemCount=4}" Margin="0,5">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel>
-                                    <CheckBox Content="{Binding Compatibility}" IsChecked="{Binding IsChecked}"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
                 </StackPanel>
             </ScrollViewer>
         </TabItem>

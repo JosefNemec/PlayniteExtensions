@@ -30,14 +30,6 @@ namespace SteamLibrary.SteamShared
         public ObservableCollection<int> BlacklistedTags { get; set; } = new ObservableCollection<int>();
 
         public GameField SteamDeckCompatibilityField { get; set; } = GameField.None;
-
-        public class CheckedCompatibility
-        {
-            public SteamDeckCompatibility Compatibility { get; set; }
-            public bool IsChecked { get; set; }
-        }
-
-        public List<CheckedCompatibility> SteamDeckCompatibilitySettings { get; set; } = new List<CheckedCompatibility>();
     }
 
     public enum SteamDeckCompatibility
