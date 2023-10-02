@@ -1,11 +1,7 @@
-﻿using Playnite.SDK;
+﻿using Playnite.SDK.Models;
 using Steam;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SteamLibrary.SteamShared
 {
@@ -32,5 +28,23 @@ namespace SteamLibrary.SteamShared
         public BackgroundSource BackgroundSource { get; set; } = BackgroundSource.Image;
 
         public ObservableCollection<int> BlacklistedTags { get; set; } = new ObservableCollection<int>();
+
+        public GameField SteamDeckCompatibilityField { get; set; } = GameField.None;
+
+        public class CheckedCompatibility
+        {
+            public SteamDeckCompatibility Compatibility { get; set; }
+            public bool IsChecked { get; set; }
+        }
+
+        public List<CheckedCompatibility> SteamDeckCompatibilitySettings { get; set; } = new List<CheckedCompatibility>();
+    }
+
+    public enum SteamDeckCompatibility
+    {
+        Unknown = 0,
+        Unsupported = 1,
+        Playable = 2,
+        Verified = 3,
     }
 }

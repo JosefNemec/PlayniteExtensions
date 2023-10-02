@@ -5,7 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:steam="clr-namespace:Steam"
+             xmlns:steammetadata="clr-namespace:UniversalSteamMetadata"
              mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=steammetadata:UniversalSteamMetadataSettingsViewModel}"
              d:DesignHeight="400" d:DesignWidth="600">
 
     <UserControl.Resources>
@@ -50,6 +52,19 @@
                         <CheckBox IsChecked="{Binding Settings.UseTagPrefix}" Content="{DynamicResource LOCSteamTagPrefixLabel}" VerticalAlignment="Center" Margin="0,0,4,0"/>
                         <TextBox Text="{Binding Settings.TagPrefix}" Width="200" VerticalAlignment="Center" IsEnabled="{Binding Settings.UseTagPrefix}"/>
                     </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <TextBlock VerticalAlignment="Center" Text="{DynamicResource LOCSteamImportSteamDeckCompatibilityAs}"/>
+                        <ComboBox IsEditable="False" ItemsSource="{Binding SteamDeckCompatibilityFieldOptions}" SelectedValue="{Binding Settings.SteamDeckCompatibilityField}" DisplayMemberPath="Name" SelectedValuePath="Field" Margin="6,0"/>
+                    </StackPanel>
+                    <ListBox ItemsSource="{Binding Settings.SteamDeckCompatibilitySettings}" d:ItemsSource="{d:SampleData ItemCount=4}" Margin="0,5">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <CheckBox Content="{Binding Compatibility}" IsChecked="{Binding IsChecked}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
                 </StackPanel>
             </ScrollViewer>
         </TabItem>

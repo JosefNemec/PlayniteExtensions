@@ -1,22 +1,13 @@
 ﻿using AngleSharp.Parser.Html;
 using Playnite.Common.Web;
 using Playnite.SDK;
-using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
-using Steam;
 using Steam.Models;
-using SteamKit2;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Web;
-using System.Windows.Controls;
 
 namespace UniversalSteamMetadata
 {
