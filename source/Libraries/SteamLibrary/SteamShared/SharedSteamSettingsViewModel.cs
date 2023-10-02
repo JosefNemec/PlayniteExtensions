@@ -227,13 +227,6 @@ namespace SteamLibrary.SteamShared
                 new NamedField(PlayniteApi.Resources.GetString("LOCFeatureLabel"), GameField.Features),
                 new NamedField(PlayniteApi.Resources.GetString("LOCTagLabel"), GameField.Tags)
             };
-
-            var enumValues = Enum.GetValues(typeof(SteamDeckCompatibility)).Cast<SteamDeckCompatibility>().ToList();
-            foreach (var enumValue in enumValues)
-            {
-                if (!Settings.SteamDeckCompatibilitySettings.Any(x => x.Compatibility == enumValue))
-                    Settings.SteamDeckCompatibilitySettings.Add(new SharedSteamSettings.CheckedCompatibility { Compatibility = enumValue });
-            }
         }
     }
 }
