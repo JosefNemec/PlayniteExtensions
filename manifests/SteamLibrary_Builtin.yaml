@@ -147,7 +147,7 @@ Packages:
       - Started game process ID is passed properly to OnStarted event (by lscholte)
       - Removed option to import categories from Steam install
   - Version: 2.21
-    RequiredApiVersion: 6.0.0
+    RequiredApiVersion: 6.4.0
     ReleaseDate: 2023-10-23
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_21.pext
     Changelog:

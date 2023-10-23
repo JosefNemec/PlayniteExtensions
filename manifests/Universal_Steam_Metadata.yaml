@@ -93,3 +93,10 @@ Packages:
     Changelog:
       - Added Indonesian language (by Jeshibu)
       - Fixed incorrect searches when game name has characters that need encoding (by darklinkpower)
+  - Version: 2.14
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2023-10-23
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_14.pext
+    Changelog:
+      - Added option to download Deck compatibility metadata (by Jeshibu)
+      - Added option to add tag category as prefix (by darklinkpower)
