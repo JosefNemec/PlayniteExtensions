@@ -1,4 +1,5 @@
 ﻿using Playnite.SDK;
+using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,7 @@ namespace SteamLibrary.SteamShared
                 OnInitSettings();
             }
 
+            InitializeSteamDeckCompatibilitySettings();
             InitializeTagNames();
             Settings.PropertyChanged += (sender, ev) =>
             {
@@ -77,7 +79,7 @@ namespace SteamLibrary.SteamShared
                 case "zh_TW": return "schinese";
                 case "en_US":
                 default: return "english";
-                //no cultures for latam, thai, bulgarian, tchinese
+                    //no cultures for latam, thai, bulgarian, tchinese, indonesian
             }
         }
 
@@ -204,6 +206,29 @@ namespace SteamLibrary.SteamShared
             }
 
             base.EndEdit();
+        }
+
+        public class NamedField
+        {
+            public string Name { get; set; }
+            public GameField Field { get; set; }
+            public NamedField(string name, GameField field)
+            {
+                Name = name;
+                Field = field;
+            }
+        }
+
+        public List<NamedField> SteamDeckCompatibilityFieldOptions { get; set; }
+
+        public void InitializeSteamDeckCompatibilitySettings()
+        {
+            SteamDeckCompatibilityFieldOptions = new List<NamedField>
+            {
+                new NamedField(PlayniteApi.Resources.GetString("LOCNone"), GameField.None),
+                new NamedField(PlayniteApi.Resources.GetString("LOCFeatureLabel"), GameField.Features),
+                new NamedField(PlayniteApi.Resources.GetString("LOCTagLabel"), GameField.Tags)
+            };
         }
     }
 }

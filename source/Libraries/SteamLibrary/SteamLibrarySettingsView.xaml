@@ -8,7 +8,8 @@
              xmlns:pcmd="clr-namespace:Playnite.Commands"
              xmlns:pcon="clr-namespace:Playnite.Converters"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             mc:Ignorable="d"              
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=steam:SteamLibrarySettingsViewModel}"
              d:DesignHeight="450" d:DesignWidth="600">
 
     <UserControl.Resources>
@@ -223,6 +224,10 @@
                         </StackPanel.Style>
                         <CheckBox IsChecked="{Binding Settings.UseTagPrefix}" Content="{DynamicResource LOCSteamTagPrefixLabel}" VerticalAlignment="Center" Margin="0,0,4,0"/>
                         <TextBox Text="{Binding Settings.TagPrefix}" Width="200" VerticalAlignment="Center" IsEnabled="{Binding Settings.UseTagPrefix}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <TextBlock VerticalAlignment="Center" Text="{DynamicResource LOCSteamImportSteamDeckCompatibilityAs}"/>
+                        <ComboBox IsEditable="False" ItemsSource="{Binding SteamDeckCompatibilityFieldOptions}" SelectedValue="{Binding Settings.SteamDeckCompatibilityField}" DisplayMemberPath="Name" SelectedValuePath="Field" Margin="6,0"/>
                     </StackPanel>
                 </StackPanel>
             </ScrollViewer>
