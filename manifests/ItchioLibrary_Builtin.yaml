@@ -37,3 +37,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/ItchioLibrary_Builtin_2_5.pext
     Changelog:
       - Show startup selection options if available
+  - Version: 2.6
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-10-23
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/ItchioLibrary_Builtin_2_6.pext
+    Changelog:
+      - Added support for fetching game icons
