@@ -230,7 +230,7 @@ namespace OriginLibrary
         private void ProcMon_TreeStarted(object sender, ProcessMonitor.TreeStartedEventArgs args)
         {
             stopWatch = Stopwatch.StartNew();
-            InvokeOnStarted(new GameStartedEventArgs());
+            InvokeOnStarted(new GameStartedEventArgs() { StartedProcessId = args.StartedId });
         }
 
         private void ProcMon_TreeDestroyed(object sender, EventArgs args)

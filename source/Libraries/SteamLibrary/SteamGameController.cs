@@ -202,7 +202,7 @@ namespace SteamLibrary
         private void ProcMon_TreeStarted(object sender, ProcessMonitor.TreeStartedEventArgs args)
         {
             stopWatch = Stopwatch.StartNew();
-            InvokeOnStarted(new GameStartedEventArgs());
+            InvokeOnStarted(new GameStartedEventArgs() { StartedProcessId = args.StartedId });
         }
 
         private void Monitor_TreeDestroyed(object sender, EventArgs args)
