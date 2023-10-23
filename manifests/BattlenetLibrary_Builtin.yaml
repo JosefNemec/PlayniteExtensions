@@ -79,3 +79,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_12.pext
     Changelog:
       - Restored support for classic (pre Reforged) Warcraft 3 versions
+  - Version: 2.13
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-10-23
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_13.pext
+    Changelog:
+      - Tweaked game startup procedure to make it more reliable
