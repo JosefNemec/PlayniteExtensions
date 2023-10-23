@@ -317,5 +317,9 @@ namespace System
         /// Show Steam's game startup selection menu in fullscreen mode
         /// </summary>
         public const string SteamShowGameLaunchMenuInFullscreenMode = "LOCSteamShowGameLaunchMenuInFullscreenMode";
+        /// <summary>
+        /// Import Steam Deck compatibility as a
+        /// </summary>
+        public const string SteamImportSteamDeckCompatibilityAs = "LOCSteamImportSteamDeckCompatibilityAs";
     }
 }
