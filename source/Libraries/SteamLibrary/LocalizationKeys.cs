@@ -246,6 +246,66 @@ namespace System
         /// </summary>
         public const string SteamTagBlacklistTooltip = "LOCSteamTagBlacklistTooltip";
         /// <summary>
+        /// Set tag category as prefix
+        /// </summary>
+        public const string SteamSetTagCategoryAsPrefixLabel = "LOCSteamSetTagCategoryAsPrefixLabel";
+        /// <summary>
+        /// Sets the category the tag belongs to as a prefix. For example, "Action RPG" is turned into "Genres: Action RPG"
+        /// </summary>
+        public const string SteamSetTagCategoryAsPrefixTooltip = "LOCSteamSetTagCategoryAsPrefixTooltip";
+        /// <summary>
+        /// Assessments
+        /// </summary>
+        public const string SteamTagCategoryAssessments = "LOCSteamTagCategoryAssessments";
+        /// <summary>
+        /// Features
+        /// </summary>
+        public const string SteamTagCategoryFeatures = "LOCSteamTagCategoryFeatures";
+        /// <summary>
+        /// Funding
+        /// </summary>
+        public const string SteamTagCategoryFundingEtc = "LOCSteamTagCategoryFundingEtc";
+        /// <summary>
+        /// Genres
+        /// </summary>
+        public const string SteamTagCategoryGenres = "LOCSteamTagCategoryGenres";
+        /// <summary>
+        /// Hardware/Input
+        /// </summary>
+        public const string SteamTagCategoryHardwareInput = "LOCSteamTagCategoryHardwareInput";
+        /// <summary>
+        /// Other Tags
+        /// </summary>
+        public const string SteamTagCategoryOtherTags = "LOCSteamTagCategoryOtherTags";
+        /// <summary>
+        /// Players
+        /// </summary>
+        public const string SteamTagCategoryPlayers = "LOCSteamTagCategoryPlayers";
+        /// <summary>
+        /// Ratings
+        /// </summary>
+        public const string SteamTagCategoryRatingsEtc = "LOCSteamTagCategoryRatingsEtc";
+        /// <summary>
+        /// Software
+        /// </summary>
+        public const string SteamTagCategorySoftware = "LOCSteamTagCategorySoftware";
+        /// <summary>
+        /// Sub-Genres
+        /// </summary>
+        public const string SteamTagCategorySubGenres = "LOCSteamTagCategorySubGenres";
+        /// <summary>
+        /// Themes &amp; Moods
+        /// </summary>
+        public const string SteamTagCategoryThemesMoods = "LOCSteamTagCategoryThemesMoods";
+        /// <summary>
+        /// Top-Level Genres
+        /// </summary>
+        public const string SteamTagCategoryTopLevelGenres = "LOCSteamTagCategoryTopLevelGenres";
+        /// <summary>
+        /// Visuals &amp; Viewpoint
+        /// </summary>
+        public const string SteamTagCategoryVisualsViewpoint = "LOCSteamTagCategoryVisualsViewpoint";
+        /// <summary>
         /// Fixed tag count must be a valid number
         /// </summary>
         public const string SteamValidationFixedTagCount = "LOCSteamValidationFixedTagCount";
