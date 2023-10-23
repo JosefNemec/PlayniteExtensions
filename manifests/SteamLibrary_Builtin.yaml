@@ -137,3 +137,12 @@ Packages:
     Changelog:
       - Added Indonesian language (by Jeshibu)
       - API keys no longer stored in plugin config
+  - Version: 2.20
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-10-23
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_20.pext
+    Changelog:
+      - Added option to download Deck compatibility metadata (by Jeshibu)
+      - Added option to add tag category as prefix (by darklinkpower)
+      - Started game process ID is passed properly to OnStarted event (by lscholte)
+      - Removed option to import categories from Steam install
