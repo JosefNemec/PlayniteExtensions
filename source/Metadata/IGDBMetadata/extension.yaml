@@ -1,7 +1,7 @@
 ﻿Id: IGDBMetadata_Builtin
 Name: IGDB metadata provider
 Author: Playnite
-Version: 2.8
+Version: 2.9
 Module: IGDBMetadata.dll
 Type: MetadataProvider
 Icon: Resources\igdbicon.png

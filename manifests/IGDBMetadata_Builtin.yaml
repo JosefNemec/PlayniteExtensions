@@ -58,3 +58,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/IGDBMetadata_Builtin_2_8.pext
     Changelog:
       - Lowered minimum required Playnite version
+  - Version: 2.9
+    RequiredApiVersion: 6.5.0
+    ReleaseDate: 2023-10-23
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/IGDBMetadata_Builtin_2_9.pext
+    Changelog:
+      - Show game port information on search results
