@@ -218,7 +218,9 @@ namespace SteamLibrary
                 MainAccount = Settings.RutnimeApiKey
             };
 
-            Settings.AdditionalAccounts?.ForEach(a => keys.Accounts.Add(a.AccountId, a.RutnimeApiKey));
+            Settings.AdditionalAccounts?.
+                Where(a => !a.AccountId.IsNullOrWhiteSpace() && !a.RutnimeApiKey.IsNullOrWhiteSpace()).
+                ForEach(a => keys.Accounts.Add(a.AccountId, a.RutnimeApiKey));
             FileSystem.PrepareSaveFile(ApiKeysPath);
             Encryption.EncryptToFile(
                 ApiKeysPath,
