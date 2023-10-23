@@ -467,7 +467,7 @@ namespace Steam
 
                         if (!tagNames.TryGetValue(tagId, out string name))
                         {
-                            if (newTagNames == null)
+                            if (newTagNames is null)
                             {
                                 logger.Debug($"Tag {tagId} not found. Fetching new ones.");
                                 newTagNames = tagNamer.UpdateAndGetTagNames();
@@ -478,7 +478,8 @@ namespace Steam
                                 continue;
                             }
                         }
-                        name = tagNamer.GetFinalTagName(name);
+
+                        name = tagNamer.GetFinalTagName(name, tagId);
                         metadata.Tags.Add(new MetadataNameProperty(name));
                     }
                 }

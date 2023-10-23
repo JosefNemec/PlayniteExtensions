@@ -37,11 +37,13 @@ namespace SteamLibrary.SteamShared
             {
                 if (ev.PropertyName == nameof(Settings.LanguageKey)
                     || ev.PropertyName == nameof(Settings.UseTagPrefix)
-                    || ev.PropertyName == nameof(Settings.TagPrefix))
+                    || ev.PropertyName == nameof(Settings.TagPrefix)
+                    || ev.PropertyName == nameof(Settings.SetTagCategoryAsPrefix))
                 {
                     InitializeTagNames();
                 }
             };
+
             FixedTagCountString = Settings.FixedTagCount.ToString();
         }
 
@@ -97,7 +99,7 @@ namespace SteamLibrary.SteamShared
         {
             var tagNamer = new SteamTagNamer(Plugin, Settings, new Playnite.Common.Web.Downloader());
             var tags = tagNamer.GetTagNames()
-                .Select(t => new TagInfo(t.Key, tagNamer.GetFinalTagName(t.Value)))
+                .Select(t => new TagInfo(t.Key, tagNamer.GetFinalTagName(t.Value, t.Key)))
                 .OrderBy(t => t.Name).ToList();
             OkayTags = tags.Where(t => !Settings.BlacklistedTags.Contains(t.Id)).ToObservable();
             BlacklistedTags = tags.Where(t => Settings.BlacklistedTags.Contains(t.Id)).ToObservable();

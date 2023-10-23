@@ -15,6 +15,7 @@ namespace SteamLibrary.SteamShared
         private bool limitTagsToFixedAmount = false;
         private int fixedTagCount = 5;
         private bool useTagPrefix = false;
+        private bool setTagCategoryAsPrefix = false;
         private string tagPrefix = string.Empty;
 
         public bool LimitTagsToFixedAmount { get { return limitTagsToFixedAmount; } set { SetValue(ref limitTagsToFixedAmount, value); } }
@@ -22,6 +23,8 @@ namespace SteamLibrary.SteamShared
         public int FixedTagCount { get { return fixedTagCount; } set { SetValue(ref fixedTagCount, value); } }
 
         public bool UseTagPrefix { get { return useTagPrefix; } set { SetValue(ref useTagPrefix, value); } }
+
+        public bool SetTagCategoryAsPrefix { get { return setTagCategoryAsPrefix; } set { SetValue(ref setTagCategoryAsPrefix, value); } }
 
         public string TagPrefix { get { return tagPrefix; } set { SetValue(ref tagPrefix, value); } }
 

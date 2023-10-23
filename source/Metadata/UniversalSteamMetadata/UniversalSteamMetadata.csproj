@@ -192,6 +192,9 @@
     <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\WebApiClient.cs">
       <Link>SteamShared\WebApiClient.cs</Link>
     </Compile>
+    <Compile Include="..\..\Libraries\SteamLibrary\SteamShared\TagCategories\TagIdCategory.cs">
+      <Link>SteamShared\TagCategories\TagIdCategory.cs</Link>
+    </Compile>
     <Compile Include="LocalizationKeys.cs" />
     <Compile Include="UniversalSteamMetadata.cs" />
     <Compile Include="UniversalSteamMetadataProvider.cs" />
@@ -202,6 +205,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Libraries\SteamLibrary\SteamShared\TagCategories\tagsCategories.json">
+      <Link>SteamShared\TagCategories\tagsCategories.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="addon.yaml" />
     <None Include="extension.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
