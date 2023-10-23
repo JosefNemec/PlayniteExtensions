@@ -130,3 +130,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_18.pext
     Changelog:
       - Force Steam to launch minimized when starting a game while Steam is not running
+  - Version: 2.19
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-10-23
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_19.pext
+    Changelog:
+      - Added Indonesian language (by Jeshibu)
+      - Fixed incorrect searches when game name has characters that need encoding (by darklinkpower)

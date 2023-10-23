@@ -86,3 +86,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_12.pext
     Changelog:
       - Tag handling fixes by Jeshibu
+  - Version: 2.13
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2023-10-23
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_13.pext
+    Changelog:
+      - Added Indonesian language (by Jeshibu)
+      - API keys no longer stored in plugin config
