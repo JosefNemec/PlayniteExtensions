@@ -1,7 +1,7 @@
 ﻿Id: GogLibrary_Builtin
 Name: GOG library integration
 Author: Playnite
-Version: 2.17
+Version: 2.18
 Module: GogLibrary.dll
 Type: GameLibrary
 Icon: Resources\gogicon.png

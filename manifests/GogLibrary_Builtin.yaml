@@ -110,3 +110,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_17.pext
     Changelog:
       - Added option to choose between vertical and horizontal cover images (by Jeshibu)
+  - Version: 2.18
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2023-10-23
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_18.pext
+    Changelog:
+      - Remove sale promos from game descriptions (by darklinkpower)
