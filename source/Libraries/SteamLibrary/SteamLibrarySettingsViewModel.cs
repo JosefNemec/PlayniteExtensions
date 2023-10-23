@@ -134,24 +134,6 @@ namespace SteamLibrary
 
         public bool IsFirstRunUse { get; set; }
 
-        public List<LocalSteamUser> SteamUsers { get; set; }
-
-        public RelayCommand<LocalSteamUser> ImportSteamCategoriesCommand
-        {
-            get => new RelayCommand<LocalSteamUser>((a) =>
-            {
-                ImportSteamCategories(a);
-            });
-        }
-
-        public RelayCommand<LocalSteamUser> ImportSteamLastActivityCommand
-        {
-            get => new RelayCommand<LocalSteamUser>((a) =>
-            {
-                ImportSteamLastActivity(a);
-            });
-        }
-
         public RelayCommand AddAccountCommand
         {
             get => new RelayCommand(() =>
@@ -209,7 +191,6 @@ namespace SteamLibrary
 
             try
             {
-
                 var str = Encryption.DecryptFromFile(
                     ApiKeysPath,
                     Encoding.UTF8,
@@ -217,7 +198,7 @@ namespace SteamLibrary
                 var keys = Serialization.FromJson<ApiKeyInfo>(str);
                 Settings.RutnimeApiKey = keys.MainAccount;
                 Settings.AdditionalAccounts.ForEach(a =>
-                { 
+                {
                     if (keys.Accounts.TryGetValue(a.AccountId, out var key))
                     {
                         a.RutnimeApiKey = key;
@@ -269,18 +250,6 @@ namespace SteamLibrary
             }
 
             return base.VerifySettings(out errors);
-        }
-
-        public void ImportSteamCategories(LocalSteamUser user)
-        {
-            var accId = user == null ? 0 : user.Id;
-            Plugin.ImportSteamCategories(accId);
-        }
-
-        public void ImportSteamLastActivity(LocalSteamUser user)
-        {
-            var accId = user == null ? 0 : user.Id;
-            Plugin.ImportSteamLastActivity(accId);
         }
 
         private void Login()
