@@ -92,4 +92,4 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_13.pext
     Changelog:
       - Added Indonesian language (by Jeshibu)
-      - API keys no longer stored in plugin config
+      - Fixed incorrect searches when game name has characters that need encoding (by darklinkpower)

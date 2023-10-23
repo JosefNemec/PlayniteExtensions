@@ -136,4 +136,4 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_19.pext
     Changelog:
       - Added Indonesian language (by Jeshibu)
-      - Fixed incorrect searches when game name has characters that need encoding (by darklinkpower)
+      - API keys no longer stored in plugin config
