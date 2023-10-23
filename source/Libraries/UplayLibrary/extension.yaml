@@ -1,7 +1,7 @@
 ﻿Id: UplayLibrary_Builtin
 Name: Ubisoft Connect library integration
 Author: Playnite
-Version: 2.5
+Version: 2.6
 Module: UplayLibrary.dll
 Type: GameLibrary
 Icon: Resources\uplayicon.png

@@ -36,3 +36,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/UplayLibrary_Builtin_2_5.pext
     Changelog:
       - Fixed R6 Siege not being tracked properly
+  - Version: 2.6
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2023-10-23
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/UplayLibrary_Builtin_2_6.pext
+    Changelog:
+      - Started game process ID is passed properly to OnStarted event (by lscholte)

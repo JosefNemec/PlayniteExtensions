@@ -49,3 +49,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Rockstar_Games_Library_2_7.pext
     Changelog:
       - Settings section should not be shown because plugin has no settings (by Jeshibu)
+  - Version: 2.8
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2023-10-23
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Rockstar_Games_Library_2_8.pext
+    Changelog:
+      - Started game process ID is passed properly to OnStarted event (by lscholte)
