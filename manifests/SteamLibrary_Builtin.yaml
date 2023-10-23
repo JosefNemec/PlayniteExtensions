@@ -152,3 +152,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_21.pext
     Changelog:
       - Some localized strings not showing
+  - Version: 2.22
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2023-10-23
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_22.pext
+    Changelog:
+      - Fixed plugin failing to load in some cases
