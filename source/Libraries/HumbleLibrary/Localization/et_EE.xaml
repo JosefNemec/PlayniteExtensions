@@ -22,7 +22,10 @@
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Eira kolmanda osapoole poe mänge</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">Impordi Humble Choice'i mängud</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Impordi mängud, mis on osa tellimusest Humble Choice.</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">Impordi Humble Library mängud</sys:String>
+  <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Luba, et duplikaatide vältimiseks vahele jätta nende mängude importimine,
+mis nõuavad kolmandate osapoolte kliente, sealhulgas Playnite'is juba hallatud poode.</sys:String>
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Impordi, kui DRM-vaba versioon on saadaval</sys:String>
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Impordi 3. osapoole klienti nõudvad mängud, kui saadaval on ka DRM-vaba versioon.</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Mängude käivitamiseks kasuta alati rakendust Humble App</sys:String>

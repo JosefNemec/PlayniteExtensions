@@ -25,15 +25,15 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError">برنامه itch.io نسخه 25 یا جدیدتر نصب نشده است.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">بازی های رایگان را از مجموعه ها وارد کنید.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">اقلامی که باید وارد شوند:</sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationOthers"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationBooks"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">بازی‌ها</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">ابزار</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">دارایی ها</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">مودها</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">بازی های فیزیکی</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">موسیقی متن</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">دیگر</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">خنده‌دار</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">کتاب‌ها</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">ورود به حساب کاربری</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">نام حساب</sys:String>
@@ -94,7 +94,7 @@
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">استفاده از اسکرین شات در صورت نبود اثر هنری</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">در صورت وجود چندین عکس، از این استفاده شود:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">تصویر پس زمینه را برای {0} انتخاب کنید</sys:String>
-    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">تصویر جلد برش خورده را جایگزین آیکون کنید</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">بازی های فروشگاه شخص ثالث را نادیده بگیرید</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">واردات بازی انتخاب فروتنانه</sys:String>

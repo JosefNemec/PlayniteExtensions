@@ -27,9 +27,14 @@
   <sys:String x:Key="LOCSteamLinksDiscussions">Arutelud</sys:String>
   <sys:String x:Key="LOCSteamLinksGuides">Juhendid</sys:String>
   <sys:String x:Key="LOCSteamUseVerticalCovers">Laadi alla vertikaalsed kaanepildid</sys:String>
+  <sys:String x:Key="LOCSteamImportFreeSubGames">Impordi üldised tasuta üksused</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Importida kategooriad?</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Ei saa kategooriaid importida, imporditavat kontot pole valitud.</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Ei saa kategooriaid importida, andmebaas pole avatud.</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportError">Ei saanud Steami kategooriaid importida: {0}</sys:String>
+  <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">Ei saa viimatise mängimise teavet importida, imporditavat kontot pole valitud.</sys:String>
+  <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">Ei saa viimatise mängimise teavet importida, andmebaas pole avatud.</sys:String>
+  <sys:String x:Key="LOCSettingsSteamLastActivityImportError">Steamist viimatise mängimise teabe importimine ebaõnnestus: {0}</sys:String>
   <sys:String x:Key="LOCSettingsApiKeyTooltip">Steami privaatsete kontode jaoks on vajalik API võti</sys:String>
   <sys:String x:Key="LOCSettingsApiKeyUrlText">Hangi API võti</sys:String>
   <sys:String x:Key="LOCSettingsSteamImportMetadata">Impordi metaandmed Steam'i kontolt:</sys:String>
@@ -44,6 +49,9 @@
   <sys:String x:Key="LOCSteamFriendsTooltip">Steam'i sõbrad</sys:String>
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Eira teistelt kontodelt paigaldatud mänge</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Täiendavad kontod</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">Imporditavate siltide arvu piirang: esimesed</sys:String>
+  <sys:String x:Key="LOCSteamTagPrefixLabel">Lisa sildinimedele eesliide:</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Siltide välistamine</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Välistatud silte mängudele ei lisata.</sys:String>
   <sys:String x:Key="LOCSteamTagWhitelistHeader">Saadaolevad sildid</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistHeader">Välistatud sildid</sys:String>

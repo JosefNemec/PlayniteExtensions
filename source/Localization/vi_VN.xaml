@@ -25,15 +25,15 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError">Ứng dụng itch.io phiên bản 25 hoặc mới hơn chưa được cài đặt.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Nhập trò chơi miễn phí từ bộ sưu tập.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Các tiện ích được nhập:</sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationOthers"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationBooks"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">Trò chơi</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">Công cụ</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">Tài sản</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">Mod</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Trò chơi dưới dạng vật lý</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Các bản nhạc</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">Khác</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">Truyện tranh</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">Sách</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Đăng nhập tài khoản</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Tên tài khoản</sys:String>
@@ -93,7 +93,7 @@ Khi bị tắt, màn hình game sẽ được mở lên để khởi động ti�
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Sử dụng ảnh chụp màn hình nếu không có tác phẩm nghệ thuật</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Nếu có nhiều hình ảnh thì hãy sử dụng:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Chọn hình nền cho {0}</sys:String>
-    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">Thay thế ảnh bìa đã cắt cho biểu tượng</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Bỏ qua trò chơi cửa hàng của bên thứ ba</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Nhập trò chơi Humble Choice</sys:String>

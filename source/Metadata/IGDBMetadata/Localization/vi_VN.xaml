@@ -23,4 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Sử dụng ảnh chụp màn hình nếu không có tác phẩm nghệ thuật</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Nếu có nhiều hình ảnh thì hãy sử dụng:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Chọn hình nền cho {0}</sys:String>
+  <sys:String x:Key="LOCIgdbCoverAsIcon">Thay thế ảnh bìa đã cắt cho biểu tượng</sys:String>
 </ResourceDictionary>
