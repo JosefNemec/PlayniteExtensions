@@ -75,3 +75,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/OriginLibrary_Builtin_2_11.pext
     Changelog:
       - Started game process ID is passed properly to OnStarted event (by lscholte)
+  - Version: 2.12
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2023-11-08
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/OriginLibrary_Builtin_2_12.pext
+    Changelog:
+      - EA Sports WRC fails to import
