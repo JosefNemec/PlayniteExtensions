@@ -396,7 +396,7 @@ namespace OriginLibrary
                         continue;
                     }
 
-                    newGame.Name = StringExtensions.NormalizeGameName(localData.localizableAttributes.displayName);
+                    newGame.Name = StringExtensions.NormalizeGameName(localData.localizableAttributes?.displayName ?? localData.i18n?.displayName ?? localData.itemName);
                     var installDir = GetInstallDirectory(localData);
                     if (installDir.IsNullOrEmpty())
                     {
@@ -472,7 +472,7 @@ namespace OriginLibrary
                         var localData = GetLocalInstallerManifest(game.offerId);
                         if (localData != null)
                         {
-                            gameName = StringExtensions.NormalizeGameName(localData.localizableAttributes.displayName);
+                            gameName = StringExtensions.NormalizeGameName(localData.localizableAttributes?.displayName ?? localData.i18n?.displayName ?? localData.itemName);
                         }
                     }
                     catch (Exception e) when (!Environment.IsDebugBuild)
