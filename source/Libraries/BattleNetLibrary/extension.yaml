@@ -1,7 +1,7 @@
 ﻿Id: BattlenetLibrary_Builtin
 Name: Battle.net library integration
 Author: Playnite
-Version: 2.14
+Version: 2.15
 Module: BattleNetLibrary.dll
 Type: GameLibrary
 Icon: Resources\battleneticon.png

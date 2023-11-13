@@ -91,3 +91,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_14.pext
     Changelog:
       - Started game process ID is passed properly to OnStarted event (by lscholte)
+  - Version: 2.15
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2023-11-13
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_15.pext
+    Changelog:
+      - Fixed game import failing completely if some games are missing install path information in registry
