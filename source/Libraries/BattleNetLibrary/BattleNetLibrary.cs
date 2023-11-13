@@ -64,7 +64,7 @@ namespace BattleNetLibrary
             var games = new Dictionary<string, GameMetadata>();
             foreach (var prog in Programs.GetUnistallProgramsList())
             {
-                if (string.IsNullOrEmpty(prog.UninstallString))
+                if (prog.UninstallString.IsNullOrWhiteSpace() || prog.InstallLocation.IsNullOrWhiteSpace())
                 {
                     continue;
                 }
