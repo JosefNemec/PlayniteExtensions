@@ -183,7 +183,7 @@ namespace SteamLibrary
             }
             else
             {
-                ProcessStarter.StartProcess(steamExe, $"-silent \"steam://rungameid/{Game.GameId}\"");
+                ProcessStarter.StartProcess(steamExe, $"-silent \"steam://rungameid/{Game.GameId}//-nolauncher\"");
             }
 
             procMon = new ProcessMonitor();
