@@ -68,7 +68,7 @@ namespace UniversalSteamMetadata
                 foreach (var gameElem in searchPage.QuerySelectorAll(".search_result_row"))
                 {
                     var title = gameElem.QuerySelector(".title").InnerHtml;
-                    var releaseDate = gameElem.QuerySelector(".search_released").InnerHtml;
+                    var releaseDate = gameElem.QuerySelector(".search_released").InnerHtml.Trim();
                     if (gameElem.HasAttribute("data-ds-packageid"))
                     {
                         continue;
