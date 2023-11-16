@@ -55,6 +55,8 @@ namespace SteamLibrary
         public ObservableCollection<AdditionalSteamAcccount> AdditionalAccounts { get; set; } = new ObservableCollection<AdditionalSteamAcccount>();
         public bool ShowSteamLaunchMenuInDesktopMode { get; set; } = true;
         public bool ShowSteamLaunchMenuInFullscreenMode { get; set; } = false;
+        public bool UseSteamLaunchOptions { get; set; } = false;
+        public string SteamLaunchOptions { get; set; } = string.Empty;
         [Obsolete] public string ApiKey { get; set; }
         [DontSerialize] public string RutnimeApiKey { get => apiKey; set => SetValue(ref apiKey, value); }
     }

@@ -286,6 +286,10 @@
                           IsChecked="{Binding Settings.ShowSteamLaunchMenuInDesktopMode}"/>
                 <CheckBox Content="{DynamicResource LOCSteamShowGameLaunchMenuInFullscreenMode}"
                           IsChecked="{Binding Settings.ShowSteamLaunchMenuInFullscreenMode}" Margin="0,10,0,10"/>
+				<StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+					<CheckBox Name="UseSteamLaunchOptions" IsChecked="{Binding Settings.UseSteamLaunchOptions}" Content="{DynamicResource LOCSteamLaunchOptions}" VerticalAlignment="Center" Margin="0,0,4,0"/>
+					<TextBox Text="{Binding Settings.SteamLaunchOptions}" VerticalAlignment="Center" Width="200" IsEnabled="{Binding Settings.UseSteamLaunchOptions, ElementName=UseSteamLaunchOptions, Path=IsChecked}"/>
+				</StackPanel>
             </StackPanel>
         </TabItem>        
     </TabControl>

@@ -104,6 +104,7 @@ If disabled, the game page will be opened to manually start the install process.
     <sys:String x:Key="LOCSteamValidationFixedTagCount">Fixed tag count must be a valid number</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Show Steam's game startup selection menu in desktop mode</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Show Steam's game startup selection menu in fullscreen mode</sys:String>
+	<sys:String x:Key="LOCSteamLaunchOptions">Use Steam's game Launch Options for Default action </sys:String>
     <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Import Steam Deck compatibility as a</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Use screenshots if artwork is not available</sys:String>

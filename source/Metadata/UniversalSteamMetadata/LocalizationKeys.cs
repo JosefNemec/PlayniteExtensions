@@ -318,6 +318,10 @@ namespace System
         /// </summary>
         public const string SteamShowGameLaunchMenuInFullscreenMode = "LOCSteamShowGameLaunchMenuInFullscreenMode";
         /// <summary>
+        /// Use Steam's game Launch Options for Default action 
+        /// </summary>
+        public const string SteamLaunchOptions = "LOCSteamLaunchOptions";
+        /// <summary>
         /// Import Steam Deck compatibility as a
         /// </summary>
         public const string SteamImportSteamDeckCompatibilityAs = "LOCSteamImportSteamDeckCompatibilityAs";
