@@ -97,3 +97,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_15.pext
     Changelog:
       - Fixed game import failing completely if some games are missing install path information in registry
+  - Version: 2.16
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2023-11-22
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_16.pext
+    Changelog:
+      - Fixed login not working correctly
