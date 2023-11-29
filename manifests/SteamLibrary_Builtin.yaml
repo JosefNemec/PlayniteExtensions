@@ -158,3 +158,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_22.pext
     Changelog:
       - Fixed plugin failing to load in some cases
+  - Version: 2.23
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2023-11-29
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_23.pext
+    Changelog:
+      - Fixed plugin failing to load after update if additional accounts are not configured properly
