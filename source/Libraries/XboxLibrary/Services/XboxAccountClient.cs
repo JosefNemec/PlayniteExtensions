@@ -21,8 +21,7 @@ namespace XboxLibrary.Services
     {
         private static readonly ILogger logger = LogManager.GetLogger();
         private XboxLibrary library;
-        private const string client_id = "<client_id>";
-        private const string client_secret = "<client_secret>";
+        private const string client_id = "38cd2fa8-66fd-4760-afb2-405eb65d5b0c";
         private const string redirect_uri = "https://login.live.com/oauth20_desktop.srf";
         private const string scope = "Xboxlive.signin Xboxlive.offline_access";
 
@@ -173,7 +172,6 @@ namespace XboxLibrary.Services
         {
             requestData.Add("scope", scope);
             requestData.Add("client_id", client_id);
-            requestData.Add("client_secret", client_secret);
             requestData.Add("redirect_uri", redirect_uri);
             using (var client = new HttpClient())
             {
