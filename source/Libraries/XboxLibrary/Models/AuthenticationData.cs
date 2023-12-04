@@ -10,7 +10,7 @@ namespace XboxLibrary.Models
     {
         public string AccessToken;
         public string RefreshToken;
-        public string ExpiresIn;
+        public int ExpiresIn;
         public DateTime CreationDate;
         public string UserId;
         public string TokenType;
@@ -145,6 +145,7 @@ namespace XboxLibrary.Models
     public class RefreshTokenResponse
     {
         public string token_type;
+        public int expires_in;
         public string scope;
         public string access_token;
         public string refresh_token;

@@ -4,6 +4,7 @@ using Playnite.SDK.Data;
 using PlayniteExtensions.Common;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -20,7 +21,10 @@ namespace XboxLibrary.Services
     {
         private static readonly ILogger logger = LogManager.GetLogger();
         private XboxLibrary library;
-        private const string loginUrl = @"https://login.live.com/oauth20_authorize.srf?display=touch&scope=service%3A%3Auser.auth.xboxlive.com%3A%3AMBI_SSL&redirect_uri=https%3A%2F%2Flogin.live.com%2Foauth20_desktop.srf&locale=en&response_type=token&client_id=0000000048093EE3";
+        private const string client_id = "<client_id>";
+        private const string client_secret = "<client_secret>";
+        private const string redirect_uri = "https://login.live.com/oauth20_desktop.srf";
+        private const string scope = "Xboxlive.signin Xboxlive.offline_access";
 
         private readonly string liveTokensPath;
         private readonly string xstsLoginTokesPath;
@@ -40,7 +44,7 @@ namespace XboxLibrary.Services
                 webView.LoadingChanged += (s, e) =>
                 {
                     var url = webView.GetCurrentAddress();
-                    if (url.Contains("access_token="))
+                    if (url.Contains("code="))
                     {
                         callbackUrl = url;
                         webView.Close();
@@ -57,6 +61,15 @@ namespace XboxLibrary.Services
                     File.Delete(xstsLoginTokesPath);
                 }
 
+                var query = HttpUtility.ParseQueryString(string.Empty);
+                query.Add("client_id", client_id);
+                query.Add("response_type", "code");
+                query.Add("approval_prompt", "auto");
+                query.Add("scope", scope);
+                query.Add("redirect_uri", redirect_uri);
+
+                var loginUrl = @"https://login.live.com/oauth20_authorize.srf?" + query.ToString();
+
                 webView.DeleteDomainCookies(".live.com");
                 webView.DeleteDomainCookies(".login.live.com");
                 webView.DeleteDomainCookies("live.com");
@@ -71,15 +84,18 @@ namespace XboxLibrary.Services
             if (!callbackUrl.IsNullOrEmpty())
             {
                 var rediUri = new Uri(callbackUrl);
-                var fragments = HttpUtility.ParseQueryString(rediUri.Fragment);
+                var queryParams = HttpUtility.ParseQueryString(rediUri.Query);
+                var authorizationCode = queryParams["code"];
+                var tokenResponse = await RequestOAuthToken(authorizationCode);
+
                 var liveLoginData = new AuthenticationData
                 {
-                    AccessToken = fragments["#access_token"],
-                    RefreshToken = fragments["refresh_token"],
-                    ExpiresIn = fragments["expires_in"],
+                    AccessToken = tokenResponse.access_token,
+                    RefreshToken = tokenResponse.refresh_token,
+                    ExpiresIn = tokenResponse.expires_in,
                     CreationDate = DateTime.Now,
-                    TokenType = fragments["token_type"],
-                    UserId = fragments["user_id"]
+                    TokenType = tokenResponse.token_type,
+                    UserId = tokenResponse.user_id
                 };
 
                 Encryption.EncryptToFile(
@@ -137,6 +153,39 @@ namespace XboxLibrary.Services
             }
         }
 
+        private async Task<RefreshTokenResponse> RequestOAuthToken(string authorizationCode)
+        {
+            var requestData = HttpUtility.ParseQueryString(string.Empty);
+            requestData.Add("grant_type", "authorization_code");
+            requestData.Add("code", authorizationCode);
+            return await ExecuteTokenRequest(requestData);
+        }
+
+        private async Task<RefreshTokenResponse> RefreshOAuthToken(string refreshToken)
+        {
+            var requestData = HttpUtility.ParseQueryString(string.Empty);
+            requestData.Add("grant_type", "refresh_token");
+            requestData.Add("code", refreshToken);
+            return await ExecuteTokenRequest(requestData);
+        }
+
+        private async Task<RefreshTokenResponse> ExecuteTokenRequest(NameValueCollection requestData)
+        {
+            requestData.Add("scope", scope);
+            requestData.Add("client_id", client_id);
+            requestData.Add("client_secret", client_secret);
+            requestData.Add("redirect_uri", redirect_uri);
+            using (var client = new HttpClient())
+            {
+                var response = await client.PostAsync(
+                    "https://login.live.com/oauth20_token.srf",
+                    new StringContent(requestData.ToString(), Encoding.ASCII, "application/x-www-form-urlencoded"));
+                response.EnsureSuccessStatusCode();
+                var content = await response.Content.ReadAsStringAsync();
+                return Serialization.FromJson<RefreshTokenResponse>(content);
+            }
+        }
+
         private async Task Authenticate(string accessToken)
         {
             using (var client = new HttpClient())
@@ -145,7 +194,7 @@ namespace XboxLibrary.Services
 
                 //  Authenticate
                 var authRequestData = new AthenticationRequest();
-                authRequestData.Properties.RpsTicket = accessToken;
+                authRequestData.Properties.RpsTicket = $"d={accessToken}";
                 var authPostContent = Serialization.ToJson(authRequestData, true);
 
                 var authResponse = await client.PostAsync(
@@ -191,30 +240,15 @@ namespace XboxLibrary.Services
                 return;
             }
 
-            var query = HttpUtility.ParseQueryString(string.Empty);
-            query.Add("grant_type", "refresh_token");
-            query.Add("client_id", "0000000048093EE3");
-            query.Add("scope", "service::user.auth.xboxlive.com::MBI_SSL");
-            query.Add("refresh_token", tokens.RefreshToken);
-
-            var refreshUrl = @"https://login.live.com/oauth20_token.srf?" + query.ToString();
-            using (var client = new HttpClient())
-            {
-                var refreshResponse = await client.GetAsync(refreshUrl);
-                if (refreshResponse.StatusCode == System.Net.HttpStatusCode.OK)
-                {
-                    var responseContent = await refreshResponse.Content.ReadAsStringAsync();
-                    var response = Serialization.FromJson<RefreshTokenResponse>(responseContent);
-                    tokens.AccessToken = response.access_token;
-                    tokens.RefreshToken = response.refresh_token;
-                    Encryption.EncryptToFile(
-                        liveTokensPath,
-                        Serialization.ToJson(tokens),
-                        Encoding.UTF8,
-                        WindowsIdentity.GetCurrent().User.Value);
-                    await Authenticate(tokens.AccessToken);
-                }
-            }
+            var response = await RefreshOAuthToken(tokens.RefreshToken);
+            tokens.AccessToken = response.access_token;
+            tokens.RefreshToken = response.refresh_token;
+            Encryption.EncryptToFile(
+                liveTokensPath,
+                Serialization.ToJson(tokens),
+                Encoding.UTF8,
+                WindowsIdentity.GetCurrent().User.Value);
+            await Authenticate(tokens.AccessToken);
         }
 
         public async Task<List<TitleHistoryResponse.Title>> GetLibraryTitles()
