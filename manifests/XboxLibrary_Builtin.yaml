@@ -73,3 +73,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_12.pext
     Changelog:
       - Started game process ID is passed properly to OnStarted event (by lscholte)
+  - Version: 2.13
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2023-12-04
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_13.pext
+    Changelog:
+      - Fixed authentication not working (by damirarh)
