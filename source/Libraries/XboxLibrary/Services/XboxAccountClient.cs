@@ -164,7 +164,7 @@ namespace XboxLibrary.Services
         {
             var requestData = HttpUtility.ParseQueryString(string.Empty);
             requestData.Add("grant_type", "refresh_token");
-            requestData.Add("code", refreshToken);
+            requestData.Add("refresh_token", refreshToken);
             return await ExecuteTokenRequest(requestData);
         }
 
