@@ -79,3 +79,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_13.pext
     Changelog:
       - Fixed authentication not working (by damirarh)
+  - Version: 2.14
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2023-12-06
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_14.pext
+    Changelog:
+      - Fixed authentication token refresh not working properly (by damirarh)
