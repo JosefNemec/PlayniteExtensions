@@ -39,7 +39,7 @@ namespace ItchioLibrary
             }
 
             Dispose();
-            ProcessStarter.StartUrl("itch://library/owned");
+            ProcessStarter.StartUrl("itch://install?game_id=" + Game.GameId)
             StartInstallWatcher();
         }
 
