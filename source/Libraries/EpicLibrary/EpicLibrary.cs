@@ -128,6 +128,11 @@ namespace EpicLibrary
                 {
                     continue;
                 }
+                
+                if ((catalogItem?.customAttributes?.ContainsKey("partnerLinkType") == true) && (catalogItem.customAttributes["partnerLinkType"].value == "ubisoft"))
+                {
+                    continue;
+                }
 
                 var newGame = new GameMetadata
                 {
