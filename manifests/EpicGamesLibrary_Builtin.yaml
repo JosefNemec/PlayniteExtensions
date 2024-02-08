@@ -108,3 +108,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_17.pext
     Changelog:
       - Fixed import of installed games failing in some cases
+  - Version: 2.18
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2024-01-08
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_18.pext
+    Changelog:
+      - Ignore Ubisoft games during import to prevent duplicates (by hawkeye116477)
