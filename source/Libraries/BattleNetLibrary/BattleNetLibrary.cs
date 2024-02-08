@@ -4,6 +4,7 @@ using Playnite.Common;
 using Playnite.SDK;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
+using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -133,6 +134,48 @@ namespace BattleNetLibrary
                         }
                     }
                 }
+            }
+
+            // Battle.net client seems to not create registy keys for some games so use product.db as fallback
+            InstalledProductInfo[] productInstallData = new InstalledProductInfo[0];
+            try
+            {
+                using (var file = File.OpenRead(@"c:\ProgramData\Battle.net\Agent\product.db"))
+                {
+                    productInstallData = Serializer.Deserialize<InstalledProductInfo[]>(file);
+                }
+            }
+            catch (Exception e)
+            {
+                Logger.Error(e, "Failed to read battle.net installed game info from product.db file.");
+            }
+
+            foreach (var product in productInstallData)
+            {
+                var gameEntry = BattleNetGames.Games.FirstOrDefault(
+                    a => a.Type == BNetAppType.Default && string.Equals(a.InternalId, product.InternalId, StringComparison.OrdinalIgnoreCase));
+                if (gameEntry == null)
+                {
+                    // product.db also includes info about battle.net client components, not just games
+                    continue;
+                }
+
+                if (games.ContainsKey(gameEntry.ProductId))
+                {
+                    continue;
+                }
+
+                var game = new GameMetadata()
+                {
+                    GameId = product.ProductId,
+                    Source = new MetadataNameProperty("Battle.net"),
+                    Name = gameEntry.Name.RemoveTrademarks(),
+                    InstallDirectory = Paths.FixSeparators(product.Data.Path),
+                    IsInstalled = true,
+                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                };
+
+                games.Add(game.GameId, game);
             }
 
             return games;
