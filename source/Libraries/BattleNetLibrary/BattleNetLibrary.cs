@@ -167,7 +167,7 @@ namespace BattleNetLibrary
 
                 var game = new GameMetadata()
                 {
-                    GameId = product.ProductId,
+                    GameId = gameEntry.ProductId,
                     Source = new MetadataNameProperty("Battle.net"),
                     Name = gameEntry.Name.RemoveTrademarks(),
                     InstallDirectory = Paths.FixSeparators(product.Data.Path),
