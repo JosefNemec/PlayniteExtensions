@@ -115,3 +115,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_18.pext
     Changelog:
       - Some installed games being imported under wrong game ID
+  - Version: 2.19
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2024-01-08
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_19.pext
+    Changelog:
+      - Fix related to game startup not working with some games

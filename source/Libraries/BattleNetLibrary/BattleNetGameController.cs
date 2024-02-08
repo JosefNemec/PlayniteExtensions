@@ -35,7 +35,7 @@ namespace BattleNetLibrary
             var product = BattleNetGames.GetAppDefinition(Game.GameId);
             if (product.Type == BNetAppType.Classic)
             {
-                if (product.ProductId.StartsWith("W3C"))
+                if (product.ProductId.StartsWith("W3C", StringComparison.OrdinalIgnoreCase))
                 {
                     ProcessStarter.StartUrl(@"https://us.forums.blizzard.com/en/warcraft3/t/classic-warcraft-iii-official-installers-official-patches/21415");
                 }

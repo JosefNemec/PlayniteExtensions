@@ -62,7 +62,7 @@ namespace BattleNetLibrary
 
         public Dictionary<string, GameMetadata> GetInstalledGames()
         {
-            var games = new Dictionary<string, GameMetadata>();
+            var games = new Dictionary<string, GameMetadata>(StringComparer.OrdinalIgnoreCase);
             foreach (var prog in Programs.GetUnistallProgramsList())
             {
                 if (prog.UninstallString.IsNullOrWhiteSpace() || prog.InstallLocation.IsNullOrWhiteSpace())
@@ -205,7 +205,7 @@ namespace BattleNetLibrary
                         }
 
                         // To avoid duplicates like multiple WoW accounts
-                        if (!games.Any(a => a.GameId == gameInfo.ProductId))
+                        if (!games.Any(a => string.Equals(a.GameId, gameInfo.ProductId, StringComparison.OrdinalIgnoreCase)))
                         {
                             games.Add(new GameMetadata()
                             {
@@ -225,7 +225,7 @@ namespace BattleNetLibrary
                     var w3Games = classicGames.Where(a => a.regionalGameFranchiseIconFilename.Contains("warcraft-iii"));
                     if (w3Games.Any())
                     {
-                        var w3 = BattleNetGames.Games.FirstOrDefault(a => a.ProductId == "W3C");
+                        var w3 = BattleNetGames.Games.FirstOrDefault(a => string.Equals(a.ProductId, "W3C", StringComparison.OrdinalIgnoreCase));
                         games.Add(new GameMetadata()
                         {
                             Source = new MetadataNameProperty("Battle.net"),
@@ -236,7 +236,7 @@ namespace BattleNetLibrary
 
                         if (w3Games.Count() == 2)
                         {
-                            var w3x = BattleNetGames.Games.FirstOrDefault(a => a.ProductId == "W3CX");
+                            var w3x = BattleNetGames.Games.FirstOrDefault(a => string.Equals(a.ProductId, "W3CX", StringComparison.OrdinalIgnoreCase));
                             games.Add(new GameMetadata()
                             {
                                 Source = new MetadataNameProperty("Battle.net"),
@@ -251,7 +251,7 @@ namespace BattleNetLibrary
                     var d2Games = classicGames.Where(a => a.regionalGameFranchiseIconFilename.Contains("diablo-ii"));
                     if (d2Games.Any())
                     {
-                        var d2 = BattleNetGames.Games.FirstOrDefault(a => a.ProductId == "D2");
+                        var d2 = BattleNetGames.Games.FirstOrDefault(a => string.Equals(a.ProductId, "D2", StringComparison.OrdinalIgnoreCase));
                         games.Add(new GameMetadata()
                         {
                             Source = new MetadataNameProperty("Battle.net"),
@@ -262,7 +262,7 @@ namespace BattleNetLibrary
 
                         if (d2Games.Count() == 2)
                         {
-                            var d2x = BattleNetGames.Games.FirstOrDefault(a => a.ProductId == "D2X");
+                            var d2x = BattleNetGames.Games.FirstOrDefault(a => string.Equals(a.ProductId, "D2X", StringComparison.OrdinalIgnoreCase));
                             games.Add(new GameMetadata()
                             {
                                 Source = new MetadataNameProperty("Battle.net"),
@@ -281,7 +281,7 @@ namespace BattleNetLibrary
         public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
         {
             var allGames = new List<GameMetadata>();
-            var installedGames = new Dictionary<string, GameMetadata>();
+            var installedGames = new Dictionary<string, GameMetadata>(StringComparer.OrdinalIgnoreCase);
             Exception importError = null;
 
             if (SettingsViewModel.Settings.ImportInstalledGames)

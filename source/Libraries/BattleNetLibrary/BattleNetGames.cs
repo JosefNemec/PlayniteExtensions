@@ -336,7 +336,7 @@ namespace BattleNetLibrary
 
         public static BNetApp GetAppDefinition(string productId)
         {
-            return Games.FirstOrDefault(a => a.ProductId == productId);
+            return Games.FirstOrDefault(a => string.Equals(a.ProductId, productId, StringComparison.OrdinalIgnoreCase));
         }
     }
 }
