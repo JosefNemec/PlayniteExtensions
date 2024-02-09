@@ -423,14 +423,11 @@ namespace ItchioLibrary
             );
         }
 
-        public Task UninstallAsync(string caveId)
+        public void Uninstall(string caveId)
         {
-            return Task.Run(() =>
-                client.SendRequest(Methods.Uninstall, new Dictionary<string, object>
-                {
-                    { "caveId", caveId }
-                })
-            );
+            var prms = new Dictionary<string, object>();
+            prms.Add("caveId", caveId);
+            client.SendRequest(Methods.Uninstall, prms);
         }
 
         public void SendResponse(JsonRpcRequest request, object response)

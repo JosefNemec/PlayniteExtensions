@@ -79,7 +79,6 @@ namespace ItchioLibrary
 
     public class ItchUninstallController : UninstallController
     {
-        private CancellationTokenSource watcherToken;
         private Butler butler;
 
         public ItchUninstallController(Game game) : base(game)
@@ -89,16 +88,8 @@ namespace ItchioLibrary
 
         public override void Dispose()
         {
-            watcherToken?.Cancel();
-            ReleaseResources();
-        }
-
-        public void ReleaseResources()
-        {
             if (butler != null)
             {
-                butler.RequestReceived -= Butler_RequestReceived;
-                butler.NotificationReceived -= Butler_NotificationReceived;
                 butler.Dispose();
             }
         }
@@ -116,50 +107,12 @@ namespace ItchioLibrary
             var cave = butler.GetCaves().FirstOrDefault(a => a.game.id == long.Parse(Game.GameId));
             if (cave != null)
             {
-                butler.RequestReceived += Butler_RequestReceived;
-                butler.NotificationReceived += Butler_NotificationReceived;
-                butler.UninstallAsync(cave.id);
-                // TODO I might be able to rely on notifications instead of an uninstall watcher
-                StartUninstallWatcher();
+                butler.Uninstall(cave.id);
+                InvokeOnUninstalled(new GameUninstalledEventArgs());
             }
             else
             {
                 throw new Exception("Game installation not found.");
-            }
-        }
-
-        private void Butler_NotificationReceived(object sender, JsonRpcNotificationEventArgs e)
-        {
-            // TODO Not sure what kind of notifications we might receive
-        }
-
-        private void Butler_RequestReceived(object sender, JsonRpcRequestEventArgs e)
-        {
-            // TODO Not sure what kind of requests we might receive
-        }
-
-        public async void StartUninstallWatcher()
-        {
-            watcherToken = new CancellationTokenSource();
-            using (var butler = new Butler())
-            {
-                while (true)
-                {
-                    if (watcherToken.IsCancellationRequested)
-                    {
-                        return;
-                    }
-
-                    var installed = butler.GetCaves();
-                    var cave = installed?.FirstOrDefault(a => a.game.id.ToString() == Game.GameId);
-                    if (cave == null)
-                    {
-                        InvokeOnUninstalled(new GameUninstalledEventArgs());
-                        return;
-                    }
-
-                    await Task.Delay(2000);
-                }
             }
         }
     }
