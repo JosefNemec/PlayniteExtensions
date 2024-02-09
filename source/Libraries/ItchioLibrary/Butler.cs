@@ -62,6 +62,11 @@ namespace ItchioLibrary
             public const string Launch = "Launch";
 
             // <summary>
+            /// Attempt to uninstall an installed game
+            /// </summary>
+            public const string Uninstall = "Uninstall.Perform";
+
+            // <summary>
             /// Sent during Launch, when the game is configured, prerequisites are installed sandbox is set up (if enabled), and the game is actually running.
             /// </summary>
             public const string LaunchRunning = "LaunchRunning";
@@ -414,6 +419,16 @@ namespace ItchioLibrary
                 {
                     { "caveId", caveId },
                     { "prereqsDir", Itch.PrereqsPaths }
+                })
+            );
+        }
+
+        public Task UninstallAsync(string caveId)
+        {
+            return Task.Run(() =>
+                client.SendRequest(Methods.Uninstall, new Dictionary<string, object>
+                {
+                    { "caveId", caveId }
                 })
             );
         }

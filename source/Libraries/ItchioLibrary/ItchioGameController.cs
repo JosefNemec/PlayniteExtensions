@@ -80,6 +80,7 @@ namespace ItchioLibrary
     public class ItchUninstallController : UninstallController
     {
         private CancellationTokenSource watcherToken;
+        private Butler butler;
 
         public ItchUninstallController(Game game) : base(game)
         {
@@ -89,6 +90,17 @@ namespace ItchioLibrary
         public override void Dispose()
         {
             watcherToken?.Cancel();
+            ReleaseResources();
+        }
+
+        public void ReleaseResources()
+        {
+            if (butler != null)
+            {
+                butler.RequestReceived -= Butler_RequestReceived;
+                butler.NotificationReceived -= Butler_NotificationReceived;
+                butler.Dispose();
+            }
         }
 
         public override void Uninstall(UninstallActionArgs args)
@@ -99,8 +111,31 @@ namespace ItchioLibrary
             }
 
             Dispose();
-            ProcessStarter.StartUrl("itch://library/installed");
-            StartUninstallWatcher();
+
+            butler = new Butler();
+            var cave = butler.GetCaves().FirstOrDefault(a => a.game.id == long.Parse(Game.GameId));
+            if (cave != null)
+            {
+                butler.RequestReceived += Butler_RequestReceived;
+                butler.NotificationReceived += Butler_NotificationReceived;
+                butler.UninstallAsync(cave.id);
+                // TODO I might be able to rely on notifications instead of an uninstall watcher
+                StartUninstallWatcher();
+            }
+            else
+            {
+                throw new Exception("Game installation not found.");
+            }
+        }
+
+        private void Butler_NotificationReceived(object sender, JsonRpcNotificationEventArgs e)
+        {
+            // TODO Not sure what kind of notifications we might receive
+        }
+
+        private void Butler_RequestReceived(object sender, JsonRpcRequestEventArgs e)
+        {
+            // TODO Not sure what kind of requests we might receive
         }
 
         public async void StartUninstallWatcher()
