@@ -112,6 +112,7 @@ namespace ItchioLibrary
             }
             else
             {
+                InvokeOnUninstalled(new GameUninstalledEventArgs());
                 throw new Exception("Game installation not found.");
             }
         }
