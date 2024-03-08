@@ -14,7 +14,7 @@ namespace UniversalSteamMetadata
     [LoadPlugin]
     public class UniversalSteamMetadata : MetadataPluginBase<UniversalSteamMetadataSettingsViewModel>
     {
-        private const string searchUrl = @"https://store.steampowered.com/search/?term={0}&ignore_preferences=1&category1=998";
+        private const string searchUrl = @"https://store.steampowered.com/search/?term={0}&ignore_preferences=1&category1=998&ndl=1";
         private readonly string[] backgroundUrls = new string[]
         {
             @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/page.bg.jpg",
