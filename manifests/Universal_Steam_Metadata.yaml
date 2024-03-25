@@ -100,3 +100,9 @@ Packages:
     Changelog:
       - Added option to download Deck compatibility metadata (by Jeshibu)
       - Added option to add tag category as prefix (by darklinkpower)
+  - Version: 2.15
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2024-03-25
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_15.pext
+    Changelog:
+      - Fixed games no appearing in search if they don't have English localization (by darklinkpower)
