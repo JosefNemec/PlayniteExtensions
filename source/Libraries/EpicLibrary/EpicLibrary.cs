@@ -55,7 +55,7 @@ namespace EpicLibrary
                 }
 
                 // DLC
-                if (manifest.AppName != manifest.MainGameAppName)
+                if (manifest.AppName != manifest.MainGameAppName && (manifest.AppCategories?.Any(a => a == "addons/launchable") == false))
                 {
                     continue;
                 }
