@@ -56,35 +56,6 @@ namespace GogLibrary.Services
             return accountInfo;
         }
 
-        public List<LibraryGameResponse> GetOwnedGamesFromPublicAccount(string accountName)
-        {
-            var baseUrl = @"https://www.gog.com/u/{0}/games/stats?sort=recent_playtime&order=desc&page={1}";
-            var url = string.Format(baseUrl, accountName, 1);
-            var gamesList = HttpDownloader.DownloadString(url);
-            var games = new List<LibraryGameResponse>();
-            var libraryData = Serialization.FromJson<PagedResponse<LibraryGameResponse>>(gamesList);
-
-            if (libraryData == null)
-            {
-                logger.Error("GOG library content is empty or private.");
-                return null;
-            }
-
-            games.AddRange(libraryData._embedded.items);
-
-            if (libraryData.pages > 1)
-            {
-                for (int i = 2; i <= libraryData.pages; i++)
-                {
-                    gamesList = HttpDownloader.DownloadString(string.Format(baseUrl, accountName, i));
-                    var pageData = Serialization.FromJson<PagedResponse<LibraryGameResponse>>(gamesList);
-                    games.AddRange(pageData._embedded.items);
-                }
-            }
-
-            return games;
-        }
-
         public List<LibraryGameResponse> GetOwnedGames(AccountBasicRespose account)
         {
             var baseUrl = @"https://www.gog.com/u/{0}/games/stats?sort=recent_playtime&order=desc&page={1}";

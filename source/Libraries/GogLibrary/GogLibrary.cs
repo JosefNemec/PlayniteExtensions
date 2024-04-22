@@ -272,19 +272,6 @@ namespace GogLibrary
             }
         }
 
-        internal List<GameMetadata> GetLibraryGames(string accountName)
-        {
-            var api = new GogAccountClient(null);
-            var games = new List<GameMetadata>();
-            var libGames = api.GetOwnedGamesFromPublicAccount(accountName);
-            if (libGames == null)
-            {
-                throw new Exception("Failed to obtain libary data.");
-            }
-
-            return LibraryGamesToGames(libGames).ToList();
-        }
-
         internal IEnumerable<GameMetadata> LibraryGamesToGames(List<LibraryGameResponse> libGames)
         {
             foreach (var game in libGames)
