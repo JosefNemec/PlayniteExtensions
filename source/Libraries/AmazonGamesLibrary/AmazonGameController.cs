@@ -58,6 +58,20 @@ namespace AmazonGamesLibrary
                         return;
                     }
 
+                    var isInitialized = Process.GetProcessesByName("Amazon Games Services").Length > 0;
+                    if (isInitialized)
+                    {
+                        // The install URI only works when this service is running, otherwise
+                        // it will just start the launcher without any further action
+                        ProcessStarter.StartUrl($"amazon-games://install/{Game.GameId}");
+                        break;
+                    }
+
+                    await Task.Delay(1000);
+                }
+
+                while (true)
+                {
                     Dictionary<string, GameMetadata> installedGames = null;
                     try
                     {
