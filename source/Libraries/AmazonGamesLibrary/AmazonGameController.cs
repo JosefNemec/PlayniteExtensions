@@ -74,6 +74,11 @@ namespace AmazonGamesLibrary
 
                 while (true)
                 {
+                    if (watcherToken.IsCancellationRequested)
+                    {
+                        return;
+                    }
+                    
                     Dictionary<string, GameMetadata> installedGames = null;
                     try
                     {
