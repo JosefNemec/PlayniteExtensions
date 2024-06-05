@@ -13,7 +13,7 @@ namespace GogLibrary
         public bool ImportUninstalledGames { get; set; } = false;
         public bool StartGamesUsingGalaxy { get; set; } = false;
         public bool UseAutomaticGameInstalls { get; set; } = false;
-        public bool UseVerticalCovers { get; set;} = true;
+        public bool UseVerticalCovers { get; set; } = true;
         public string Locale { get; set; } = "en";
     }
     public class GogLibrarySettingsViewModel : PluginSettingsViewModel<GogLibrarySettings, GogLibrary>
@@ -73,9 +73,10 @@ namespace GogLibrary
             try
             {
                 using (var view = PlayniteApi.WebViews.CreateView(500, 500))
+                using (var backgroundView = PlayniteApi.WebViews.CreateOffscreenView())
                 {
                     var api = new GogAccountClient(view);
-                    api.Login();
+                    api.Login(backgroundView);
                 }
 
                 OnPropertyChanged(nameof(IsUserLoggedIn));

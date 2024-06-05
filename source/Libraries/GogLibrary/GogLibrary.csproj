@@ -172,7 +172,7 @@
     </Compile>
     <Compile Include="GOGMetadataProvider.cs" />
     <Compile Include="LocalizationKeys.cs" />
-    <Compile Include="Models\AccountBasicRespose.cs" />
+    <Compile Include="Models\AccountBasicResponse.cs" />
     <Compile Include="Models\GogGameMetadata.cs" />
     <Compile Include="Models\GogGameTaskInfo.cs" />
     <Compile Include="Models\GetOwnedGamesResult.cs" />

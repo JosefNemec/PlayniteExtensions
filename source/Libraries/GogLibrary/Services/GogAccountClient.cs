@@ -18,19 +18,22 @@ namespace GogLibrary.Services
             this.webView = webView;
         }
 
-        public bool GetIsUserLoggedIn()
+        public bool GetIsUserLoggedIn() => GetIsUserLoggedIn(webView);
+
+        private static bool GetIsUserLoggedIn(IWebView webView)
         {
-            webView.NavigateAndWait(@"https://www.gog.com/account/getFilteredProducts?hiddenFlag=0&mediaType=1&page=1&sortBy=title");
-            return webView.GetCurrentAddress().Contains("getFilteredProducts");
+            var account = GetAccountInfo(webView);
+            return account?.isLoggedIn ?? false;
         }
 
-        public void Login()
+        public void Login(IWebView backgroundWebView)
         {
             var loginUrl = "https://www.gog.com/account/";
 
             webView.LoadingChanged += (s, e) =>
             {
-                if (webView.GetCurrentAddress().Contains("/on_login_success"))
+                var url = webView.GetCurrentAddress();
+                if (!url.EndsWith("#openlogin") && GetIsUserLoggedIn(backgroundWebView))
                 {
                     webView.Close();
                 }
@@ -46,15 +49,17 @@ namespace GogLibrary.Services
             webView.Navigate(@"https://www.gog.com/user/changeLanguage/" + localeCode);
         }
 
-        public AccountBasicRespose GetAccountInfo()
+        public AccountBasicResponse GetAccountInfo() => GetAccountInfo(webView);
+
+        private static AccountBasicResponse GetAccountInfo(IWebView webView)
         {
             webView.NavigateAndWait(@"https://menu.gog.com/v1/account/basic");
             var stringInfo = webView.GetPageText();
-            var accountInfo = Serialization.FromJson<AccountBasicRespose>(stringInfo);
+            var accountInfo = Serialization.FromJson<AccountBasicResponse>(stringInfo);
             return accountInfo;
         }
 
-        public List<LibraryGameResponse> GetOwnedGames(AccountBasicRespose account)
+        public List<LibraryGameResponse> GetOwnedGames(AccountBasicResponse account)
         {
             var baseUrl = @"https://www.gog.com/u/{0}/games/stats?sort=recent_playtime&order=desc&page={1}";
             var stringLibContent = string.Empty;
