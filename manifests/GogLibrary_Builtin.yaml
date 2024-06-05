@@ -116,3 +116,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_18.pext
     Changelog:
       - Remove sale promos from game descriptions (by darklinkpower)
+  - Version: 2.19
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2024-06-25
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_19.pext
+    Changelog:
+      - Fixed authentication not working (by Jeshibu)
