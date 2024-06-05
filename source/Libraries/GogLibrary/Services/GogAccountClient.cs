@@ -1,13 +1,10 @@
 ﻿using GogLibrary.Models;
-using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 
 namespace GogLibrary.Services
 {
@@ -29,8 +26,8 @@ namespace GogLibrary.Services
 
         public void Login()
         {
-            var loginUrl = Gog.GetLoginUrl();
-            loginUrl = Regex.Replace(loginUrl, $"&gog_lc=.+$", "&gog_lc=" + Gog.EnStoreLocaleString);
+            var loginUrl = "https://www.gog.com/account/";
+
             webView.LoadingChanged += (s, e) =>
             {
                 if (webView.GetCurrentAddress().Contains("/on_login_success"))
@@ -39,6 +36,7 @@ namespace GogLibrary.Services
                 }
             };
 
+            webView.DeleteDomainCookies(".gog.com");
             webView.Navigate(loginUrl);
             webView.OpenDialog();
         }

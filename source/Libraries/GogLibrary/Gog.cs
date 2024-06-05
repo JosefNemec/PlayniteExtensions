@@ -1,10 +1,13 @@
-﻿using Microsoft.Win32;
+﻿using AngleSharp;
+using AngleSharp.Dom.Html;
+using Microsoft.Win32;
 using Playnite.Common.Web;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -82,21 +85,32 @@ namespace GogLibrary
 
         public static string GetLoginUrl()
         {
-            var loginUrl = string.Empty;
-            var mainPage = HttpDownloader.DownloadString("https://www.gog.com/").Split('\n');
-            foreach (var line in mainPage)
-            {
-                if (line.TrimStart().StartsWith("var galaxyAccounts"))
-                {
-                    var match = Regex.Match(line, "'(.*)','(.*)'");
-                    if (match.Success)
-                    {
-                        loginUrl = match.Groups[1].Value;
-                    }
-                }
-            }
+            var clientId = GetClientIdFromMainScript(GetMainScriptUrl());
+            return $"https://login.gog.com/auth?client_id={clientId}&response_type=code&redirect_uri=https%3A%2F%2Fwww.gog.com%2Fon_login_success%3FreturnTo%3D%2Fen%2F";
+        }
 
-            return loginUrl;
+        private static string GetMainScriptUrl()
+        {
+            var context = BrowsingContext.New(Configuration.Default);
+            var doc = context.OpenAsync("https://www.gog.com/").Result;
+            var scriptElement = doc.QuerySelector("script[src^=\"https://store-static-modular.gog-statics.com/en/main.\"]");
+            if (scriptElement == null)
+            {
+                throw new Exception("Script element not found on GOG main page");
+            }
+            return scriptElement.GetAttribute("src");
+        }
+
+        private static string GetClientIdFromMainScript(string mainScriptUrl)
+        {
+            var mainScript = HttpDownloader.DownloadString(mainScriptUrl);
+            Regex clientIdRegex = new Regex(@"\bclient_id=(?<id>[0-9]+)", RegexOptions.ExplicitCapture | RegexOptions.IgnoreCase);
+            var match = clientIdRegex.Match(mainScript);
+            if (!match.Success)
+            {
+                throw new Exception("No client ID found in main script");
+            }
+            return match.Groups["id"].Value;
         }
     }
 }

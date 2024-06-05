@@ -1,15 +1,7 @@
-﻿using Playnite;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Playnite.Commands;
 using Playnite.SDK;
 using GogLibrary.Services;
-using Playnite.SDK.Data;
 
 namespace GogLibrary
 {
@@ -80,7 +72,7 @@ namespace GogLibrary
         {
             try
             {
-                using (var view = PlayniteApi.WebViews.CreateView(400, 445))
+                using (var view = PlayniteApi.WebViews.CreateView(500, 500))
                 {
                     var api = new GogAccountClient(view);
                     api.Login();
