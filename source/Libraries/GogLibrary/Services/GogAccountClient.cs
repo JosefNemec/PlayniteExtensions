@@ -4,6 +4,7 @@ using Playnite.SDK.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 
 namespace GogLibrary.Services
@@ -30,12 +31,16 @@ namespace GogLibrary.Services
         {
             var loginUrl = "https://www.gog.com/account/";
 
-            webView.LoadingChanged += (s, e) =>
+            webView.LoadingChanged += async (s, e) =>
             {
                 var url = webView.GetCurrentAddress();
-                if (!url.EndsWith("#openlogin") && GetIsUserLoggedIn(backgroundWebView))
+                if (!url.EndsWith("#openlogin"))
                 {
-                    webView.Close();
+                    var loggedIn = await Task.Run(() => GetIsUserLoggedIn(backgroundWebView));
+                    if (loggedIn)
+                    {
+                        webView.Close();
+                    }
                 }
             };
 
