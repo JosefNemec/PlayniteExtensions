@@ -36,3 +36,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_6.pext
     Changelog:
       - Fixed ScummVM based games not starting properly
+  - Version: 2.7
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2024-06-07
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_7.pext
+    Changelog:
+      - Add support to automatically show install dialog in client (by darklinkpower)
