@@ -34,7 +34,7 @@ namespace XboxLibrary
             }
             else
             {
-                ProcessStarter.StartUrl("ms-windows-store://");
+                ProcessStarter.StartUrl("xbox://");
             }
         }
     }
