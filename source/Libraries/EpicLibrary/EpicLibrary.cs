@@ -124,7 +124,7 @@ namespace EpicLibrary
                     continue;
                 }
 
-                if (catalogItem?.categories?.Any(a => a.path == "dlc") == true)
+                if ((catalogItem?.categories?.Any(a => a.path == "addons") == true) && (catalogItem.categories.Any(a => a.path == "addons/launchable") == false))
                 {
                     continue;
                 }
