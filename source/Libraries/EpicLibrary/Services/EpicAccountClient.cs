@@ -226,7 +226,7 @@ namespace EpicLibrary.Services
 
             if (result == null)
             {
-                var url = string.Format("{0}/bulk/items?id={1}&country=US&locale=en-US", nameSpace, id);
+                var url = string.Format("{0}/bulk/items?id={1}&country=US&locale=en-US&includeMainGameDetails=true", nameSpace, id);
                 var catalogResponse = InvokeRequest<Dictionary<string, CatalogItem>>(catalogUrl + url, loadTokens()).GetAwaiter().GetResult();
                 result = catalogResponse.Item2;
                 FileSystem.WriteStringToFile(cachePath, catalogResponse.Item1);
