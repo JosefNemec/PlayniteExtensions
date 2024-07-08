@@ -32,6 +32,11 @@ namespace EpicLibrary.Models
             public DateTime? dateAdded;
         }
 
+        public class MainGameItem
+        {
+            public string id;
+        }
+
         public string id;
         public string title;
         public string description;
@@ -49,6 +54,7 @@ namespace EpicLibrary.Models
         public string developer;
         public string developerId;
         public bool endOfSupport;
+        public MainGameItem mainGameItem;
     }
 
 
