@@ -120,3 +120,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_19.pext
     Changelog:
       - Fixed DLCs being imported as separate games (by hawkeye116477)
+  - Version: 2.20
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2024-07-08
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_20.pext
+    Changelog:
+      - Fixed DLCs being imported as separate games (by hawkeye116477)
