@@ -121,3 +121,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_19.pext
     Changelog:
       - Fix related to game startup not working with some games
+  - Version: 2.20
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2024-07-10
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_20.pext
+    Changelog:
+      - Added informated message about long standing authentication issue into settings view
