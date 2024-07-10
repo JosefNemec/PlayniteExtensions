@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCBattleNetSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsConnectAccount">Accounts koppelen</sys:String>
   <sys:String x:Key="LOCBattleNetLoginChecking">Verificatiestatus aan het controleren...</sys:String>
-  <sys:String x:Key="LOCBattleNetLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCBattleNetLoggedIn">De gebruiker is geverifieerd.</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedIn">Verificatie vereist</sys:String>
-  <sys:String x:Key="LOCBattleNetNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCBattleNetNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Verifiëren</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>

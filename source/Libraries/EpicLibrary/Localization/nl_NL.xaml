@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
   <sys:String x:Key="LOCEpicSettingsConnectAccount">Accounts koppelen</sys:String>
   <sys:String x:Key="LOCEpicLoginChecking">Verificatiestatus aan het controleren...</sys:String>
-  <sys:String x:Key="LOCEpicLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCEpicLoggedIn">De gebruiker is geverifieerd.</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedIn">Verificatie vereist</sys:String>
-  <sys:String x:Key="LOCEpicNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Verifiëren</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>

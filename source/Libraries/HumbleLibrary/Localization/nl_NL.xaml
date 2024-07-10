@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
   <sys:String x:Key="LOCHumbleSettingsConnectAccount">Accounts koppelen</sys:String>
   <sys:String x:Key="LOCHumbleLoginChecking">Verificatiestatus aan het controleren...</sys:String>
-  <sys:String x:Key="LOCHumbleLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">De gebruiker is geverifieerd.</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedIn">Verificatie vereist</sys:String>
-  <sys:String x:Key="LOCHumbleNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">Verifiëren</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>

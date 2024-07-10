@@ -81,5 +81,9 @@ namespace System
         /// Metadata language:
         /// </summary>
         public const string BattleNetMetadataLanguageLabel = "LOCBattleNetMetadataLanguageLabel";
+        /// <summary>
+        /// Battle.net integration has long standing issue where authenticated account might get logged out at random times.
+        /// </summary>
+        public const string BattleNetAccountSyncNotice = "LOCBattleNetAccountSyncNotice";
     }
 }

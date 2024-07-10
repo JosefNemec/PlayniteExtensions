@@ -28,7 +28,7 @@
     <sys:String x:Key="LOCitchioItemClassificationGames">Mängud</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationTools">Tööriistad</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">Moodid</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Füüsilised mängud</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Heliribad</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationOthers">Muud</sys:String>
@@ -37,14 +37,15 @@
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Kontosse sisselogimine</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Konto nimi</sys:String>
-    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Oma terve kogu sünkroonimiseks logi oma kontole sisse või kasuta oma avaliku konto nime.
+Pane tähele, et konto nime valik töötab ainult nende kontode puhul, mille mängukogud on GOGi privaatsussätetes määratud avalikult nähtavaks.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Käivita mängud klienti GOG Galaxy kasutades</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">See võimaldab kasutada GOG Galaxy võimalusi, nagu pilves salvestamine, mänguaja jälgimine jne.</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automaatselt algata installimise protsess, installides mänge teenuses GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Mis on mu konto nimi?</sys:String>
-    <sys:String x:Key="LOCSteamCustomUrlName"></sys:String>
+    <sys:String x:Key="LOCSteamCustomUrlName">Konto URL nimi</sys:String>
     <sys:String x:Key="LOCSteamLoggedInUser">Autenditud kasutaja</sys:String>
     <sys:String x:Key="LOCSteamRequiresApiKey">Konto on privaatne, API võti on nõutud.</sys:String>
     <sys:String x:Key="LOCSteamLinksCommunityHub">Kogukonna keskus</sys:String>
@@ -53,7 +54,7 @@
     <sys:String x:Key="LOCSteamLinksWorkshop"></sys:String>
     <sys:String x:Key="LOCSteamUseVerticalCovers">Laadi alla vertikaalsed kaanepildid</sys:String>
     <sys:String x:Key="LOCSteamImportFreeSubGames">Impordi üldised tasuta üksused</sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarn"></sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarn">See kirjutab üle praegused kategooriad ja ka kõigi sinu Steami mängude olekud peidetud ja lemmik. Kas tahad jätkata?</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Importida kategooriad?</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Ei saa kategooriaid importida, imporditavat kontot pole valitud.</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Ei saa kategooriaid importida, andmebaas pole avatud.</sys:String>
@@ -84,14 +85,14 @@
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Välistatud sildid</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Eemalda välistatud siltidest</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Lisa välistatud siltidesse</sys:String>
-    <sys:String x:Key="LOCSteamValidationFixedTagCount"></sys:String>
-    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode"></sys:String>
-    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode"></sys:String>
+    <sys:String x:Key="LOCSteamValidationFixedTagCount">Siltide arv peab olema korrektne number</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Näita Steami mängu käivitusvaliku menüüd töölaua režiimis</sys:String>
+    <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Näita Steami mängu käivitusvaliku menüüd täisekraani režiimis</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Kasuta kunstiteose puudumisel ekraanipilte</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Kui saadaval on mitu pilti, siis kasuta:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle"></sys:String>
-    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">Asenda ikoon kärbitud kaanepildiga</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Eira kolmanda osapoole poe mänge</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Impordi Humble Choice'i mängud</sys:String>

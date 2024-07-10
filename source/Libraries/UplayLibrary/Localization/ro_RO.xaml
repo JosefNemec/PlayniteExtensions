@@ -1,3 +1,22 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCUbisoftSettingsImportInstalledLabel">Importați jocurile instalate</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportUninstalledLabel">Importanți jocurile neinstalate</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsConnectAccount">Conectare cont</sys:String>
+  <sys:String x:Key="LOCUbisoftLoginChecking">Se verifică starea de autentificare...</sys:String>
+  <sys:String x:Key="LOCUbisoftLoggedIn">Utilizatorul este autentificat</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedIn">Necesită autentificare</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedInError">Autentificare eșuată.</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateLabel">Autentificați-vă</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Începe jocurile direct fără a rula clientul oficial</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Depanarea problemelor de sincronizare a contului</sys:String>
+  <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Probleme de depanare</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">Importați toate jocurile</sys:String>
+  <sys:String x:Key="LOCUbisoftPrivateAccount">Cont privat</sys:String>
+  <sys:String x:Key="LOCUbisoftPublicAccount">Cont public</sys:String>
+  <sys:String x:Key="LOCUbisoftAPIKey">Cheie API</sys:String>
+  <sys:String x:Key="LOCUbisoftStartUsingClient">Începeți să folosiți clientul {0}</sys:String>
+  <sys:String x:Key="LOCUbisoftImportPlaytime">Importați timpul de jucare</sys:String>
+  <sys:String x:Key="LOCUbisoftAccountID">ID Cont</sys:String>
+  <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Limba metadatelor:</sys:String>
 </ResourceDictionary>

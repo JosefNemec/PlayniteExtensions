@@ -15,8 +15,13 @@
   <sys:String x:Key="LOCHumblePrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCHumbleAPIKey">API кључ</sys:String>
+  <sys:String x:Key="LOCHumbleStartUsingClient">Крени користити клијент {0}</sys:String>
+  <sys:String x:Key="LOCHumbleImportPlaytime">Увези време играња</sys:String>
+  <sys:String x:Key="LOCHumbleAccountID">ID Налога</sys:String>
+  <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Језик метаподатака:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Игнориши игре из осталих продавница</sys:String>
+  <sys:String x:Key="LOCHumbleImportChoiceGames">Увези Humble Choice игре</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">Увези Хамбл библиотеку игара</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Увези стандардне и пакет куповине из Хамбл продавнице</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Укључите да бисте прескочили увод игара које захтевају клијенте треће стране, укључујући и продавнице већ руковођене од стране Playnite-а, да бисте спречили дупликате.</sys:String>

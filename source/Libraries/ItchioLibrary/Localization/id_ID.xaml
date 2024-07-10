@@ -25,4 +25,13 @@
   <sys:String x:Key="LOCItchioClientNotInstalledError">Aplikasi itch.io versi 25 atau terbaru tidak terinstal.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Impor game gratis dari koleksi.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Item yang akan diimpor:</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationGames">Permainan</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationTools">Peralatan</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationAssets">Aset</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationMods">Mod</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Permainan fisik</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Trek suara</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationOthers">Lainnya</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationComics">Komik</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationBooks">Buku</sys:String>
 </ResourceDictionary>

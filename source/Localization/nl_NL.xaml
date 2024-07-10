@@ -4,9 +4,9 @@
     <sys:String x:Key="LOCSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
     <sys:String x:Key="LOCSettingsConnectAccount">Accounts koppelen</sys:String>
     <sys:String x:Key="LOCLoginChecking">Verificatiestatus aan het controleren...</sys:String>
-    <sys:String x:Key="LOCLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+    <sys:String x:Key="LOCLoggedIn">De gebruiker is geverifieerd.</sys:String>
     <sys:String x:Key="LOCNotLoggedIn">Verificatie vereist</sys:String>
-    <sys:String x:Key="LOCNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+    <sys:String x:Key="LOCNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Verifiëren</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
@@ -27,12 +27,12 @@
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Te importeren items:</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationGames">Spellen</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationTools">Gereedschappen</sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">Activa</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">Mods</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Fysieke spellen</sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Soundtracks</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationOthers">Overig</sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">Stripboeken</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationBooks">Boeken</sys:String>
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Account login</sys:String>
@@ -93,7 +93,7 @@ Als dit is uitgeschakeld, wordt de spelpagina geopend om het installatieproces h
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Gebruik screenshots als illustraties niet beschikbaar zijn</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Wanneer meerdere afbeeldingen beschikbaar zijn gebruik dan:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Selecteer achtergrondafbeelding voor {0}</sys:String>
-    <sys:String x:Key="LOCIgdbCoverAsIcon"></sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">Vervanging bijgesneden omslagafbeelding voor pictogram</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Negeer spellen van derde partij winkels</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Importeer Humble Choice spellen</sys:String>

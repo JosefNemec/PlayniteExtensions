@@ -29,7 +29,7 @@
   <sys:String x:Key="LOCSteamLinksGuides">Rehberler</sys:String>
   <sys:String x:Key="LOCSteamLinksWorkshop">Atölye</sys:String>
   <sys:String x:Key="LOCSteamUseVerticalCovers">Dikey kapak görsellerini indir</sys:String>
-  <sys:String x:Key="LOCSteamImportFreeSubGames">Jenerik içermeyen öğeleri içe aktarın</sys:String>
+  <sys:String x:Key="LOCSteamImportFreeSubGames">Genel ücretsiz öğeleri içe aktar</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportWarn">Bu, tüm Steam oyunlarındaki gizli ve favori durumları da dahil geçerli kategorilerin üzerine yazacaktır. Devam etmek istiyor musun?</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Kategoriler İçe Aktarılsın mı?</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Kategoriler alınamıyor, içeri aktarmak üzere hesap seçilmedi.</sys:String>
@@ -53,7 +53,7 @@
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Diğer hesaplardan kurulmuş oyunları yok say</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Ek Hesaplar</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Diğer hesaplardan oyunları içe aktarmak istiyorsanız onların Steam hesap ID ve API anahtarlarını belirtin. Daha fazla bilgi için Steam sorun giderme wiki sayfasına bakın.</sys:String>
-  <sys:String x:Key="LOCSteamLimitTagCountLabel">İçe aktarılan etiketlerin miktarını ilk etiketle sınırlayın</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">İlk şu kadar etiketi içeri aktar:</sys:String>
   <sys:String x:Key="LOCSteamTagPrefixLabel">Etiket adlarını şu önek ile kullan:</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Etiket kara listesi</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel">Hariç tutulan etiketler oyunlara eklenmeyecektir.</sys:String>

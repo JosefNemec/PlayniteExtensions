@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
   <sys:String x:Key="LOCAmazonSettingsConnectAccount">Accounts koppelen</sys:String>
   <sys:String x:Key="LOCAmazonLoginChecking">Verificatiestatus aan het controleren...</sys:String>
-  <sys:String x:Key="LOCAmazonLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCAmazonLoggedIn">De gebruiker is geverifieerd.</sys:String>
   <sys:String x:Key="LOCAmazonNotLoggedIn">Verificatie vereist</sys:String>
-  <sys:String x:Key="LOCAmazonNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Verifiëren</sys:String>
   <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>

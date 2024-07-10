@@ -1,3 +1,22 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCAmazonSettingsImportInstalledLabel">Importați jocurile instalate</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportUninstalledLabel">Importanți jocurile neinstalate</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsConnectAccount">Conectare cont</sys:String>
+  <sys:String x:Key="LOCAmazonLoginChecking">Se verifică starea de autentificare...</sys:String>
+  <sys:String x:Key="LOCAmazonLoggedIn">Utilizatorul este autentificat</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedIn">Necesită autentificare</sys:String>
+  <sys:String x:Key="LOCAmazonNotLoggedInError">Autentificare eșuată.</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateLabel">Autentificați-vă</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Începe jocurile direct fără a rula clientul oficial</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Depanarea problemelor de sincronizare a contului</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingIssues">Probleme de depanare</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Importați toate jocurile</sys:String>
+  <sys:String x:Key="LOCAmazonPrivateAccount">Cont privat</sys:String>
+  <sys:String x:Key="LOCAmazonPublicAccount">Cont public</sys:String>
+  <sys:String x:Key="LOCAmazonAPIKey">Cheie API</sys:String>
+  <sys:String x:Key="LOCAmazonStartUsingClient">Începeți să folosiți clientul {0}</sys:String>
+  <sys:String x:Key="LOCAmazonImportPlaytime">Importați timpul de jucare</sys:String>
+  <sys:String x:Key="LOCAmazonAccountID">ID Cont</sys:String>
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Limba metadatelor:</sys:String>
 </ResourceDictionary>

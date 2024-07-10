@@ -15,6 +15,10 @@
   <sys:String x:Key="LOCUniversalSteamMetadataPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAPIKey">API кључ</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">Крени користити клијент {0}</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Увези време играња</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAccountID">ID Налога</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">Језик метаподатака:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Које је моје корисничко име?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">УРЛ корсиника</sys:String>
@@ -45,4 +49,11 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">Позадина из продавнице</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">Банер</sys:String>
   <sys:String x:Key="LOCSteamShowFriendsButton">Прикажи дугме "Пријатељи" на горњем панелу</sys:String>
+  <sys:String x:Key="LOCSteamFriendsTooltip">Steam пријатељи</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccounts">Додатни налози</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Наведите ID Steam налога и пар API кључева других налога ако желите да увезете игре са њих. Погледајте Wiki страницу за решавање проблема са Steam-ом за више информација.</sys:String>
+  <sys:String x:Key="LOCSteamLimitTagCountLabel">Ограничите количину увезених ознака на првих</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Црна листа ознака</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">Доступне ознаке</sys:String>
+  <sys:String x:Key="LOCSteamTagBlacklistHeader">Изузете ознаке</sys:String>
 </ResourceDictionary>

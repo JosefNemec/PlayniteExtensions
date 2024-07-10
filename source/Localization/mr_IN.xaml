@@ -80,7 +80,7 @@
     <sys:String x:Key="LOCSteamTagPrefixLabel"></sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTabLabel"></sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistExplanationLabel"></sys:String>
-    <sys:String x:Key="LOCSteamTagWhitelistHeader"></sys:String>
+    <sys:String x:Key="LOCSteamTagWhitelistHeader">उपलब्ध टॅग</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistHeader"></sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip"></sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip"></sys:String>
@@ -105,6 +105,6 @@
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip"></sys:String>
     <sys:String x:Key="LOCHumbleNonTroveInstallError"></sys:String>
     <!--Xbox-->
-    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
-    <sys:String x:Key="LOCXboxImportConsoleGames"></sys:String>
+    <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">क्लायंट उघडताना मायक्रोसॉफ्ट स्टोअर उघडण्याऐवजी Xbox Pass अ‍ॅप उघडा</sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">Xbox काँसोल गेम आयात करा</sys:String>
 </ResourceDictionary>

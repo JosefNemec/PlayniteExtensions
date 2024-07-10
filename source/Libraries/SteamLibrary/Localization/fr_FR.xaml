@@ -62,6 +62,6 @@
   <sys:String x:Key="LOCSteamTagWhitelistTooltip">Retirer de la liste de tags exclus</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTooltip">Ajouter à la liste de tags exclus</sys:String>
   <sys:String x:Key="LOCSteamValidationFixedTagCount">Le chiffre indiqué pour la limite de tags importés est invalide</sys:String>
-  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Affiicher le menu de sélection de lancement de Steam</sys:String>
-  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Affiicher le menu de sélection de lancement de Steam (mode Plein Écran)</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Afficher le menu de sélection de lancement de Steam</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Afficher le menu de sélection de lancement de Steam (mode Plein Écran)</sys:String>
 </ResourceDictionary>

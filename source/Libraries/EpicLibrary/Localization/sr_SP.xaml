@@ -15,4 +15,8 @@
   <sys:String x:Key="LOCEpicPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">API кључ</sys:String>
+  <sys:String x:Key="LOCEpicStartUsingClient">Крени користити клијент {0}</sys:String>
+  <sys:String x:Key="LOCEpicImportPlaytime">Увези време играња</sys:String>
+  <sys:String x:Key="LOCEpicAccountID">ID Налога</sys:String>
+  <sys:String x:Key="LOCEpicMetadataLanguageLabel">Језик метаподатака:</sys:String>
 </ResourceDictionary>

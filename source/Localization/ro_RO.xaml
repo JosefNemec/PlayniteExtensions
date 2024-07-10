@@ -1,58 +1,60 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-    <sys:String x:Key="LOCSettingsImportInstalledLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsImportUninstalledLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsConnectAccount"></sys:String>
-    <sys:String x:Key="LOCLoginChecking"></sys:String>
-    <sys:String x:Key="LOCLoggedIn"></sys:String>
-    <sys:String x:Key="LOCNotLoggedIn"></sys:String>
-    <sys:String x:Key="LOCNotLoggedInError"></sys:String>
-    <sys:String x:Key="LOCAuthenticateLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsStartGameDirectly"></sys:String>
-    <sys:String x:Key="LOCTroubleShootingAccountLink"></sys:String>
-    <sys:String x:Key="LOCTroubleShootingIssues"></sys:String>
-    <sys:String x:Key="LOCSettingsImportLibraryLabel"></sys:String>
-    <sys:String x:Key="LOCPrivateAccount"></sys:String>
-    <sys:String x:Key="LOCPublicAccount"></sys:String>
-    <sys:String x:Key="LOCAPIKey"></sys:String>
-    <sys:String x:Key="LOCStartUsingClient"></sys:String>
-    <sys:String x:Key="LOCImportPlaytime"></sys:String>
-    <sys:String x:Key="LOCAccountID"></sys:String>
-    <sys:String x:Key="LOCMetadataLanguageLabel"></sys:String>
+    <sys:String x:Key="LOCSettingsImportInstalledLabel">Importați jocurile instalate</sys:String>
+    <sys:String x:Key="LOCSettingsImportUninstalledLabel">Importanți jocurile neinstalate</sys:String>
+    <sys:String x:Key="LOCSettingsConnectAccount">Conectare cont</sys:String>
+    <sys:String x:Key="LOCLoginChecking">Se verifică starea de autentificare...</sys:String>
+    <sys:String x:Key="LOCLoggedIn">Utilizatorul este autentificat</sys:String>
+    <sys:String x:Key="LOCNotLoggedIn">Necesită autentificare</sys:String>
+    <sys:String x:Key="LOCNotLoggedInError">Autentificare eșuată.</sys:String>
+    <sys:String x:Key="LOCAuthenticateLabel">Autentificați-vă</sys:String>
+    <sys:String x:Key="LOCSettingsStartGameDirectly">Începe jocurile direct fără a rula clientul oficial</sys:String>
+    <sys:String x:Key="LOCTroubleShootingAccountLink">Depanarea problemelor de sincronizare a contului</sys:String>
+    <sys:String x:Key="LOCTroubleShootingIssues">Probleme de depanare</sys:String>
+    <sys:String x:Key="LOCSettingsImportLibraryLabel">Importați toate jocurile</sys:String>
+    <sys:String x:Key="LOCPrivateAccount">Cont privat</sys:String>
+    <sys:String x:Key="LOCPublicAccount">Cont public</sys:String>
+    <sys:String x:Key="LOCAPIKey">Cheie API</sys:String>
+    <sys:String x:Key="LOCStartUsingClient">Începeți să folosiți clientul {0}</sys:String>
+    <sys:String x:Key="LOCImportPlaytime">Importați timpul de jucare</sys:String>
+    <sys:String x:Key="LOCAccountID">ID Cont</sys:String>
+    <sys:String x:Key="LOCMetadataLanguageLabel">Limba metadatelor:</sys:String>
     <!--itch.io-->
-    <sys:String x:Key="LOCItchioSignInNotif"></sys:String>
-    <sys:String x:Key="LOCItchioSignInWaitMessage"></sys:String>
-    <sys:String x:Key="LOCItchioClientNotInstalledError"></sys:String>
-    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel"></sys:String>
-    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationSoundtracks"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationOthers"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationComics"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationBooks"></sys:String>
+    <sys:String x:Key="LOCItchioSignInNotif">Se va deschide itch.io. Vă rugăm să vă autentificați și să închideți acest mesaj.</sys:String>
+    <sys:String x:Key="LOCItchioSignInWaitMessage">Se așteaptă ca utilizatorul să se autentifice, vă rugăm să închideți această fereastră când terminați...</sys:String>
+    <sys:String x:Key="LOCItchioClientNotInstalledError">Versiunea 25 sau mai nouă a aplicației itch.io nu este instalată.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importați jocuri gratis din colecții.</sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Articole de importat:</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">Jocuri</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">Unelte</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">Resurse</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationMods">Mod-uri</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Jocuri fizice</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Coloane sonore</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationOthers">Altele</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationComics">Benzi desenate</sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationBooks">Cărți</sys:String>
     <!--GOG-->
-    <sys:String x:Key="LOCGOGUseLogin"></sys:String>
-    <sys:String x:Key="LOCGOGUseAccountName"></sys:String>
-    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxy"></sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip"></sys:String>
-    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls"></sys:String>
-    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCGOGUseLogin">Autentificare cont</sys:String>
+    <sys:String x:Key="LOCGOGUseAccountName">Nume cont</sys:String>
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Autentificați-vă în contul dvs. sau folosiți un nume de cont public pentru sincronizarea completă a librăriei dvs.
+Ține-ți cont că opțiunea pentru numele contului funcționează doar pentru conturile ale căror biblioteci de jocuri au fost setate în setările de confidențialitate GOG pentru a fi vizibile public.</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxy">Lansați jocuri folosind clientul GOG Galaxy</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Asta va activa funcțiile GOG Galaxy, precum salvarea în cloud, urmărirea timpului petrecut în joc, etc.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Inițiați automat procesul de instalare atunci când instalați jocuri pe GOG Galaxy</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Dacă este activat, procesul de instalare va fi pornit automat fără a avea nevoie de interacțiunea utilizatorului la locația de instalare implicită configurată.
+Dacă este dezactivată, pagina jocului va fi deschisă automat pentru a porni manual procesul de instalare.</sys:String>
     <!--Steam-->
-    <sys:String x:Key="LOCSettingsWhatsSteamName"></sys:String>
-    <sys:String x:Key="LOCSteamCustomUrlName"></sys:String>
-    <sys:String x:Key="LOCSteamLoggedInUser"></sys:String>
-    <sys:String x:Key="LOCSteamRequiresApiKey"></sys:String>
-    <sys:String x:Key="LOCSteamLinksCommunityHub"></sys:String>
-    <sys:String x:Key="LOCSteamLinksDiscussions"></sys:String>
-    <sys:String x:Key="LOCSteamLinksGuides"></sys:String>
-    <sys:String x:Key="LOCSteamLinksWorkshop"></sys:String>
-    <sys:String x:Key="LOCSteamUseVerticalCovers"></sys:String>
-    <sys:String x:Key="LOCSteamImportFreeSubGames"></sys:String>
+    <sys:String x:Key="LOCSettingsWhatsSteamName">Care este numele contului meu?</sys:String>
+    <sys:String x:Key="LOCSteamCustomUrlName">URL Personal</sys:String>
+    <sys:String x:Key="LOCSteamLoggedInUser">Utilizator autentificat</sys:String>
+    <sys:String x:Key="LOCSteamRequiresApiKey">Contul este privat, este necesară o cheie API.</sys:String>
+    <sys:String x:Key="LOCSteamLinksCommunityHub">Centru comunitar</sys:String>
+    <sys:String x:Key="LOCSteamLinksDiscussions">Discuții</sys:String>
+    <sys:String x:Key="LOCSteamLinksGuides">Ghiduri</sys:String>
+    <sys:String x:Key="LOCSteamLinksWorkshop">Atelier</sys:String>
+    <sys:String x:Key="LOCSteamUseVerticalCovers">Descărcați imaginile de tip copertă verticală</sys:String>
+    <sys:String x:Key="LOCSteamImportFreeSubGames">Importați articole gratuite generice</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportWarn"></sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle"></sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount"></sys:String>
@@ -106,5 +108,5 @@
     <sys:String x:Key="LOCHumbleNonTroveInstallError"></sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
-    <sys:String x:Key="LOCXboxImportConsoleGames"></sys:String>
+    <sys:String x:Key="LOCXboxImportConsoleGames">Importați jocuri de consolă de pe Xbox</sys:String>
 </ResourceDictionary>

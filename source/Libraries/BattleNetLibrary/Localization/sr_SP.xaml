@@ -15,4 +15,8 @@
   <sys:String x:Key="LOCBattleNetPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCBattleNetPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCBattleNetAPIKey">API кључ</sys:String>
+  <sys:String x:Key="LOCBattleNetStartUsingClient">Крени користити клијент {0}</sys:String>
+  <sys:String x:Key="LOCBattleNetImportPlaytime">Увези време играња</sys:String>
+  <sys:String x:Key="LOCBattleNetAccountID">ID Налога</sys:String>
+  <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Језик метаподатака:</sys:String>
 </ResourceDictionary>

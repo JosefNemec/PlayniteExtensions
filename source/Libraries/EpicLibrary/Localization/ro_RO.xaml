@@ -1,3 +1,22 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCEpicSettingsImportInstalledLabel">Importați jocurile instalate</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">Importanți jocurile neinstalate</sys:String>
+  <sys:String x:Key="LOCEpicSettingsConnectAccount">Conectare cont</sys:String>
+  <sys:String x:Key="LOCEpicLoginChecking">Se verifică starea de autentificare...</sys:String>
+  <sys:String x:Key="LOCEpicLoggedIn">Utilizatorul este autentificat</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedIn">Necesită autentificare</sys:String>
+  <sys:String x:Key="LOCEpicNotLoggedInError">Autentificare eșuată.</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateLabel">Autentificați-vă</sys:String>
+  <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Începe jocurile direct fără a rula clientul oficial</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Depanarea problemelor de sincronizare a contului</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingIssues">Probleme de depanare</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">Importați toate jocurile</sys:String>
+  <sys:String x:Key="LOCEpicPrivateAccount">Cont privat</sys:String>
+  <sys:String x:Key="LOCEpicPublicAccount">Cont public</sys:String>
+  <sys:String x:Key="LOCEpicAPIKey">Cheie API</sys:String>
+  <sys:String x:Key="LOCEpicStartUsingClient">Începeți să folosiți clientul {0}</sys:String>
+  <sys:String x:Key="LOCEpicImportPlaytime">Importați timpul de jucare</sys:String>
+  <sys:String x:Key="LOCEpicAccountID">ID Cont</sys:String>
+  <sys:String x:Key="LOCEpicMetadataLanguageLabel">Limba metadatelor:</sys:String>
 </ResourceDictionary>

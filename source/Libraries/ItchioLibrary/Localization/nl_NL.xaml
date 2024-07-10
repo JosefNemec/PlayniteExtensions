@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
   <sys:String x:Key="LOCitchioSettingsConnectAccount">Accounts koppelen</sys:String>
   <sys:String x:Key="LOCitchioLoginChecking">Verificatiestatus aan het controleren...</sys:String>
-  <sys:String x:Key="LOCitchioLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">De gebruiker is geverifieerd.</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedIn">Verificatie vereist</sys:String>
-  <sys:String x:Key="LOCitchioNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">Verifiëren</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
@@ -27,7 +27,11 @@
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Te importeren items:</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationGames">Spellen</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationTools">Gereedschappen</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationAssets">Activa</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationMods">Mods</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Fysieke spellen</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Soundtracks</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationOthers">Overig</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationComics">Stripboeken</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationBooks">Boeken</sys:String>
 </ResourceDictionary>

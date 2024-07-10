@@ -74,7 +74,7 @@
     <sys:String x:Key="LOCSteamBackgroundSourceStore">Фон из магазина</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">Баннер</sys:String>
     <sys:String x:Key="LOCSteamShowFriendsButton">Показывать кнопку &quot;Друзья&quot; на Верхней панели</sys:String>
-    <sys:String x:Key="LOCSteamFriendsTooltip">Друзья в Steam’е</sys:String>
+    <sys:String x:Key="LOCSteamFriendsTooltip">Друзья в Steam</sys:String>
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Игнорировать установленные игры с других аккаунтов</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Дополнительные аккаунты</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Введите пару из ID и API-ключа от других аккаунтов Steam, если хотите импортировать из них игры. Больше информации доступно на вики-странице «Устранение неполадок» по Steam.</sys:String>

@@ -15,4 +15,8 @@
   <sys:String x:Key="LOCUbisoftPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">API кључ</sys:String>
+  <sys:String x:Key="LOCUbisoftStartUsingClient">Крени користити клијент {0}</sys:String>
+  <sys:String x:Key="LOCUbisoftImportPlaytime">Увези време играња</sys:String>
+  <sys:String x:Key="LOCUbisoftAccountID">ID Налога</sys:String>
+  <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Језик метаподатака:</sys:String>
 </ResourceDictionary>

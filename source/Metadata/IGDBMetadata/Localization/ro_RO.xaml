@@ -1,4 +1,23 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCIGDBSettingsImportInstalledLabel">Importați jocurile instalate</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel">Importanți jocurile neinstalate</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsConnectAccount">Conectare cont</sys:String>
+  <sys:String x:Key="LOCIGDBLoginChecking">Se verifică starea de autentificare...</sys:String>
+  <sys:String x:Key="LOCIGDBLoggedIn">Utilizatorul este autentificat</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedIn">Necesită autentificare</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedInError">Autentificare eșuată.</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateLabel">Autentificați-vă</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Începe jocurile direct fără a rula clientul oficial</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Depanarea problemelor de sincronizare a contului</sys:String>
+  <sys:String x:Key="LOCIGDBTroubleShootingIssues">Probleme de depanare</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel">Importați toate jocurile</sys:String>
+  <sys:String x:Key="LOCIGDBPrivateAccount">Cont privat</sys:String>
+  <sys:String x:Key="LOCIGDBPublicAccount">Cont public</sys:String>
+  <sys:String x:Key="LOCIGDBAPIKey">Cheie API</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient">Începeți să folosiți clientul {0}</sys:String>
+  <sys:String x:Key="LOCIGDBImportPlaytime">Importați timpul de jucare</sys:String>
+  <sys:String x:Key="LOCIGDBAccountID">ID Cont</sys:String>
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Limba metadatelor:</sys:String>
   <!--IGDB-->
 </ResourceDictionary>

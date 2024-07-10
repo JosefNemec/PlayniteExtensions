@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
   <sys:String x:Key="LOCGOGSettingsConnectAccount">Accounts koppelen</sys:String>
   <sys:String x:Key="LOCGOGLoginChecking">Verificatiestatus aan het controleren...</sys:String>
-  <sys:String x:Key="LOCGOGLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCGOGLoggedIn">De gebruiker is geverifieerd.</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedIn">Verificatie vereist</sys:String>
-  <sys:String x:Key="LOCGOGNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Verifiëren</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>

@@ -15,6 +15,10 @@
   <sys:String x:Key="LOCIGDBPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">API кључ</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient">Крени користити клијент {0}</sys:String>
+  <sys:String x:Key="LOCIGDBImportPlaytime">Увези време играња</sys:String>
+  <sys:String x:Key="LOCIGDBAccountID">ID Налога</sys:String>
+  <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Језик метаподатака:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Користи снимке екрана ако слике нису доступне</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Ако је више слика доступно користи:</sys:String>

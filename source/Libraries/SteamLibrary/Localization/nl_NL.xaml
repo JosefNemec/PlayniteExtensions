@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCSteamSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
   <sys:String x:Key="LOCSteamSettingsConnectAccount">Accounts koppelen</sys:String>
   <sys:String x:Key="LOCSteamLoginChecking">Verificatiestatus aan het controleren...</sys:String>
-  <sys:String x:Key="LOCSteamLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCSteamLoggedIn">De gebruiker is geverifieerd.</sys:String>
   <sys:String x:Key="LOCSteamNotLoggedIn">Verificatie vereist</sys:String>
-  <sys:String x:Key="LOCSteamNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCSteamNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCSteamAuthenticateLabel">Verifiëren</sys:String>
   <sys:String x:Key="LOCSteamSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCSteamTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>

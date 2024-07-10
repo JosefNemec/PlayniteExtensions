@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCUbisoftSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsConnectAccount">Accounts koppelen</sys:String>
   <sys:String x:Key="LOCUbisoftLoginChecking">Verificatiestatus aan het controleren...</sys:String>
-  <sys:String x:Key="LOCUbisoftLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCUbisoftLoggedIn">De gebruiker is geverifieerd.</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedIn">Verificatie vereist</sys:String>
-  <sys:String x:Key="LOCUbisoftNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Verifiëren</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>

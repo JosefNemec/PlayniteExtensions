@@ -20,6 +20,6 @@
   <sys:String x:Key="LOCXboxAccountID">Hesap kimliği</sys:String>
   <sys:String x:Key="LOCXboxMetadataLanguageLabel">Üst veri dili:</sys:String>
   <!--Xbox-->
-  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">İstemciyi açarken Microsoft Mağaza' sı yerine Xbox Pass uygulamasını başlat</sys:String>
+  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">İstemciyi açarken Microsoft Mağaza'sı yerine Xbox Pass uygulamasını başlat</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">Xbox konsol oyunlarını içe aktar</sys:String>
 </ResourceDictionary>

@@ -15,6 +15,10 @@
   <sys:String x:Key="LOCGOGPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">API кључ</sys:String>
+  <sys:String x:Key="LOCGOGStartUsingClient">Крени користити клијент {0}</sys:String>
+  <sys:String x:Key="LOCGOGImportPlaytime">Увези време играња</sys:String>
+  <sys:String x:Key="LOCGOGAccountID">ID Налога</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Језик метаподатака:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Пријава</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Корисничко име</sys:String>

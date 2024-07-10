@@ -25,7 +25,7 @@
     <sys:String x:Key="LOCItchioClientNotInstalledError"></sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel"></sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel"></sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationGames"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationGames">Spil</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
     <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
     <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>

@@ -15,4 +15,8 @@
   <sys:String x:Key="LOCRockstarPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCRockstarPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCRockstarAPIKey">API кључ</sys:String>
+  <sys:String x:Key="LOCRockstarStartUsingClient">Крени користити клијент {0}</sys:String>
+  <sys:String x:Key="LOCRockstarImportPlaytime">Увези време играња</sys:String>
+  <sys:String x:Key="LOCRockstarAccountID">ID Налога</sys:String>
+  <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Језик метаподатака:</sys:String>
 </ResourceDictionary>

@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCIGDBSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
   <sys:String x:Key="LOCIGDBSettingsConnectAccount">Accounts koppelen</sys:String>
   <sys:String x:Key="LOCIGDBLoginChecking">Verificatiestatus aan het controleren...</sys:String>
-  <sys:String x:Key="LOCIGDBLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCIGDBLoggedIn">De gebruiker is geverifieerd.</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedIn">Verificatie vereist</sys:String>
-  <sys:String x:Key="LOCIGDBNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCIGDBNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Verifiëren</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
@@ -23,4 +23,5 @@
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Gebruik screenshots als illustraties niet beschikbaar zijn</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Wanneer meerdere afbeeldingen beschikbaar zijn gebruik dan:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Selecteer achtergrondafbeelding voor {0}</sys:String>
+  <sys:String x:Key="LOCIgdbCoverAsIcon">Vervanging bijgesneden omslagafbeelding voor pictogram</sys:String>
 </ResourceDictionary>

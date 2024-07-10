@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCitchioAccountID">Konto ID</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">Metadata sprog:</sys:String>
   <!--itch.io-->
+  <sys:String x:Key="LOCitchioItemClassificationGames">Spil</sys:String>
 </ResourceDictionary>

@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
   <sys:String x:Key="LOCRockstarSettingsConnectAccount">Accounts koppelen</sys:String>
   <sys:String x:Key="LOCRockstarLoginChecking">Verificatiestatus aan het controleren...</sys:String>
-  <sys:String x:Key="LOCRockstarLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCRockstarLoggedIn">De gebruiker is geverifieerd.</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedIn">Verificatie vereist</sys:String>
-  <sys:String x:Key="LOCRockstarNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Verifiëren</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>

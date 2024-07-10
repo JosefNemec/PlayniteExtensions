@@ -1,4 +1,32 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCGOGSettingsImportInstalledLabel">Importați jocurile instalate</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel">Importanți jocurile neinstalate</sys:String>
+  <sys:String x:Key="LOCGOGSettingsConnectAccount">Conectare cont</sys:String>
+  <sys:String x:Key="LOCGOGLoginChecking">Se verifică starea de autentificare...</sys:String>
+  <sys:String x:Key="LOCGOGLoggedIn">Utilizatorul este autentificat</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedIn">Necesită autentificare</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedInError">Autentificare eșuată.</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateLabel">Autentificați-vă</sys:String>
+  <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Începe jocurile direct fără a rula clientul oficial</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Depanarea problemelor de sincronizare a contului</sys:String>
+  <sys:String x:Key="LOCGOGTroubleShootingIssues">Probleme de depanare</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">Importați toate jocurile</sys:String>
+  <sys:String x:Key="LOCGOGPrivateAccount">Cont privat</sys:String>
+  <sys:String x:Key="LOCGOGPublicAccount">Cont public</sys:String>
+  <sys:String x:Key="LOCGOGAPIKey">Cheie API</sys:String>
+  <sys:String x:Key="LOCGOGStartUsingClient">Începeți să folosiți clientul {0}</sys:String>
+  <sys:String x:Key="LOCGOGImportPlaytime">Importați timpul de jucare</sys:String>
+  <sys:String x:Key="LOCGOGAccountID">ID Cont</sys:String>
+  <sys:String x:Key="LOCGOGMetadataLanguageLabel">Limba metadatelor:</sys:String>
   <!--GOG-->
+  <sys:String x:Key="LOCGOGUseLogin">Autentificare cont</sys:String>
+  <sys:String x:Key="LOCGOGUseAccountName">Nume cont</sys:String>
+  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Autentificați-vă în contul dvs. sau folosiți un nume de cont public pentru sincronizarea completă a librăriei dvs.
+Ține-ți cont că opțiunea pentru numele contului funcționează doar pentru conturile ale căror biblioteci de jocuri au fost setate în setările de confidențialitate GOG pentru a fi vizibile public.</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxy">Lansați jocuri folosind clientul GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Asta va activa funcțiile GOG Galaxy, precum salvarea în cloud, urmărirea timpului petrecut în joc, etc.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Inițiați automat procesul de instalare atunci când instalați jocuri pe GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Dacă este activat, procesul de instalare va fi pornit automat fără a avea nevoie de interacțiunea utilizatorului la locația de instalare implicită configurată.
+Dacă este dezactivată, pagina jocului va fi deschisă automat pentru a porni manual procesul de instalare.</sys:String>
 </ResourceDictionary>

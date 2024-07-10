@@ -94,7 +94,7 @@ Falls deaktiviert, wird die Spieleseite geöffnet, um den Installationsvorgang m
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Screenshots verwenden, falls kein Bildmaterial verfügbar</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Falls mehrere Bilder verfügbar, das folgende verwenden:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Hintergrundbild für {0} auswählen</sys:String>
-    <sys:String x:Key="LOCIgdbCoverAsIcon">Abgeschnittenes Titelbild durch Symbol ersetzen</sys:String>
+    <sys:String x:Key="LOCIgdbCoverAsIcon">Abgeschnittenes Titelbild durch ein Icon ersetzen</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Spiele von Drittanbieter-Shops ignorieren</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Humble-Choice-Spiele importieren</sys:String>

@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCOriginSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
   <sys:String x:Key="LOCOriginSettingsConnectAccount">Accounts koppelen</sys:String>
   <sys:String x:Key="LOCOriginLoginChecking">Verificatiestatus aan het controleren...</sys:String>
-  <sys:String x:Key="LOCOriginLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCOriginLoggedIn">De gebruiker is geverifieerd.</sys:String>
   <sys:String x:Key="LOCOriginNotLoggedIn">Verificatie vereist</sys:String>
-  <sys:String x:Key="LOCOriginNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCOriginAuthenticateLabel">Verifiëren</sys:String>
   <sys:String x:Key="LOCOriginSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCOriginTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>

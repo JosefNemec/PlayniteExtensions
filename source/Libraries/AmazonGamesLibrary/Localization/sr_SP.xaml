@@ -15,4 +15,8 @@
   <sys:String x:Key="LOCAmazonPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCAmazonAPIKey">API кључ</sys:String>
+  <sys:String x:Key="LOCAmazonStartUsingClient">Крени користити клијент {0}</sys:String>
+  <sys:String x:Key="LOCAmazonImportPlaytime">Увези време играња</sys:String>
+  <sys:String x:Key="LOCAmazonAccountID">ID Налога</sys:String>
+  <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Језик метаподатака:</sys:String>
 </ResourceDictionary>

@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCUniversalSteamMetadataSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataSettingsConnectAccount">Accounts koppelen</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataLoginChecking">Verificatiestatus aan het controleren...</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataLoggedIn">De gebruiker is geverifieerd.</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedIn">Verificatie vereist</sys:String>
-  <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateLabel">Verifiëren</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>

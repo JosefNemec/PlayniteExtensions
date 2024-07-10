@@ -23,4 +23,5 @@
   <sys:String x:Key="LOCSteamBackgroundSourceStore">स्टोअर पार्श्वभूमी</sys:String>
   <sys:String x:Key="LOCSteamBackgroundSourceBanner">बॅनर</sys:String>
   <sys:String x:Key="LOCSteamFriendsTooltip">स्टीम फ्रेंड्झ</sys:String>
+  <sys:String x:Key="LOCSteamTagWhitelistHeader">उपलब्ध टॅग</sys:String>
 </ResourceDictionary>

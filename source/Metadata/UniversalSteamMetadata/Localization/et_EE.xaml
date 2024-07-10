@@ -21,6 +21,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">Metaandmete keel:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Mis on mu konto nimi?</sys:String>
+  <sys:String x:Key="LOCSteamCustomUrlName">Konto URL nimi</sys:String>
   <sys:String x:Key="LOCSteamLoggedInUser">Autenditud kasutaja</sys:String>
   <sys:String x:Key="LOCSteamRequiresApiKey">Konto on privaatne, API võti on nõutud.</sys:String>
   <sys:String x:Key="LOCSteamLinksCommunityHub">Kogukonna keskus</sys:String>
@@ -28,6 +29,7 @@
   <sys:String x:Key="LOCSteamLinksGuides">Juhendid</sys:String>
   <sys:String x:Key="LOCSteamUseVerticalCovers">Laadi alla vertikaalsed kaanepildid</sys:String>
   <sys:String x:Key="LOCSteamImportFreeSubGames">Impordi üldised tasuta üksused</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportWarn">See kirjutab üle praegused kategooriad ja ka kõigi sinu Steami mängude olekud peidetud ja lemmik. Kas tahad jätkata?</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Importida kategooriad?</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Ei saa kategooriaid importida, imporditavat kontot pole valitud.</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Ei saa kategooriaid importida, andmebaas pole avatud.</sys:String>
@@ -57,4 +59,7 @@
   <sys:String x:Key="LOCSteamTagBlacklistHeader">Välistatud sildid</sys:String>
   <sys:String x:Key="LOCSteamTagWhitelistTooltip">Eemalda välistatud siltidest</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTooltip">Lisa välistatud siltidesse</sys:String>
+  <sys:String x:Key="LOCSteamValidationFixedTagCount">Siltide arv peab olema korrektne number</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Näita Steami mängu käivitusvaliku menüüd töölaua režiimis</sys:String>
+  <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Näita Steami mängu käivitusvaliku menüüd täisekraani režiimis</sys:String>
 </ResourceDictionary>

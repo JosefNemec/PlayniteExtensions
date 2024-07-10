@@ -9,4 +9,6 @@
   <sys:String x:Key="LOCXboxImportPlaytime">खेळलेल्याची कालावधी आयात करा</sys:String>
   <sys:String x:Key="LOCXboxMetadataLanguageLabel">मेटाडेटा भाषा:</sys:String>
   <!--Xbox-->
+  <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">क्लायंट उघडताना मायक्रोसॉफ्ट स्टोअर उघडण्याऐवजी Xbox Pass अ‍ॅप उघडा</sys:String>
+  <sys:String x:Key="LOCXboxImportConsoleGames">Xbox काँसोल गेम आयात करा</sys:String>
 </ResourceDictionary>

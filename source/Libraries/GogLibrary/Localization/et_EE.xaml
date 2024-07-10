@@ -22,6 +22,8 @@
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Kontosse sisselogimine</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Konto nimi</sys:String>
+  <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Oma terve kogu sünkroonimiseks logi oma kontole sisse või kasuta oma avaliku konto nime.
+Pane tähele, et konto nime valik töötab ainult nende kontode puhul, mille mängukogud on GOGi privaatsussätetes määratud avalikult nähtavaks.</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">Käivita mängud klienti GOG Galaxy kasutades</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">See võimaldab kasutada GOG Galaxy võimalusi, nagu pilves salvestamine, mänguaja jälgimine jne.</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automaatselt algata installimise protsess, installides mänge teenuses GOG Galaxy</sys:String>

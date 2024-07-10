@@ -15,4 +15,8 @@
   <sys:String x:Key="LOCOriginPrivateAccount">Приватан налог</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">Јавни налог</sys:String>
   <sys:String x:Key="LOCOriginAPIKey">API кључ</sys:String>
+  <sys:String x:Key="LOCOriginStartUsingClient">Крени користити клијент {0}</sys:String>
+  <sys:String x:Key="LOCOriginImportPlaytime">Увези време играња</sys:String>
+  <sys:String x:Key="LOCOriginAccountID">ID Налога</sys:String>
+  <sys:String x:Key="LOCOriginMetadataLanguageLabel">Језик метаподатака:</sys:String>
 </ResourceDictionary>

@@ -1,3 +1,22 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCRockstarSettingsImportInstalledLabel">Importați jocurile instalate</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportUninstalledLabel">Importanți jocurile neinstalate</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsConnectAccount">Conectare cont</sys:String>
+  <sys:String x:Key="LOCRockstarLoginChecking">Se verifică starea de autentificare...</sys:String>
+  <sys:String x:Key="LOCRockstarLoggedIn">Utilizatorul este autentificat</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedIn">Necesită autentificare</sys:String>
+  <sys:String x:Key="LOCRockstarNotLoggedInError">Autentificare eșuată.</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateLabel">Autentificați-vă</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Începe jocurile direct fără a rula clientul oficial</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Depanarea problemelor de sincronizare a contului</sys:String>
+  <sys:String x:Key="LOCRockstarTroubleShootingIssues">Probleme de depanare</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">Importați toate jocurile</sys:String>
+  <sys:String x:Key="LOCRockstarPrivateAccount">Cont privat</sys:String>
+  <sys:String x:Key="LOCRockstarPublicAccount">Cont public</sys:String>
+  <sys:String x:Key="LOCRockstarAPIKey">Cheie API</sys:String>
+  <sys:String x:Key="LOCRockstarStartUsingClient">Începeți să folosiți clientul {0}</sys:String>
+  <sys:String x:Key="LOCRockstarImportPlaytime">Importați timpul de jucare</sys:String>
+  <sys:String x:Key="LOCRockstarAccountID">ID Cont</sys:String>
+  <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Limba metadatelor:</sys:String>
 </ResourceDictionary>

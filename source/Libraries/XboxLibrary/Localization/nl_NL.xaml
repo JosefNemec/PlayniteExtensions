@@ -4,9 +4,9 @@
   <sys:String x:Key="LOCXboxSettingsImportUninstalledLabel">Importeer niet-geïnstalleerde spellen</sys:String>
   <sys:String x:Key="LOCXboxSettingsConnectAccount">Accounts koppelen</sys:String>
   <sys:String x:Key="LOCXboxLoginChecking">Verificatiestatus aan het controleren...</sys:String>
-  <sys:String x:Key="LOCXboxLoggedIn">De gebruiker is niet geverifieerd.</sys:String>
+  <sys:String x:Key="LOCXboxLoggedIn">De gebruiker is geverifieerd.</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedIn">Verificatie vereist</sys:String>
-  <sys:String x:Key="LOCXboxNotLoggedInError">Kan gebruiker te verifiëren</sys:String>
+  <sys:String x:Key="LOCXboxNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCXboxAuthenticateLabel">Verifiëren</sys:String>
   <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
