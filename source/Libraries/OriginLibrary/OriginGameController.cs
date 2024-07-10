@@ -213,15 +213,10 @@ namespace OriginLibrary
 
         public async void StartRunningWatcher()
         {
-            if (Origin.GetGameUsesEasyAntiCheat(Game.InstallDirectory))
+            // Solves issues with game process being started/shutdown multiple times during startup via Origin
+            if (Origin.GetGameRequiresOrigin(Game.InstallDirectory) || Origin.GetGameUsesEasyAntiCheat(Game.InstallDirectory))
             {
-                // Games with EasyAntiCheat take longer to be re-executed by Origin
-                await Task.Delay(12000);
-            }
-            else if (Origin.GetGameRequiresOrigin(Game.InstallDirectory))
-            {
-                // Solves issues with game process being started/shutdown multiple times during startup via Origin
-                await Task.Delay(5000);
+                await Task.Delay(40_000);
             }
 
             procMon.WatchDirectoryProcesses(Game.InstallDirectory, false);
