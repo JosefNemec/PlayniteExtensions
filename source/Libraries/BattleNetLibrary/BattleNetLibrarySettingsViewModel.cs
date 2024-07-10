@@ -21,6 +21,8 @@ namespace BattleNetLibrary
 
     public class BattleNetLibrarySettingsViewModel : PluginSettingsViewModel<BattleNetLibrarySettings, BattleNetLibrary>
     {
+        public bool IsFirstRunUse { get; set; }
+
         public bool IsUserLoggedIn
         {
             get

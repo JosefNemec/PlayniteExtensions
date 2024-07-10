@@ -382,5 +382,11 @@ namespace BattleNetLibrary
         {
             return new BattleNetMetadataProvider();
         }
+
+        public override ISettings GetSettings(bool firstRunSettings)
+        {
+            SettingsViewModel.IsFirstRunUse = firstRunSettings;
+            return SettingsViewModel;
+        }
     }
 }
