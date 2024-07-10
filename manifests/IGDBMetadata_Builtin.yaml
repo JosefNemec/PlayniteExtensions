@@ -64,3 +64,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/IGDBMetadata_Builtin_2_9.pext
     Changelog:
       - Show game port information on search results
+  - Version: 2.10
+    RequiredApiVersion: 6.5.0
+    ReleaseDate: 2024-07-10
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/IGDBMetadata_Builtin_2_10.pext
+    Changelog:
+      - Fixed game series fetching after backend changes
