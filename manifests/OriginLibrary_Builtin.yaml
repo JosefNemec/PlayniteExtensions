@@ -81,3 +81,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/OriginLibrary_Builtin_2_12.pext
     Changelog:
       - EA Sports WRC fails to import
+  - Version: 2.13
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2024-07-10
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/OriginLibrary_Builtin_2_13.pext
+    Changelog:
+      - Attempt at making tracking of some problematic games work better
