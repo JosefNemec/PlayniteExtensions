@@ -299,7 +299,7 @@ namespace IGDBMetadata
                 return base.GetSeries(args);
             }
 
-            return new HashSet<MetadataProperty> { new MetadataNameProperty(GameData.collection_expanded.name) };
+            return GameData.collections_expanded?.Select(a => new MetadataNameProperty(a.name)).ToList();
         }
 
         public override Playnite.SDK.Models.ReleaseDate? GetReleaseDate(GetMetadataFieldArgs args)
@@ -423,7 +423,7 @@ namespace IGDBMetadata
                     fields.Add(MetadataField.AgeRating);
                 }
 
-                if (GameData.collection_expanded != null)
+                if (GameData.collections_expanded.HasItems())
                 {
                     fields.Add(MetadataField.Series);
                 }
