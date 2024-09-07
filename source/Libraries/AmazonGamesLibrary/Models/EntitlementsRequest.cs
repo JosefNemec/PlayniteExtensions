@@ -15,5 +15,7 @@ namespace AmazonGamesLibrary.Models
         public int maxResults = 500;
         public string keyId;
         public string hardwareHash;
+        public string productIdFilter = null;
+        public bool disableStateFilter = true;
     }
 }
