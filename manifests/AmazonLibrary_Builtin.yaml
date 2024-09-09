@@ -42,3 +42,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_7.pext
     Changelog:
       - Add support to automatically show install dialog in client (by darklinkpower)
+  - Version: 2.8
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2024-09-09
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_8.pext
+    Changelog:
+      - Fixed library sync not working (by Darklinkpower)
