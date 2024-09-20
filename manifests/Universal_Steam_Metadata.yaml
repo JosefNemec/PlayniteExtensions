@@ -106,3 +106,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_15.pext
     Changelog:
       - Fixed games no appearing in search if they don't have English localization (by darklinkpower)
+  - Version: 2.16
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2024-09-20
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_16.pext
+    Changelog:
+      -  Fixed Steam Deck compatibility null reference exception when api game details call fails (by Jeshibu)
