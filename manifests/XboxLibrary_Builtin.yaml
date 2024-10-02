@@ -85,3 +85,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_14.pext
     Changelog:
       - Fixed authentication token refresh not working properly (by damirarh)
+  - Version: 2.15
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2024-09-02
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_15.pext
+    Changelog:
+      - Import of installed games failing sometimes
