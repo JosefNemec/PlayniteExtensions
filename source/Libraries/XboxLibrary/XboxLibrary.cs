@@ -255,6 +255,7 @@ namespace XboxLibrary
                             catch (Exception e)
                             {
                                 Logger.Error(e, $"Failed to get info about installed UWP package {installedApp.AppId}.");
+                                continue;
                             }
                         }
 
@@ -274,7 +275,10 @@ namespace XboxLibrary
                             game.IsInstalled = true;
                             game.InstallDirectory = installDir;
                             game.Icon = installedApp.Icon.IsNullOrEmpty() ? null : new MetadataFile(installedApp.Icon);
-                            installedGames.Add(libTitle.pfn, game);
+                            if (!installedGames.ContainsKey(libTitle.pfn))
+                            {
+                                installedGames.Add(libTitle.pfn, game);
+                            }
                         }
                     }
 
