@@ -134,6 +134,11 @@ namespace EpicLibrary
                     continue;
                 }
 
+                if ((catalogItem?.customAttributes?.ContainsKey("ThirdPartyManagedApp") == true) && (catalogItem?.customAttributes["ThirdPartyManagedApp"].value.ToLower() == "the ea app"))
+                {
+                    continue;
+                }
+
                 if ((catalogItem?.customAttributes?.ContainsKey("partnerLinkType") == true) && (catalogItem.customAttributes["partnerLinkType"].value == "ubisoft"))
                 {
                     continue;
