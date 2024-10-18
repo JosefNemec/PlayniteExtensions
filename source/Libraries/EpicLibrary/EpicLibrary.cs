@@ -134,7 +134,7 @@ namespace EpicLibrary
                     continue;
                 }
 
-                if ((catalogItem?.customAttributes?.ContainsKey("partnerLinkType") == true) && (catalogItem.customAttributes["partnerLinkType"].value == "ubisoft"))
+                if (!SettingsViewModel.Settings.ImportUbisoftGames && (catalogItem?.customAttributes?.ContainsKey("partnerLinkType") == true) && (catalogItem.customAttributes["partnerLinkType"].value == "ubisoft"))
                 {
                     continue;
                 }
