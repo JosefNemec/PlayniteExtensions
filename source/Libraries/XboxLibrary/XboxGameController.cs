@@ -64,6 +64,10 @@ namespace XboxLibrary
                     InitializeFileSystemWatcher();
                 }
             }
+            else
+            {
+                ProcessStarter.StartUrl($"ms-windows-store://pdp/?PFN={Game.GameId}");
+            }
 
             StartInstallWatcher();
         }
