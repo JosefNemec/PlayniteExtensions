@@ -20,6 +20,7 @@ namespace XboxLibrary
     public class XboxLibrary : LibraryPluginBase<XboxLibrarySettingsViewModel>
     {
         private readonly string pfnInfoCacheDir;
+        private readonly string pfnToProductIdMapCachePath;
 
         public override LibraryClient Client => new XboxLibraryClient(SettingsViewModel);
 
@@ -34,6 +35,7 @@ namespace XboxLibrary
         {
             SettingsViewModel = new XboxLibrarySettingsViewModel(this, api);
             pfnInfoCacheDir = Path.Combine(GetPluginUserDataPath(), "PfnInfoCache");
+            pfnToProductIdMapCachePath = Path.Combine(GetPluginUserDataPath(), "pfnToProductIdMapCache.json");
         }
 
         public override ISettings GetSettings(bool firstRunSettings)
@@ -131,8 +133,8 @@ namespace XboxLibrary
         public void WriteAppDataCache(TitleHistoryResponse.Title data)
         {
             var filePath = Path.Combine(pfnInfoCacheDir, data.pfn + ".json");
-            FileSystem.PrepareSaveFile(filePath);
-            File.WriteAllText(filePath, Serialization.ToJson(data));
+            var serializedData = Serialization.ToJson(data);
+            FileSystem.WriteStringToFile(filePath, serializedData);
         }
 
         private static HashSet<MetadataProperty> GetPlatforms(List<string> devices, out bool containsPC, out bool containsConsole)
@@ -338,17 +340,69 @@ namespace XboxLibrary
                 PlayniteApi.Notifications.Remove(ImportErrorMessageId);
             }
 
+            PersistPcPfnToProductIdMapCache(pcTitles);
             return allGames;
+        }
+
+        public void PersistPcPfnToProductIdMapCache(List<TitleHistoryResponse.Title> titles)
+        {
+            try
+            {
+                var cache = GetPfnToProductIdMapCache();
+                foreach (var title in titles)
+                {
+                    var pcProductId = title.detail.availabilities
+                        .FirstOrDefault(a => a.Platforms.Contains("PC"))?.ProductId;
+                    if (pcProductId.IsNullOrEmpty())
+                    {
+                        continue;
+                    }
+
+                    if (!cache.TryGetValue(title.pfn, out var existingCache) || existingCache != pcProductId)
+                    {
+                        cache[title.pfn] = pcProductId;
+                    }
+                }
+
+                var serializedData = Serialization.ToJson(cache);
+                FileSystem.WriteStringToFile(pfnToProductIdMapCachePath, serializedData);
+            }
+            catch (Exception e)
+            {
+                Logger.Error(e, "Error while persisting PC Title Id Cache");
+            };
+        }
+
+        public Dictionary<string, string> GetPfnToProductIdMapCache()
+        {
+            if (FileSystem.FileExists(pfnToProductIdMapCachePath))
+            {
+                return Serialization.FromJsonFile<Dictionary<string, string>>(pfnToProductIdMapCachePath);
+            }
+
+            return new Dictionary<string, string>();
         }
 
         public override IEnumerable<InstallController> GetInstallActions(GetInstallActionsArgs args)
         {
-            if (args.Game.PluginId != Id || args.Game.GameId.StartsWith("CONSOLE"))
+            var game = args.Game;
+            if (game.PluginId != Id || game.GameId.StartsWith("CONSOLE"))
             {
                 yield break;
             }
 
-            yield return new XboxInstallController(args.Game, SettingsViewModel.Settings.XboxAppClientPriorityLaunch && Xbox.IsXboxPassAppInstalled);
+            var shouldUseXboxApp = SettingsViewModel.Settings.XboxAppClientPriorityLaunch && Xbox.IsXboxPassAppInstalled;
+            var productId = string.Empty;
+            if (shouldUseXboxApp)
+            {
+                var pfnToProductIdMapCache = GetPfnToProductIdMapCache();
+                if (pfnToProductIdMapCache.TryGetValue(game.GameId, out var cachedProductId))
+                {
+                    productId = cachedProductId;
+                }
+            }
+
+            yield return new XboxInstallController(args.Game, shouldUseXboxApp, productId);
         }
 
         public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
