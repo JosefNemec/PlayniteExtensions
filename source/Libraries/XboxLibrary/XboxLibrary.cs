@@ -349,6 +349,7 @@ namespace XboxLibrary
             try
             {
                 var cache = GetPfnToProductIdMapCache();
+                var cacheChanged = false;
                 foreach (var title in titles)
                 {
                     var pcProductId = title.detail.availabilities
@@ -360,12 +361,16 @@ namespace XboxLibrary
 
                     if (!cache.TryGetValue(title.pfn, out var existingCache) || existingCache != pcProductId)
                     {
+                        cacheChanged = true;
                         cache[title.pfn] = pcProductId;
                     }
                 }
 
-                var serializedData = Serialization.ToJson(cache);
-                FileSystem.WriteStringToFile(pfnToProductIdMapCachePath, serializedData);
+                if (cacheChanged)
+                {
+                    var serializedData = Serialization.ToJson(cache);
+                    FileSystem.WriteStringToFile(pfnToProductIdMapCachePath, serializedData);
+                }
             }
             catch (Exception e)
             {
