@@ -151,7 +151,7 @@ namespace SteamLibrary
             {
                 Source = new MetadataNameProperty("Steam"),
                 GameId = gameId.ToString(),
-                Name = name.RemoveTrademarks(),
+                Name = name.RemoveTrademarks().Trim(),
                 InstallDirectory = installDir,
                 IsInstalled = true,
                 Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
@@ -258,7 +258,7 @@ namespace SteamLibrary
             {
                 Source = new MetadataNameProperty("Steam"),
                 GameId = modInfo.GameId.ToString(),
-                Name = modInfo.Name.RemoveTrademarks(),
+                Name = modInfo.Name.RemoveTrademarks().Trim(),
                 InstallDirectory = path,
                 IsInstalled = true,
                 Developers = new HashSet<MetadataProperty>() { new MetadataNameProperty(modInfo.Developer) },
@@ -503,7 +503,7 @@ namespace SteamLibrary
                 var newGame = new GameMetadata()
                 {
                     Source = new MetadataNameProperty("Steam"),
-                    Name = game.name.RemoveTrademarks(),
+                    Name = game.name.RemoveTrademarks().Trim(),
                     GameId = game.appid.ToString(),
                     Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };

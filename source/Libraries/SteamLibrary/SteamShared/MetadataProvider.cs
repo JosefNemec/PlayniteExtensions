@@ -270,6 +270,7 @@ namespace Steam
                 metadata.Name = metadata.ProductDetails?["common"]["name"]?.Value ?? metadata.StoreDetails?.name;
             }
 
+            metadata.Name = metadata.Name.Trim();
             metadata.Links = new List<Link>()
             {
                 new Link(ResourceProvider.GetString(LOC.SteamLinksCommunityHub), $"https://steamcommunity.com/app/{appId}"),
