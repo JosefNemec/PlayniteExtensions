@@ -67,8 +67,17 @@ namespace EpicLibrary
                 }
 
                 var gameName = manifest?.DisplayName ?? Path.GetFileName(app.InstallLocation);
-                var installLocation = manifest?.InstallLocation ?? app.InstallLocation;
-                if (installLocation.IsNullOrEmpty())
+
+                // Looks like manifest location can be not valid if a workaround to import existing game installation
+                // is used and also the game was previously installed into different location.
+                // App list seems to have correct location so it should be preffered value.
+                var installLocation = app.InstallLocation;
+                if (installLocation.IsNullOrEmpty() || !Directory.Exists(installLocation))
+                {
+                    installLocation = manifest?.InstallLocation;
+                }
+
+                if (installLocation.IsNullOrEmpty() || !Directory.Exists(installLocation))
                 {
                     continue;
                 }
