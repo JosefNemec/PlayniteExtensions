@@ -170,3 +170,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_24.pext
     Changelog:
       -  Fixed Steam Deck compatibility null reference exception when api game details call fails (by Jeshibu)
+  - Version: 2.25
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2024-10-31
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_25.pext
+    Changelog:
+      -  Fixed UI freezes during Uninstall (by darklinkpower)
+      -  Library update and metadata download game name fixes (by darklinkpower)
