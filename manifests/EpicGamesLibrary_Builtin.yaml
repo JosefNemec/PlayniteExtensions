@@ -132,3 +132,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_21.pext
     Changelog:
       - Added options to choose whether to import EA and Ubisoft games (by hawkeye116477 and Jhanlon95)
+  - Version: 2.22
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2024-10-31
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_22.pext
+    Changelog:
+      - Fixed plugin sometimes not detecting games as installed
