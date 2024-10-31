@@ -134,9 +134,20 @@ namespace EpicLibrary
                     continue;
                 }
 
+                if ((catalogItem?.customAttributes?.ContainsKey("ThirdPartyManagedApp") == true) && (catalogItem?.customAttributes["ThirdPartyManagedApp"].value.ToLower() == "the ea app"))
+                {
+                    if (!SettingsViewModel.Settings.ImportEAGames)
+                    {
+                        continue;
+                    }
+                }
+
                 if ((catalogItem?.customAttributes?.ContainsKey("partnerLinkType") == true) && (catalogItem.customAttributes["partnerLinkType"].value == "ubisoft"))
                 {
-                    continue;
+                    if (!SettingsViewModel.Settings.ImportUbisoftGames)
+                    {
+                        continue;
+                    }
                 }
 
                 var newGame = new GameMetadata

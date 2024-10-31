@@ -18,4 +18,7 @@
   <sys:String x:Key="LOCEpicImportPlaytime">Import play time</sys:String>
   <sys:String x:Key="LOCEpicAccountID">Account ID</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Metadata language:</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">Import EA App games</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">Import Ubisoft games</sys:String>
 </ResourceDictionary>

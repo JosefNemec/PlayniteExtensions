@@ -128,6 +128,9 @@ including stores already managed in Playnite, to prevent duplicates.</sys:String
     <sys:String x:Key="LOCXboxImportConsoleGames">Import Xbox console games</sys:String>
      <!--BattleNet-->
     <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Battle.net integration has long standing issue where authenticated account might get logged out at random times.
-    
+
 Until the issue is fixed, we recommend linking an account, importing games and disconnecting account afterwards. You'll need to repeat the process only when new game is added to your account.</sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">Import EA App games</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">Import Ubisoft games</sys:String>
 </ResourceDictionary>

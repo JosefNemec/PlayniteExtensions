@@ -22,6 +22,8 @@ namespace EpicLibrary
         public bool ImportInstalledGames { get; set; } = EpicLauncher.IsInstalled;
         public bool ConnectAccount { get; set; } = false;
         public bool ImportUninstalledGames { get; set; } = false;
+        public bool ImportEAGames { get; set; } = false;
+        public bool ImportUbisoftGames { get; set; } = false;
     }
 
     public class EpicLibrarySettingsViewModel : PluginSettingsViewModel<EpicLibrarySettings, EpicLibrary>

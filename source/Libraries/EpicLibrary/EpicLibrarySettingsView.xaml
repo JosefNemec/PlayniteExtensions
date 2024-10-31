@@ -64,6 +64,12 @@
             </StackPanel>
         </StackPanel>
 
+        <CheckBox IsChecked="{Binding Settings.ImportEAGames}"
+                  Content="{DynamicResource LOCEpicImportEAGames}"/>
+
+        <CheckBox IsChecked="{Binding Settings.ImportUbisoftGames}" Margin="0,15,0,0"
+                  Content="{DynamicResource LOCEpicImportUbisoftGames}"/>
+
         <TextBlock VerticalAlignment="Center" Margin="0,20,0,0">
             <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Epic-Game-Store-troubleshooting"
                         Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"

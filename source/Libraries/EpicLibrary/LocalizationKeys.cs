@@ -81,5 +81,13 @@ namespace System
         /// Metadata language:
         /// </summary>
         public const string EpicMetadataLanguageLabel = "LOCEpicMetadataLanguageLabel";
+        /// <summary>
+        /// Import EA App games
+        /// </summary>
+        public const string EpicImportEAGames = "LOCEpicImportEAGames";
+        /// <summary>
+        /// Import Ubisoft games
+        /// </summary>
+        public const string EpicImportUbisoftGames = "LOCEpicImportUbisoftGames";
     }
 }
