@@ -112,3 +112,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_16.pext
     Changelog:
       -  Fixed Steam Deck compatibility null reference exception when api game details call fails (by Jeshibu)
+  - Version: 2.17
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2024-11-02
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_17.pext
+    Changelog:
+      -  Metadata download game name fixes (by darklinkpower)
