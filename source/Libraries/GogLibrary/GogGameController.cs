@@ -42,30 +42,22 @@ namespace GogLibrary
         {
             if (Gog.IsInstalled)
             {
-                var startedAutomaticInstall = false;
+                var openGameViewUri = @"goggalaxy://openGameView/" + Game.GameId;
                 if (gogLibrary.SettingsViewModel.Settings.UseAutomaticGameInstalls)
                 {
                     var clientPath = Gog.ClientInstallationPath;
                     if (FileSystem.FileExists(clientPath))
                     {
-                        var arguments = string.Format(@"/gameId={0} /command=installGame", Game.GameId);
-                        ProcessStarter.StartProcess(clientPath, arguments);
-
-                        // Starting a game install via command will add the game to a queue but Galaxy itself
-                        // won't be started to initiate the download process so we need to start it if it's
-                        // not running already
-                        if (!Gog.IsRunning)
-                        {
-                            ProcessStarter.StartProcess(clientPath);
-                        }
-
-                        startedAutomaticInstall = true;
+                        InstallGameWithCommand(openGameViewUri, clientPath);
+                    }
+                    else
+                    {
+                        ProcessStarter.StartUrl(openGameViewUri);
                     }
                 }
-
-                if (!startedAutomaticInstall)
+                else
                 {
-                    ProcessStarter.StartUrl(@"goggalaxy://openGameView/" + Game.GameId);
+                    ProcessStarter.StartUrl(openGameViewUri);
                 }
             }
             else
@@ -74,6 +66,44 @@ namespace GogLibrary
             }
 
             StartInstallWatcher();
+        }
+
+        private async void InstallGameWithCommand(string openGameViewUri, string clientPath)
+        {
+            if (!Gog.IsRunning)
+            {
+                ProcessStarter.StartProcess(clientPath);
+            }
+
+            var maxWaitTime = DateTime.Now.AddSeconds(10);
+            var waitInterval = TimeSpan.FromMilliseconds(150);
+            var installCommandUsed = false;
+            do
+            {
+                // The game installation command can only be executed if "GalaxyClient Helper" is running (not just the main GOG client executable)
+                if (Process.GetProcessesByName("GalaxyClient Helper")?.Any() == true)
+                {
+                    var arguments = string.Format(@"/gameId={0} /command=installGame", Game.GameId);
+                    ProcessStarter.StartProcess(clientPath, arguments);
+                    installCommandUsed = true;
+                    break;
+                }
+
+                await Task.Delay(waitInterval);
+            } while (DateTime.Now <= maxWaitTime);
+
+            maxWaitTime = DateTime.Now.AddSeconds(20);
+            do
+            {
+                // If the install command is used, the game page will only open if GOG is components are initiated
+                if (!installCommandUsed || Process.GetProcessesByName("GOG Galaxy Notifications Renderer")?.Any() == true)
+                {
+                    ProcessStarter.StartUrl(openGameViewUri);
+                    return;
+                }
+
+                await Task.Delay(waitInterval);
+            } while (DateTime.Now <= maxWaitTime);
         }
 
         public async void StartInstallWatcher()
