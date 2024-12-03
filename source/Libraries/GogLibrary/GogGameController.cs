@@ -19,10 +19,16 @@ namespace GogLibrary
     {
         private CancellationTokenSource watcherToken;
         private readonly GogLibrary gogLibrary;
+        private readonly string openGameViewUri;
+        private readonly string gogGalaxyLockFilesPath;
+        private FileSystemWatcher fileSystemWatcher;
 
         public GogInstallController(Game game, GogLibrary gogLibrary) : base(game)
         {
             this.gogLibrary = gogLibrary;
+            openGameViewUri = @"goggalaxy://openGameView/" + Game.GameId;
+            var programDataPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.CommonApplicationData);
+            gogGalaxyLockFilesPath = Path.Combine(programDataPath, @"GOG.com\Galaxy\lock-files");
             if (Gog.IsInstalled)
             {
                 Name = "Install using Galaxy";
@@ -36,75 +42,101 @@ namespace GogLibrary
         public override void Dispose()
         {
             watcherToken?.Cancel();
+            if (fileSystemWatcher != null)
+            {
+                fileSystemWatcher.EnableRaisingEvents = false;
+                fileSystemWatcher.Changed -= OnFileChanged;
+                fileSystemWatcher.Created -= OnFileChanged;
+                fileSystemWatcher.Renamed -= OnFileChanged;
+                fileSystemWatcher.Dispose();
+                fileSystemWatcher = null;
+            }
         }
 
         public override void Install(InstallActionArgs args)
         {
-            if (Gog.IsInstalled)
-            {
-                var openGameViewUri = @"goggalaxy://openGameView/" + Game.GameId;
-                if (gogLibrary.SettingsViewModel.Settings.UseAutomaticGameInstalls)
-                {
-                    var clientPath = Gog.ClientInstallationPath;
-                    if (FileSystem.FileExists(clientPath))
-                    {
-                        InstallGameWithCommand(openGameViewUri, clientPath);
-                    }
-                    else
-                    {
-                        ProcessStarter.StartUrl(openGameViewUri);
-                    }
-                }
-                else
-                {
-                    ProcessStarter.StartUrl(openGameViewUri);
-                }
-            }
-            else
-            {
-                ProcessStarter.StartUrl(@"https://www.gog.com/account");
-            }
-
+            InitiateInstall();
             StartInstallWatcher();
         }
 
-        private async void InstallGameWithCommand(string openGameViewUri, string clientPath)
+        private void InitiateInstall()
         {
-            if (!Gog.IsRunning)
+            if (!Gog.IsInstalled)
             {
-                ProcessStarter.StartProcess(clientPath);
+                ProcessStarter.StartUrl(@"https://www.gog.com/account");
+                return;
             }
 
-            var maxWaitTime = DateTime.Now.AddSeconds(10);
-            var waitInterval = TimeSpan.FromMilliseconds(150);
-            var installCommandUsed = false;
-            do
+            if (!gogLibrary.SettingsViewModel.Settings.UseAutomaticGameInstalls)
             {
-                // The game installation command can only be executed if "GalaxyClient Helper" is running (not just the main GOG client executable)
-                if (Process.GetProcessesByName("GalaxyClient Helper")?.Any() == true)
-                {
-                    var arguments = string.Format(@"/gameId={0} /command=installGame", Game.GameId);
-                    ProcessStarter.StartProcess(clientPath, arguments);
-                    installCommandUsed = true;
-                    break;
-                }
+                ProcessStarter.StartUrl(openGameViewUri);
+                return;
+            }
 
-                await Task.Delay(waitInterval);
-            } while (DateTime.Now <= maxWaitTime);
-
-            maxWaitTime = DateTime.Now.AddSeconds(20);
-            waitInterval = TimeSpan.FromMilliseconds(400);
-            do
+            var clientPath = Gog.ClientInstallationPath;
+            if (!FileSystem.FileExists(clientPath))
             {
-                // If the install command is used, the game page will only open if GOG is components are initiated
-                if (!installCommandUsed || Process.GetProcessesByName("GOG Galaxy Notifications Renderer")?.Any() == true)
-                {
-                    ProcessStarter.StartUrl(openGameViewUri);
-                    return;
-                }
+                ProcessStarter.StartUrl(openGameViewUri);
+                return;
+            }
 
-                await Task.Delay(waitInterval);
-            } while (DateTime.Now <= maxWaitTime);
+            if (Gog.IsRunning)
+            {
+                InstallGameWithCommand();
+            }
+            else if (FileSystem.DirectoryExists(gogGalaxyLockFilesPath))
+            {
+                // Install command only works when Galaxy core components are initialized. This can be detected when Galaxy
+                // has created lock files in its program data directory
+                InitializeFileSystemWatcher();
+                ProcessStarter.StartProcess(clientPath);
+            }
+            else
+            {
+                ProcessStarter.StartUrl(openGameViewUri);
+            }
+        }
+
+        private async void InstallGameWithCommand()
+        {
+            var clientPath = Gog.ClientInstallationPath;
+            var arguments = string.Format(@"/gameId={0} /command=installGame", Game.GameId);
+            ProcessStarter.StartProcess(clientPath, arguments);
+
+            // The GOG Galaxy client can't handle two instructions in quick succession
+            await Task.Delay(2500);
+            ProcessStarter.StartUrl(openGameViewUri);
+        }
+
+        private void InitializeFileSystemWatcher()
+        {
+            fileSystemWatcher = new FileSystemWatcher(gogGalaxyLockFilesPath)
+            {
+                NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.FileName,
+                Filter = "*.*",
+                EnableRaisingEvents = true
+            };
+
+            fileSystemWatcher.Changed += OnFileChanged;
+            fileSystemWatcher.Created += OnFileChanged;
+            fileSystemWatcher.Renamed += OnFileChanged;
+        }
+
+        private void DisableFileSystemWatcher()
+        {
+            if (fileSystemWatcher != null)
+            {
+                fileSystemWatcher.EnableRaisingEvents = false;
+            }
+        }
+
+        private void OnFileChanged(object sender, FileSystemEventArgs e)
+        {
+            if (e.Name == "GOG Galaxy Notifications Renderer.exe.lock")
+            {
+                DisableFileSystemWatcher();
+                InstallGameWithCommand();
+            }
         }
 
         public async void StartInstallWatcher()
@@ -122,6 +154,7 @@ namespace GogLibrary
                     var games = GogLibrary.GetInstalledGames();
                     if (games.ContainsKey(Game.GameId))
                     {
+                        DisableFileSystemWatcher();
                         var game = games[Game.GameId];
                         var installInfo = new GameInstallationData()
                         {
