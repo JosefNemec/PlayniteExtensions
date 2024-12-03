@@ -93,6 +93,7 @@ namespace GogLibrary
             } while (DateTime.Now <= maxWaitTime);
 
             maxWaitTime = DateTime.Now.AddSeconds(20);
+            waitInterval = TimeSpan.FromMilliseconds(400);
             do
             {
                 // If the install command is used, the game page will only open if GOG is components are initiated
