@@ -162,7 +162,7 @@
       <DependentUpon>RockstarGamesLibrarySettingsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RockstartGames.cs" />
+    <Compile Include="RockstarGames.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="addon.yaml" />
