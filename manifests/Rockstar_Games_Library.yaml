@@ -55,3 +55,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Rockstar_Games_Library_2_8.pext
     Changelog:
       - Started game process ID is passed properly to OnStarted event (by lscholte)
+  - Version: 2.9
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2024-12-05
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Rockstar_Games_Library_2_9.pext
+    Changelog:
+      - Added support for Red Dead Redemption 1 (by Jeshibu)
