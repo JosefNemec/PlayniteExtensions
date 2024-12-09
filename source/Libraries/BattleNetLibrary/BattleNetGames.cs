@@ -332,6 +332,62 @@ namespace BattleNetLibrary
                 Name = "Diablo IV",
                 Type = BNetAppType.Default
             },
+            new BNetApp()
+            {
+                ApiId = 1146246220,
+                ProductId = "D1",
+                InternalId = "D1",
+                Name = "Diablo",
+                Type = BNetAppType.Default
+            },
+            new BNetApp()
+            {
+                ApiId = 5714258,
+                ProductId = "W1R",
+                InternalId = "w1r",
+                Name = "Warcraft: Remastered",
+                Type = BNetAppType.Default
+            },
+            new BNetApp()
+            {
+                ApiId = 5714514,
+                ProductId = "W2R",
+                InternalId = "w2r",
+                Name = "Warcraft II: Remastered",
+                Type = BNetAppType.Default
+            },
+            new BNetApp()
+            {
+                ApiId = 5714258,
+                ProductId = "W1R",
+                InternalId = "w1r",
+                Name = "Warcraft: Remastered",
+                Type = BNetAppType.Default
+            },
+            new BNetApp()
+            {
+                ApiId = 5714514,
+                ProductId = "W2R",
+                InternalId = "w2r",
+                Name = "Warcraft II: Remastered",
+                Type = BNetAppType.Default
+            },
+            new BNetApp()
+            {
+                ApiId = 1463898673,
+                ProductId = "W1",
+                InternalId = "w1",
+                Name = "Warcraft: Orcs & Humans",
+                Type = BNetAppType.Default
+            },
+            new BNetApp()
+            {
+                ApiId = 1462911566,
+                ProductId = "W2",
+                InternalId = "w2",
+                Name = "Warcraft II: Battle.net Edition",
+                Type = BNetAppType.Default
+            },
         };
 
         public static BNetApp GetAppDefinition(string productId)
