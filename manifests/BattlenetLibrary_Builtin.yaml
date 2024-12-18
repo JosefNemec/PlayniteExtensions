@@ -133,3 +133,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_21.pext
     Changelog:
       - Added support for Warcraft 1, Warcraft 2 and Diablo 1
+  - Version: 2.22
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2024-12-18
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_22.pext
+    Changelog:
+      - Added support for Warcraft Rumble
