@@ -388,6 +388,14 @@ namespace BattleNetLibrary
                 Name = "Warcraft II: Battle.net Edition",
                 Type = BNetAppType.Default
             },
+            new BNetApp()
+            {
+                ApiId = 4674137,
+                ProductId = "GRY",
+                InternalId = "gryphon",
+                Name = "Warcraft Rumble",
+                Type = BNetAppType.Default
+            },
         };
 
         public static BNetApp GetAppDefinition(string productId)
