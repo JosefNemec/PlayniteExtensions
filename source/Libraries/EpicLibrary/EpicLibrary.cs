@@ -61,7 +61,9 @@ namespace EpicLibrary
                 }
 
                 // UE plugins
-                if (manifest.AppCategories?.Any(a => a == "plugins" || a == "plugins/engine") == true)
+                if (manifest.AppCategories?.Any(a => a == "plugins" || a == "plugins/engine") == true ||
+                    manifest.CompatibleApps?.Any(a => a.StartsWith("UE_")) == true ||
+                    manifest.TechnicalType?.Contains("plugins/engine") == true)
                 {
                     continue;
                 }
@@ -138,7 +140,7 @@ namespace EpicLibrary
                     continue;
                 }
 
-                if (catalogItem?.categories?.Any(a => a.path == "digitalextras") == true)
+                if (catalogItem?.categories?.Any(a => a.path == "digitalextras" || a.path == "plugins" || a.path == "plugins/engine") == true)
                 {
                     continue;
                 }

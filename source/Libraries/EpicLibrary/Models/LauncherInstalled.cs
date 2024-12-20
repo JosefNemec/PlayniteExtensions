@@ -31,6 +31,7 @@ namespace EpicLibrary.Models
         public string AppName;
         public string CatalogNamespace;
         public List<string> AppCategories;
+        public List<string> CompatibleApps;
         public string DisplayName;
         public string FullAppName;
         public string InstallationGuid;
