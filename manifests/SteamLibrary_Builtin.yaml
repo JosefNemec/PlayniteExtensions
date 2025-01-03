@@ -177,3 +177,9 @@ Packages:
     Changelog:
       -  Fixed UI freezes during Uninstall (by darklinkpower)
       -  Library update and metadata download game name fixes (by darklinkpower)
+  - Version: 2.26
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-01-03
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_26.pext
+    Changelog:
+      - Import error from extra accounts doesn't fail the entire import process anymore      
