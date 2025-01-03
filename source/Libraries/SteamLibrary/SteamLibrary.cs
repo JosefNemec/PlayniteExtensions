@@ -663,9 +663,10 @@ namespace SteamLibrary
                                         }
                                     }
                                 }
-                                catch
+                                catch (Exception e)
                                 {
-                                    throw new Exception($"Failed to import games from {account.AccountId} Steam account.");
+                                    logger.Error(e, $"Failed to import games from {account.AccountId} Steam account.");
+                                    importError = e;
                                 }
                             }
                             else
