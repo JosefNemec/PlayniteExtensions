@@ -38,7 +38,7 @@
                         DockPanel.Dock="Top" Margin="0,15,5,5" HorizontalAlignment="Left">
                 <Button Content="{DynamicResource LOCEpicAuthenticateLabel}" HorizontalAlignment="Left"
                         Command="{Binding LoginCommand}"/>
-                <TextBlock VerticalAlignment="Center" Margin="10,5,5,5">
+                <TextBlock VerticalAlignment="Center" Margin="8,0,0,0">
                     <TextBlock.Tag>
                         <PriorityBinding>
                             <Binding Path="IsUserLoggedIn" IsAsync="True" />
@@ -62,6 +62,10 @@
                     </TextBlock.Style>
                 </TextBlock>
             </StackPanel>
+
+            <Button Content="{DynamicResource LOCEpicAuthenticateAlternativeLabel}" 
+                    HorizontalAlignment="Left" Margin="0,8,0,8"
+                    Command="{Binding LoginAlternativeCommand}"/>
         </StackPanel>
 
         <CheckBox IsChecked="{Binding Settings.ImportEAGames}"

@@ -38,6 +38,10 @@ namespace System
         /// </summary>
         public const string EpicAuthenticateLabel = "LOCEpicAuthenticateLabel";
         /// <summary>
+        /// Alternative authentication
+        /// </summary>
+        public const string EpicAuthenticateAlternativeLabel = "LOCEpicAuthenticateAlternativeLabel";
+        /// <summary>
         /// Start games directly without running official client
         /// </summary>
         public const string EpicSettingsStartGameDirectly = "LOCEpicSettingsStartGameDirectly";
@@ -89,5 +93,13 @@ namespace System
         /// Import Ubisoft games
         /// </summary>
         public const string EpicImportUbisoftGames = "LOCEpicImportUbisoftGames";
+        /// <summary>
+        /// 1. Login to Epic web store in your default browser
+        /// </summary>
+        public const string EpicAlternativeAuthInstructions = "LOCEpicAlternativeAuthInstructions";
+        /// <summary>
+        /// Insert "authorizationCode" value
+        /// </summary>
+        public const string EpicAuthCodeInputMessage = "LOCEpicAuthCodeInputMessage";
     }
 }

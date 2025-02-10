@@ -44,6 +44,14 @@ namespace EpicLibrary
             });
         }
 
+        public RelayCommand<object> LoginAlternativeCommand
+        {
+            get => new RelayCommand<object>((a) =>
+            {
+                LoginAlternative();
+            });
+        }
+
         public EpicLibrarySettingsViewModel(EpicLibrary library, IPlayniteAPI api) : base(library, api)
         {
             var savedSettings = LoadSavedSettings();
@@ -73,6 +81,22 @@ namespace EpicLibrary
             {
                 var clientApi = new EpicAccountClient(PlayniteApi, Plugin.TokensPath);
                 clientApi.Login();
+                OnPropertyChanged(nameof(IsUserLoggedIn));
+            }
+            catch (Exception e) when (!Debugger.IsAttached)
+            {
+                PlayniteApi.Dialogs.ShowErrorMessage(PlayniteApi.Resources.GetString(LOC.EpicNotLoggedInError), "");
+                Logger.Error(e, "Failed to authenticate user.");
+            }
+        }
+
+
+        private void LoginAlternative()
+        {
+            try
+            {
+                var clientApi = new EpicAccountClient(PlayniteApi, Plugin.TokensPath);
+                clientApi.LoginAlternative();
                 OnPropertyChanged(nameof(IsUserLoggedIn));
             }
             catch (Exception e) when (!Debugger.IsAttached)

@@ -7,6 +7,7 @@
     <sys:String x:Key="LOCNotLoggedIn">Requires authentication</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Failed to authenticate user.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Authenticate</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">Alternative authentication</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Start games directly without running official client</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Troubleshooting account sync issues</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Troubleshooting issues</sys:String>
@@ -133,4 +134,8 @@ Until the issue is fixed, we recommend linking an account, importing games and d
     <!--Epic-->
     <sys:String x:Key="LOCEpicImportEAGames">Import EA App games</sys:String>
     <sys:String x:Key="LOCEpicImportUbisoftGames">Import Ubisoft games</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Login to Epic web store in your default browser
+2. Navigate to authentication code page by click OK on this dialog
+3. Insert "authorizationCode" value on next dialog</sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Insert "authorizationCode" value</sys:String>
 </ResourceDictionary>
