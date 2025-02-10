@@ -37,11 +37,11 @@ namespace BattleNetLibrary
             {
                 if (product.ProductId.StartsWith("W3C", StringComparison.OrdinalIgnoreCase))
                 {
-                    ProcessStarter.StartUrl(@"https://us.forums.blizzard.com/en/warcraft3/t/classic-warcraft-iii-official-installers-official-patches/21415");
+                    ProcessStarter.StartUrl(@"https://battle.net/support/article/256212");
                 }
                 else
                 {
-                    ProcessStarter.StartUrl(@"https://battle.net/account/management/download/");
+                    ProcessStarter.StartUrl(@"https://battle.net/support/article/13867");
                 }
             }
             else
