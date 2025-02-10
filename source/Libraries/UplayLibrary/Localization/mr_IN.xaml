@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCUbisoftSettingsImportInstalledLabel">स्थापित असलेले गेम आयात करा</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsImportUninstalledLabel">स्थापित नसलेले गेम आयात करा</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsConnectAccount">खाते कनेक्ट करा</sys:String>
+  <sys:String x:Key="LOCUbisoftLoggedIn">प्रयोक्ता प्रमाणित झाला आहे</sys:String>
+  <sys:String x:Key="LOCUbisoftNotLoggedInError">प्रयोक्ता प्रमाणित करता आला नाही.</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">सर्व गेम आयात करा</sys:String>
   <sys:String x:Key="LOCUbisoftPrivateAccount">खाजगी खाते</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">सार्वजनिक खाते</sys:String>

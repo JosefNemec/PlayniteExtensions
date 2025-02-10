@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-    <sys:String x:Key="LOCSettingsImportInstalledLabel"></sys:String>
-    <sys:String x:Key="LOCSettingsImportUninstalledLabel"></sys:String>
+    <sys:String x:Key="LOCSettingsImportInstalledLabel">स्थापित असलेले गेम आयात करा</sys:String>
+    <sys:String x:Key="LOCSettingsImportUninstalledLabel">स्थापित नसलेले गेम आयात करा</sys:String>
     <sys:String x:Key="LOCSettingsConnectAccount">खाते कनेक्ट करा</sys:String>
     <sys:String x:Key="LOCLoginChecking"></sys:String>
-    <sys:String x:Key="LOCLoggedIn"></sys:String>
+    <sys:String x:Key="LOCLoggedIn">प्रयोक्ता प्रमाणित झाला आहे</sys:String>
     <sys:String x:Key="LOCNotLoggedIn"></sys:String>
-    <sys:String x:Key="LOCNotLoggedInError"></sys:String>
+    <sys:String x:Key="LOCNotLoggedInError">प्रयोक्ता प्रमाणित करता आला नाही.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel"></sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly"></sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink"></sys:String>
@@ -40,12 +40,13 @@
     <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve"></sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">GOG गॅलॅक्सी क्लाएंट वापरून गेम सुरू करा</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip"></sys:String>
-    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls"></sys:String>
-    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">GOG Galaxy वर गेम स्थापित करताना स्थापनेची क्रिया आपोआप सुरू करा</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">हे सक्रिय केल्याने स्थापनेची प्रक्रिया प्रयोक्त्याच्या आंतरक्रियेशिवाय आपोआप सुरू केली जाईल, व गेम मांडलेल्या डिफॉल्ट स्थापना स्थानाला स्थापित केला जाईल.
+हे निष्क्रिय केल्याने स्थापनेची प्रक्रिया हस्तचलितरित्या सुरू करण्यासाठी गेमचे पान उघडले जाईल.</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">माझ्या खात्याचे नाव काय आहे?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">खात्याचे यू.आर.एल. नाव</sys:String>
-    <sys:String x:Key="LOCSteamLoggedInUser"></sys:String>
+    <sys:String x:Key="LOCSteamLoggedInUser">प्रमाणित प्रयोक्ता</sys:String>
     <sys:String x:Key="LOCSteamRequiresApiKey"></sys:String>
     <sys:String x:Key="LOCSteamLinksCommunityHub"></sys:String>
     <sys:String x:Key="LOCSteamLinksDiscussions">चर्चा</sys:String>
@@ -71,9 +72,9 @@
     <sys:String x:Key="LOCSteamBackgroundSourceScreenshot">स्टोअर स्क्रीनशॉट</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceStore">स्टोअर पार्श्वभूमी</sys:String>
     <sys:String x:Key="LOCSteamBackgroundSourceBanner">बॅनर</sys:String>
-    <sys:String x:Key="LOCSteamShowFriendsButton"></sys:String>
+    <sys:String x:Key="LOCSteamShowFriendsButton">सर्वात वरच्या पॅनलवर मित्रांचे बटण दाखवा</sys:String>
     <sys:String x:Key="LOCSteamFriendsTooltip">स्टीम फ्रेंड्झ</sys:String>
-    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames"></sys:String>
+    <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">इतर खात्यांमधून स्थापित केलेले गेम दुर्लक्ष करा</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts"></sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccountsDescription"></sys:String>
     <sys:String x:Key="LOCSteamLimitTagCountLabel"></sys:String>
@@ -97,13 +98,13 @@
     <sys:String x:Key="LOCHumbleImportChoiceGames">हम्बल चॉइस गेम आयात करा</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip"></sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">हम्बल लायब्ररी गेम आयात करा</sys:String>
-    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">साधारण Humble Store खरेद्या आणि बंडल खरेद्या आयात करा.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve"></sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree"></sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip"></sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">गेम सुरू करताना नेहमीच हम्बल अ‍ॅपचा वापर करा</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip"></sys:String>
-    <sys:String x:Key="LOCHumbleNonTroveInstallError"></sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">Humble वरील वर्गणीचे नसणारे असे गेम आपोआप स्थापित वा विस्थापित करण्याची सुविधा सध्या समर्थित नाही.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">क्लायंट उघडताना मायक्रोसॉफ्ट स्टोअर उघडण्याऐवजी Xbox Pass अ‍ॅप उघडा</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Xbox काँसोल गेम आयात करा</sys:String>

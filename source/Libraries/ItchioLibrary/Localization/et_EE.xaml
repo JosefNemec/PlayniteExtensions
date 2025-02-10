@@ -27,6 +27,7 @@
   <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Üksused, mis importida:</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationGames">Mängud</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationTools">Tööriistad</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationAssets">Varad</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationMods">Moodid</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Füüsilised mängud</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Heliribad</sys:String>

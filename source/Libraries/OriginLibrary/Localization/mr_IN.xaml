@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCOriginSettingsImportInstalledLabel">स्थापित असलेले गेम आयात करा</sys:String>
+  <sys:String x:Key="LOCOriginSettingsImportUninstalledLabel">स्थापित नसलेले गेम आयात करा</sys:String>
   <sys:String x:Key="LOCOriginSettingsConnectAccount">खाते कनेक्ट करा</sys:String>
+  <sys:String x:Key="LOCOriginLoggedIn">प्रयोक्ता प्रमाणित झाला आहे</sys:String>
+  <sys:String x:Key="LOCOriginNotLoggedInError">प्रयोक्ता प्रमाणित करता आला नाही.</sys:String>
   <sys:String x:Key="LOCOriginSettingsImportLibraryLabel">सर्व गेम आयात करा</sys:String>
   <sys:String x:Key="LOCOriginPrivateAccount">खाजगी खाते</sys:String>
   <sys:String x:Key="LOCOriginPublicAccount">सार्वजनिक खाते</sys:String>

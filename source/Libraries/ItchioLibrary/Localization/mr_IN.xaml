@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">स्थापित असलेले गेम आयात करा</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">स्थापित नसलेले गेम आयात करा</sys:String>
   <sys:String x:Key="LOCitchioSettingsConnectAccount">खाते कनेक्ट करा</sys:String>
+  <sys:String x:Key="LOCitchioLoggedIn">प्रयोक्ता प्रमाणित झाला आहे</sys:String>
+  <sys:String x:Key="LOCitchioNotLoggedInError">प्रयोक्ता प्रमाणित करता आला नाही.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">सर्व गेम आयात करा</sys:String>
   <sys:String x:Key="LOCitchioPrivateAccount">खाजगी खाते</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">सार्वजनिक खाते</sys:String>

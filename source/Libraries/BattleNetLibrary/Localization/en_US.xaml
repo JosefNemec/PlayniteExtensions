@@ -20,6 +20,6 @@
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Metadata language:</sys:String>
   <!--BattleNet-->
   <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Battle.net integration has long standing issue where authenticated account might get logged out at random times.
-    
+
 Until the issue is fixed, we recommend linking an account, importing games and disconnecting account afterwards. You'll need to repeat the process only when new game is added to your account.</sys:String>
 </ResourceDictionary>

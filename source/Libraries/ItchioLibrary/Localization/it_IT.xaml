@@ -28,7 +28,7 @@
   <sys:String x:Key="LOCitchioItemClassificationGames">Giochi</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationTools">Strumenti</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationAssets">Asset</sys:String>
-  <sys:String x:Key="LOCitchioItemClassificationMods">Mods</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationMods">Mod</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Giochi fisici</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Colonne sonore</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationOthers">Altri</sys:String>

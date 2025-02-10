@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCGOGSettingsImportInstalledLabel">स्थापित असलेले गेम आयात करा</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportUninstalledLabel">स्थापित नसलेले गेम आयात करा</sys:String>
   <sys:String x:Key="LOCGOGSettingsConnectAccount">खाते कनेक्ट करा</sys:String>
+  <sys:String x:Key="LOCGOGLoggedIn">प्रयोक्ता प्रमाणित झाला आहे</sys:String>
+  <sys:String x:Key="LOCGOGNotLoggedInError">प्रयोक्ता प्रमाणित करता आला नाही.</sys:String>
   <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">सर्व गेम आयात करा</sys:String>
   <sys:String x:Key="LOCGOGPrivateAccount">खाजगी खाते</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">सार्वजनिक खाते</sys:String>
@@ -12,4 +16,7 @@
   <sys:String x:Key="LOCGOGUseLogin">खात्याचा लॉगइन</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">खात्याचे नाव</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">GOG गॅलॅक्सी क्लाएंट वापरून गेम सुरू करा</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">GOG Galaxy वर गेम स्थापित करताना स्थापनेची क्रिया आपोआप सुरू करा</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">हे सक्रिय केल्याने स्थापनेची प्रक्रिया प्रयोक्त्याच्या आंतरक्रियेशिवाय आपोआप सुरू केली जाईल, व गेम मांडलेल्या डिफॉल्ट स्थापना स्थानाला स्थापित केला जाईल.
+हे निष्क्रिय केल्याने स्थापनेची प्रक्रिया हस्तचलितरित्या सुरू करण्यासाठी गेमचे पान उघडले जाईल.</sys:String>
 </ResourceDictionary>

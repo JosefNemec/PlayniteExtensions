@@ -27,6 +27,7 @@
   <sys:String x:Key="LOCSteamLinksCommunityHub">Kogukonna keskus</sys:String>
   <sys:String x:Key="LOCSteamLinksDiscussions">Arutelud</sys:String>
   <sys:String x:Key="LOCSteamLinksGuides">Juhendid</sys:String>
+  <sys:String x:Key="LOCSteamLinksWorkshop">Töökoda</sys:String>
   <sys:String x:Key="LOCSteamUseVerticalCovers">Laadi alla vertikaalsed kaanepildid</sys:String>
   <sys:String x:Key="LOCSteamImportFreeSubGames">Impordi üldised tasuta üksused</sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportWarn">See kirjutab üle praegused kategooriad ja ka kõigi sinu Steami mängude olekud peidetud ja lemmik. Kas tahad jätkata?</sys:String>
@@ -51,6 +52,7 @@
   <sys:String x:Key="LOCSteamFriendsTooltip">Steam'i sõbrad</sys:String>
   <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Eira teistelt kontodelt paigaldatud mänge</sys:String>
   <sys:String x:Key="LOCSteamAdditionalAccounts">Täiendavad kontod</sys:String>
+  <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Määrake muude Steam'i kontode ID ja API võtmepaar, kui soovite importida mänge neist. Lisateavet leiate Steam'i tõrkeotsingu vikilehelt.</sys:String>
   <sys:String x:Key="LOCSteamLimitTagCountLabel">Imporditavate siltide arvu piirang: esimesed</sys:String>
   <sys:String x:Key="LOCSteamTagPrefixLabel">Lisa sildinimedele eesliide:</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Siltide välistamine</sys:String>

@@ -22,5 +22,6 @@
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Kasuta kunstiteose puudumisel ekraanipilte</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Kui saadaval on mitu pilti, siis kasuta:</sys:String>
+  <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Vali taustapildi {0} jaoks</sys:String>
   <sys:String x:Key="LOCIgdbCoverAsIcon">Asenda ikoon kärbitud kaanepildiga</sys:String>
 </ResourceDictionary>

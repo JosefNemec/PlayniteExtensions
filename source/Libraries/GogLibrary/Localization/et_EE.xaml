@@ -27,4 +27,6 @@ Pane tähele, et konto nime valik töötab ainult nende kontode puhul, mille mä
   <sys:String x:Key="LOCSettingsGOGUseGalaxy">Käivita mängud klienti GOG Galaxy kasutades</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">See võimaldab kasutada GOG Galaxy võimalusi, nagu pilves salvestamine, mänguaja jälgimine jne.</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automaatselt algata installimise protsess, installides mänge teenuses GOG Galaxy</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Kui see on lubatud, käivitub paigaldusprotsess automaatselt ilma kasutaja sekkumiseta seadistatud vaikimisi paigalduskohta.
+Kui see on keelatud, avatakse mängu leht, et paigaldusprotsess käsitsi käivitada.</sys:String>
 </ResourceDictionary>

@@ -27,7 +27,7 @@
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Üksused, mis importida:</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationGames">Mängud</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationTools">Tööriistad</sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationAssets">Varad</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationMods">Moodid</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationPhysicalGames">Füüsilised mängud</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationSoundtracks">Heliribad</sys:String>
@@ -42,7 +42,8 @@ Pane tähele, et konto nime valik töötab ainult nende kontode puhul, mille mä
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Käivita mängud klienti GOG Galaxy kasutades</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">See võimaldab kasutada GOG Galaxy võimalusi, nagu pilves salvestamine, mänguaja jälgimine jne.</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automaatselt algata installimise protsess, installides mänge teenuses GOG Galaxy</sys:String>
-    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Kui see on lubatud, käivitub paigaldusprotsess automaatselt ilma kasutaja sekkumiseta seadistatud vaikimisi paigalduskohta.
+Kui see on keelatud, avatakse mängu leht, et paigaldusprotsess käsitsi käivitada.</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Mis on mu konto nimi?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Konto URL nimi</sys:String>
@@ -51,7 +52,7 @@ Pane tähele, et konto nime valik töötab ainult nende kontode puhul, mille mä
     <sys:String x:Key="LOCSteamLinksCommunityHub">Kogukonna keskus</sys:String>
     <sys:String x:Key="LOCSteamLinksDiscussions">Arutelud</sys:String>
     <sys:String x:Key="LOCSteamLinksGuides">Juhendid</sys:String>
-    <sys:String x:Key="LOCSteamLinksWorkshop"></sys:String>
+    <sys:String x:Key="LOCSteamLinksWorkshop">Töökoda</sys:String>
     <sys:String x:Key="LOCSteamUseVerticalCovers">Laadi alla vertikaalsed kaanepildid</sys:String>
     <sys:String x:Key="LOCSteamImportFreeSubGames">Impordi üldised tasuta üksused</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportWarn">See kirjutab üle praegused kategooriad ja ka kõigi sinu Steami mängude olekud peidetud ja lemmik. Kas tahad jätkata?</sys:String>
@@ -76,7 +77,7 @@ Pane tähele, et konto nime valik töötab ainult nende kontode puhul, mille mä
     <sys:String x:Key="LOCSteamFriendsTooltip">Steam'i sõbrad</sys:String>
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Eira teistelt kontodelt paigaldatud mänge</sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Täiendavad kontod</sys:String>
-    <sys:String x:Key="LOCSteamAdditionalAccountsDescription"></sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Määrake muude Steam'i kontode ID ja API võtmepaar, kui soovite importida mänge neist. Lisateavet leiate Steam'i tõrkeotsingu vikilehelt.</sys:String>
     <sys:String x:Key="LOCSteamLimitTagCountLabel">Imporditavate siltide arvu piirang: esimesed</sys:String>
     <sys:String x:Key="LOCSteamTagPrefixLabel">Lisa sildinimedele eesliide:</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Siltide välistamine</sys:String>
@@ -91,21 +92,21 @@ Pane tähele, et konto nime valik töötab ainult nende kontode puhul, mille mä
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Kasuta kunstiteose puudumisel ekraanipilte</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Kui saadaval on mitu pilti, siis kasuta:</sys:String>
-    <sys:String x:Key="LOCIgdbSelectBackgroundTitle"></sys:String>
+    <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Vali taustapildi {0} jaoks</sys:String>
     <sys:String x:Key="LOCIgdbCoverAsIcon">Asenda ikoon kärbitud kaanepildiga</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Eira kolmanda osapoole poe mänge</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Impordi Humble Choice'i mängud</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Impordi mängud, mis on osa tellimusest Humble Choice.</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibrary">Impordi Humble Library mängud</sys:String>
-    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip"></sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Impordi standardsed Humble poest ostud ja kimpude ostud.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Luba, et duplikaatide vältimiseks vahele jätta nende mängude importimine,
 mis nõuavad kolmandate osapoolte kliente, sealhulgas Playnite'is juba hallatud poode.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Impordi, kui DRM-vaba versioon on saadaval</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Impordi 3. osapoole klienti nõudvad mängud, kui saadaval on ka DRM-vaba versioon.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Mängude käivitamiseks kasuta alati rakendust Humble App</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Kui keelatud, üritab Playnite mänge käivitada otse, ilma rakendust Humble App kasutamata.</sys:String>
-    <sys:String x:Key="LOCHumbleNonTroveInstallError"></sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">Mittetellitavate Humble'i mängude automaatne paigaldamine ja desinstallimine ei ole praegu toetatud.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Klienti avades käivita rakendus Xbox Pass, mitte Microsoft Store</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Impordi Xboxi konsoolimängud</sys:String>

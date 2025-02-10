@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LOCHumbleSettingsImportInstalledLabel">स्थापित असलेले गेम आयात करा</sys:String>
+  <sys:String x:Key="LOCHumbleSettingsImportUninstalledLabel">स्थापित नसलेले गेम आयात करा</sys:String>
   <sys:String x:Key="LOCHumbleSettingsConnectAccount">खाते कनेक्ट करा</sys:String>
+  <sys:String x:Key="LOCHumbleLoggedIn">प्रयोक्ता प्रमाणित झाला आहे</sys:String>
+  <sys:String x:Key="LOCHumbleNotLoggedInError">प्रयोक्ता प्रमाणित करता आला नाही.</sys:String>
   <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">सर्व गेम आयात करा</sys:String>
   <sys:String x:Key="LOCHumblePrivateAccount">खाजगी खाते</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">सार्वजनिक खाते</sys:String>
@@ -11,5 +15,7 @@
   <!--Humble-->
   <sys:String x:Key="LOCHumbleImportChoiceGames">हम्बल चॉइस गेम आयात करा</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">हम्बल लायब्ररी गेम आयात करा</sys:String>
+  <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">साधारण Humble Store खरेद्या आणि बंडल खरेद्या आयात करा.</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">गेम सुरू करताना नेहमीच हम्बल अ‍ॅपचा वापर करा</sys:String>
+  <sys:String x:Key="LOCHumbleNonTroveInstallError">Humble वरील वर्गणीचे नसणारे असे गेम आपोआप स्थापित वा विस्थापित करण्याची सुविधा सध्या समर्थित नाही.</sys:String>
 </ResourceDictionary>
