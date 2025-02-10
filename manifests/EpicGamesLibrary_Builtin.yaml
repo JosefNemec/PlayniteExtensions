@@ -144,3 +144,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_23.pext
     Changelog:
       - Fixed Unreal Engine plugins being imported as games
+  - Version: 2.24
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2025-01-10
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_24.pext
+    Changelog:
+      - Added alternative authentication method and updated original one to be more reliable
