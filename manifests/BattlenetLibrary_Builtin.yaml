@@ -139,3 +139,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_22.pext
     Changelog:
       - Added support for Warcraft Rumble
+  - Version: 2.23
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-01-10
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_23.pext
+    Changelog:
+      - Updated installation links for classic Diablo 2 and Warcraft 3
