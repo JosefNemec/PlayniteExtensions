@@ -16,6 +16,10 @@
         <CheckBox Name="CheckUplayImportUninstalled"
                   IsChecked="{Binding Settings.ImportUninstalledGames}"
                   Content="{DynamicResource LOCUbisoftSettingsImportUninstalledLabel}"/>
+        <Border BorderBrush="#fa9066" BorderThickness="2" CornerRadius="2" Margin="0,20,0,0">
+            <TextBlock TextWrapping="Wrap" Margin="5"
+                       Text="{DynamicResource LOCUbisoftSettingsNotice}" />
+        </Border>
         <TextBlock VerticalAlignment="Center" Margin="0,20,0,0">
             <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Uplay-troubleshooting"
                        Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"

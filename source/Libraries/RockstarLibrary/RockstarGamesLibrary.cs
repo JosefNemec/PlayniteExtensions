@@ -149,5 +149,15 @@ namespace RockstarGamesLibrary
 
             yield return new RockstarPlayController(args.Game);
         }
+
+        public override UserControl GetSettingsView(bool firstRunView)
+        {
+            return new RockstarGamesLibrarySettingsView();
+        }
+
+        public override ISettings GetSettings(bool firstRunSettings)
+        {
+            return new RockstarGamesLibrarySettingsViewModel(this, PlayniteApi);
+        }
     }
 }
