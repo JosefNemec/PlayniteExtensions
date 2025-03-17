@@ -38,6 +38,10 @@ namespace System
         /// </summary>
         public const string UbisoftAuthenticateLabel = "LOCUbisoftAuthenticateLabel";
         /// <summary>
+        /// Alternative authentication
+        /// </summary>
+        public const string UbisoftAuthenticateAlternativeLabel = "LOCUbisoftAuthenticateAlternativeLabel";
+        /// <summary>
         /// Start games directly without running official client
         /// </summary>
         public const string UbisoftSettingsStartGameDirectly = "LOCUbisoftSettingsStartGameDirectly";
@@ -81,5 +85,9 @@ namespace System
         /// Metadata language:
         /// </summary>
         public const string UbisoftMetadataLanguageLabel = "LOCUbisoftMetadataLanguageLabel";
+        /// <summary>
+        /// Ubisoft plugins doesn't require any authentication, it takes library information from Ubisoft Connect client's user data files.
+        /// </summary>
+        public const string UbisoftSettingsNotice = "LOCUbisoftSettingsNotice";
     }
 }

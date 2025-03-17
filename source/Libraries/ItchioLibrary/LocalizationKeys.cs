@@ -38,6 +38,10 @@ namespace System
         /// </summary>
         public const string itchioAuthenticateLabel = "LOCitchioAuthenticateLabel";
         /// <summary>
+        /// Alternative authentication
+        /// </summary>
+        public const string itchioAuthenticateAlternativeLabel = "LOCitchioAuthenticateAlternativeLabel";
+        /// <summary>
         /// Start games directly without running official client
         /// </summary>
         public const string itchioSettingsStartGameDirectly = "LOCitchioSettingsStartGameDirectly";

@@ -7,6 +7,7 @@
   <sys:String x:Key="LOCXboxNotLoggedIn">Requires authentication</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedInError">Failed to authenticate user.</sys:String>
   <sys:String x:Key="LOCXboxAuthenticateLabel">Authenticate</sys:String>
+  <sys:String x:Key="LOCXboxAuthenticateAlternativeLabel">Alternative authentication</sys:String>
   <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Start games directly without running official client</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Troubleshooting account sync issues</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingIssues">Troubleshooting issues</sys:String>

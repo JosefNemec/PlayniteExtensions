@@ -38,6 +38,10 @@ namespace System
         /// </summary>
         public const string HumbleAuthenticateLabel = "LOCHumbleAuthenticateLabel";
         /// <summary>
+        /// Alternative authentication
+        /// </summary>
+        public const string HumbleAuthenticateAlternativeLabel = "LOCHumbleAuthenticateAlternativeLabel";
+        /// <summary>
         /// Start games directly without running official client
         /// </summary>
         public const string HumbleSettingsStartGameDirectly = "LOCHumbleSettingsStartGameDirectly";

@@ -7,6 +7,7 @@
   <sys:String x:Key="LOCitchioNotLoggedIn">Requires authentication</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedInError">Failed to authenticate user.</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">Authenticate</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateAlternativeLabel">Alternative authentication</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Start games directly without running official client</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Troubleshooting account sync issues</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingIssues">Troubleshooting issues</sys:String>

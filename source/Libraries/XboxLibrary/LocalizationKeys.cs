@@ -38,6 +38,10 @@ namespace System
         /// </summary>
         public const string XboxAuthenticateLabel = "LOCXboxAuthenticateLabel";
         /// <summary>
+        /// Alternative authentication
+        /// </summary>
+        public const string XboxAuthenticateAlternativeLabel = "LOCXboxAuthenticateAlternativeLabel";
+        /// <summary>
         /// Start games directly without running official client
         /// </summary>
         public const string XboxSettingsStartGameDirectly = "LOCXboxSettingsStartGameDirectly";

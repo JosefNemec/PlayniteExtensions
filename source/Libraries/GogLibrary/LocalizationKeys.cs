@@ -38,6 +38,10 @@ namespace System
         /// </summary>
         public const string GOGAuthenticateLabel = "LOCGOGAuthenticateLabel";
         /// <summary>
+        /// Alternative authentication
+        /// </summary>
+        public const string GOGAuthenticateAlternativeLabel = "LOCGOGAuthenticateAlternativeLabel";
+        /// <summary>
         /// Start games directly without running official client
         /// </summary>
         public const string GOGSettingsStartGameDirectly = "LOCGOGSettingsStartGameDirectly";

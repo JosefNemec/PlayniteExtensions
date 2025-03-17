@@ -20,7 +20,7 @@
     <sys:String x:Key="LOCAccountID">شناسه حساب</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">زبان فراداده:</sys:String>
     <!--itch.io-->
-    <sys:String x:Key="LOCItchioSignInNotif">itch.io راه اندازی خواهد شد. لطفاً وارد سیستم شوید و سپس این پیام را ببندید.</sys:String>
+    <sys:String x:Key="LOCItchioSignInNotif">itch.io راه‌اندازی خواهد شد. لطفاً وارد شوید و سپس این پیام را ببندید.</sys:String>
     <sys:String x:Key="LOCItchioSignInWaitMessage">منتظر ورود کاربر هستید، لطفاً این کار را ببندید...</sys:String>
     <sys:String x:Key="LOCItchioClientNotInstalledError">برنامه itch.io نسخه 25 یا جدیدتر نصب نشده است.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">بازی های رایگان را از مجموعه ها وارد کنید.</sys:String>
@@ -39,7 +39,7 @@
     <sys:String x:Key="LOCGOGUseAccountName">نام حساب</sys:String>
     <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">برای همگام سازی کتابخانه کامل، به حساب کاربری خود وارد شوید یا از نام حساب عمومی خود استفاده کنید.
 توجه داشته باشید که گزینه نام حساب فقط برای حسابهایی کار می کند که کتابخانه های بازی آنها در تنظیمات حریم خصوصی GOG تنظیم شده اند تا در معرض دید عموم قرار گیرند.</sys:String>
-    <sys:String x:Key="LOCSettingsGOGUseGalaxy">بازی ها را با استفاده از سرویس گیرنده GOG Galaxy راه اندازی کنید</sys:String>
+    <sys:String x:Key="LOCSettingsGOGUseGalaxy">اجرا بازی ها با استفاده از سرویس گیرنده GOG Galaxy</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">این ویژگی های GOG Galaxy مانند ذخیره ابری، ردیابی زمان بازی و غیره را فعال می کند.</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">هنگام نصب بازی‌ها در GOG Galaxy، فرآیند نصب را به‌طور خودکار آغاز کنید</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">اگر فعال باشد، فرآیند نصب به طور خودکار بدون نیاز به تعامل کاربر با محل نصب پیش‌فرض پیکربندی شده آغاز می‌شود.
@@ -61,8 +61,8 @@
     <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Cannot import categories, database is not opened.
 </sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportError">واردات دسته های استیم انجام نشد: {0}</sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">وارد کردن آخرین اطلاعات بازی شده امکان پذیر نیست، برای واردات حساب انتخاب نشده است.</sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">وارد کردن آخرین اطلاعات بازی شده امکان پذیر نیست، بانک اطلاعاتی باز نشده است.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">نمی‌توان اطلاعات آخرین بازی‌ها را وارد کرد، حساب کاربری برای وارد کردن انتخاب نشده است.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">نمی‌توان اطلاعات آخرین بازی‌ها را وارد کرد، پایگاه داده باز نیست.</sys:String>
     <sys:String x:Key="LOCSettingsSteamLastActivityImportError">وارد کردن اطلاعات آخرین بازی Steam انجام نشد: {0}</sys:String>
     <sys:String x:Key="LOCSettingsApiKeyTooltip">کلید API برای حسابهای خصوصی Steam لازم است</sys:String>
     <sys:String x:Key="LOCSettingsApiKeyUrlText">گرفتن کلید API</sys:String>
@@ -106,7 +106,7 @@
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">اگر نسخه رایگان DRM در دسترس است، وارد کنید</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">اگر نسخه رایگان DRM موجود است، بازی های مورد نیاز سرویس گیرنده شخص ثالث را وارد کنید.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">همیشه از برنامه Humble برای شروع بازی استفاده کنید</sys:String>
-    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">هنگامی که غیرفعال است، Playnite سعی می کند بازی ها را مستقیماً راه اندازی کند و برنامه Humble را دور بزند.</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">وقتی این ویژگی غیرفعال شود، برنامه تلاش خواهد کرد بازی‌ها را به صورت مستقیم و بدون استفاده از برنامه Humble اجرا کند.</sys:String>
     <sys:String x:Key="LOCHumbleNonTroveInstallError">نصب و حذف خودکار بازی های Humble بدون اشتراک در حال حاضر پشتیبانی نمی شود.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">هنگام باز کردن، برنامه Xbox Pass را به جای فروشگاه Microsoft شروع کنید</sys:String>

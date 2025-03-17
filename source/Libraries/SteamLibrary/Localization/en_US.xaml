@@ -7,6 +7,7 @@
   <sys:String x:Key="LOCSteamNotLoggedIn">Requires authentication</sys:String>
   <sys:String x:Key="LOCSteamNotLoggedInError">Failed to authenticate user.</sys:String>
   <sys:String x:Key="LOCSteamAuthenticateLabel">Authenticate</sys:String>
+  <sys:String x:Key="LOCSteamAuthenticateAlternativeLabel">Alternative authentication</sys:String>
   <sys:String x:Key="LOCSteamSettingsStartGameDirectly">Start games directly without running official client</sys:String>
   <sys:String x:Key="LOCSteamTroubleShootingAccountLink">Troubleshooting account sync issues</sys:String>
   <sys:String x:Key="LOCSteamTroubleShootingIssues">Troubleshooting issues</sys:String>

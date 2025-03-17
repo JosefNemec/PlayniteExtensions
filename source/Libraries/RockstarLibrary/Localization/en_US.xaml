@@ -7,6 +7,7 @@
   <sys:String x:Key="LOCRockstarNotLoggedIn">Requires authentication</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedInError">Failed to authenticate user.</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Authenticate</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateAlternativeLabel">Alternative authentication</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Start games directly without running official client</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Troubleshooting account sync issues</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues">Troubleshooting issues</sys:String>
@@ -18,4 +19,6 @@
   <sys:String x:Key="LOCRockstarImportPlaytime">Import play time</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">Account ID</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Metadata language:</sys:String>
+  <!--Rockstar-->
+  <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Rockstar plugin currently only imports installed games. There is no way to link an account to import all games.</sys:String>
 </ResourceDictionary>

@@ -38,6 +38,10 @@ namespace System
         /// </summary>
         public const string SteamAuthenticateLabel = "LOCSteamAuthenticateLabel";
         /// <summary>
+        /// Alternative authentication
+        /// </summary>
+        public const string SteamAuthenticateAlternativeLabel = "LOCSteamAuthenticateAlternativeLabel";
+        /// <summary>
         /// Start games directly without running official client
         /// </summary>
         public const string SteamSettingsStartGameDirectly = "LOCSteamSettingsStartGameDirectly";

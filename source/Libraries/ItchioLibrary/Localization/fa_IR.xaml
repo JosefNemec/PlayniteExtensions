@@ -20,7 +20,7 @@
   <sys:String x:Key="LOCitchioAccountID">شناسه حساب</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">زبان فراداده:</sys:String>
   <!--itch.io-->
-  <sys:String x:Key="LOCItchioSignInNotif">itch.io راه اندازی خواهد شد. لطفاً وارد سیستم شوید و سپس این پیام را ببندید.</sys:String>
+  <sys:String x:Key="LOCItchioSignInNotif">itch.io راه‌اندازی خواهد شد. لطفاً وارد شوید و سپس این پیام را ببندید.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">منتظر ورود کاربر هستید، لطفاً این کار را ببندید...</sys:String>
   <sys:String x:Key="LOCItchioClientNotInstalledError">برنامه itch.io نسخه 25 یا جدیدتر نصب نشده است.</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">بازی های رایگان را از مجموعه ها وارد کنید.</sys:String>

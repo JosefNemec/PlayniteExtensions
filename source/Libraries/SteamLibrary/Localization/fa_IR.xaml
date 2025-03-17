@@ -36,8 +36,8 @@
   <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">Cannot import categories, database is not opened.
 </sys:String>
   <sys:String x:Key="LOCSettingsSteamCatImportError">واردات دسته های استیم انجام نشد: {0}</sys:String>
-  <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">وارد کردن آخرین اطلاعات بازی شده امکان پذیر نیست، برای واردات حساب انتخاب نشده است.</sys:String>
-  <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">وارد کردن آخرین اطلاعات بازی شده امکان پذیر نیست، بانک اطلاعاتی باز نشده است.</sys:String>
+  <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">نمی‌توان اطلاعات آخرین بازی‌ها را وارد کرد، حساب کاربری برای وارد کردن انتخاب نشده است.</sys:String>
+  <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">نمی‌توان اطلاعات آخرین بازی‌ها را وارد کرد، پایگاه داده باز نیست.</sys:String>
   <sys:String x:Key="LOCSettingsSteamLastActivityImportError">وارد کردن اطلاعات آخرین بازی Steam انجام نشد: {0}</sys:String>
   <sys:String x:Key="LOCSettingsApiKeyTooltip">کلید API برای حسابهای خصوصی Steam لازم است</sys:String>
   <sys:String x:Key="LOCSettingsApiKeyUrlText">گرفتن کلید API</sys:String>

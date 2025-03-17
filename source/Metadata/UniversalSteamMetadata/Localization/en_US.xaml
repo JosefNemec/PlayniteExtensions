@@ -7,6 +7,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedIn">Requires authentication</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedInError">Failed to authenticate user.</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateLabel">Authenticate</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateAlternativeLabel">Alternative authentication</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataSettingsStartGameDirectly">Start games directly without running official client</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingAccountLink">Troubleshooting account sync issues</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingIssues">Troubleshooting issues</sys:String>

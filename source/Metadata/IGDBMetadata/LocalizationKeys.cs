@@ -38,6 +38,10 @@ namespace System
         /// </summary>
         public const string IGDBAuthenticateLabel = "LOCIGDBAuthenticateLabel";
         /// <summary>
+        /// Alternative authentication
+        /// </summary>
+        public const string IGDBAuthenticateAlternativeLabel = "LOCIGDBAuthenticateAlternativeLabel";
+        /// <summary>
         /// Start games directly without running official client
         /// </summary>
         public const string IGDBSettingsStartGameDirectly = "LOCIGDBSettingsStartGameDirectly";

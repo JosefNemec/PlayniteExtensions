@@ -38,6 +38,10 @@ namespace System
         /// </summary>
         public const string UniversalSteamMetadataAuthenticateLabel = "LOCUniversalSteamMetadataAuthenticateLabel";
         /// <summary>
+        /// Alternative authentication
+        /// </summary>
+        public const string UniversalSteamMetadataAuthenticateAlternativeLabel = "LOCUniversalSteamMetadataAuthenticateAlternativeLabel";
+        /// <summary>
         /// Start games directly without running official client
         /// </summary>
         public const string UniversalSteamMetadataSettingsStartGameDirectly = "LOCUniversalSteamMetadataSettingsStartGameDirectly";

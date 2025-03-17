@@ -38,6 +38,10 @@ namespace System
         /// </summary>
         public const string BattleNetAuthenticateLabel = "LOCBattleNetAuthenticateLabel";
         /// <summary>
+        /// Alternative authentication
+        /// </summary>
+        public const string BattleNetAuthenticateAlternativeLabel = "LOCBattleNetAuthenticateAlternativeLabel";
+        /// <summary>
         /// Start games directly without running official client
         /// </summary>
         public const string BattleNetSettingsStartGameDirectly = "LOCBattleNetSettingsStartGameDirectly";

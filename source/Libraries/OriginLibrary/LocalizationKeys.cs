@@ -38,6 +38,10 @@ namespace System
         /// </summary>
         public const string OriginAuthenticateLabel = "LOCOriginAuthenticateLabel";
         /// <summary>
+        /// Alternative authentication
+        /// </summary>
+        public const string OriginAuthenticateAlternativeLabel = "LOCOriginAuthenticateAlternativeLabel";
+        /// <summary>
         /// Start games directly without running official client
         /// </summary>
         public const string OriginSettingsStartGameDirectly = "LOCOriginSettingsStartGameDirectly";

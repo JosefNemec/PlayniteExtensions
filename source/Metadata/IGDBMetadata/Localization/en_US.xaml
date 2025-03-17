@@ -7,6 +7,7 @@
   <sys:String x:Key="LOCIGDBNotLoggedIn">Requires authentication</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedInError">Failed to authenticate user.</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Authenticate</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateAlternativeLabel">Alternative authentication</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Start games directly without running official client</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Troubleshooting account sync issues</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">Troubleshooting issues</sys:String>

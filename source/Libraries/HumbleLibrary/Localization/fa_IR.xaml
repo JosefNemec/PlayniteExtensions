@@ -30,6 +30,6 @@
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">اگر نسخه رایگان DRM در دسترس است، وارد کنید</sys:String>
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">اگر نسخه رایگان DRM موجود است، بازی های مورد نیاز سرویس گیرنده شخص ثالث را وارد کنید.</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">همیشه از برنامه Humble برای شروع بازی استفاده کنید</sys:String>
-  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">هنگامی که غیرفعال است، Playnite سعی می کند بازی ها را مستقیماً راه اندازی کند و برنامه Humble را دور بزند.</sys:String>
+  <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">وقتی این ویژگی غیرفعال شود، برنامه تلاش خواهد کرد بازی‌ها را به صورت مستقیم و بدون استفاده از برنامه Humble اجرا کند.</sys:String>
   <sys:String x:Key="LOCHumbleNonTroveInstallError">نصب و حذف خودکار بازی های Humble بدون اشتراک در حال حاضر پشتیبانی نمی شود.</sys:String>
 </ResourceDictionary>

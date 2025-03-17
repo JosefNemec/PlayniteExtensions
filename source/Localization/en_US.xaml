@@ -138,4 +138,10 @@ Until the issue is fixed, we recommend linking an account, importing games and d
 2. Navigate to authentication code page by click OK on this dialog
 3. Insert "authorizationCode" value on next dialog</sys:String>
     <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Insert "authorizationCode" value</sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Ubisoft plugins doesn't require any authentication, it takes library information from Ubisoft Connect client's user data files.
+
+If you are having issues importing games, make sure the client is properly installed and your account is logged in.</sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Rockstar plugin currently only imports installed games. There is no way to link an account to import all games.</sys:String>
 </ResourceDictionary>

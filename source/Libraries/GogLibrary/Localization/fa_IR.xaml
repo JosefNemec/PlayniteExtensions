@@ -24,7 +24,7 @@
   <sys:String x:Key="LOCGOGUseAccountName">نام حساب</sys:String>
   <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">برای همگام سازی کتابخانه کامل، به حساب کاربری خود وارد شوید یا از نام حساب عمومی خود استفاده کنید.
 توجه داشته باشید که گزینه نام حساب فقط برای حسابهایی کار می کند که کتابخانه های بازی آنها در تنظیمات حریم خصوصی GOG تنظیم شده اند تا در معرض دید عموم قرار گیرند.</sys:String>
-  <sys:String x:Key="LOCSettingsGOGUseGalaxy">بازی ها را با استفاده از سرویس گیرنده GOG Galaxy راه اندازی کنید</sys:String>
+  <sys:String x:Key="LOCSettingsGOGUseGalaxy">اجرا بازی ها با استفاده از سرویس گیرنده GOG Galaxy</sys:String>
   <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">این ویژگی های GOG Galaxy مانند ذخیره ابری، ردیابی زمان بازی و غیره را فعال می کند.</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">هنگام نصب بازی‌ها در GOG Galaxy، فرآیند نصب را به‌طور خودکار آغاز کنید</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">اگر فعال باشد، فرآیند نصب به طور خودکار بدون نیاز به تعامل کاربر با محل نصب پیش‌فرض پیکربندی شده آغاز می‌شود.
