@@ -26,6 +26,12 @@ namespace RockstarGamesLibrary
             },
             new RockstarGame
             {
+                Name = "Grand Theft Auto V Enhanced",
+                Executable = "GTA5_Enhanced_BE.exe",
+                TitleId = "gta5_gen9"
+            },
+            new RockstarGame
+            {
                 Name = "Red Dead Redemption",
                 Executable = "RDR.exe",
                 TitleId = "rdr"
