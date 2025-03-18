@@ -61,3 +61,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Rockstar_Games_Library_2_9.pext
     Changelog:
       - Added support for Red Dead Redemption 1 (by Jeshibu)
+  - Version: 2.10
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-03-18
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Rockstar_Games_Library_2_10.pext
+    Changelog:
+      - Added support for GTA 5 Enhanced
+      - Added settings notice about import of installed games only
