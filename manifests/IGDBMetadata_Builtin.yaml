@@ -70,3 +70,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/IGDBMetadata_Builtin_2_10.pext
     Changelog:
       - Fixed game series fetching after backend changes
+  - Version: 2.11
+    RequiredApiVersion: 6.5.0
+    ReleaseDate: 2025-04-19
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/IGDBMetadata_Builtin_2_11.pext
+    Changelog:
+      - Fixed Bluesky links showing up as "unknown"
