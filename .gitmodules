@@ -4,4 +4,4 @@
 	branch = master
 [submodule "PlayniteBackendRepo"]
 	path = PlayniteBackendRepo
-	url = https://github.com/JosefNemec/PlayniteBackend.git
+	url = git@codeberg.org:Playnite/Backend.git

@@ -3,7 +3,7 @@ using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
-using PlayniteServices.IGDB;
+using Playnite.Backend.IGDB;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -12,7 +12,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using static IGDBMetadata.IgdbMetadataPlugin;
-using Igdb = PlayniteServices.IGDB;
+using Igdb = Playnite.Backend.IGDB;
 
 namespace IGDBMetadata
 {
@@ -52,6 +52,7 @@ namespace IGDBMetadata
             [WebsiteCategoryEnum.WEBSITE_WIKIA] = "Wikia",
             [WebsiteCategoryEnum.WEBSITE_WIKIPEDIA] = "Wikipedia",
             [WebsiteCategoryEnum.WEBSITE_YOUTUBE] = "YouTube",
+            [WebsiteCategoryEnum.WEBSITE_BLUESKY] = "Bluesky"
         };
 
         private List<MetadataField> availableFields;

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Igdb = PlayniteServices.IGDB;
+using Igdb = Playnite.Backend.IGDB;
 
 namespace IGDBMetadata
 {
