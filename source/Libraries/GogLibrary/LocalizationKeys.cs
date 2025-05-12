@@ -82,6 +82,10 @@ namespace System
         /// </summary>
         public const string GOGAccountID = "LOCGOGAccountID";
         /// <summary>
+        /// Get account ID
+        /// </summary>
+        public const string GOGGetAccountID = "LOCGOGGetAccountID";
+        /// <summary>
         /// Metadata language:
         /// </summary>
         public const string GOGMetadataLanguageLabel = "LOCGOGMetadataLanguageLabel";

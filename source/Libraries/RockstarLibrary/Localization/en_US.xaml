@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">Start using {0} client</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Import play time</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCRockstarGetAccountID">Get account ID</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Metadata language:</sys:String>
   <!--Rockstar-->
   <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Rockstar plugin currently only imports installed games. There is no way to link an account to import all games.</sys:String>

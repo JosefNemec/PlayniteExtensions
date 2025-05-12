@@ -82,6 +82,10 @@ namespace System
         /// </summary>
         public const string XboxAccountID = "LOCXboxAccountID";
         /// <summary>
+        /// Get account ID
+        /// </summary>
+        public const string XboxGetAccountID = "LOCXboxGetAccountID";
+        /// <summary>
         /// Metadata language:
         /// </summary>
         public const string XboxMetadataLanguageLabel = "LOCXboxMetadataLanguageLabel";

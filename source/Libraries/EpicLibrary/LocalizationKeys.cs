@@ -82,6 +82,10 @@ namespace System
         /// </summary>
         public const string EpicAccountID = "LOCEpicAccountID";
         /// <summary>
+        /// Get account ID
+        /// </summary>
+        public const string EpicGetAccountID = "LOCEpicGetAccountID";
+        /// <summary>
         /// Metadata language:
         /// </summary>
         public const string EpicMetadataLanguageLabel = "LOCEpicMetadataLanguageLabel";

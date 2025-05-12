@@ -82,6 +82,10 @@ namespace System
         /// </summary>
         public const string itchioAccountID = "LOCitchioAccountID";
         /// <summary>
+        /// Get account ID
+        /// </summary>
+        public const string itchioGetAccountID = "LOCitchioGetAccountID";
+        /// <summary>
         /// Metadata language:
         /// </summary>
         public const string itchioMetadataLanguageLabel = "LOCitchioMetadataLanguageLabel";

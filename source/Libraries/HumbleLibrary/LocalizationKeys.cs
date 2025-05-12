@@ -82,6 +82,10 @@ namespace System
         /// </summary>
         public const string HumbleAccountID = "LOCHumbleAccountID";
         /// <summary>
+        /// Get account ID
+        /// </summary>
+        public const string HumbleGetAccountID = "LOCHumbleGetAccountID";
+        /// <summary>
         /// Metadata language:
         /// </summary>
         public const string HumbleMetadataLanguageLabel = "LOCHumbleMetadataLanguageLabel";

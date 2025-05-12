@@ -82,6 +82,10 @@ namespace System
         /// </summary>
         public const string OriginAccountID = "LOCOriginAccountID";
         /// <summary>
+        /// Get account ID
+        /// </summary>
+        public const string OriginGetAccountID = "LOCOriginGetAccountID";
+        /// <summary>
         /// Metadata language:
         /// </summary>
         public const string OriginMetadataLanguageLabel = "LOCOriginMetadataLanguageLabel";

@@ -82,6 +82,10 @@ namespace System
         /// </summary>
         public const string SteamAccountID = "LOCSteamAccountID";
         /// <summary>
+        /// Get account ID
+        /// </summary>
+        public const string SteamGetAccountID = "LOCSteamGetAccountID";
+        /// <summary>
         /// Metadata language:
         /// </summary>
         public const string SteamMetadataLanguageLabel = "LOCSteamMetadataLanguageLabel";
@@ -325,5 +329,9 @@ namespace System
         /// Import Steam Deck compatibility as a
         /// </summary>
         public const string SteamImportSteamDeckCompatibilityAs = "LOCSteamImportSteamDeckCompatibilityAs";
+        /// <summary>
+        /// Should I use Web or API login?
+        /// </summary>
+        public const string SteamWebVsApiLogin = "LOCSteamWebVsApiLogin";
     }
 }

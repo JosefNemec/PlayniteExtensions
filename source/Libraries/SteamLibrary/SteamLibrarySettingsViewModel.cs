@@ -21,15 +21,6 @@ using Playnite.Common;
 
 namespace SteamLibrary
 {
-    public enum AuthStatus
-    {
-        Ok,
-        Checking,
-        AuthRequired,
-        PrivateAccount,
-        Failed
-    }
-
     public class AdditionalSteamAcccount
     {
         public string AccountId { get; set; }
@@ -42,21 +33,34 @@ namespace SteamLibrary
     {
         private bool isPrivateAccount;
         private string apiKey = string.Empty;
+        private string userId = string.Empty;
 
         public int Version { get; set; }
         public bool ImportInstalledGames { get; set; } = true;
         public bool ConnectAccount { get; set; } = false;
         public bool ImportUninstalledGames { get; set; } = false;
-        public string UserId { get; set; } = string.Empty;
+        public string UserId { get => userId; set => SetValue(ref userId, value); }
         public bool IncludeFreeSubGames { get; set; } = false;
         public bool ShowFriendsButton { get; set; } = true;
-        public bool IsPrivateAccount { get => isPrivateAccount; set => SetValue(ref isPrivateAccount, value); }
         public bool IgnoreOtherInstalled { get; set; }
         public ObservableCollection<AdditionalSteamAcccount> AdditionalAccounts { get; set; } = new ObservableCollection<AdditionalSteamAcccount>();
         public bool ShowSteamLaunchMenuInDesktopMode { get; set; } = true;
         public bool ShowSteamLaunchMenuInFullscreenMode { get; set; } = false;
         [Obsolete] public string ApiKey { get; set; }
         [DontSerialize] public string RutnimeApiKey { get => apiKey; set => SetValue(ref apiKey, value); }
+
+        public bool IsPrivateAccount
+        {
+            get => isPrivateAccount;
+            set
+            {
+                if (isPrivateAccount != value)
+                {
+                    isPrivateAccount = value;
+                    OnPropertyChanged(nameof(IsPrivateAccount));
+                }
+            }
+        }
     }
 
     public class ApiKeyInfo
@@ -67,60 +71,30 @@ namespace SteamLibrary
 
     public class SteamLibrarySettingsViewModel : SharedSteamSettingsViewModel<SteamLibrarySettings, SteamLibrary>
     {
-        public AuthStatus AuthStatus
+        public bool IsUserLoggedIn
         {
             get
             {
-                if (Settings.UserId.IsNullOrEmpty())
-                {
-                    return AuthStatus.AuthRequired;
-                }
-
                 try
                 {
                     if (Settings.IsPrivateAccount)
                     {
-                        if (Settings.UserId.IsNullOrEmpty() || Settings.RutnimeApiKey.IsNullOrEmpty())
-                        {
-                            return AuthStatus.PrivateAccount;
-                        }
-
-                        try
-                        {
-                            var games = Plugin.GetPrivateOwnedGames(ulong.Parse(Settings.UserId), Settings.RutnimeApiKey, false);
-                            if (games?.response?.games.HasItems() == true)
-                            {
-                                return AuthStatus.Ok;
-                            }
-                        }
-                        catch (System.Net.WebException e)
-                        {
-                            if (e.Status == System.Net.WebExceptionStatus.ProtocolError)
-                            {
-                                return AuthStatus.PrivateAccount;
-                            }
-                        }
+                        Logger.Warn("-------- private");
+                        var res = Plugin.GetPrivateOwnedGames(ulong.Parse(Settings.UserId), Settings.RutnimeApiKey, true);
+                        return res.response?.games.HasItems() == true;
                     }
                     else
                     {
-                        var games = Plugin.ServicesClient.GetSteamLibrary(ulong.Parse(Settings.UserId));
-                        if (games.HasItems())
-                        {
-                            return AuthStatus.Ok;
-                        }
-                        else
-                        {
-                            return AuthStatus.PrivateAccount;
-                        }
+                        Logger.Warn("-------- public");
+                        var res = Plugin.GetLibraryGamesViaProfilePage(Settings);
+                        return res.bViewingOwnProfile;
                     }
                 }
-                catch (Exception e) when (!Debugger.IsAttached)
+                catch (Exception e)
                 {
-                    Logger.Error(e, "Failed to check Steam auth status.");
-                    return AuthStatus.Failed;
+                    Logger.Error(e, "");
+                    return false;
                 }
-
-                return AuthStatus.AuthRequired;
             }
         }
 
@@ -245,9 +219,10 @@ namespace SteamLibrary
         private void Settings_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == nameof(SteamLibrarySettings.IsPrivateAccount) ||
-                e.PropertyName == nameof(SteamLibrarySettings.RutnimeApiKey))
+                e.PropertyName == nameof(SteamLibrarySettings.RutnimeApiKey) ||
+                e.PropertyName == nameof(SteamLibrarySettings.UserId))
             {
-                OnPropertyChanged(nameof(AuthStatus));
+                OnPropertyChanged(nameof(IsUserLoggedIn));
             }
         }
 
@@ -267,7 +242,7 @@ namespace SteamLibrary
             try
             {
                 var steamId = string.Empty;
-                using (var view = PlayniteApi.WebViews.CreateView(675, 440, Colors.Black))
+                using (var view = PlayniteApi.WebViews.CreateView(675, 640, Colors.Black))
                 {
                     view.LoadingChanged += async (s, e) =>
                     {
@@ -310,8 +285,6 @@ namespace SteamLibrary
                 {
                     Settings.UserId = steamId;
                 }
-
-                OnPropertyChanged(nameof(AuthStatus));
             }
             catch (Exception e) when (!Debugger.IsAttached)
             {

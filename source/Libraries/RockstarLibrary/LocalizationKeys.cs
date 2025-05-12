@@ -82,6 +82,10 @@ namespace System
         /// </summary>
         public const string RockstarAccountID = "LOCRockstarAccountID";
         /// <summary>
+        /// Get account ID
+        /// </summary>
+        public const string RockstarGetAccountID = "LOCRockstarGetAccountID";
+        /// <summary>
         /// Metadata language:
         /// </summary>
         public const string RockstarMetadataLanguageLabel = "LOCRockstarMetadataLanguageLabel";

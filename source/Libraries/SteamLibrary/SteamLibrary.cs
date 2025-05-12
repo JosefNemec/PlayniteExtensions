@@ -13,6 +13,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -452,8 +453,60 @@ namespace SteamLibrary
             }
             else
             {
-                return GetLibraryGames(userId, ServicesClient.GetSteamLibrary(userId, settings.IncludeFreeSubGames));
+                var profile = GetLibraryGamesViaProfilePage(settings);
+                if (profile.rgGames.HasItems() != true)
+                    return new List<GameMetadata>();
+
+                var games = new List<GameMetadata>();
+                foreach (var profGame in profile.rgGames)
+                {
+                    var game = new GameMetadata()
+                    {
+                        GameId = profGame.appid.ToString(),
+                        Name = profGame.name,
+                        SortingName = profGame.sort_as,
+                        Playtime = (ulong)profGame.playtime_forever * 60
+                    };
+
+                    var lastDate = DateTimeOffset.FromUnixTimeSeconds(profGame.rtime_last_played).LocalDateTime;
+                    if (lastDate.Year > 1970)
+                    {
+                        game.LastActivity = lastDate;
+                    }
+
+                    games.Add(game);
+                }
+
+                return games;
             }
+        }
+
+        internal ProfilePageOwnedGames GetLibraryGamesViaProfilePage(SteamLibrarySettings settings)
+        {
+            if (settings.UserId.IsNullOrWhiteSpace())
+                throw new Exception("Steam user not authenticated.");
+
+            JavaScriptEvaluationResult jsRes = null;
+            using (var view = PlayniteApi.WebViews.CreateOffscreenView())
+            {
+                view.NavigateAndWait($"https://steamcommunity.com/profiles/{settings.UserId}/games");
+                jsRes = Task.Run(async () =>
+                    await view.EvaluateScriptAsync(@"document.querySelector('#gameslist_config').attributes['data-profile-gameslist'].value")).GetAwaiter().GetResult();
+            }
+
+            if (!jsRes.Success || !(jsRes.Result is string))
+            {
+                logger.Error("Failed to get games list from Steam profile page:");
+                logger.Error(jsRes.Message);
+                throw new Exception("Failed to fetch Steam games from user profile.");
+            }
+
+            if (Serialization.TryFromJson<ProfilePageOwnedGames>(jsRes.Result as string, out var profileData, out var error))
+                return profileData;
+
+            logger.Error(error, "Failed deserialize Steam profile page data.");
+            logger.Debug(jsRes.Result as string);
+            return null;
         }
 
         internal GetOwnedGamesResult GetPrivateOwnedGames(ulong userId, string apiKey, bool freeSub)

@@ -82,6 +82,10 @@ namespace System
         /// </summary>
         public const string IGDBAccountID = "LOCIGDBAccountID";
         /// <summary>
+        /// Get account ID
+        /// </summary>
+        public const string IGDBGetAccountID = "LOCIGDBGetAccountID";
+        /// <summary>
         /// Metadata language:
         /// </summary>
         public const string IGDBMetadataLanguageLabel = "LOCIGDBMetadataLanguageLabel";

@@ -82,6 +82,10 @@ namespace System
         /// </summary>
         public const string UbisoftAccountID = "LOCUbisoftAccountID";
         /// <summary>
+        /// Get account ID
+        /// </summary>
+        public const string UbisoftGetAccountID = "LOCUbisoftGetAccountID";
+        /// <summary>
         /// Metadata language:
         /// </summary>
         public const string UbisoftMetadataLanguageLabel = "LOCUbisoftMetadataLanguageLabel";

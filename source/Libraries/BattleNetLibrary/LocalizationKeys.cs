@@ -82,6 +82,10 @@ namespace System
         /// </summary>
         public const string BattleNetAccountID = "LOCBattleNetAccountID";
         /// <summary>
+        /// Get account ID
+        /// </summary>
+        public const string BattleNetGetAccountID = "LOCBattleNetGetAccountID";
+        /// <summary>
         /// Metadata language:
         /// </summary>
         public const string BattleNetMetadataLanguageLabel = "LOCBattleNetMetadataLanguageLabel";

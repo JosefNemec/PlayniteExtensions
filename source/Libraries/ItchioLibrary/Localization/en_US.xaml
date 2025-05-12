@@ -18,6 +18,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Start using {0} client</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Import play time</sys:String>
   <sys:String x:Key="LOCitchioAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCitchioGetAccountID">Get account ID</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">Metadata language:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io will be launched. Please sign in and then close this message.</sys:String>
