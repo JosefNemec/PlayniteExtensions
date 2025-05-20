@@ -182,4 +182,10 @@ Packages:
     ReleaseDate: 2025-01-03
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_26.pext
     Changelog:
-      - Import error from extra accounts doesn't fail the entire import process anymore      
+      - Import error from extra accounts doesn't fail the entire import process anymore   
+  - Version: 2.27
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-05-20
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_27.pext
+    Changelog:
+      - Reworked authentication and import of games when not using API key. You may need to re-authenticate after this update if you are not using your own API key.
