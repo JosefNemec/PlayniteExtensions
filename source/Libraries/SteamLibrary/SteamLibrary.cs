@@ -465,7 +465,8 @@ namespace SteamLibrary
                         GameId = profGame.appid.ToString(),
                         Name = profGame.name,
                         SortingName = profGame.sort_as,
-                        Playtime = (ulong)profGame.playtime_forever * 60
+                        Playtime = (ulong)profGame.playtime_forever * 60,
+                        Source = new MetadataNameProperty("Steam")
                     };
 
                     var lastDate = DateTimeOffset.FromUnixTimeSeconds(profGame.rtime_last_played).LocalDateTime;
