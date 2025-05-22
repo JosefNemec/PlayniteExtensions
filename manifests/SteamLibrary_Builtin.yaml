@@ -189,3 +189,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_27.pext
     Changelog:
       - Reworked authentication and import of games when not using API key. You may need to re-authenticate after this update if you are not using your own API key.
+  - Version: 2.28
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-05-22
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_28.pext
+    Changelog:
+      - Fixed Steam source not being assigned when using web login
