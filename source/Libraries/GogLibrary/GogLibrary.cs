@@ -102,6 +102,28 @@ namespace GogLibrary
             }
         }
 
+        internal static GogGameActionInfo GetGogGameInfo(string gameId, string installDir)
+        {
+            var manifestFile = Path.Combine(installDir, $"goggame-{gameId}.info");
+            var gameInfo = new GogGameActionInfo();
+            if (File.Exists(manifestFile))
+            {
+                var content = FileSystem.ReadFileAsStringSafe(manifestFile);
+                if (!content.IsNullOrWhiteSpace())
+                {
+                    try
+                    {
+                        gameInfo = Serialization.FromJson<GogGameActionInfo>(content);
+                    }
+                    catch (Exception e)
+                    {
+                        logger.Error(e, $"Failed to read install gog game manifest: {manifestFile}.");
+                    }
+                }
+            }
+            return gameInfo;
+        }
+
         internal static List<GameAction> GetPlayTasks(string gameId, string installDir)
         {
             var gameInfoPath = Path.Combine(installDir, string.Format("goggame-{0}.info", gameId));
@@ -230,6 +252,14 @@ namespace GogLibrary
                 if (!GetPlayTasks(game.GameId, game.InstallDirectory).HasItems())
                 {
                     continue; // Empty play task = DLC
+                }
+                var infoManifest = GetGogGameInfo(game.GameId, game.InstallDirectory);
+                if (!infoManifest.rootGameId.IsNullOrEmpty())
+                {
+                    if (infoManifest.rootGameId != game.GameId)
+                    {
+                        continue; // That's DLC
+                    }
                 }
 
                 game.GameActions = GetOtherTasks(game.GameId, game.InstallDirectory);
