@@ -7,6 +7,7 @@ using SteamKit2;
 using SteamLibrary.Models;
 using SteamLibrary.Services;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -51,6 +52,7 @@ namespace SteamLibrary
     public class SteamLibrary : LibraryPluginBase<SteamLibrarySettingsViewModel>
     {
         private static readonly ILogger logger = LogManager.GetLogger();
+        private const int libScanParallelismDegree = 3;
         private readonly Configuration config;
         internal SteamServicesClient ServicesClient;
         internal TopPanelItem TopPanelFriendsButton;
@@ -163,13 +165,13 @@ namespace SteamLibrary
 
         internal static List<GameMetadata> GetInstalledGamesFromFolder(string path)
         {
-            var games = new List<GameMetadata>();
-
-            foreach (var file in Directory.GetFiles(path, @"appmanifest*"))
+            var games = new ConcurrentBag<GameMetadata>();
+            var appManifests = Directory.GetFiles(path, @"appmanifest*");
+            Parallel.ForEach(appManifests, new ParallelOptions { MaxDegreeOfParallelism = libScanParallelismDegree }, file =>
             {
                 if (file.EndsWith("tmp", StringComparison.OrdinalIgnoreCase))
                 {
-                    continue;
+                    return;
                 }
 
                 try
@@ -177,13 +179,13 @@ namespace SteamLibrary
                     var game = GetInstalledGameFromFile(Path.Combine(path, file));
                     if (game == null)
                     {
-                        continue;
+                        return;
                     }
 
                     if (game.InstallDirectory.IsNullOrEmpty() || game.InstallDirectory.Contains(@"steamapps\music"))
                     {
                         logger.Info($"Steam game {game.Name} is not properly installed or it's a soundtrack, skipping.");
-                        continue;
+                        return;
                     }
 
                     games.Add(game);
@@ -193,17 +195,22 @@ namespace SteamLibrary
                     // Steam can generate invalid acf file according to issue #37
                     logger.Error(exc, $"Failed to get information about installed game from: {file}");
                 }
-            }
+            });
 
-            return games;
+            return games.ToList();
         }
 
         internal static List<GameMetadata> GetInstalledGoldSrcModsFromFolder(string path)
         {
-            var games = new List<GameMetadata>();
+            var games = new ConcurrentBag<GameMetadata>();
             var dirInfo = new DirectoryInfo(path);
 
-            foreach (var folder in dirInfo.GetDirectories().Where(a => !firstPartyModPrefixes.Any(prefix => a.Name.StartsWith(prefix))).Select(a => a.FullName))
+            var filteredDirectories = dirInfo.GetDirectories()
+                .Where(a => !firstPartyModPrefixes.Any(prefix => a.Name.StartsWith(prefix)))
+                .Select(a => a.FullName)
+                .ToList();
+
+            Parallel.ForEach(filteredDirectories, new ParallelOptions { MaxDegreeOfParallelism = libScanParallelismDegree }, folder =>
             {
                 try
                 {
@@ -216,18 +223,18 @@ namespace SteamLibrary
                 catch (Exception exc)
                 {
                     // GameMetadata.txt may not exist or may be invalid
-                    logger.Error(exc, $"Failed to get information about installed GoldSrc mod from: {path}");
+                    logger.Error(exc, $"Failed to get information about installed GoldSrc mod from Path: {path}, Folder: {folder}");
                 }
-            }
+            });
 
-            return games;
+            return games.ToList();
         }
 
         internal static List<GameMetadata> GetInstalledSourceModsFromFolder(string path)
         {
-            var games = new List<GameMetadata>();
-
-            foreach (var folder in Directory.GetDirectories(path))
+            var games = new ConcurrentBag<GameMetadata>();
+            var directories = Directory.GetDirectories(path);
+            Parallel.ForEach(directories, new ParallelOptions { MaxDegreeOfParallelism = libScanParallelismDegree }, folder =>
             {
                 try
                 {
@@ -240,11 +247,11 @@ namespace SteamLibrary
                 catch (Exception exc)
                 {
                     // GameMetadata.txt may not exist or may be invalid
-                    logger.Error(exc, $"Failed to get information about installed Source mod from: {path}");
+                    logger.Error(exc, $"Failed to get information about installed Source mod Path: {path}, Folder: {folder}");
                 }
-            }
+            });
 
-            return games;
+            return games.ToList();
         }
 
         internal static GameMetadata GetInstalledModFromFolder(string path, ModInfo.ModType modType)
