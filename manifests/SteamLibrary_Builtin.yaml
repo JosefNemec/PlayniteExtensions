@@ -195,3 +195,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_28.pext
     Changelog:
       - Fixed Steam source not being assigned when using web login
+  - Version: 2.29
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-06-13
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_29.pext
+    Changelog:
+      - Better indication of authentication status
