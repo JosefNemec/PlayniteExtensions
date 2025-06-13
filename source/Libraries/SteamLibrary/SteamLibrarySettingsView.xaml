@@ -42,9 +42,36 @@
                           IsChecked="{Binding Settings.ImportInstalledGames}"
                           Content="{DynamicResource LOCSteamSettingsImportInstalledLabel}"/>
 
-                <CheckBox Name="CheckSteamConnectAccount" VerticalAlignment="Center"
-                            IsChecked="{Binding Settings.ConnectAccount}"
-                            Content="{DynamicResource LOCSteamSettingsConnectAccount}"/>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Name="CheckSteamConnectAccount" VerticalAlignment="Center"
+                              IsChecked="{Binding Settings.ConnectAccount}"
+                              Content="{DynamicResource LOCSteamSettingsConnectAccount}"/>
+                    <TextBlock VerticalAlignment="Center" Margin="25,0,0,0"
+                               IsEnabled="{Binding IsChecked, ElementName=CheckSteamConnectAccount}">
+                        <TextBlock.Tag>
+                            <PriorityBinding>
+                                <Binding Path="IsUserLoggedIn" IsAsync="True" />
+                                <Binding Source="{x:Null}" />
+                            </PriorityBinding>
+                        </TextBlock.Tag>
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
+                                <Style.Triggers>
+                                    <Trigger Property="Tag" Value="{StaticResource True}">
+                                        <Setter Property="Text" Value="{DynamicResource LOCSteamLoggedIn}" />
+                                    </Trigger>
+                                    <Trigger Property="Tag" Value="{StaticResource False}">
+                                        <Setter Property="Text" Value="{DynamicResource LOCSteamNotLoggedIn}" />
+                                        <Setter Property="Foreground" Value="{DynamicResource WarningBrush}" />
+                                    </Trigger>
+                                    <Trigger Property="Tag" Value="{x:Null}">
+                                        <Setter Property="Text" Value="{DynamicResource LOCSteamLoginChecking}" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </StackPanel>
 
                 <StackPanel Margin="40,5,5,0" IsEnabled="{Binding IsChecked, ElementName=CheckSteamConnectAccount}">
                     <CheckBox Name="CheckSteamImportUninstalled"
@@ -111,30 +138,6 @@
                                   Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}"
                                   Content="{DynamicResource LOCSteamImportFreeSubGames}"/>
                     </StackPanel>
-
-                    <TextBlock VerticalAlignment="Center" Margin="0,15,0,0">
-                        <TextBlock.Tag>
-                            <PriorityBinding>
-                                <Binding Path="IsUserLoggedIn" IsAsync="True" />
-                                <Binding Source="{x:Null}" />
-                            </PriorityBinding>
-                        </TextBlock.Tag>
-                        <TextBlock.Style>
-                            <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
-                                <Style.Triggers>
-                                    <Trigger Property="Tag" Value="{StaticResource True}">
-                                        <Setter Property="Text" Value="{DynamicResource LOCSteamLoggedIn}" />
-                                    </Trigger>
-                                    <Trigger Property="Tag" Value="{StaticResource False}">
-                                        <Setter Property="Text" Value="{DynamicResource LOCSteamNotLoggedIn}" />
-                                    </Trigger>
-                                    <Trigger Property="Tag" Value="{x:Null}">
-                                        <Setter Property="Text" Value="{DynamicResource LOCSteamLoginChecking}" />
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </TextBlock.Style>
-                    </TextBlock>
                 </StackPanel>
                 <TextBlock VerticalAlignment="Center" Margin="0,15,0,0">
                     <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Steam-troubleshooting"
