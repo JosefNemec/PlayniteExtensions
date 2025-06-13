@@ -13,6 +13,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -520,8 +521,32 @@ namespace SteamLibrary
 
             using (var webClient = new WebClient { Encoding = Encoding.UTF8 })
             {
-                var stringLibrary = webClient.DownloadString(string.Format(libraryUrl, apiKey, userId));
-                return Serialization.FromJson<GetOwnedGamesResult>(stringLibrary);
+                for (int i = 0; i < 5; i++)
+                {
+                    try
+                    {
+                        var stringLibrary = webClient.DownloadString(string.Format(libraryUrl, apiKey, userId));
+                        return Serialization.FromJson<GetOwnedGamesResult>(stringLibrary);
+                    }
+                    catch (WebException e) when (e.Response is HttpWebResponse respose)
+                    {
+                        // For some reason Steam Web API likes to return 429 even if you
+                        // don't make a request in several hours, so just retry couple times.
+                        if (respose.StatusCode == (HttpStatusCode)429)
+                        {
+                            logger.Debug("Steam GetOwnedGames returned 429, trying again.");
+                            Thread.Sleep(5_000);
+                            continue;
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        logger.Error(e, "Failed to get games from Steam Web API.");
+                        break;
+                    }
+                }
+
+                throw new Exception("Failed to get account data from Steam Web API, check your API key and connection to Steam's servers.");
             }
         }
 

@@ -79,13 +79,11 @@ namespace SteamLibrary
                 {
                     if (Settings.IsPrivateAccount)
                     {
-                        Logger.Warn("-------- private");
                         var res = Plugin.GetPrivateOwnedGames(ulong.Parse(Settings.UserId), Settings.RutnimeApiKey, true);
                         return res.response?.games.HasItems() == true;
                     }
                     else
                     {
-                        Logger.Warn("-------- public");
                         var res = Plugin.GetLibraryGamesViaProfilePage(Settings);
                         return res.bViewingOwnProfile;
                     }
