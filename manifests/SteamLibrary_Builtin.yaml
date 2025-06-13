@@ -201,3 +201,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_29.pext
     Changelog:
       - Better indication of authentication status
+  - Version: 2.30
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-06-13
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_30.pext
+    Changelog:
+      - Added automated retry in case of 429 error during library update
