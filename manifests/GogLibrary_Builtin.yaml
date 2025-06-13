@@ -122,3 +122,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_19.pext
     Changelog:
       - Fixed authentication not working (by Jeshibu)
+  - Version: 2.20
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-06-13
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_20.pext
+    Changelog:
+      - Fixed handling of some game DLCs (by hawkeye116477)
+      - Fixed automatic install process no longer working (by darklinkpower)
