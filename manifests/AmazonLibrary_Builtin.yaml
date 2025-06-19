@@ -48,3 +48,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_8.pext
     Changelog:
       - Fixed library sync not working (by Darklinkpower)
+  - Version: 2.9
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2025-06-19
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_9.pext
+    Changelog:
+      - Updated authentication procedure
