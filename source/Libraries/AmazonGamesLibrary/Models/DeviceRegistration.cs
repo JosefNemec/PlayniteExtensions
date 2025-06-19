@@ -22,7 +22,12 @@ namespace AmazonGamesLibrary.Models
 
         public class AuthData
         {
-            public string access_token;
+            public string authorization_code;
+            public string client_id;
+            public string client_domain;
+            public bool use_global_authentication = false;
+            public string code_verifier;
+            public string code_algorithm;
         }
 
         public class UserContextMap

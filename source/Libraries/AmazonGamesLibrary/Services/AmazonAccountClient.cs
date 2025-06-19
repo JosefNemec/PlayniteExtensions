@@ -20,7 +20,7 @@ namespace AmazonGamesLibrary.Services
     {
         private static readonly ILogger logger = LogManager.GetLogger();
         private AmazonGamesLibrary library;
-        private const string loginUrl = @"https://www.amazon.com/ap/signin?openid.ns=http://specs.openid.net/auth/2.0&openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select&openid.identity=http://specs.openid.net/auth/2.0/identifier_select&openid.mode=checkid_setup&openid.oa2.scope=device_auth_access&openid.ns.oa2=http://www.amazon.com/ap/ext/oauth/2&openid.oa2.response_type=token&openid.oa2.client_id=device:6330386435633439383366623032393938313066303133343139383335313266234132554D56484F58375550345637&language=en_US&marketPlaceId=ATVPDKIKX0DER&openid.return_to=https://www.amazon.com&openid.pape.max_auth_age=0&openid.assoc_handle=amzn_sonic_games_launcher&pageId=amzn_sonic_games_launcher";
+        private const string loginUrl = @"https://www.amazon.com/ap/signin?openid.ns=http://specs.openid.net/auth/2.0&openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select&openid.identity=http://specs.openid.net/auth/2.0/identifier_select&openid.mode=checkid_setup&openid.oa2.scope=device_auth_access&openid.ns.oa2=http://www.amazon.com/ap/ext/oauth/2&openid.oa2.response_type=code&openid.oa2.code_challenge_method=S256&openid.oa2.client_id=device:3733646238643238366332613932346432653737653161663637373636363435234132554d56484f58375550345637&language=en_US&marketPlaceId=ATVPDKIKX0DER&openid.return_to=https://www.amazon.com&openid.pape.max_auth_age=0&openid.assoc_handle=amzn_sonic_games_launcher&pageId=amzn_sonic_games_launcher&openid.oa2.code_challenge=";
         private readonly string tokensPath;
 
         public AmazonAccountClient(AmazonGamesLibrary library)
@@ -32,25 +32,23 @@ namespace AmazonGamesLibrary.Services
         public async Task Login()
         {
             var callbackUrl = string.Empty;
+            var codeChallenge = GenerateCodeChallenge();
+            FileSystem.DeleteFile(tokensPath);
             using (var webView = library.PlayniteApi.WebViews.CreateView(490, 660))
             {
                 webView.LoadingChanged += (s, e) =>
                 {
                     var url = webView.GetCurrentAddress();
-                    if (url.Contains("openid.oa2.access_token"))
+                    if (url.Contains("openid.oa2.authorization_code"))
                     {
                         callbackUrl = url;
                         webView.Close();
                     }
                 };
 
-                if (File.Exists(tokensPath))
-                {
-                    File.Delete(tokensPath);
-                }
-
                 webView.DeleteDomainCookies(".amazon.com");
-                webView.Navigate(loginUrl);
+                var lurl = loginUrl + EncodeBase64Url(GetSHA256HashByte(codeChallenge));
+                webView.Navigate(lurl);
                 webView.OpenDialog();
             }
 
@@ -58,18 +56,24 @@ namespace AmazonGamesLibrary.Services
             {
                 var rediUri = new Uri(callbackUrl);
                 var fragments = HttpUtility.ParseQueryString(rediUri.Query);
-                var token = fragments["openid.oa2.access_token"];
-                await Authenticate(token);
+                var token = fragments["openid.oa2.authorization_code"];
+                await Authenticate(token, codeChallenge);
             }
         }
 
-        private async Task Authenticate(string accessToken)
+        private async Task Authenticate(string accessToken, string codeChallenge)
         {
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("User-Agent", "AGSLauncher/1.0.0");
                 var reqData = new DeviceRegistrationRequest();
-                reqData.auth_data.access_token = accessToken;
+                reqData.auth_data.use_global_authentication = false;
+                reqData.auth_data.authorization_code = accessToken;
+                reqData.auth_data.code_verifier = codeChallenge;
+                reqData.auth_data.code_algorithm = "SHA-256";
+                reqData.auth_data.client_id = "3733646238643238366332613932346432653737653161663637373636363435234132554d56484f58375550345637";
+                reqData.auth_data.client_domain = "DeviceLegacy";
+
                 reqData.registration_data.app_name = "AGSLauncher for Windows";
                 reqData.registration_data.app_version = "1.0.0";
                 reqData.registration_data.device_model = "Windows";
@@ -77,6 +81,7 @@ namespace AmazonGamesLibrary.Services
                 reqData.registration_data.device_type = "A2UMVHOX7UP4V7";
                 reqData.registration_data.domain = "Device";
                 reqData.registration_data.os_version = Environment.OSVersion.Version.ToString(4);
+
                 reqData.requested_extensions = new List<string> { "customer_info", "device_info" };
                 reqData.requested_token_type = new List<string> { "bearer", "mac_dms" };
 
@@ -110,7 +115,7 @@ namespace AmazonGamesLibrary.Services
             var token = LoadToken();
             using (var client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Add("User-Agent", "com.amazon.agslauncher.win/3.0.9124.0");
+                client.DefaultRequestHeaders.Add("User-Agent", "com.amazon.agslauncher.win/3.0.9495.3");
                 client.DefaultRequestHeaders.Add("X-Amz-Target", "com.amazon.animusdistributionservice.entitlement.AnimusEntitlementsService.GetEntitlements");
                 client.DefaultRequestHeaders.Add("x-amzn-token", token.access_token);
 
@@ -172,11 +177,10 @@ namespace AmazonGamesLibrary.Services
             var token = LoadToken();
             using (var client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Add("User-Agent", "com.amazon.agslauncher.win/1.1.133.2-9e2c3a3");
                 var reqData = new TokenRefreshRequest
                 {
                     app_name = "AGSLauncher",
-                    app_version = "1.1.133.2-9e2c3a3",
+                    app_version = "3.0.9495.3",
                     source_token = token.refresh_token,
                     requested_token_type = "access_token",
                     source_token_type = "refresh_token"
@@ -246,6 +250,33 @@ namespace AmazonGamesLibrary.Services
             {
                 root.Dispose();
             }
+        }
+
+        private string EncodeBase64Url(byte[] input)
+        {
+            return Convert.ToBase64String(input).TrimEnd('=').Replace('+', '-').Replace('/', '_');
+        }
+
+        public static byte[] GetSHA256HashByte(string input)
+        {
+            using (var sha = System.Security.Cryptography.SHA256.Create())
+            {
+                return sha.ComputeHash(Encoding.UTF8.GetBytes(input));
+            }
+        }
+
+        private string GenerateCodeChallenge()
+        {
+            var randomStringChars = "ABCDEFGHIJKLMNOPQRSTYVWXZabcdefghijklmnopqrstyvwxz0123456789_";
+            var randomSetLeng = randomStringChars.Length - 1;
+            var random = new Random();
+            var result = new StringBuilder(45);
+            for (int i = 0; i < 45; i++)
+            {
+                result.Append(randomStringChars[random.Next(0, randomSetLeng)]);
+            }
+
+            return result.ToString();
         }
     }
 }
