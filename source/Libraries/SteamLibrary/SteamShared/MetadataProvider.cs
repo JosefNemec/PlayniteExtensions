@@ -306,7 +306,7 @@ namespace Steam
                     metadata.CommunityScore = CalculateUserScore(metadata.UserReviewDetails);
                 }
 
-                publishers = metadata.StoreDetails.publishers?.Where(a => !a.IsNullOrWhiteSpace());
+                publishers = metadata.StoreDetails.publishers?.Where(a => !a.IsNullOrWhiteSpace() && !a.Equals("N/A"));
                 if (publishers.HasItems())
                 {
                     metadata.Publishers = publishers.
@@ -315,7 +315,7 @@ namespace Steam
                         ToHashSet();
                 }
 
-                developers = metadata.StoreDetails.developers?.Where(a => !a.IsNullOrWhiteSpace());
+                developers = metadata.StoreDetails.developers?.Where(a => !a.IsNullOrWhiteSpace() && !a.Equals("N/A"));
                 if (developers.HasItems())
                 {
                     metadata.Developers = developers.
