@@ -207,3 +207,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_30.pext
     Changelog:
       - Added automated retry in case of 429 error during library update
+  - Version: 2.31
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-07-05
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_31.pext
+    Changelog:
+      - Games with unknown developer or publisher won't have "N/A" value assigned anymore (by darklinkpower)
