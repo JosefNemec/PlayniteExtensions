@@ -1,7 +1,7 @@
 ﻿Id: AmazonLibrary_Builtin
 Name: AmazonGames library integration
 Author: Playnite
-Version: 2.9
+Version: 2.10
 Module: AmazonGamesLibrary.dll
 Type: GameLibrary
 Icon: icon.png
