@@ -118,3 +118,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_17.pext
     Changelog:
       -  Metadata download game name fixes (by darklinkpower)
+  - Version: 2.18
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-07-06
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_18.pext
+    Changelog:
+      - Games with unknown developer or publisher won't have "N/A" value assigned anymore (by darklinkpower)
