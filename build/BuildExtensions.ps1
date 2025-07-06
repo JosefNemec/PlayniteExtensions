@@ -15,7 +15,7 @@ $ErrorActionPreference = "Stop"
 
 if (Test-Path $OutputDir)
 {
-    Remove-Item $OutputDir -Recurse -Force
+    Remove-Item "$OutputDir\*" -Recurse -Force
 }
 
 $allPassed = $true
