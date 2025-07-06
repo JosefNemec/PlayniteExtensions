@@ -34,7 +34,12 @@ namespace AmazonGamesLibrary.Services
             var callbackUrl = string.Empty;
             var codeChallenge = GenerateCodeChallenge();
             FileSystem.DeleteFile(tokensPath);
-            using (var webView = library.PlayniteApi.WebViews.CreateView(490, 660))
+            using (var webView = library.PlayniteApi.WebViews.CreateView(new WebViewSettings
+                   {
+                       WindowWidth = 490,
+                       WindowHeight = 660,
+                       UserAgent = @"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) @amzn/aga-electron-platform/1.0.0 Chrome/78.0.3904.130 Electron/7.1.9 Safari/537.36"
+                   }))
             {
                 webView.LoadingChanged += (s, e) =>
                 {
