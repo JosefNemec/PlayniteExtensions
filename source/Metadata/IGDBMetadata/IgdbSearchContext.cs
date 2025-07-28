@@ -50,7 +50,7 @@ namespace IGDBMetadata
             addDescPart(game.id.ToString());
 #endif
 
-            if (game.category == Igdb.GameCategoryEnum.PORT)
+            if (game.game_type == 11) // Game port
             {
                 addDescPart($"{game.platforms_expanded?.FirstOrDefault()?.name} port");
             }

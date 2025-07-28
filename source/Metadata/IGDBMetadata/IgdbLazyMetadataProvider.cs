@@ -24,37 +24,6 @@ namespace IGDBMetadata
         private readonly IgdbMetadataPlugin plugin;
         private Igdb.Game GameData;
 
-        private readonly static Dictionary<AgeRatingRatingEnum, string> pegiRatingToStr = new Dictionary<AgeRatingRatingEnum, string>()
-        {
-            [AgeRatingRatingEnum.THREE] = "3",
-            [AgeRatingRatingEnum.SEVEN] = "7",
-            [AgeRatingRatingEnum.TWELVE] = "12",
-            [AgeRatingRatingEnum.SIXTEEN] = "16",
-            [AgeRatingRatingEnum.EIGHTEEN] = "18"
-        };
-
-        private readonly static Dictionary<WebsiteCategoryEnum, string> websiteCategoryToStr = new Dictionary<WebsiteCategoryEnum, string>()
-        {
-            [WebsiteCategoryEnum.WEBSITE_ANDROID] = "Android",
-            [WebsiteCategoryEnum.WEBSITE_DISCORD] = "Discord",
-            [WebsiteCategoryEnum.WEBSITE_EPICGAMES] = "Epic",
-            [WebsiteCategoryEnum.WEBSITE_FACEBOOK] = "Facebook",
-            [WebsiteCategoryEnum.WEBSITE_GOG] = "GOG",
-            [WebsiteCategoryEnum.WEBSITE_INSTAGRAM] = "Instagram",
-            [WebsiteCategoryEnum.WEBSITE_IPAD] = "iPad",
-            [WebsiteCategoryEnum.WEBSITE_IPHONE] = "iPhone",
-            [WebsiteCategoryEnum.WEBSITE_ITCH] = "Itch",
-            [WebsiteCategoryEnum.WEBSITE_OFFICIAL] = "Official",
-            [WebsiteCategoryEnum.WEBSITE_REDDIT] = "Reddit",
-            [WebsiteCategoryEnum.WEBSITE_STEAM] = "Steam",
-            [WebsiteCategoryEnum.WEBSITE_TWITCH] = "Twitch",
-            [WebsiteCategoryEnum.WEBSITE_TWITTER] = "Twitter",
-            [WebsiteCategoryEnum.WEBSITE_WIKIA] = "Wikia",
-            [WebsiteCategoryEnum.WEBSITE_WIKIPEDIA] = "Wikipedia",
-            [WebsiteCategoryEnum.WEBSITE_YOUTUBE] = "YouTube",
-            [WebsiteCategoryEnum.WEBSITE_BLUESKY] = "Bluesky"
-        };
-
         private List<MetadataField> availableFields;
         public override List<MetadataField> AvailableFields
         {
@@ -278,15 +247,15 @@ namespace IGDBMetadata
             if (plugin.PlayniteApi.ApplicationSettings.AgeRatingOrgPriority == AgeRatingOrg.ESRB)
             {
                 return GameData.age_ratings_expanded.
-                    Where(a => a.category == AgeRatingCategoryEnum.ESRB).
-                    Select(a => new MetadataNameProperty($"ESRB {a.rating}")).
+                    Where(a => a.organization == 1).
+                    Select(a => new MetadataNameProperty($"ESRB {a.rating_category_expanded?.rating}")).
                     ToList();
             }
             else if (plugin.PlayniteApi.ApplicationSettings.AgeRatingOrgPriority == AgeRatingOrg.PEGI)
             {
                 return GameData.age_ratings_expanded.
-                    Where(a => a.category == AgeRatingCategoryEnum.PEGI).
-                    Select(a => new MetadataNameProperty("PEGI " + (pegiRatingToStr.TryGetValue(a.rating, out var val) ? val : "None"))).
+                    Where(a => a.organization == 2).
+                    Select(a => new MetadataNameProperty($"PEGI {a.rating_category_expanded?.rating}")).
                     ToList();
             }
 
@@ -338,7 +307,7 @@ namespace IGDBMetadata
 
             return GameData.websites_expanded.
                 Where(a => !a.url.IsNullOrEmpty()).
-                Select(a => new Link(websiteCategoryToStr.TryGetValue(a.category, out var val) ? val : "Uknown", a.url)).
+                Select(a => new Link(a.type_expanded?.type ?? "Uknown", a.url)).
                 ToList();
         }
 
