@@ -76,3 +76,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/IGDBMetadata_Builtin_2_11.pext
     Changelog:
       - Fixed Bluesky links showing up as "unknown"
+  - Version: 2.12
+    RequiredApiVersion: 6.5.0
+    ReleaseDate: 2025-07-29
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/IGDBMetadata_Builtin_2_12.pext
+    Changelog:
+      - Updated to work properly with the latest IGDB backend changes
