@@ -149,4 +149,9 @@ Packages:
     ReleaseDate: 2025-01-10
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_24.pext
     Changelog:
-      - Added alternative authentication method and updated original one to be more reliable
+  - Version: 2.25
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2025-08-06
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_25.pext
+    Changelog:
+      - Updated api endpoint (by X-dark)
