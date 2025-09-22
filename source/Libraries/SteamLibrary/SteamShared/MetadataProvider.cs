@@ -1,4 +1,5 @@
-﻿using Playnite.Common.Web;
+﻿using AngleSharp.Parser.Html;
+using Playnite.Common.Web;
 using Playnite.SDK;
 using Playnite.SDK.Models;
 using PlayniteExtensions.Common;
@@ -247,9 +248,28 @@ namespace Steam
             return metadata;
         }
 
-        internal string ParseDescription(string description)
+        public static string ParseDescription(string description)
         {
-            return description.Replace("%CDN_HOST_MEDIA_SSL%", "steamcdn-a.akamaihd.net");
+            description = description.Replace("%CDN_HOST_MEDIA_SSL%", "steamcdn-a.akamaihd.net");
+            var parser = new HtmlParser();
+            var page = parser.Parse(description);
+
+            foreach (var videoElem in page.QuerySelectorAll("video"))
+            {
+                var poster = videoElem.GetAttribute("poster");
+                if (!poster.IsNullOrWhiteSpace())
+                {
+                    var elem = page.CreateElement("img");
+                    elem.SetAttribute("src", poster);
+                    videoElem.Parent.ReplaceChild(elem, videoElem);
+                }
+                else
+                {
+                    videoElem.Parent.RemoveChild(videoElem);
+                }
+            }
+
+            return page.Body.InnerHtml;
         }
 
         public SteamGameMetadata GetGameMetadata(
