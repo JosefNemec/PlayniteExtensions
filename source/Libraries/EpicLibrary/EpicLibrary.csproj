@@ -176,6 +176,7 @@
     <Compile Include="Models\CatalogResponse.cs" />
     <Compile Include="Models\ErrorResponse.cs" />
     <Compile Include="Models\LauncherInstalled.cs" />
+    <Compile Include="Models\LibraryItemsResponse.cs" />
     <Compile Include="Models\OauthResponse.cs" />
     <Compile Include="EpicMetadataProvider.cs" />
     <Compile Include="Models\PlaytimesResponse.cs" />

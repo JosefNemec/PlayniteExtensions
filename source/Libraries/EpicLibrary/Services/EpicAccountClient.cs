@@ -44,6 +44,7 @@ namespace EpicLibrary.Services
         private readonly string assetsUrl = @"";
         private readonly string catalogUrl = @"";
         private readonly string playtimeUrl = @"";
+        private readonly string libraryItemsUrl = @"";
         private const string authEncodedString = "MzRhMDJjZjhmNDQxNGUyOWIxNTkyMTg3NmRhMzZmOWE6ZGFhZmJjY2M3Mzc3NDUwMzlkZmZlNTNkOTRmYzc2Y2Y=";
         private const string userAgent = @"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Vivaldi/7.1.3570.39";
 
@@ -53,7 +54,7 @@ namespace EpicLibrary.Services
             this.tokensPath = tokensPath;
             var oauthUrlMask = @"https://{0}/account/api/oauth/token";
             var accountUrlMask = @"https://{0}/account/api/public/account/";
-            var assetsUrlMask = @"https://{0}/launcher/api/public/assets/Windows?label=Live";
+            var libraryItemsUrlMask = @"https://{0}/library/api/public/items?includeMetadata=true&platform=Windows";
             var catalogUrlMask = @"https://{0}/catalog/api/shared/namespace/";
             var playtimeUrlMask = @"https://{0}/library/api/public/playtime/account/{1}/all";
 
@@ -65,7 +66,7 @@ namespace EpicLibrary.Services
                     var config = IniParser.Parse(File.ReadAllLines(EpicLauncher.PortalConfigPath));
                     oauthUrl = string.Format(oauthUrlMask, config["Portal.OnlineSubsystemMcp.OnlineIdentityMcp Prod"]["Domain"].TrimEnd('/'));
                     accountUrl = string.Format(accountUrlMask, config["Portal.OnlineSubsystemMcp.OnlineIdentityMcp Prod"]["Domain"].TrimEnd('/'));
-                    assetsUrl = string.Format(assetsUrlMask, config["Portal.OnlineSubsystemMcp.BaseServiceMcp Prod"]["Domain"].TrimEnd('/'));
+                    libraryItemsUrl = string.Format(libraryItemsUrlMask, config["Portal.OnlineSubsystemMcp.OnlineLibraryServiceMcp Prod"]["Domain"].TrimEnd('/'));
                     catalogUrl = string.Format(catalogUrlMask, config["Portal.OnlineSubsystemMcp.OnlineCatalogServiceMcp Prod"]["Domain"].TrimEnd('/'));
                     playtimeUrl = string.Format(playtimeUrlMask, config["Portal.OnlineSubsystemMcp.OnlineLibraryServiceMcp Prod"]["Domain"].TrimEnd('/'), "{0}");
                     loadedFromConfig = true;
@@ -80,7 +81,7 @@ namespace EpicLibrary.Services
             {
                 oauthUrl = string.Format(oauthUrlMask, "account-public-service-prod03.ol.epicgames.com");
                 accountUrl = string.Format(accountUrlMask, "account-public-service-prod03.ol.epicgames.com");
-                assetsUrl = string.Format(assetsUrlMask, "launcher-public-service-prod06.ol.epicgames.com");
+                libraryItemsUrl = string.Format(libraryItemsUrlMask, "library-service.live.use1a.on.epicgames.com");
                 catalogUrl = string.Format(catalogUrlMask, "catalog-public-service-prod06.ol.epicgames.com");
                 playtimeUrl = string.Format(playtimeUrlMask, "library-service.live.use1a.on.epicgames.com", "{0}");
             }
@@ -221,7 +222,20 @@ namespace EpicLibrary.Services
                 throw new Exception("User is not authenticated.");
             }
 
-            return InvokeRequest<List<Asset>>(assetsUrl, loadTokens()).GetAwaiter().GetResult().Item2;
+            var response = InvokeRequest<LibraryItemsResponse>(libraryItemsUrl, loadTokens()).GetAwaiter().GetResult();
+            var assets = new List<Asset>();
+            assets.AddRange(response.Item2.records);
+
+            string nextCursor = response.Item2.responseMetadata?.nextCursor;
+            while (nextCursor != null)
+            {
+                response = InvokeRequest<LibraryItemsResponse>(
+                    $"{libraryItemsUrl}&cursor={nextCursor}",
+                    loadTokens()).GetAwaiter().GetResult();
+                assets.AddRange(response.Item2.records);
+                nextCursor = response.Item2.responseMetadata.nextCursor;
+            }
+            return assets;
         }
 
         public List<PlaytimeItem> GetPlaytimeItems()

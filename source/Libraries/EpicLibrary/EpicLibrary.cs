@@ -120,7 +120,7 @@ namespace EpicLibrary
             }
 
             var playtimeItems = accountApi.GetPlaytimeItems();
-            foreach (var gameAsset in assets.Where(a => a.@namespace != "ue"))
+            foreach (var gameAsset in assets.Where(a => a.@namespace != "ue" && a.sandboxType != "PRIVATE" && !a.appName.IsNullOrEmpty()))
             {
                 if (cancelToken.IsCancellationRequested)
                 {
