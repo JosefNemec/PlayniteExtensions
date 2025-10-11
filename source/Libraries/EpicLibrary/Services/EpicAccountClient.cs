@@ -37,7 +37,7 @@ namespace EpicLibrary.Services
         private ILogger logger = LogManager.GetLogger();
         private IPlayniteAPI api;
         private string tokensPath;
-        private readonly string loginUrl = "https://www.epicgames.com/id/login";
+        private readonly string loginUrl = "https://www.epicgames.com/id/login?responseType=code";
         private readonly string authCodeUrl = "https://www.epicgames.com/id/api/redirect?clientId=34a02cf8f4414e29b15921876da36f9a&responseType=code";
         private readonly string oauthUrl = @"";
         private readonly string accountUrl = @"";
@@ -45,7 +45,7 @@ namespace EpicLibrary.Services
         private readonly string catalogUrl = @"";
         private readonly string playtimeUrl = @"";
         private const string authEncodedString = "MzRhMDJjZjhmNDQxNGUyOWIxNTkyMTg3NmRhMzZmOWE6ZGFhZmJjY2M3Mzc3NDUwMzlkZmZlNTNkOTRmYzc2Y2Y=";
-        private const string userAgent = @"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Vivaldi/7.1.3570.39";
+        private const string userAgent = @"Mozilla/5.0 (Windows NT 10.0; Win64; x64) EpicGamesLauncher";
 
         public EpicAccountClient(IPlayniteAPI api, string tokensPath)
         {
@@ -106,6 +106,7 @@ namespace EpicLibrary.Services
         {
             var loggedIn = false;
             var apiRedirectContent = string.Empty;
+            var authorizationCode = "";
 
             using (var view = api.WebViews.CreateView(new WebViewSettings
             {
@@ -118,16 +119,17 @@ namespace EpicLibrary.Services
                 view.LoadingChanged += async (s, e) =>
                 {
                     var address = view.GetCurrentAddress();
-                    if (address.Contains(@"id/api/redirect?clientId=") && !e.IsLoading)
+                    var pageText = await view.GetPageTextAsync();
+                    if (!pageText.IsNullOrEmpty() && pageText.Contains(@"localhost") && !e.IsLoading)
                     {
-                        apiRedirectContent = await view.GetPageTextAsync();
-                        loggedIn = true;
+                        var source = await view.GetPageSourceAsync();
+                        var matches = Regex.Matches(source, @"localhost\/launcher\/authorized\?code=([a-zA-Z0-9]+)", RegexOptions.IgnoreCase);
+                        if (matches.Count > 0)
+                        {
+                            authorizationCode = matches[0].Groups[1].Value;
+                            loggedIn = true;
+                        }
                         view.Close();
-                    }
-
-                    if (address.EndsWith(@"epicgames.com/account/personal") && !e.IsLoading)
-                    {
-                        view.Navigate(authCodeUrl);
                     }
                 };
 
@@ -141,12 +143,6 @@ namespace EpicLibrary.Services
                 return;
             }
 
-            if (apiRedirectContent.IsNullOrEmpty())
-            {
-                return;
-            }
-
-            var authorizationCode = Serialization.FromJson<ApiRedirectResponse>(apiRedirectContent).authorizationCode;
             FileSystem.DeleteFile(tokensPath);
             if (string.IsNullOrEmpty(authorizationCode))
             {
