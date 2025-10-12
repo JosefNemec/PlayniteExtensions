@@ -14,5 +14,6 @@ namespace EpicLibrary.Models
         public string catalogItemId;
         public string @namespace;
         public string assetId;
+        public string sandboxType;
     }
 }
