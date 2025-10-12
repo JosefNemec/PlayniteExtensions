@@ -219,3 +219,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_32.pext
     Changelog:
       - Fixed issues with description images not rendering properly (will still require Playnite update to fix certain images rendering corrupted).
+  - Version: 2.33
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-10-12
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_33.pext
+    Changelog:
+      - Added option to configure list of game ids to import "manually". As a workaround for games where Steam API doesn't return specific games as part of user's library.
