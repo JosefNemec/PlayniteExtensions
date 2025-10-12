@@ -719,6 +719,33 @@ namespace SteamLibrary
                 }
             }
 
+            if (SettingsViewModel.Settings.ExtraIDsToImport.HasItems())
+            {
+                foreach (var extraItem in SettingsViewModel.Settings.ExtraIDsToImport)
+                {
+                    if (extraItem.IsNullOrWhiteSpace())
+                        continue;
+
+                    var split = extraItem.Split(';');
+                    if (split.Length < 2)
+                        continue;
+
+                    if (!uint.TryParse(split[0], out var appId))
+                        continue;
+
+                    if (allGames.Any(a => a.GameId == split[0]))
+                        continue;
+
+                    allGames.Add(new GameMetadata
+                    {
+                        GameId = split[0],
+                        Name = split[1],
+                        Source = new MetadataNameProperty("Steam"),
+                        Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                    });
+                }
+            }
+
             if (SettingsViewModel.Settings.ConnectAccount)
             {
                 try

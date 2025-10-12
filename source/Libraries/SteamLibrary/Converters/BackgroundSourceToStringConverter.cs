@@ -40,4 +40,33 @@ namespace SteamLibrary
             return this;
         }
     }
+
+    public class StringListToStringConverter : MarkupExtension, IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            if (value is List<string> list)
+                return string.Join("\r\n", list);
+
+            return string.Empty;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            if (value is string str)
+            {
+                if (str.IsNullOrWhiteSpace())
+                    return null;
+
+                return str.Split(new char[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+            }
+
+            return null;
+        }
+
+        public override object ProvideValue(IServiceProvider serviceProvider)
+        {
+            return this;
+        }
+    }
 }

@@ -298,14 +298,27 @@
         </TabItem>
         <TabItem Header="{DynamicResource LOCSettingsAdvancedLabel}"
                  Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}">
-            <StackPanel Margin="20">
-                <CheckBox Content="{DynamicResource LOCSteamShowFriendsButton}"
+            <DockPanel Margin="20">
+                <CheckBox Content="{DynamicResource LOCSteamShowFriendsButton}" DockPanel.Dock="Top"
                           IsChecked="{Binding Settings.ShowFriendsButton}" Margin="0,10,0,10" />
-                <CheckBox Content="{DynamicResource LOCSteamShowGameLaunchMenuInDesktopMode}"
+                <CheckBox Content="{DynamicResource LOCSteamShowGameLaunchMenuInDesktopMode}" DockPanel.Dock="Top"
                           IsChecked="{Binding Settings.ShowSteamLaunchMenuInDesktopMode}"/>
-                <CheckBox Content="{DynamicResource LOCSteamShowGameLaunchMenuInFullscreenMode}"
+                <CheckBox Content="{DynamicResource LOCSteamShowGameLaunchMenuInFullscreenMode}" DockPanel.Dock="Top"
                           IsChecked="{Binding Settings.ShowSteamLaunchMenuInFullscreenMode}" Margin="0,10,0,10"/>
-            </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,10" DockPanel.Dock="Top">
+                    <TextBlock Text="Extra game IDs to import:" />
+                    <TextBlock VerticalAlignment="Center" Margin="10,0,0,0">
+                        <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Steam-troubleshooting#importing-games-manually"
+                                    Command="{x:Static pcmd:GlobalCommands.NavigateUrlCommand}"
+                                    CommandParameter="{Binding NavigateUri, RelativeSource={RelativeSource Self}}">
+                            <Run Text="How to configure?" />
+                        </Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+                <TextBox AcceptsReturn="True"
+                         Text="{Binding Settings.ExtraIDsToImport, Converter={steam:StringListToStringConverter}}"
+                         DockPanel.Dock="Top" VerticalScrollBarVisibility="Auto" />
+            </DockPanel>
         </TabItem>
     </TabControl>
 </UserControl>
