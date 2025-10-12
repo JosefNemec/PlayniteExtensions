@@ -155,3 +155,10 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_25.pext
     Changelog:
       - Updated api endpoint (by X-dark)
+  - Version: 2.26
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2025-10-12
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_26.pext
+    Changelog:
+      - Fixed not all EA games importing correctly (by hawkeye116477)
+      - Fixed primary authentication method not working properly (by hawkeye116477)
