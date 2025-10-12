@@ -41,7 +41,6 @@ namespace EpicLibrary.Services
         private readonly string authCodeUrl = "https://www.epicgames.com/id/api/redirect?clientId=34a02cf8f4414e29b15921876da36f9a&responseType=code";
         private readonly string oauthUrl = @"";
         private readonly string accountUrl = @"";
-        private readonly string assetsUrl = @"";
         private readonly string catalogUrl = @"";
         private readonly string playtimeUrl = @"";
         private readonly string libraryItemsUrl = @"";
