@@ -9,7 +9,6 @@ $extensionPaths = @{
     'GOG' = 'source\Libraries\GogLibrary\'
     'Humble' = 'source\Libraries\HumbleLibrary\'
     'itch.io' = 'source\Libraries\ItchioLibrary\'
-    'Origin' = 'source\Libraries\OriginLibrary\'
     'Rockstar' = 'source\Libraries\RockstarLibrary\'
     'Steam' = 'source\Libraries\SteamLibrary\'
     'Ubisoft' = 'source\Libraries\UplayLibrary\'

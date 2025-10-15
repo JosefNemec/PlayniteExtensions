@@ -17,7 +17,6 @@ You can install these via Playnite's built-in add-on browser or opening followin
 `GOG` playnite://playnite/installaddon/GogLibrary_Builtin  
 `Humble` playnite://playnite/installaddon/HumbleLibrary_Builtin  
 `itch.io` playnite://playnite/installaddon/ItchioLibrary_Builtin  
-`Origin` playnite://playnite/installaddon/OriginLibrary_Builtin  
 `Rockstar launcher` playnite://playnite/installaddon/Rockstar_Games_Library  
 `Steam` playnite://playnite/installaddon/SteamLibrary_Builtin  
 `Ubisoft Connect` playnite://playnite/installaddon/UplayLibrary_Builtin  
