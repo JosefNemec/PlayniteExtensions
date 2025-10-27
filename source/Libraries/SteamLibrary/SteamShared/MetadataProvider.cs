@@ -254,6 +254,7 @@ namespace Steam
             var parser = new HtmlParser();
             var page = parser.Parse(description);
 
+            // Playnite can't render videos so we swap these for thumbnail image instead
             foreach (var videoElem in page.QuerySelectorAll("video"))
             {
                 var poster = videoElem.GetAttribute("poster");
@@ -267,6 +268,14 @@ namespace Steam
                 {
                     videoElem.Parent.RemoveChild(videoElem);
                 }
+            }
+
+            // There's a bug in Playnite's HTML renderer that doesn't properly respect auto height.
+            // As a workaround we just remove explicit height that prevent HTML component from respecting height value.
+            foreach (var imgElem in page.QuerySelectorAll("img"))
+            {
+                imgElem.RemoveAttribute("height");
+                imgElem.RemoveAttribute("width");
             }
 
             return page.Body.InnerHtml;
