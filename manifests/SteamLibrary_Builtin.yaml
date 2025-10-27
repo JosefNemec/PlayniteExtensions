@@ -225,3 +225,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_33.pext
     Changelog:
       - Added option to configure list of game ids to import "manually". As a workaround for games where Steam API doesn't return specific games as part of user's library.
+  - Version: 2.34
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-10-27
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_34.pext
+    Changelog:
+      - Fixed description images sometimes don't displaying at correct aspect ratio

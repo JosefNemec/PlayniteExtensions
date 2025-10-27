@@ -130,3 +130,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_19.pext
     Changelog:
       - Fixed issues with description images not rendering properly (will still require Playnite update to fix certain images rendering corrupted).
+  - Version: 2.20
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-10-27
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_20.pext
+    Changelog:
+      - Fixed description images sometimes don't displaying at correct aspect ratio
