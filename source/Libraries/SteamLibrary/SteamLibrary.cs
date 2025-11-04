@@ -447,7 +447,30 @@ namespace SteamLibrary
             var userId = ulong.Parse(settings.UserId);
             if (settings.IsPrivateAccount)
             {
-                return GetLibraryGames(userId, GetPrivateOwnedGames(userId, settings.RuntimeApiKey, settings.IncludeFreeSubGames)?.response?.games);
+                var games = GetLibraryGames(userId, GetPrivateOwnedGames(userId, settings.RuntimeApiKey, settings.IncludeFreeSubGames)?.response?.games).ToDictionary(g => g.GameId);
+
+                using (var appListService = new SteamAppListService(settings.RuntimeApiKey, GetPluginUserDataPath(), PlayniteApi.ApplicationInfo.ApplicationVersion))
+                {
+                    var dynamicStoreService = new SteamDynamicStoreService(new WebViewDownloader(PlayniteApi.WebViews));
+                    var storeLibraryService = new SteamStoreLibraryService(dynamicStoreService, appListService);
+                    var storeGames = storeLibraryService.GetGames();
+                    foreach (var game in storeGames)
+                    {
+                        var gameId = game.Key.ToString();
+                        if (games.ContainsKey(gameId))
+                            continue;
+
+                        games.Add(gameId, new GameMetadata
+                        {
+                            Source = new MetadataNameProperty("Steam"),
+                            Name = game.Value.RemoveTrademarks().Trim(),
+                            GameId = gameId,
+                            Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                        });
+                    }
+
+                    return games.Values.ToList();
+                }
             }
             else
             {
