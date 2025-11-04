@@ -15,7 +15,6 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -53,10 +52,9 @@ namespace SteamLibrary
     {
         private static readonly ILogger logger = LogManager.GetLogger();
         private readonly Configuration config;
-        internal SteamServicesClient ServicesClient;
-        internal TopPanelItem TopPanelFriendsButton;
+        internal readonly TopPanelItem TopPanelFriendsButton;
 
-        private static readonly string[] firstPartyModPrefixes = new string[] { "bshift", "cstrike", "czero", "dmc", "dod", "gearbox", "ricochet", "tfc", "valve" };
+        private static readonly string[] firstPartyModPrefixes = { "bshift", "cstrike", "czero", "dmc", "dod", "gearbox", "ricochet", "tfc", "valve" };
 
         public SteamLibrary(IPlayniteAPI api) : base(
             "Steam",
@@ -69,7 +67,6 @@ namespace SteamLibrary
         {
             SettingsViewModel = new SteamLibrarySettingsViewModel(this, PlayniteApi);
             config = GetPluginConfiguration<Configuration>();
-            ServicesClient = new SteamServicesClient(config.ServicesEndpoint, api.ApplicationInfo.ApplicationVersion);
             TopPanelFriendsButton = new TopPanelItem()
             {
                 Icon = new TextBlock
@@ -450,7 +447,7 @@ namespace SteamLibrary
             var userId = ulong.Parse(settings.UserId);
             if (settings.IsPrivateAccount)
             {
-                return GetLibraryGames(userId, GetPrivateOwnedGames(userId, settings.RutnimeApiKey, settings.IncludeFreeSubGames)?.response?.games);
+                return GetLibraryGames(userId, GetPrivateOwnedGames(userId, settings.RuntimeApiKey, settings.IncludeFreeSubGames)?.response?.games);
             }
             else
             {
@@ -528,11 +525,11 @@ namespace SteamLibrary
                         var stringLibrary = webClient.DownloadString(string.Format(libraryUrl, apiKey, userId));
                         return Serialization.FromJson<GetOwnedGamesResult>(stringLibrary);
                     }
-                    catch (WebException e) when (e.Response is HttpWebResponse respose)
+                    catch (WebException e) when (e.Response is HttpWebResponse response)
                     {
                         // For some reason Steam Web API likes to return 429 even if you
                         // don't make a request in several hours, so just retry couple times.
-                        if (respose.StatusCode == (HttpStatusCode)429)
+                        if (response.StatusCode == (HttpStatusCode)429)
                         {
                             logger.Debug("Steam GetOwnedGames returned 429, trying again.");
                             Thread.Sleep(5_000);
@@ -759,7 +756,7 @@ namespace SteamLibrary
                             {
                                 try
                                 {
-                                    var accGames = GetPrivateOwnedGames(id, account.RutnimeApiKey, SettingsViewModel.Settings.IncludeFreeSubGames);
+                                    var accGames = GetPrivateOwnedGames(id, account.RuntimeApiKey, SettingsViewModel.Settings.IncludeFreeSubGames);
                                     var parsedGames = GetLibraryGames(id, accGames.response.games, account.ImportPlayTime);
                                     foreach (var accGame in parsedGames)
                                     {

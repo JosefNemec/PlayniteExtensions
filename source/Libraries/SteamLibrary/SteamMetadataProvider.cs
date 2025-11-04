@@ -1,19 +1,9 @@
-﻿using Playnite.SDK;
+﻿using Playnite.Common.Web;
+using Playnite.SDK;
 using Playnite.SDK.Models;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Tasks;
 using Steam;
-using Playnite.Common.Web;
 using SteamLibrary.SteamShared;
+using System;
 
 namespace SteamLibrary
 {

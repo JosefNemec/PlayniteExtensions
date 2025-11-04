@@ -187,7 +187,6 @@
     <Compile Include="Converters\BackgroundSourceToStringConverter.cs" />
     <Compile Include="Environment.cs" />
     <Compile Include="GameExtension.cs" />
-    <Compile Include="AppState.cs" />
     <Compile Include="LocalizationKeys.cs" />
     <Compile Include="Models\GetOwnedGamesResult.cs" />
     <Compile Include="Models\LocalSteamUser.cs" />
@@ -197,7 +196,6 @@
     <Compile Include="SteamShared\SteamTagNamer.cs" />
     <Compile Include="SteamShared\StoreAppDetailsResult.cs" />
     <Compile Include="SteamClient.cs" />
-    <Compile Include="Services\SteamServicesClient.cs" />
     <Compile Include="SteamShared\MetadataProvider.cs" />
     <Compile Include="SteamShared\SharedSteamSettingsViewModel.cs" />
     <Compile Include="SteamShared\TagCategories\TagIdCategory.cs" />

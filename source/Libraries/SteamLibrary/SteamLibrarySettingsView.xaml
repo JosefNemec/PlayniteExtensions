@@ -122,7 +122,7 @@
                             <TextBlock Text="{DynamicResource LOCSteamAPIKey}"
                                        VerticalAlignment="Center" MinWidth="100" />
                             <PasswordBox steam:PasswordBoxAssistant.BindPassword="True"
-                                         steam:PasswordBoxAssistant.BoundPassword="{Binding Settings.RutnimeApiKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Delay=150}"
+                                         steam:PasswordBoxAssistant.BoundPassword="{Binding Settings.RuntimeApiKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Delay=150}"
                                          Width="200" VerticalAlignment="Center" Margin="10,0,10,0" />
                             <TextBlock VerticalAlignment="Center">
                                 <Hyperlink NavigateUri="https://steamcommunity.com/dev/apikey"
@@ -182,7 +182,7 @@
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <PasswordBox steam:PasswordBoxAssistant.BindPassword="True"
-                                                 steam:PasswordBoxAssistant.BoundPassword="{Binding RutnimeApiKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                 steam:PasswordBoxAssistant.BoundPassword="{Binding RuntimeApiKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                                  Background="{DynamicResource NormalBrushDark}"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
