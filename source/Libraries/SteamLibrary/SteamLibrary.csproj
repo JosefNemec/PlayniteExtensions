@@ -165,9 +165,6 @@
     <Compile Include="..\..\..\playniterepo\source\playnite\converters\NegateConverter.cs">
       <Link>Shared\NegateConverter.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Services\BaseServicesClient.cs">
-      <Link>Services\BaseServicesClient.cs</Link>
-    </Compile>
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Services\GenericResponse.cs">
       <Link>Services\GenericResponse.cs</Link>
     </Compile>

@@ -137,6 +137,13 @@
                                   Margin="0,5,0,0"
                                   Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}"
                                   Content="{DynamicResource LOCSteamImportFreeSubGames}"/>
+                        <CheckBox IsChecked="{Binding Settings.IncludeFreeGames}"
+                                  Margin="0,5,0,0"
+                                  Content="Include free games (requires Steam store login)"/>
+                        <Button Content="{DynamicResource LOCSteamAuthenticateLabel}"
+                                Command="{Binding StoreLoginCommand}"
+                                IsEnabled="{Binding Settings.EnableApiKeyWebAuthentication}"
+                                Margin="25,15,5,5" HorizontalAlignment="Left"/>
                     </StackPanel>
                 </StackPanel>
                 <TextBlock VerticalAlignment="Center" Margin="0,15,0,0">

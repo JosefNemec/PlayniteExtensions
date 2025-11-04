@@ -449,7 +449,7 @@ namespace SteamLibrary
             {
                 var games = GetLibraryGames(userId, GetPrivateOwnedGames(userId, settings.RuntimeApiKey, settings.IncludeFreeSubGames)?.response?.games).ToDictionary(g => g.GameId);
 
-                using (var appListService = new SteamAppListService(settings.RuntimeApiKey, GetPluginUserDataPath(), PlayniteApi.ApplicationInfo.ApplicationVersion))
+                using (var appListService = new SteamAppListService(settings.RuntimeApiKey, GetPluginUserDataPath()))
                 {
                     var dynamicStoreService = new SteamDynamicStoreService(new WebViewDownloader(PlayniteApi.WebViews));
                     var storeLibraryService = new SteamStoreLibraryService(dynamicStoreService, appListService);
