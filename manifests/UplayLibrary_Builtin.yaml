@@ -54,3 +54,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/UplayLibrary_Builtin_2_8.pext
     Changelog:
       - Fixed plugin not importing games after the latest Ubisoft Connect client update (dy darklinkpower)
+  - Version: 2.9
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-11-06
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/UplayLibrary_Builtin_2_9.pext
+    Changelog:
+      - Fixed plugin failing to load protobuf dependency
