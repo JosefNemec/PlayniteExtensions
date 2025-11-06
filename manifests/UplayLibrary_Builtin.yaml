@@ -48,3 +48,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/UplayLibrary_Builtin_2_7.pext
     Changelog:
       - Added settings notice about no need to authenticate an account
+  - Version: 2.8
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-11-06
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/UplayLibrary_Builtin_2_8.pext
+    Changelog:
+      - Fixed plugin not importing games after the latest Ubisoft Connect client update (dy darklinkpower)
