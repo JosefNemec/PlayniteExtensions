@@ -171,24 +171,8 @@ namespace HumbleLibrary
             return games.OrderBy(a => a.Name).ToList();
         }
 
-        public List<Order.SubProduct> GetLibraryGames()
+        public List<Order.SubProduct> GetLibraryGames(List<Order> orders)
         {
-            var libraryGames = new List<Game>();
-            var orders = new List<Order>();
-            using (var view = PlayniteApi.WebViews.CreateOffscreenView(
-                new WebViewSettings
-                {
-                    JavaScriptEnabled = false,
-                    UserAgent = UserAgent
-                }))
-            {
-                var api = new HumbleAccountClient(view);
-                var keys = api.GetLibraryKeys();
-                orders = api.GetOrders(keys);
-            }
-
-            // Humble will return null items in library response on some accounts
-            orders = orders.Where(a => a != null).ToList();
             var selectedProducts = new List<Order.SubProduct>();
             var allTpks = orders.SelectMany(a => a.tpkd_dict?.all_tpks).ToList();
 
@@ -230,6 +214,97 @@ namespace HumbleLibrary
             return selectedProducts;
         }
 
+        public List<GameMetadata> GetLibraryExtras(List<Order> orders)
+        {
+            var extras = new List<GameMetadata>();
+            foreach (var order in orders)
+            {
+                var gameKey = order.gamekey;
+                if (!order.subproducts.HasItems())
+                {
+                    continue;
+                }
+
+                foreach (var product in order.subproducts)
+                {
+                    var productName = product.human_name.RemoveTrademarks();
+                    if (!product.downloads.HasItems())
+                    {
+                        continue;
+                    }
+
+                    foreach (var download in product.downloads)
+                    {
+                        var downloadName = download.machine_name;
+                        if (!download.download_struct.HasItems())
+                        {
+                            continue;
+                        }
+
+                        switch (download.platform)
+                        {
+                            case "windows":
+                            case "mac":
+                            case "linux":
+                                continue;
+                            case "asmjs":
+                                var extraAsGame = new GameMetadata()
+                                {
+                                    GameId = $"{productName}_{downloadName}",
+                                    Source = new MetadataNameProperty("Humble"),
+                                    Name = $"{productName} asm.js version",
+                                    Categories = new HashSet<MetadataProperty>(){new MetadataNameProperty("extras")}, // TODO customizable category across plugins?
+                                    Links = new List<Link>(){new Link("Run_me", $"https://www.humblebundle.com/play/asmjs/{downloadName}/{gameKey}")} // TODO use install action to launch browser?
+                                    // TODO any way to ignore post-actions from other plugins, eg search for metadata?
+                                };
+                                extras.Add(extraAsGame);
+                                continue;
+                        }
+
+                        foreach (var actualDownload in download.download_struct)
+                        {
+                            var url = actualDownload.url.web;
+                            if (string.IsNullOrWhiteSpace(url))
+                            {
+                                continue;
+                            }
+                            var extraAsGame = new GameMetadata()
+                            {
+                                GameId = $"{productName}_{downloadName}_{actualDownload.name}",
+                                Source = new MetadataNameProperty("Humble"),
+                                Name = $"{productName} {download.platform} {actualDownload.name}",
+                                Categories = new HashSet<MetadataProperty>(){new MetadataNameProperty("extras")}, // TODO customizable category across plugins?
+                                Links = new List<Link>(){new Link("Download_me", url)} // TODO use install action to launch browser or DL with playnite itself?
+                                // TODO any way to ignore post-actions from other plugins, eg search for metadata?
+                            };
+                            extras.Add(extraAsGame);
+                        }
+
+
+                    }
+                }
+            }
+
+            return extras;
+        }
+
+        private List<Order> GetAllOrders()
+        {
+            using (var view = PlayniteApi.WebViews.CreateOffscreenView(
+                       new WebViewSettings
+                       {
+                           JavaScriptEnabled = false,
+                           UserAgent = UserAgent
+                       }))
+            {
+                var api = new HumbleAccountClient(view);
+                var keys = api.GetLibraryKeys();
+                var orders = api.GetOrders(keys);
+                // Humble will return null items in library response on some accounts
+                return orders.Where(a => a != null).ToList();
+            }
+        }
+
         public override IEnumerable<Game> ImportGames(LibraryImportGamesArgs args)
         {
             var importedGames = new List<Game>();
@@ -245,8 +320,9 @@ namespace HumbleLibrary
                 {
                     if (SettingsViewModel.Settings.ImportGeneralLibrary)
                     {
-                        var selectedProducts = GetLibraryGames();
-                        foreach (var product in selectedProducts)
+                        var orders = GetAllOrders();
+                        var gameProducts = GetLibraryGames(orders);
+                        foreach (var product in gameProducts)
                         {
                             var gameId = GetGameId(product);
                             if (PlayniteApi.ApplicationSettings.GetGameExcludedFromImport(gameId, Id))
@@ -264,6 +340,19 @@ namespace HumbleLibrary
                                     Icon = product.icon.IsNullOrEmpty() ? null : new MetadataFile(product.icon),
                                     Source = new MetadataNameProperty("Humble")
                                 }, this));
+                            }
+                        }
+
+                        if (SettingsViewModel.Settings.ImportGameExtras)
+                        {
+                            var extras = GetLibraryExtras(orders);
+                            foreach (var extra in extras)
+                            {
+                                var alreadyImported = PlayniteApi.Database.Games.FirstOrDefault(a => a.PluginId == Id && a.GameId == extra.GameId);
+                                if (alreadyImported == null)
+                                {
+                                    importedGames.Add(PlayniteApi.Database.ImportGame(extra, this));
+                                }
                             }
                         }
                     }

@@ -26,6 +26,8 @@
   <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Import games available as part of Humble Choice subscription.</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">Import Humble Library games</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Import standard Humble store purchases and bundle purchases.</sys:String>
+  <sys:String x:Key="LOCHumbleImportGameExtras">Import game extras</sys:String>
+  <sys:String x:Key="LOCHumbleImportGameExtrasTooltip">Import game extras (soundtracks, artwork, guides, ...) when importing games</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Enable to skip importing games that require third-party clients,
 including stores already managed in Playnite, to prevent duplicates.</sys:String>
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Import if DRM free version is available</sys:String>

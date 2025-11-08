@@ -298,7 +298,45 @@ namespace GogLibrary
                     Logger.Warn("Failed to obtain library stats data.");
                 }
 
-                return LibraryGamesToGames(libGames).ToList();
+                var result = LibraryGamesToGames(libGames).ToList();
+
+                if (SettingsViewModel.Settings.ImportGameExtras)
+                {
+                    var extras = new List<GameMetadata>();
+                    foreach (var game in result)
+                    {
+                        try
+                        {
+                            var gogExtras = api.GetOwnedGameDetails(game.GameId).Extras;
+                            foreach (var x in gogExtras)
+                            {
+                                var id = x.ManualUrl.Split('/').Last();
+                                if (!long.TryParse(id, out _))
+                                {
+                                    continue;
+                                }
+
+                                var extraAsGame = new GameMetadata()
+                                {
+                                    GameId = $"{game.GameId}_{id}",
+                                    Source = new MetadataNameProperty("GOG"),
+                                    Name = $"{game.Name} {x.Name.RemoveTrademarks()}",
+                                    Categories = new HashSet<MetadataProperty>(){new MetadataNameProperty("extras")}, // TODO customizable category across plugins?
+                                    Links = new List<Link>(){new Link("Download_me", $"https://www.gog.com{x.ManualUrl}")} // TODO use install action to launch browser or DL with playnite itself?
+                                    // TODO any way to ignore post-actions from other plugins, eg search for metadata?
+                                };
+                                extras.Add(extraAsGame);
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            logger.Error(e, $"Failed to get extras for gog game: {game.GameId} {game.Name}.");
+                        }
+                    }
+                    result.AddRange(extras);
+                }
+
+                return result;
             }
         }
 

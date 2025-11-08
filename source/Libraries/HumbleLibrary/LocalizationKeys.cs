@@ -1,6 +1,6 @@
 ///
 /// DO NOT MODIFY! Automatically generated via UpdateLocExtFiles.ps1 script.
-/// 
+///
 namespace System
 {
     public static class LOC
@@ -109,6 +109,14 @@ namespace System
         /// Import standard Humble store purchases and bundle purchases.
         /// </summary>
         public const string HumbleGeneralLibraryTooltip = "LOCHumbleGeneralLibraryTooltip";
+        /// <summary>
+        /// Import game extras
+        /// </summary>
+        public const string HumbleImportGameExtras = "LOCHumbleImportGameExtras";
+        /// <summary>
+        /// Import game extras (soundtracks, artwork, guides, ...) when importing games
+        /// </summary>
+        public const string HumbleImportGameExtrasTooltip = "LOCHumbleImportGameExtrasTooltip";
         /// <summary>
         /// Enable to skip importing games that require third-party clients,
         /// </summary>

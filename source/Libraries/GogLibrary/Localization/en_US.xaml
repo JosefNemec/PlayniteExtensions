@@ -31,4 +31,5 @@ Note that the Account Name option only works for accounts whose game libraries h
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">If enabled, the install process will be automatically started without needing user interaction to the configured default install location.
 If disabled, the game page will be opened to manually start the install process.</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Use vertical covers</sys:String>
+  <sys:String x:Key="LOCGOGSettingsImportGameExtras">Also import game extras</sys:String>
 </ResourceDictionary>
