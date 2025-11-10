@@ -62,7 +62,7 @@ namespace SteamLibrary.Services
 
         private AppListResponseRoot GetOnline(uint lastModifiedSince, uint? lastAppId)
         {
-            var url = $"https://api.steampowered.com/IStoreService/GetAppList/v1/?key={apiKey}&include_games=true&include_software=true&include_videos=true&if_modified_since={lastModifiedSince}";
+            var url = $"https://api.steampowered.com/IStoreService/GetAppList/v1/?key={apiKey}&include_games=true&include_software=true&include_videos=true&include_dlc=false&include_hardware=false&if_modified_since={lastModifiedSince}&max_results=50000";
             if (lastAppId != null)
                 url += $"&last_appid={lastAppId}";
 

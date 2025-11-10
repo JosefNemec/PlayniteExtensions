@@ -121,8 +121,8 @@ namespace SteamLibrary
             }
         }
 
-        public RelayCommand<object> LoginCommand => new RelayCommand<object>(_ => { Login("https://steamcommunity.com/login/home/?goto=", SteamCommunityLoginCheck); });
-        public RelayCommand<object> StoreLoginCommand => new RelayCommand<object>(_ => { Login("https://store.steampowered.com/login/?redir=&redir_ssl=1", SteamStoreLoginCheck); });
+        public RelayCommand<object> LoginCommand => new RelayCommand<object>(_ => Login("https://steamcommunity.com/login/home/?goto=", SteamCommunityLoginCheck));
+        public RelayCommand<object> StoreLoginCommand => new RelayCommand<object>(_ => Login("https://store.steampowered.com/login/?redir=&redir_ssl=1", SteamStoreLoginCheck));
 
         public bool IsFirstRunUse { get; set; }
 
@@ -296,9 +296,12 @@ namespace SteamLibrary
             try
             {
                 var webView = (IWebView)s;
-                Settings.UserId = await GetSteamStoreUserId(webView);
-                if (Settings.UserId != null)
+                var userId = await GetSteamStoreUserId(webView);
+                if (userId != null)
+                {
+                    Settings.UserId = userId;
                     webView.Close();
+                }
             }
             catch (Exception ex)
             {
