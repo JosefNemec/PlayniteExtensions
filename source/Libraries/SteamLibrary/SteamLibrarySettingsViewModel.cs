@@ -80,13 +80,13 @@ namespace SteamLibrary
                 {
                     if (Settings.IsPrivateAccount)
                     {
-                        var res = Plugin.GetPrivateOwnedGames(ulong.Parse(Settings.UserId), Settings.RutnimeApiKey, true);
+                        var res = Plugin.GetOwnedGamesApiKey(ulong.Parse(Settings.UserId), Settings.RutnimeApiKey, true);
                         return res.response?.games.HasItems() == true;
                     }
                     else
                     {
-                        var res = Plugin.GetLibraryGamesViaProfilePage(Settings);
-                        return res.bViewingOwnProfile;
+                        var userToken = Plugin.GetAccessToken();
+                        return userToken.AccessToken != null;
                     }
                 }
                 catch (Exception e)
