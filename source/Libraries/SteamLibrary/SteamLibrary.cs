@@ -451,7 +451,7 @@ namespace SteamLibrary
             var userId = ulong.Parse(settings.UserId);
             if (settings.IsPrivateAccount)
             {
-                return GetLibraryGames(userId, GetOwnedGamesApiKey(userId, settings.RutnimeApiKey, settings.IncludeFreeSubGames)?.response?.games);
+                return GetLibraryGames(userId, GetOwnedGamesApiKey(userId, settings.RuntimeApiKey, settings.IncludeFreeSubGames)?.response?.games);
             }
             else
             {
