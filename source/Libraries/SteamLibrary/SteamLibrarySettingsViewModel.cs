@@ -311,6 +311,14 @@ namespace SteamLibrary
 
         private static async Task<string> GetSteamStoreUserId(IWebView webView)
         {
+            int i = 0;
+            do
+            {
+                await Task.Delay(500);
+                i++;
+            }
+            while (i < 5 && !webView.CanExecuteJavascriptInMainFrame);
+
             var source = await webView.GetPageSourceAsync();
 
             var idMatch = Regex.Match(source, @"\bhttps://steamcommunity\.com/profiles/([0-9]+)/notifications\b");
