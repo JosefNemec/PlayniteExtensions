@@ -13,6 +13,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Controls;
@@ -54,7 +55,8 @@ namespace SteamLibrary
         private readonly Configuration config;
         internal readonly TopPanelItem TopPanelFriendsButton;
 
-        private static readonly string[] firstPartyModPrefixes = { "bshift", "cstrike", "czero", "dmc", "dod", "gearbox", "ricochet", "tfc", "valve" };
+        private static readonly string[] firstPartyModPrefixes = new string[] { "bshift", "cstrike", "czero", "dmc", "dod", "gearbox", "ricochet", "tfc", "valve" };
+        private static readonly Regex steamItemPattern = new Regex(@"^(.*):\s*https://store.steampowered.com/app/(\d+)$", RegexOptions.Compiled);
 
         public SteamLibrary(IPlayniteAPI api) : base(
             "Steam",
@@ -90,6 +92,52 @@ namespace SteamLibrary
                 },
                 Visible = SettingsViewModel.Settings.ShowFriendsButton
             };
+        }
+
+        /// <summary>
+        /// Parse a string in Steam drag-and-drop format or custom Playnite format
+        /// </summary>
+        /// <example>Counter-Strike: Source: https://store.steampowered.com/app/240</example>
+        /// <example>240;Counter-Strike: Source</example>
+        /// <returns>id and name</returns>
+        internal static Tuple<string,string> ParseExtraIdItem(string value)
+        {
+            if (value.IsNullOrWhiteSpace())
+            {
+                return null;
+            }
+
+            string idToken;
+            string nameToken;
+            var match = steamItemPattern.Match(value);
+            if (match.Success)
+            {
+                idToken = match.Groups[2].Value;
+                nameToken = match.Groups[1].Value;
+            }
+            else
+            {
+                var split = value.Split(';');
+                if (split.Length < 2)
+                {
+                    return null;
+                }
+
+                idToken = split[0];
+                nameToken = split[1];
+            }
+
+            if (!uint.TryParse(idToken, out _))
+            {
+                return null;
+            }
+
+            if (string.IsNullOrWhiteSpace(nameToken))
+            {
+                return null;
+            }
+
+            return new Tuple<string, string>(idToken, nameToken);
         }
 
         internal static GameAction CreatePlayTask(GameID gameId)
@@ -447,7 +495,7 @@ namespace SteamLibrary
             var userId = ulong.Parse(settings.UserId);
             if (settings.IsPrivateAccount)
             {
-                var games = GetLibraryGames(userId, GetPrivateOwnedGames(userId, settings.RuntimeApiKey, settings.IncludeFreeSubGames)?.response?.games).ToDictionary(g => g.GameId);
+                var games = GetLibraryGames(userId, GetOwnedGamesApiKey(userId, settings.RuntimeApiKey, settings.IncludeFreeSubGames)?.response?.games).ToDictionary(g => g.GameId);
 
                 using (var appListService = new SteamAppListService(settings.RuntimeApiKey, GetPluginUserDataPath()))
                 {
@@ -474,70 +522,71 @@ namespace SteamLibrary
             }
             else
             {
-                var profile = GetLibraryGamesViaProfilePage(settings);
-                if (profile.rgGames.HasItems() != true)
-                    return new List<GameMetadata>();
-
-                var games = new List<GameMetadata>();
-                foreach (var profGame in profile.rgGames)
-                {
-                    var game = new GameMetadata()
-                    {
-                        GameId = profGame.appid.ToString(),
-                        Name = profGame.name,
-                        SortingName = profGame.sort_as,
-                        Playtime = (ulong)profGame.playtime_forever * 60,
-                        Source = new MetadataNameProperty("Steam")
-                    };
-
-                    var lastDate = DateTimeOffset.FromUnixTimeSeconds(profGame.rtime_last_played).LocalDateTime;
-                    if (lastDate.Year > 1970)
-                    {
-                        game.LastActivity = lastDate;
-                    }
-
-                    games.Add(game);
-                }
-
-                return games;
+                return GetGamesViaSteamCommunity(settings);
             }
         }
 
-        internal ProfilePageOwnedGames GetLibraryGamesViaProfilePage(SteamLibrarySettings settings)
+        private List<GameMetadata> GetGamesViaSteamCommunity(SteamLibrarySettings settings)
         {
-            if (settings.UserId.IsNullOrWhiteSpace())
-                throw new Exception("Steam user not authenticated.");
+            var userToken = GetAccessToken();
+            var ownedGames = GetOwnedGamesWeb(userToken.UserId, userToken.AccessToken, settings.IncludeFreeSubGames);
+            return GetLibraryGames(userToken.UserId, ownedGames?.response?.games);
+        }
 
-            JavaScriptEvaluationResult jsRes = null;
+        internal struct SteamUserToken
+        {
+            public ulong UserId;
+            public string AccessToken;
+        }
+
+        internal SteamUserToken GetAccessToken()
+        {
             using (var view = PlayniteApi.WebViews.CreateOffscreenView())
             {
-                view.NavigateAndWait($"https://steamcommunity.com/profiles/{settings.UserId}/games");
-                jsRes = Task.Run(async () =>
-                    await view.EvaluateScriptAsync(@"document.querySelector('#gameslist_config').attributes['data-profile-gameslist'].value")).GetAwaiter().GetResult();
+                view.NavigateAndWait("https://steamcommunity.com/my/edit/info");
+                var url = view.GetCurrentAddress();
+                if (url.Contains("/login"))
+                    throw new Exception(PlayniteApi.Resources.GetString(LOC.SteamNotLoggedInError));
+                    
+                var source = view.GetPageSource();
+                var userIdMatch = Regex.Match(source, @"g_steamID = ""(?<id>[0-9]+)""");
+                var tokenMatch = Regex.Match(source, @"&quot;webapi_token&quot;:&quot;(?<token>[^&]+)&quot;");
+                
+                if (!userIdMatch.Success || !tokenMatch.Success)
+                    throw new Exception("Could not find Steam user ID or token");
+                
+                return new SteamUserToken
+                {
+                    UserId = ulong.Parse(userIdMatch.Groups["id"].Value),
+                    AccessToken =  tokenMatch.Groups["token"].Value,
+                };
             }
-
-            if (!jsRes.Success || !(jsRes.Result is string))
-            {
-                logger.Error("Failed to get games list from Steam profile page:");
-                logger.Error(jsRes.Message);
-                throw new Exception("Failed to fetch Steam games from user profile.");
-            }
-
-            if (Serialization.TryFromJson<ProfilePageOwnedGames>(jsRes.Result as string, out var profileData, out var error))
-                return profileData;
-
-            logger.Error(error, "Failed deserialize Steam profile page data.");
-            logger.Debug(jsRes.Result as string);
-            return null;
         }
 
-        internal GetOwnedGamesResult GetPrivateOwnedGames(ulong userId, string apiKey, bool freeSub)
+        internal GetOwnedGamesResult GetOwnedGamesWeb(ulong userId, string accessToken, bool freeSub) => PlayerServiceGetOwnedGames(userId, "access_token", accessToken, freeSub);
+
+        internal GetOwnedGamesResult GetOwnedGamesApiKey(ulong userId, string apiKey, bool freeSub) => PlayerServiceGetOwnedGames(userId, "key", apiKey, freeSub);
+
+        private GetOwnedGamesResult PlayerServiceGetOwnedGames(ulong userId, string keyType, string key, bool freeSub)
         {
-            var libraryUrl = @"https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key={0}&include_appinfo=1&include_played_free_games=1&format=json&steamid={1}&skip_unvetted_apps=0";
-            if (freeSub)
+            var parameters = new Dictionary<string, string>
             {
-                libraryUrl += "&include_free_sub=1";
+                { keyType, key },
+                { "steamid", userId.ToString() },
+                { "include_appinfo", "true" },
+                { "include_played_free_games", "true" },
+                { "include_free_sub", freeSub.ToString() },
+            };
+            var urlStringBuilder = new StringBuilder("https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?format=json");
+            foreach (var parameter in parameters)
+            {
+                urlStringBuilder.Append('&');
+                urlStringBuilder.Append(parameter.Key);
+                urlStringBuilder.Append('=');
+                urlStringBuilder.Append(Uri.EscapeUriString(parameter.Value));
             }
+
+            var libraryUrl = urlStringBuilder.ToString();
 
             using (var webClient = new WebClient { Encoding = Encoding.UTF8 })
             {
@@ -545,7 +594,7 @@ namespace SteamLibrary
                 {
                     try
                     {
-                        var stringLibrary = webClient.DownloadString(string.Format(libraryUrl, apiKey, userId));
+                        var stringLibrary = webClient.DownloadString(libraryUrl);
                         return Serialization.FromJson<GetOwnedGamesResult>(stringLibrary);
                     }
                     catch (WebException e) when (e.Response is HttpWebResponse response)
@@ -743,23 +792,19 @@ namespace SteamLibrary
             {
                 foreach (var extraItem in SettingsViewModel.Settings.ExtraIDsToImport)
                 {
-                    if (extraItem.IsNullOrWhiteSpace())
+                    var parseResult = ParseExtraIdItem(extraItem);
+                    if (parseResult is null)
+                    {
                         continue;
+                    }
 
-                    var split = extraItem.Split(';');
-                    if (split.Length < 2)
-                        continue;
-
-                    if (!uint.TryParse(split[0], out var appId))
-                        continue;
-
-                    if (allGames.Any(a => a.GameId == split[0]))
+                    if (allGames.Any(a => a.GameId == parseResult.Item1))
                         continue;
 
                     allGames.Add(new GameMetadata
                     {
-                        GameId = split[0],
-                        Name = split[1],
+                        GameId = parseResult.Item1,
+                        Name = parseResult.Item2,
                         Source = new MetadataNameProperty("Steam"),
                         Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     });
@@ -779,7 +824,7 @@ namespace SteamLibrary
                             {
                                 try
                                 {
-                                    var accGames = GetPrivateOwnedGames(id, account.RuntimeApiKey, SettingsViewModel.Settings.IncludeFreeSubGames);
+                                    var accGames = GetOwnedGamesApiKey(id, account.RuntimeApiKey, SettingsViewModel.Settings.IncludeFreeSubGames);
                                     var parsedGames = GetLibraryGames(id, accGames.response.games, account.ImportPlayTime);
                                     foreach (var accGame in parsedGames)
                                     {

@@ -47,15 +47,12 @@ namespace UplayLibrary
         {
             get
             {
-                var installPath = InstallationPath;
-                if (installPath.IsNullOrEmpty())
-                {
-                    return string.Empty;
-                }
-                else
-                {
-                    return Path.Combine(installPath, "cache", "configuration", "configurations");
-                }
+                return Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                    "Ubisoft Game Launcher",
+                    "cache",
+                    "configuration",
+                    "configurations");
             }
         }
 
