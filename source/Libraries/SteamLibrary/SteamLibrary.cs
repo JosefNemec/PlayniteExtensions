@@ -13,9 +13,9 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -57,6 +57,7 @@ namespace SteamLibrary
         internal TopPanelItem TopPanelFriendsButton;
 
         private static readonly string[] firstPartyModPrefixes = new string[] { "bshift", "cstrike", "czero", "dmc", "dod", "gearbox", "ricochet", "tfc", "valve" };
+        private static readonly Regex steamItemPattern = new Regex(@"^(.*):\s*https://store.steampowered.com/app/(\d+)$", RegexOptions.Compiled);
 
         public SteamLibrary(IPlayniteAPI api) : base(
             "Steam",
@@ -93,6 +94,52 @@ namespace SteamLibrary
                 },
                 Visible = SettingsViewModel.Settings.ShowFriendsButton
             };
+        }
+
+        /// <summary>
+        /// Parse a string in Steam drag-and-drop format or custom Playnite format
+        /// </summary>
+        /// <example>Counter-Strike: Source: https://store.steampowered.com/app/240</example>
+        /// <example>240;Counter-Strike: Source</example>
+        /// <returns>id and name</returns>
+        internal static Tuple<string,string> ParseExtraIdItem(string value)
+        {
+            if (value.IsNullOrWhiteSpace())
+            {
+                return null;
+            }
+
+            string idToken;
+            string nameToken;
+            var match = steamItemPattern.Match(value);
+            if (match.Success)
+            {
+                idToken = match.Groups[2].Value;
+                nameToken = match.Groups[1].Value;
+            }
+            else
+            {
+                var split = value.Split(';');
+                if (split.Length < 2)
+                {
+                    return null;
+                }
+
+                idToken = split[0];
+                nameToken = split[1];
+            }
+
+            if (!uint.TryParse(idToken, out _))
+            {
+                return null;
+            }
+
+            if (string.IsNullOrWhiteSpace(nameToken))
+            {
+                return null;
+            }
+
+            return new Tuple<string, string>(idToken, nameToken);
         }
 
         internal static GameAction CreatePlayTask(GameID gameId)
@@ -723,23 +770,19 @@ namespace SteamLibrary
             {
                 foreach (var extraItem in SettingsViewModel.Settings.ExtraIDsToImport)
                 {
-                    if (extraItem.IsNullOrWhiteSpace())
+                    var parseResult = ParseExtraIdItem(extraItem);
+                    if (parseResult is null)
+                    {
                         continue;
+                    }
 
-                    var split = extraItem.Split(';');
-                    if (split.Length < 2)
-                        continue;
-
-                    if (!uint.TryParse(split[0], out var appId))
-                        continue;
-
-                    if (allGames.Any(a => a.GameId == split[0]))
+                    if (allGames.Any(a => a.GameId == parseResult.Item1))
                         continue;
 
                     allGames.Add(new GameMetadata
                     {
-                        GameId = split[0],
-                        Name = split[1],
+                        GameId = parseResult.Item1,
+                        Name = parseResult.Item2,
                         Source = new MetadataNameProperty("Steam"),
                         Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                     });
