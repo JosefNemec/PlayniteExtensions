@@ -48,7 +48,7 @@ namespace SteamLibrary
         public bool ShowSteamLaunchMenuInFullscreenMode { get; set; } = false;
         public List<string> ExtraIDsToImport { get; set; }
         [Obsolete] public string ApiKey { get; set; }
-        [DontSerialize] public string RutnimeApiKey { get => apiKey; set => SetValue(ref apiKey, value); }
+        [DontSerialize] public string RuntimeApiKey { get => apiKey; set => SetValue(ref apiKey, value); }
 
         public bool IsPrivateAccount
         {
@@ -80,13 +80,13 @@ namespace SteamLibrary
                 {
                     if (Settings.IsPrivateAccount)
                     {
-                        var res = Plugin.GetPrivateOwnedGames(ulong.Parse(Settings.UserId), Settings.RutnimeApiKey, true);
+                        var res = Plugin.GetOwnedGamesApiKey(ulong.Parse(Settings.UserId), Settings.RuntimeApiKey, true);
                         return res.response?.games.HasItems() == true;
                     }
                     else
                     {
-                        var res = Plugin.GetLibraryGamesViaProfilePage(Settings);
-                        return res.bViewingOwnProfile;
+                        var userToken = Plugin.GetAccessToken();
+                        return userToken.AccessToken != null;
                     }
                 }
                 catch (Exception e)
@@ -140,7 +140,7 @@ namespace SteamLibrary
             else if (Settings.Version == 1)
             {
 #pragma warning disable CS0612 // Type or member is obsolete
-                Settings.RutnimeApiKey = Settings.ApiKey;
+                Settings.RuntimeApiKey = Settings.ApiKey;
                 Settings.AdditionalAccounts.ForEach(a => a.RutnimeApiKey = a.ApiKey);
                 Settings.ApiKey = null;
                 Settings.AdditionalAccounts.ForEach(a => a.ApiKey = null);
@@ -169,7 +169,7 @@ namespace SteamLibrary
                     Encoding.UTF8,
                     WindowsIdentity.GetCurrent().User.Value);
                 var keys = Serialization.FromJson<ApiKeyInfo>(str);
-                Settings.RutnimeApiKey = keys.MainAccount;
+                Settings.RuntimeApiKey = keys.MainAccount;
                 Settings.AdditionalAccounts.ForEach(a =>
                 {
                     if (keys.Accounts.TryGetValue(a.AccountId, out var key))
@@ -188,7 +188,7 @@ namespace SteamLibrary
         {
             var keys = new ApiKeyInfo
             {
-                MainAccount = Settings.RutnimeApiKey
+                MainAccount = Settings.RuntimeApiKey
             };
 
             if (Settings.AdditionalAccounts.HasItems())
@@ -218,7 +218,7 @@ namespace SteamLibrary
         private void Settings_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == nameof(SteamLibrarySettings.IsPrivateAccount) ||
-                e.PropertyName == nameof(SteamLibrarySettings.RutnimeApiKey) ||
+                e.PropertyName == nameof(SteamLibrarySettings.RuntimeApiKey) ||
                 e.PropertyName == nameof(SteamLibrarySettings.UserId))
             {
                 OnPropertyChanged(nameof(IsUserLoggedIn));
@@ -227,7 +227,7 @@ namespace SteamLibrary
 
         public override bool VerifySettings(out List<string> errors)
         {
-            if (Settings.IsPrivateAccount && Settings.RutnimeApiKey.IsNullOrEmpty())
+            if (Settings.IsPrivateAccount && Settings.RuntimeApiKey.IsNullOrEmpty())
             {
                 errors = new List<string>{ "Steam API key must be specified when using private accounts!" };
                 return false;
@@ -295,7 +295,7 @@ namespace SteamLibrary
         public override void BeginEdit()
         {
             base.BeginEdit();
-            EditingClone.RutnimeApiKey = Settings.RutnimeApiKey;
+            EditingClone.RuntimeApiKey = Settings.RuntimeApiKey;
             for (int i = 0; i < Settings.AdditionalAccounts.Count; i++)
             {
                 EditingClone.AdditionalAccounts[i].RutnimeApiKey = Settings.AdditionalAccounts[i].RutnimeApiKey;
