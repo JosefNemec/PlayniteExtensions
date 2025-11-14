@@ -2,6 +2,7 @@
 using Playnite.SDK;
 using Playnite.SDK.Models;
 using Steam;
+using SteamLibrary.Services;
 using SteamLibrary.SteamShared;
 using System;
 
@@ -40,7 +41,7 @@ namespace SteamLibrary
             var gameId = game.ToSteamGameID();
             if (gameId.IsMod)
             {
-                return SteamLibrary.GetInstalledModFromFolder(game.InstallDirectory, ModInfo.GetModTypeOfGameID(gameId));
+                return SteamLocalService.GetInstalledModFromFolder(game.InstallDirectory, ModInfo.GetModTypeOfGameID(gameId));
             }
             else
             {

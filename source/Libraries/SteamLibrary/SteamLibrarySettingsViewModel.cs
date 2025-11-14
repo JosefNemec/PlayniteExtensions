@@ -3,6 +3,7 @@ using Playnite.SDK;
 using Playnite.SDK.Data;
 using Playnite.SDK.Events;
 using PlayniteExtensions.Common;
+using SteamLibrary.Services;
 using SteamLibrary.SteamShared;
 using System;
 using System.Collections.Generic;
@@ -44,22 +45,12 @@ namespace SteamLibrary
             set => SetValue(ref userId, value);
         }
 
-        public bool IncludeFreeGames
-        {
-            get => includeFreeGames;
-            set
-            {
-                SetValue(ref includeFreeGames, value);
-                OnPropertyChanged(nameof(EnableApiKeyWebAuthentication));
-            }
-        }
-
-        public bool IncludeFreeSubGames { get; set; } = false;
+        public bool IncludeFreeSubGames { get; set; }
         public bool ShowFriendsButton { get; set; } = true;
         public bool IgnoreOtherInstalled { get; set; }
         public ObservableCollection<AdditionalSteamAccount> AdditionalAccounts { get; set; } = new ObservableCollection<AdditionalSteamAccount>();
         public bool ShowSteamLaunchMenuInDesktopMode { get; set; } = true;
-        public bool ShowSteamLaunchMenuInFullscreenMode { get; set; } = false;
+        public bool ShowSteamLaunchMenuInFullscreenMode { get; set; }
         public List<string> ExtraIDsToImport { get; set; }
         [Obsolete] public string ApiKey { get; set; }
 
@@ -73,18 +64,8 @@ namespace SteamLibrary
         public bool IsPrivateAccount
         {
             get => isPrivateAccount;
-            set
-            {
-                if (isPrivateAccount != value)
-                {
-                    isPrivateAccount = value;
-                    OnPropertyChanged();
-                    OnPropertyChanged(nameof(EnableApiKeyWebAuthentication));
-                }
-            }
+            set => SetValue(ref isPrivateAccount, value);
         }
-
-        [DontSerialize] public bool EnableApiKeyWebAuthentication => IncludeFreeGames && IsPrivateAccount;
     }
 
     public class ApiKeyInfo
@@ -103,13 +84,13 @@ namespace SteamLibrary
                 {
                     if (Settings.IsPrivateAccount)
                     {
-                        var res = Plugin.GetOwnedGamesApiKey(ulong.Parse(Settings.UserId), Settings.RuntimeApiKey, true);
-                        var apiKeyResponseHasGames = res.response?.games.HasItems() == true;
-                        return apiKeyResponseHasGames && (!Settings.IncludeFreeGames || IsLoggedInOnSteamStore());
+                        var res = new PlayerService().GetOwnedGamesApiKey(Settings, ulong.Parse(Settings.UserId), Settings.RuntimeApiKey, true);
+                        var apiKeyResponseHasGames = res?.Any() == true;
+                        return apiKeyResponseHasGames;
                     }
                     else
                     {
-                        var userToken = Plugin.GetAccessToken();
+                        var userToken = new SteamCommunityService(PlayniteApi).GetAccessToken();
                         return userToken.AccessToken != null;
                     }
                 }
@@ -122,7 +103,6 @@ namespace SteamLibrary
         }
 
         public RelayCommand<object> LoginCommand => new RelayCommand<object>(_ => Login("https://steamcommunity.com/login/home/?goto=", SteamCommunityLoginCheck));
-        public RelayCommand<object> StoreLoginCommand => new RelayCommand<object>(_ => Login("https://store.steampowered.com/login/?redir=&redir_ssl=1", SteamStoreLoginCheck));
 
         public bool IsFirstRunUse { get; set; }
 
@@ -232,8 +212,7 @@ namespace SteamLibrary
         {
             if (e.PropertyName == nameof(SteamLibrarySettings.IsPrivateAccount) ||
                 e.PropertyName == nameof(SteamLibrarySettings.RuntimeApiKey) ||
-                e.PropertyName == nameof(SteamLibrarySettings.UserId) ||
-                e.PropertyName == nameof(SteamLibrarySettings.IncludeFreeGames))
+                e.PropertyName == nameof(SteamLibrarySettings.UserId))
             {
                 OnPropertyChanged(nameof(IsUserLoggedIn));
             }
