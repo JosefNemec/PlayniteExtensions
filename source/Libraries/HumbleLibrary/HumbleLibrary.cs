@@ -254,7 +254,7 @@ namespace HumbleLibrary
                                     Source = new MetadataNameProperty("Humble"),
                                     Name = $"{productName} asm.js version",
                                     Categories = new HashSet<MetadataProperty>(){new MetadataNameProperty("extras")}, // TODO customizable category across plugins?
-                                    Links = new List<Link>(){new Link("Run_me", $"https://www.humblebundle.com/play/asmjs/{downloadName}/{gameKey}")} // TODO use install action to launch browser?
+                                    Links = new List<Link>(){new Link("shell:open", $"https://www.humblebundle.com/play/asmjs/{downloadName}/{gameKey}")} // TODO use install action to launch browser?
                                     // TODO any way to ignore post-actions from other plugins, eg search for metadata?
                                 };
                                 extras.Add(extraAsGame);
@@ -274,7 +274,7 @@ namespace HumbleLibrary
                                 Source = new MetadataNameProperty("Humble"),
                                 Name = $"{productName} {download.platform} {actualDownload.name}",
                                 Categories = new HashSet<MetadataProperty>(){new MetadataNameProperty("extras")}, // TODO customizable category across plugins?
-                                Links = new List<Link>(){new Link("Download_me", url)} // TODO use install action to launch browser or DL with playnite itself?
+                                Links = new List<Link>(){new Link("shell:open", url)} // TODO use install action to launch browser or DL with playnite itself?
                                 // TODO any way to ignore post-actions from other plugins, eg search for metadata?
                             };
                             extras.Add(extraAsGame);
