@@ -196,6 +196,7 @@
     <Compile Include="Services\SteamCommunityService.cs" />
     <Compile Include="Services\SteamLocalService.cs" />
     <Compile Include="Services\SteamServiceAggregator.cs" />
+    <Compile Include="Services\SourceNames.cs" />
     <Compile Include="SteamShared\SharedSteamSettings.cs" />
     <Compile Include="SteamShared\SteamGameMetadata.cs" />
     <Compile Include="SteamShared\SteamTagNamer.cs" />

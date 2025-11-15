@@ -25,7 +25,7 @@ namespace SteamLibrary.Services
                     
                 var source = view.GetPageSource();
                 var userIdMatch = Regex.Match(source, @"g_steamID = ""(?<id>[0-9]+)""");
-                var tokenMatch = Regex.Match(source, @"&quot;webapi_token&quot;:&quot;(?<token>[^&]+)&quot;");
+                var tokenMatch = Regex.Match(source, "&quot;webapi_token&quot;:&quot;(?<token>[^&]+)&quot;");
                 
                 if (!userIdMatch.Success || !tokenMatch.Success)
                     throw new Exception("Could not find Steam user ID or token");

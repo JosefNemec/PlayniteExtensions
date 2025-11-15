@@ -115,7 +115,7 @@ namespace SteamLibrary.Services
 
             var game = new GameMetadata()
             {
-                Source = new MetadataNameProperty("Steam"),
+                Source = new MetadataNameProperty(SourceNames.Steam),
                 GameId = gameId.ToString(),
                 Name = name.RemoveTrademarks().Trim(),
                 InstallDirectory = installDir,
@@ -222,7 +222,7 @@ namespace SteamLibrary.Services
 
             var game = new GameMetadata
             {
-                Source = new MetadataNameProperty("Steam"),
+                Source = new MetadataNameProperty(SourceNames.Steam),
                 GameId = modInfo.GameId.ToString(),
                 Name = modInfo.Name.RemoveTrademarks().Trim(),
                 InstallDirectory = path,

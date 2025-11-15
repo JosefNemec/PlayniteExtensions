@@ -40,7 +40,7 @@ namespace SteamLibrary.Services
                 GameId = game.appid.ToString(),
                 Name =  game.name.RemoveTrademarks().Trim(),
                 Platforms = new HashSet<MetadataProperty>{ new MetadataSpecProperty("pc_windows")},
-                Source = new MetadataNameProperty("Steam"),
+                Source = new MetadataNameProperty(SourceNames.Steam),
             };
 
             if (includePlaytime)

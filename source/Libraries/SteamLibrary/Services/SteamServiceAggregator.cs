@@ -150,12 +150,45 @@ namespace SteamLibrary.Services
                 playniteApi.Notifications.Remove(plugin.ImportErrorMessageId);
             }
 
-            foreach (var game in allGames.Values)
-            {
-                if (!settings.ImportUninstalledGames && !game.IsInstalled)
-                    continue;
+            var output = allGames.Values.Where(g => g.IsInstalled || settings.ImportUninstalledGames).ToList();
 
-                yield return game;
+            UpdateExistingGames(output);
+
+            return output;
+        }
+
+        private void UpdateExistingGames(ICollection<GameMetadata> games)
+        {
+            var sources = new Dictionary<string, GameSource>();
+
+            GameSource GetOrCreateSource(string name)
+            {
+                if (sources.TryGetValue(name, out var source))
+                    return source;
+
+                source = playniteApi.Database.Sources.FirstOrDefault(s => name.Equals(s.Name, StringComparison.InvariantCultureIgnoreCase))
+                         ?? playniteApi.Database.Sources.Add(name);
+
+                sources.Add(name, source);
+                return source;
+            }
+
+            using (playniteApi.Database.BufferedUpdate())
+            {
+                foreach (var newGame in games)
+                {
+                    var existingGame = playniteApi.Database.Games.FirstOrDefault(g => g.GameId == newGame.GameId && g.PluginId == plugin.Id);
+                    if (existingGame == null)
+                        continue;
+
+                    var source = GetOrCreateSource(((MetadataNameProperty)newGame.Source).Name);
+                    if (existingGame.SourceId != source.Id)
+                    {
+                        existingGame.SourceId = source.Id;
+                        existingGame.Modified = DateTime.Now;
+                        playniteApi.Database.Games.Update(existingGame);
+                    }
+                }
             }
         }
 
@@ -178,7 +211,7 @@ namespace SteamLibrary.Services
                 {
                     GameId = parseResult.Item1,
                     Name = parseResult.Item2,
-                    Source = new MetadataNameProperty("Steam"),
+                    Source = new MetadataNameProperty(SourceNames.Steam),
                     Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
             }
@@ -201,7 +234,7 @@ namespace SteamLibrary.Services
                 }
             }
         }
-        
+
         /// <summary>
         /// Parse a string in Steam drag-and-drop format or custom Playnite format
         /// </summary>

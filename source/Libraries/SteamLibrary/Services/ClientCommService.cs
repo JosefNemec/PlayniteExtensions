@@ -28,7 +28,7 @@ namespace SteamLibrary.Services
                 Name = app.app.RemoveTrademarks().Trim(),
                 InstallSize = GetInstallSize(app),
                 Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
-                Source = new MetadataNameProperty("Steam")
+                Source = new MetadataNameProperty(SourceNames.Steam)
             };
         }
 
