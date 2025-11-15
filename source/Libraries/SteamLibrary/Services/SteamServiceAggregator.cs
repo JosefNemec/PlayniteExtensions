@@ -88,7 +88,8 @@ namespace SteamLibrary.Services
             if (settings.ConnectAccount)
             {
                 var onlineLibraryGameIds = new HashSet<string>();
-                
+                var familySharingUserIds = new HashSet<string>();
+
                 if (settings.IsPrivateAccount)
                 {
                     if (settings.UserId.IsNullOrEmpty())
@@ -105,7 +106,7 @@ namespace SteamLibrary.Services
                         var userToken = communityService.GetAccessToken();
                         TryAddGames(() => playerService.GetOwnedGamesWeb(settings, userToken, settings.IncludeFreeSubGames), "PlayerService (access token)", onlineLibraryGameIds, true);
                         TryAddGames(() => clientCommService.GetClientAppList(settings, userToken), "GetClientAppList", onlineLibraryGameIds, true);
-                        TryAddGames(() => familyGroupsService.GetSharedGames(settings, userToken), "Family Sharing", onlineLibraryGameIds, true);
+                        TryAddGames(() => familyGroupsService.GetSharedGames(settings, userToken, out familySharingUserIds), "Family Sharing", onlineLibraryGameIds, true);
                     }
                     catch (Exception e)
                     {
@@ -116,7 +117,10 @@ namespace SteamLibrary.Services
 
                 foreach (var extraAccount in ParseAdditionalAccounts(settings))
                 {
-                    TryAddGames(() => playerService.GetOwnedGamesApiKey(settings, extraAccount.Item1, extraAccount.Item2, false, false), $"Extra Account ({extraAccount.Item1})", onlineLibraryGameIds, true);
+                    if (familySharingUserIds.Contains(extraAccount.Item1.ToString()))
+                        logger.Info($"Skipped extra account import for {extraAccount.Item1} because it's in the family sharing group");
+                    else
+                        TryAddGames(() => playerService.GetOwnedGamesApiKey(settings, extraAccount.Item1, extraAccount.Item2, false, false), $"Extra Account ({extraAccount.Item1})", onlineLibraryGameIds, true);
                 }
 
                 if (settings.IgnoreOtherInstalled)

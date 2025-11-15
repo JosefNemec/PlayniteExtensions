@@ -8,13 +8,16 @@ namespace SteamLibrary.Services
 {
     public class FamilyGroupsService : SteamApiServiceBase
     {
-        public IEnumerable<GameMetadata> GetSharedGames(SteamLibrarySettings settings, SteamUserToken userToken)
+        public IEnumerable<GameMetadata> GetSharedGames(SteamLibrarySettings settings, SteamUserToken userToken, out HashSet<string> userIds)
         {
+            userIds = new HashSet<string>();
             var familyGroup = GetFamilyGroupForUser(userToken);
             if (familyGroup.is_not_member_of_any_group)
                 return Enumerable.Empty<GameMetadata>();
 
             var sharedLibrary = GetSharedLibraryApps(settings, userToken, familyGroup.family_groupid);
+            userIds = sharedLibrary.apps.SelectMany(a => a.owner_steamids).ToHashSet();
+            
             return sharedLibrary.apps.Select(ToGame);
         }
 
