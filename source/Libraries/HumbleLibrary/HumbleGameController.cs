@@ -31,6 +31,19 @@ namespace HumbleLibrary
 
         public override void Install(InstallActionArgs args)
         {
+            // TODO maybe move to separate plugin? set pluginId for certain games to be handled with it
+            // TODO in theory, downloading can be implemented within playnite - with progress, is-installed tracking, etc
+            var shellLink = Game.Links.FirstOrDefault(x => x.Name == "shell:open");
+            if (shellLink != null)
+            {
+                Dispose();
+                ProcessStarter.StartUrl(shellLink.Url);
+                Game.IsInstalling = false;
+                Game.IsInstalled = false;
+                library.PlayniteApi.Database.Games.Update(Game);
+                return;
+            }
+
             if (Game.SupportsHumbleApp())
             {
                 Dispose();

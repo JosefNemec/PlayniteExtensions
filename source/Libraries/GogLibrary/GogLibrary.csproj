@@ -177,6 +177,7 @@
     <Compile Include="Models\GogGameTaskInfo.cs" />
     <Compile Include="Models\GetOwnedGamesResult.cs" />
     <Compile Include="Models\LibraryGameResponse.cs" />
+    <Compile Include="Models\OwnedGameDetailsResponse.cs" />
     <Compile Include="Models\PagedResponse.cs" />
     <Compile Include="Models\ProductApiDetail.cs" />
     <Compile Include="Models\StoreGamesFilteredListResponse.cs" />

@@ -151,5 +151,13 @@ namespace GogLibrary.Services
 
             return games;
         }
+
+        public OwnedGameDetailsResponse GetOwnedGameDetails(string gameId)
+        {
+            webView.NavigateAndWait($@"https://www.gog.com/account/gameDetails/{gameId}.json");
+            var stringInfo = webView.GetPageText();
+            var response = Serialization.FromJson<OwnedGameDetailsResponse>(stringInfo);
+            return response;
+        }
     }
 }
