@@ -57,6 +57,9 @@ namespace SteamLibrary.Services
 
                         if (existingGame.Playtime == 0)
                             existingGame.Playtime = game.Playtime;
+                        
+                        if (existingGame.Source == null)
+                            existingGame.Source = game.Source;
                     }
                 }
             }
@@ -150,7 +153,12 @@ namespace SteamLibrary.Services
                 playniteApi.Notifications.Remove(plugin.ImportErrorMessageId);
             }
 
-            var output = allGames.Values.Where(g => g.IsInstalled || settings.ImportUninstalledGames).ToList();
+            var output = allGames.Values.Where(g => !g.Name.IsNullOrWhiteSpace() && (g.IsInstalled || settings.ImportUninstalledGames)).ToList();
+
+            foreach (var game in output.Where(g=>g.Source == null)) //installed games don't get a source by default
+            {
+                game.Source = new MetadataNameProperty(SourceNames.Steam);
+            }
 
             UpdateExistingGames(output);
 

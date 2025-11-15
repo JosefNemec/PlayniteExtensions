@@ -115,7 +115,7 @@ namespace SteamLibrary.Services
 
             var game = new GameMetadata()
             {
-                Source = new MetadataNameProperty(SourceNames.Steam),
+                // no source because normal/family sharing source is determined later in SteamServiceAggregator
                 GameId = gameId.ToString(),
                 Name = name.RemoveTrademarks().Trim(),
                 InstallDirectory = installDir,
