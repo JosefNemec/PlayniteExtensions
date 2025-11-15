@@ -86,8 +86,6 @@ namespace SteamLibrary.Services
             if (settings.ImportInstalledGames)
                 TryAddGames(() => SteamLocalService.GetInstalledGames().Values, "Installed", installedGameIds);
 
-            TryAddGames(() => GetGamesFromExtraIds(settings), "Settings Game-IDs");
-
             if (settings.ConnectAccount)
             {
                 var onlineLibraryGameIds = new HashSet<string>();
@@ -138,6 +136,8 @@ namespace SteamLibrary.Services
                     }
                 }
             }
+            
+            TryAddGames(() => GetGamesFromExtraIds(settings), "Settings Game-IDs");
 
             if (importError != null)
             {
