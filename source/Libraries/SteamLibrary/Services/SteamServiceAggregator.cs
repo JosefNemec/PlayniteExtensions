@@ -66,7 +66,7 @@ namespace SteamLibrary.Services
                 try
                 {
                     var games = getGamesFunc().ToList();
-                    logger.Debug($"Found {games.Count} {importSource} Steam games.");
+                    logger.Info($"Found {games.Count} {importSource} Steam games.");
                     AddGames(games, overwriteName);
 
                     if (gameIdsOutput != null)

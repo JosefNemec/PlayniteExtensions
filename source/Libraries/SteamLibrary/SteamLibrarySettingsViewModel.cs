@@ -32,7 +32,6 @@ namespace SteamLibrary
         private bool isPrivateAccount;
         private string apiKey = string.Empty;
         private string userId = string.Empty;
-        private bool includeFreeGames;
 
         public int Version { get; set; }
         public bool ImportInstalledGames { get; set; } = true;
