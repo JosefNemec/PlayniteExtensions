@@ -182,7 +182,7 @@
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <PasswordBox steam:PasswordBoxAssistant.BindPassword="True"
-                                                 steam:PasswordBoxAssistant.BoundPassword="{Binding RutnimeApiKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                 steam:PasswordBoxAssistant.BoundPassword="{Binding RuntimeApiKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                                  Background="{DynamicResource NormalBrushDark}"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>

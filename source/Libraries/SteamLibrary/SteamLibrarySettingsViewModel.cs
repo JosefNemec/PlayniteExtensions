@@ -1,32 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Playnite.Commands;
-using SteamLibrary.Models;
+﻿using Playnite.Common;
 using Playnite.SDK;
-using System.Windows.Media;
-using System.Diagnostics;
-using System.Text.RegularExpressions;
-using Steam;
-using System.Collections.ObjectModel;
-using SteamLibrary.SteamShared;
 using Playnite.SDK.Data;
+using Playnite.SDK.Events;
 using PlayniteExtensions.Common;
+using SteamLibrary.Services;
+using SteamLibrary.SteamShared;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
 using System.Security.Principal;
-using Playnite.Common;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace SteamLibrary
 {
-    public class AdditionalSteamAcccount
+    public class AdditionalSteamAccount
     {
         public string AccountId { get; set; }
         public bool ImportPlayTime { get; set; }
         [Obsolete] public string ApiKey { get; set; }
-        [DontSerialize] public string RutnimeApiKey { get; set; }
+        [DontSerialize] public string RuntimeApiKey { get; set; }
     }
 
     public class SteamLibrarySettings : SharedSteamSettings
@@ -43,24 +41,18 @@ namespace SteamLibrary
         public bool IncludeFreeSubGames { get; set; } = false;
         public bool ShowFriendsButton { get; set; } = true;
         public bool IgnoreOtherInstalled { get; set; }
-        public ObservableCollection<AdditionalSteamAcccount> AdditionalAccounts { get; set; } = new ObservableCollection<AdditionalSteamAcccount>();
+        public ObservableCollection<AdditionalSteamAccount> AdditionalAccounts { get; set; } = new ObservableCollection<AdditionalSteamAccount>();
         public bool ShowSteamLaunchMenuInDesktopMode { get; set; } = true;
         public bool ShowSteamLaunchMenuInFullscreenMode { get; set; } = false;
         public List<string> ExtraIDsToImport { get; set; }
         [Obsolete] public string ApiKey { get; set; }
+
         [DontSerialize] public string RuntimeApiKey { get => apiKey; set => SetValue(ref apiKey, value); }
 
         public bool IsPrivateAccount
         {
             get => isPrivateAccount;
-            set
-            {
-                if (isPrivateAccount != value)
-                {
-                    isPrivateAccount = value;
-                    OnPropertyChanged(nameof(IsPrivateAccount));
-                }
-            }
+            set => SetValue(ref isPrivateAccount, value);
         }
     }
 
@@ -80,12 +72,13 @@ namespace SteamLibrary
                 {
                     if (Settings.IsPrivateAccount)
                     {
-                        var res = Plugin.GetOwnedGamesApiKey(ulong.Parse(Settings.UserId), Settings.RuntimeApiKey, true);
-                        return res.response?.games.HasItems() == true;
+                        var res = new PlayerService().GetOwnedGamesApiKey(Settings, ulong.Parse(Settings.UserId), Settings.RuntimeApiKey, true);
+                        return res?.Any() == true;
                     }
                     else
                     {
-                        var userToken = Plugin.GetAccessToken();
+                        var userToken = new SteamStoreService(PlayniteApi).GetAccessToken();
+                        Settings.UserId = userToken.UserId.ToString();
                         return userToken.AccessToken != null;
                     }
                 }
@@ -97,13 +90,7 @@ namespace SteamLibrary
             }
         }
 
-        public RelayCommand<object> LoginCommand
-        {
-            get => new RelayCommand<object>((a) =>
-            {
-                Login();
-            });
-        }
+        public RelayCommand<object> LoginCommand => new RelayCommand<object>(_ => new SteamStoreService(PlayniteApi).Login());
 
         public bool IsFirstRunUse { get; set; }
 
@@ -111,13 +98,13 @@ namespace SteamLibrary
         {
             get => new RelayCommand(() =>
             {
-                Settings.AdditionalAccounts.Add(new AdditionalSteamAcccount());
+                Settings.AdditionalAccounts.Add(new AdditionalSteamAccount());
             });
         }
 
-        public RelayCommand<AdditionalSteamAcccount> RemoveAccountCommand
+        public RelayCommand<AdditionalSteamAccount> RemoveAccountCommand
         {
-            get => new RelayCommand<AdditionalSteamAcccount>((a) =>
+            get => new RelayCommand<AdditionalSteamAccount>((a) =>
             {
                 Settings.AdditionalAccounts.Remove(a);
             });
@@ -141,7 +128,7 @@ namespace SteamLibrary
             {
 #pragma warning disable CS0612 // Type or member is obsolete
                 Settings.RuntimeApiKey = Settings.ApiKey;
-                Settings.AdditionalAccounts.ForEach(a => a.RutnimeApiKey = a.ApiKey);
+                Settings.AdditionalAccounts.ForEach(a => a.RuntimeApiKey = a.ApiKey);
                 Settings.ApiKey = null;
                 Settings.AdditionalAccounts.ForEach(a => a.ApiKey = null);
 #pragma warning restore CS0612 // Type or member is obsolete
@@ -174,7 +161,7 @@ namespace SteamLibrary
                 {
                     if (keys.Accounts.TryGetValue(a.AccountId, out var key))
                     {
-                        a.RutnimeApiKey = key;
+                        a.RuntimeApiKey = key;
                     }
                 });
             }
@@ -193,11 +180,11 @@ namespace SteamLibrary
 
             if (Settings.AdditionalAccounts.HasItems())
             {
-                foreach (var account in Settings.AdditionalAccounts.Where(a => !a.AccountId.IsNullOrWhiteSpace() && !a.RutnimeApiKey.IsNullOrWhiteSpace()))
+                foreach (var account in Settings.AdditionalAccounts.Where(a => !a.AccountId.IsNullOrWhiteSpace() && !a.RuntimeApiKey.IsNullOrWhiteSpace()))
                 {
                     if (!keys.Accounts.ContainsKey(account.AccountId))
                     {
-                        keys.Accounts.Add(account.AccountId, account.RutnimeApiKey);
+                        keys.Accounts.Add(account.AccountId, account.RuntimeApiKey);
                     }
                 }
             }
@@ -229,67 +216,11 @@ namespace SteamLibrary
         {
             if (Settings.IsPrivateAccount && Settings.RuntimeApiKey.IsNullOrEmpty())
             {
-                errors = new List<string>{ "Steam API key must be specified when using private accounts!" };
+                errors = new List<string> { "Steam API key must be specified when using private accounts!" };
                 return false;
             }
 
             return base.VerifySettings(out errors);
-        }
-
-        private void Login()
-        {
-            try
-            {
-                var steamId = string.Empty;
-                using (var view = PlayniteApi.WebViews.CreateView(675, 640, Colors.Black))
-                {
-                    view.LoadingChanged += async (s, e) =>
-                    {
-                        var address = view.GetCurrentAddress();
-                        if (address.Contains(@"steamcommunity.com"))
-                        {
-                            var source = await view.GetPageSourceAsync();
-                            var idMatch = Regex.Match(source, @"g_steamID = ""(\d+)""");
-                            if (idMatch.Success)
-                            {
-                                steamId = idMatch.Groups[1].Value;
-                            }
-                            else
-                            {
-                                idMatch = Regex.Match(source, @"steamid"":""(\d+)""");
-                                if (idMatch.Success)
-                                {
-                                    steamId = idMatch.Groups[1].Value;
-                                }
-                            }
-
-                            if (idMatch.Success)
-                            {
-                                view.Close();
-                            }
-                        }
-                    };
-
-                    view.DeleteDomainCookies(".steamcommunity.com");
-                    view.DeleteDomainCookies("steamcommunity.com");
-                    view.DeleteDomainCookies("steampowered.com");
-                    view.DeleteDomainCookies("store.steampowered.com");
-                    view.DeleteDomainCookies("help.steampowered.com");
-                    view.DeleteDomainCookies("login.steampowered.com");
-                    view.Navigate(@"https://steamcommunity.com/login/home/?goto=");
-                    view.OpenDialog();
-                }
-
-                if (!steamId.IsNullOrEmpty())
-                {
-                    Settings.UserId = steamId;
-                }
-            }
-            catch (Exception e) when (!Debugger.IsAttached)
-            {
-                PlayniteApi.Dialogs.ShowErrorMessage(PlayniteApi.Resources.GetString(LOC.SteamNotLoggedInError), "");
-                Logger.Error(e, "Failed to authenticate user.");
-            }
         }
 
         public override void BeginEdit()
@@ -298,7 +229,7 @@ namespace SteamLibrary
             EditingClone.RuntimeApiKey = Settings.RuntimeApiKey;
             for (int i = 0; i < Settings.AdditionalAccounts.Count; i++)
             {
-                EditingClone.AdditionalAccounts[i].RutnimeApiKey = Settings.AdditionalAccounts[i].RutnimeApiKey;
+                EditingClone.AdditionalAccounts[i].RuntimeApiKey = Settings.AdditionalAccounts[i].RuntimeApiKey;
             }
 
             Settings.PropertyChanged += Settings_PropertyChanged;

@@ -1,12 +1,6 @@
 ﻿using Microsoft.Win32;
-using Playnite.SDK.Models;
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SteamKit2;
 using System.Reflection;
 
 namespace SteamLibrary
