@@ -77,7 +77,8 @@ namespace SteamLibrary
                     }
                     else
                     {
-                        var userToken = new SteamCommunityService(PlayniteApi).GetAccessToken();
+                        var userToken = new SteamStoreService(PlayniteApi).GetAccessToken();
+                        Settings.UserId = userToken.UserId.ToString();
                         return userToken.AccessToken != null;
                     }
                 }
@@ -89,7 +90,7 @@ namespace SteamLibrary
             }
         }
 
-        public RelayCommand<object> LoginCommand => new RelayCommand<object>(_ => Login("https://steamcommunity.com/login/home/?goto=", SteamCommunityLoginCheck));
+        public RelayCommand<object> LoginCommand => new RelayCommand<object>(_ => new SteamStoreService(PlayniteApi).Login());
 
         public bool IsFirstRunUse { get; set; }
 
@@ -220,70 +221,6 @@ namespace SteamLibrary
             }
 
             return base.VerifySettings(out errors);
-        }
-
-        private async void SteamCommunityLoginCheck(object s, WebViewLoadingChangedEventArgs e)
-        {
-            if (e.IsLoading)
-                return;
-
-            try
-            {
-                var webView = (IWebView)s;
-                var address = webView.GetCurrentAddress();
-                if (address.Contains("steamcommunity.com"))
-                {
-                    var source = await webView.GetPageSourceAsync();
-                    var idMatch = Regex.Match(source, @"g_steamID = ""(\d+)""");
-                    if (idMatch.Success)
-                    {
-                        Settings.UserId = idMatch.Groups[1].Value;
-                    }
-                    else
-                    {
-                        idMatch = Regex.Match(source, @"steamid"":""(\d+)""");
-                        if (idMatch.Success)
-                        {
-                            Settings.UserId = idMatch.Groups[1].Value;
-                        }
-                    }
-
-                    if (idMatch.Success)
-                    {
-                        webView.Close();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.Error(ex, "Error logging in via Steam Community");
-            }
-        }
-
-        private void Login(string loginUrl, EventHandler<WebViewLoadingChangedEventArgs> viewOnLoadingChanged)
-        {
-            try
-            {
-                using (var view = PlayniteApi.WebViews.CreateView(675, 640, Colors.Black))
-                {
-                    view.LoadingChanged += viewOnLoadingChanged;
-
-                    view.DeleteDomainCookies(".steamcommunity.com");
-                    view.DeleteDomainCookies("steamcommunity.com");
-                    view.DeleteDomainCookies("steampowered.com");
-                    view.DeleteDomainCookies("store.steampowered.com");
-                    view.DeleteDomainCookies("help.steampowered.com");
-                    view.DeleteDomainCookies("login.steampowered.com");
-                    view.Navigate(loginUrl);
-                    view.OpenDialog();
-                    view.LoadingChanged -= viewOnLoadingChanged;
-                }
-            }
-            catch (Exception e) when (!Debugger.IsAttached)
-            {
-                PlayniteApi.Dialogs.ShowErrorMessage(PlayniteApi.Resources.GetString(LOC.SteamNotLoggedInError), "");
-                Logger.Error(e, "Failed to authenticate user.");
-            }
         }
 
         public override void BeginEdit()

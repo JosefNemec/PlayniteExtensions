@@ -7,7 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading;
 
-namespace SteamLibrary.Services
+namespace SteamLibrary.Services.Base
 {
     public abstract class SteamApiServiceBase
     {
