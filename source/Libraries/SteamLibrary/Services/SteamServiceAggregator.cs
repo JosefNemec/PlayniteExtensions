@@ -181,10 +181,23 @@ namespace SteamLibrary.Services
                     if (existingGame == null)
                         continue;
 
+                    bool update = false;
+
                     var source = GetOrCreateSource(((MetadataNameProperty)newGame.Source).Name);
                     if (existingGame.SourceId != source.Id)
                     {
                         existingGame.SourceId = source.Id;
+                        update = true;
+                    }
+
+                    if (!(existingGame.InstallSize > 0) && newGame.InstallSize > 0)
+                    {
+                        existingGame.InstallSize = newGame.InstallSize;
+                        update = true;
+                    }
+
+                    if (update)
+                    {
                         existingGame.Modified = DateTime.Now;
                         playniteApi.Database.Games.Update(existingGame);
                     }
