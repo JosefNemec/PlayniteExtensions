@@ -37,28 +37,17 @@ namespace SteamLibrary
         public bool ImportInstalledGames { get; set; } = true;
         public bool ConnectAccount { get; set; } = false;
         public bool ImportUninstalledGames { get; set; } = false;
-
-        public string UserId
-        {
-            get => userId;
-            set => SetValue(ref userId, value);
-        }
-
-        public bool IncludeFreeSubGames { get; set; }
+        public string UserId { get => userId; set => SetValue(ref userId, value); }
+        public bool IncludeFreeSubGames { get; set; } = false;
         public bool ShowFriendsButton { get; set; } = true;
         public bool IgnoreOtherInstalled { get; set; }
         public ObservableCollection<AdditionalSteamAccount> AdditionalAccounts { get; set; } = new ObservableCollection<AdditionalSteamAccount>();
         public bool ShowSteamLaunchMenuInDesktopMode { get; set; } = true;
-        public bool ShowSteamLaunchMenuInFullscreenMode { get; set; }
+        public bool ShowSteamLaunchMenuInFullscreenMode { get; set; } = false;
         public List<string> ExtraIDsToImport { get; set; }
         [Obsolete] public string ApiKey { get; set; }
 
-        [DontSerialize]
-        public string RuntimeApiKey
-        {
-            get => apiKey;
-            set => SetValue(ref apiKey, value);
-        }
+        [DontSerialize] public string RuntimeApiKey { get => apiKey; set => SetValue(ref apiKey, value); }
 
         public bool IsPrivateAccount
         {
@@ -84,8 +73,7 @@ namespace SteamLibrary
                     if (Settings.IsPrivateAccount)
                     {
                         var res = new PlayerService().GetOwnedGamesApiKey(Settings, ulong.Parse(Settings.UserId), Settings.RuntimeApiKey, true);
-                        var apiKeyResponseHasGames = res?.Any() == true;
-                        return apiKeyResponseHasGames;
+                        return res?.Any() == true;
                     }
                     else
                     {
@@ -107,12 +95,18 @@ namespace SteamLibrary
 
         public RelayCommand AddAccountCommand
         {
-            get => new RelayCommand(() => { Settings.AdditionalAccounts.Add(new AdditionalSteamAccount()); });
+            get => new RelayCommand(() =>
+            {
+                Settings.AdditionalAccounts.Add(new AdditionalSteamAccount());
+            });
         }
 
         public RelayCommand<AdditionalSteamAccount> RemoveAccountCommand
         {
-            get => new RelayCommand<AdditionalSteamAccount>((a) => { Settings.AdditionalAccounts.Remove(a); });
+            get => new RelayCommand<AdditionalSteamAccount>((a) =>
+            {
+                Settings.AdditionalAccounts.Remove(a);
+            });
         }
 
         public SteamLibrarySettingsViewModel(SteamLibrary library, IPlayniteAPI api) : base(library, api)
@@ -263,57 +257,6 @@ namespace SteamLibrary
             catch (Exception ex)
             {
                 Logger.Error(ex, "Error logging in via Steam Community");
-            }
-        }
-
-        private async void SteamStoreLoginCheck(object s, WebViewLoadingChangedEventArgs e)
-        {
-            if (e.IsLoading)
-                return;
-
-            try
-            {
-                var webView = (IWebView)s;
-                var userId = await GetSteamStoreUserId(webView);
-                if (userId != null)
-                {
-                    Settings.UserId = userId;
-                    webView.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.Error(ex, "Error logging in via Steam Community");
-            }
-        }
-
-        private static async Task<string> GetSteamStoreUserId(IWebView webView)
-        {
-            int i = 0;
-            do
-            {
-                await Task.Delay(500);
-                i++;
-            }
-            while (i < 5 && !webView.CanExecuteJavascriptInMainFrame);
-
-            var source = await webView.GetPageSourceAsync();
-
-            var idMatch = Regex.Match(source, @"\bhttps://steamcommunity\.com/profiles/([0-9]+)/notifications\b");
-            if (idMatch.Success)
-            {
-                return idMatch.Groups[1].Value;
-            }
-
-            return null;
-        }
-
-        private bool IsLoggedInOnSteamStore()
-        {
-            using (var webView = PlayniteApi.WebViews.CreateOffscreenView())
-            {
-                webView.NavigateAndWait("https://store.steampowered.com/");
-                return GetSteamStoreUserId(webView).Result != null;
             }
         }
 

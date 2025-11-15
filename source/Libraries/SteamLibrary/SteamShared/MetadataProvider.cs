@@ -191,7 +191,7 @@ namespace Steam
             {
                 var imageRoot = @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/library_600x900_2x.jpg";
                 var imageUrl = string.Format(imageRoot, appId);
-                if (HttpDownloader.GetResponseCode(imageUrl, out _).IsSuccess())
+                if (HttpDownloader.GetResponseCode(imageUrl, out var _).IsSuccess())
                 {
                     metadata.CoverImage = new MetadataFile(imageUrl);
                 }
@@ -200,7 +200,7 @@ namespace Steam
             {
                 var imageRoot = @"https://steamcdn-a.akamaihd.net/steam/apps/{0}/header.jpg";
                 var imageUrl = string.Format(imageRoot, appId);
-                if (HttpDownloader.GetResponseCode(imageUrl, out _).IsSuccess())
+                if (HttpDownloader.GetResponseCode(imageUrl, out var _).IsSuccess())
                 {
                     metadata.CoverImage = new MetadataFile(imageUrl);
                 }
@@ -240,6 +240,8 @@ namespace Steam
                     {
                         metadata.BackgroundImage = new MetadataFile(bannerBk);
                     }
+                    break;
+                default:
                     break;
             }
 
