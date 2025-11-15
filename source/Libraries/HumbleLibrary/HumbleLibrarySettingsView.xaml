@@ -28,10 +28,6 @@
                       IsChecked="{Binding Settings.ImportGeneralLibrary}"
                       Content="{DynamicResource LOCHumbleGeneralLibrary}"
                       ToolTip="{DynamicResource LOCHumbleGeneralLibraryTooltip}" />
-            <CheckBox Margin="0,10,0,0" Name="HumbleImportGameExtras"
-                      IsChecked="{Binding Settings.ImportGameExtras}"
-                      Content="{DynamicResource LOCHumbleImportGameExtras}"
-                      ToolTip="{DynamicResource LOCHumbleImportGameExtrasTooltip}" />
             <StackPanel IsEnabled="{Binding IsChecked, ElementName=HumbleImportGeneralLibrary}">
                 <CheckBox Margin="20,10,0,0" Name="HumbleThirdPartyImport"
                       IsChecked="{Binding Settings.IgnoreThirdPartyStoreGames}"
@@ -43,6 +39,10 @@
                       Content="{DynamicResource LOCHumbleImportThirdPartyDrmFree}"
                       ToolTip="{DynamicResource LOCHumbleImportThirdPartyDrmFreeTooltip}"/>
             </StackPanel>
+            <CheckBox Margin="0,10,0,0" Name="HumbleImportGameExtras"
+                      IsChecked="{Binding Settings.ImportGameExtras}"
+                      Content="{DynamicResource LOCHumbleImportGameExtras}"
+                      ToolTip="{DynamicResource LOCHumbleImportGameExtrasTooltip}" />
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                 <Button Content="{DynamicResource LOCHumbleAuthenticateLabel}" HorizontalAlignment="Left"
                         Command="{Binding LoginCommand}" Margin="0,5,5,5"/>

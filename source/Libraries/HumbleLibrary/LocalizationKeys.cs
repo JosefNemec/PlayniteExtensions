@@ -110,7 +110,7 @@ namespace System
         /// </summary>
         public const string HumbleGeneralLibraryTooltip = "LOCHumbleGeneralLibraryTooltip";
         /// <summary>
-        /// Import game extras
+        /// Also import game extras
         /// </summary>
         public const string HumbleImportGameExtras = "LOCHumbleImportGameExtras";
         /// <summary>
