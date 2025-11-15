@@ -6,6 +6,10 @@ using System.Linq;
 
 namespace SteamLibrary.Services
 {
+    /// <summary>
+    /// Gets downloadable games for the current running Steam client session.
+    /// Returns nothing when there's no Steam client running.
+    /// </summary>
     public class ClientCommService : SteamApiServiceBase
     {
         public IEnumerable<GameMetadata> GetClientAppList(SteamLibrarySettings settings, SteamUserToken userToken)
@@ -17,7 +21,9 @@ namespace SteamLibrary.Services
                                                              { "access_token", userToken.AccessToken },
                                                              { "language", settings.LanguageKey },
                                                          });
-            return response.apps.Select(ToGame);
+            
+            return response?.apps?.Select(ToGame)
+                   ?? Enumerable.Empty<GameMetadata>();
         }
 
         private static GameMetadata ToGame(SteamClientApp app)
