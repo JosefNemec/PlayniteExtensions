@@ -1,7 +1,3 @@
-// ReSharper disable InconsistentNaming
-// ReSharper disable ClassNeverInstantiated.Global
-// ReSharper disable UnusedAutoPropertyAccessor.Global
-
 namespace SteamLibrary.Models
 {
     public class GetClientAppListResponse

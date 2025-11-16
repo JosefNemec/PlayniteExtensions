@@ -1,6 +1,12 @@
-﻿namespace SteamLibrary
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SteamLibrary
 {
-    public static class Environment
+    public class Environment
     {
         public static bool IsDebugBuild
         {
