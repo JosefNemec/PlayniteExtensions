@@ -10,7 +10,11 @@ using SteamLibrary.SteamShared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace UniversalSteamMetadata
 {
@@ -328,7 +332,7 @@ namespace UniversalSteamMetadata
                             {
                                 try
                                 {
-                                    var name = a.NormalizeGameName();
+                                    var name = StringExtensions.NormalizeGameName(a);
                                     return new List<GenericItemOption>(UniversalSteamMetadata.GetSearchResults(name));
                                 }
                                 catch (Exception e)
