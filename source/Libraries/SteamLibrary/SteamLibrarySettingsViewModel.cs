@@ -1,21 +1,24 @@
-﻿using Playnite.Common;
-using Playnite.SDK;
-using Playnite.SDK.Data;
-using Playnite.SDK.Events;
-using PlayniteExtensions.Common;
-using SteamLibrary.Services;
-using SteamLibrary.SteamShared;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Diagnostics;
+using System.IO;
 using System.Linq;
-using System.Security.Principal;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Playnite.Commands;
+using SteamLibrary.Models;
+using Playnite.SDK;
 using System.Windows.Media;
+using System.Diagnostics;
+using System.Text.RegularExpressions;
+using Steam;
+using System.Collections.ObjectModel;
+using SteamLibrary.SteamShared;
+using Playnite.SDK.Data;
+using PlayniteExtensions.Common;
+using System.Security.Principal;
+using Playnite.Common;
+using SteamLibrary.Services;
 
 namespace SteamLibrary
 {
