@@ -55,21 +55,29 @@ namespace GogLibrary
 
         public override void Install(InstallActionArgs args)
         {
-            // TODO maybe move to separate plugin? set pluginId for certain games to be handled with it
-            // TODO in theory, downloading can be implemented within playnite - with progress, is-installed tracking, etc
-            var shellLink = Game.Links.FirstOrDefault(x => x.Name == "shell:open");
-            if (shellLink != null)
+            if (HandleExtras())
             {
-                Dispose();
-                ProcessStarter.StartUrl(shellLink.Url);
-                Game.IsInstalling = false;
-                Game.IsInstalled = false;
-                gogLibrary.PlayniteApi.Database.Games.Update(Game);
                 return;
             }
 
             InitiateInstall();
             StartInstallWatcher();
+        }
+
+        private bool HandleExtras()
+        {
+            var shellLink = Game.Links.FirstOrDefault(x => x.Name == "shell:open");
+            if (shellLink == null)
+            {
+                return false;
+            }
+
+            Dispose();
+            ProcessStarter.StartUrl(shellLink.Url);
+            Game.IsInstalling = false;
+            Game.IsInstalled = false;
+            gogLibrary.PlayniteApi.Database.Games.Update(Game);
+            return true;
         }
 
         private void InitiateInstall()
