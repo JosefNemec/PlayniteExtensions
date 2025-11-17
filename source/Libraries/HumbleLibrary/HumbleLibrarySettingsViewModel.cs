@@ -16,7 +16,7 @@ namespace HumbleLibrary
         public bool IgnoreThirdPartyStoreGames { get; set; } = true;
         public bool ImportThirdPartyDrmFree { get; set; } = false;
         public bool ImportGeneralLibrary { get; set; } = true;
-        public bool ImportGameExtras { get; set; } = true;
+        public bool ImportGameExtras { get; set; } = false;
         public bool ImportTroveGames { get; set; } = false;
         public bool LaunchViaHumbleApp { get; set; } = true;
     }
