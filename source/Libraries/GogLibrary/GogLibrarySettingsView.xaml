@@ -72,7 +72,7 @@
                   Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}"/>
         <CheckBox IsChecked="{Binding Settings.UseVerticalCovers}" DockPanel.Dock="Top"
                   Content="{DynamicResource LOCGOGSettingsUseVerticalCovers}"/>
-        <CheckBox IsChecked="{Binding Settings.ImportGameExtras}" DockPanel.Dock="Top"
+        <CheckBox IsChecked="{Binding Settings.ImportGameExtras}" DockPanel.Dock="Top" Margin="0,15"
                   Content="{DynamicResource LOCGOGSettingsImportGameExtras}"/>
 
         <StackPanel Orientation="Horizontal" Margin="0,10,0,0"
