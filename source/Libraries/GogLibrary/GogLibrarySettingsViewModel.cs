@@ -14,7 +14,7 @@ namespace GogLibrary
         public bool StartGamesUsingGalaxy { get; set; } = false;
         public bool UseAutomaticGameInstalls { get; set; } = false;
         public bool UseVerticalCovers { get; set; } = true;
-        public bool ImportGameExtras { get; set; } = false;
+        public bool ImportGameExtras { get; set; } = true;
         public string Locale { get; set; } = "en";
     }
     public class GogLibrarySettingsViewModel : PluginSettingsViewModel<GogLibrarySettings, GogLibrary>
