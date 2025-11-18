@@ -1,0 +1,35 @@
+root = true
+
+[**.cs]
+indent_style = space
+indent_size = 4
+tab_width = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[**.csproj]
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[**.xaml]
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[**.{yml,yaml}]
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[{**/Models/**.cs,**Models.cs}]
+resharper_inconsistent_naming_highlighting = none
+resharper_class_never_instantiated_global_highlighting = none
+resharper_unused_auto_property_accessor_global_highlighting = none
+resharper_property_field_keyword_is_never_assigned_highlighting = none
+resharper_unassigned_field_global_highlighting = none
+resharper_collection_never_updated_global_highlighting = none
+resharper_auto_property_can_be_made_get_only_global_highlighting = none
