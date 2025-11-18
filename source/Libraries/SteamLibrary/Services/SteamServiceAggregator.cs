@@ -14,18 +14,20 @@ namespace SteamLibrary.Services
         private readonly SteamStoreService storeService;
         private readonly ClientCommService clientCommService;
         private readonly FamilyGroupsService familyGroupsService;
+        private readonly SteamServicesClient playniteBackend;
         private readonly IPlayniteAPI playniteApi;
         private readonly SteamLibrary plugin;
         private readonly ILogger logger = LogManager.GetLogger();
         private static readonly Regex steamItemPattern = new Regex(@"^(.*):\s*https://store.steampowered.com/app/(\d+)$", RegexOptions.Compiled);
 
-        public SteamServiceAggregator(PlayerService playerService, SteamStoreService storeService, ClientCommService clientCommService, FamilyGroupsService familyGroupsService, IPlayniteAPI playniteApi, SteamLibrary plugin)
+        public SteamServiceAggregator(PlayerService playerService, SteamStoreService storeService, ClientCommService clientCommService, FamilyGroupsService familyGroupsService, SteamServicesClient playniteBackend, SteamLibrary plugin)
         {
             this.playerService = playerService;
             this.storeService = storeService;
             this.clientCommService = clientCommService;
             this.familyGroupsService = familyGroupsService;
-            this.playniteApi = playniteApi;
+            this.playniteBackend = playniteBackend;
+            this.playniteApi = plugin.PlayniteApi;
             this.plugin = plugin;
         }
 
@@ -57,7 +59,7 @@ namespace SteamLibrary.Services
 
                         if (existingGame.Playtime == 0)
                             existingGame.Playtime = game.Playtime;
-                        
+
                         if (existingGame.Source == null)
                             existingGame.Source = game.Source;
                     }
@@ -111,8 +113,8 @@ namespace SteamLibrary.Services
                         TryAddGames(() => playerService.GetOwnedGamesWeb(settings, userToken, settings.IncludeFreeSubGames), "PlayerService (access token)", onlineLibraryGameIds, true);
 
                         if (!TryAddGames(() => clientCommService.GetClientAppList(settings, userToken), "GetClientAppList", onlineLibraryGameIds, true))
-                            TryAddGames(() => GetSteamStoreGames(allGames), "userdata", onlineLibraryGameIds);
-                        
+                            TryAddGames(() => GetSteamStoreGames(settings, allGames), "userdata", onlineLibraryGameIds);
+
                         TryAddGames(() => familyGroupsService.GetSharedGames(settings, userToken, out familySharingUserIds), "Family Sharing", onlineLibraryGameIds, true);
                     }
                     catch (Exception e)
@@ -142,7 +144,7 @@ namespace SteamLibrary.Services
                     }
                 }
             }
-            
+
             TryAddGames(() => GetGamesFromExtraIds(settings), "Settings Game-IDs");
 
             if (importError != null)
@@ -161,7 +163,7 @@ namespace SteamLibrary.Services
 
             var output = allGames.Values.Where(g => !g.Name.IsNullOrWhiteSpace() && (g.IsInstalled || settings.ImportUninstalledGames)).ToList();
 
-            foreach (var game in output.Where(g=>g.Source == null)) //installed games don't get a source by default
+            foreach (var game in output.Where(g => g.Source == null)) //installed games don't get a source by default
             {
                 game.Source = new MetadataNameProperty(SourceNames.Steam);
             }
@@ -171,15 +173,37 @@ namespace SteamLibrary.Services
             return output;
         }
 
-        private IEnumerable<GameMetadata> GetSteamStoreGames(Dictionary<string, GameMetadata> pendingImportGames)
+        private IEnumerable<GameMetadata> GetSteamStoreGames(SteamLibrarySettings settings, Dictionary<string, GameMetadata> pendingImportGames)
         {
             var appIds = storeService.GetUserData().rgOwnedApps;
-            
-            var newAppIds = appIds.Where(id=> !pendingImportGames.ContainsKey(id.ToString())).ToList();
-            
-            //TODO: get app types from Playnite back-end and exclude everything except games
-            
-            return Enumerable.Empty<GameMetadata>();
+
+            var existingLibraryIds = playniteApi.Database.Games.Where(g => g.PluginId == plugin.Id).Select(g => g.GameId).ToHashSet();
+
+            var newAppIds = appIds.Where(id =>
+            {
+                var strId = id.ToString();
+                return !pendingImportGames.ContainsKey(strId)
+                       && !existingLibraryIds.Contains(strId);
+            }).ToList();
+
+            var appInfos = playniteBackend.GetAppInfos(newAppIds).Result;
+
+            foreach (var appInfo in appInfos)
+            {
+                if (appInfo.LocalizedNames?.TryGetValue(settings.LanguageKey, out var appName) != true || string.IsNullOrWhiteSpace(appName))
+                    appName = appInfo.Name;
+
+                if (string.IsNullOrWhiteSpace(appName) || !"game".Equals(appInfo.Type, StringComparison.OrdinalIgnoreCase))
+                    continue;
+
+                yield return new GameMetadata
+                {
+                    Name = appName.RemoveTrademarks(),
+                    GameId = appInfo.AppId.ToString(),
+                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
+                    Source = new MetadataNameProperty(SourceNames.Steam),
+                };
+            }
         }
 
         private void UpdateExistingGames(ICollection<GameMetadata> games)
