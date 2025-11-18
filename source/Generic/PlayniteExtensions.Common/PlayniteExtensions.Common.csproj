@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackendClient.cs" />
     <Compile Include="DateHelper.cs" />
     <Compile Include="Encryption.cs" />
     <Compile Include="PluginBase.cs" />

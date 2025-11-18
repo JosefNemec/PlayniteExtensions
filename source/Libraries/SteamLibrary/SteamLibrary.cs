@@ -25,7 +25,9 @@ namespace SteamLibrary
     public class SteamLibrary : LibraryPluginBase<SteamLibrarySettingsViewModel>
     {
         private static readonly ILogger logger = LogManager.GetLogger();
-        internal readonly TopPanelItem TopPanelFriendsButton;
+        private readonly Configuration config;
+        internal SteamServicesClient ServicesClient;
+        internal TopPanelItem TopPanelFriendsButton;
 
         public SteamLibrary(IPlayniteAPI api) : base(
             "Steam",
@@ -37,6 +39,9 @@ namespace SteamLibrary
             api)
         {
             SettingsViewModel = new SteamLibrarySettingsViewModel(this, PlayniteApi);
+            config = GetPluginConfiguration<Configuration>();
+            ServicesClient = new SteamServicesClient(config.ServicesEndpoint);
+
             TopPanelFriendsButton = new TopPanelItem()
             {
                 Icon = new TextBlock
