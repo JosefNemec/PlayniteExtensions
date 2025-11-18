@@ -20,7 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <DebugSymbols>true</DebugSymbols>
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
@@ -69,6 +69,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\PlayniteBackendRepo\source\PlayniteServices\Models\Steam\Steam.cs">
+      <Link>Services\Steam.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Common\Extensions\NetExtensions.cs">
       <Link>Shared\NetExtensions.cs</Link>
     </Compile>
@@ -162,11 +165,8 @@
     <Compile Include="..\..\..\playniterepo\source\playnite\converters\NegateConverter.cs">
       <Link>Shared\NegateConverter.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Services\BaseServicesClient.cs">
-      <Link>Services\BaseServicesClient.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\PlayniteRepo\source\Playnite\Services\GenericResponse.cs">
-      <Link>Services\GenericResponse.cs</Link>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\BackendClient.cs">
+      <Link>Services\BackendClient.cs</Link>
     </Compile>
     <Compile Include="..\..\Generic\PlayniteExtensions.Common\DateHelper.cs">
       <Link>Shared\DateHelper.cs</Link>

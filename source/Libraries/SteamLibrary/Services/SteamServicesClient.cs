@@ -1,5 +1,6 @@
-﻿using Playnite.SDK;
-using Playnite.Services;
+﻿using Playnite.Backend.Steam;
+using Playnite.SDK;
+using PlayniteExtensions.Common;
 using SteamLibrary.Models;
 using System;
 using System.Collections.Generic;
@@ -10,23 +11,22 @@ using System.Threading.Tasks;
 
 namespace SteamLibrary.Services
 {
-    public class SteamServicesClient : BaseServicesClient
+    public class SteamServicesClient : BackendClient
     {
         private readonly ILogger logger = LogManager.GetLogger();
 
-        public SteamServicesClient(string endpoint, Version playniteVersion) : base(endpoint, playniteVersion)
+        public SteamServicesClient(string endpoint) : base(endpoint)
         {
         }
 
-        public List<GetOwnedGamesResult.Game> GetSteamLibrary(ulong userName, bool freeSub = false)
+        public async Task<List<SteamDbItem>> GetAppInfos(List<uint> appIds)
         {
-            var url = "/steam/library/" + userName;
-            if (freeSub)
-            {
-                url += "?freeSub=true";
-            }
+            var request = new SteamDbItemsRequest()
+            { 
+                AppIds = appIds
+            };
 
-            return ExecuteGetRequest<List<GetOwnedGamesResult.Game>>(url);
+            return await PostRequest<List<SteamDbItem>>("steam/appinfo", request);
         }
     }
 }

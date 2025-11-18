@@ -70,7 +70,8 @@ namespace SteamLibrary
         {
             SettingsViewModel = new SteamLibrarySettingsViewModel(this, PlayniteApi);
             config = GetPluginConfiguration<Configuration>();
-            ServicesClient = new SteamServicesClient(config.ServicesEndpoint, api.ApplicationInfo.ApplicationVersion);
+            ServicesClient = new SteamServicesClient(config.ServicesEndpoint);
+
             TopPanelFriendsButton = new TopPanelItem()
             {
                 Icon = new TextBlock
