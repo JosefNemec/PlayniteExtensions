@@ -14,7 +14,7 @@ namespace SteamLibrary.Services
     {
         private static readonly string[] firstPartyModPrefixes = { "bshift", "cstrike", "czero", "dmc", "dod", "gearbox", "ricochet", "tfc", "valve" };
         private static ILogger logger = LogManager.GetLogger();
-        
+
         public static IDictionary<string, DateTime> GetGamesLastActivity(ulong steamId)
         {
             var id = new SteamID(steamId);
@@ -68,7 +68,7 @@ namespace SteamLibrary.Services
 
             return result;
         }
-        
+
         internal static GameMetadata GetInstalledGameFromFile(string path)
         {
             var kv = new KeyValue();
@@ -373,7 +373,7 @@ namespace SteamLibrary.Services
 
             return dbs;
         }
-        
+
         [Flags]
         private enum AppStateFlags
         {

@@ -22,7 +22,7 @@ namespace SteamLibrary.Services
                                                              { "access_token", userToken.AccessToken },
                                                              { "language", settings.LanguageKey },
                                                          });
-            
+
             return response?.apps?.Select(ToGame)
                    ?? Enumerable.Empty<GameMetadata>();
         }

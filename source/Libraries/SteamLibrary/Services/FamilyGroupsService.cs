@@ -18,7 +18,7 @@ namespace SteamLibrary.Services
 
             var sharedLibrary = GetSharedLibraryApps(settings, userToken, familyGroup.family_groupid);
             userIds = sharedLibrary.apps.SelectMany(a => a.owner_steamids).ToHashSet();
-            
+
             return sharedLibrary.apps.Select(ToGame);
         }
 

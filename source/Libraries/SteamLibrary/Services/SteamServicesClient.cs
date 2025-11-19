@@ -22,7 +22,7 @@ namespace SteamLibrary.Services
         public async Task<List<SteamDbItem>> GetAppInfos(List<uint> appIds)
         {
             var request = new SteamDbItemsRequest()
-            { 
+            {
                 AppIds = appIds
             };
 

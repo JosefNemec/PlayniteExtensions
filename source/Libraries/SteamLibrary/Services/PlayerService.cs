@@ -31,7 +31,7 @@ namespace SteamLibrary.Services
                 { "language", settings.LanguageKey },
             };
             var response = Get<GetOwnedGamesResult.Response>("https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/", parameters, retrySettings);
-            return response.games.Select(g=> ToGame(g, includePlaytime));
+            return response.games.Select(g => ToGame(g, includePlaytime));
         }
 
         private static GameMetadata ToGame(GetOwnedGamesResult.Game game, bool includePlaytime)
@@ -39,8 +39,8 @@ namespace SteamLibrary.Services
             var output = new GameMetadata
             {
                 GameId = game.appid.ToString(),
-                Name =  game.name.RemoveTrademarks().Trim(),
-                Platforms = new HashSet<MetadataProperty>{ new MetadataSpecProperty("pc_windows")},
+                Name = game.name.RemoveTrademarks().Trim(),
+                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
                 Source = new MetadataNameProperty(SourceNames.Steam),
             };
 
@@ -49,7 +49,7 @@ namespace SteamLibrary.Services
                 output.Playtime = game.playtime_forever * 60;
                 output.LastActivity = GetDateTimeFromUnixEpoch(game.rtime_last_played);
             }
-            
+
             return output;
         }
     }
