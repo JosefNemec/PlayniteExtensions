@@ -3,31 +3,33 @@ using Playnite.SDK.Events;
 using SteamLibrary.Models;
 using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace SteamLibrary.Services.Base
 {
     public abstract class SteamAuthServiceBase
     {
-        protected ILogger logger = LogManager.GetLogger();
+        protected readonly ILogger logger = LogManager.GetLogger();
         protected IPlayniteAPI PlayniteApi { get; }
         protected abstract string TargetUrl { get; }
+        private SteamUserToken? userTokenFromLogin;
 
-        public SteamAuthServiceBase(IPlayniteAPI playniteApi)
+        protected SteamAuthServiceBase(IPlayniteAPI playniteApi)
         {
             PlayniteApi = playniteApi;
         }
-        
-        public SteamUserToken GetAccessToken()
+
+        public async Task<SteamUserToken> GetAccessTokenAsync()
         {
-            using (var view = PlayniteApi.WebViews.CreateOffscreenView())
-            {
-                view.NavigateAndWait(TargetUrl);
-                return GetSteamUserTokenFromWebView(view)
-                       ?? throw new Exception(PlayniteApi.Resources.GetString(LOC.SteamNotLoggedInError));
-            }
+            using var view = PlayniteApi.WebViews.CreateOffscreenView();
+
+            view.NavigateAndWait(TargetUrl);
+
+            return await GetSteamUserTokenFromWebViewAsync(view)
+                   ?? throw new Exception(PlayniteApi.Resources.GetString(LOC.SteamNotLoggedInError));
         }
 
-        public void Login()
+        public SteamUserToken? Login()
         {
             var view = PlayniteApi.WebViews.CreateView(600, 720);
             try
@@ -40,12 +42,16 @@ namespace SteamLibrary.Services.Base
                 view.DeleteDomainCookies("help.steampowered.com");
                 view.DeleteDomainCookies("login.steampowered.com");
                 view.Navigate(TargetUrl);
+
+                userTokenFromLogin = null;
                 view.OpenDialog();
+                return userTokenFromLogin;
             }
             catch (Exception e) when (!Debugger.IsAttached)
             {
                 PlayniteApi.Dialogs.ShowErrorMessage(PlayniteApi.Resources.GetString(LOC.SteamNotLoggedInError), "");
                 logger.Error(e, "Failed to authenticate user.");
+                return null;
             }
             finally
             {
@@ -57,17 +63,27 @@ namespace SteamLibrary.Services.Base
             }
         }
 
-        private void CloseWhenLoggedIn(object sender, WebViewLoadingChangedEventArgs e)
+        private async void CloseWhenLoggedIn(object sender, WebViewLoadingChangedEventArgs e)
         {
-            if (e.IsLoading)
-                return;
+            try
+            {
+                if (e.IsLoading)
+                    return;
 
-            var view = (IWebView)sender;
-            var userToken = GetSteamUserTokenFromWebView(view);
-            if (userToken?.AccessToken != null)
-                view.Close();
+                var view = (IWebView)sender;
+                var token = await GetSteamUserTokenFromWebViewAsync(view);
+                if (token?.AccessToken != null)
+                {
+                    userTokenFromLogin = token;
+                    view.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Warn(ex, "Failed to check authentication status");
+            }
         }
 
-        protected abstract SteamUserToken? GetSteamUserTokenFromWebView(IWebView webView);
+        protected abstract Task<SteamUserToken?> GetSteamUserTokenFromWebViewAsync(IWebView webView);
     }
 }

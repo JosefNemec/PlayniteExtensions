@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace SteamLibrary.Services
 {
@@ -31,7 +32,7 @@ namespace SteamLibrary.Services
             this.plugin = plugin;
         }
 
-        public IEnumerable<GameMetadata> GetGames(SteamLibrarySettings settings)
+        public async Task<IEnumerable<GameMetadata>> GetGamesAsync(SteamLibrarySettings settings)
         {
             var installedGameIds = new HashSet<string>();
 
@@ -109,11 +110,11 @@ namespace SteamLibrary.Services
                 {
                     try
                     {
-                        var userToken = storeService.GetAccessToken();
+                        var userToken = await storeService.GetAccessTokenAsync();
                         TryAddGames(() => playerService.GetOwnedGamesWeb(settings, userToken, settings.IncludeFreeSubGames), "PlayerService (access token)", onlineLibraryGameIds, true);
 
                         if (!TryAddGames(() => clientCommService.GetClientAppList(settings, userToken), "GetClientAppList", onlineLibraryGameIds, true))
-                            TryAddGames(() => GetSteamStoreGames(settings, allGames), "userdata", onlineLibraryGameIds);
+                            TryAddGames(() => GetSteamStoreGamesAsync(settings, allGames).GetAwaiter().GetResult(), "userdata", onlineLibraryGameIds);
 
                         TryAddGames(() => familyGroupsService.GetSharedGames(settings, userToken, out familySharingUserIds), "Family Sharing", onlineLibraryGameIds, true);
                     }
@@ -173,9 +174,9 @@ namespace SteamLibrary.Services
             return output;
         }
 
-        private IEnumerable<GameMetadata> GetSteamStoreGames(SteamLibrarySettings settings, Dictionary<string, GameMetadata> pendingImportGames)
+        private async Task<IEnumerable<GameMetadata>> GetSteamStoreGamesAsync(SteamLibrarySettings settings, Dictionary<string, GameMetadata> pendingImportGames)
         {
-            var appIds = storeService.GetUserData().rgOwnedApps;
+            var appIds = (await storeService.GetUserDataAsync()).rgOwnedApps;
 
             var existingLibraryIds = playniteApi.Database.Games.Where(g => g.PluginId == plugin.Id).Select(g => g.GameId).ToHashSet();
 
@@ -188,6 +189,8 @@ namespace SteamLibrary.Services
 
             var appInfos = playniteBackend.GetAppInfos(newAppIds).Result;
 
+            var output = new List<GameMetadata>();
+
             foreach (var appInfo in appInfos)
             {
                 if (appInfo.LocalizedNames?.TryGetValue(settings.LanguageKey, out var appName) != true || string.IsNullOrWhiteSpace(appName))
@@ -196,14 +199,15 @@ namespace SteamLibrary.Services
                 if (string.IsNullOrWhiteSpace(appName) || !"game".Equals(appInfo.Type, StringComparison.OrdinalIgnoreCase))
                     continue;
 
-                yield return new GameMetadata
+                output.Add(new GameMetadata
                 {
                     Name = appName.RemoveTrademarks(),
                     GameId = appInfo.AppId.ToString(),
                     Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
                     Source = new MetadataNameProperty(SourceNames.Steam),
-                };
+                });
             }
+            return output;
         }
 
         private void UpdateExistingGames(ICollection<GameMetadata> games)

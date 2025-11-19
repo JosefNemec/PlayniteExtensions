@@ -199,7 +199,6 @@
     <Compile Include="Models\SteamUserToken.cs" />
     <Compile Include="Services\Base\SteamApiServiceBase.cs" />
     <Compile Include="Services\Base\SteamAuthServiceBase.cs" />
-    <Compile Include="Services\Base\WebViewDownloader.cs" />
     <Compile Include="Services\ClientCommService.cs" />
     <Compile Include="Services\FamilyGroupsService.cs" />
     <Compile Include="Services\PlayerService.cs" />

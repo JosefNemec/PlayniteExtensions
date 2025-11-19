@@ -80,8 +80,7 @@ namespace SteamLibrary
                     }
                     else
                     {
-                        var userToken = new SteamStoreService(PlayniteApi).GetAccessToken();
-                        Settings.UserId = userToken.UserId.ToString();
+                        var userToken = new SteamStoreService(PlayniteApi).GetAccessTokenAsync().GetAwaiter().GetResult();
                         return userToken.AccessToken != null;
                     }
                 }
@@ -93,7 +92,19 @@ namespace SteamLibrary
             }
         }
 
-        public RelayCommand<object> LoginCommand => new RelayCommand<object>(_ => new SteamStoreService(PlayniteApi).Login());
+        public RelayCommand<object> LoginCommand => new RelayCommand<object>(_ =>
+        {
+            try
+            {
+                var token = new SteamStoreService(PlayniteApi).Login();
+                if (token != null)
+                    Settings.UserId = token.Value.UserId.ToString();
+            }
+            catch (Exception e)
+            {
+                Logger.Error(e, "Error logging in");
+            }
+        });
 
         public bool IsFirstRunUse { get; set; }
 

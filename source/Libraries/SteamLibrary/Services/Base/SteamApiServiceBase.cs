@@ -15,7 +15,7 @@ namespace SteamLibrary.Services.Base
 
         public TResponse Get<TResponse>(string baseUrl, Dictionary<string, string> parameters, SteamApiRetrySettings retrySettings = null) where TResponse : class
         {
-            retrySettings = retrySettings ?? new SteamApiRetrySettings();
+            retrySettings ??= new SteamApiRetrySettings();
             var urlStringBuilder = new StringBuilder(baseUrl);
             if (parameters != null && parameters.Count > 0)
             {
@@ -61,7 +61,7 @@ namespace SteamLibrary.Services.Base
         {
             if (unixEpoch == 0)
                 return null;
-            
+
             return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(unixEpoch).ToLocalTime();
         }
     }
