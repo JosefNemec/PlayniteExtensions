@@ -4,4 +4,10 @@ namespace SteamLibrary.Models
     {
         public uint[] rgOwnedApps { get; set; }
     }
+
+    public struct SteamUserToken
+    {
+        public ulong UserId;
+        public string AccessToken;
+    }
 }

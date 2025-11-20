@@ -30,11 +30,11 @@ namespace SteamLibrary.Services
                 { "include_free_sub", freeSub.ToString() },
                 { "language", settings.LanguageKey },
             };
-            var response = Get<GetOwnedGamesResult.Response>("https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/", parameters, retrySettings);
+            var response = Get<GetOwnedGamesResponse>("https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/", parameters, retrySettings);
             return response.games.Select(g => ToGame(g, includePlaytime));
         }
 
-        private static GameMetadata ToGame(GetOwnedGamesResult.Game game, bool includePlaytime)
+        private static GameMetadata ToGame(OwnedGame game, bool includePlaytime)
         {
             var output = new GameMetadata
             {

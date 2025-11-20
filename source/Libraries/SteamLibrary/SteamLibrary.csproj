@@ -191,12 +191,8 @@
     <Compile Include="Environment.cs" />
     <Compile Include="GameExtension.cs" />
     <Compile Include="LocalizationKeys.cs" />
-    <Compile Include="Models\FamilyGroupResponseModels.cs" />
-    <Compile Include="Models\GetClientAppListModels.cs" />
-    <Compile Include="Models\GetOwnedGamesResult.cs" />
-    <Compile Include="Models\SteamApiResponseRoot.cs" />
-    <Compile Include="Models\SteamUserDataModels.cs" />
-    <Compile Include="Models\SteamUserToken.cs" />
+    <Compile Include="Models\ApiResponseModels.cs" />
+    <Compile Include="Models\SteamStoreModels.cs" />
     <Compile Include="Services\Base\SteamApiServiceBase.cs" />
     <Compile Include="Services\ClientCommService.cs" />
     <Compile Include="Services\FamilyGroupsService.cs" />

@@ -1,5 +1,12 @@
+using System.Collections.Generic;
+
 namespace SteamLibrary.Models
 {
+    public class SteamApiResponseRoot<TResponse>
+    {
+        public TResponse response { get; set; }
+    }
+
     public class GetFamilyGroupForUserResponse
     {
         public string family_groupid { get; set; }
@@ -29,5 +36,36 @@ namespace SteamLibrary.Models
         public uint app_type { get; set; }
         public uint[] content_descriptors { get; set; }
         public string sort_as { get; set; }
+    }
+
+    public class GetClientAppListResponse
+    {
+        public string bytes_available { get; set; }
+        public SteamClientApp[] apps { get; set; }
+    }
+
+    public class SteamClientApp
+    {
+        public ulong appid { get; set; }
+        public string app { get; set; }
+        public string app_type { get; set; }
+        public bool available_on_platform { get; set; }
+        public string bytes_required { get; set; }
+        public bool running { get; set; }
+        public bool installed { get; set; }
+    }
+
+    public class GetOwnedGamesResponse
+    {
+        public int game_count { get; set; }
+        public List<OwnedGame> games { get; set; }
+    }
+
+    public class OwnedGame
+    {
+        public int appid { get; set; }
+        public string name { get; set; }
+        public uint playtime_forever { get; set; }
+        public uint rtime_last_played { get; set; }
     }
 }
