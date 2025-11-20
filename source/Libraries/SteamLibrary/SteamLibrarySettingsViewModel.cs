@@ -80,7 +80,7 @@ namespace SteamLibrary
                     }
                     else
                     {
-                        var userToken = new SteamStoreService(PlayniteApi).GetAccessTokenAsync().GetAwaiter().GetResult();
+                        var userToken = Task.Run(async () => await new SteamStoreService(PlayniteApi).GetAccessTokenAsync()).GetAwaiter().GetResult();
                         return userToken.AccessToken != null;
                     }
                 }
