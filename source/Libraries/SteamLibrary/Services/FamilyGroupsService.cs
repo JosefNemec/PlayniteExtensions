@@ -50,7 +50,7 @@ namespace SteamLibrary.Services
             {
                 GameId = sharedApp.appid.ToString(),
                 Name = sharedApp.name.RemoveTrademarks().Trim(),
-                LastActivity = GetDateTimeFromUnixEpoch(sharedApp.rt_last_played),
+                LastActivity = GetLastPlayedDateTime(sharedApp.rt_last_played),
                 Playtime = sharedApp.rt_playtime * 60,
                 Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
                 Source = new MetadataNameProperty(SourceNames.FamilySharing)

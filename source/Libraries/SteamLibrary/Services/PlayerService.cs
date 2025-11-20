@@ -47,7 +47,7 @@ namespace SteamLibrary.Services
             if (includePlaytime)
             {
                 output.Playtime = game.playtime_forever * 60;
-                output.LastActivity = GetDateTimeFromUnixEpoch(game.rtime_last_played);
+                output.LastActivity = GetLastPlayedDateTime(game.rtime_last_played);
             }
 
             return output;

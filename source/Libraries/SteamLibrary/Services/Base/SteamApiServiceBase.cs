@@ -57,12 +57,12 @@ namespace SteamLibrary.Services.Base
             }
         }
 
-        protected static DateTime? GetDateTimeFromUnixEpoch(uint unixEpoch)
+        protected static DateTime? GetLastPlayedDateTime(uint unixEpochSeconds)
         {
-            if (unixEpoch == 0)
+            if (unixEpochSeconds == 0)
                 return null;
 
-            return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(unixEpoch).ToLocalTime();
+            return DateTimeOffset.FromUnixTimeSeconds(unixEpochSeconds).LocalDateTime;
         }
     }
 
