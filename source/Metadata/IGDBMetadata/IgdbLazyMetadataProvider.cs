@@ -416,7 +416,7 @@ namespace IGDBMetadata
                     GameData = plugin.Client.GetMetadata(new MetadataRequest(options.GameData.Name)
                     {
                         ReleaseYear = options.GameData.ReleaseYear ?? 0,
-                        LibraryId = options.GameData.PluginId,
+                        LibraryId = options.GameData.PluginId.ToString(),
                         GameId = options.GameData.GameId
                     }).GetAwaiter().GetResult();
 
