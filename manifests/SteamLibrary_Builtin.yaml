@@ -238,3 +238,10 @@ Packages:
     Changelog:
       - Fixed web authentication method not working (by Jeshibu)
       - Added support for drag and drop from Steam's game list into custom ID import list field (by Rast1234)
+  - Version: 2.36
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-11-21
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_36.pext
+    Changelog:
+      - Fixed some games (mostly free ones) not being imported by improving web login method (by Jeshibu)
+      - Web login method now imports family shared games (by Jeshibu)
