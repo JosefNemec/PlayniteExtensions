@@ -245,3 +245,9 @@ Packages:
     Changelog:
       - Fixed some games (mostly free ones) not being imported by improving web login method (by Jeshibu)
       - Web login method now imports family shared games (by Jeshibu)
+  - Version: 2.37
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-11-21
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_37.pext
+    Changelog:
+      - Fixed web login sync failing in some cases (by Jeshibu)
