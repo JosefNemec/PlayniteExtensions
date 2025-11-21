@@ -40,6 +40,9 @@
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Playnite.SDK">
       <HintPath>..\..\packages\PlayniteSDK.6.4.0\lib\net462\Playnite.SDK.dll</HintPath>
     </Reference>
@@ -187,17 +190,23 @@
     <Compile Include="Converters\BackgroundSourceToStringConverter.cs" />
     <Compile Include="Environment.cs" />
     <Compile Include="GameExtension.cs" />
-    <Compile Include="AppState.cs" />
     <Compile Include="LocalizationKeys.cs" />
-    <Compile Include="Models\GetOwnedGamesResult.cs" />
-    <Compile Include="Models\LocalSteamUser.cs" />
-    <Compile Include="Models\ResolveVanityResult.cs" />
+    <Compile Include="Models\ApiResponseModels.cs" />
+    <Compile Include="Models\SteamStoreModels.cs" />
+    <Compile Include="Services\Base\SteamApiServiceBase.cs" />
+    <Compile Include="Services\ClientCommService.cs" />
+    <Compile Include="Services\FamilyGroupsService.cs" />
+    <Compile Include="Services\PlayerService.cs" />
+    <Compile Include="Services\SteamLocalService.cs" />
+    <Compile Include="Services\SteamServiceAggregator.cs" />
+    <Compile Include="Services\SourceNames.cs" />
+    <Compile Include="Services\SteamServicesClient.cs" />
+    <Compile Include="Services\SteamStoreService.cs" />
     <Compile Include="SteamShared\SharedSteamSettings.cs" />
     <Compile Include="SteamShared\SteamGameMetadata.cs" />
     <Compile Include="SteamShared\SteamTagNamer.cs" />
     <Compile Include="SteamShared\StoreAppDetailsResult.cs" />
     <Compile Include="SteamClient.cs" />
-    <Compile Include="Services\SteamServicesClient.cs" />
     <Compile Include="SteamShared\MetadataProvider.cs" />
     <Compile Include="SteamShared\SharedSteamSettingsViewModel.cs" />
     <Compile Include="SteamShared\TagCategories\TagIdCategory.cs" />

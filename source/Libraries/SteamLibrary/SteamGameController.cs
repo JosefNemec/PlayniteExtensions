@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using SteamKit2;
 using System.IO;
 using Playnite.SDK.Plugins;
+using SteamLibrary.Services;
 
 namespace SteamLibrary
 {
@@ -57,7 +58,7 @@ namespace SteamLibrary
                         return;
                     }
 
-                    var installed = SteamLibrary.GetInstalledGames(false);
+                    var installed = SteamLocalService.GetInstalledGames(false);
                     if (installed.TryGetValue(id, out var installedGame))
                     {
                         var installInfo = new GameInstallationData
@@ -122,7 +123,7 @@ namespace SteamLibrary
                         return;
                     }
 
-                    var installed = SteamLibrary.GetInstalledGames(false);
+                    var installed = SteamLocalService.GetInstalledGames(false);
                     if (!installed.ContainsKey(id))
                     {
                         InvokeOnUninstalled(new GameUninstalledEventArgs());
@@ -169,7 +170,7 @@ namespace SteamLibrary
             var installDirectory = Game.InstallDirectory;
             if (gameId.IsMod)
             {
-                var allGames = SteamLibrary.GetInstalledGames(false);
+                var allGames = SteamLocalService.GetInstalledGames(false);
                 if (allGames.TryGetValue(gameId.AppID.ToString(), out GameMetadata realGame))
                 {
                     installDirectory = realGame.InstallDirectory;
