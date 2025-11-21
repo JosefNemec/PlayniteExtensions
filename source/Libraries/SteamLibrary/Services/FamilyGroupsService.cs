@@ -17,6 +17,10 @@ namespace SteamLibrary.Services
                 return Enumerable.Empty<GameMetadata>();
 
             var sharedLibrary = GetSharedLibraryApps(settings, userToken, familyGroup.family_groupid);
+
+            if (sharedLibrary.apps == null) //user is most likely in a family group without any other members
+                return Enumerable.Empty<GameMetadata>();
+
             userIds = sharedLibrary.apps.SelectMany(a => a.owner_steamids).ToHashSet();
 
             return sharedLibrary.apps.Select(ToGame);
