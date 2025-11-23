@@ -1,6 +1,6 @@
 ///
 /// DO NOT MODIFY! Automatically generated via UpdateLocExtFiles.ps1 script.
-/// 
+///
 namespace System
 {
     public static class LOC

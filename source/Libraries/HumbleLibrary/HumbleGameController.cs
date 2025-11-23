@@ -9,6 +9,9 @@ using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using HumbleLibrary.Models;
+using HumbleLibrary.Services;
+using Playnite.SDK.Data;
 
 namespace HumbleLibrary
 {
@@ -31,6 +34,11 @@ namespace HumbleLibrary
 
         public override void Install(InstallActionArgs args)
         {
+            if (HandleExtras())
+            {
+                return;
+            }
+
             if (Game.SupportsHumbleApp())
             {
                 Dispose();
@@ -71,6 +79,43 @@ namespace HumbleLibrary
                 });
 
                 throw new Exception(ResourceProvider.GetString(LOC.HumbleNonTroveInstallError));
+            }
+        }
+
+        private bool HandleExtras()
+        {
+            if (Game.Source.Name != HumbleLibrary.ExtrasSource)
+            {
+                return false;
+            }
+            var extra = Serialization.FromJsonFile<Dictionary<string,Extra>>(library.ExtrasFile)[Game.GameId];
+            var url = GetExtraUrl(extra);
+            ProcessStarter.StartUrl(url);
+            InvokeOnInstallationCancelled(new GameInstallationCancelledEventArgs());
+            return true;
+        }
+
+        private string GetExtraUrl(Extra extra)
+        {
+            if (extra.PermanentUrl != null)
+            {
+                return extra.PermanentUrl;
+            }
+
+            using (var view = library.PlayniteApi.WebViews.CreateOffscreenView(
+                       new WebViewSettings
+                       {
+                           JavaScriptEnabled = false,
+                           UserAgent = library.UserAgent
+                       }))
+            {
+                var api = new HumbleAccountClient(view);
+                var order = api.GetOrders(new List<string>() {extra.GameKey}).Single();
+                var actualDownload = order.subproducts
+                    .SelectMany(x => x.downloads)
+                    .SelectMany(x => x.download_struct)
+                    .Single(x => x.sha1 == extra.Sha1);
+                return actualDownload.url.web;
             }
         }
 
