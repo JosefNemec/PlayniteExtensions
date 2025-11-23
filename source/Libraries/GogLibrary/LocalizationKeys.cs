@@ -121,9 +121,5 @@ namespace System
         /// Use vertical covers
         /// </summary>
         public const string GOGSettingsUseVerticalCovers = "LOCGOGSettingsUseVerticalCovers";
-        /// <summary>
-        /// Import game extras (soundtracks, artwork, guides, ...) when importing games
-        /// </summary>
-        public const string GOGSettingsImportGameExtras = "LOCGOGSettingsImportGameExtras";
     }
 }

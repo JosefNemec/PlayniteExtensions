@@ -20,14 +20,14 @@
   <sys:String x:Key="LOCHumbleAccountID">Account ID</sys:String>
   <sys:String x:Key="LOCHumbleGetAccountID">Get account ID</sys:String>
   <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Metadata language:</sys:String>
+  <sys:String x:Key="LOCImportGameExtras">Also import non-game extras</sys:String>
+  <sys:String x:Key="LOCImportGameExtrasTooltip">Import things like soundtracks, artwork, guides as separate entries</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignore third party store games</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGames">Import Humble Choice games</sys:String>
   <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Import games available as part of Humble Choice subscription.</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibrary">Import Humble Library games</sys:String>
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Import standard Humble store purchases and bundle purchases.</sys:String>
-  <sys:String x:Key="LOCHumbleImportGameExtras">Also import game extras</sys:String>
-  <sys:String x:Key="LOCHumbleImportGameExtrasTooltip">Import game extras (soundtracks, artwork, guides, ...) when importing games</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Enable to skip importing games that require third-party clients,
 including stores already managed in Playnite, to prevent duplicates.</sys:String>
   <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Import if DRM free version is available</sys:String>

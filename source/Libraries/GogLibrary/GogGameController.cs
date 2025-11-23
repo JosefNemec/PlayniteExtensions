@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Playnite;
 using Playnite.Common;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 
@@ -66,17 +67,13 @@ namespace GogLibrary
 
         private bool HandleExtras()
         {
-            var shellLink = Game.Links.FirstOrDefault(x => x.Name == "shell:open");
-            if (shellLink == null)
+            if (Game.Source.Name != GogLibrary.ExtrasSource)
             {
                 return false;
             }
-
-            Dispose();
-            ProcessStarter.StartUrl(shellLink.Url);
-            Game.IsInstalling = false;
-            Game.IsInstalled = false;
-            gogLibrary.PlayniteApi.Database.Games.Update(Game);
+            var url = Serialization.FromJsonFile<Dictionary<string,string>>(gogLibrary.ExtrasFile)[Game.GameId];
+            ProcessStarter.StartUrl(url);
+            InvokeOnInstallationCancelled(new GameInstallationCancelledEventArgs());
             return true;
         }
 

@@ -41,6 +41,10 @@ namespace HumbleLibrary
     {
         public string UserAgent { get; }
 
+        public string ExtrasFile { get; set; }
+
+        public const string ExtrasSource = "Humble Extras";
+
         public HumbleLibrary(IPlayniteAPI api) : base(
             "Humble",
             Guid.Parse("96e8c4bc-ec5c-4c8b-87e7-18ee5a690626"),
@@ -52,6 +56,7 @@ namespace HumbleLibrary
         {
             SettingsViewModel = new HumbleLibrarySettingsViewModel(this, PlayniteApi);
             UserAgent = $"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Playnite/{api.ApplicationInfo.ApplicationVersion.ToString(2)}";
+            ExtrasFile = Path.Combine(GetPluginUserDataPath(), "extras.json");
         }
 
         public List<InstalledTroveGame> GetInstalledGames()
@@ -217,6 +222,7 @@ namespace HumbleLibrary
         public List<GameMetadata> GetLibraryExtras(List<Order> orders)
         {
             var extras = new List<GameMetadata>();
+            var jsonData = new Dictionary<string, Extra>();
             foreach (var order in orders)
             {
                 var gameKey = order.gamekey;
@@ -225,15 +231,17 @@ namespace HumbleLibrary
                     continue;
                 }
 
-                foreach (var product in order.subproducts)
+                var productName = order.product.machine_name;
+                foreach (var subProduct in order.subproducts)
                 {
-                    var productName = product.human_name.RemoveTrademarks();
-                    if (!product.downloads.HasItems())
+                    var subproductHumanName = subProduct.human_name.RemoveTrademarks();
+                    var subproductName = subProduct.machine_name;
+                    if (!subProduct.downloads.HasItems())
                     {
                         continue;
                     }
 
-                    foreach (var download in product.downloads)
+                    foreach (var download in subProduct.downloads)
                     {
                         var downloadName = download.machine_name;
                         if (!download.download_struct.HasItems())
@@ -250,39 +258,39 @@ namespace HumbleLibrary
                             case "asmjs":
                                 var extraAsGame = new GameMetadata()
                                 {
-                                    GameId = $"{productName}_{downloadName}",
-                                    Source = new MetadataNameProperty("Humble"),
-                                    Name = $"{productName} asm.js version",
-                                    Categories = new HashSet<MetadataProperty>(){new MetadataNameProperty("extras")},
-                                    Links = new List<Link>(){new Link("shell:open", $"https://www.humblebundle.com/play/asmjs/{downloadName}/{gameKey}")}
+                                    GameId = $"{productName}_{subproductName}_{downloadName}_{download.platform}",
+                                    Source = new MetadataNameProperty(ExtrasSource),
+                                    Name = $"{subproductHumanName} asm.js version ({order.product.human_name})"
                                 };
                                 extras.Add(extraAsGame);
+                                jsonData.Add(extraAsGame.GameId, new Extra
+                                {
+                                    PermanentUrl = $"https://www.humblebundle.com/play/asmjs/{downloadName}/{gameKey}"
+                                });
                                 continue;
                         }
 
                         foreach (var actualDownload in download.download_struct)
                         {
-                            var url = actualDownload.url.web;
-                            if (string.IsNullOrWhiteSpace(url))
-                            {
-                                continue;
-                            }
                             var extraAsGame = new GameMetadata()
                             {
-                                GameId = $"{productName}_{downloadName}_{actualDownload.name}",
-                                Source = new MetadataNameProperty("Humble"),
-                                Name = $"{productName} {download.platform} {actualDownload.name}",
-                                Categories = new HashSet<MetadataProperty>(){new MetadataNameProperty("extras")},
-                                Links = new List<Link>(){new Link("shell:open", url)}
+                                GameId = $"{productName}_{subproductName}_{downloadName}_{actualDownload.name}",
+                                Source = new MetadataNameProperty(ExtrasSource),
+                                Name = $"{subproductHumanName} {download.platform} {actualDownload.name} ({order.product.human_name})"
                             };
                             extras.Add(extraAsGame);
+                            jsonData.Add(extraAsGame.GameId, new Extra
+                            {
+                                GameKey = gameKey,
+                                Sha1 = actualDownload.sha1
+                            });
                         }
-
-
                     }
                 }
             }
 
+            FileSystem.PrepareSaveFile(ExtrasFile);
+            File.WriteAllText(ExtrasFile, Serialization.ToJson(jsonData));
             return extras;
         }
 

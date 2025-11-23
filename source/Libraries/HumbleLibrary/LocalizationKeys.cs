@@ -110,14 +110,6 @@ namespace System
         /// </summary>
         public const string HumbleGeneralLibraryTooltip = "LOCHumbleGeneralLibraryTooltip";
         /// <summary>
-        /// Also import game extras
-        /// </summary>
-        public const string HumbleImportGameExtras = "LOCHumbleImportGameExtras";
-        /// <summary>
-        /// Import game extras (soundtracks, artwork, guides, ...) when importing games
-        /// </summary>
-        public const string HumbleImportGameExtrasTooltip = "LOCHumbleImportGameExtrasTooltip";
-        /// <summary>
         /// Enable to skip importing games that require third-party clients,
         /// </summary>
         public const string HumbleIgnoreThirdPartyStoreGamesTooltip = "LOCHumbleIgnoreThirdPartyStoreGamesTooltip";
