@@ -99,6 +99,10 @@
                             IsEnabled="{Binding Settings.IsPrivateAccount, Converter={StaticResource NegateConverter}}"
                             Margin="25,15,5,5" HorizontalAlignment="Left"/>
 
+                    <CheckBox IsChecked="{Binding Settings.ImportFamilySharedGames}" Margin="25,5,5,5"
+                              Content="{DynamicResource LOCSteamImportFamilyGames}"
+                              IsEnabled="{Binding Settings.IsPrivateAccount, Converter={StaticResource NegateConverter}}" />
+
                     <RadioButton Content="API key login"  Margin="0,10,0,0"
                                  IsChecked="{Binding Settings.IsPrivateAccount}" />
 

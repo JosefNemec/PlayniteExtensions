@@ -108,6 +108,7 @@ If disabled, the game page will be opened to manually start the install process.
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Show Steam's game startup selection menu in fullscreen mode</sys:String>
     <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Import Steam Deck compatibility as a</sys:String>
     <sys:String x:Key="LOCSteamWebVsApiLogin">Should I use Web or API login?</sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames">Import family shared games</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Use screenshots if artwork is not available</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">If multiple images are available then use:</sys:String>

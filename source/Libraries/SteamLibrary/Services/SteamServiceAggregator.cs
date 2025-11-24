@@ -116,7 +116,8 @@ namespace SteamLibrary.Services
                         if (!TryAddGames(() => clientCommService.GetClientAppList(settings, userToken), "GetClientAppList", onlineLibraryGameIds, true))
                             TryAddGames(() => GetSteamStoreGamesAsync(settings, allGames).GetAwaiter().GetResult(), "userdata", onlineLibraryGameIds);
 
-                        TryAddGames(() => familyGroupsService.GetSharedGames(settings, userToken, out familySharingUserIds), "Family Sharing", onlineLibraryGameIds, true);
+                        if (settings.ImportFamilySharedGames)
+                            TryAddGames(() => familyGroupsService.GetSharedGames(settings, userToken, out familySharingUserIds), "Family Sharing", onlineLibraryGameIds, true);
                     }
                     catch (Exception e)
                     {

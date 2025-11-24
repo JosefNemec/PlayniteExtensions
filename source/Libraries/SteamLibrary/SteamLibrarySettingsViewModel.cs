@@ -38,6 +38,7 @@ namespace SteamLibrary
 
         public int Version { get; set; }
         public bool ImportInstalledGames { get; set; } = true;
+        public bool ImportFamilySharedGames { get; set; } = true;
         public bool ConnectAccount { get; set; } = false;
         public bool ImportUninstalledGames { get; set; } = false;
         public string UserId { get => userId; set => SetValue(ref userId, value); }

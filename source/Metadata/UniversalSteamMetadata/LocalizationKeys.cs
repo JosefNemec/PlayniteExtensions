@@ -333,5 +333,9 @@ namespace System
         /// Should I use Web or API login?
         /// </summary>
         public const string SteamWebVsApiLogin = "LOCSteamWebVsApiLogin";
+        /// <summary>
+        /// Import family shared games
+        /// </summary>
+        public const string SteamImportFamilyGames = "LOCSteamImportFamilyGames";
     }
 }
