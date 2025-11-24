@@ -1,6 +1,6 @@
 ///
 /// DO NOT MODIFY! Automatically generated via UpdateLocExtFiles.ps1 script.
-///
+/// 
 namespace System
 {
     public static class LOC
@@ -89,6 +89,14 @@ namespace System
         /// Metadata language:
         /// </summary>
         public const string GOGMetadataLanguageLabel = "LOCGOGMetadataLanguageLabel";
+        /// <summary>
+        /// Also import non-game extras
+        /// </summary>
+        public const string GOGImportGameExtras = "LOCGOGImportGameExtras";
+        /// <summary>
+        /// Import things like soundtracks, artwork, guides as separate entries
+        /// </summary>
+        public const string GOGImportGameExtrasTooltip = "LOCGOGImportGameExtrasTooltip";
         /// <summary>
         /// Account Login
         /// </summary>

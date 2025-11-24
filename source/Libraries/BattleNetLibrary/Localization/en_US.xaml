@@ -20,6 +20,8 @@
   <sys:String x:Key="LOCBattleNetAccountID">Account ID</sys:String>
   <sys:String x:Key="LOCBattleNetGetAccountID">Get account ID</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Metadata language:</sys:String>
+  <sys:String x:Key="LOCBattleNetImportGameExtras">Also import non-game extras</sys:String>
+  <sys:String x:Key="LOCBattleNetImportGameExtrasTooltip">Import things like soundtracks, artwork, guides as separate entries</sys:String>
   <!--BattleNet-->
   <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Battle.net integration has long standing issue where authenticated account might get logged out at random times.
 

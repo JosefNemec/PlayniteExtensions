@@ -90,6 +90,14 @@ namespace System
         /// </summary>
         public const string IGDBMetadataLanguageLabel = "LOCIGDBMetadataLanguageLabel";
         /// <summary>
+        /// Also import non-game extras
+        /// </summary>
+        public const string IGDBImportGameExtras = "LOCIGDBImportGameExtras";
+        /// <summary>
+        /// Import things like soundtracks, artwork, guides as separate entries
+        /// </summary>
+        public const string IGDBImportGameExtrasTooltip = "LOCIGDBImportGameExtrasTooltip";
+        /// <summary>
         /// Use screenshots if artwork is not available
         /// </summary>
         public const string IgdbUseScreenshotIfNecessary = "LOCIgdbUseScreenshotIfNecessary";

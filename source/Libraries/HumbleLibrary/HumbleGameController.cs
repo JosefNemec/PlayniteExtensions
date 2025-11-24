@@ -6,12 +6,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Security.Principal;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using HumbleLibrary.Models;
 using HumbleLibrary.Services;
 using Playnite.SDK.Data;
+using PlayniteExtensions.Common;
 
 namespace HumbleLibrary
 {
@@ -84,11 +86,16 @@ namespace HumbleLibrary
 
         private bool HandleExtras()
         {
-            if (Game.Source.Name != HumbleLibrary.ExtrasSource)
+            if (!Game.GameId.StartsWith(HumbleLibrary.ExtrasPrefix))
             {
                 return false;
             }
-            var extra = Serialization.FromJsonFile<Dictionary<string,Extra>>(library.ExtrasFile)[Game.GameId];
+
+            var str = Encryption.DecryptFromFile(
+                library.ExtrasFile,
+                Encoding.UTF8,
+                WindowsIdentity.GetCurrent().User.Value);
+            var extra = Serialization.FromJson<Dictionary<string, Extra>>(str)[Game.GameId];
             var url = GetExtraUrl(extra);
             ProcessStarter.StartUrl(url);
             InvokeOnInstallationCancelled(new GameInstallationCancelledEventArgs());

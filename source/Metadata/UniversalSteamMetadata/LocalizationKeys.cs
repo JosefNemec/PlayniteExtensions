@@ -90,6 +90,14 @@ namespace System
         /// </summary>
         public const string UniversalSteamMetadataMetadataLanguageLabel = "LOCUniversalSteamMetadataMetadataLanguageLabel";
         /// <summary>
+        /// Also import non-game extras
+        /// </summary>
+        public const string UniversalSteamMetadataImportGameExtras = "LOCUniversalSteamMetadataImportGameExtras";
+        /// <summary>
+        /// Import things like soundtracks, artwork, guides as separate entries
+        /// </summary>
+        public const string UniversalSteamMetadataImportGameExtrasTooltip = "LOCUniversalSteamMetadataImportGameExtrasTooltip";
+        /// <summary>
         /// What's my account name?
         /// </summary>
         public const string SettingsWhatsSteamName = "LOCSettingsWhatsSteamName";

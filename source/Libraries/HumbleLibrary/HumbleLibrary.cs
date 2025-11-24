@@ -11,10 +11,12 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Reflection;
+using System.Security.Principal;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using PlayniteExtensions.Common;
 
 namespace HumbleLibrary
 {
@@ -43,6 +45,8 @@ namespace HumbleLibrary
 
         public string ExtrasFile { get; set; }
 
+        public const string ExtrasPrefix = "humble_extras";
+
         public const string ExtrasSource = "Humble Extras";
 
         public HumbleLibrary(IPlayniteAPI api) : base(
@@ -56,7 +60,7 @@ namespace HumbleLibrary
         {
             SettingsViewModel = new HumbleLibrarySettingsViewModel(this, PlayniteApi);
             UserAgent = $"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Playnite/{api.ApplicationInfo.ApplicationVersion.ToString(2)}";
-            ExtrasFile = Path.Combine(GetPluginUserDataPath(), "extras.json");
+            ExtrasFile = Path.Combine(GetPluginUserDataPath(), "extras.dat");
         }
 
         public List<InstalledTroveGame> GetInstalledGames()
@@ -258,7 +262,7 @@ namespace HumbleLibrary
                             case "asmjs":
                                 var extraAsGame = new GameMetadata()
                                 {
-                                    GameId = $"{productName}_{subproductName}_{downloadName}_{download.platform}",
+                                    GameId = $"{ExtrasPrefix}_{productName}_{subproductName}_{downloadName}_{download.platform}",
                                     Source = new MetadataNameProperty(ExtrasSource),
                                     Name = $"{subproductHumanName} asm.js version ({order.product.human_name})"
                                 };
@@ -274,7 +278,7 @@ namespace HumbleLibrary
                         {
                             var extraAsGame = new GameMetadata()
                             {
-                                GameId = $"{productName}_{subproductName}_{downloadName}_{actualDownload.name}",
+                                GameId = $"{ExtrasPrefix}_{productName}_{subproductName}_{downloadName}_{actualDownload.name}",
                                 Source = new MetadataNameProperty(ExtrasSource),
                                 Name = $"{subproductHumanName} {download.platform} {actualDownload.name} ({order.product.human_name})"
                             };
@@ -290,7 +294,11 @@ namespace HumbleLibrary
             }
 
             FileSystem.PrepareSaveFile(ExtrasFile);
-            File.WriteAllText(ExtrasFile, Serialization.ToJson(jsonData));
+            Encryption.EncryptToFile(
+                ExtrasFile,
+                Serialization.ToJson(jsonData),
+                Encoding.UTF8,
+                WindowsIdentity.GetCurrent().User.Value);
             return extras;
         }
 

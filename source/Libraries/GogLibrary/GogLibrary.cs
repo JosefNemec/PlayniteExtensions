@@ -24,6 +24,8 @@ namespace GogLibrary
     {
         private static readonly ILogger logger = LogManager.GetLogger();
 
+        public const string ExtrasPrefix = "gog_extras";
+
         public const string ExtrasSource = "GOG Extras";
 
         public GogLibrary(IPlayniteAPI api) : base(
@@ -333,7 +335,7 @@ namespace GogLibrary
 
                         var extraAsGame = new GameMetadata()
                         {
-                            GameId = $"{game.GameId}_{id}",
+                            GameId = $"{ExtrasPrefix}_{game.GameId}_{id}",
                             Source = new MetadataNameProperty(ExtrasSource),
                             Name = $"{game.Name} {x.Name.RemoveTrademarks()}"
                         };

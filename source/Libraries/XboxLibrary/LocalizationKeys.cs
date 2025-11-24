@@ -90,6 +90,14 @@ namespace System
         /// </summary>
         public const string XboxMetadataLanguageLabel = "LOCXboxMetadataLanguageLabel";
         /// <summary>
+        /// Also import non-game extras
+        /// </summary>
+        public const string XboxImportGameExtras = "LOCXboxImportGameExtras";
+        /// <summary>
+        /// Import things like soundtracks, artwork, guides as separate entries
+        /// </summary>
+        public const string XboxImportGameExtrasTooltip = "LOCXboxImportGameExtrasTooltip";
+        /// <summary>
         /// Start Xbox Pass app instead of Microsoft Store when opening client
         /// </summary>
         public const string XboxXboxAppClientPriorityLaunch = "LOCXboxXboxAppClientPriorityLaunch";

@@ -2,9 +2,14 @@ namespace HumbleLibrary.Models
 {
     public class Extra
     {
-        // TODO gameKeys are private. should this json file be encrypted?
+        /// <summary>
+        /// This is sensitive info, that's why json file with extras is encrypted
+        /// </summary>
         public string GameKey { get; set; }
 
+        /// <summary>
+        /// Helps identify given "extra" in a list of "downloads" returned from api
+        /// </summary>
         public string Sha1 { get; set; }
 
         /// <summary>

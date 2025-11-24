@@ -67,10 +67,11 @@ namespace GogLibrary
 
         private bool HandleExtras()
         {
-            if (Game.Source.Name != GogLibrary.ExtrasSource)
+            if (!Game.GameId.StartsWith(GogLibrary.ExtrasPrefix))
             {
                 return false;
             }
+
             var url = Serialization.FromJsonFile<Dictionary<string,string>>(gogLibrary.ExtrasFile)[Game.GameId];
             ProcessStarter.StartUrl(url);
             InvokeOnInstallationCancelled(new GameInstallationCancelledEventArgs());
