@@ -251,3 +251,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_37.pext
     Changelog:
       - Fixed web login sync failing in some cases (by Jeshibu)
+  - Version: 2.38
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-11-25
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_38.pext
+    Changelog:
+      - Added option to disable import of family shared games
