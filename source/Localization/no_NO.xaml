@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">Krever autentisering</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Autentiser</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">Alternativ autentisering</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Feilsøking av problemer</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">Begynn å bruke {0}-klient</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importer spilletid</sys:String>
     <sys:String x:Key="LOCAccountID">Konto-ID</sys:String>
+    <sys:String x:Key="LOCGetAccountID">Hent konto-ID</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Språk for metadata:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io-klienten vil starte. Vennligst logg inn, og lukk deretter denne meldingen.</sys:String>
@@ -44,6 +46,7 @@ Merk at alternativet Kontonavn bare fungerer for kontoer der spillbibliotekene e
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Start installasjonsprosessen automatisk når du installerer spill på GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Hvis aktivert startes installasjonsprosessen automatisk uten behov for brukerinteraksjon, og den konfigurerte installasjonsplasseringen brukes.
 Hvis deaktivert, vil spillsiden bli åpnet så  installasjonsprosessen kan startes manuelt.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Bruk vertikale omslag</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Hva er kontonavnet mitt?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">URL-navn for konto</sys:String>
@@ -86,9 +89,27 @@ Hvis deaktivert, vil spillsiden bli åpnet så  installasjonsprosessen kan start
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Ekskluderte stikkord</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Fjern fra ekskluderte stikkord</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Legg til ekskluderte stikkord</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Angi emneordkategori som prefiks</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Angir kategorien emneordet tilhører som prefiks. For eksempel blir &quot;Action RPG&quot; gjort om til &quot;Genres: Action RPG&quot;</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments">Vurderinger</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures">Funksjoner</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Finansiering</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">Sjangre</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Maskinvare/inngang</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags">Andre emneord</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers">Spillere</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Vurderinger</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware">Programvare</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres">Sub-sjangre</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Temaer og stemninger</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Overordnede sjangre</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Bilder og synsvinkel</sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">Låst stikkordantall må være et gyldig tall</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Vis Steams oppstartsmeny for spill i skrivebordsmodus</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Vis Steams oppstartsmeny for spill i fullskjermmodus</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Importer Steam Deck-kompatibilitet som en</sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin">Skal jeg bruke web- eller API-innlogging?</sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Bruk skjermbilder hvis bildemateriale ikke er tilgjengelig</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Hvis flere bilder er tilgjengelige, bruk:</sys:String>
@@ -110,4 +131,21 @@ inkludert butikker som allerede er administrert i Playnite, for å forhindre dup
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Start Xbox Game Pass-appen i stedet for Microsoft Store når du åpner klienten</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Importer konsollspill for Xbox</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Battle.net-integrasjon har vedvarende problem der en autentisert bruker kan bli logget ut på tilfeldige tidspunkter.
+
+Frem til problemet er rettet, anbefaler vi å koble til en konto, importere spill og koble fra kontoen igjen. Du trenger bare å gjenta prosessen når et nytt spill er lagt til kontoen din.</sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">Importer EA App-spill</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">Importer Ubisoft-spill</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Logg inn i Epic Web Store i standardnettleseren din
+2. Naviger til autentiseringskodesiden ved å trykke på OK i denne dialogboksen
+3. Fyll inn autentiseringskoden i den neste dialogboksen</sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Fyll inn autentiseringskode</sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Ubisoft-utvidelsen krever ingen godkjenning. Den henter bibliotekinformasjon fra Ubisoft Connect-klientens brukerdatafiler.
+
+Hvis du har problemer med å importere spill, bør du kontrollere at klienten er riktig installert og at den er logget inn.</sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Rockstar-utvidelsen kan for øyeblikket kun importe installerte spill. Det finnes ingen måte å koble til en konto for å importere alle spill.</sys:String>
 </ResourceDictionary>

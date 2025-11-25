@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">מחייב אימות</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">נכשל באימות משתמש.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">אימות</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel"></sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">הפעל את המשחקים בלי להריץ את הקליינט המקורי שלהם</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">טיפול בתקלות סנכרון חשבון</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">פתרון בעיות</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">התחל להשתמש בלקוח {0}</sys:String>
     <sys:String x:Key="LOCImportPlaytime">יבא זמן משחק</sys:String>
     <sys:String x:Key="LOCAccountID">מזהה משתמש</sys:String>
+    <sys:String x:Key="LOCGetAccountID"></sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">שפת מטא-נתונים:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io ייפתח כעת. אנא התחבר ואז סגור את הודעה זו.</sys:String>
@@ -45,6 +47,7 @@
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">התחל אוטומטית את תהליך ההתקנה בעת התקנת משחקים ב-GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">אם מופעל, תהליך ההתקנה יתחיל באופן אוטומטי ללא צורך באינטראקציה של המשתמש עבור מיקום ברירת המחדל.
 אם מושבת, עמוד המשחק יפתח עבור התחלה ידנית של תהליך ההתקנה.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">מה שם החשבון שלי?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">שם URL חשבון</sys:String>
@@ -87,9 +90,27 @@
     <sys:String x:Key="LOCSteamTagBlacklistHeader">תגים אסורים:</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">הסר מהתגים האסורים</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">הוסף לתגים האסורים</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint"></sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">ספירת התג המתוקנת חייבת להיות מספר תקין</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">הצג את תפריט התחלת משחק של סטים במצב דסקטופ</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">הצג את תפריט התחלת משחק של סטים במצב מסך מלא</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs"></sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin"></sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">השתמש בתצלומי מסך אם עטיפה אינה זמינה</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">אם כמה תמונות קיימות אז בחר:</sys:String>
@@ -112,4 +133,15 @@
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">הפעל את אפליקציית Xbox Game Pass במקום חנות מיקרוסופט בעת פתיחת לקוח</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">ייבוא משחקי קונסולת Xbox</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve"></sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames"></sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames"></sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve"></sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve"></sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve"></sys:String>
 </ResourceDictionary>

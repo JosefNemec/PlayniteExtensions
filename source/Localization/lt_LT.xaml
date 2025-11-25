@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">Reikalinga autentifikavimas</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Nepavyko autentifikuoti vartotojo.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Autentifikuoti</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel"></sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Paleisti žaidimus tiesiogiai, nenaudojant oficialaus kliento</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Spręsti vartotojo sinchronizacijos problemas</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Tvarkoma klaidas</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">Pradėti naudojant {0} klientą</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importuoti pražaistą laiką</sys:String>
     <sys:String x:Key="LOCAccountID">Paskyros ID</sys:String>
+    <sys:String x:Key="LOCGetAccountID"></sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Metadata kalba:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">bus atidarytas itch.io klientas. Prašome prisijungti ir uždaryti šį pranešimą.</sys:String>
@@ -44,6 +46,7 @@ Bet paskyros pavadinimo metodas veikia tik jeigu paskyra nustatyta į ne privač
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automatiškas pradėti instaliacijos procesa kai žaidimai instaliuojami per GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Jei įjungta, instaliacijos procesas bus automatiškai pradėtas ir naudotojoįvesties nereikės ir žaidimai bus suinstaliuoti iš anksto nustatyta vieta.
 Jei išjungta, žaidimo puslapis bus atidarytas automatiškai ,kad pradėti instaliacijos procesa.  </sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Koks mano vartotojo vardas?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Vartotojo nuorodos pavadinimas</sys:String>
@@ -86,9 +89,27 @@ Jei išjungta, žaidimo puslapis bus atidarytas automatiškai ,kad pradėti inst
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Išimti tags</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Pašallinti iš išimtų tags</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Pridėti prie išimtų tags</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint"></sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">Fiksuotas tag skaičius turi būti skaičius</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Parodyti Steam žaidimų paleidimo pasirinkimo menių darbalaukio režimu</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Parodyti Steam žaidimų paleidimo pasirinkimo menių  pilno ekrano režimu</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs"></sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin"></sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Naudoti ekrano kopijas jei officiali medžiaga nepasiekiama</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Jei kelios nuotraukos yra pasiekemos tada naudoti:</sys:String>
@@ -110,4 +131,15 @@ Jei išjungta, žaidimo puslapis bus atidarytas automatiškai ,kad pradėti inst
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Paleisti Xbox Pass programėle vietoj Microsoft parduotuvės kai paleidžiamas paleidėjas</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Importuoti &quot;Xbox&quot; konsolės žaidimus</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve"></sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames"></sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames"></sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve"></sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve"></sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve"></sys:String>
 </ResourceDictionary>

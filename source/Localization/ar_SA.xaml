@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">يتطلب المصادقة</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">مصادقة</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">المصادقة البديلة</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">بدء باستخدام {0} عميل</sys:String>
     <sys:String x:Key="LOCImportPlaytime">استيراد وقت التشغيل</sys:String>
     <sys:String x:Key="LOCAccountID">تعريف الحساب</sys:String>
+    <sys:String x:Key="LOCGetAccountID">الحصول على معرف الحساب</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">سيتم إطلاق itch.io. الرجاء تسجيل الدخول ثم إغلاق هذه الرسالة.
@@ -46,6 +48,7 @@
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">بدء عملية التثبيت تلقائياً عند تثبيت الألعاب على GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">إذا تم تفعيله، سيتم بدء عملية التثبيت تلقائيًا دون الحاجة إلى تفاعل المستخدم مع موقع التثبيت الافتراضي المكون.
 إذا تم تعطيله، سيتم فتح صفحة اللعبة لبدء عملية التثبيت يدوياً.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">استخدم غلاف عمودي</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">ما اسم حسابي؟</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">اسم رابط الحساب</sys:String>
@@ -89,9 +92,27 @@
     <sys:String x:Key="LOCSteamTagBlacklistHeader">الشعارات المستبعدة</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">إزالة من الشعارات المستبعدة</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">إضافة إلى الشعارات المستبعدة</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">تعيين فئة الوسم كبادئة</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">ضبط الفئة التي تنتمي إليها الوسم كبادئة</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments">التقييمات</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures">الميزات</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc">التمويل</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">الأنواع</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput">الأجهزة/المدخلات</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags">وسوم أخرى</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers">اللاعبين</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">التقييمات</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware">البرمجيات</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres">الأنواع الفرعية</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods">الأنماط والتعديلات</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">الأنواع رفيعة المستوى</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">المرئيات ونقاط العرض</sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">عدد الشعارات الثابتة يجب أن يكون رقماً صحيحاً</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">إظهار قائمة اختيار بدء التشغيل لألعاب Steam في وضع سطح المكتب</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">إظهار قائمة اختيار بدء التشغيل لألعاب Steam في وضع ملء الشاشة</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">استرداد توافق Steam Deck كـ</sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin">هل أستخدم الويب أم API لتسجيل الدخول</sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">استخدم لقطات الشاشة في حالة عدم توفر العمل الفني</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">اذا اكثر من صورة متاحات اذن استخدم:</sys:String>
@@ -115,4 +136,19 @@
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">بدء تشغيل Xbox pass بدلاً من متجر Microsoft عند فتح العميل</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">استيراد ألعاب Xbox</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">يوجد مشكلة دائمة في تكامل Battle.net حيث قد يتم تسجيل الخروج من الحساب المزامن بشكل عشوائي.
+
+إلى أن يتم إصلاح المشكلة، نوصي بربط الحساب، ثم استيراد الألعاب وقطع الاتصال بالحساب بعد ذلك. ستحتاج إلى تكرار العملية فقط عند إضافة لعبة جديدة إلى حسابك.</sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">استيراد ألعاب EA App</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">استيراد ألعاب Ubisoft</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. قم بتسجيل الدخول إلى متجر Epic الإلكتروني في متصفحك الافتراضي
+2. انتقل إلى صفحة رمز المصادقة بالنقر على خيار موافق هنا
+3. إدراج &quot;كود المصادقة&quot; في مربع الحوار التالي</sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">إدراج &quot;كود المصادقة&quot;</sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">إضافة Ubisoft لا تتطلب إي مصادقة، حيث أنها تأخذ معلومات المكتبة عن طريق خدمة &quot;Ubisoft Connect&quot; لبيانات العميل المستخدم.</sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">إضافة Rockstar تستورد حاليا فقط الألعاب المثبتة. لا توجد طريقة لربط حساب لاستيراد جميع الألعاب.</sys:String>
 </ResourceDictionary>

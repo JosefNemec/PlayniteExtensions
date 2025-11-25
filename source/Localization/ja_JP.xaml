@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">認証が必要です</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">認証</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">代替認証</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">問題のトラブルシューティング</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">{0} クライアントの使用を開始</sys:String>
     <sys:String x:Key="LOCImportPlaytime">プレイ時間をインポート</sys:String>
     <sys:String x:Key="LOCAccountID">アカウントID</sys:String>
+    <sys:String x:Key="LOCGetAccountID">アカウント ID を取得</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">メタデータの言語</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io クライアントが開きます。サインインしてからこのメッセージを閉じてください。</sys:String>
@@ -44,6 +46,7 @@
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">GOG Galaxy へのゲームインストール時にインストールを自動的に開始する</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">有効にすると、インストール先の設定に関する操作を求められずにインストールが始まります。
 無効にすると、手動でインストールを行うためのゲームページが開きます。</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">私のアカウント名は何ですか？</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">アカウント URL 名</sys:String>
@@ -86,9 +89,27 @@
     <sys:String x:Key="LOCSteamTagBlacklistHeader">除外するタグ</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">除外するタグから削除</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">除外するタグに追加</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures">特徴</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">ジャンル</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware">ソフトウェア</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint"></sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">固定タグ数は有効な数字でなければなりません</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">デスクトップモードで Steam の起動メニューを表示</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Steam の起動メニューをフルスクリーンモードで表示</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs"></sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin"></sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">アートワークが利用できない場合スクリーンショットを使用する</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">
@@ -110,4 +131,17 @@
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">クライアントを開くときに Microsoft Store ではなく Xbox Pass アプリを起動する</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Xbox シリーズのゲームをインポート</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve"></sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">EA App ゲームをインポート</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">Ubisoft ゲームをインポート</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve"></sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Ubisoft プラグインは認証を必要とせず、Ubisoft Connect クライアントのユーザーデータファイルからライブラリ情報を取得します。
+
+ゲームのインポートに問題がある場合は、クライアントが正しくインストールされ、アカウントにログインしていることを確認してください。</sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Rockstar プラグインは現在インストールされているゲームのみをインポートします。アカウントをリンクしてすべてのゲームをインポートする方法はありません。</sys:String>
 </ResourceDictionary>

@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">Vajalik on autentimine</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Kasutaja autentimine ebaõnnestus.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Autendi</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">Alternatiivne autentimine</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Käivita mängud otseselt, ilma ametlikku klienti avamata</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Konto sünkroonimise probleemide tõrkeotsing</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Probleemide tõrkeotsing</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">Käivita klienti {0} kasutades</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Impordi mänguaeg</sys:String>
     <sys:String x:Key="LOCAccountID">Konto ID</sys:String>
+    <sys:String x:Key="LOCGetAccountID">Saa konto ID</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Metaandmete keel:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io käivitatakse. Palun logi sisse ja siis sulge see teade.</sys:String>
@@ -44,6 +46,7 @@ Pane tähele, et konto nime valik töötab ainult nende kontode puhul, mille mä
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automaatselt algata installimise protsess, installides mänge teenuses GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Kui see on lubatud, käivitub paigaldusprotsess automaatselt ilma kasutaja sekkumiseta seadistatud vaikimisi paigalduskohta.
 Kui see on keelatud, avatakse mängu leht, et paigaldusprotsess käsitsi käivitada.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Kasuta vertikaalsed kaanepiltid</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Mis on mu konto nimi?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Konto URL nimi</sys:String>
@@ -86,9 +89,27 @@ Kui see on keelatud, avatakse mängu leht, et paigaldusprotsess käsitsi käivit
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Välistatud sildid</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Eemalda välistatud siltidest</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Lisa välistatud siltidesse</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Sea märgendi kategooria prefiksina</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments">Hinnangud</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures">Funktsioonid</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Rahastus</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">Žanrid</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Riistvara/Sisend</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags">Muud märgendid</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers">Mängijad</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware">Tarkvara</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres">Alažanrid</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Teemad ja moodid</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint"></sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">Siltide arv peab olema korrektne number</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Näita Steami mängu käivitusvaliku menüüd töölaua režiimis</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Näita Steami mängu käivitusvaliku menüüd täisekraani režiimis</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs"></sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin"></sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Kasuta kunstiteose puudumisel ekraanipilte</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Kui saadaval on mitu pilti, siis kasuta:</sys:String>
@@ -110,4 +131,15 @@ mis nõuavad kolmandate osapoolte kliente, sealhulgas Playnite'is juba hallatud 
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Klienti avades käivita rakendus Xbox Pass, mitte Microsoft Store</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Impordi Xboxi konsoolimängud</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve"></sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames"></sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames"></sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve"></sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve"></sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve"></sys:String>
 </ResourceDictionary>

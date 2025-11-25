@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">Requírese verificación</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Erro na verificación do usuario</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Verificar</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel"></sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Comezar xogos dereitamente sen arrincar o cliente oficial</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Solución de problemas coa sincronización da conta</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Solución de problemas</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">Comezar usando o cliente {0}</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importar tempo de xogo</sys:String>
     <sys:String x:Key="LOCAccountID">Id. da conta</sys:String>
+    <sys:String x:Key="LOCGetAccountID"></sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Idioma dos metadatos:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">Iniciarase itch.io. Inicia sesión e pecha esta mensaxe.</sys:String>
@@ -44,6 +46,7 @@ A opción do nome de conta só funciona con contas cuxas bibliotecas de xogos es
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Iniciar automaticamente o proceso de instalación ao instalar xogos en GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Se esta opción está activada, o proceso de instalación iniciarase automaticamente sen interacción do usuario na localización de instalación predeterminada.
 Se esta opción está desactivada, abrirase a páxina do xogo para iniciar manualmente o proceso de instalación.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Cál é o nome da miña conta?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Nome da ligazón da conta</sys:String>
@@ -86,9 +89,27 @@ Se esta opción está desactivada, abrirase a páxina do xogo para iniciar manua
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Etiquetas excluídas</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Quitar das etiquetas excluídas</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Engadir ás etiquetas excluídas</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint"></sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">A cantidade fixa de etiquetas debe ser un número válido</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Mostrar o menú de selección de inicio de xogo de Steam no modo de escritorio</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Mostrar o menú de selección de inicio de xogo de Steam no modo de pantalla completa</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs"></sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin"></sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Emprega capturas de pantalla se non hai ilustracións dispoñibles</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Se houbese varias imaxes dispoñibles, entón emprega:</sys:String>
@@ -110,4 +131,15 @@ incluídas as tendas xa xestionadas en Playnite, para evitar duplicados.</sys:St
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Iniciar a aplicación de Xbox Game Pass no canto da Microsoft Store ao abrir o cliente</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Importar xogos da Xbox</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve"></sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames"></sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames"></sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve"></sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve"></sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve"></sys:String>
 </ResourceDictionary>

@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Kimlik Doğrulaması</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">Alternatif kimlik doğrulaması</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Hesap eşitleme sorunlarını giderme</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Sorunları giderme</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Oynama zamanını içe aktar</sys:String>
     <sys:String x:Key="LOCAccountID">Hesap kimliği</sys:String>
+    <sys:String x:Key="LOCGetAccountID">Hesap ID al</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Üst veri dili:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io başlatılacaktır. Lütfen oturum açın ve ardından bu mesajı kapatın.</sys:String>
@@ -44,6 +46,7 @@ Not: Hesap Adı seçeneği, sadece GOG' un gizlilik ayarlarında kütüphanesi h
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">GOG Galaxy için oyun kurarken kurulum işlemini otomatik olarak başlat</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Etkinleştirilirse; kurulum işlemi, kullanıcı etkileşimi gerekmeksizin yapılandırılmış öntanımlı kurulum konumunda kendiliğinden başlatılacaktır.
 Devre dışı bırakılırsa, kurulum işlemini elle başlatmak için oyun sayfası açılacaktır.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Dikey kapaklar kullan</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Hesap adım ne?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Hesap URL Adı</sys:String>
@@ -86,9 +89,27 @@ Devre dışı bırakılırsa, kurulum işlemini elle başlatmak için oyun sayfa
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Hariç tutulan etiketler</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Hariç tutulan etiketlerden kaldır</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Hariç tutulan etiketlere ekle</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Etiket kategorisini önek olarak ayarla</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Etiketin ait olduğu kategoriyi önek olarak ayarlar. Örneğin, &quot;Aksiyon RPG&quot; &quot;Türler: Aksiyon RPG&quot;ye dönüştürülür</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments">Değerlendirmeler</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures">Özellikler</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Finansman</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">Türler</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Donanım/Giriş</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags">Diğer Etiketler</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers">Oyuncular</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Puanlar</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware">Yazılım</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres">Alt-Türler</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Tema &amp; Ruh Halleri</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Üst-Seviye Türleri</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Görseller &amp; Bakış Açısı</sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">Sabit etiket sayısı geçerli bir sayı olmalıdır</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Steam oyun başlatıcı seçim menüsünü masaüstü kipinde göster</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Steam oyun başlatıcı seçim menüsünü tam ekran kipinde göster</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Steam Deck uyumluluğunu içe aktar</sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin">Web mi yoksa API girişi mi kullanmalıyım?</sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames">Aile paylaşımı oyunlarını içeri aktar</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"> Görsel kullanılamıyorsa ekran görüntüsü kullan</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Birden fazla resim mevcutsa, şunu kullan:</sys:String>
@@ -110,4 +131,21 @@ Devre dışı bırakılırsa, kurulum işlemini elle başlatmak için oyun sayfa
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">İstemciyi açarken Microsoft Mağaza'sı yerine Xbox Pass uygulamasını başlat</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Xbox konsol oyunlarını içe aktar</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Battle.net bütünleşmesinde, kimliği doğrulanmış hesabın rastgele zamanlarda oturumunun kapatılabildiği uzun süredir devam eden bir sorun var.
+
+Sorun düzeltilene kadar, bir hesabı bağlamanızı, oyunları içe aktarmanızı ve ardından hesabın bağlantısını kesmenizi öneririz. İşlemi yalnızca hesabınıza yeni oyun eklendiğinde tekrarlamanız gerekecektir.</sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">EA Uygulamadan oyunlarını içe aktar</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">Ubisoft oyunlarını içe aktar</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Varsayılan tarayıcınızda Epic web mağazasına giriş yapın
+2. Bu iletişim kutusunda Tamam'a tıklayarak kimlik doğrulama kodu sayfasına gidin
+3. Sonraki iletişim kutusuna &quot;yetkilendirmeKodu&quot; değerini girin</sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">&quot;yetkilendirmeKodu&quot; değerini girin</sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Ubisoft eklentileri herhangi bir kimlik doğrulaması gerektirmez, kütüphane bilgilerini Ubisoft Connect istemcisinin kullanıcı veri dosyalarından alır.
+
+Oyunları içe aktarırken sorun yaşıyorsanız, istemcinin düzgün bir şekilde kurulduğundan ve hesabınızda oturum açıldığından emin olun.</sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Rockstar eklentisi şu anda yalnızca kurulu oyunları içe aktarıyor. Tüm oyunları içe aktarmak için bir hesabı bağlamanın bir yolu yok.</sys:String>
 </ResourceDictionary>

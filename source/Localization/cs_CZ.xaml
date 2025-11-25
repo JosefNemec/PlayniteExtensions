@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">Vyžaduje přihlášení</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Přihlášení se nezdařilo.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Autentizovat</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">Alternativní autentizace</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Spustit hru přímo bez použití oficiálního klienta</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Řešení problémů se synchronizací účtu</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Řešení potíží</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">Začít používat {0} klienta.</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importovat nahraný čas</sys:String>
     <sys:String x:Key="LOCAccountID">ID účtu</sys:String>
+    <sys:String x:Key="LOCGetAccountID">Získat ID účtu</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Jazyk metadat:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">Bude spuštěno itch.io. Prosím přihlašte se a pak zavřete tuto zprávu.</sys:String>
@@ -44,6 +46,7 @@ Připomínáme, že možnost zadání jména účtu funguje pouze pro ty účty,
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automaticky spustit proces instalace při instalaci přes GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Pokud je povoleno, instalační proces bude automaticky spuštěn bez nutnosti uživatelské interakce s nastavením instalačního adresáře.
 Pokud je vypnuto, stránka hry bude otevřena pro ruční spuštění instalačního procesu.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Použít vertikální obálky</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Jaké je jméno mého účtu?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Jméno URL Účtu</sys:String>
@@ -86,9 +89,27 @@ Pokud je vypnuto, stránka hry bude otevřena pro ruční spuštění instalačn
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Vyloučené štítky</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Odstranit z vyloučených štítků</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Přidat do vyloučených štítků</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Nastavit kategorii tagů jako prefix</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Nastaví kategorii, do které štítek patří, jako prefix. Například &quot;Akční RPG&quot; se změní na &quot;Žánry: akční RPG&quot;</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments">Hodnocení</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures">Vlastnosti</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Financování</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">Žánry</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Hardware/vstup</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags">Ostatní štítky</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers">Hráči</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Hodnocení</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware">Software</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres">Podkategorie</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Motivy a nálady</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Žánry nejvyšší úrovně</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Vizuály a bod pohledu</sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">Počet štítků musí být platné číslo</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Zobrazit nabídku spuštění hry Steamem v režimu plochy</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Zobrazit nabídku spuštění hry Steamem v režimu celé obrazovky</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Importovat kompatibilitu se Steam Deck jako</sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin">Mám používat přihlášení na webu nebo API?</sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames">Importovat hry ze sdílené knihovny</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Použít snímek z hry pokud není k dispozici obrázek</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Pokud je k dispozici víc obrázků, použít:</sys:String>
@@ -110,4 +131,21 @@ včetně obchodů již spravovaných v Playnite, pro zabránění duplikátům.<
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Spustit aplikaci Xbox Pass namísto Microsoft Store při otevírání klienta</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Importovat hry konzole Xbox</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Battle.net integrace má dlouhotrvající problém, kde může dojít k náhodnému odhlášení ověřeného účtu.
+
+Než bude problém vyřešen, doporučujeme propojit účet, importovat hry a následně odpojit účet. Následně budete muset tento proces opakovat pouze v případě, že je k vašemu účtu přidána nová hra.</sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">Importovat EA App hry</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">Importovat Ubisoft hry</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Přihlaste se do webového obchodu Epicu ve vašem výchozím prohlížeči
+2. Přejděte na stránku s ověřovacím kódem klepnutím na tlačítko OK v tomto dialogovém okně
+3. Vložte hodnotu &quot;authorizationCode&quot; do dalšího dialogového okna</sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Vložte hodnotu &quot;authorizationCode&quot;</sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Ubisoft plugin nevyžaduje žádnou autentizaci, používá informace o knihovně z uživatelských datových souborů Ubisoft Connect klienta.
+
+Pokud máte problémy s importem her, ujistěte se, že je klient správně nainstalován a váš účet je přihlášen.</sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Rockstar plugin momentálně importuje pouze nainstalované hry. Neexistuje způsob, jak propojit účet pro import všech her.</sys:String>
 </ResourceDictionary>

@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">需要驗證</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">無法驗證用戶</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">驗證</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel"></sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">不透過啟動器直接開始遊戲</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">解決帳號同步問題</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">疑難排解</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">以{0}啟動</sys:String>
     <sys:String x:Key="LOCImportPlaytime">匯入遊玩時間</sys:String>
     <sys:String x:Key="LOCAccountID">帳戶ID</sys:String>
+    <sys:String x:Key="LOCGetAccountID"></sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">元資料語言:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io用戶端程式即將啟動，請登入然後關閉此訊息。</sys:String>
@@ -44,6 +46,7 @@
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">安裝GOG Galaxy遊戲時自動開始安裝</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">啟動時，將會跳過用戶自訂安裝位置流程並自動開始安裝。
 停用時，會跳出遊戲安裝頁面讓玩家手動進行安裝。</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">我的帳號名稱是什麼?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">帳號網址名稱</sys:String>
@@ -86,9 +89,27 @@
     <sys:String x:Key="LOCSteamTagBlacklistHeader">除外標籤</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">從除外標籤中移除</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">加入除外標籤</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint"></sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">固定標籤數量必須是有效數字</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">在桌面模式中顯示Steam遊戲啟動選單</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">在全螢幕模式中顯示Steam遊戲啟動選單</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs"></sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin"></sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">如果沒有圖片則使用擷圖</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">有多張圖片時則使用:</sys:String>
@@ -111,4 +132,15 @@
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">啟動客戶端時開啟Xbox Pass應用程式而非Microsoft商店。</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">匯入Xbox 遊戲</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve"></sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames"></sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames"></sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve"></sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve"></sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve"></sys:String>
 </ResourceDictionary>

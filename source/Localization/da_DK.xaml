@@ -8,9 +8,10 @@
     <sys:String x:Key="LOCNotLoggedIn">Kræver verificering</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Verificering</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">Alternativ godkendelse</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Start spil direkte uden at køre officiel klient</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Fejlfinding for konto synkroniserings problemer</sys:String>
-    <sys:String x:Key="LOCTroubleShootingIssues"></sys:String>
+    <sys:String x:Key="LOCTroubleShootingIssues">Problemer med fejlfinding</sys:String>
     <sys:String x:Key="LOCSettingsImportLibraryLabel">Importer alle spil</sys:String>
     <sys:String x:Key="LOCPrivateAccount">Privat konto</sys:String>
     <sys:String x:Key="LOCPublicAccount">Offentlig Konto</sys:String>
@@ -18,15 +19,16 @@
     <sys:String x:Key="LOCStartUsingClient">Begynd at bruge {0} klient</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importer spilletid</sys:String>
     <sys:String x:Key="LOCAccountID">Konto ID</sys:String>
+    <sys:String x:Key="LOCGetAccountID">Hent konto ID</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Metadata sprog:</sys:String>
     <!--itch.io-->
-    <sys:String x:Key="LOCItchioSignInNotif"></sys:String>
-    <sys:String x:Key="LOCItchioSignInWaitMessage"></sys:String>
-    <sys:String x:Key="LOCItchioClientNotInstalledError"></sys:String>
+    <sys:String x:Key="LOCItchioSignInNotif">itch.io vil blive lanceret. Log venligst ind, og luk derefter denne besked.</sys:String>
+    <sys:String x:Key="LOCItchioSignInWaitMessage">Venter på, at brugeren logger ind. Luk venligst dette, når du er færdig.</sys:String>
+    <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io app version 25 eller nyere er ikke installeret.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel"></sys:String>
-    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel"></sys:String>
+    <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Elementer der skal importeres:</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationGames">Spil</sys:String>
-    <sys:String x:Key="LOCitchioItemClassificationTools"></sys:String>
+    <sys:String x:Key="LOCitchioItemClassificationTools">Værktøjer</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationAssets"></sys:String>
     <sys:String x:Key="LOCitchioItemClassificationMods"></sys:String>
     <sys:String x:Key="LOCitchioItemClassificationPhysicalGames"></sys:String>
@@ -42,9 +44,10 @@
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip"></sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls"></sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName"></sys:String>
-    <sys:String x:Key="LOCSteamCustomUrlName"></sys:String>
+    <sys:String x:Key="LOCSteamCustomUrlName">Konto URL Navn</sys:String>
     <sys:String x:Key="LOCSteamLoggedInUser"></sys:String>
     <sys:String x:Key="LOCSteamRequiresApiKey"></sys:String>
     <sys:String x:Key="LOCSteamLinksCommunityHub"></sys:String>
@@ -55,7 +58,7 @@
     <sys:String x:Key="LOCSteamImportFreeSubGames"></sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportWarn"></sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle"></sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount"></sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Kan ikke importere kategorier, konto til import er ikke valgt.</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorDb"></sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportError"></sys:String>
     <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount"></sys:String>
@@ -84,9 +87,27 @@
     <sys:String x:Key="LOCSteamTagBlacklistHeader"></sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip"></sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">Genre</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint"></sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount"></sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode"></sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode"></sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs"></sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin"></sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"></sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle"></sys:String>
@@ -107,4 +128,15 @@
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch"></sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames"></sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve"></sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames"></sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">Importér Ubisoft spil</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve"></sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve"></sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve"></sys:String>
 </ResourceDictionary>

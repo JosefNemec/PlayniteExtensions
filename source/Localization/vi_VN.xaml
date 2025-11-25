@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-    <sys:String x:Key="LOCSettingsImportInstalledLabel">Nhập vào các trò chơi đã được cài đặt</sys:String>
-    <sys:String x:Key="LOCSettingsImportUninstalledLabel">Nhập vào các trò chơi chưa được cài đặt</sys:String>
+    <sys:String x:Key="LOCSettingsImportInstalledLabel">Nhập vào các trò chơi đã cài</sys:String>
+    <sys:String x:Key="LOCSettingsImportUninstalledLabel">Nhập vào các trò chơi chưa cài</sys:String>
     <sys:String x:Key="LOCSettingsConnectAccount">Kết nối tài khoản</sys:String>
     <sys:String x:Key="LOCLoginChecking">Đang kiểm tra trạng thái xác thực…</sys:String>
     <sys:String x:Key="LOCLoggedIn">Người dùng được xác thực</sys:String>
     <sys:String x:Key="LOCNotLoggedIn">Yêu cầu xác thực</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Không xác thực được người dùng.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Xác thực</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">Cách đăng nhập khác</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Bắt đầu trò chơi trực tiếp mà không cần chạy ứng dụng khách chính thức</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Khắc phục sự cố đồng bộ hóa tài khoản</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Khắc phục sự cố</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">Bắt đầu sử dụng ứng dụng khách {0}</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Nhập thời gian chơi</sys:String>
     <sys:String x:Key="LOCAccountID">ID tài khoản</sys:String>
+    <sys:String x:Key="LOCGetAccountID">Lấy ID tài khoản</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Ngôn ngữ siêu dữ liệu</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io sẽ được khởi chạy. Vui lòng đăng nhập và sau đó đóng thông báo này.</sys:String>
@@ -44,6 +46,7 @@ Lưu ý rằng tùy chọn Tên tài khoản chỉ hoạt động đối với c
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Tự động chạy tiến trình cài đặt khi cài game từ GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Khi được bật, tiến trình cài đặt sẽ tự động bắt đầu mà không cần tới sự can thiệp của người dùng về đường dẫn cài đặt mặc định.
 Khi bị tắt, màn hình game sẽ được mở lên để khởi động tiến trình một cách thủ công.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Dùng ảnh bìa dọc</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Tên tài khoản của tôi là gì?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Tên URL tài khoản</sys:String>
@@ -86,9 +89,27 @@ Khi bị tắt, màn hình game sẽ được mở lên để khởi động ti�
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Thẻ tag được loại trừ</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Gỡ bỏ thẻ tag khỏi danh sách loại trừ</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Thêm thẻ tag vào danh sách loại trừ</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Đặt thẻ mục làm tiền tố</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Đặt mục mà thẻ thuộc về ở dạng tiền tố. Ví dụ, &quot;RPG Hành động&quot; chuyển thành &quot;Chủng loại: RPG Hành động&quot;</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments">Đánh giá</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures">Tính năng</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Kinh phí</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">Thể loại</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Phần cứng/Nhập liệu</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags">Các thẻ khác</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers">Người chơi</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Đánh giá</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware">Phần mềm</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres">Thể Loại Phụ</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Chủ Đề và Kiểu Tâm Trạng</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Thể Loại Chính</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Hình ảnh &amp; Góc nhìn</sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">Số tượng tag phải là một số cụ thể</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Hiển thị menu lựa chọn khi khởi động game của Steam ở chế độ desktop</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Hiển thị menu lựa chọn khi khởi động game của Steam ở chế độ toàn màn hình</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Nhận tương thích Steam Deck thành</sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin">Tôi có nên dùng đăng nhập Web hoặc API?</sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames">Nhập trò chơi chia sẻ trong gia đình</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Sử dụng ảnh chụp màn hình nếu không có tác phẩm nghệ thuật</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Nếu có nhiều hình ảnh thì hãy sử dụng:</sys:String>
@@ -110,4 +131,21 @@ bao gồm các cửa hàng đã được quản lý trong Playnite, để tránh
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Khởi động ứng dụng Xbox Pass thay vì Microsoft Store khi mở ứng dụng khách</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Nhập các trò chơi trên bảng điều khiển Xbox</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Tích hợp với Battle.net có vấn đề đã lâu khi tài khoản đăng nhập bị đăng xuất tại thời điểm ngẫu nhiên.
+
+Cho tới khi nó được sửa, chúng tôi gợi ý liên kết với tài khoản, lấy trờ chơi vào và ngắt kết nối tài khoản sau đó. Bạn phải lặp lại tiến trình chỉ khi có trờ chơi mới thêm vào tài khoản của bạn.</sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">Nhập những trò chơi từ EA App</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">Nhập những trò chơi Ubisoft</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Đăng nhập vào cửa hàng Epic web trên trình duyệt mặc định
+2. Chuyển đến trang mã đăng nhập bằng cách nhấn OK trên hội thoại này
+3. Chèn vào giá trị mã đăng nhập trong hội thoại sau</sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Nhập giá trị &quot;authorizationCode&quot;</sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Plugin của Ubisoft không cần đăng nhập nào, nó lấy thông tin thư viện từ tệp dữ liệu của người dùng trong app Ubisoft Connect.
+
+Nếu bạn có vấn đề nhập trò chơi vào, đảm bảo rằng chương trình được cài đúng và tải khoản của bạn đã đăng nhập.</sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Plugin của Rockstar hiện tại chỉ nhập được trò chơi đã cài. Không có cách nào liên kết một tài khoản để nhập toàn bộ chò chơi.</sys:String>
 </ResourceDictionary>

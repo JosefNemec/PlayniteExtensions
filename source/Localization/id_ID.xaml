@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">Memerlukan autentikasi</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Gagal mengautentikasi pengguna</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Autentikasi</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel"></sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Mulai game langsung tanpa menjalankan klien resmi</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Memecahkan masalah sinkronisasi akun</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Memecahkan masalah</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">Mulai menggunakan klien {0}</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Impor waktu main</sys:String>
     <sys:String x:Key="LOCAccountID">ID Akun</sys:String>
+    <sys:String x:Key="LOCGetAccountID"></sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Bahasa metadata:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io akan dimunculkan. Silahkan masuk lalu tutup pesan ini.</sys:String>
@@ -43,6 +45,7 @@
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Aktifkan instalasi senyap saat menginstal game di GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Jika ini diaktifkan, penginstalan akan dimulai secara otomatis tanpa meminta konfigurasi pengguna.
 Jika ini dinonaktifkan, Paket instalasi game akan terbuka untuk melakukan instalasi secara manual.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Apa nama akun Saya?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Nama URL Akun</sys:String>
@@ -87,9 +90,27 @@ Jika ini dinonaktifkan, Paket instalasi game akan terbuka untuk melakukan instal
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Tag yang dikecualikan</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Hapus dari tag yang dikecualikan</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Tambahkan ke tag yang dikecualikan</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint"></sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">Jumlah tag tetap harus berupa angka yang valid</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Tampilkan menu pilihan startup game Steam dalam mode desktop</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Tampilkan menu pilihan startup game Steam dalam mode layar penuh</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs"></sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin"></sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Gunakan tangkapan layar jika gambar ilustrasi tidak tersedia</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Jika beberapa gambar tersedia maka gunakan:</sys:String>
@@ -111,4 +132,15 @@ termasuk toko yang sudah dikelola di Playnite, untuk mencegah duplikat.</sys:Str
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Mulai Xbox Pass sebagai ganti Microsoft Store saat membuka klien</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Impor game konsol Xbox</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve"></sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames"></sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames"></sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve"></sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve"></sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve"></sys:String>
 </ResourceDictionary>

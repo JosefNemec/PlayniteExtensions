@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">Захтева аутентификацију</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Неуспешна аутентификација корисника</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Аутентификуј</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel"></sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Покрени игре директно без покретања званичног клијента</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Решавање проблема са синхронизацијом налога</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Решавање проблема</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">Крени користити клијент {0}</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Увези време играња</sys:String>
     <sys:String x:Key="LOCAccountID">ID Налога</sys:String>
+    <sys:String x:Key="LOCGetAccountID"></sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Језик метаподатака:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io клијент ће бити отворен. Молимо Вас да се пријавите, затим затворите ову поруку.</sys:String>
@@ -43,6 +45,7 @@
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Ово ће омогућити GOG галаксија својства као што на чување серверу, праћење времена играња итд.</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls"></sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Које је моје корисничко име?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">УРЛ корсиника</sys:String>
@@ -85,9 +88,27 @@
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Изузете ознаке</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip"></sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint"></sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount"></sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode"></sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode"></sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs"></sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin"></sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Користи снимке екрана ако слике нису доступне</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Ако је више слика доступно користи:</sys:String>
@@ -108,4 +129,15 @@
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Покрени Икс-Бокс пас апликацију уместо Мајкрософт продавнице када се отвара клијент</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Увези игре са Икс-бокс конзоле</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve"></sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames"></sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames"></sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve"></sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve"></sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve"></sys:String>
 </ResourceDictionary>

@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">인증이 필요함</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">사용자 인증에 실패하였습니다.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">인증</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">다른 방법으로 인증</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">정식 클라이언트 실행 없이 바로 게임 시작하기</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">계정 연동 문제 가이드</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">문제 해결</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">{0} 클라이언트 사용 시작</sys:String>
     <sys:String x:Key="LOCImportPlaytime">플레이 시간 가져오기</sys:String>
     <sys:String x:Key="LOCAccountID">계정 ID</sys:String>
+    <sys:String x:Key="LOCGetAccountID"></sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">메타데이터 언어:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io가 실행됩니다. 로그인한 후에 이 메시지를 닫아주세요.</sys:String>
@@ -44,6 +46,7 @@
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">GOG Galaxy에 게임을 설치할 때 자동으로 설치 프로세스 시작</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">이 옵션을 설정하면 구성된 기본 설치 위치에 대한 사용자 작업 없이 설치 프로세스가 자동으로 시작됩니다.
 설정하지 않으면 게임 페이지가 열려 수동으로 설치 프로세스를 시작합니다.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">계정 이름이 뭐죠?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">계정 URL 이름</sys:String>
@@ -86,9 +89,27 @@
     <sys:String x:Key="LOCSteamTagBlacklistHeader">제외된 태그</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">제외된 태그에서 제외</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">제외된 태그로 추가</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint"></sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">고정 태그 수는 숫자여야 합니다.</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">데스크톱 모드에서 Steam의 게임의 시작 선택 메뉴 표시</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">전체화면 모드에서 Steam의 게임의 시작 선택 메뉴 표시</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs"></sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin"></sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">아트워크를 사용할 수 없을 경우 스크린샷 사용</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">사용할 수 있는 이미지가 여러장 있을때 사용할 이미지</sys:String>
@@ -110,4 +131,20 @@
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">클라이언트 실행 시 마이크로소프트 스토어 대신 Xbox Pass 실행</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Xbox 콘솔 게임 가져오기</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Battle.net 연결에 인증된 계정이 랜덤으로 로그아웃되는 오래된 문제가 있습니다.
+
+이 문제가 해결될 때까지, 게임을 가져온 후 계정 연결을 해제하는 것을 권장합니다. 
+새로운 게임을 계정에 추가할 때 다시 계정을 연결해 주세요.</sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">EA App 게임 가져오기</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">Ubisoft 게임 가져오기</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. 기본 브라우저에서 Epic 웹 스토어에 로그인합니다.
+2. 이 대화 상자에서 &quot;확인&quot;을 클릭하여 인증 코드 페이지로 이동합니다.
+3. 다음 대화 상자에 &quot;authorizationCode&quot; 값을 입력합니다.</sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">&quot;authorizationCode&quot; 값을 입력</sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve"></sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve"></sys:String>
 </ResourceDictionary>

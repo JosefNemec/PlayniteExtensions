@@ -8,21 +8,23 @@
     <sys:String x:Key="LOCNotLoggedIn">Requereix autenticació</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">No s’ha pogut autenticar l’usuari.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Autenticar</sys:String>
-    <sys:String x:Key="LOCSettingsStartGameDirectly">Arrencar jocs directament sense executar el client oficial</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">Autentificació alternativa</sys:String>
+    <sys:String x:Key="LOCSettingsStartGameDirectly">Iniciar jocs directament sense executar el client oficial</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Resolució de problemes de sincronització del compte</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Resolució de problemes</sys:String>
     <sys:String x:Key="LOCSettingsImportLibraryLabel">Importar tots els jocs</sys:String>
     <sys:String x:Key="LOCPrivateAccount">Compte privat</sys:String>
     <sys:String x:Key="LOCPublicAccount">Compte públic</sys:String>
     <sys:String x:Key="LOCAPIKey">Clau API</sys:String>
-    <sys:String x:Key="LOCStartUsingClient">Iniciar mitjançant el client de {0}</sys:String>
+    <sys:String x:Key="LOCStartUsingClient">Iniciar a través del client {0}</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importar temps de joc</sys:String>
     <sys:String x:Key="LOCAccountID">ID del compte</sys:String>
+    <sys:String x:Key="LOCGetAccountID">Obtenir l'ID del compte</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Idioma de les metadades:</sys:String>
     <!--itch.io-->
-    <sys:String x:Key="LOCItchioSignInNotif">Ara s'obrirà el client de itch.io. Inicia sessió i tanca aquest missatge.</sys:String>
-    <sys:String x:Key="LOCItchioSignInWaitMessage">Esperant que l'usuari iniciï la sessió. Si us plau, tanca aquest missatge quan ho hagis fet…</sys:String>
-    <sys:String x:Key="LOCItchioClientNotInstalledError">El client de itch.io versió 25 o més recent no està instal·lat.</sys:String>
+    <sys:String x:Key="LOCItchioSignInNotif">S'obrirà el client d'itch.io. Tanca aquest missatge quan hi hagis iniciat sessió.</sys:String>
+    <sys:String x:Key="LOCItchioSignInWaitMessage">Esperant l'inici de sessió de l'usuari, tanca aquest diàleg un cop iniciada…</sys:String>
+    <sys:String x:Key="LOCItchioClientNotInstalledError">No està instal·lada la versió 25 o posterior del client itch.io.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportFreeGamesFromCollectionsLabel">Importar jocs gratuïts de col·leccions.</sys:String>
     <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Elements a importar</sys:String>
     <sys:String x:Key="LOCitchioItemClassificationGames">Jocs</sys:String>
@@ -44,6 +46,7 @@ Tingues en compte que l’opció Nom del compte només funciona per a comptes qu
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Iniciar automàticament el procés d'instal·lació quan s'instal·lin jocs a GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Si s'activa, el procés d'instal·lació s'iniciarà automàticament sense necessitar la interacció de l'usuari per la ubicació d'instal·lació establerta per defecte.
 Si es desactiva, la pàgina del joc s'obrirà per iniciar el procés d'instal·lació de manera manual.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Utilitzar portades verticals</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Quin és el nom del meu compte?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Nom de l’URL del compte</sys:String>
@@ -53,17 +56,17 @@ Si es desactiva, la pàgina del joc s'obrirà per iniciar el procés d'instal·l
     <sys:String x:Key="LOCSteamLinksDiscussions">Discussions</sys:String>
     <sys:String x:Key="LOCSteamLinksGuides">Guies</sys:String>
     <sys:String x:Key="LOCSteamLinksWorkshop">Workshop</sys:String>
-    <sys:String x:Key="LOCSteamUseVerticalCovers">Descarregar imatges de caràtula verticals</sys:String>
-    <sys:String x:Key="LOCSteamImportFreeSubGames">Importar elements gratuïts genèrics</sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportWarn">Això sobreescriurà les categories actuals així com els estats ocult i preferit en tots els jocs de Steam. Vols continuar?</sys:String>
+    <sys:String x:Key="LOCSteamUseVerticalCovers">Descarregar imatges de portada verticals</sys:String>
+    <sys:String x:Key="LOCSteamImportFreeSubGames">Importar elements genèrics gratuïts</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportWarn">Això sobreescriurà les categories actuals així com els estats ocult i preferit de tots els jocs de Steam. Vols continuar?</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportWarnTitle">Importar categories?</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">No es poden importar categories, no s'ha seleccionat el compte per importar.</sys:String>
-    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">No es poden importar categories, la base de dades no s'ha obert.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamCatImportErrorDb">No es poden importar categories, la base de dades no està oberta.</sys:String>
     <sys:String x:Key="LOCSettingsSteamCatImportError">No s’han pogut importar les categories de Steam: {0}</sys:String>
     <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorAccount">No es pot importar la informació dels jugats recentment, no s'ha seleccionat el compte per importar.</sys:String>
-    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">No es pot importar la informació dels jugats recentment, no s'ha obert la base de dades.</sys:String>
+    <sys:String x:Key="LOCSettingsSteamLastActivityImportErrorDb">No es pot importar la informació dels jugats recentment, la base de dades no està oberta.</sys:String>
     <sys:String x:Key="LOCSettingsSteamLastActivityImportError">No s'ha pogut importar la informació dels jugats recentment de Steam: {0}</sys:String>
-    <sys:String x:Key="LOCSettingsApiKeyTooltip">Clau API requerida per a comptes de Steam privats</sys:String>
+    <sys:String x:Key="LOCSettingsApiKeyTooltip">Els comptes Steam privats requereixen una Clau API</sys:String>
     <sys:String x:Key="LOCSettingsApiKeyUrlText">Obtenir clau API</sys:String>
     <sys:String x:Key="LOCSettingsSteamImportMetadata">Importar metadades del compte de Steam:</sys:String>
     <sys:String x:Key="LOCImportSteamCategoriesLabel">Importar categories de Steam</sys:String>
@@ -77,7 +80,7 @@ Si es desactiva, la pàgina del joc s'obrirà per iniciar el procés d'instal·l
     <sys:String x:Key="LOCSteamFriendsTooltip">Amics de Steam</sys:String>
     <sys:String x:Key="LOCSteamIgnoreOtherAccountGames">Ignorar jocs instal·lats d'altres comptes </sys:String>
     <sys:String x:Key="LOCSteamAdditionalAccounts">Comptes addicionals</sys:String>
-    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Especifica l'ID del compte de Steam i el parell de claus API d'altres comptes si vols importar jocs des d'ells. Consulta la wiki de resolució de problemes de Steam per obtenir més informació.</sys:String>
+    <sys:String x:Key="LOCSteamAdditionalAccountsDescription">Especifica l'ID del compte de Steam i el parell de claus API d'altres comptes si vols importar jocs des d'elles. Consulta la wiki de resolució de problemes de Steam per obtenir més informació.</sys:String>
     <sys:String x:Key="LOCSteamLimitTagCountLabel">Limitar la quantitat d'etiquetes importades als primers</sys:String>
     <sys:String x:Key="LOCSteamTagPrefixLabel">Afegir als noms d'etiquetes el prefix:</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTabLabel">Llista negra d'etiquetes</sys:String>
@@ -86,28 +89,63 @@ Si es desactiva, la pàgina del joc s'obrirà per iniciar el procés d'instal·l
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Etiquetes excloses</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Treure d'etiquetes excloses</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Afegir a etiquetes excloses</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Establir la categoria d'etiqueta com prefix</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Estableix la categoria de l'etiqueta com a prefix. Per exemple, «RPG d'Acció» passa a ser «Gèneres: RPG d'Acció»</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments">Avaluacions</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures">Característiques</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Financiació</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">Gèneres</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Maquinari/Entrada</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags">Altres etiquetes</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers">Jugadors</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Valoracions</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware">Programari</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres">Subgèneres</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Temes i estats d'ànim</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Gèneres principals</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Visuals i punts de vista</sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">El recompte d'etiquetes fix ha de ser un número vàlid</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Mostrar el menú de selecció d'inici del joc de Steam en mode d'escriptori</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Mostrar el menú de selecció d'inici del joc de Steam en mode de pantalla completa</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Importar compatibilitat amb Steam Deck com</sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin">Autentificació via web o API?</sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
-    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usar captures de pantalla si l'art no està disponible</sys:String>
-    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Si hi ha diverses imatges disponibles llavors utilitzar:</sys:String>
+    <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usar captures de pantalla si no hi ha art disponible</sys:String>
+    <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Quan hi hagi diverses imatges disponibles, utilitzar:</sys:String>
     <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Seleccionar imatge de fons per {0}</sys:String>
     <sys:String x:Key="LOCIgdbCoverAsIcon">Substituir imatge de caràtula retallada per icona</sys:String>
     <!--Humble-->
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorar jocs de botigues de tercers</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGames">Importar jocs de Humble Choice</sys:String>
     <sys:String x:Key="LOCHumbleImportChoiceGamesTooltip">Importar jocs disponibles com a part de la subscripció a Humble Choice.</sys:String>
-    <sys:String x:Key="LOCHumbleGeneralLibrary">Importar jocs de la biblioteca de Humble</sys:String>
+    <sys:String x:Key="LOCHumbleGeneralLibrary">Importar jocs de la biblioteca Humble</sys:String>
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">Importar compres estàndard de la tenda i de paquets de Humble.</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">Activar per ometre la importació de jocs que requereixin clients de tercers,
 incloses les botigues ja gestionades a Playnite, per evitar duplicats.</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">Importar si hi ha disponible la versió sense DRM</sys:String>
     <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">Importar jocs que requereixin client de tercers si també hi ha disponible la versió sense DRM.</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">Utilitzar sempre l'aplicació de Humble per iniciar els jocs</sys:String>
-    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Quan es desactivi, Playnite intentarà arrencar els jocs directament, ignorant l'aplicació Humble App.</sys:String>
-    <sys:String x:Key="LOCHumbleNonTroveInstallError">La instal·lació i la desinstal·lació automàtica de jocs de Humble que siguin de subscripció no és ara mateix compatible.</sys:String>
+    <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">Quan es desactivi, Playnite intentarà arrencar els jocs directament, ignorant l'aplicació Humble.</sys:String>
+    <sys:String x:Key="LOCHumbleNonTroveInstallError">Ara per ara, no hi ha suport per la instal·lació i la desinstal·lació automàtica de jocs sense subscripció de Humble.</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Iniciar l'aplicació Xbox Pass en lloc de Microsoft Store en obrir el client</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Importar jocs de consola de Xbox</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">La integració amb Battle.net presenta, des de fa temps, un problema en què el compte autentificat pot tancar la sessió en qualsevol moment.
+
+Fins que se solucioni, recomanem vincular el compte, importar els jocs i després desconnectar-la. Només hauràs de repetir el procés quan afegeixis un nou joc al compte.</sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">Importar jocs d'EA App</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">Importar jocs Ubisoft</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Inicia sessió a l'Epic web store amb el teu navegador predeterminat
+2. Navega a la pàgina del codi d'autentificació clicant OK a aquest diàleg
+3. Escriu el valor d'“AuthorizationCode” al diàleg a continuació</sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Escriu el valor de &quot;authorizationCode&quot;</sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">El complement Ubisoft no necessita autentificació, agafa la informació de la llibreria dels arxius de dades de l'usuari del client Ubisoft Connect.
+
+Si tens problemes a l'hora d'importar jocs, assegura't que el client està correctament instal·lat i la teva sessió està iniciada.</sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">El complement Rockstar ara per ara només importa jocs instal·lats. No hi ha manera d'enllaçar un compte per importar tots els jocs.</sys:String>
 </ResourceDictionary>

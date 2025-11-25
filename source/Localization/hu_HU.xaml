@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">Felhasználói hitelesítés szükséges.</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Felhasználói hitelesítés sikertelen.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Bejelentkezés</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">Alternatív azonosítás</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Játékok indítása a hivatalos kliens futtatása nélkül</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Fiók szinkronizálási hibaelhárító</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Hibaelhárítás</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">{0} használata</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Játékidő importálása</sys:String>
     <sys:String x:Key="LOCAccountID">Fióknév</sys:String>
+    <sys:String x:Key="LOCGetAccountID">Fiókazonosító lekérdezése</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Metaadat nyelve:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">A megnyíló itch.io kliens ablakában jelentkezz be, és zárd be ezt az üzenet.</sys:String>
@@ -44,6 +46,7 @@ A fióknév opció csak akkor működik, ha a GOG adatvédelmi beállításainá
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automatikusan elindítja a játéktelepítést a GOG Galaxy-ból történő telepítés esetén</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Ha be van kapcsolva, felhasználói beavatkozás nélkül indítja a játék telepítését az alapértelmezett helyre.
 Kikapcsolása esetén a játék oldala fog megnyílni, hogy kézzel tudjuk indítani a telepítést.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Álló borítóképek használata</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Mi a felhasználónevem?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Fiók URL címe</sys:String>
@@ -86,9 +89,27 @@ Kikapcsolása esetén a játék oldala fog megnyílni, hogy kézzel tudjuk indí
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Kizárt címkék</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Eltávolítás a tiltott címkékből</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Hozzáadja a tiltott címkékhez</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Címke kategória név előtagként</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Előtagként használja a kategória nevét. Például: &quot;Akció RPG&quot;-ből &quot;Műfaj: Akció RPG&quot; lesz.</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments">Értékelések</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures">Jellemzők</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Támogatás</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">Műfajok</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Hardver/Beviteli eszközök</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags">Egyéb címkék</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers">Játékosok száma</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Értékelések</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware">Szoftver</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres">Alműfajok</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Téma és hangulat</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Nagyra értékelt műfajok</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Látvány és nézőpont</sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">A címkék összege csak valós szám lehet</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Asztali módban mutassa a Steam játékindításkori menüjét</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Teljesképernyős módban mutassa a Steam játékindításkori menüjét</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Steam Deck kompatibilitás importálása, mint</sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin">Böngészős vagy API kulcsos bejelentkezést használjunk?</sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Képernyőkép használata, ha nincs játékgrafika</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Ha több találat van, válassza:</sys:String>
@@ -109,4 +130,21 @@ Kikapcsolása esetén a játék oldala fog megnyílni, hogy kézzel tudjuk indí
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Kliens indításakor az Xbox Pass induljon a Microsoft Áruház helyett</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Xbox konzolos játékok importálása</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">A battle.net integráció régóta fennálló problémája a bejelentkezett fiókok véletlenszerű kidobása.
+
+Amíg ezt meg nem szüntetik, azt javasoljuk, hogy linkeld be a fiókod, importáld be a játékaid, és válaszd le a fiókod. Ezt csak akkor kell megismételned, amikor új játékot adsz hozzá a fiókodhoz.</sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">EA App játékok importálása</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">Ubisoft játékok importálása</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Jelentkezz be az Epic store-ba a böngésződből
+2. Nyisd meg a hitelesítő kód oldalát ezen ablak OK-jére nyomva
+3. Illeszd be az &quot;authorizationCode&quot;-ot a következő ablakba</sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Illeszd be az &quot;authorizationCode&quot;-ot</sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Az Ubisoft beépülője nem igényel hitelesítést, a könyvtárinformációkat az Ubisoft Connect kliens felhasználói fájljai közül szedi.
+
+Ha problémák vannak az importálással, győződj meg róla, hogy az Ubi kliens fel van telepítve, és be vagy benne jelentkezve.</sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">A Rockstar beépülő csak telepített játékokat tud importálni. Nincs mód rá, hogy belépj innen az összes játék importálásához.</sys:String>
 </ResourceDictionary>

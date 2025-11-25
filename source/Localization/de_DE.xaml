@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">Authentifizierung erforderlich</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Nutzer konnte nicht authentifiziert werden.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Authentifizieren</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">Alternative Authentifizierung</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Spiele direkt starten ohne offiziellen Client</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Beheben von Problemen mit der Kontosynchronisation</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Problembehebung</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">Mit {0}-Client starten</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Spielzeit importieren</sys:String>
     <sys:String x:Key="LOCAccountID">Konto-ID</sys:String>
+    <sys:String x:Key="LOCGetAccountID">Konto-ID abrufen</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Metadatensprache:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">Der itch.io-Client wird gestartet. Bitte melde dich dort an und schließe anschließend diese Meldung.</sys:String>
@@ -37,14 +39,15 @@
     <!--GOG-->
     <sys:String x:Key="LOCGOGUseLogin">Kontoanmeldung</sys:String>
     <sys:String x:Key="LOCGOGUseAccountName">Kontoname</sys:String>
-    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Melde dich in deinem Nutzerkonto an oder verwende deinen öffentlichen Kontonamen, um deine Bibliothek vollständig zu synchronisieren.
-Beachte, dass die Option des öffentlichen Kontonamens nur bei Konten funktioniert, deren Spielebibliotheken in GOGs Privatsphäreeinstellungen als öffentlich sichtbar festgelegt wurden.</sys:String>
+    <sys:String x:Key="LOCGOGAccountSyncDescription" xml:space="preserve">Melde dich in deinem Nutzerkonto an oder verwende den Namen deines öffentlichen Kontos, um deine Bibliothek vollständig zu synchronisieren.
+Beachte, dass die Option des öffentlichen Kontnamens nur bei Konten funktioniert, deren Spielebibliotheken in den Privatsphäreeinstellungen von GOG als öffentlich sichtbar festgelegt wurden.</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxy">Spiele mit GOG-Galaxy-Client starten</sys:String>
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip">Dies aktiviert Features von GOG Galaxy wie Cloud-Spielstände, Spielzeiterfassung etc.</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Beim Installieren von Spielen auf GOG Galaxy den Installationsvorgang automatisch starten</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Falls aktiviert, wird der Installationsvorgang automatisch und ohne Benutzerinteraktion am konfigurierten Standardinstallationsort gestartet.
 Falls deaktiviert, wird die Spieleseite geöffnet, um den Installationsvorgang manuell zu starten.
 </sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Vertikale Cover verwenden</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Wie lautet mein Kontoname?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Nutzerkonten-URL</sys:String>
@@ -87,9 +90,27 @@ Falls deaktiviert, wird die Spieleseite geöffnet, um den Installationsvorgang m
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Ausgeschlossene Schlagwörter</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Von ausgeschlossenen Schlagwörtern entfernen</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Zu ausgeschlossenen Schlagwörtern hinzufügen</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Tag-Kategorie als Präfix festlegen</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Legt die Kategorie fest, zu der der Tag als Präfix gehört. Zum Beispiel wird &quot;Action RPG&quot; in &quot;Genres: Action RPG&quot; umgewandelt</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures">Funktionen</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Finanzierung</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">Genres</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Hardware/Eingabe</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags">Andere Tags</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers">Spieler</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Bewertungen</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware">Software</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres">Sub-Genres</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Top-Level-Genres</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint"></sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">Feste Schlagwortanzahl muss eine gültige Zahl sein</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Steams Auswahldialog beim Spielstart im Desktop-Modus anzeigen</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Steams Auswahldialog beim Spielstart im Vollbild-Modus anzeigen</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Steam-Deck-Kompatibilität importieren als</sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin">Sollte ich den Web- oder API-Login nutzen?</sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames">Mit der Familie geteilte Spiele importieren</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Screenshots verwenden, falls kein Bildmaterial verfügbar</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Falls mehrere Bilder verfügbar, das folgende verwenden:</sys:String>
@@ -110,4 +131,21 @@ Falls deaktiviert, wird die Spieleseite geöffnet, um den Installationsvorgang m
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Beim Öffen des Clients App für Xbox Game Pass anstatt Microsoft Store starten</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">XBox-Konsolen-Spiele importieren</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Die Battle.net-Integration hat ein langfristiges Problem, bei der authentifizierte Konten zu zufälligen Zeiten abgemeldet werden könnten.
+
+Solange das Problem nicht behoben ist, empfehlen wir, ein Konto zu verknüpfen, Spiele zu importieren und danach das Konto zu trennen. Du musst den Prozess nur wiederholen, wenn ein neues Spiel deinem Konto hinzugefügt wird.</sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">EA App-Spiele importieren</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">Ubisoft-Spiele importieren</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Beim Epic Webshop im Standardbrowser anmelden
+2. Zur Authentifizierungscode-Seite navigieren durch Bestätigen mit &quot;OK&quot; im Dialog
+3. Den Authentifizierungscode im nächsten Dialog einfügen</sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Den Authentifizierungscode einfügen</sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Ubisoft Plugins erfordern keine Authentifizierung, es benötigt Bibliotheksinformationen aus den Benutzerdatendateien des Ubisoft Connect Clients.
+
+Wenn du Probleme beim Importieren von Spielen hast, stelle sicher, dass der Client ordnungsgemäß installiert ist und dein Konto angemeldet ist.</sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Das Rockstar-Plugin importiert derzeit nur installierte Spiele. Es gibt keine Möglichkeit, ein Konto zu verknüpfen, um alle Spiele zu importieren.</sys:String>
 </ResourceDictionary>

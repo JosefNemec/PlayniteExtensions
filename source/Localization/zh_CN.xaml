@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">需要身份认证</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">用户身份验证失败。</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">身份验证</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">其他身份验证</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">账户同步疑难解答</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">疑难解答</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">使用 {0} 客户端启动</sys:String>
     <sys:String x:Key="LOCImportPlaytime">导入游玩时间</sys:String>
     <sys:String x:Key="LOCAccountID">账户 ID</sys:String>
+    <sys:String x:Key="LOCGetAccountID">获取账户 ID</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">元数据语言：</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">即将启动 itch.io 客户端，请在登录后关闭此消息。</sys:String>
@@ -44,6 +46,7 @@
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">在 GOG Galaxy 安装游戏时启用静默安装</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">如果启用，安装过程将自动开始并安装到默认位置，不需要用户交互。
 如果禁用，游戏页面将被打开以手动开始安装过程。</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">使用垂直封面</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">我的账户名称是什么？</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">账户网址名称</sys:String>
@@ -86,9 +89,27 @@
     <sys:String x:Key="LOCSteamTagBlacklistHeader">已排除标签</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">从已排除标签中移除</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">添加到已排除标签</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">设置标签类型为前缀</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">设置标签所属的类别作为前缀。例如，&quot;动作 RPG&quot; 会变成&quot;类型：动作 RPG&quot;</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments">评估</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures">特色</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc">资金</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">类型</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput">硬件/输入</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags">其它标签</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers">玩家人数</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">评分</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware">软件</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres">子类型</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods">主题与气氛</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">主类型</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">视觉元素与视角</sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">固定标签数量必须是一个有效的数字</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">在桌面模式下显示 Steam 游戏启动选择菜单</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">在全屏模式下显示 Steam 游戏启动选择菜单</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Steam Deck 兼容</sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin">我应该使用 Web 还是 API 登录？</sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">在无法使用艺术作品的时候使用截图</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">如果有多个图像，则使用：</sys:String>
@@ -102,12 +123,27 @@
     <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">导入标准的 Humble 商店购买项目和捆绑包购买项目。</sys:String>
     <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">启用来跳过导入需要第三方客户端的游戏，
 为避免重复，已由 Playnite 管理的商店的游戏也将跳过。</sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">若存在无 DRM 的版本则导入</sys:String>
-    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">导入存在无 DRM 版本但需要第三方客户端的游戏。</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">如果有无数字版权管理（DRM）的版本，则导入该版本。</sys:String>
+    <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">导入无数字版权管理（DRM） 版本但需要第三方客户端的游戏。</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">总是使用 Humble 客户端启动游戏</sys:String>
     <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">当禁用时，Playnite 会尝试绕过 Humble 客户端，直接启动游戏。</sys:String>
     <sys:String x:Key="LOCHumbleNonTroveInstallError">目前不支持非订阅 Humble 游戏的自动安装和卸载。</sys:String>
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">打开客户端时，启动 Xbox Pass 应用而不是 Microsoft Store。</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">导入 Xbox 主机游戏</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Battle.net 集成存在长期问题，已验证的账号可能会随机登出。
+在问题修复前，我们建议先关联账号、导入游戏，随后断开账号连接。仅当有新游戏添加到账号时，才需重复此流程。</sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">导入 EA 游戏</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">导入 Ubisoft 游戏</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1.在默认浏览器中登录 Epic 游戏商城。
+2.在对话框中点击 “确定”，进入验证码页面。
+3.在接下来的对话框中输入 “授权码” 。</sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">请在指定字段中输入 “授权码” </sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">育碧插件无需任何验证，它会从 Ubisoft Connect 客户端的用户数据文件中获取游戏库信息。
+如果您在导入游戏时遇到问题，请确保客户端已正确安装且您的账号已登录。</sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Rockstar 插件目前只能导入已安装的游戏。无法链接一个帐户来导入所有游戏。</sys:String>
 </ResourceDictionary>

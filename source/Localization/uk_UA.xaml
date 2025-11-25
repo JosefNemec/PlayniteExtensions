@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">Необхідна автентифікація</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Автентифікація</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">Альтернативна автентифікація</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Вирішення проблем</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">Запустити клієнтом {0}</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Імпортувати час у грі</sys:String>
     <sys:String x:Key="LOCAccountID">ID облікового запису</sys:String>
+    <sys:String x:Key="LOCGetAccountID">Отримати ID облікового запису</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Мова метаданих:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io буде запущено. Будь ласка авторизуйтеся після чого закрийте це повідомлення.</sys:String>
@@ -44,6 +46,7 @@
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Автоматично запускати процес встановлення під час встановлення ігор у GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Якщо ввімкнено, процес встановлення буде розпочато автоматично без необхідності втручання користувача до налаштованого за замовчуванням місця встановлення.
 Якщо вимкнено, буде відкрито сторінку гри, щоб вручну розпочати процес встановлення.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Використовувати вертикальні обкладинки</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Яке ім’я мого облікового запису?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">URL-адреса облікового запису</sys:String>
@@ -86,9 +89,27 @@
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Виключені теги</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Прибрати з виключених тегів</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Додати до виключених тегів</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Встановити категорію тегу як префікс</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Встановити категорію до якої відноситься тег як префікс. На приклад, &quot;Рольова гра&quot; перетвориться на &quot;Жанки: Рольова гра&quot;</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments">Оцінки</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures">Особливості</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Фінансування</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">Жанри</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Залізо/Введення</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags">Інші теги</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers">Гравці</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Рейтинги</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware">Програми</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres">Піджанри</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Теми та Настрої</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Основні Жанри</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Графіка і Точка зору</sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">Фіксована кількість тегів має бути дійсним номером</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Показувати меню вибору при запуску гри Steam в режимі робочого столу</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Показувати меню вибору при запуску гри Steam в повноекранному режимі</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Імпортувати сумісність зі Steam Deck як</sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin">Використовувати вхід через сайт чи через API?</sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames">Імпортувати сімейну бібліотеку</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Використовувати знімки гри якщо немає іншого зображення</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Якщо доступно декілька зображень, використовувати:</sys:String>
@@ -110,4 +131,21 @@
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Запускати застосунок Xbox Pass замість Microsoft Store під час відкриття клієнта</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Імпортувати ігри з консолі Xbox</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Інтеграція Battle.net має давню проблему, коли вас може викинути з облікового запис може вийти у будь-який момент.
+
+Поки проблема не буде вирішена, ми рекомендуємо зв'язати обліковий запис, імпортувати ігри та від'єднати обліковий запис. Вам потрібно буде повторити процес лише при додаванні нової гри.</sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">Імпортувати ігри EA App</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">Імпортувати ігри Ubisoft</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Увійдіть у крамницю Epic у веббраузері
+2. Перейдіть до сторінки з кодом автентифікації, натиснувши OK у цьому діалоговому вікні
+3. Вставте значення &quot;authorizationCode&quot; у наступному діалоговому вікні</sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Вставте значення &quot;authorizationCode&quot;</sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Плагіни Ubisoft не потребують будь-якої автентифікації, вони беруть інформацію про бібліотеку з файлів клієнта Ubisoft Connect.
+
+Якщо у вас виникли проблеми з імпортуванням ігор, переконайтеся, що клієнт встановлений належним чином і ви увійшли в обліковий запис.</sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Плагін Rockstar наразі імпортує лише встановлені ігри. Зв'язати обліковий запис щоб імпортувати все неможливо.</sys:String>
 </ResourceDictionary>

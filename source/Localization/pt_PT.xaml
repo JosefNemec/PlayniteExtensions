@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">Requer autenticação</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Falha ao autenticar utilizador.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Autenticar</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel"></sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Iniciar jogos diretamente sem executar o cliente oficial</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Resolução de problemas de sincronização de conta</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Resolução de problemas</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient"></sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importar tempo de jogo</sys:String>
     <sys:String x:Key="LOCAccountID">ID da Conta</sys:String>
+    <sys:String x:Key="LOCGetAccountID"></sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Idioma dos metadados:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">O cliente itch.io irá agora abrir. Por favor, inicia sessão e, de seguida, fecha esta mensagem.</sys:String>
@@ -42,6 +44,7 @@
     <sys:String x:Key="LOCSettingsGOGUseGalaxyTooltip"></sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls"></sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers"></sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Qual é o nome da minha conta?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName"></sys:String>
@@ -84,9 +87,27 @@
     <sys:String x:Key="LOCSteamTagBlacklistHeader"></sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip"></sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel"></sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres"></sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint"></sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount"></sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode"></sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode"></sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs"></sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin"></sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usar capturas de ecrã se não houver capa disponível</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Se múltiplas imagens estiverem disponíveis, utilizar:</sys:String>
@@ -107,4 +128,15 @@
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Iniciar Xbox Game Pass em vez da Microsoft Store ao abrir o cliente</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Importar jogos Xbox.</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve"></sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames"></sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames"></sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve"></sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve"></sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve"></sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve"></sys:String>
 </ResourceDictionary>

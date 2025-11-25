@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">Verificatie vereist</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Verifiëren</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">Alternatieve authenticatie</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Probleemoplossing</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">Starten met {0} client</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importeer speeltijd</sys:String>
     <sys:String x:Key="LOCAccountID">Account ID</sys:String>
+    <sys:String x:Key="LOCGetAccountID">Account-ID verkrijgen</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Metadata taal:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">itch.io wordt gestart. Log in a.u.b. en sluit dan dit bericht.</sys:String>
@@ -44,6 +46,7 @@ Houd er rekening mee dat de optie Accountnaam alleen werkt voor accounts waarvan
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automatisch start het installatieproces bij het installeren van spellen op GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Indien ingeschakeld, zal het installatieproces automatisch worden gestart zonder gebruikersinteractie nodig te hebben op de geconfigureerde standaardinstallatie-locatie.
 Als dit is uitgeschakeld, wordt de spelpagina geopend om het installatieproces handmatig te starten.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Gebruik verticale covers</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Wat is mijn accountnaam?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Account URL Naam</sys:String>
@@ -86,9 +89,27 @@ Als dit is uitgeschakeld, wordt de spelpagina geopend om het installatieproces h
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Uitgesloten tags</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Verwijder van uitgesloten tags</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Voeg toe aan uitgesloten tags</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Labelcategorie als prefix instellen</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Stelt de categorie in waartoe de tag behoort als een prefix. Bijvoorbeeld, &quot;Action RPG&quot; wordt omgezet in &quot;Genres: Action RPG&quot;</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments">Beoordelingen</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures">Kenmerken</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Financiering</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">Genres</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Hardware/Invoer</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags">Andere tags</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers">Spelers</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Beoordelingen</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware">Software</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres">Sub-Genres</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Thema's &amp; Humeur</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Top-niveau genres</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Visueel &amp; Standpunt</sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">Vast tag aantal moet een geldig nummer zijn</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Toon het Steam spel opstart menu in bureaublad modus</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Toon het Steam spel opstart menu in volledig scherm modus</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Importeer Steam Deck compatibiliteit als een</sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin">Moet ik Web of API login gebruiken?</sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Gebruik screenshots als illustraties niet beschikbaar zijn</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Wanneer meerdere afbeeldingen beschikbaar zijn gebruik dan:</sys:String>
@@ -110,4 +131,21 @@ inclusief winkels die reeds beheerd worden in Playnite, om duplicaten te vermijd
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Start Xbox Pass applicatie in plaats van Microsoft Store wanneer je de client opent</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Importeer Xbox console spellen</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Battle.net-integratie heeft een lang probleem waar geverifieerd account willekeurig kan uitgelogd worden.
+
+Tot het probleem is opgelost, raden we aan om een account te koppelen, spellen te importeren en account te ontkoppelen. Je moet het proces alleen herhalen wanneer een nieuw spel is toegevoegd aan je account.</sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">Importeer EA App games</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">Importeer Ubisoft spellen</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Log in op de Epic webwinkel in uw standaard browser
+2. Navigeer naar de verificatiecodepagina door op OK te klikken in dit dialoogvenster
+3. Voeg &quot;authorizationCode&quot; in, in het volgende dialoogvenster</sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Voeg &quot;autorisatiecode&quot; waarde in</sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Ubisoft plugins vereisen geen authenticatie, het neemt bibliotheek informatie van de Ubisoft Connect client gebruikersdatabestanden.
+
+Als je problemen ondervindt bij het importeren van spellen, zorg er dan voor dat de client correct is geïnstalleerd en je account is ingelogd</sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Rockstar plugin importeert momenteel alleen geïnstalleerde spellen. Er is geen manier om een account te koppelen om alle spellen te importeren.</sys:String>
 </ResourceDictionary>

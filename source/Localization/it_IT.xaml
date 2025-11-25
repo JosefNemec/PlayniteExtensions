@@ -8,6 +8,7 @@
     <sys:String x:Key="LOCNotLoggedIn">Richiede autenticazione</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Autenticazione utente fallita.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Connetti</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">Autenticazione alternativa</sys:String>
     <sys:String x:Key="LOCSettingsStartGameDirectly">Avvia i giochi direttamente senza avviare il client ufficiale</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Risoluzione dei problemi di sincronizzazione dell'account</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Risoluzione dei problemi</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">Avvio del client {0} </sys:String>
     <sys:String x:Key="LOCImportPlaytime">Importa tempo di riproduzione</sys:String>
     <sys:String x:Key="LOCAccountID">ID account</sys:String>
+    <sys:String x:Key="LOCGetAccountID">Ottieni ID account</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Lingua dei metadati:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">Il client di itch.io sarà aperto. Accedi e chiudi questo messaggio.</sys:String>
@@ -44,6 +46,7 @@ Nota che l'opzione Nome Account funziona solo per gli account le cui librerie di
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Avviare automaticamente il processo d'installazione durante l'installazione di giochi su GOG Galaxy</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Se abilitato, il processo di installazione verrà avviato automaticamente senza l'intervento dell'utente nella posizione di installazione predefinita configurata.
 Se è disattivato, la pagina del gioco verrà aperta per avviare manualmente il processo di installazione.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Usa copertine verticali</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Qual è il nome del mio account?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">Nome URL dell'account</sys:String>
@@ -86,9 +89,27 @@ Se è disattivato, la pagina del gioco verrà aperta per avviare manualmente il 
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Tag esclusi</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Rimuovi dai tag esclusi</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Aggiungi ai tag esclusi</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Imposta categoria tag come prefisso</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Imposta la categoria a cui il tag appartiene come prefisso. Per esempio, &quot;Action RPG&quot; è trasformato in &quot;Generi: Action RPG&quot;</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments">Verifiche</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures">Funzionalità</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Finanziamento</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">Generi</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Hardware/Input</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags">Altri Tag</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers">Giocatori</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Valutazioni</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware">Software</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres">Sottogeneri</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Temi e Umori</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Generi di alto livello</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Immagini e Punti di vista</sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">Il conteggio dei tag fissi deve essere un numero valido</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Mostra il menu di selezione avvio di Steam in modalità desktop</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Mostra il menu di selezione avvio del gioco di Steam in modalità schermo intero</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Importa la compatibilità di Steam Deck come un</sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin">Dovrei usare il login Web o API?</sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames">Importa giochi condivisione familiare</sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usa le schermate se l'illustrazione non è disponibile</sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Se sono disponibili immagini multiple, usa:</sys:String>
@@ -109,4 +130,21 @@ Se è disattivato, la pagina del gioco verrà aperta per avviare manualmente il 
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Avvia l'app Xbox Pass invece di Microsoft Store all'avvio del client</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Importa giochi da console Xbox </sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">L'integrazione di Battle.net ha un problema di lunga data in cui l'account autenticato potrebbe essere disconnesso in tempi casuali.
+
+Fino a quando il problema non sarà risolto, si consiglia di collegare un account, importare giochi e disconnettere l'account in seguito. Dovrai ripetere il processo solo quando un nuovo gioco viene aggiunto al tuo account.</sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">Importa giochi EA App</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">Importa giochi Ubisoft</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Accedi al web store Epic nel tuo browser predefinito
+2. Vai alla pagina del codice di autenticazione facendo clic su OK in questa finestra di dialogo
+3. Inserisci il valore &quot;authorizationCode&quot; nella finestra successiva</sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Inserisci valore &quot;authorizationCode&quot;</sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">I plugin Ubisoft non richiedono alcuna autenticazione, riceve le informazioni della libreria dai file di dati utente di Ubisoft Connect.
+
+Se hai problemi nell'importazione dei giochi, assicurati che il client sia installato correttamente e che il tuo account sia collegato.</sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Il plugin Rockstar attualmente importa solo i giochi installati. Non c'è modo di collegare un account per importare tutti i giochi.</sys:String>
 </ResourceDictionary>

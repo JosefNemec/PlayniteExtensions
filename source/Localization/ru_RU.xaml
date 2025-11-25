@@ -8,7 +8,8 @@
     <sys:String x:Key="LOCNotLoggedIn">Требуется авторизация</sys:String>
     <sys:String x:Key="LOCNotLoggedInError">Не удалось авторизовать пользователя.</sys:String>
     <sys:String x:Key="LOCAuthenticateLabel">Аутентификация</sys:String>
-    <sys:String x:Key="LOCSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
+    <sys:String x:Key="LOCAuthenticateAlternativeLabel">Альтернативная аутентификация</sys:String>
+    <sys:String x:Key="LOCSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход официального клиента</sys:String>
     <sys:String x:Key="LOCTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
     <sys:String x:Key="LOCTroubleShootingIssues">Устранение неполадок</sys:String>
     <sys:String x:Key="LOCSettingsImportLibraryLabel">Импортировать все игры</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="LOCStartUsingClient">Запустить через клиент {0}</sys:String>
     <sys:String x:Key="LOCImportPlaytime">Импортировать наигранные часы</sys:String>
     <sys:String x:Key="LOCAccountID">ID аккаунта</sys:String>
+    <sys:String x:Key="LOCGetAccountID">Получить ID аккаунта</sys:String>
     <sys:String x:Key="LOCMetadataLanguageLabel">Язык метаданных:</sys:String>
     <!--itch.io-->
     <sys:String x:Key="LOCItchioSignInNotif">Откроется клиент itch.io. Пожалуйста, войдите в систему и закройте это сообщение.</sys:String>
@@ -44,6 +46,7 @@
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">При установке игр из GOG Galaxy устанавливать игры в автоматическом режиме</sys:String>
     <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Если включено, процесс установки будет запущен автоматически без взаимодействия с пользователем, установка будет произведена в место установки по умолчанию.
 Если выключено, откроется страница игры, чтобы начать процесс установки вручную.</sys:String>
+    <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Использовать вертикальные обложки</sys:String>
     <!--Steam-->
     <sys:String x:Key="LOCSettingsWhatsSteamName">Как узнать имя моего аккаунта?</sys:String>
     <sys:String x:Key="LOCSteamCustomUrlName">URL-адрес аккаунта</sys:String>
@@ -86,9 +89,27 @@
     <sys:String x:Key="LOCSteamTagBlacklistHeader">Исключаемые теги</sys:String>
     <sys:String x:Key="LOCSteamTagWhitelistTooltip">Удалить из исключаемых тегов</sys:String>
     <sys:String x:Key="LOCSteamTagBlacklistTooltip">Добавить в исключаемые теги</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Установить категорию меток как префикс</sys:String>
+    <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Устанавливает категорию, к которой относится тег как префикс. Например, &quot;Ролевой экшен&quot; превращается в &quot;Жанры: Ролевой экшен&quot;</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryAssessments">Оценки</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFeatures">Особенности</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Финансирование</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryGenres">Жанры</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Устройства ввода</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryOtherTags">Другие метки</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryPlayers">Игроки</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Рейтинги</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySoftware">Программное обеспечение</sys:String>
+    <sys:String x:Key="LOCSteamTagCategorySubGenres">Поджанры</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Темы и атмосфера</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Основные жанры</sys:String>
+    <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Визуальный стиль и перспектива</sys:String>
     <sys:String x:Key="LOCSteamValidationFixedTagCount">Фиксированное число тегов должно быть допустимым числом</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Показывать меню при запуске игры в Steam в оконном режиме</sys:String>
     <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Показывать меню при запуске игры в Steam в полноэкранном режиме</sys:String>
+    <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Импортировать совместимость со Steam Deck как</sys:String>
+    <sys:String x:Key="LOCSteamWebVsApiLogin">Использовать Web-логин или API?</sys:String>
+    <sys:String x:Key="LOCSteamImportFamilyGames"></sys:String>
     <!--IGDB-->
     <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Использовать скриншоты из игры при отсутствии обложки </sys:String>
     <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">При наличии нескольких изображений используйте:</sys:String>
@@ -109,4 +130,21 @@
     <!--Xbox-->
     <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Запускать приложение Xbox Pass вместо Microsoft Store при открытии клиента</sys:String>
     <sys:String x:Key="LOCXboxImportConsoleGames">Импорт консольных игр Xbox</sys:String>
+     <!--BattleNet-->
+    <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Интеграция с Battle.net имеет давнюю проблему, при которой вас может выкинуть из авторизованного аккаунта в случайные моменты времени.
+
+До устранения этой проблемы мы рекомендуем привязать аккаунт, импортировать игры и затем отвязать аккаунт. Вам нужно будет повторить этот процесс только при добавлении новой игры в ваш аккаунт.</sys:String>
+    <!--Epic-->
+    <sys:String x:Key="LOCEpicImportEAGames">Импортировать игры EA App</sys:String>
+    <sys:String x:Key="LOCEpicImportUbisoftGames">Импортировать игры Ubisoft</sys:String>
+    <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Войдите в интернет-магазин Epic в своём браузере по умолчанию.
+2. Перейдите на страницу с кодом аутентификации, нажав «ОК» в этом диалоговом окне.
+3. Введите значение «authorizationCode» в следующем диалоговом окне.</sys:String>
+    <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Вставьте значение &quot;authorizationCode&quot;</sys:String>
+    <!--Ubisoft-->
+    <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Плагин Ubisoft не требует никакой аутентификации, он получает информацию о библиотеке из файлов пользовательских данных клиента Ubisoft Connect.
+
+Если у вас возникли проблемы с импортом игр, убедитесь, что клиент установлен правильно и вы вошли в свою учетную запись.</sys:String>
+    <!--Rockstar-->
+    <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Плагин Rockstar в настоящее время импортирует только установленные игры. Не существует способа привязать учетную запись для импорта всех игр.</sys:String>
 </ResourceDictionary>
