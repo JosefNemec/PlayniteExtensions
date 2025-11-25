@@ -319,7 +319,7 @@ namespace GogLibrary
         private List<GameMetadata> GetExtras(List<GameMetadata> games, GogAccountClient api)
         {
             var extras = new List<GameMetadata>();
-            var jsonData = new Dictionary<string, string>();
+            var jsonData = LoadExtrasFile();
             foreach (var game in games)
             {
                 try
@@ -340,7 +340,7 @@ namespace GogLibrary
                             Name = $"{game.Name} {x.Name.RemoveTrademarks()}"
                         };
                         extras.Add(extraAsGame);
-                        jsonData.Add(extraAsGame.GameId, $"https://www.gog.com{x.ManualUrl}");
+                        jsonData[extraAsGame.GameId] = $"https://www.gog.com{x.ManualUrl}";
                     }
                 }
                 catch (Exception e)
@@ -352,6 +352,18 @@ namespace GogLibrary
             FileSystem.PrepareSaveFile(ExtrasFile);
             File.WriteAllText(ExtrasFile, Serialization.ToJson(jsonData));
             return extras;
+        }
+
+        private Dictionary<string, string> LoadExtrasFile()
+        {
+            try
+            {
+                return Serialization.FromJsonFile<Dictionary<string, string>>(ExtrasFile);
+            }
+            catch (Exception)
+            {
+                return new Dictionary<string, string>();
+            }
         }
 
         internal IEnumerable<GameMetadata> LibraryGamesToGames(List<LibraryGameResponse> libGames)

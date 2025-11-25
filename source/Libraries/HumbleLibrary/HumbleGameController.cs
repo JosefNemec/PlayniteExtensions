@@ -91,13 +91,21 @@ namespace HumbleLibrary
                 return false;
             }
 
-            var str = Encryption.DecryptFromFile(
-                library.ExtrasFile,
-                Encoding.UTF8,
-                WindowsIdentity.GetCurrent().User.Value);
-            var extra = Serialization.FromJson<Dictionary<string, Extra>>(str)[Game.GameId];
-            var url = GetExtraUrl(extra);
-            ProcessStarter.StartUrl(url);
+            try
+            {
+                var str = Encryption.DecryptFromFile(
+                    library.ExtrasFile,
+                    Encoding.UTF8,
+                    WindowsIdentity.GetCurrent().User.Value);
+                var extra = Serialization.FromJson<Dictionary<string, Extra>>(str)[Game.GameId];
+                var url = GetExtraUrl(extra);
+                ProcessStarter.StartUrl(url);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Missing required information for this title, or Humble client failed. Try updating Humble Library, including extras", e);
+            }
+
             InvokeOnInstallationCancelled(new GameInstallationCancelledEventArgs());
             return true;
         }

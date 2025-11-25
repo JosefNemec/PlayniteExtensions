@@ -72,8 +72,16 @@ namespace GogLibrary
                 return false;
             }
 
-            var url = Serialization.FromJsonFile<Dictionary<string,string>>(gogLibrary.ExtrasFile)[Game.GameId];
-            ProcessStarter.StartUrl(url);
+            try
+            {
+                var url = Serialization.FromJsonFile<Dictionary<string, string>>(gogLibrary.ExtrasFile)[Game.GameId];
+                ProcessStarter.StartUrl(url);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Missing required information for this title. Try updating GOG Library, including extras", e);
+            }
+
             InvokeOnInstallationCancelled(new GameInstallationCancelledEventArgs());
             return true;
         }

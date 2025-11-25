@@ -226,7 +226,7 @@ namespace HumbleLibrary
         public List<GameMetadata> GetLibraryExtras(List<Order> orders)
         {
             var extras = new List<GameMetadata>();
-            var jsonData = new Dictionary<string, Extra>();
+            var jsonData = LoadExtrasFile();
             foreach (var order in orders)
             {
                 var gameKey = order.gamekey;
@@ -267,10 +267,10 @@ namespace HumbleLibrary
                                     Name = $"{subproductHumanName} asm.js version ({order.product.human_name})"
                                 };
                                 extras.Add(extraAsGame);
-                                jsonData.Add(extraAsGame.GameId, new Extra
+                                jsonData[extraAsGame.GameId] = new Extra
                                 {
                                     PermanentUrl = $"https://www.humblebundle.com/play/asmjs/{downloadName}/{gameKey}"
-                                });
+                                };
                                 continue;
                         }
 
@@ -283,11 +283,11 @@ namespace HumbleLibrary
                                 Name = $"{subproductHumanName} {download.platform} {actualDownload.name} ({order.product.human_name})"
                             };
                             extras.Add(extraAsGame);
-                            jsonData.Add(extraAsGame.GameId, new Extra
+                            jsonData[extraAsGame.GameId] = new Extra
                             {
                                 GameKey = gameKey,
                                 Sha1 = actualDownload.sha1
-                            });
+                            };
                         }
                     }
                 }
@@ -300,6 +300,22 @@ namespace HumbleLibrary
                 Encoding.UTF8,
                 WindowsIdentity.GetCurrent().User.Value);
             return extras;
+        }
+
+        private Dictionary<string, Extra> LoadExtrasFile()
+        {
+            try
+            {
+                var str = Encryption.DecryptFromFile(
+                    ExtrasFile,
+                    Encoding.UTF8,
+                    WindowsIdentity.GetCurrent().User.Value);
+                return Serialization.FromJson<Dictionary<string, Extra>>(str);
+            }
+            catch (Exception)
+            {
+                return new Dictionary<string, Extra>();
+            }
         }
 
         private List<Order> GetAllOrders()
