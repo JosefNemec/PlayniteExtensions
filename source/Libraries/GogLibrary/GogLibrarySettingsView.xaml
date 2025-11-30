@@ -75,7 +75,7 @@
         <CheckBox IsChecked="{Binding Settings.ImportGameExtras}" DockPanel.Dock="Top" Margin="0,15"
                   Content="{DynamicResource LOCImportGameExtras}"
                   ToolTip="{DynamicResource LOCImportGameExtrasTooltip}"
-                  />
+                  Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}"/>
 
         <StackPanel Orientation="Horizontal" Margin="0,10,0,0"
                     Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}">
