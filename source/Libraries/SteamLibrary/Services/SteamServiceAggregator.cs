@@ -237,10 +237,12 @@ namespace SteamLibrary.Services
 
                     bool update = false;
 
-                    var source = GetOrCreateSource(((MetadataNameProperty)newGame.Source).Name);
-                    if (existingGame.SourceId != source.Id)
+                    var oldSource = existingGame.Source;
+                    var newSource = GetOrCreateSource(((MetadataNameProperty)newGame.Source).Name);
+
+                    if (SourceNames.AllKnown.Contains(oldSource?.Name) && oldSource?.Id != newSource.Id)
                     {
-                        existingGame.SourceId = source.Id;
+                        existingGame.SourceId = newSource.Id;
                         update = true;
                     }
 
