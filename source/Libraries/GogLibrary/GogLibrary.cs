@@ -24,6 +24,10 @@ namespace GogLibrary
     {
         private static readonly ILogger logger = LogManager.GetLogger();
 
+        public const string ExtrasPrefix = "gog_extras";
+
+        public const string ExtrasSource = "GOG Extras";
+
         public GogLibrary(IPlayniteAPI api) : base(
             "GOG",
             Guid.Parse("AEBE8B7C-6DC3-4A66-AF31-E7375C6B5E9E"),
@@ -34,7 +38,10 @@ namespace GogLibrary
             api)
         {
             SettingsViewModel = new GogLibrarySettingsViewModel(this, api);
+            ExtrasFile = Path.Combine(GetPluginUserDataPath(), "extras.json");
         }
+
+        public string ExtrasFile { get; set; }
 
         public override IEnumerable<InstallController> GetInstallActions(GetInstallActionsArgs args)
         {
@@ -298,7 +305,64 @@ namespace GogLibrary
                     Logger.Warn("Failed to obtain library stats data.");
                 }
 
-                return LibraryGamesToGames(libGames).ToList();
+                var result = LibraryGamesToGames(libGames).ToList();
+
+                if (SettingsViewModel.Settings.ImportGameExtras)
+                {
+                    result.AddRange(GetExtras(result, api));
+                }
+
+                return result;
+            }
+        }
+
+        private List<GameMetadata> GetExtras(List<GameMetadata> games, GogAccountClient api)
+        {
+            var extras = new List<GameMetadata>();
+            var jsonData = LoadExtrasFile();
+            foreach (var game in games)
+            {
+                try
+                {
+                    var gogExtras = api.GetOwnedGameDetails(game.GameId).Extras;
+                    foreach (var x in gogExtras)
+                    {
+                        var id = x.ManualUrl.Split('/').Last();
+                        if (!long.TryParse(id, out _))
+                        {
+                            continue;
+                        }
+
+                        var extraAsGame = new GameMetadata()
+                        {
+                            GameId = $"{ExtrasPrefix}_{game.GameId}_{id}",
+                            Source = new MetadataNameProperty(ExtrasSource),
+                            Name = $"{game.Name} {x.Name.RemoveTrademarks()}"
+                        };
+                        extras.Add(extraAsGame);
+                        jsonData[extraAsGame.GameId] = $"https://www.gog.com{x.ManualUrl}";
+                    }
+                }
+                catch (Exception e)
+                {
+                    logger.Error(e, $"Failed to get extras for gog game: {game.GameId} {game.Name}.");
+                }
+            }
+
+            FileSystem.PrepareSaveFile(ExtrasFile);
+            File.WriteAllText(ExtrasFile, Serialization.ToJson(jsonData));
+            return extras;
+        }
+
+        private Dictionary<string, string> LoadExtrasFile()
+        {
+            try
+            {
+                return Serialization.FromJsonFile<Dictionary<string, string>>(ExtrasFile);
+            }
+            catch (Exception)
+            {
+                return new Dictionary<string, string>();
             }
         }
 

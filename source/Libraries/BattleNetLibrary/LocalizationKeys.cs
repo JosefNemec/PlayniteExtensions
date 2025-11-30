@@ -90,6 +90,14 @@ namespace System
         /// </summary>
         public const string BattleNetMetadataLanguageLabel = "LOCBattleNetMetadataLanguageLabel";
         /// <summary>
+        /// Also import non-game extras
+        /// </summary>
+        public const string BattleNetImportGameExtras = "LOCBattleNetImportGameExtras";
+        /// <summary>
+        /// Import things like soundtracks, artwork, guides as separate entries
+        /// </summary>
+        public const string BattleNetImportGameExtrasTooltip = "LOCBattleNetImportGameExtrasTooltip";
+        /// <summary>
         /// Battle.net integration has long standing issue where authenticated account might get logged out at random times.
         /// </summary>
         public const string BattleNetAccountSyncNotice = "LOCBattleNetAccountSyncNotice";

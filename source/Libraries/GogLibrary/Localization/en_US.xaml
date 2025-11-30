@@ -20,6 +20,8 @@
   <sys:String x:Key="LOCGOGAccountID">Account ID</sys:String>
   <sys:String x:Key="LOCGOGGetAccountID">Get account ID</sys:String>
   <sys:String x:Key="LOCGOGMetadataLanguageLabel">Metadata language:</sys:String>
+  <sys:String x:Key="LOCGOGImportGameExtras">Also import non-game extras</sys:String>
+  <sys:String x:Key="LOCGOGImportGameExtrasTooltip">Import things like soundtracks, artwork, guides as separate entries</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Account Login</sys:String>
   <sys:String x:Key="LOCGOGUseAccountName">Account Name</sys:String>

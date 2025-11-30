@@ -90,6 +90,14 @@ namespace System
         /// </summary>
         public const string HumbleMetadataLanguageLabel = "LOCHumbleMetadataLanguageLabel";
         /// <summary>
+        /// Also import non-game extras
+        /// </summary>
+        public const string HumbleImportGameExtras = "LOCHumbleImportGameExtras";
+        /// <summary>
+        /// Import things like soundtracks, artwork, guides as separate entries
+        /// </summary>
+        public const string HumbleImportGameExtrasTooltip = "LOCHumbleImportGameExtrasTooltip";
+        /// <summary>
         /// Ignore third party store games
         /// </summary>
         public const string HumbleIgnoreThirdPartyStoreGames = "LOCHumbleIgnoreThirdPartyStoreGames";

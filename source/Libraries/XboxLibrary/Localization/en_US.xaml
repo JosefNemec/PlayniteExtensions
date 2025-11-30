@@ -20,6 +20,8 @@
   <sys:String x:Key="LOCXboxAccountID">Account ID</sys:String>
   <sys:String x:Key="LOCXboxGetAccountID">Get account ID</sys:String>
   <sys:String x:Key="LOCXboxMetadataLanguageLabel">Metadata language:</sys:String>
+  <sys:String x:Key="LOCXboxImportGameExtras">Also import non-game extras</sys:String>
+  <sys:String x:Key="LOCXboxImportGameExtrasTooltip">Import things like soundtracks, artwork, guides as separate entries</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Start Xbox Pass app instead of Microsoft Store when opening client</sys:String>
   <sys:String x:Key="LOCXboxImportConsoleGames">Import Xbox console games</sys:String>

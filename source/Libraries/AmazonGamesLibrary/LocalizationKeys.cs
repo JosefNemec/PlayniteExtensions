@@ -89,5 +89,13 @@ namespace System
         /// Metadata language:
         /// </summary>
         public const string AmazonMetadataLanguageLabel = "LOCAmazonMetadataLanguageLabel";
+        /// <summary>
+        /// Also import non-game extras
+        /// </summary>
+        public const string AmazonImportGameExtras = "LOCAmazonImportGameExtras";
+        /// <summary>
+        /// Import things like soundtracks, artwork, guides as separate entries
+        /// </summary>
+        public const string AmazonImportGameExtrasTooltip = "LOCAmazonImportGameExtrasTooltip";
     }
 }

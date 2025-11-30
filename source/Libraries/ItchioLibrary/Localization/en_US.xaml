@@ -20,6 +20,8 @@
   <sys:String x:Key="LOCitchioAccountID">Account ID</sys:String>
   <sys:String x:Key="LOCitchioGetAccountID">Get account ID</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">Metadata language:</sys:String>
+  <sys:String x:Key="LOCitchioImportGameExtras">Also import non-game extras</sys:String>
+  <sys:String x:Key="LOCitchioImportGameExtrasTooltip">Import things like soundtracks, artwork, guides as separate entries</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io will be launched. Please sign in and then close this message.</sys:String>
   <sys:String x:Key="LOCItchioSignInWaitMessage">Waiting for user to sign in, please close this when you're done…</sys:String>

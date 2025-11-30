@@ -90,6 +90,14 @@ namespace System
         /// </summary>
         public const string UbisoftMetadataLanguageLabel = "LOCUbisoftMetadataLanguageLabel";
         /// <summary>
+        /// Also import non-game extras
+        /// </summary>
+        public const string UbisoftImportGameExtras = "LOCUbisoftImportGameExtras";
+        /// <summary>
+        /// Import things like soundtracks, artwork, guides as separate entries
+        /// </summary>
+        public const string UbisoftImportGameExtrasTooltip = "LOCUbisoftImportGameExtrasTooltip";
+        /// <summary>
         /// Ubisoft plugins doesn't require any authentication, it takes library information from Ubisoft Connect client's user data files.
         /// </summary>
         public const string UbisoftSettingsNotice = "LOCUbisoftSettingsNotice";

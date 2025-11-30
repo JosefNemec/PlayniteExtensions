@@ -90,6 +90,14 @@ namespace System
         /// </summary>
         public const string EpicMetadataLanguageLabel = "LOCEpicMetadataLanguageLabel";
         /// <summary>
+        /// Also import non-game extras
+        /// </summary>
+        public const string EpicImportGameExtras = "LOCEpicImportGameExtras";
+        /// <summary>
+        /// Import things like soundtracks, artwork, guides as separate entries
+        /// </summary>
+        public const string EpicImportGameExtrasTooltip = "LOCEpicImportGameExtrasTooltip";
+        /// <summary>
         /// Import EA App games
         /// </summary>
         public const string EpicImportEAGames = "LOCEpicImportEAGames";

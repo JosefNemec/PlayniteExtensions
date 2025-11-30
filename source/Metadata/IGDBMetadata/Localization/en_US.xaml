@@ -20,6 +20,8 @@
   <sys:String x:Key="LOCIGDBAccountID">Account ID</sys:String>
   <sys:String x:Key="LOCIGDBGetAccountID">Get account ID</sys:String>
   <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Metadata language:</sys:String>
+  <sys:String x:Key="LOCIGDBImportGameExtras">Also import non-game extras</sys:String>
+  <sys:String x:Key="LOCIGDBImportGameExtrasTooltip">Import things like soundtracks, artwork, guides as separate entries</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Use screenshots if artwork is not available</sys:String>
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">If multiple images are available then use:</sys:String>

@@ -90,6 +90,14 @@ namespace System
         /// </summary>
         public const string itchioMetadataLanguageLabel = "LOCitchioMetadataLanguageLabel";
         /// <summary>
+        /// Also import non-game extras
+        /// </summary>
+        public const string itchioImportGameExtras = "LOCitchioImportGameExtras";
+        /// <summary>
+        /// Import things like soundtracks, artwork, guides as separate entries
+        /// </summary>
+        public const string itchioImportGameExtrasTooltip = "LOCitchioImportGameExtrasTooltip";
+        /// <summary>
         /// itch.io will be launched. Please sign in and then close this message.
         /// </summary>
         public const string ItchioSignInNotif = "LOCItchioSignInNotif";

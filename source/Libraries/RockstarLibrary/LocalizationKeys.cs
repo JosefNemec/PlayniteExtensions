@@ -90,6 +90,14 @@ namespace System
         /// </summary>
         public const string RockstarMetadataLanguageLabel = "LOCRockstarMetadataLanguageLabel";
         /// <summary>
+        /// Also import non-game extras
+        /// </summary>
+        public const string RockstarImportGameExtras = "LOCRockstarImportGameExtras";
+        /// <summary>
+        /// Import things like soundtracks, artwork, guides as separate entries
+        /// </summary>
+        public const string RockstarImportGameExtrasTooltip = "LOCRockstarImportGameExtrasTooltip";
+        /// <summary>
         /// Rockstar plugin currently only imports installed games. There is no way to link an account to import all games.
         /// </summary>
         public const string RockstarSettingsNotice = "LOCRockstarSettingsNotice";

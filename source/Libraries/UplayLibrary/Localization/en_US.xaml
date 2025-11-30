@@ -20,6 +20,8 @@
   <sys:String x:Key="LOCUbisoftAccountID">Account ID</sys:String>
   <sys:String x:Key="LOCUbisoftGetAccountID">Get account ID</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Metadata language:</sys:String>
+  <sys:String x:Key="LOCUbisoftImportGameExtras">Also import non-game extras</sys:String>
+  <sys:String x:Key="LOCUbisoftImportGameExtrasTooltip">Import things like soundtracks, artwork, guides as separate entries</sys:String>
   <!--Ubisoft-->
   <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Ubisoft plugins doesn't require any authentication, it takes library information from Ubisoft Connect client's user data files.
 
