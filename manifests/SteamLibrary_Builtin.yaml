@@ -257,3 +257,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_38.pext
     Changelog:
       - Added option to disable import of family shared games
+  - Version: 2.39
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-12-01
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_39.pext
+    Changelog:
+      - Fixed plugin overwriting custom sources assigned to Steam games (by Jeshibu)
