@@ -4,5 +4,6 @@ namespace SteamLibrary.Services
     {
         public const string Steam = "Steam";
         public const string FamilySharing = "Steam Family Sharing";
+        public static readonly string[] AllKnown = { Steam, FamilySharing };
     }
 }
