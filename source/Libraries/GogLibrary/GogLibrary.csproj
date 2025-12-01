@@ -37,8 +37,8 @@
     <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AngleSharp.0.9.9\lib\net45\AngleSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Playnite.SDK, Version=6.13.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>C:\vault\playniteCancel\Playnite.SDK.dll</HintPath>
+    <Reference Include="Playnite.SDK, Version=6.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PlayniteSDK.6.14.0\lib\net462\Playnite.SDK.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
