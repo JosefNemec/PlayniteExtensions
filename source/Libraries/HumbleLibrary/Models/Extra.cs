@@ -8,9 +8,9 @@ namespace HumbleLibrary.Models
         public string GameKey { get; set; }
 
         /// <summary>
-        /// Helps identify given "extra" in a list of "downloads" returned from api
+        /// Helps identify given "extra" in a list of "downloads" returned from api. There is also sha1, but it is missing in some downloads
         /// </summary>
-        public string Sha1 { get; set; }
+        public string Md5 { get; set; }
 
         /// <summary>
         /// For asm.js humble games - they have unique url (with gameKey) that does not require authentication and never changes

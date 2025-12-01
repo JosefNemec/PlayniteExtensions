@@ -286,7 +286,7 @@ namespace HumbleLibrary
                             jsonData[extraAsGame.GameId] = new Extra
                             {
                                 GameKey = gameKey,
-                                Sha1 = actualDownload.sha1
+                                Md5 = actualDownload.md5
                             };
                         }
                     }

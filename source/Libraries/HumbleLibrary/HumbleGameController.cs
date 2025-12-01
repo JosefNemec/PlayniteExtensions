@@ -129,7 +129,7 @@ namespace HumbleLibrary
                 var actualDownload = order.subproducts
                     .SelectMany(x => x.downloads)
                     .SelectMany(x => x.download_struct)
-                    .Single(x => x.sha1 == extra.Sha1);
+                    .Single(x => x.md5 == extra.Md5);
                 return actualDownload.url.web;
             }
         }
