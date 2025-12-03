@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Playnite;
 using Playnite.Common;
 using Playnite.SDK;
+using Playnite.SDK.Data;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 
@@ -55,8 +56,34 @@ namespace GogLibrary
 
         public override void Install(InstallActionArgs args)
         {
+            if (HandleExtras())
+            {
+                return;
+            }
+
             InitiateInstall();
             StartInstallWatcher();
+        }
+
+        private bool HandleExtras()
+        {
+            if (!Game.GameId.StartsWith(GogLibrary.ExtrasPrefix))
+            {
+                return false;
+            }
+
+            try
+            {
+                var url = Serialization.FromJsonFile<Dictionary<string, string>>(gogLibrary.ExtrasFile)[Game.GameId];
+                ProcessStarter.StartUrl(url);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Missing required information for this title. Try updating GOG Library, including extras", e);
+            }
+
+            InvokeOnInstallationCancelled(new GameInstallationCancelledEventArgs());
+            return true;
         }
 
         private void InitiateInstall()

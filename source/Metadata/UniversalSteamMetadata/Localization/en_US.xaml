@@ -20,6 +20,8 @@
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">Account ID</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataGetAccountID">Get account ID</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">Metadata language:</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataImportGameExtras">Also import non-game extras</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataImportGameExtrasTooltip">Import things like soundtracks, artwork, guides as separate entries</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">What's my account name?</sys:String>
   <sys:String x:Key="LOCSteamCustomUrlName">Account URL Name</sys:String>

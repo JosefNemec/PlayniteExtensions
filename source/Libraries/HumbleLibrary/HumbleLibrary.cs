@@ -11,10 +11,12 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Reflection;
+using System.Security.Principal;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using PlayniteExtensions.Common;
 
 namespace HumbleLibrary
 {
@@ -41,6 +43,12 @@ namespace HumbleLibrary
     {
         public string UserAgent { get; }
 
+        public string ExtrasFile { get; set; }
+
+        public const string ExtrasPrefix = "humble_extras";
+
+        public const string ExtrasSource = "Humble Extras";
+
         public HumbleLibrary(IPlayniteAPI api) : base(
             "Humble",
             Guid.Parse("96e8c4bc-ec5c-4c8b-87e7-18ee5a690626"),
@@ -52,6 +60,7 @@ namespace HumbleLibrary
         {
             SettingsViewModel = new HumbleLibrarySettingsViewModel(this, PlayniteApi);
             UserAgent = $"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Playnite/{api.ApplicationInfo.ApplicationVersion.ToString(2)}";
+            ExtrasFile = Path.Combine(GetPluginUserDataPath(), "extras.dat");
         }
 
         public List<InstalledTroveGame> GetInstalledGames()
@@ -171,24 +180,8 @@ namespace HumbleLibrary
             return games.OrderBy(a => a.Name).ToList();
         }
 
-        public List<Order.SubProduct> GetLibraryGames()
+        public List<Order.SubProduct> GetLibraryGames(List<Order> orders)
         {
-            var libraryGames = new List<Game>();
-            var orders = new List<Order>();
-            using (var view = PlayniteApi.WebViews.CreateOffscreenView(
-                new WebViewSettings
-                {
-                    JavaScriptEnabled = false,
-                    UserAgent = UserAgent
-                }))
-            {
-                var api = new HumbleAccountClient(view);
-                var keys = api.GetLibraryKeys();
-                orders = api.GetOrders(keys);
-            }
-
-            // Humble will return null items in library response on some accounts
-            orders = orders.Where(a => a != null).ToList();
             var selectedProducts = new List<Order.SubProduct>();
             var allTpks = orders.SelectMany(a => a.tpkd_dict?.all_tpks).ToList();
 
@@ -230,6 +223,118 @@ namespace HumbleLibrary
             return selectedProducts;
         }
 
+        public List<GameMetadata> GetLibraryExtras(List<Order> orders)
+        {
+            var extras = new List<GameMetadata>();
+            var jsonData = LoadExtrasFile();
+            foreach (var order in orders)
+            {
+                var gameKey = order.gamekey;
+                if (!order.subproducts.HasItems())
+                {
+                    continue;
+                }
+
+                var productName = order.product.machine_name;
+                foreach (var subProduct in order.subproducts)
+                {
+                    var subproductHumanName = subProduct.human_name.RemoveTrademarks();
+                    var subproductName = subProduct.machine_name;
+                    if (!subProduct.downloads.HasItems())
+                    {
+                        continue;
+                    }
+
+                    foreach (var download in subProduct.downloads)
+                    {
+                        var downloadName = download.machine_name;
+                        if (!download.download_struct.HasItems())
+                        {
+                            continue;
+                        }
+
+                        switch (download.platform)
+                        {
+                            case "windows":
+                            case "mac":
+                            case "linux":
+                                continue;
+                            case "asmjs":
+                                var extraAsGame = new GameMetadata()
+                                {
+                                    GameId = $"{ExtrasPrefix}_{productName}_{subproductName}_{downloadName}_{download.platform}",
+                                    Source = new MetadataNameProperty(ExtrasSource),
+                                    Name = $"{subproductHumanName} asm.js version ({order.product.human_name})"
+                                };
+                                extras.Add(extraAsGame);
+                                jsonData[extraAsGame.GameId] = new Extra
+                                {
+                                    PermanentUrl = $"https://www.humblebundle.com/play/asmjs/{downloadName}/{gameKey}"
+                                };
+                                continue;
+                        }
+
+                        foreach (var actualDownload in download.download_struct)
+                        {
+                            var extraAsGame = new GameMetadata()
+                            {
+                                GameId = $"{ExtrasPrefix}_{productName}_{subproductName}_{downloadName}_{actualDownload.name}",
+                                Source = new MetadataNameProperty(ExtrasSource),
+                                Name = $"{subproductHumanName} {download.platform} {actualDownload.name} ({order.product.human_name})"
+                            };
+                            extras.Add(extraAsGame);
+                            jsonData[extraAsGame.GameId] = new Extra
+                            {
+                                GameKey = gameKey,
+                                Md5 = actualDownload.md5
+                            };
+                        }
+                    }
+                }
+            }
+
+            FileSystem.PrepareSaveFile(ExtrasFile);
+            Encryption.EncryptToFile(
+                ExtrasFile,
+                Serialization.ToJson(jsonData),
+                Encoding.UTF8,
+                WindowsIdentity.GetCurrent().User.Value);
+            return extras;
+        }
+
+        private Dictionary<string, Extra> LoadExtrasFile()
+        {
+            try
+            {
+                var str = Encryption.DecryptFromFile(
+                    ExtrasFile,
+                    Encoding.UTF8,
+                    WindowsIdentity.GetCurrent().User.Value);
+                return Serialization.FromJson<Dictionary<string, Extra>>(str);
+            }
+            catch (Exception)
+            {
+                return new Dictionary<string, Extra>();
+            }
+        }
+
+        private List<Order> GetAllOrders()
+        {
+            using (var view = PlayniteApi.WebViews.CreateOffscreenView(
+                       new WebViewSettings
+                       {
+                           JavaScriptEnabled = false,
+                           UserAgent = UserAgent
+                       }))
+            {
+                var api = new HumbleAccountClient(view);
+                var keys = api.GetLibraryKeys();
+                var orders = api.GetOrders(keys);
+                // Humble will return null items in library response on some accounts
+                return orders.Where(a => a != null).ToList();
+            }
+        }
+
         public override IEnumerable<Game> ImportGames(LibraryImportGamesArgs args)
         {
             var importedGames = new List<Game>();
@@ -245,8 +350,9 @@ namespace HumbleLibrary
                 {
                     if (SettingsViewModel.Settings.ImportGeneralLibrary)
                     {
-                        var selectedProducts = GetLibraryGames();
-                        foreach (var product in selectedProducts)
+                        var orders = GetAllOrders();
+                        var gameProducts = GetLibraryGames(orders);
+                        foreach (var product in gameProducts)
                         {
                             var gameId = GetGameId(product);
                             if (PlayniteApi.ApplicationSettings.GetGameExcludedFromImport(gameId, Id))
@@ -264,6 +370,19 @@ namespace HumbleLibrary
                                     Icon = product.icon.IsNullOrEmpty() ? null : new MetadataFile(product.icon),
                                     Source = new MetadataNameProperty("Humble")
                                 }, this));
+                            }
+                        }
+
+                        if (SettingsViewModel.Settings.ImportGameExtras)
+                        {
+                            var extras = GetLibraryExtras(orders);
+                            foreach (var extra in extras)
+                            {
+                                var alreadyImported = PlayniteApi.Database.Games.FirstOrDefault(a => a.PluginId == Id && a.GameId == extra.GameId);
+                                if (alreadyImported == null)
+                                {
+                                    importedGames.Add(PlayniteApi.Database.ImportGame(extra, this));
+                                }
                             }
                         }
                     }

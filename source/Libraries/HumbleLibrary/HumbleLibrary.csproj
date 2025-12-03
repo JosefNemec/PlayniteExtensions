@@ -38,8 +38,8 @@
     <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AngleSharp.0.9.9\lib\net45\AngleSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Playnite.SDK, Version=6.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\PlayniteSDK.6.2.2\lib\net462\Playnite.SDK.dll</HintPath>
+    <Reference Include="Playnite.SDK, Version=6.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PlayniteSDK.6.14.0\lib\net462\Playnite.SDK.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -155,6 +155,9 @@
     <Compile Include="..\..\Generic\PlayniteExtensions.Common\PluginSettingsViewModel.cs">
       <Link>Shared\PluginSettingsViewModel.cs</Link>
     </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\Encryption.cs">
+      <Link>Shared\Encryption.cs</Link>
+    </Compile>
     <Compile Include="HumbleClient.cs" />
     <Compile Include="HumbleGameController.cs" />
     <Compile Include="HumbleLibraryClient.cs" />
@@ -164,6 +167,7 @@
       <DependentUpon>HumbleLibrarySettingsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="LocalizationKeys.cs" />
+    <Compile Include="Models\Extra.cs" />
     <Compile Include="Models\HumbleApp.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Trove.cs" />
@@ -198,6 +202,5 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

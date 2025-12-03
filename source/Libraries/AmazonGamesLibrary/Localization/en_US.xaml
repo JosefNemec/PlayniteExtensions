@@ -20,4 +20,6 @@
   <sys:String x:Key="LOCAmazonAccountID">Account ID</sys:String>
   <sys:String x:Key="LOCAmazonGetAccountID">Get account ID</sys:String>
   <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Metadata language:</sys:String>
+  <sys:String x:Key="LOCAmazonImportGameExtras">Also import non-game extras</sys:String>
+  <sys:String x:Key="LOCAmazonImportGameExtrasTooltip">Import things like soundtracks, artwork, guides as separate entries</sys:String>
 </ResourceDictionary>

@@ -6,9 +6,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Security.Principal;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using HumbleLibrary.Models;
+using HumbleLibrary.Services;
+using Playnite.SDK.Data;
+using PlayniteExtensions.Common;
 
 namespace HumbleLibrary
 {
@@ -31,6 +36,11 @@ namespace HumbleLibrary
 
         public override void Install(InstallActionArgs args)
         {
+            if (HandleExtras())
+            {
+                return;
+            }
+
             if (Game.SupportsHumbleApp())
             {
                 Dispose();
@@ -71,6 +81,56 @@ namespace HumbleLibrary
                 });
 
                 throw new Exception(ResourceProvider.GetString(LOC.HumbleNonTroveInstallError));
+            }
+        }
+
+        private bool HandleExtras()
+        {
+            if (!Game.GameId.StartsWith(HumbleLibrary.ExtrasPrefix))
+            {
+                return false;
+            }
+
+            try
+            {
+                var str = Encryption.DecryptFromFile(
+                    library.ExtrasFile,
+                    Encoding.UTF8,
+                    WindowsIdentity.GetCurrent().User.Value);
+                var extra = Serialization.FromJson<Dictionary<string, Extra>>(str)[Game.GameId];
+                var url = GetExtraUrl(extra);
+                ProcessStarter.StartUrl(url);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Missing required information for this title, or Humble client failed. Try updating Humble Library, including extras", e);
+            }
+
+            InvokeOnInstallationCancelled(new GameInstallationCancelledEventArgs());
+            return true;
+        }
+
+        private string GetExtraUrl(Extra extra)
+        {
+            if (extra.PermanentUrl != null)
+            {
+                return extra.PermanentUrl;
+            }
+
+            using (var view = library.PlayniteApi.WebViews.CreateOffscreenView(
+                       new WebViewSettings
+                       {
+                           JavaScriptEnabled = false,
+                           UserAgent = library.UserAgent
+                       }))
+            {
+                var api = new HumbleAccountClient(view);
+                var order = api.GetOrders(new List<string>() {extra.GameKey}).Single();
+                var actualDownload = order.subproducts
+                    .SelectMany(x => x.downloads)
+                    .SelectMany(x => x.download_struct)
+                    .Single(x => x.md5 == extra.Md5);
+                return actualDownload.url.web;
             }
         }
 

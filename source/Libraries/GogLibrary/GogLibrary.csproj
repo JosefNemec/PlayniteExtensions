@@ -37,8 +37,8 @@
     <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AngleSharp.0.9.9\lib\net45\AngleSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Playnite.SDK, Version=6.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\PlayniteSDK.6.4.0\lib\net462\Playnite.SDK.dll</HintPath>
+    <Reference Include="Playnite.SDK, Version=6.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PlayniteSDK.6.14.0\lib\net462\Playnite.SDK.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -177,6 +177,7 @@
     <Compile Include="Models\GogGameTaskInfo.cs" />
     <Compile Include="Models\GetOwnedGamesResult.cs" />
     <Compile Include="Models\LibraryGameResponse.cs" />
+    <Compile Include="Models\OwnedGameDetailsResponse.cs" />
     <Compile Include="Models\PagedResponse.cs" />
     <Compile Include="Models\ProductApiDetail.cs" />
     <Compile Include="Models\StoreGamesFilteredListResponse.cs" />
