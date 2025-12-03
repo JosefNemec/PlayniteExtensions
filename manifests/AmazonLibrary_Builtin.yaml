@@ -60,3 +60,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_10.pext
     Changelog:
       - Small update to authentication procedure
+  - Version: 2.11
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2025-12-03
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/AmazonLibrary_Builtin_2_11.pext
+    Changelog:
+      - Update Amazon client installation URL
