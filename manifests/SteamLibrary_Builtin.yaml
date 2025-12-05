@@ -263,3 +263,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_39.pext
     Changelog:
       - Fixed plugin overwriting custom sources assigned to Steam games (by Jeshibu)
+  - Version: 2.40
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2025-12-05
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_40.pext
+    Changelog:
+      - Don't create Steam game source if not necessary (by Jeshibu)
