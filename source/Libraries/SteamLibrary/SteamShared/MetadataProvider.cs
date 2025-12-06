@@ -299,6 +299,10 @@ namespace Steam
                 metadata.Name = metadata.ProductDetails?["common"]["name"]?.Value ?? metadata.StoreDetails?.name;
             }
 
+            // Can happen with some Steam deprecated items like tech tests
+            if (metadata.Name.IsNullOrWhiteSpace())
+                return metadata;
+
             metadata.Name = metadata.Name.RemoveTrademarks().Trim();
             metadata.Links = new List<Link>()
             {
