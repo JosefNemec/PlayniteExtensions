@@ -1,48 +1,5 @@
 AddonId: ItchioLibrary_Builtin
 Packages:
-  - Version: 2.0
-    RequiredApiVersion: 6.0.0
-    ReleaseDate: 2021-09-03
-    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/1.0/ItchioLibrary_Builtin_2_0.pext
-    Changelog:
-      - Playnite 9 support
-  - Version: 2.1
-    RequiredApiVersion: 6.0.0
-    ReleaseDate: 2021-09-08
-    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/1.0/ItchioLibrary_Builtin_2_1.pext
-    Changelog:
-      - Updated to support Playnite 9 beta 2
-  - Version: 2.2
-    RequiredApiVersion: 6.0.0
-    ReleaseDate: 2021-09-24
-    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/ItchioLibrary_Builtin_2_2.pext
-    Changelog:
-      - Updated dependencies for Playnite 9
-  - Version: 2.3
-    RequiredApiVersion: 6.0.0
-    ReleaseDate: 2022-03-21
-    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/ItchioLibrary_Builtin_2_3.pext
-    Changelog:
-      - Option to select type of items to import (by jakopo87)
-      - Option to import items from custom collections (by jakopo87)
-  - Version: 2.4
-    RequiredApiVersion: 6.0.0
-    ReleaseDate: 2022-04-01
-    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/ItchioLibrary_Builtin_2_4.pext
-    Changelog:
-      - Fixed issue that old collections are imported instead of latest collections (by ryouma-aurora)
-  - Version: 2.5
-    RequiredApiVersion: 6.0.0
-    ReleaseDate: 2022-04-16
-    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/ItchioLibrary_Builtin_2_5.pext
-    Changelog:
-      - Show startup selection options if available
-  - Version: 2.6
-    RequiredApiVersion: 6.0.0
-    ReleaseDate: 2022-10-23
-    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/ItchioLibrary_Builtin_2_6.pext
-    Changelog:
-      - Added support for fetching game icons
   - Version: 2.7
     RequiredApiVersion: 6.0.0
     ReleaseDate: 2024-01-08
