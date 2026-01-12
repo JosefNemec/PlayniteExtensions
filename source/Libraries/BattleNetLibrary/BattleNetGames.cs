@@ -396,6 +396,54 @@ namespace BattleNetLibrary
                 Name = "Warcraft Rumble",
                 Type = BNetAppType.Default
             },
+            new BNetApp()
+            {
+                ApiId = 1095911763,
+                ProductId = "ARIS",
+                InternalId = "aris",
+                Name = "Doom: The Dark Ages",
+                Type = BNetAppType.Default
+            },
+            new BNetApp()
+            {
+                ApiId = 1396920146,
+                ProductId = "SCOR",
+                InternalId = "scorpio",
+                Name = "Sea of Thieves",
+                Type = BNetAppType.Default
+            },
+            new BNetApp()
+            {
+                ApiId = 4280907,
+                ProductId = "ARK",
+                InternalId = "arkansas",
+                Name = "The Outer Worlds 2",
+                Type = BNetAppType.Default
+            },
+            new BNetApp()
+            {
+                ApiId = 1279414849,
+                ProductId = "LBRA",
+                InternalId = "libra",
+                Name = "Tony Hawk's Pro Skater 3 + 4",
+                Type = BNetAppType.Default
+            },
+            new BNetApp()
+            {
+                ApiId = 1096108883,
+                ProductId = "PNTA",
+                InternalId = "pinta",
+                Name = "Call of Duty: Modern Warfare III",
+                Type = BNetAppType.Default
+            },
+            new BNetApp()
+            {
+                ApiId = 1095849281,
+                ProductId = "AQUA",
+                InternalId = "aqua",
+                Name = "Avowed",
+                Type = BNetAppType.Default
+            },
         };
 
         public static BNetApp GetAppDefinition(string productId)
