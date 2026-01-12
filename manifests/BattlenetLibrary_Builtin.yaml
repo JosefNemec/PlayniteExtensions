@@ -6,3 +6,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_23.pext
     Changelog:
       - Updated installation links for classic Diablo 2 and Warcraft 3
+  - Version: 2.24
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2026-01-12
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/BattlenetLibrary_Builtin_2_24.pext
+    Changelog:
+      - Added support for more non-Blizzard games
