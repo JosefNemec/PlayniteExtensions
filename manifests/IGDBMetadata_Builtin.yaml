@@ -6,3 +6,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/IGDBMetadata_Builtin_2_12.pext
     Changelog:
       - Updated to work properly with the latest IGDB backend changes
+  - Version: 2.13
+    RequiredApiVersion: 6.5.0
+    ReleaseDate: 2026-01-26
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/IGDBMetadata_Builtin_2_13.pext
+    Changelog:
+      - Image resolution is now shown on background selection dialog (when using Playnite 10.49 or newer)
