@@ -15,12 +15,14 @@ namespace IGDBMetadata
         {
             Image = artwork;
             Path = IgdbMetadataPlugin.GetImageUrl(artwork.url, ImageSizes.screenshot_med);
+            Description = $"{artwork.width}x{artwork.height}";
         }
 
         public IgdbImageSlectItem(Screenshot screenshot)
         {
             Image = screenshot;
             Path = IgdbMetadataPlugin.GetImageUrl(screenshot.url, ImageSizes.screenshot_med);
+            Description = $"{screenshot.width}x{screenshot.height}";
         }
     }
 
