@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="DateHelperTests.cs" />
     <Compile Include="EncryptionTests.cs" />
+    <Compile Include="GameNameMatcherTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

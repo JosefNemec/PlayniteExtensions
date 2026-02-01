@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PlayniteExtensions.Common
 {
-    internal class GameNameMatcher
+    public class GameNameMatcher
     {
         /// <summary>
         /// <para>
