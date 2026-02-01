@@ -159,6 +159,9 @@
     <Compile Include="..\..\Generic\PlayniteExtensions.Common\DateHelper.cs">
       <Link>Shared\DateHelper.cs</Link>
     </Compile>
+    <Compile Include="..\..\Generic\PlayniteExtensions.Common\GameNameMatcher.cs">
+      <Link>Shared\GameNameMatcher.cs</Link>
+    </Compile>
     <Compile Include="..\..\Generic\PlayniteExtensions.Common\GlobalCommands.cs">
       <Link>Shared\GlobalCommands.cs</Link>
     </Compile>

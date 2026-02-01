@@ -4,6 +4,7 @@ using Playnite.SDK;
 using Playnite.SDK.Data;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
+using PlayniteExtensions.Common;
 using Steam;
 using Steam.Models;
 using SteamLibrary.SteamShared;
@@ -384,6 +385,21 @@ namespace UniversalSteamMetadata
         {
             var normalizedName = StringExtensions.NormalizeGameName(gameInfo.Name);
             var results = UniversalSteamMetadata.GetSearchResults(normalizedName);
+
+            var alphanumericKey = GameNameMatcher.ToAlphanumericLower(gameInfo.Name);
+            var matchingEntry = results.FirstOrDefault(x => GameNameMatcher.ToAlphanumericLower(x.Name) == alphanumericKey);
+            if (matchingEntry != null)
+            {
+                return matchingEntry.GameId;
+            }
+
+            var gameKey = GameNameMatcher.ToGameKey(gameInfo.Name);
+            matchingEntry = results.FirstOrDefault(x => GameNameMatcher.ToGameKey(x.Name) == gameKey);
+            if (matchingEntry != null)
+            {
+                return matchingEntry.GameId;
+            }
+
             results.ForEach(a => a.Name = StringExtensions.NormalizeGameName(a.Name));
 
             string testName = string.Empty;
