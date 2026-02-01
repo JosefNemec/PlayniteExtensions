@@ -50,6 +50,7 @@
     <Compile Include="BackendClient.cs" />
     <Compile Include="DateHelper.cs" />
     <Compile Include="Encryption.cs" />
+    <Compile Include="GameNameMatcher.cs" />
     <Compile Include="PluginBase.cs" />
     <Compile Include="PluginSettingsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
