@@ -40,11 +40,8 @@
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Playnite.SDK">
-      <HintPath>..\..\packages\PlayniteSDK.6.4.0\lib\net462\Playnite.SDK.dll</HintPath>
+    <Reference Include="Playnite.SDK, Version=6.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PlayniteSDK.6.14.0\lib\net462\Playnite.SDK.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -191,6 +188,7 @@
     <Compile Include="Environment.cs" />
     <Compile Include="GameExtension.cs" />
     <Compile Include="LocalizationKeys.cs" />
+    <Compile Include="Models\BackendModels.cs" />
     <Compile Include="Models\ApiResponseModels.cs" />
     <Compile Include="Models\SteamStoreModels.cs" />
     <Compile Include="Services\Base\SteamApiServiceBase.cs" />

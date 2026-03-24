@@ -1,5 +1,4 @@
 using AngleSharp.Parser.Html;
-using Newtonsoft.Json;
 using Playnite.SDK;
 using Playnite.SDK.Events;
 using SteamLibrary.Models;
@@ -8,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Playnite.SDK.Data;
 
 namespace SteamLibrary.Services
 {
@@ -23,6 +23,9 @@ namespace SteamLibrary.Services
             PlayniteApi = playniteApi;
         }
 
+        /// <summary>
+        /// dynamicstore/userdata
+        /// </summary>
         public async Task<SteamUserDataRoot> GetUserDataAsync()
         {
             var str = await DownloadPageSourceAsync("https://store.steampowered.com/dynamicstore/userdata/");
@@ -34,7 +37,7 @@ namespace SteamLibrary.Services
                 str = doc.GetElementsByTagName("body").FirstOrDefault()?.TextContent;
             }
 
-            var model = JsonConvert.DeserializeObject<SteamUserDataRoot>(str);
+            var model = Serialization.FromJson<SteamUserDataRoot>(str);
             return model;
         }
 

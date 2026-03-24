@@ -36,11 +36,18 @@
 
     <TabControl>
         <TabItem Header="{DynamicResource LOCGeneralLabel}">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
             <StackPanel Margin="20">
                 <CheckBox DockPanel.Dock="Top" Name="CheckSteamImportInstalled"
                           Margin="0,0,0,15"
-                          IsChecked="{Binding Settings.ImportInstalledGames}"
-                          Content="{DynamicResource LOCSteamSettingsImportInstalledLabel}"/>
+                          IsChecked="{Binding Settings.ImportInstalled}"
+                          Content="Import installed content"/><!--Content="{DynamicResource LOCSteamSettingsImportInstalledLabel}"-->
+
+                <CheckBox DockPanel.Dock="Top"
+                          Margin="10,0,0,15"
+                          IsChecked="{Binding Settings.ImportInstalledMods}"
+                          IsEnabled="{Binding IsChecked,ElementName=CheckSteamImportInstalled}"
+                          Content="Import installed GoldSrc/Source mods"/>
 
                 <StackPanel Orientation="Horizontal">
                     <CheckBox Name="CheckSteamConnectAccount" VerticalAlignment="Center"
@@ -74,14 +81,9 @@
                 </StackPanel>
 
                 <StackPanel Margin="40,5,5,0" IsEnabled="{Binding IsChecked, ElementName=CheckSteamConnectAccount}">
-                    <CheckBox Name="CheckSteamImportUninstalled"
-                              IsChecked="{Binding Settings.ImportUninstalledGames}"
+                    <CheckBox IsChecked="{Binding Settings.ImportInstalledIgnoreOthers}"
                               Margin="0,10,0,0"
-                              Content="{DynamicResource LOCSteamSettingsImportUninstalledLabel}"/>
-
-                    <CheckBox IsChecked="{Binding Settings.IgnoreOtherInstalled}"
-                              Margin="0,10,0,0"
-                              Content="{DynamicResource LOCSteamIgnoreOtherAccountGames}"/>
+                              Content="Ignore installed content from other accounts"/><!--Content="{DynamicResource LOCSteamIgnoreOtherAccountGames}"-->
 
                     <TextBlock VerticalAlignment="Center" Margin="0,15,0,0">
                         <Hyperlink NavigateUri="https://github.com/JosefNemec/PlayniteExtensions/wiki/Steam-troubleshooting#should-i-use-web-or-api-login"
@@ -91,23 +93,42 @@
                         </Hyperlink>
                     </TextBlock>
 
-                    <RadioButton Content="Web login" Margin="0,15,0,0"
-                                 IsChecked="{Binding Settings.IsPrivateAccount, Converter={StaticResource NegateConverter}}" />
 
-                    <Button Content="{DynamicResource LOCSteamAuthenticateLabel}"
-                            Command="{Binding LoginCommand}"
-                            IsEnabled="{Binding Settings.IsPrivateAccount, Converter={StaticResource NegateConverter}}"
-                            Margin="25,15,5,5" HorizontalAlignment="Left"/>
+                    <RadioButton Content="Web login" Margin="0,15" IsChecked="{Binding Settings.UseApiLogin, Converter={StaticResource NegateConverter}}" />
+                    <StackPanel Margin="10,0" IsEnabled="{Binding Settings.UseApiLogin,Converter={StaticResource NegateConverter}}">
+                        <Button Content="{DynamicResource LOCSteamAuthenticateLabel}"
+                                Command="{Binding LoginCommand}"
+                                Margin="0,5,5,5" HorizontalAlignment="Left"/>
+                        <TextBlock Text="Library import settings" Margin="0,15" VerticalAlignment="Center" MinWidth="150"/>
+                        <StackPanel Orientation="Horizontal" Margin="25,5">
+                            <TextBlock Text="Import Games" VerticalAlignment="Center" MinWidth="130"/>
+                            <CheckBox Margin="5,0" MinWidth="100" IsChecked="{Binding Settings.ImportGamesOwn}" Content="own"/>
+                            <CheckBox Margin="5,0" MinWidth="100" IsChecked="{Binding Settings.ImportGamesFamily}" Content="family"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="25,5">
+                            <TextBlock Text="Import Apps" VerticalAlignment="Center" MinWidth="130"/>
+                            <CheckBox Margin="5,0" MinWidth="100" IsChecked="{Binding Settings.ImportAppsOwn}" Content="own" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="25,5">
+                            <TextBlock Text="Import Media" VerticalAlignment="Center" MinWidth="130"/>
+                            <CheckBox Margin="5,0" MinWidth="100" IsChecked="{Binding Settings.ImportMediaOwn}" Content="own"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="25,5">
+                            <TextBlock Text="Import Free Demos*" VerticalAlignment="Center" MinWidth="130"/>
+                            <CheckBox Margin="5,0" MinWidth="100" IsChecked="{Binding Settings.ImportFreeOwn}" Content="own"/>
+                            <CheckBox Margin="5,0" MinWidth="100" IsChecked="{Binding Settings.ImportFreeFamily}" Content="family"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="25,5">
+                            <TextBlock Text="Import Tools*" VerticalAlignment="Center" MinWidth="130"/>
+                            <CheckBox Margin="5,0" MinWidth="100" IsChecked="{Binding Settings.ImportToolsOwn}" Content="own"/>
+                            <CheckBox Margin="5,0" MinWidth="100" IsChecked="{Binding Settings.ImportToolsFamily}" Content="family"/>
+                        </StackPanel>
+                        <TextBlock Text="*Demos and Tools require Steam client to be online during import" VerticalAlignment="Center" MinWidth="150" TextWrapping="Wrap" />
+                        <TextBlock Text="Tools import is not recommended. Steam itself shows a warning when you enable Tools in library. They are mostly servers, SDKs and other utilities. However, some games extras are listed as tools too. Also there are tools for games you don't own because that's how steam works." Visibility="{Binding Path=ToolsWarning,Converter={StaticResource BooleanToVisibilityConverter}}" VerticalAlignment="Center" MinWidth="150" Margin="0,10" TextWrapping="Wrap" />
+                    </StackPanel>
 
-                    <CheckBox IsChecked="{Binding Settings.ImportFamilySharedGames}" Margin="25,5,5,5"
-                              Content="{DynamicResource LOCSteamImportFamilyGames}"
-                              IsEnabled="{Binding Settings.IsPrivateAccount, Converter={StaticResource NegateConverter}}" />
-
-                    <RadioButton Content="API key login"  Margin="0,10,0,0"
-                                 IsChecked="{Binding Settings.IsPrivateAccount}" />
-
-                    <StackPanel IsEnabled="{Binding Settings.IsPrivateAccount}"
-                                Margin="25,0,0,0">
+                    <RadioButton Content="API key login" Margin="0,15" IsChecked="{Binding Settings.UseApiLogin}" />
+                    <StackPanel IsEnabled="{Binding Settings.UseApiLogin}" Margin="10,0">
                         <StackPanel DockPanel.Dock="Top" Margin="0,10,5,5" Orientation="Horizontal">
                             <TextBlock Text="{DynamicResource LOCSteamAccountID}"
                                        VerticalAlignment="Center" MinWidth="100"/>
@@ -137,10 +158,15 @@
                             </TextBlock>
                         </StackPanel>
 
-                        <CheckBox IsChecked="{Binding Settings.IncludeFreeSubGames}"
-                                  Margin="0,5,0,0"
-                                  Visibility="{Binding IsFirstRunUse, Converter={pcon:InvertedBooleanToVisibilityConverter}}"
-                                  Content="{DynamicResource LOCSteamImportFreeSubGames}"/>
+                        <TextBlock Text="Import by API is limited: games only, no family, missing free items" Margin="0,15" VerticalAlignment="Center" MinWidth="150"/>
+                        <StackPanel Orientation="Horizontal" Margin="25,5">
+                            <TextBlock Text="Import Games" VerticalAlignment="Center" MinWidth="130"/>
+                            <CheckBox Margin="5,0" MinWidth="100" IsChecked="{Binding Settings.ImportGamesOwn}" Content="own" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="25,5">
+                            <TextBlock Text="Import Free Demos" VerticalAlignment="Center" MinWidth="130"/>
+                            <CheckBox Margin="5,0" MinWidth="100" IsChecked="{Binding Settings.ImportFreeOwn}" Content="own"/>
+                        </StackPanel>
                     </StackPanel>
                 </StackPanel>
                 <TextBlock VerticalAlignment="Center" Margin="0,15,0,0">
@@ -151,6 +177,7 @@
                     </Hyperlink>
                 </TextBlock>
             </StackPanel>
+            </ScrollViewer>
         </TabItem>
         <TabItem Header="{DynamicResource LOCSteamAdditionalAccounts}">
             <DockPanel Margin="10">
