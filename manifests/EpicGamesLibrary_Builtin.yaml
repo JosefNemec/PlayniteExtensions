@@ -7,3 +7,9 @@ Packages:
     Changelog:
       - Fixed not all EA games importing correctly (by hawkeye116477)
       - Fixed primary authentication method not working properly (by hawkeye116477)
+  - Version: 2.27
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2026-04-27
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_27.pext
+    Changelog:
+      - Fixed Fortnite not being imported as installed if UEFN is also installed
