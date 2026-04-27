@@ -1,17 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Playnite.Commands;
-using SteamLibrary.Models;
 using Playnite.SDK;
-using System.Windows.Media;
-using System.Diagnostics;
-using System.Text.RegularExpressions;
-using Steam;
 using System.Collections.ObjectModel;
 using SteamLibrary.SteamShared;
 using Playnite.SDK.Data;
@@ -32,31 +25,47 @@ namespace SteamLibrary
 
     public class SteamLibrarySettings : SharedSteamSettings
     {
-        private bool isPrivateAccount;
+        private bool useApiLogin;
+        private bool importGamesOwn = true;
+        private bool importFreeOwn = true;
+        private bool importToolsOwn;
+        private bool importToolsFamily;
         private string apiKey = string.Empty;
         private string userId = string.Empty;
 
         public int Version { get; set; }
-        public bool ImportInstalledGames { get; set; } = true;
-        public bool ImportFamilySharedGames { get; set; } = true;
+        [Obsolete]public bool ImportInstalledGames { get; set; } = true;
+        [Obsolete]public bool ImportFamilySharedGames { get; set; } = true;
         public bool ConnectAccount { get; set; } = false;
-        public bool ImportUninstalledGames { get; set; } = false;
+        [Obsolete]public bool ImportUninstalledGames { get; set; } = false;
         public string UserId { get => userId; set => SetValue(ref userId, value); }
-        public bool IncludeFreeSubGames { get; set; } = false;
+        [Obsolete]public bool IncludeFreeSubGames { get; set; } = false;
         public bool ShowFriendsButton { get; set; } = true;
-        public bool IgnoreOtherInstalled { get; set; }
+        [Obsolete]public bool IgnoreOtherInstalled { get; set; }
         public ObservableCollection<AdditionalSteamAccount> AdditionalAccounts { get; set; } = new ObservableCollection<AdditionalSteamAccount>();
         public bool ShowSteamLaunchMenuInDesktopMode { get; set; } = true;
         public bool ShowSteamLaunchMenuInFullscreenMode { get; set; } = false;
         public List<string> ExtraIDsToImport { get; set; }
         [Obsolete] public string ApiKey { get; set; }
-
         [DontSerialize] public string RuntimeApiKey { get => apiKey; set => SetValue(ref apiKey, value); }
+        [Obsolete] public bool IsPrivateAccount { get; set; }
 
-        public bool IsPrivateAccount
+        public bool ImportInstalled { get; set; } = true;
+        public bool ImportInstalledMods { get; set; } = true;
+        public bool ImportInstalledIgnoreOthers { get; set; }
+        public bool ImportGamesOwn { get => importGamesOwn; set => SetValue(ref importGamesOwn, value); }
+        public bool ImportGamesFamily { get; set; } = true;
+        public bool ImportAppsOwn { get; set; } = true;
+        public bool ImportMediaOwn { get; set; }
+        public bool ImportFreeOwn { get => importFreeOwn; set => SetValue(ref importFreeOwn, value); }
+        public bool ImportFreeFamily { get; set; }
+        public bool ImportToolsOwn { get => importToolsOwn; set => SetValue(ref importToolsOwn, value); }
+        public bool ImportToolsFamily { get => importToolsFamily; set => SetValue(ref importToolsFamily, value); }
+
+        public bool UseApiLogin
         {
-            get => isPrivateAccount;
-            set => SetValue(ref isPrivateAccount, value);
+            get => useApiLogin;
+            set => SetValue(ref useApiLogin, value);
         }
     }
 
@@ -74,9 +83,9 @@ namespace SteamLibrary
             {
                 try
                 {
-                    if (Settings.IsPrivateAccount)
+                    if (Settings.UseApiLogin)
                     {
-                        var res = new PlayerService().GetOwnedGamesApiKey(Settings, ulong.Parse(Settings.UserId), Settings.RuntimeApiKey, true);
+                        var res = new PlayerService().GetOwnedGamesApiKey(Settings, ulong.Parse(Settings.UserId), Settings.RuntimeApiKey);
                         return res?.Any() == true;
                     }
                     else
@@ -92,6 +101,8 @@ namespace SteamLibrary
                 }
             }
         }
+
+        public bool ToolsWarning => Settings.ImportToolsOwn || Settings.ImportToolsFamily;
 
         public RelayCommand<object> LoginCommand => new RelayCommand<object>(_ =>
         {
@@ -131,6 +142,7 @@ namespace SteamLibrary
 
         protected override void OnLoadSettings()
         {
+#pragma warning disable CS0612 // Type or member is obsolete
             if (Settings.Version == 0)
             {
                 Logger.Debug("Updating Steam settings from version 0.");
@@ -141,19 +153,30 @@ namespace SteamLibrary
             }
             else if (Settings.Version == 1)
             {
-#pragma warning disable CS0612 // Type or member is obsolete
+                Logger.Debug("Updating Steam settings from version 1.");
                 Settings.RuntimeApiKey = Settings.ApiKey;
                 Settings.AdditionalAccounts.ForEach(a => a.RuntimeApiKey = a.ApiKey);
                 Settings.ApiKey = null;
                 Settings.AdditionalAccounts.ForEach(a => a.ApiKey = null);
-#pragma warning restore CS0612 // Type or member is obsolete
 
                 SaveKeys();
                 Settings.Version = 2;
                 Plugin.SavePluginSettings(Settings);
             }
+            else if (Settings.Version == 2)
+            {
+                Logger.Debug("Updating Steam settings from version 2.");
+                Settings.ImportInstalled = Settings.ImportInstalledGames;
+                Settings.ImportInstalledMods = Settings.ImportInstalledGames;
+                Settings.ImportInstalledIgnoreOthers = Settings.IgnoreOtherInstalled;
+                Settings.ImportGamesOwn = Settings.ImportUninstalledGames;
+                Settings.ImportGamesFamily = Settings.ImportFamilySharedGames;
+                Settings.ImportFreeOwn = Settings.IncludeFreeSubGames;
+                Settings.UseApiLogin = Settings.IsPrivateAccount;
+            }
+#pragma warning restore CS0612 // Type or member is obsolete
 
-            Settings.Version = 2;
+            Settings.Version = 3;
             LoadKeys();
         }
 
@@ -219,17 +242,23 @@ namespace SteamLibrary
 
         private void Settings_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == nameof(SteamLibrarySettings.IsPrivateAccount) ||
+            if (e.PropertyName == nameof(SteamLibrarySettings.UseApiLogin) ||
                 e.PropertyName == nameof(SteamLibrarySettings.RuntimeApiKey) ||
                 e.PropertyName == nameof(SteamLibrarySettings.UserId))
             {
                 OnPropertyChanged(nameof(IsUserLoggedIn));
             }
+            else if(e.PropertyName == nameof(SteamLibrarySettings.ImportToolsOwn) ||
+                    e.PropertyName == nameof(SteamLibrarySettings.ImportToolsFamily)
+                    )
+            {
+                OnPropertyChanged(nameof(ToolsWarning));
+            }
         }
 
         public override bool VerifySettings(out List<string> errors)
         {
-            if (Settings.IsPrivateAccount && Settings.RuntimeApiKey.IsNullOrEmpty())
+            if (Settings.UseApiLogin && Settings.RuntimeApiKey.IsNullOrEmpty())
             {
                 errors = new List<string> { "Steam API key must be specified when using private accounts!" };
                 return false;

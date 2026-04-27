@@ -57,7 +57,7 @@ namespace SteamLibrary.Services.Base
             }
         }
 
-        protected static DateTime? GetLastPlayedDateTime(uint unixEpochSeconds)
+        public static DateTime? GetLastPlayedDateTime(uint unixEpochSeconds)
         {
             if (unixEpochSeconds == 0)
                 return null;

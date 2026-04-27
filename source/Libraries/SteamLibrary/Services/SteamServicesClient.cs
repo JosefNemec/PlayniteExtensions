@@ -1,13 +1,10 @@
-﻿using Playnite.Backend.Steam;
-using Playnite.SDK;
+﻿using Playnite.SDK;
 using PlayniteExtensions.Common;
-using SteamLibrary.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
+using SteamKit2;
+using SteamLibrary.Models;
 
 namespace SteamLibrary.Services
 {
@@ -19,14 +16,19 @@ namespace SteamLibrary.Services
         {
         }
 
-        public async Task<List<SteamDbItem>> GetAppInfos(List<uint> appIds)
+        /// <summary>
+        /// steam/appinfo
+        /// </summary>
+        public async Task<List<BackendAppInfo>> GetAppInfo(List<GameID> appIds)
         {
-            var request = new SteamDbItemsRequest()
-            { 
-                AppIds = appIds
+            // TODO local cache maybe?
+            var ids = appIds.Select(x => x.ToUInt64()).ToList();
+            var request = new BackendSteamDbItemsRequest()
+            {
+                AppIds = ids
             };
 
-            return await PostRequest<List<SteamDbItem>>("steam/appinfo", request);
+            return await PostRequest<List<BackendAppInfo>>("steam/appinfo", request);
         }
     }
 }
