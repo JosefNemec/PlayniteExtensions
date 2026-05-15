@@ -18,16 +18,23 @@ namespace XboxLibrary
     {
         private readonly bool userXboxApp;
         private CancellationTokenSource watcherToken;
+        private readonly string productId;
+        private readonly string logsDirectoryWatcherPath;
+        private FileSystemWatcher fileSystemWatcher;
 
-        public XboxInstallController(Game game, bool useXboxApp) : base(game)
+        public XboxInstallController(Game game, bool useXboxApp, string productId) : base(game)
         {
             this.userXboxApp = useXboxApp;
-            Name = useXboxApp ? "Install using Xbox app" : "Install using MS Store";
-        }
+            this.productId = productId;
+            logsDirectoryWatcherPath = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                "Packages",
+                "Microsoft.GamingApp_8wekyb3d8bbwe",
+                "AC",
+                "Temp"
+            );
 
-        public override void Dispose()
-        {
-            watcherToken?.Cancel();
+            Name = useXboxApp ? "Install using Xbox app" : "Install using MS Store";
         }
 
         public override void Install(InstallActionArgs args)
@@ -35,7 +42,27 @@ namespace XboxLibrary
             Dispose();
             if (userXboxApp)
             {
-                Xbox.OpenXboxPassApp();
+                if (productId.IsNullOrEmpty())
+                {
+                    Xbox.OpenXboxPassApp();
+                }
+                else if (Xbox.IsRunning)
+                {
+                    // If the Xbox app is already running, it's possible to open the game page without issues.
+                    Xbox.OpenGamePage(productId);
+                }
+                else
+                {
+                    // Note: A recent update to the Xbox app introduced a bug where the URI to open the product page fails 
+                    // until the app has fully initialized. This issue did not occur in earlier versions of the app.
+                    //
+                    // To determine when the app has fully initialized, we monitor for changes in a specific log file, 
+                    // which is created or modified only after the initialization is complete.
+                    // Alternative approaches, such as monitoring running processes, tracking changes in application windows, 
+                    // or detecting locked files, were ineffective for addressing this scenario.
+                    Xbox.OpenXboxPassApp();
+                    InitializeFileSystemWatcher();
+                }
             }
             else
             {
@@ -54,12 +81,14 @@ namespace XboxLibrary
                 {
                     if (watcherToken.IsCancellationRequested)
                     {
+                        DisableFileSystemWatcher();
                         return;
                     }
 
                     var app = Programs.GetUWPApps().FirstOrDefault(a => a.AppId == Game.GameId);
                     if (app != null)
                     {
+                        DisableFileSystemWatcher();
                         var installInfo = new GameInstallationData
                         {
                             InstallDirectory = app.WorkDir
@@ -72,6 +101,53 @@ namespace XboxLibrary
                     await Task.Delay(10000);
                 }
             });
+        }
+
+        private void DisableFileSystemWatcher()
+        {
+            if (fileSystemWatcher != null)
+            {
+                fileSystemWatcher.EnableRaisingEvents = false;
+            }
+        }
+
+        private void InitializeFileSystemWatcher()
+        {
+            if (!FileSystem.DirectoryExists(logsDirectoryWatcherPath))
+            {
+                return;
+            }
+            
+            fileSystemWatcher = new FileSystemWatcher(logsDirectoryWatcherPath)
+            {
+                NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.FileName,
+                Filter = "*.*",
+                EnableRaisingEvents = true
+            };
+
+            fileSystemWatcher.Changed += OnFileChanged;
+            fileSystemWatcher.Created += OnFileChanged;
+            fileSystemWatcher.Renamed += OnFileChanged;
+        }
+
+        private void OnFileChanged(object sender, FileSystemEventArgs e)
+        {
+            DisableFileSystemWatcher();
+            Xbox.OpenGamePage(productId);
+        }
+
+        public override void Dispose()
+        {
+            watcherToken?.Cancel();
+            if (fileSystemWatcher != null)
+            {
+                fileSystemWatcher.EnableRaisingEvents = false;
+                fileSystemWatcher.Changed -= OnFileChanged;
+                fileSystemWatcher.Created -= OnFileChanged;
+                fileSystemWatcher.Renamed -= OnFileChanged;
+                fileSystemWatcher.Dispose();
+                fileSystemWatcher = null;
+            }
         }
     }
 
