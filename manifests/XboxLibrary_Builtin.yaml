@@ -6,3 +6,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_15.pext
     Changelog:
       - Import of installed games failing sometimes
+  - Version: 2.16
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2026-05-20
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_16.pext
+    Changelog:
+      - Game tracking not working correctly in some cases
