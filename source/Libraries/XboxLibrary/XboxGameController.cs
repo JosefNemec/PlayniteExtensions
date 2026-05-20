@@ -158,7 +158,7 @@ namespace XboxLibrary
             //procMon.WatchUwpApp(uwpMatch.Groups[1].Value, false);
             if (Directory.Exists(prg.WorkDir) && ProcessMonitor.IsWatchableByProcessNames(prg.WorkDir))
             {
-                procMon.WatchDirectoryProcesses(prg.WorkDir, false, true);
+                procMon.WatchDirectoryProcesses(prg.WorkDir, false, false);
             }
             else
             {
