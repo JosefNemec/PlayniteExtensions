@@ -12,3 +12,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_16.pext
     Changelog:
       - Game tracking not working correctly in some cases
+  - Version: 2.17
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2026-05-26
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/XboxLibrary_Builtin_2_17.pext
+    Changelog:
+      - Fixed game startup not working in some cases
