@@ -28,7 +28,7 @@ namespace XboxLibrary
                     if (Computer.WindowsVersion >= WindowsVersion.Win10)
                     {
                         var apps = Programs.GetUWPApps();
-                        var xboxApp = apps.FirstOrDefault(a => a.AppId == xboxPassAppFN);
+                        var xboxApp = apps.FirstOrDefault(a => a.AppId?.Equals(xboxPassAppFN, StringComparison.OrdinalIgnoreCase) == true);
                         isXboxPassAppInstalled = xboxApp != null;
                     }
 
@@ -42,7 +42,7 @@ namespace XboxLibrary
             if (Computer.WindowsVersion >= WindowsVersion.Win10)
             {
                 var apps = Programs.GetUWPApps();
-                var xboxApp = apps.FirstOrDefault(a => a.AppId == xboxPassAppFN);
+                var xboxApp = apps.FirstOrDefault(a => a.AppId?.Equals(xboxPassAppFN, StringComparison.OrdinalIgnoreCase) == true);
                 if (xboxApp == null)
                 {
                     throw new NotSupportedException("Xbox PC Pass app is not installed.");

@@ -231,7 +231,7 @@ namespace XboxLibrary
                     foreach (var installedApp in installedApps)
                     {
                         var import = false;
-                        var libTitle = pcTitles.FirstOrDefault(a => a.pfn == installedApp.AppId);
+                        var libTitle = pcTitles.FirstOrDefault(a => a.pfn?.Equals(installedApp.AppId, StringComparison.OrdinalIgnoreCase) == true);
                         if (libTitle != null)
                         {
                             import = true;
@@ -240,7 +240,7 @@ namespace XboxLibrary
                         {
                             try
                             {
-                                libTitle = appDataCache.FirstOrDefault(a => a.pfn == installedApp.AppId);
+                                libTitle = appDataCache.FirstOrDefault(a => a.pfn?.Equals(installedApp.AppId, StringComparison.OrdinalIgnoreCase) == true);
                                 if (libTitle == null)
                                 {
                                     libTitle = client.GetTitleInfo(installedApp.AppId).GetAwaiter().GetResult();

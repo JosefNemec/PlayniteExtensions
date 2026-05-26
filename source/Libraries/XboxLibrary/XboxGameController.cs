@@ -57,7 +57,7 @@ namespace XboxLibrary
                         return;
                     }
 
-                    var app = Programs.GetUWPApps().FirstOrDefault(a => a.AppId == Game.GameId);
+                    var app = Programs.GetUWPApps().FirstOrDefault(a => a.AppId?.Equals(Game.GameId, StringComparison.OrdinalIgnoreCase) == true);
                     if (app != null)
                     {
                         var installInfo = new GameInstallationData
@@ -107,7 +107,7 @@ namespace XboxLibrary
                     return;
                 }
 
-                var app = Programs.GetUWPApps().FirstOrDefault(a => a.AppId == Game.GameId);
+                var app = Programs.GetUWPApps().FirstOrDefault(a => a.AppId?.Equals(Game.GameId, StringComparison.OrdinalIgnoreCase) == true);
                 if (app == null)
                 {
                     InvokeOnUninstalled(new GameUninstalledEventArgs());
@@ -143,7 +143,7 @@ namespace XboxLibrary
                 throw new Exception("We can't start console only games, the technology is not there yet.");
             }
 
-            var prg = Programs.GetUWPApps().FirstOrDefault(a => a.AppId == Game.GameId);
+            var prg = Programs.GetUWPApps().FirstOrDefault(a => a.AppId?.Equals(Game.GameId, StringComparison.OrdinalIgnoreCase) == true);
             if (prg == null)
             {
                 throw new Exception("Cannot start UWP game, installation not found.");
