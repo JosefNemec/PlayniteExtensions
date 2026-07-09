@@ -13,6 +13,7 @@ namespace SteamLibrary.SteamShared
         private bool useTagPrefix = false;
         private bool setTagCategoryAsPrefix = false;
         private string tagPrefix = string.Empty;
+        private bool useSteamDbCommunityScore = true;
 
         public bool LimitTagsToFixedAmount { get { return limitTagsToFixedAmount; } set { SetValue(ref limitTagsToFixedAmount, value); } }
 
@@ -25,6 +26,8 @@ namespace SteamLibrary.SteamShared
         public string TagPrefix { get { return tagPrefix; } set { SetValue(ref tagPrefix, value); } }
 
         public string LanguageKey { get => languageKey; set => SetValue(ref languageKey, value); }
+
+        public bool UseSteamDBCommunityScore { get => useSteamDbCommunityScore; set => SetValue(ref useSteamDbCommunityScore, value); }
 
         public bool DownloadVerticalCovers { get; set; } = true;
 

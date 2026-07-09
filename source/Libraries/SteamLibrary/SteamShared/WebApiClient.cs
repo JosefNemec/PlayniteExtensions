@@ -19,9 +19,12 @@ namespace Steam
             webClient = new WebClient { Encoding = Encoding.UTF8 };
         }
 
-        public AppReviewsResult GetUserRating(uint appId)
+        public AppReviewsResult GetUserRating(uint appId, bool allLanguages)
         {
-            var url = $"https://store.steampowered.com/appreviews/{appId}?json=1&purchase_type=all&language=all";
+            var url = $"https://store.steampowered.com/appreviews/{appId}?json=1&purchase_type=all";
+            if (allLanguages)
+                url += "&language=all";
+
             return Serialization.FromJson<AppReviewsResult>(webClient.DownloadString(url));
         }
 

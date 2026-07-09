@@ -106,12 +106,19 @@ namespace Steam
             return null;
         }
 
-        private int CalculateUserScore(AppReviewsResult.QuerySummary reviews)
+        private int CalculateUserScore(AppReviewsResult.QuerySummary reviews, bool useSteamDBScore)
         {
-            var totalVotes = reviews.total_positive + reviews.total_negative;
-            double average = (double)reviews.total_positive / (double)totalVotes;
-            double score = average - (average - 0.5) * Math.Pow(2, -Math.Log10(totalVotes + 1));
-            return Convert.ToInt32(score * 100);
+            if (useSteamDBScore)
+            {
+                var totalVotes = reviews.total_positive + reviews.total_negative;
+                double average = (double)reviews.total_positive / (double)totalVotes;
+                double score = average - (average - 0.5) * Math.Pow(2, -Math.Log10(totalVotes + 1));
+                return Convert.ToInt32(score * 100);
+            }
+            else
+            {
+                return (int)Math.Round((100 / (double)reviews.total_reviews) * reviews.total_positive);
+            }
         }
 
         internal StoreAppDetailsResult.AppDetails GetStoreData(uint appId)
@@ -119,9 +126,9 @@ namespace Steam
             return SendDelayedStoreRequest(() => webApiClient.GetStoreAppDetail(appId, settings.LanguageKey), appId);
         }
 
-        internal AppReviewsResult.QuerySummary GetUserReviewsData(uint appId)
+        internal AppReviewsResult.QuerySummary GetUserReviewsData(uint appId, bool allLanguages)
         {
-            var ratings = SendDelayedStoreRequest(() => webApiClient.GetUserRating(appId), appId);
+            var ratings = SendDelayedStoreRequest(() => webApiClient.GetUserRating(appId, allLanguages), appId);
             if (ratings?.success == 1)
             {
                 return ratings.query_summary;
@@ -152,7 +159,7 @@ namespace Steam
 
             try
             {
-                metadata.UserReviewDetails = GetUserReviewsData(appId);
+                metadata.UserReviewDetails = GetUserReviewsData(appId, settings.UseSteamDBCommunityScore);
             }
             catch (Exception e)
             {
@@ -336,7 +343,7 @@ namespace Steam
                 metadata.CriticScore = metadata.StoreDetails.metacritic?.score;
                 if (metadata.UserReviewDetails?.total_reviews > 0)
                 {
-                    metadata.CommunityScore = CalculateUserScore(metadata.UserReviewDetails);
+                    metadata.CommunityScore = CalculateUserScore(metadata.UserReviewDetails, settings.UseSteamDBCommunityScore);
                 }
 
                 publishers = metadata.StoreDetails.publishers?.Where(a => !a.IsNullOrWhiteSpace() && !a.Equals("N/A"));

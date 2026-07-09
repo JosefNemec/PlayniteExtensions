@@ -227,6 +227,7 @@
                                   ItemsSource="{Binding Source={StaticResource BackgroundSourceEnumValues}}" />
                     </Grid>
                     <CheckBox Content="{DynamicResource LOCSteamUseVerticalCovers}" IsChecked="{Binding Settings.DownloadVerticalCovers}" Margin="0,12,0,0"/>
+                    <CheckBox Content="{DynamicResource LOCSteamCommunityScoreSteamDBFormula}" IsChecked="{Binding Settings.UseSteamDBCommunityScore}" Margin="0,12,0,0"/>
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
                         <CheckBox IsChecked="{Binding Settings.LimitTagsToFixedAmount}" Content="{DynamicResource LOCSteamLimitTagCountLabel}" VerticalAlignment="Center" Margin="0,0,4,0"/>
                         <TextBox Text="{Binding FixedTagCountString}" Width="50" VerticalAlignment="Center" IsEnabled="{Binding Settings.LimitTagsToFixedAmount}" />
