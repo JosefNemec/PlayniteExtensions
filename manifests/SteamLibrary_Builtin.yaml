@@ -24,3 +24,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_40.pext
     Changelog:
       - Don't create Steam game source if not necessary (by Jeshibu)
+  - Version: 2.41
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2026-07-09
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_41.pext
+    Changelog:
+      - Added option to disable SteamDB's community score formula

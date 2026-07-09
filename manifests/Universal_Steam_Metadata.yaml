@@ -12,3 +12,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_21.pext
     Changelog:
       - Metadata background matching improvements (by darklinkpower)
+  - Version: 2.22
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2026-07-09
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/Universal_Steam_Metadata_2_22.pext
+    Changelog:
+      - Added option to disable SteamDB's community score formula
