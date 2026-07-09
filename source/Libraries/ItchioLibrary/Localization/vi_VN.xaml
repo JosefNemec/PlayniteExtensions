@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">Nhập vào các trò chơi đã được cài đặt</sys:String>
-  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Nhập vào các trò chơi chưa được cài đặt</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportInstalledLabel">Nhập vào các trò chơi đã cài</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportUninstalledLabel">Nhập vào các trò chơi chưa cài</sys:String>
   <sys:String x:Key="LOCitchioSettingsConnectAccount">Kết nối tài khoản</sys:String>
   <sys:String x:Key="LOCitchioLoginChecking">Đang kiểm tra trạng thái xác thực…</sys:String>
   <sys:String x:Key="LOCitchioLoggedIn">Người dùng được xác thực</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedIn">Yêu cầu xác thực</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedInError">Không xác thực được người dùng.</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">Xác thực</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateAlternativeLabel">Cách đăng nhập khác</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Bắt đầu trò chơi trực tiếp mà không cần chạy ứng dụng khách chính thức</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Khắc phục sự cố đồng bộ hóa tài khoản</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingIssues">Khắc phục sự cố</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Bắt đầu sử dụng ứng dụng khách {0}</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Nhập thời gian chơi</sys:String>
   <sys:String x:Key="LOCitchioAccountID">ID tài khoản</sys:String>
+  <sys:String x:Key="LOCitchioGetAccountID">Lấy ID tài khoản</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">Ngôn ngữ siêu dữ liệu</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io sẽ được khởi chạy. Vui lòng đăng nhập và sau đó đóng thông báo này.</sys:String>

@@ -8,8 +8,10 @@
   <sys:String x:Key="LOCitchioNotLoggedIn">Kræver verificering</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">Verificering</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateAlternativeLabel">Alternativ godkendelse</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Start spil direkte uden at køre officiel klient</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Fejlfinding for konto synkroniserings problemer</sys:String>
+  <sys:String x:Key="LOCitchioTroubleShootingIssues">Problemer med fejlfinding</sys:String>
   <sys:String x:Key="LOCitchioSettingsImportLibraryLabel">Importer alle spil</sys:String>
   <sys:String x:Key="LOCitchioPrivateAccount">Privat konto</sys:String>
   <sys:String x:Key="LOCitchioPublicAccount">Offentlig Konto</sys:String>
@@ -17,7 +19,13 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Begynd at bruge {0} klient</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCitchioAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCitchioGetAccountID">Hent konto ID</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">Metadata sprog:</sys:String>
   <!--itch.io-->
+  <sys:String x:Key="LOCItchioSignInNotif">itch.io vil blive lanceret. Log venligst ind, og luk derefter denne besked.</sys:String>
+  <sys:String x:Key="LOCItchioSignInWaitMessage">Venter på, at brugeren logger ind. Luk venligst dette, når du er færdig.</sys:String>
+  <sys:String x:Key="LOCItchioClientNotInstalledError">itch.io app version 25 eller nyere er ikke installeret.</sys:String>
+  <sys:String x:Key="LOCitchioSettingsImportGameClassificationLabel">Elementer der skal importeres:</sys:String>
   <sys:String x:Key="LOCitchioItemClassificationGames">Spil</sys:String>
+  <sys:String x:Key="LOCitchioItemClassificationTools">Værktøjer</sys:String>
 </ResourceDictionary>

@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCBattleNetNotLoggedIn">يتطلب المصادقة</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">مصادقة</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateAlternativeLabel">المصادقة البديلة</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">بدء باستخدام {0} عميل</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">استيراد وقت التشغيل</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">تعريف الحساب</sys:String>
+  <sys:String x:Key="LOCBattleNetGetAccountID">الحصول على معرف الحساب</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
+  <!--BattleNet-->
+  <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">يوجد مشكلة دائمة في تكامل Battle.net حيث قد يتم تسجيل الخروج من الحساب المزامن بشكل عشوائي.
+
+إلى أن يتم إصلاح المشكلة، نوصي بربط الحساب، ثم استيراد الألعاب وقطع الاتصال بالحساب بعد ذلك. ستحتاج إلى تكرار العملية فقط عند إضافة لعبة جديدة إلى حسابك.</sys:String>
 </ResourceDictionary>

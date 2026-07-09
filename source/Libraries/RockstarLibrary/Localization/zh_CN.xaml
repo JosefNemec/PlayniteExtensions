@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCRockstarNotLoggedIn">需要身份认证</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedInError">用户身份验证失败。</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">身份验证</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateAlternativeLabel">其他身份验证</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">账户同步疑难解答</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues">疑难解答</sys:String>
@@ -18,5 +19,8 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">使用 {0} 客户端启动</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCRockstarGetAccountID">获取账户 ID</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">元数据语言：</sys:String>
+  <!--Rockstar-->
+  <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Rockstar 插件目前只能导入已安装的游戏。无法链接一个帐户来导入所有游戏。</sys:String>
 </ResourceDictionary>

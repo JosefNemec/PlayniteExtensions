@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCitchioNotLoggedIn">يتطلب المصادقة</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">مصادقة</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateAlternativeLabel">المصادقة البديلة</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">بدء باستخدام {0} عميل</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">استيراد وقت التشغيل</sys:String>
   <sys:String x:Key="LOCitchioAccountID">تعريف الحساب</sys:String>
+  <sys:String x:Key="LOCitchioGetAccountID">الحصول على معرف الحساب</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">سيتم إطلاق itch.io. الرجاء تسجيل الدخول ثم إغلاق هذه الرسالة.

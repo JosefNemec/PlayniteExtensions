@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCGOGNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Kimlik Doğrulaması</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateAlternativeLabel">Alternatif kimlik doğrulaması</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Hesap eşitleme sorunlarını giderme</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues">Sorunları giderme</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCGOGAccountID">Hesap kimliği</sys:String>
+  <sys:String x:Key="LOCGOGGetAccountID">Hesap ID al</sys:String>
   <sys:String x:Key="LOCGOGMetadataLanguageLabel">Üst veri dili:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Hesap Girişi</sys:String>
@@ -29,4 +31,5 @@ Not: Hesap Adı seçeneği, sadece GOG' un gizlilik ayarlarında kütüphanesi h
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">GOG Galaxy için oyun kurarken kurulum işlemini otomatik olarak başlat</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Etkinleştirilirse; kurulum işlemi, kullanıcı etkileşimi gerekmeksizin yapılandırılmış öntanımlı kurulum konumunda kendiliğinden başlatılacaktır.
 Devre dışı bırakılırsa, kurulum işlemini elle başlatmak için oyun sayfası açılacaktır.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Dikey kapaklar kullan</sys:String>
 </ResourceDictionary>

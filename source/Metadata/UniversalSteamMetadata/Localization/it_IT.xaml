@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedIn">Richiede autenticazione</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedInError">Autenticazione utente fallita.</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateLabel">Connetti</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateAlternativeLabel">Autenticazione alternativa</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataSettingsStartGameDirectly">Avvia i giochi direttamente senza avviare il client ufficiale</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingAccountLink">Risoluzione dei problemi di sincronizzazione dell'account</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingIssues">Risoluzione dei problemi</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">Avvio del client {0} </sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Importa tempo di riproduzione</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">ID account</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataGetAccountID">Ottieni ID account</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">Lingua dei metadati:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Qual è il nome del mio account?</sys:String>
@@ -61,7 +63,25 @@
   <sys:String x:Key="LOCSteamTagBlacklistHeader">Tag esclusi</sys:String>
   <sys:String x:Key="LOCSteamTagWhitelistTooltip">Rimuovi dai tag esclusi</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTooltip">Aggiungi ai tag esclusi</sys:String>
+  <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Imposta categoria tag come prefisso</sys:String>
+  <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Imposta la categoria a cui il tag appartiene come prefisso. Per esempio, "Action RPG" è trasformato in "Generi: Action RPG"</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryAssessments">Verifiche</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryFeatures">Funzionalità</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Finanziamento</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryGenres">Generi</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Hardware/Input</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryOtherTags">Altri Tag</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryPlayers">Giocatori</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Valutazioni</sys:String>
+  <sys:String x:Key="LOCSteamTagCategorySoftware">Software</sys:String>
+  <sys:String x:Key="LOCSteamTagCategorySubGenres">Sottogeneri</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Temi e Umori</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Generi di alto livello</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Immagini e Punti di vista</sys:String>
   <sys:String x:Key="LOCSteamValidationFixedTagCount">Il conteggio dei tag fissi deve essere un numero valido</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Mostra il menu di selezione avvio di Steam in modalità desktop</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Mostra il menu di selezione avvio del gioco di Steam in modalità schermo intero</sys:String>
+  <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Importa la compatibilità di Steam Deck come un</sys:String>
+  <sys:String x:Key="LOCSteamWebVsApiLogin">Dovrei usare il login Web o API?</sys:String>
+  <sys:String x:Key="LOCSteamImportFamilyGames">Importa giochi condivisione familiare</sys:String>
 </ResourceDictionary>

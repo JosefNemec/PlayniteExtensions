@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUbisoftNotLoggedIn">Richiede autenticazione</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">Autenticazione utente fallita.</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Connetti</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateAlternativeLabel">Autenticazione alternativa</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Avvia i giochi direttamente senza avviare il client ufficiale</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Risoluzione dei problemi di sincronizzazione dell'account</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Risoluzione dei problemi</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">Avvio del client {0} </sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Importa tempo di riproduzione</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">ID account</sys:String>
+  <sys:String x:Key="LOCUbisoftGetAccountID">Ottieni ID account</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Lingua dei metadati:</sys:String>
+  <!--Ubisoft-->
+  <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">I plugin Ubisoft non richiedono alcuna autenticazione, riceve le informazioni della libreria dai file di dati utente di Ubisoft Connect.
+
+Se hai problemi nell'importazione dei giochi, assicurati che il client sia installato correttamente e che il tuo account sia collegato.</sys:String>
 </ResourceDictionary>

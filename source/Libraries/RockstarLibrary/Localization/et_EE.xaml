@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCRockstarNotLoggedIn">Vajalik on autentimine</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedInError">Kasutaja autentimine ebaõnnestus.</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Autendi</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateAlternativeLabel">Alternatiivne autentimine</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Käivita mängud otseselt, ilma ametlikku klienti avamata</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Konto sünkroonimise probleemide tõrkeotsing</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues">Probleemide tõrkeotsing</sys:String>
@@ -18,5 +19,7 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">Käivita klienti {0} kasutades</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Impordi mänguaeg</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCRockstarGetAccountID">Saa konto ID</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Metaandmete keel:</sys:String>
+  <!--Rockstar-->
 </ResourceDictionary>

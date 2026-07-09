@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCRockstarNotLoggedIn">يتطلب المصادقة</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">مصادقة</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateAlternativeLabel">المصادقة البديلة</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
@@ -18,5 +19,8 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">بدء باستخدام {0} عميل</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">استيراد وقت التشغيل</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">تعريف الحساب</sys:String>
+  <sys:String x:Key="LOCRockstarGetAccountID">الحصول على معرف الحساب</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
+  <!--Rockstar-->
+  <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">إضافة Rockstar تستورد حاليا فقط الألعاب المثبتة. لا توجد طريقة لربط حساب لاستيراد جميع الألعاب.</sys:String>
 </ResourceDictionary>

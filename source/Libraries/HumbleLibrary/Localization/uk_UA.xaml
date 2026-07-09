@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCHumbleNotLoggedIn">Необхідна автентифікація</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">Автентифікація</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateAlternativeLabel">Альтернативна автентифікація</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">Вирішення проблем</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCHumbleGetAccountID">Отримати ID облікового запису</sys:String>
   <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Мова метаданих:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ігнорувати ігри із стороннього магазину</sys:String>

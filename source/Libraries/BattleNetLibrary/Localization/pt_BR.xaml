@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCBattleNetNotLoggedIn">Requer autenticação</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedInError">Falha ao autenticar o usuário.</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Autenticar</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateAlternativeLabel">Autenticação alternativa</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Iniciar jogos diretamente, sem executar o cliente oficial</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Solução de problemas de sincronização de contas</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Soluções de problemas</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">Começar usando cliente {0}</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Importar tempo de jogo</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">ID da Conta</sys:String>
+  <sys:String x:Key="LOCBattleNetGetAccountID">Obter o ID da conta</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Idioma dos metadados:</sys:String>
+  <!--BattleNet-->
+  <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">A integração da Battle.net tem um problema antigo onde a conta autenticada pode ser desconectada aleatoriamente.
+
+Até que o problema seja corrigido, recomendamos vincular uma conta, importar jogos e desconectar a conta depois. Você precisará repetir o processo somente quando um novo jogo for adicionado à sua conta.</sys:String>
 </ResourceDictionary>

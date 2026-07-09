@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCRockstarNotLoggedIn">Verificatie vereist</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Verifiëren</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateAlternativeLabel">Alternatieve authenticatie</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues">Probleemoplossing</sys:String>
@@ -18,5 +19,8 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">Starten met {0} client</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Importeer speeltijd</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCRockstarGetAccountID">Account-ID verkrijgen</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Metadata taal:</sys:String>
+  <!--Rockstar-->
+  <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Rockstar plugin importeert momenteel alleen geïnstalleerde spellen. Er is geen manier om een account te koppelen om alle spellen te importeren.</sys:String>
 </ResourceDictionary>

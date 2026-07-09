@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCRockstarNotLoggedIn">認証が必要です</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">認証</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateAlternativeLabel">代替認証</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues">問題のトラブルシューティング</sys:String>
@@ -18,5 +19,8 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">{0} クライアントの使用を開始</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">プレイ時間をインポート</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">アカウントID</sys:String>
+  <sys:String x:Key="LOCRockstarGetAccountID">アカウント ID を取得</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">メタデータの言語</sys:String>
+  <!--Rockstar-->
+  <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Rockstar プラグインは現在インストールされているゲームのみをインポートします。アカウントをリンクしてすべてのゲームをインポートする方法はありません。</sys:String>
 </ResourceDictionary>

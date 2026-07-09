@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCUbisoftImportPlaytime">Importuoti pražaistą laiką</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">Paskyros ID</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Metadata kalba:</sys:String>
+  <!--Ubisoft-->
 </ResourceDictionary>

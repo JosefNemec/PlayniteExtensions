@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCHumbleNotLoggedIn">Απαιτείται πιστοποίηση</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateAlternativeLabel">Εναλλακτική ταυτοποίηση</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Απευθείας εκκίνηση των παιχνιδιών χωρίς τη χρήση της επίσημης εφαρμογής</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρονισμού του λογαριασμού</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">Ξεκινήστε να χρησιμοποιείτε την εφαρμογή {0}</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Εισαγωγή ωρών παιχνιδιού</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">ID Λογαριασμού</sys:String>
+  <sys:String x:Key="LOCHumbleGetAccountID">Εύρεση ID λογαριασμού</sys:String>
   <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Γλώσσα μεταδεδόμενων:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Αγνοήστε παιχνίδια από καταστήματα τρίτων</sys:String>

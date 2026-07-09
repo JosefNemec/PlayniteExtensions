@@ -8,7 +8,8 @@
   <sys:String x:Key="LOCRockstarNotLoggedIn">Требуется авторизация</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedInError">Не удалось авторизовать пользователя.</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Аутентификация</sys:String>
-  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateAlternativeLabel">Альтернативная аутентификация</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход официального клиента</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues">Устранение неполадок</sys:String>
   <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">Импортировать все игры</sys:String>
@@ -18,5 +19,8 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">Запустить через клиент {0}</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Импортировать наигранные часы</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">ID аккаунта</sys:String>
+  <sys:String x:Key="LOCRockstarGetAccountID">Получить ID аккаунта</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Язык метаданных:</sys:String>
+  <!--Rockstar-->
+  <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Плагин Rockstar в настоящее время импортирует только установленные игры. Не существует способа привязать учетную запись для импорта всех игр.</sys:String>
 </ResourceDictionary>

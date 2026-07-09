@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCRockstarNotLoggedIn">Wymagane uwierzytelnienie</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedInError">Nie powiodło się uwierzytelnienie użytkownika</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Uwierzytelnij</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateAlternativeLabel">Alternatywne uwierzytelnianie</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Rozpoczynaj gry bez uruchamiania oficjalnego klienta</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Rozwiązywanie problemów z synchronizacją konta</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
@@ -18,5 +19,8 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Importuj czasy gier</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">Identyfikator konta</sys:String>
+  <sys:String x:Key="LOCRockstarGetAccountID">Uzyskaj ID konta</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Język metadanych:</sys:String>
+  <!--Rockstar-->
+  <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Wtyczka Rockstar importuje obecnie tylko zainstalowane gry. Nie ma możliwości połączenia konta w celu zaimportowania wszystkich gier.</sys:String>
 </ResourceDictionary>

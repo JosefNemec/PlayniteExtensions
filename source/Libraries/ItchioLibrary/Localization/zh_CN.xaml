@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCitchioNotLoggedIn">需要身份认证</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedInError">用户身份验证失败。</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">身份验证</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateAlternativeLabel">其他身份验证</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">账户同步疑难解答</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingIssues">疑难解答</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">使用 {0} 客户端启动</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCitchioAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCitchioGetAccountID">获取账户 ID</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">元数据语言：</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">即将启动 itch.io 客户端，请在登录后关闭此消息。</sys:String>

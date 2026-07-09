@@ -345,5 +345,9 @@ namespace System
         /// Import family shared games
         /// </summary>
         public const string SteamImportFamilyGames = "LOCSteamImportFamilyGames";
+        /// <summary>
+        /// Use SteamDB's formula when calculating community score
+        /// </summary>
+        public const string SteamCommunityScoreSteamDBFormula = "LOCSteamCommunityScoreSteamDBFormula";
     }
 }

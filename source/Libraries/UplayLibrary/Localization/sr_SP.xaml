@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCUbisoftImportPlaytime">Увези време играња</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">ID Налога</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Језик метаподатака:</sys:String>
+  <!--Ubisoft-->
 </ResourceDictionary>

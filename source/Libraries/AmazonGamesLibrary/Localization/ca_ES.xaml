@@ -8,15 +8,17 @@
   <sys:String x:Key="LOCAmazonNotLoggedIn">Requereix autenticació</sys:String>
   <sys:String x:Key="LOCAmazonNotLoggedInError">No s’ha pogut autenticar l’usuari.</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Autenticar</sys:String>
-  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Arrencar jocs directament sense executar el client oficial</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateAlternativeLabel">Autentificació alternativa</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Iniciar jocs directament sense executar el client oficial</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Resolució de problemes de sincronització del compte</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingIssues">Resolució de problemes</sys:String>
   <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Importar tots els jocs</sys:String>
   <sys:String x:Key="LOCAmazonPrivateAccount">Compte privat</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">Compte públic</sys:String>
   <sys:String x:Key="LOCAmazonAPIKey">Clau API</sys:String>
-  <sys:String x:Key="LOCAmazonStartUsingClient">Iniciar mitjançant el client de {0}</sys:String>
+  <sys:String x:Key="LOCAmazonStartUsingClient">Iniciar a través del client {0}</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Importar temps de joc</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">ID del compte</sys:String>
+  <sys:String x:Key="LOCAmazonGetAccountID">Obtenir l'ID del compte</sys:String>
   <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Idioma de les metadades:</sys:String>
 </ResourceDictionary>

@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCHumbleNotLoggedIn">Statut : Authentification requise</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">Impossible de connecter l'utilisateur.</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">Connexion</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateAlternativeLabel">Authentification alternative</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Lancer les jeux sans passer par le client officiel</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Régler les problèmes de synchronisation</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">Résolution des problèmes</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">Lancer avec le client {0}</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Importer le temps de jeu</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">ID du compte</sys:String>
+  <sys:String x:Key="LOCHumbleGetAccountID">Obtenir l'ID du compte</sys:String>
   <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Langue des métadonnées :</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorer les jeux dépendant de clients tiers</sys:String>

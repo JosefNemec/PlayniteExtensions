@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCHumbleNotLoggedIn">Krever autentisering</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">Autentiser</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateAlternativeLabel">Alternativ autentisering</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">Feilsøking av problemer</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">Begynn å bruke {0}-klient</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCHumbleGetAccountID">Hent konto-ID</sys:String>
   <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Språk for metadata:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignorer tredjeparts butikkspill</sys:String>

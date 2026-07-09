@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCRockstarNotLoggedIn">Απαιτείται πιστοποίηση</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateAlternativeLabel">Εναλλακτική ταυτοποίηση</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Απευθείας εκκίνηση των παιχνιδιών χωρίς τη χρήση της επίσημης εφαρμογής</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρονισμού του λογαριασμού</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
@@ -18,5 +19,8 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">Ξεκινήστε να χρησιμοποιείτε την εφαρμογή {0}</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Εισαγωγή ωρών παιχνιδιού</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">ID Λογαριασμού</sys:String>
+  <sys:String x:Key="LOCRockstarGetAccountID">Εύρεση ID λογαριασμού</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Γλώσσα μεταδεδόμενων:</sys:String>
+  <!--Rockstar-->
+  <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Το πρόσθετο της Rockstar εισάγει μόνο εγκατεστημένα παιχνίδια. Δεν υπάρχει τρόπος σύνδεσης ενός λογαριασμού για να εισαγάγετε όλα τα παιχνίδια.</sys:String>
 </ResourceDictionary>

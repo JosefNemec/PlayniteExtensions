@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCIGDBNotLoggedIn">Verificatie vereist</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Verifiëren</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateAlternativeLabel">Alternatieve authenticatie</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">Probleemoplossing</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">Starten met {0} client</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Importeer speeltijd</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCIGDBGetAccountID">Account-ID verkrijgen</sys:String>
   <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Metadata taal:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Gebruik screenshots als illustraties niet beschikbaar zijn</sys:String>

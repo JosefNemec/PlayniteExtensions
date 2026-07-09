@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCIGDBNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Kimlik Doğrulaması</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateAlternativeLabel">Alternatif kimlik doğrulaması</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Hesap eşitleme sorunlarını giderme</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">Sorunları giderme</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">Hesap kimliği</sys:String>
+  <sys:String x:Key="LOCIGDBGetAccountID">Hesap ID al</sys:String>
   <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Üst veri dili:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary"> Görsel kullanılamıyorsa ekran görüntüsü kullan</sys:String>

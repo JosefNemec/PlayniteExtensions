@@ -8,15 +8,21 @@
   <sys:String x:Key="LOCBattleNetNotLoggedIn">Requereix autenticació</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedInError">No s’ha pogut autenticar l’usuari.</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Autenticar</sys:String>
-  <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Arrencar jocs directament sense executar el client oficial</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateAlternativeLabel">Autentificació alternativa</sys:String>
+  <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Iniciar jocs directament sense executar el client oficial</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Resolució de problemes de sincronització del compte</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Resolució de problemes</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsImportLibraryLabel">Importar tots els jocs</sys:String>
   <sys:String x:Key="LOCBattleNetPrivateAccount">Compte privat</sys:String>
   <sys:String x:Key="LOCBattleNetPublicAccount">Compte públic</sys:String>
   <sys:String x:Key="LOCBattleNetAPIKey">Clau API</sys:String>
-  <sys:String x:Key="LOCBattleNetStartUsingClient">Iniciar mitjançant el client de {0}</sys:String>
+  <sys:String x:Key="LOCBattleNetStartUsingClient">Iniciar a través del client {0}</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Importar temps de joc</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">ID del compte</sys:String>
+  <sys:String x:Key="LOCBattleNetGetAccountID">Obtenir l'ID del compte</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Idioma de les metadades:</sys:String>
+  <!--BattleNet-->
+  <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">La integració amb Battle.net presenta, des de fa temps, un problema en què el compte autentificat pot tancar la sessió en qualsevol moment.
+
+Fins que se solucioni, recomanem vincular el compte, importar els jocs i després desconnectar-la. Només hauràs de repetir el procés quan afegeixis un nou joc al compte.</sys:String>
 </ResourceDictionary>

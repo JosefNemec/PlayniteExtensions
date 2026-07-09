@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCBattleNetNotLoggedIn">Authentifizierung erforderlich</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedInError">Nutzer konnte nicht authentifiziert werden.</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Authentifizieren</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateAlternativeLabel">Alternative Authentifizierung</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Spiele direkt starten ohne offiziellen Client</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Beheben von Problemen mit der Kontosynchronisation</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Problembehebung</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">Mit {0}-Client starten</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Spielzeit importieren</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCBattleNetGetAccountID">Konto-ID abrufen</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Metadatensprache:</sys:String>
+  <!--BattleNet-->
+  <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Die Battle.net-Integration hat ein langfristiges Problem, bei der authentifizierte Konten zu zufälligen Zeiten abgemeldet werden könnten.
+
+Solange das Problem nicht behoben ist, empfehlen wir, ein Konto zu verknüpfen, Spiele zu importieren und danach das Konto zu trennen. Du musst den Prozess nur wiederholen, wenn ein neues Spiel deinem Konto hinzugefügt wird.</sys:String>
 </ResourceDictionary>

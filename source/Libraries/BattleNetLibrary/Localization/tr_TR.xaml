@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCBattleNetNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Kimlik Doğrulaması</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateAlternativeLabel">Alternatif kimlik doğrulaması</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Hesap eşitleme sorunlarını giderme</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Sorunları giderme</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">Hesap kimliği</sys:String>
+  <sys:String x:Key="LOCBattleNetGetAccountID">Hesap ID al</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Üst veri dili:</sys:String>
+  <!--BattleNet-->
+  <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Battle.net bütünleşmesinde, kimliği doğrulanmış hesabın rastgele zamanlarda oturumunun kapatılabildiği uzun süredir devam eden bir sorun var.
+
+Sorun düzeltilene kadar, bir hesabı bağlamanızı, oyunları içe aktarmanızı ve ardından hesabın bağlantısını kesmenizi öneririz. İşlemi yalnızca hesabınıza yeni oyun eklendiğinde tekrarlamanız gerekecektir.</sys:String>
 </ResourceDictionary>

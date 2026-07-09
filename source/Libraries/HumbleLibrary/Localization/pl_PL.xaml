@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCHumbleNotLoggedIn">Wymagane uwierzytelnienie</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">Nie powiodło się uwierzytelnienie użytkownika</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">Uwierzytelnij</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateAlternativeLabel">Alternatywne uwierzytelnianie</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Rozpoczynaj gry bez uruchamiania oficjalnego klienta</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Rozwiązywanie problemów z synchronizacją konta</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Importuj czasy gier</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">Identyfikator konta</sys:String>
+  <sys:String x:Key="LOCHumbleGetAccountID">Uzyskaj ID konta</sys:String>
   <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Język metadanych:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Ignoruj gry ze sklepów zewnętrznych</sys:String>

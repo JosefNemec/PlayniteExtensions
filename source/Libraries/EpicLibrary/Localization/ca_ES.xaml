@@ -8,15 +8,24 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">Requereix autenticació</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">No s’ha pogut autenticar l’usuari.</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Autenticar</sys:String>
-  <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Arrencar jocs directament sense executar el client oficial</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">Autentificació alternativa</sys:String>
+  <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Iniciar jocs directament sense executar el client oficial</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Resolució de problemes de sincronització del compte</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">Resolució de problemes</sys:String>
   <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">Importar tots els jocs</sys:String>
   <sys:String x:Key="LOCEpicPrivateAccount">Compte privat</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">Compte públic</sys:String>
   <sys:String x:Key="LOCEpicAPIKey">Clau API</sys:String>
-  <sys:String x:Key="LOCEpicStartUsingClient">Iniciar mitjançant el client de {0}</sys:String>
+  <sys:String x:Key="LOCEpicStartUsingClient">Iniciar a través del client {0}</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Importar temps de joc</sys:String>
   <sys:String x:Key="LOCEpicAccountID">ID del compte</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">Obtenir l'ID del compte</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Idioma de les metadades:</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">Importar jocs d'EA App</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">Importar jocs Ubisoft</sys:String>
+  <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Inicia sessió a l'Epic web store amb el teu navegador predeterminat
+2. Navega a la pàgina del codi d'autentificació clicant OK a aquest diàleg
+3. Escriu el valor d'“AuthorizationCode” al diàleg a continuació</sys:String>
+  <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Escriu el valor de "authorizationCode"</sys:String>
 </ResourceDictionary>

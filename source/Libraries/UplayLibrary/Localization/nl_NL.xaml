@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUbisoftNotLoggedIn">Verificatie vereist</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Verifiëren</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateAlternativeLabel">Alternatieve authenticatie</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Probleemoplossing</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">Starten met {0} client</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Importeer speeltijd</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCUbisoftGetAccountID">Account-ID verkrijgen</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Metadata taal:</sys:String>
+  <!--Ubisoft-->
+  <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Ubisoft plugins vereisen geen authenticatie, het neemt bibliotheek informatie van de Ubisoft Connect client gebruikersdatabestanden.
+
+Als je problemen ondervindt bij het importeren van spellen, zorg er dan voor dat de client correct is geïnstalleerd en je account is ingelogd</sys:String>
 </ResourceDictionary>

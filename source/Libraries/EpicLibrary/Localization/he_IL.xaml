@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCEpicImportPlaytime">יבא זמן משחק</sys:String>
   <sys:String x:Key="LOCEpicAccountID">מזהה משתמש</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">שפת מטא-נתונים:</sys:String>
+  <!--Epic-->
 </ResourceDictionary>

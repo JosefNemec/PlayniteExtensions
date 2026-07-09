@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCUbisoftImportPlaytime">Importați timpul de jucare</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">ID Cont</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Limba metadatelor:</sys:String>
+  <!--Ubisoft-->
 </ResourceDictionary>

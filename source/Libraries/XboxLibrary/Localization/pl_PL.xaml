@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCXboxNotLoggedIn">Wymagane uwierzytelnienie</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedInError">Nie powiodło się uwierzytelnienie użytkownika</sys:String>
   <sys:String x:Key="LOCXboxAuthenticateLabel">Uwierzytelnij</sys:String>
+  <sys:String x:Key="LOCXboxAuthenticateAlternativeLabel">Alternatywne uwierzytelnianie</sys:String>
   <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Rozpoczynaj gry bez uruchamiania oficjalnego klienta</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Rozwiązywanie problemów z synchronizacją konta</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Importuj czasy gier</sys:String>
   <sys:String x:Key="LOCXboxAccountID">Identyfikator konta</sys:String>
+  <sys:String x:Key="LOCXboxGetAccountID">Uzyskaj ID konta</sys:String>
   <sys:String x:Key="LOCXboxMetadataLanguageLabel">Język metadanych:</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Uruchom Xbox Game Pass zamiast Microsoft Store</sys:String>

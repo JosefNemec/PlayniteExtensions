@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCHumbleNotLoggedIn">Verificatie vereist</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">Verifiëren</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateAlternativeLabel">Alternatieve authenticatie</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">Probleemoplossing</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">Starten met {0} client</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Importeer speeltijd</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCHumbleGetAccountID">Account-ID verkrijgen</sys:String>
   <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Metadata taal:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Negeer spellen van derde partij winkels</sys:String>

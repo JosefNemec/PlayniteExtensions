@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCAmazonNotLoggedIn">Vyžaduje přihlášení</sys:String>
   <sys:String x:Key="LOCAmazonNotLoggedInError">Přihlášení se nezdařilo.</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Autentizovat</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateAlternativeLabel">Alternativní autentizace</sys:String>
   <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Spustit hru přímo bez použití oficiálního klienta</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Řešení problémů se synchronizací účtu</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingIssues">Řešení potíží</sys:String>
@@ -18,5 +19,6 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">ID účtu</sys:String>
+  <sys:String x:Key="LOCAmazonGetAccountID">Získat ID účtu</sys:String>
   <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Jazyk metadat:</sys:String>
 </ResourceDictionary>

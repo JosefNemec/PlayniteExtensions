@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCGOGNotLoggedIn">Vajalik on autentimine</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedInError">Kasutaja autentimine ebaõnnestus.</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Autendi</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateAlternativeLabel">Alternatiivne autentimine</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Käivita mängud otseselt, ilma ametlikku klienti avamata</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Konto sünkroonimise probleemide tõrkeotsing</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues">Probleemide tõrkeotsing</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Käivita klienti {0} kasutades</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Impordi mänguaeg</sys:String>
   <sys:String x:Key="LOCGOGAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCGOGGetAccountID">Saa konto ID</sys:String>
   <sys:String x:Key="LOCGOGMetadataLanguageLabel">Metaandmete keel:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Kontosse sisselogimine</sys:String>
@@ -29,4 +31,5 @@ Pane tähele, et konto nime valik töötab ainult nende kontode puhul, mille mä
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automaatselt algata installimise protsess, installides mänge teenuses GOG Galaxy</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Kui see on lubatud, käivitub paigaldusprotsess automaatselt ilma kasutaja sekkumiseta seadistatud vaikimisi paigalduskohta.
 Kui see on keelatud, avatakse mängu leht, et paigaldusprotsess käsitsi käivitada.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Kasuta vertikaalsed kaanepiltid</sys:String>
 </ResourceDictionary>

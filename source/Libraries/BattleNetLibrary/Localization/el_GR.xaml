@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCBattleNetNotLoggedIn">Απαιτείται πιστοποίηση</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateAlternativeLabel">Εναλλακτική ταυτοποίηση</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Απευθείας εκκίνηση των παιχνιδιών χωρίς τη χρήση της επίσημης εφαρμογής</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρονισμού του λογαριασμού</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">Ξεκινήστε να χρησιμοποιείτε την εφαρμογή {0}</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Εισαγωγή ωρών παιχνιδιού</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">ID Λογαριασμού</sys:String>
+  <sys:String x:Key="LOCBattleNetGetAccountID">Εύρεση ID λογαριασμού</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Γλώσσα μεταδεδόμενων:</sys:String>
+  <!--BattleNet-->
+  <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Η ενσωμάτωση Battle.net έχει μακροχρόνιο πρόβλημα όπου ο πιστοποιημένος λογαριασμός μπορεί να αποσυνδεθεί ξαφνικά.
+
+Μέχρι να διορθωθεί το πρόβλημα, σας συνιστούμε να κάνετε link  ένα λογαριασμό, να εισαγάγετε τα παιχνίδια και να αποσυνδέσετε λογαριασμό στη συνέχεια. Θα χρειαστεί να επαναλάβετε τη διαδικασία μόνο όταν προστίθεται νέο παιχνίδι στο λογαριασμό σας.</sys:String>
 </ResourceDictionary>

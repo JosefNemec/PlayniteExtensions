@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCEpicImportPlaytime">Impor waktu main</sys:String>
   <sys:String x:Key="LOCEpicAccountID">ID Akun</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Bahasa metadata:</sys:String>
+  <!--Epic-->
 </ResourceDictionary>

@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCXboxNotLoggedIn">Απαιτείται πιστοποίηση</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
   <sys:String x:Key="LOCXboxAuthenticateLabel">Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCXboxAuthenticateAlternativeLabel">Εναλλακτική ταυτοποίηση</sys:String>
   <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Απευθείας εκκίνηση των παιχνιδιών χωρίς τη χρήση της επίσημης εφαρμογής</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρονισμού του λογαριασμού</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">Ξεκινήστε να χρησιμοποιείτε την εφαρμογή {0}</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Εισαγωγή ωρών παιχνιδιού</sys:String>
   <sys:String x:Key="LOCXboxAccountID">ID Λογαριασμού</sys:String>
+  <sys:String x:Key="LOCXboxGetAccountID">Εύρεση ID λογαριασμού</sys:String>
   <sys:String x:Key="LOCXboxMetadataLanguageLabel">Γλώσσα μεταδεδόμενων:</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Εκκίνηση της εφαρμογής Xbox Pass αντί του Microsoft Store κατά την εκκίνηση της εφαρμογής</sys:String>

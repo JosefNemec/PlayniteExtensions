@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCAmazonNotLoggedIn">Необхідна автентифікація</sys:String>
   <sys:String x:Key="LOCAmazonNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Автентифікація</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateAlternativeLabel">Альтернативна автентифікація</sys:String>
   <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingIssues">Вирішення проблем</sys:String>
@@ -18,5 +19,6 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCAmazonGetAccountID">Отримати ID облікового запису</sys:String>
   <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Мова метаданих:</sys:String>
 </ResourceDictionary>

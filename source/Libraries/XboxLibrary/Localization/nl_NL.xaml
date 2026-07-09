@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCXboxNotLoggedIn">Verificatie vereist</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCXboxAuthenticateLabel">Verifiëren</sys:String>
+  <sys:String x:Key="LOCXboxAuthenticateAlternativeLabel">Alternatieve authenticatie</sys:String>
   <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingIssues">Probleemoplossing</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">Starten met {0} client</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Importeer speeltijd</sys:String>
   <sys:String x:Key="LOCXboxAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCXboxGetAccountID">Account-ID verkrijgen</sys:String>
   <sys:String x:Key="LOCXboxMetadataLanguageLabel">Metadata taal:</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Start Xbox Pass applicatie in plaats van Microsoft Store wanneer je de client opent</sys:String>

@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCXboxNotLoggedIn">Необхідна автентифікація</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
   <sys:String x:Key="LOCXboxAuthenticateLabel">Автентифікація</sys:String>
+  <sys:String x:Key="LOCXboxAuthenticateAlternativeLabel">Альтернативна автентифікація</sys:String>
   <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingIssues">Вирішення проблем</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCXboxAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCXboxGetAccountID">Отримати ID облікового запису</sys:String>
   <sys:String x:Key="LOCXboxMetadataLanguageLabel">Мова метаданих:</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Запускати застосунок Xbox Pass замість Microsoft Store під час відкриття клієнта</sys:String>

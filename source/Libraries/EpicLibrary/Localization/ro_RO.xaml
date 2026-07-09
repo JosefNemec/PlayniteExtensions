@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCEpicImportPlaytime">Importați timpul de jucare</sys:String>
   <sys:String x:Key="LOCEpicAccountID">ID Cont</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Limba metadatelor:</sys:String>
+  <!--Epic-->
 </ResourceDictionary>

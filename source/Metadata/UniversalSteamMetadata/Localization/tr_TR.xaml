@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateLabel">Kimlik Doğrulaması</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateAlternativeLabel">Alternatif kimlik doğrulaması</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingAccountLink">Hesap eşitleme sorunlarını giderme</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingIssues">Sorunları giderme</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">Hesap kimliği</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataGetAccountID">Hesap ID al</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">Üst veri dili:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Hesap adım ne?</sys:String>
@@ -61,7 +63,25 @@
   <sys:String x:Key="LOCSteamTagBlacklistHeader">Hariç tutulan etiketler</sys:String>
   <sys:String x:Key="LOCSteamTagWhitelistTooltip">Hariç tutulan etiketlerden kaldır</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTooltip">Hariç tutulan etiketlere ekle</sys:String>
+  <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Etiket kategorisini önek olarak ayarla</sys:String>
+  <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Etiketin ait olduğu kategoriyi önek olarak ayarlar. Örneğin, "Aksiyon RPG" "Türler: Aksiyon RPG"ye dönüştürülür</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryAssessments">Değerlendirmeler</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryFeatures">Özellikler</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Finansman</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryGenres">Türler</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Donanım/Giriş</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryOtherTags">Diğer Etiketler</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryPlayers">Oyuncular</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Puanlar</sys:String>
+  <sys:String x:Key="LOCSteamTagCategorySoftware">Yazılım</sys:String>
+  <sys:String x:Key="LOCSteamTagCategorySubGenres">Alt-Türler</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Tema &amp; Ruh Halleri</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Üst-Seviye Türleri</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Görseller &amp; Bakış Açısı</sys:String>
   <sys:String x:Key="LOCSteamValidationFixedTagCount">Sabit etiket sayısı geçerli bir sayı olmalıdır</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Steam oyun başlatıcı seçim menüsünü masaüstü kipinde göster</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Steam oyun başlatıcı seçim menüsünü tam ekran kipinde göster</sys:String>
+  <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Steam Deck uyumluluğunu içe aktar</sys:String>
+  <sys:String x:Key="LOCSteamWebVsApiLogin">Web mi yoksa API girişi mi kullanmalıyım?</sys:String>
+  <sys:String x:Key="LOCSteamImportFamilyGames">Aile paylaşımı oyunlarını içeri aktar</sys:String>
 </ResourceDictionary>

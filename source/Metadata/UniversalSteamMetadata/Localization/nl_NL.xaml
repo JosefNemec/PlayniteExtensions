@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedIn">Verificatie vereist</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateLabel">Verifiëren</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateAlternativeLabel">Alternatieve authenticatie</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingIssues">Probleemoplossing</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">Starten met {0} client</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Importeer speeltijd</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataGetAccountID">Account-ID verkrijgen</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">Metadata taal:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Wat is mijn accountnaam?</sys:String>
@@ -61,7 +63,24 @@
   <sys:String x:Key="LOCSteamTagBlacklistHeader">Uitgesloten tags</sys:String>
   <sys:String x:Key="LOCSteamTagWhitelistTooltip">Verwijder van uitgesloten tags</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTooltip">Voeg toe aan uitgesloten tags</sys:String>
+  <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Labelcategorie als prefix instellen</sys:String>
+  <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Stelt de categorie in waartoe de tag behoort als een prefix. Bijvoorbeeld, "Action RPG" wordt omgezet in "Genres: Action RPG"</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryAssessments">Beoordelingen</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryFeatures">Kenmerken</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Financiering</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryGenres">Genres</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Hardware/Invoer</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryOtherTags">Andere tags</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryPlayers">Spelers</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Beoordelingen</sys:String>
+  <sys:String x:Key="LOCSteamTagCategorySoftware">Software</sys:String>
+  <sys:String x:Key="LOCSteamTagCategorySubGenres">Sub-Genres</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Thema's &amp; Humeur</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Top-niveau genres</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Visueel &amp; Standpunt</sys:String>
   <sys:String x:Key="LOCSteamValidationFixedTagCount">Vast tag aantal moet een geldig nummer zijn</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Toon het Steam spel opstart menu in bureaublad modus</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Toon het Steam spel opstart menu in volledig scherm modus</sys:String>
+  <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Importeer Steam Deck compatibiliteit als een</sys:String>
+  <sys:String x:Key="LOCSteamWebVsApiLogin">Moet ik Web of API login gebruiken?</sys:String>
 </ResourceDictionary>

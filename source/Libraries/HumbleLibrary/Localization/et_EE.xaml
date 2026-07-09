@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCHumbleNotLoggedIn">Vajalik on autentimine</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">Kasutaja autentimine ebaõnnestus.</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">Autendi</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateAlternativeLabel">Alternatiivne autentimine</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Käivita mängud otseselt, ilma ametlikku klienti avamata</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Konto sünkroonimise probleemide tõrkeotsing</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">Probleemide tõrkeotsing</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">Käivita klienti {0} kasutades</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Impordi mänguaeg</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCHumbleGetAccountID">Saa konto ID</sys:String>
   <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Metaandmete keel:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Eira kolmanda osapoole poe mänge</sys:String>

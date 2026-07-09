@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUbisoftNotLoggedIn">Необхідна автентифікація</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Автентифікація</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateAlternativeLabel">Альтернативна автентифікація</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Вирішення проблем</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCUbisoftGetAccountID">Отримати ID облікового запису</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Мова метаданих:</sys:String>
+  <!--Ubisoft-->
+  <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Плагіни Ubisoft не потребують будь-якої автентифікації, вони беруть інформацію про бібліотеку з файлів клієнта Ubisoft Connect.
+
+Якщо у вас виникли проблеми з імпортуванням ігор, переконайтеся, що клієнт встановлений належним чином і ви увійшли в обліковий запис.</sys:String>
 </ResourceDictionary>

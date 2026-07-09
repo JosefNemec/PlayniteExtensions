@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCitchioNotLoggedIn">Requiere autenticación</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedInError">Fallo al autenticar usuario.</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">Autenticar</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateAlternativeLabel">Autenticación alternativa</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Iniciar juegos directamente sin correr el cliente oficial</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Resolución de problemas de sincronización de cuentas</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingIssues">Resolución de problemas</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Iniciar usando el cliente {0}</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Importar tiempo de juego</sys:String>
   <sys:String x:Key="LOCitchioAccountID">ID de cuenta</sys:String>
+  <sys:String x:Key="LOCitchioGetAccountID">Obtener ID de cuenta</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">Idioma de metadatos:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">Se lanzará itch.io. Por favor inicie sesión y luego cierre este mensaje.</sys:String>

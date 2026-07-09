@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUbisoftNotLoggedIn">需要身份认证</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">用户身份验证失败。</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">身份验证</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateAlternativeLabel">其他身份验证</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">账户同步疑难解答</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">疑难解答</sys:String>
@@ -18,5 +19,9 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">使用 {0} 客户端启动</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCUbisoftGetAccountID">获取账户 ID</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">元数据语言：</sys:String>
+  <!--Ubisoft-->
+  <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">育碧插件无需任何验证，它会从 Ubisoft Connect 客户端的用户数据文件中获取游戏库信息。
+如果您在导入游戏时遇到问题，请确保客户端已正确安装且您的账号已登录。</sys:String>
 </ResourceDictionary>

@@ -8,8 +8,10 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">Kræver verificering</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Verificering</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">Alternativ godkendelse</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Start spil direkte uden at køre officiel klient</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Fejlfinding for konto synkroniserings problemer</sys:String>
+  <sys:String x:Key="LOCEpicTroubleShootingIssues">Problemer med fejlfinding</sys:String>
   <sys:String x:Key="LOCEpicSettingsImportLibraryLabel">Importer alle spil</sys:String>
   <sys:String x:Key="LOCEpicPrivateAccount">Privat konto</sys:String>
   <sys:String x:Key="LOCEpicPublicAccount">Offentlig Konto</sys:String>
@@ -17,5 +19,8 @@
   <sys:String x:Key="LOCEpicStartUsingClient">Begynd at bruge {0} klient</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCEpicAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">Hent konto ID</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Metadata sprog:</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportUbisoftGames">Importér Ubisoft spil</sys:String>
 </ResourceDictionary>

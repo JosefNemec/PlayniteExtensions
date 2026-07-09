@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCBattleNetNotLoggedIn">Wymagane uwierzytelnienie</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedInError">Nie powiodło się uwierzytelnienie użytkownika</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Uwierzytelnij</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateAlternativeLabel">Alternatywne uwierzytelnianie</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Rozpoczynaj gry bez uruchamiania oficjalnego klienta</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Rozwiązywanie problemów z synchronizacją konta</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Importuj czasy gier</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">Identyfikator konta</sys:String>
+  <sys:String x:Key="LOCBattleNetGetAccountID">Uzyskaj ID konta</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Język metadanych:</sys:String>
+  <!--BattleNet-->
+  <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Integracja z Battle.net ma od dawna problem, w którym uwierzytelnione konto może zostać wylogowane w losowych momentach.
+
+Dopóki problem nie zostanie naprawiony, zalecamy połączenie konta, zaimportowanie gier, a następnie rozłączenie konta. Proces ten należy powtórzyć tylko wtedy, gdy do konta zostanie dodana nowa gra.</sys:String>
 </ResourceDictionary>

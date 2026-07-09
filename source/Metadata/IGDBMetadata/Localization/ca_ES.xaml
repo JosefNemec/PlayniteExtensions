@@ -8,20 +8,22 @@
   <sys:String x:Key="LOCIGDBNotLoggedIn">Requereix autenticació</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedInError">No s’ha pogut autenticar l’usuari.</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Autenticar</sys:String>
-  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Arrencar jocs directament sense executar el client oficial</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateAlternativeLabel">Autentificació alternativa</sys:String>
+  <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Iniciar jocs directament sense executar el client oficial</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Resolució de problemes de sincronització del compte</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">Resolució de problemes</sys:String>
   <sys:String x:Key="LOCIGDBSettingsImportLibraryLabel">Importar tots els jocs</sys:String>
   <sys:String x:Key="LOCIGDBPrivateAccount">Compte privat</sys:String>
   <sys:String x:Key="LOCIGDBPublicAccount">Compte públic</sys:String>
   <sys:String x:Key="LOCIGDBAPIKey">Clau API</sys:String>
-  <sys:String x:Key="LOCIGDBStartUsingClient">Iniciar mitjançant el client de {0}</sys:String>
+  <sys:String x:Key="LOCIGDBStartUsingClient">Iniciar a través del client {0}</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Importar temps de joc</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">ID del compte</sys:String>
+  <sys:String x:Key="LOCIGDBGetAccountID">Obtenir l'ID del compte</sys:String>
   <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Idioma de les metadades:</sys:String>
   <!--IGDB-->
-  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usar captures de pantalla si l'art no està disponible</sys:String>
-  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Si hi ha diverses imatges disponibles llavors utilitzar:</sys:String>
+  <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Usar captures de pantalla si no hi ha art disponible</sys:String>
+  <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">Quan hi hagi diverses imatges disponibles, utilitzar:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Seleccionar imatge de fons per {0}</sys:String>
   <sys:String x:Key="LOCIgdbCoverAsIcon">Substituir imatge de caràtula retallada per icona</sys:String>
 </ResourceDictionary>

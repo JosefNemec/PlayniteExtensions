@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCRockstarImportPlaytime">Importați timpul de jucare</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">ID Cont</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Limba metadatelor:</sys:String>
+  <!--Rockstar-->
 </ResourceDictionary>

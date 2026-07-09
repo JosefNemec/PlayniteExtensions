@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUbisoftNotLoggedIn">Απαιτείται πιστοποίηση</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateAlternativeLabel">Εναλλακτική ταυτοποίηση</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Απευθείας εκκίνηση των παιχνιδιών χωρίς τη χρήση της επίσημης εφαρμογής</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρονισμού του λογαριασμού</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">Ξεκινήστε να χρησιμοποιείτε την εφαρμογή {0}</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Εισαγωγή ωρών παιχνιδιού</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">ID Λογαριασμού</sys:String>
+  <sys:String x:Key="LOCUbisoftGetAccountID">Εύρεση ID λογαριασμού</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Γλώσσα μεταδεδόμενων:</sys:String>
+  <!--Ubisoft-->
+  <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Τα πρόσθετα Ubisoft δεν απαιτούν έλεγχο ταυτοποίησης, καθώς λαμβάνουν πληροφορίες βιβλιοθήκης από τα αρχεία δεδομένων χρηστών του πελάτη από το Ubisoft Connect.
+
+Εάν αντιμετωπίζετε προβλήματα στην εισαγωγή παιχνιδιών, βεβαιωθείτε ότι το Ubisoft Connect έχει εγκατασταθεί σωστά και ο λογαριασμός σας είναι συνδεδεμένος.</sys:String>
 </ResourceDictionary>

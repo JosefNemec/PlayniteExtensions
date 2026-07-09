@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCIGDBNotLoggedIn">Απαιτείται πιστοποίηση</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateAlternativeLabel">Εναλλακτική ταυτοποίηση</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Απευθείας εκκίνηση των παιχνιδιών χωρίς τη χρήση της επίσημης εφαρμογής</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρονισμού του λογαριασμού</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">Ξεκινήστε να χρησιμοποιείτε την εφαρμογή {0}</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Εισαγωγή ωρών παιχνιδιού</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">ID Λογαριασμού</sys:String>
+  <sys:String x:Key="LOCIGDBGetAccountID">Εύρεση ID λογαριασμού</sys:String>
   <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Γλώσσα μεταδεδόμενων:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Χρήση στιγμιότυπων οθόνης αν το εξώφυλλο δεν είναι διαθέσιμο</sys:String>

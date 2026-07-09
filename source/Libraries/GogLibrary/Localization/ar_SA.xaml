@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCGOGNotLoggedIn">يتطلب المصادقة</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">مصادقة</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateAlternativeLabel">المصادقة البديلة</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">بدء باستخدام {0} عميل</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">استيراد وقت التشغيل</sys:String>
   <sys:String x:Key="LOCGOGAccountID">تعريف الحساب</sys:String>
+  <sys:String x:Key="LOCGOGGetAccountID">الحصول على معرف الحساب</sys:String>
   <sys:String x:Key="LOCGOGMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">تسجيل الدخول</sys:String>
@@ -29,4 +31,5 @@
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">بدء عملية التثبيت تلقائياً عند تثبيت الألعاب على GOG Galaxy</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">إذا تم تفعيله، سيتم بدء عملية التثبيت تلقائيًا دون الحاجة إلى تفاعل المستخدم مع موقع التثبيت الافتراضي المكون.
 إذا تم تعطيله، سيتم فتح صفحة اللعبة لبدء عملية التثبيت يدوياً.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">استخدم غلاف عمودي</sys:String>
 </ResourceDictionary>

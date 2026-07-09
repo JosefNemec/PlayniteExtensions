@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCGOGNotLoggedIn">Krever autentisering</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Autentiser</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateAlternativeLabel">Alternativ autentisering</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues">Feilsøking av problemer</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Begynn å bruke {0}-klient</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCGOGAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCGOGGetAccountID">Hent konto-ID</sys:String>
   <sys:String x:Key="LOCGOGMetadataLanguageLabel">Språk for metadata:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Kontopålogging</sys:String>
@@ -29,4 +31,5 @@ Merk at alternativet Kontonavn bare fungerer for kontoer der spillbibliotekene e
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Start installasjonsprosessen automatisk når du installerer spill på GOG Galaxy</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Hvis aktivert startes installasjonsprosessen automatisk uten behov for brukerinteraksjon, og den konfigurerte installasjonsplasseringen brukes.
 Hvis deaktivert, vil spillsiden bli åpnet så  installasjonsprosessen kan startes manuelt.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Bruk vertikale omslag</sys:String>
 </ResourceDictionary>

@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCXboxNotLoggedIn">Requiere autenticación</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedInError">Fallo al autenticar usuario.</sys:String>
   <sys:String x:Key="LOCXboxAuthenticateLabel">Autenticar</sys:String>
+  <sys:String x:Key="LOCXboxAuthenticateAlternativeLabel">Autenticación alternativa</sys:String>
   <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Iniciar juegos directamente sin correr el cliente oficial</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Resolución de problemas de sincronización de cuentas</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingIssues">Resolución de problemas</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">Iniciar usando el cliente {0}</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Importar tiempo de juego</sys:String>
   <sys:String x:Key="LOCXboxAccountID">ID de cuenta</sys:String>
+  <sys:String x:Key="LOCXboxGetAccountID">Obtener ID de cuenta</sys:String>
   <sys:String x:Key="LOCXboxMetadataLanguageLabel">Idioma de metadatos:</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Iniciar la aplicación Xbox Pass en lugar de Microsoft Store al abrir el cliente</sys:String>

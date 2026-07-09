@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCAmazonNotLoggedIn">Krever autentisering</sys:String>
   <sys:String x:Key="LOCAmazonNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Autentiser</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateAlternativeLabel">Alternativ autentisering</sys:String>
   <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingIssues">Feilsøking av problemer</sys:String>
@@ -18,5 +19,6 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">Begynn å bruke {0}-klient</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCAmazonGetAccountID">Hent konto-ID</sys:String>
   <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Språk for metadata:</sys:String>
 </ResourceDictionary>

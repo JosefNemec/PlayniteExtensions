@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCGOGNotLoggedIn">Απαιτείται πιστοποίηση</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateAlternativeLabel">Εναλλακτική ταυτοποίηση</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Απευθείας εκκίνηση των παιχνιδιών χωρίς τη χρήση της επίσημης εφαρμογής</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρονισμού του λογαριασμού</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Ξεκινήστε να χρησιμοποιείτε την εφαρμογή {0}</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Εισαγωγή ωρών παιχνιδιού</sys:String>
   <sys:String x:Key="LOCGOGAccountID">ID Λογαριασμού</sys:String>
+  <sys:String x:Key="LOCGOGGetAccountID">Εύρεση ID λογαριασμού</sys:String>
   <sys:String x:Key="LOCGOGMetadataLanguageLabel">Γλώσσα μεταδεδόμενων:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Είσοδος Χρήστη</sys:String>
@@ -28,4 +30,5 @@
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Αυτόματη εκκίνηση της διαδικασίας εγκατάστασης παιχνιδιών όταν επιλέγεται "εγκατάσταση" στο GOG Galaxy</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Εάν ενεργοποιηθεί, η διαδικασία εγκατάστασης θα ξεκινάει αυτόματα στην προεπιλεγμένη θέση εγκατάστασης που έχετε ρυθμίσει.
 Εάν απενεργοποιηθεί, θα ανοίγει η σελίδα του παιχνιδιού για να γίνει η διαδικασία εγκατάστασης χειροκίνητα.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Χρήση κάθετων εξώφυλλων</sys:String>
 </ResourceDictionary>

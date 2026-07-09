@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">Statut : Authentification requise</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Impossible de connecter l'utilisateur.</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Connexion</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">Authentification alternative</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Lancer les jeux sans passer par le client officiel</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Régler les problèmes de synchronisation</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">Résolution des problèmes</sys:String>
@@ -18,5 +19,13 @@
   <sys:String x:Key="LOCEpicStartUsingClient">Lancer avec le client {0}</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Importer le temps de jeu</sys:String>
   <sys:String x:Key="LOCEpicAccountID">ID du compte</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">Obtenir l'ID du compte</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Langue des métadonnées :</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">Importer des jeux EA</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">Importer des jeux Ubisoft</sys:String>
+  <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Connectez-vous à la boutique en ligne Epic dans votre navigateur par défaut
+2. Naviguez jusqu'à la page du code d'authentification en cliquant sur OK dans cette boîte de dialogue
+3. Insérer la valeur "authorizationCode" dans la boîte de dialogue suivante</sys:String>
+  <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Insérer la valeur "authorizationCode</sys:String>
 </ResourceDictionary>

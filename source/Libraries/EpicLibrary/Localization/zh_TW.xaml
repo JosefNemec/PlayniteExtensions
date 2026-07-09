@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCEpicImportPlaytime">匯入遊玩時間</sys:String>
   <sys:String x:Key="LOCEpicAccountID">帳戶ID</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">元資料語言:</sys:String>
+  <!--Epic-->
 </ResourceDictionary>

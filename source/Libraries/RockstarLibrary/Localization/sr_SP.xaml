@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCRockstarImportPlaytime">Увези време играња</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">ID Налога</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Језик метаподатака:</sys:String>
+  <!--Rockstar-->
 </ResourceDictionary>

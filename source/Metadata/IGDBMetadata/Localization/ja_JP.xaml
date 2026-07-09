@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCIGDBNotLoggedIn">認証が必要です</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">認証</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateAlternativeLabel">代替認証</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">問題のトラブルシューティング</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">{0} クライアントの使用を開始</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">プレイ時間をインポート</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">アカウントID</sys:String>
+  <sys:String x:Key="LOCIGDBGetAccountID">アカウント ID を取得</sys:String>
   <sys:String x:Key="LOCIGDBMetadataLanguageLabel">メタデータの言語</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">アートワークが利用できない場合スクリーンショットを使用する</sys:String>

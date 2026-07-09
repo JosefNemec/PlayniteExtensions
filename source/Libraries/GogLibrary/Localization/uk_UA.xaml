@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCGOGNotLoggedIn">Необхідна автентифікація</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Автентифікація</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateAlternativeLabel">Альтернативна автентифікація</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues">Вирішення проблем</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCGOGAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCGOGGetAccountID">Отримати ID облікового запису</sys:String>
   <sys:String x:Key="LOCGOGMetadataLanguageLabel">Мова метаданих:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Логін облікового запису</sys:String>
@@ -29,4 +31,5 @@
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Автоматично запускати процес встановлення під час встановлення ігор у GOG Galaxy</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Якщо ввімкнено, процес встановлення буде розпочато автоматично без необхідності втручання користувача до налаштованого за замовчуванням місця встановлення.
 Якщо вимкнено, буде відкрито сторінку гри, щоб вручну розпочати процес встановлення.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Використовувати вертикальні обкладинки</sys:String>
 </ResourceDictionary>

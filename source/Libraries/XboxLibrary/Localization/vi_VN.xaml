@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCXboxSettingsImportInstalledLabel">Nhập vào các trò chơi đã được cài đặt</sys:String>
-  <sys:String x:Key="LOCXboxSettingsImportUninstalledLabel">Nhập vào các trò chơi chưa được cài đặt</sys:String>
+  <sys:String x:Key="LOCXboxSettingsImportInstalledLabel">Nhập vào các trò chơi đã cài</sys:String>
+  <sys:String x:Key="LOCXboxSettingsImportUninstalledLabel">Nhập vào các trò chơi chưa cài</sys:String>
   <sys:String x:Key="LOCXboxSettingsConnectAccount">Kết nối tài khoản</sys:String>
   <sys:String x:Key="LOCXboxLoginChecking">Đang kiểm tra trạng thái xác thực…</sys:String>
   <sys:String x:Key="LOCXboxLoggedIn">Người dùng được xác thực</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedIn">Yêu cầu xác thực</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedInError">Không xác thực được người dùng.</sys:String>
   <sys:String x:Key="LOCXboxAuthenticateLabel">Xác thực</sys:String>
+  <sys:String x:Key="LOCXboxAuthenticateAlternativeLabel">Cách đăng nhập khác</sys:String>
   <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Bắt đầu trò chơi trực tiếp mà không cần chạy ứng dụng khách chính thức</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Khắc phục sự cố đồng bộ hóa tài khoản</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingIssues">Khắc phục sự cố</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">Bắt đầu sử dụng ứng dụng khách {0}</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Nhập thời gian chơi</sys:String>
   <sys:String x:Key="LOCXboxAccountID">ID tài khoản</sys:String>
+  <sys:String x:Key="LOCXboxGetAccountID">Lấy ID tài khoản</sys:String>
   <sys:String x:Key="LOCXboxMetadataLanguageLabel">Ngôn ngữ siêu dữ liệu</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Khởi động ứng dụng Xbox Pass thay vì Microsoft Store khi mở ứng dụng khách</sys:String>

@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Kimlik Doğrulaması</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">Alternatif kimlik doğrulaması</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Hesap eşitleme sorunlarını giderme</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">Sorunları giderme</sys:String>
@@ -18,5 +19,13 @@
   <sys:String x:Key="LOCEpicStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCEpicAccountID">Hesap kimliği</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">Hesap ID al</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Üst veri dili:</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">EA Uygulamadan oyunlarını içe aktar</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">Ubisoft oyunlarını içe aktar</sys:String>
+  <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Varsayılan tarayıcınızda Epic web mağazasına giriş yapın
+2. Bu iletişim kutusunda Tamam'a tıklayarak kimlik doğrulama kodu sayfasına gidin
+3. Sonraki iletişim kutusuna "yetkilendirmeKodu" değerini girin</sys:String>
+  <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">"yetkilendirmeKodu" değerini girin</sys:String>
 </ResourceDictionary>

@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCBattleNetNotLoggedIn">需要身份认证</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedInError">用户身份验证失败。</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">身份验证</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateAlternativeLabel">其他身份验证</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">账户同步疑难解答</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">疑难解答</sys:String>
@@ -18,5 +19,9 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">使用 {0} 客户端启动</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCBattleNetGetAccountID">获取账户 ID</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">元数据语言：</sys:String>
+  <!--BattleNet-->
+  <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Battle.net 集成存在长期问题，已验证的账号可能会随机登出。
+在问题修复前，我们建议先关联账号、导入游戏，随后断开账号连接。仅当有新游戏添加到账号时，才需重复此流程。</sys:String>
 </ResourceDictionary>

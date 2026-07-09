@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCRockstarNotLoggedIn">Requer autenticação</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedInError">Falha ao autenticar o usuário.</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Autenticar</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateAlternativeLabel">Autenticação alternativa</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Iniciar jogos diretamente, sem executar o cliente oficial</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Solução de problemas de sincronização de contas</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues">Soluções de problemas</sys:String>
@@ -18,5 +19,8 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">Começar usando cliente {0}</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Importar tempo de jogo</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">ID da Conta</sys:String>
+  <sys:String x:Key="LOCRockstarGetAccountID">Obter o ID da conta</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Idioma dos metadados:</sys:String>
+  <!--Rockstar-->
+  <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">O plugin Rockstar atualmente importa apenas jogos instalados. Não há como vincular uma conta para importar todos os jogos.</sys:String>
 </ResourceDictionary>

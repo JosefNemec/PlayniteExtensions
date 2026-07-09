@@ -8,8 +8,10 @@
   <sys:String x:Key="LOCAmazonNotLoggedIn">Kræver verificering</sys:String>
   <sys:String x:Key="LOCAmazonNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Verificering</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateAlternativeLabel">Alternativ godkendelse</sys:String>
   <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Start spil direkte uden at køre officiel klient</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Fejlfinding for konto synkroniserings problemer</sys:String>
+  <sys:String x:Key="LOCAmazonTroubleShootingIssues">Problemer med fejlfinding</sys:String>
   <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Importer alle spil</sys:String>
   <sys:String x:Key="LOCAmazonPrivateAccount">Privat konto</sys:String>
   <sys:String x:Key="LOCAmazonPublicAccount">Offentlig Konto</sys:String>
@@ -17,5 +19,6 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">Begynd at bruge {0} klient</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCAmazonGetAccountID">Hent konto ID</sys:String>
   <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Metadata sprog:</sys:String>
 </ResourceDictionary>

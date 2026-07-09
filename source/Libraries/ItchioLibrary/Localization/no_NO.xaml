@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCitchioNotLoggedIn">Krever autentisering</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">Autentiser</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateAlternativeLabel">Alternativ autentisering</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingIssues">Feilsøking av problemer</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Begynn å bruke {0}-klient</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCitchioAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCitchioGetAccountID">Hent konto-ID</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">Språk for metadata:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io-klienten vil starte. Vennligst logg inn, og lukk deretter denne meldingen.</sys:String>

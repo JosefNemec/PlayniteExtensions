@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">Необхідна автентифікація</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Автентифікація</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">Альтернативна автентифікація</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">Вирішення проблем</sys:String>
@@ -18,5 +19,13 @@
   <sys:String x:Key="LOCEpicStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCEpicAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">Отримати ID облікового запису</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Мова метаданих:</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">Імпортувати ігри EA App</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">Імпортувати ігри Ubisoft</sys:String>
+  <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Увійдіть у крамницю Epic у веббраузері
+2. Перейдіть до сторінки з кодом автентифікації, натиснувши OK у цьому діалоговому вікні
+3. Вставте значення "authorizationCode" у наступному діалоговому вікні</sys:String>
+  <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Вставте значення "authorizationCode"</sys:String>
 </ResourceDictionary>

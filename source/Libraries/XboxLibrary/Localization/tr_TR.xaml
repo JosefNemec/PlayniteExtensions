@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCXboxNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCXboxAuthenticateLabel">Kimlik Doğrulaması</sys:String>
+  <sys:String x:Key="LOCXboxAuthenticateAlternativeLabel">Alternatif kimlik doğrulaması</sys:String>
   <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Hesap eşitleme sorunlarını giderme</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingIssues">Sorunları giderme</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCXboxAccountID">Hesap kimliği</sys:String>
+  <sys:String x:Key="LOCXboxGetAccountID">Hesap ID al</sys:String>
   <sys:String x:Key="LOCXboxMetadataLanguageLabel">Üst veri dili:</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">İstemciyi açarken Microsoft Mağaza'sı yerine Xbox Pass uygulamasını başlat</sys:String>

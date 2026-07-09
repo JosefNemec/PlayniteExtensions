@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCBattleNetImportPlaytime">Importuoti pražaistą laiką</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">Paskyros ID</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Metadata kalba:</sys:String>
+  <!--BattleNet-->
 </ResourceDictionary>

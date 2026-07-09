@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCAmazonNotLoggedIn">Requiere autenticación</sys:String>
   <sys:String x:Key="LOCAmazonNotLoggedInError">Fallo al autenticar usuario.</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Autenticar</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateAlternativeLabel">Autenticación alternativa</sys:String>
   <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Iniciar juegos directamente sin correr el cliente oficial</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Resolución de problemas de sincronización de cuentas</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingIssues">Resolución de problemas</sys:String>
@@ -18,5 +19,6 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">Iniciar usando el cliente {0}</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Importar tiempo de juego</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">ID de cuenta</sys:String>
+  <sys:String x:Key="LOCAmazonGetAccountID">Obtener ID de cuenta</sys:String>
   <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Idioma de metadatos:</sys:String>
 </ResourceDictionary>

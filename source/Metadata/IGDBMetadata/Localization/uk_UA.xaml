@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCIGDBNotLoggedIn">Необхідна автентифікація</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Автентифікація</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateAlternativeLabel">Альтернативна автентифікація</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">Вирішення проблем</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCIGDBGetAccountID">Отримати ID облікового запису</sys:String>
   <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Мова метаданих:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Використовувати знімки гри якщо немає іншого зображення</sys:String>

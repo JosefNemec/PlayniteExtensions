@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCBattleNetNotLoggedIn">Requiere autenticación</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedInError">Fallo al autenticar usuario.</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Autenticar</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateAlternativeLabel">Autenticación alternativa</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Iniciar juegos directamente sin correr el cliente oficial</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Resolución de problemas de sincronización de cuentas</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Resolución de problemas</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">Iniciar usando el cliente {0}</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Importar tiempo de juego</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">ID de cuenta</sys:String>
+  <sys:String x:Key="LOCBattleNetGetAccountID">Obtener ID de cuenta</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Idioma de metadatos:</sys:String>
+  <!--BattleNet-->
+  <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">La integración con Battle.net tiene un problema desde hace tiempo donde la cuenta autenticada puede cerrarse sola en cualquier momento.
+
+Hasta que se solucione, te recomendamos vincular la cuenta, importar los juegos y luego desconectarla. Solo vas a tener que repetir el proceso cuando agregues un nuevo juego a tu cuenta.</sys:String>
 </ResourceDictionary>

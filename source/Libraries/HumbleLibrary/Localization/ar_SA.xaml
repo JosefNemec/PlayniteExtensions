@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCHumbleNotLoggedIn">يتطلب المصادقة</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">مصادقة</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateAlternativeLabel">المصادقة البديلة</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">بدء باستخدام {0} عميل</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">استيراد وقت التشغيل</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">تعريف الحساب</sys:String>
+  <sys:String x:Key="LOCHumbleGetAccountID">الحصول على معرف الحساب</sys:String>
   <sys:String x:Key="LOCHumbleMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">تجاهُل ألعاب متجر الطرف الثالث</sys:String>

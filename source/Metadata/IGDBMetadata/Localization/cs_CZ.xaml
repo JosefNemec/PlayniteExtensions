@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCIGDBNotLoggedIn">Vyžaduje přihlášení</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedInError">Přihlášení se nezdařilo.</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Autentizovat</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateAlternativeLabel">Alternativní autentizace</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Spustit hru přímo bez použití oficiálního klienta</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Řešení problémů se synchronizací účtu</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">Řešení potíží</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">ID účtu</sys:String>
+  <sys:String x:Key="LOCIGDBGetAccountID">Získat ID účtu</sys:String>
   <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Jazyk metadat:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Použít snímek z hry pokud není k dispozici obrázek</sys:String>

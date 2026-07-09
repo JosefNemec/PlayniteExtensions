@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedIn">Απαιτείται πιστοποίηση</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateLabel">Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateAlternativeLabel">Εναλλακτική ταυτοποίηση</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataSettingsStartGameDirectly">Απευθείας εκκίνηση των παιχνιδιών χωρίς τη χρήση της επίσημης εφαρμογής</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρονισμού του λογαριασμού</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">Ξεκινήστε να χρησιμοποιείτε την εφαρμογή {0}</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Εισαγωγή ωρών παιχνιδιού</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">ID Λογαριασμού</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataGetAccountID">Εύρεση ID λογαριασμού</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">Γλώσσα μεταδεδόμενων:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Ποιο είναι το όνομα του λογαριασμού μου?</sys:String>
@@ -61,7 +63,24 @@
   <sys:String x:Key="LOCSteamTagBlacklistHeader">Εξαιρούμενες ετικέτες</sys:String>
   <sys:String x:Key="LOCSteamTagWhitelistTooltip">Αφαίρεση από τις εξαιρούμενες ετικέτες</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTooltip">Προσθήκη στις εξαιρούμενες ετικέτες</sys:String>
+  <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Ορισμός ετικέτας ως πρόθεμα</sys:String>
+  <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Ορίζει την κατηγορία στην οποία ανήκει η ετικέτα ως πρόθεμα. Για παράδειγμα, το "Action RPG" μετατρέπεται σε "Είδος: Action RPG"</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryAssessments">Αξιολογήσεις</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryFeatures">Χαρακτηριστικά</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Χρηματοδότηση</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryGenres">Είδη παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Υλικό/Εισαγωγή</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryOtherTags">Άλλες Ετικέτες</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryPlayers">Παίκτες</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Βαθμολογίες</sys:String>
+  <sys:String x:Key="LOCSteamTagCategorySoftware">Λογισμικό</sys:String>
+  <sys:String x:Key="LOCSteamTagCategorySubGenres">Υπο-ειδή παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Θέματα &amp; Διαθέσεις</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Κορυφαία είδη παιχνιδιών</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Γραφικά &amp; Οπτική</sys:String>
   <sys:String x:Key="LOCSteamValidationFixedTagCount">Ο σταθερός αριθμός ετικετών πρέπει να περιλαμβάνει έγκυρη τιμή</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Εμφάνιση μενού εκκίνησης του Steam στη λειτουργία επιφάνειας εργασίας</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Εμφάνιση μενού εκκίνησης του Steam στη λειτουργία πλήρους οθόνης</sys:String>
+  <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Εισαγωγή συμβατότητας Steam Deck ως</sys:String>
+  <sys:String x:Key="LOCSteamWebVsApiLogin">Να χρησιμοποιήσω Web ή API σύνδεση?</sys:String>
 </ResourceDictionary>

@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">Vyžaduje přihlášení</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Přihlášení se nezdařilo.</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Autentizovat</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">Alternativní autentizace</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Spustit hru přímo bez použití oficiálního klienta</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Řešení problémů se synchronizací účtu</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">Řešení potíží</sys:String>
@@ -18,5 +19,13 @@
   <sys:String x:Key="LOCEpicStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCEpicAccountID">ID účtu</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">Získat ID účtu</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Jazyk metadat:</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">Importovat EA App hry</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">Importovat Ubisoft hry</sys:String>
+  <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Přihlaste se do webového obchodu Epicu ve vašem výchozím prohlížeči
+2. Přejděte na stránku s ověřovacím kódem klepnutím na tlačítko OK v tomto dialogovém okně
+3. Vložte hodnotu "authorizationCode" do dalšího dialogového okna</sys:String>
+  <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Vložte hodnotu "authorizationCode"</sys:String>
 </ResourceDictionary>

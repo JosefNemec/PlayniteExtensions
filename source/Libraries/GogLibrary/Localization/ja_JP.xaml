@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCGOGNotLoggedIn">認証が必要です</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">認証</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateAlternativeLabel">代替認証</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues">問題のトラブルシューティング</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">{0} クライアントの使用を開始</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">プレイ時間をインポート</sys:String>
   <sys:String x:Key="LOCGOGAccountID">アカウントID</sys:String>
+  <sys:String x:Key="LOCGOGGetAccountID">アカウント ID を取得</sys:String>
   <sys:String x:Key="LOCGOGMetadataLanguageLabel">メタデータの言語</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">アカウントログイン</sys:String>

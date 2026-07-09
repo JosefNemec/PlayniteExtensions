@@ -8,8 +8,10 @@
   <sys:String x:Key="LOCHumbleNotLoggedIn">Kræver verificering</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">Verificering</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateAlternativeLabel">Alternativ godkendelse</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Start spil direkte uden at køre officiel klient</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Fejlfinding for konto synkroniserings problemer</sys:String>
+  <sys:String x:Key="LOCHumbleTroubleShootingIssues">Problemer med fejlfinding</sys:String>
   <sys:String x:Key="LOCHumbleSettingsImportLibraryLabel">Importer alle spil</sys:String>
   <sys:String x:Key="LOCHumblePrivateAccount">Privat konto</sys:String>
   <sys:String x:Key="LOCHumblePublicAccount">Offentlig Konto</sys:String>
@@ -17,6 +19,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">Begynd at bruge {0} klient</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCHumbleGetAccountID">Hent konto ID</sys:String>
   <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Metadata sprog:</sys:String>
   <!--Humble-->
 </ResourceDictionary>

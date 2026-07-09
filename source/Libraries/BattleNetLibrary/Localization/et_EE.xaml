@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCBattleNetNotLoggedIn">Vajalik on autentimine</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedInError">Kasutaja autentimine ebaõnnestus.</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Autendi</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateAlternativeLabel">Alternatiivne autentimine</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Käivita mängud otseselt, ilma ametlikku klienti avamata</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Konto sünkroonimise probleemide tõrkeotsing</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Probleemide tõrkeotsing</sys:String>
@@ -18,5 +19,7 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">Käivita klienti {0} kasutades</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Impordi mänguaeg</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCBattleNetGetAccountID">Saa konto ID</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Metaandmete keel:</sys:String>
+  <!--BattleNet-->
 </ResourceDictionary>

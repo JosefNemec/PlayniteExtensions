@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCEpicImportPlaytime">Увези време играња</sys:String>
   <sys:String x:Key="LOCEpicAccountID">ID Налога</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Језик метаподатака:</sys:String>
+  <!--Epic-->
 </ResourceDictionary>

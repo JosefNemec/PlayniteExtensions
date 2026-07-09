@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCSteamNotLoggedIn">Необхідна автентифікація</sys:String>
   <sys:String x:Key="LOCSteamNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
   <sys:String x:Key="LOCSteamAuthenticateLabel">Автентифікація</sys:String>
+  <sys:String x:Key="LOCSteamAuthenticateAlternativeLabel">Альтернативна автентифікація</sys:String>
   <sys:String x:Key="LOCSteamSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
   <sys:String x:Key="LOCSteamTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
   <sys:String x:Key="LOCSteamTroubleShootingIssues">Вирішення проблем</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCSteamStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCSteamAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCSteamGetAccountID">Отримати ID облікового запису</sys:String>
   <sys:String x:Key="LOCSteamMetadataLanguageLabel">Мова метаданих:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Яке ім’я мого облікового запису?</sys:String>
@@ -61,7 +63,25 @@
   <sys:String x:Key="LOCSteamTagBlacklistHeader">Виключені теги</sys:String>
   <sys:String x:Key="LOCSteamTagWhitelistTooltip">Прибрати з виключених тегів</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTooltip">Додати до виключених тегів</sys:String>
+  <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Встановити категорію тегу як префікс</sys:String>
+  <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Встановити категорію до якої відноситься тег як префікс. На приклад, "Рольова гра" перетвориться на "Жанки: Рольова гра"</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryAssessments">Оцінки</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryFeatures">Особливості</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Фінансування</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryGenres">Жанри</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Залізо/Введення</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryOtherTags">Інші теги</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryPlayers">Гравці</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Рейтинги</sys:String>
+  <sys:String x:Key="LOCSteamTagCategorySoftware">Програми</sys:String>
+  <sys:String x:Key="LOCSteamTagCategorySubGenres">Піджанри</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Теми та Настрої</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Основні Жанри</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Графіка і Точка зору</sys:String>
   <sys:String x:Key="LOCSteamValidationFixedTagCount">Фіксована кількість тегів має бути дійсним номером</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Показувати меню вибору при запуску гри Steam в режимі робочого столу</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Показувати меню вибору при запуску гри Steam в повноекранному режимі</sys:String>
+  <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Імпортувати сумісність зі Steam Deck як</sys:String>
+  <sys:String x:Key="LOCSteamWebVsApiLogin">Використовувати вхід через сайт чи через API?</sys:String>
+  <sys:String x:Key="LOCSteamImportFamilyGames">Імпортувати сімейну бібліотеку</sys:String>
 </ResourceDictionary>

@@ -8,8 +8,10 @@
   <sys:String x:Key="LOCSteamNotLoggedIn">Kræver verificering</sys:String>
   <sys:String x:Key="LOCSteamNotLoggedInError">Det lykkedes ikke at verificere brugeren</sys:String>
   <sys:String x:Key="LOCSteamAuthenticateLabel">Verificering</sys:String>
+  <sys:String x:Key="LOCSteamAuthenticateAlternativeLabel">Alternativ godkendelse</sys:String>
   <sys:String x:Key="LOCSteamSettingsStartGameDirectly">Start spil direkte uden at køre officiel klient</sys:String>
   <sys:String x:Key="LOCSteamTroubleShootingAccountLink">Fejlfinding for konto synkroniserings problemer</sys:String>
+  <sys:String x:Key="LOCSteamTroubleShootingIssues">Problemer med fejlfinding</sys:String>
   <sys:String x:Key="LOCSteamSettingsImportLibraryLabel">Importer alle spil</sys:String>
   <sys:String x:Key="LOCSteamPrivateAccount">Privat konto</sys:String>
   <sys:String x:Key="LOCSteamPublicAccount">Offentlig Konto</sys:String>
@@ -17,6 +19,10 @@
   <sys:String x:Key="LOCSteamStartUsingClient">Begynd at bruge {0} klient</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCSteamAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCSteamGetAccountID">Hent konto ID</sys:String>
   <sys:String x:Key="LOCSteamMetadataLanguageLabel">Metadata sprog:</sys:String>
   <!--Steam-->
+  <sys:String x:Key="LOCSteamCustomUrlName">Konto URL Navn</sys:String>
+  <sys:String x:Key="LOCSettingsSteamCatImportErrorAccount">Kan ikke importere kategorier, konto til import er ikke valgt.</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryGenres">Genre</sys:String>
 </ResourceDictionary>

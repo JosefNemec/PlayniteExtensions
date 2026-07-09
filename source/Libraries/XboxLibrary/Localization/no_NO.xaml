@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCXboxNotLoggedIn">Krever autentisering</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
   <sys:String x:Key="LOCXboxAuthenticateLabel">Autentiser</sys:String>
+  <sys:String x:Key="LOCXboxAuthenticateAlternativeLabel">Alternativ autentisering</sys:String>
   <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingIssues">Feilsøking av problemer</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCXboxStartUsingClient">Begynn å bruke {0}-klient</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCXboxAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCXboxGetAccountID">Hent konto-ID</sys:String>
   <sys:String x:Key="LOCXboxMetadataLanguageLabel">Språk for metadata:</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Start Xbox Game Pass-appen i stedet for Microsoft Store når du åpner klienten</sys:String>

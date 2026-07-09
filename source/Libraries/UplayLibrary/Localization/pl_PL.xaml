@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUbisoftNotLoggedIn">Wymagane uwierzytelnienie</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">Nie powiodło się uwierzytelnienie użytkownika</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Uwierzytelnij</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateAlternativeLabel">Alternatywne uwierzytelnianie</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Rozpoczynaj gry bez uruchamiania oficjalnego klienta</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Rozwiązywanie problemów z synchronizacją konta</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Importuj czasy gier</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">Identyfikator konta</sys:String>
+  <sys:String x:Key="LOCUbisoftGetAccountID">Uzyskaj ID konta</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Język metadanych:</sys:String>
+  <!--Ubisoft-->
+  <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Wtyczka Ubisoft nie wymaga żadnego uwierzytelniania, pobiera informacje o bibliotece z plików danych użytkownika klienta Ubisoft Connect.
+
+Jeśli masz problemy z importowaniem gier, upewnij się, że klient jest poprawnie zainstalowany, a twoje konto jest zalogowane.</sys:String>
 </ResourceDictionary>

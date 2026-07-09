@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedIn">인증이 필요함</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedInError">사용자 인증에 실패하였습니다.</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateLabel">인증</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateAlternativeLabel">다른 방법으로 인증</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataSettingsStartGameDirectly">정식 클라이언트 실행 없이 바로 게임 시작하기</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingAccountLink">계정 연동 문제 가이드</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingIssues">문제 해결</sys:String>

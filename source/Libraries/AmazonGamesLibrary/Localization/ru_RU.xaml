@@ -8,7 +8,8 @@
   <sys:String x:Key="LOCAmazonNotLoggedIn">Требуется авторизация</sys:String>
   <sys:String x:Key="LOCAmazonNotLoggedInError">Не удалось авторизовать пользователя.</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Аутентификация</sys:String>
-  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход офиц. клиента</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateAlternativeLabel">Альтернативная аутентификация</sys:String>
+  <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Запускать игры напрямую через .exe, в обход официального клиента</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Устранение неполадок синхронизации учетной записи</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingIssues">Устранение неполадок</sys:String>
   <sys:String x:Key="LOCAmazonSettingsImportLibraryLabel">Импортировать все игры</sys:String>
@@ -18,5 +19,6 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">Запустить через клиент {0}</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Импортировать наигранные часы</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">ID аккаунта</sys:String>
+  <sys:String x:Key="LOCAmazonGetAccountID">Получить ID аккаунта</sys:String>
   <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Язык метаданных:</sys:String>
 </ResourceDictionary>

@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCAmazonNotLoggedIn">Απαιτείται πιστοποίηση</sys:String>
   <sys:String x:Key="LOCAmazonNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateAlternativeLabel">Εναλλακτική ταυτοποίηση</sys:String>
   <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Απευθείας εκκίνηση των παιχνιδιών χωρίς τη χρήση της επίσημης εφαρμογής</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρονισμού του λογαριασμού</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
@@ -18,5 +19,6 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">Ξεκινήστε να χρησιμοποιείτε την εφαρμογή {0}</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Εισαγωγή ωρών παιχνιδιού</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">ID Λογαριασμού</sys:String>
+  <sys:String x:Key="LOCAmazonGetAccountID">Εύρεση ID λογαριασμού</sys:String>
   <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Γλώσσα μεταδεδόμενων:</sys:String>
 </ResourceDictionary>

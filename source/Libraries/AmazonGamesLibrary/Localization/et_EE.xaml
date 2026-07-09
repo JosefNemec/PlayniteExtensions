@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCAmazonNotLoggedIn">Vajalik on autentimine</sys:String>
   <sys:String x:Key="LOCAmazonNotLoggedInError">Kasutaja autentimine ebaõnnestus.</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Autendi</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateAlternativeLabel">Alternatiivne autentimine</sys:String>
   <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Käivita mängud otseselt, ilma ametlikku klienti avamata</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Konto sünkroonimise probleemide tõrkeotsing</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingIssues">Probleemide tõrkeotsing</sys:String>
@@ -18,5 +19,6 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">Käivita klienti {0} kasutades</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Impordi mänguaeg</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCAmazonGetAccountID">Saa konto ID</sys:String>
   <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Metaandmete keel:</sys:String>
 </ResourceDictionary>

@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">يتطلب المصادقة</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">مصادقة</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">المصادقة البديلة</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
@@ -18,5 +19,13 @@
   <sys:String x:Key="LOCEpicStartUsingClient">بدء باستخدام {0} عميل</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">استيراد وقت التشغيل</sys:String>
   <sys:String x:Key="LOCEpicAccountID">تعريف الحساب</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">الحصول على معرف الحساب</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">استيراد ألعاب EA App</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">استيراد ألعاب Ubisoft</sys:String>
+  <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. قم بتسجيل الدخول إلى متجر Epic الإلكتروني في متصفحك الافتراضي
+2. انتقل إلى صفحة رمز المصادقة بالنقر على خيار موافق هنا
+3. إدراج "كود المصادقة" في مربع الحوار التالي</sys:String>
+  <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">إدراج "كود المصادقة"</sys:String>
 </ResourceDictionary>

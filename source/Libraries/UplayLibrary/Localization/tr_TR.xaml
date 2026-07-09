@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUbisoftNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Kimlik Doğrulaması</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateAlternativeLabel">Alternatif kimlik doğrulaması</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Hesap eşitleme sorunlarını giderme</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Sorunları giderme</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">Hesap kimliği</sys:String>
+  <sys:String x:Key="LOCUbisoftGetAccountID">Hesap ID al</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Üst veri dili:</sys:String>
+  <!--Ubisoft-->
+  <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Ubisoft eklentileri herhangi bir kimlik doğrulaması gerektirmez, kütüphane bilgilerini Ubisoft Connect istemcisinin kullanıcı veri dosyalarından alır.
+
+Oyunları içe aktarırken sorun yaşıyorsanız, istemcinin düzgün bir şekilde kurulduğundan ve hesabınızda oturum açıldığından emin olun.</sys:String>
 </ResourceDictionary>

@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCBattleNetImportPlaytime">匯入遊玩時間</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">帳戶ID</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">元資料語言:</sys:String>
+  <!--BattleNet-->
 </ResourceDictionary>

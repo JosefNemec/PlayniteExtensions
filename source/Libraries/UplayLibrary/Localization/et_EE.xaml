@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUbisoftNotLoggedIn">Vajalik on autentimine</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">Kasutaja autentimine ebaõnnestus.</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Autendi</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateAlternativeLabel">Alternatiivne autentimine</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Käivita mängud otseselt, ilma ametlikku klienti avamata</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Konto sünkroonimise probleemide tõrkeotsing</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Probleemide tõrkeotsing</sys:String>
@@ -18,5 +19,7 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">Käivita klienti {0} kasutades</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Impordi mänguaeg</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCUbisoftGetAccountID">Saa konto ID</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Metaandmete keel:</sys:String>
+  <!--Ubisoft-->
 </ResourceDictionary>

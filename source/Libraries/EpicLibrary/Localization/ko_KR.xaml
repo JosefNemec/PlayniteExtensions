@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">인증이 필요함</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">사용자 인증에 실패하였습니다.</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">인증</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">다른 방법으로 인증</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">정식 클라이언트 실행 없이 바로 게임 시작하기</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">계정 연동 문제 가이드</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">문제 해결</sys:String>
@@ -19,4 +20,11 @@
   <sys:String x:Key="LOCEpicImportPlaytime">플레이 시간 가져오기</sys:String>
   <sys:String x:Key="LOCEpicAccountID">계정 ID</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">메타데이터 언어:</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">EA App 게임 가져오기</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">Ubisoft 게임 가져오기</sys:String>
+  <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. 기본 브라우저에서 Epic 웹 스토어에 로그인합니다.
+2. 이 대화 상자에서 "확인"을 클릭하여 인증 코드 페이지로 이동합니다.
+3. 다음 대화 상자에 "authorizationCode" 값을 입력합니다.</sys:String>
+  <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">"authorizationCode" 값을 입력</sys:String>
 </ResourceDictionary>

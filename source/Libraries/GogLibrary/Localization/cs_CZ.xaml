@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCGOGNotLoggedIn">Vyžaduje přihlášení</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedInError">Přihlášení se nezdařilo.</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Autentizovat</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateAlternativeLabel">Alternativní autentizace</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Spustit hru přímo bez použití oficiálního klienta</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Řešení problémů se synchronizací účtu</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues">Řešení potíží</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCGOGAccountID">ID účtu</sys:String>
+  <sys:String x:Key="LOCGOGGetAccountID">Získat ID účtu</sys:String>
   <sys:String x:Key="LOCGOGMetadataLanguageLabel">Jazyk metadat:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Přihlášení k Účtu</sys:String>
@@ -29,4 +31,5 @@ Připomínáme, že možnost zadání jména účtu funguje pouze pro ty účty,
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automaticky spustit proces instalace při instalaci přes GOG Galaxy</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Pokud je povoleno, instalační proces bude automaticky spuštěn bez nutnosti uživatelské interakce s nastavením instalačního adresáře.
 Pokud je vypnuto, stránka hry bude otevřena pro ruční spuštění instalačního procesu.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Použít vertikální obálky</sys:String>
 </ResourceDictionary>

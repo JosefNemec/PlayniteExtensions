@@ -8,15 +8,21 @@
   <sys:String x:Key="LOCUbisoftNotLoggedIn">Requereix autenticació</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">No s’ha pogut autenticar l’usuari.</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Autenticar</sys:String>
-  <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Arrencar jocs directament sense executar el client oficial</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateAlternativeLabel">Autentificació alternativa</sys:String>
+  <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Iniciar jocs directament sense executar el client oficial</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Resolució de problemes de sincronització del compte</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Resolució de problemes</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsImportLibraryLabel">Importar tots els jocs</sys:String>
   <sys:String x:Key="LOCUbisoftPrivateAccount">Compte privat</sys:String>
   <sys:String x:Key="LOCUbisoftPublicAccount">Compte públic</sys:String>
   <sys:String x:Key="LOCUbisoftAPIKey">Clau API</sys:String>
-  <sys:String x:Key="LOCUbisoftStartUsingClient">Iniciar mitjançant el client de {0}</sys:String>
+  <sys:String x:Key="LOCUbisoftStartUsingClient">Iniciar a través del client {0}</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Importar temps de joc</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">ID del compte</sys:String>
+  <sys:String x:Key="LOCUbisoftGetAccountID">Obtenir l'ID del compte</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Idioma de les metadades:</sys:String>
+  <!--Ubisoft-->
+  <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">El complement Ubisoft no necessita autentificació, agafa la informació de la llibreria dels arxius de dades de l'usuari del client Ubisoft Connect.
+
+Si tens problemes a l'hora d'importar jocs, assegura't que el client està correctament instal·lat i la teva sessió està iniciada.</sys:String>
 </ResourceDictionary>

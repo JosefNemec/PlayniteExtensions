@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCAmazonNotLoggedIn">Felhasználói hitelesítés szükséges.</sys:String>
   <sys:String x:Key="LOCAmazonNotLoggedInError">Felhasználói hitelesítés sikertelen.</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">Bejelentkezés</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateAlternativeLabel">Alternatív azonosítás</sys:String>
   <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">Játékok indítása a hivatalos kliens futtatása nélkül</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">Fiók szinkronizálási hibaelhárító</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingIssues">Hibaelhárítás</sys:String>
@@ -18,5 +19,6 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">{0} használata</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">Játékidő importálása</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">Fióknév</sys:String>
+  <sys:String x:Key="LOCAmazonGetAccountID">Fiókazonosító lekérdezése</sys:String>
   <sys:String x:Key="LOCAmazonMetadataLanguageLabel">Metaadat nyelve:</sys:String>
 </ResourceDictionary>

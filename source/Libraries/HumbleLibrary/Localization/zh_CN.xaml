@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCHumbleNotLoggedIn">需要身份认证</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">用户身份验证失败。</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">身份验证</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateAlternativeLabel">其他身份验证</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">账户同步疑难解答</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">疑难解答</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">使用 {0} 客户端启动</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCHumbleGetAccountID">获取账户 ID</sys:String>
   <sys:String x:Key="LOCHumbleMetadataLanguageLabel">元数据语言：</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">忽略第三方商店的游戏</sys:String>
@@ -27,8 +29,8 @@
   <sys:String x:Key="LOCHumbleGeneralLibraryTooltip">导入标准的 Humble 商店购买项目和捆绑包购买项目。</sys:String>
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGamesTooltip" xml:space="preserve">启用来跳过导入需要第三方客户端的游戏，
 为避免重复，已由 Playnite 管理的商店的游戏也将跳过。</sys:String>
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">若存在无 DRM 的版本则导入</sys:String>
-  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">导入存在无 DRM 版本但需要第三方客户端的游戏。</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFree">如果有无数字版权管理（DRM）的版本，则导入该版本。</sys:String>
+  <sys:String x:Key="LOCHumbleImportThirdPartyDrmFreeTooltip">导入无数字版权管理（DRM） 版本但需要第三方客户端的游戏。</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStart">总是使用 Humble 客户端启动游戏</sys:String>
   <sys:String x:Key="LOCHumbleAlwaysUseLaucnherToStartTooltip">当禁用时，Playnite 会尝试绕过 Humble 客户端，直接启动游戏。</sys:String>
   <sys:String x:Key="LOCHumbleNonTroveInstallError">目前不支持非订阅 Humble 游戏的自动安装和卸载。</sys:String>

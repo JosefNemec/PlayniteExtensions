@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCRockstarNotLoggedIn">Необхідна автентифікація</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Автентифікація</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateAlternativeLabel">Альтернативна автентифікація</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues">Вирішення проблем</sys:String>
@@ -18,5 +19,8 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCRockstarGetAccountID">Отримати ID облікового запису</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Мова метаданих:</sys:String>
+  <!--Rockstar-->
+  <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Плагін Rockstar наразі імпортує лише встановлені ігри. Зв'язати обліковий запис щоб імпортувати все неможливо.</sys:String>
 </ResourceDictionary>

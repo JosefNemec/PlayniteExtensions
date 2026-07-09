@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUbisoftNotLoggedIn">認証が必要です</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">認証</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateAlternativeLabel">代替認証</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">問題のトラブルシューティング</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">{0} クライアントの使用を開始</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">プレイ時間をインポート</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">アカウントID</sys:String>
+  <sys:String x:Key="LOCUbisoftGetAccountID">アカウント ID を取得</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">メタデータの言語</sys:String>
+  <!--Ubisoft-->
+  <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Ubisoft プラグインは認証を必要とせず、Ubisoft Connect クライアントのユーザーデータファイルからライブラリ情報を取得します。
+
+ゲームのインポートに問題がある場合は、クライアントが正しくインストールされ、アカウントにログインしていることを確認してください。</sys:String>
 </ResourceDictionary>

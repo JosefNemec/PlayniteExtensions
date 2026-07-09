@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCRockstarNotLoggedIn">Krever autentisering</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Autentiser</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateAlternativeLabel">Alternativ autentisering</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues">Feilsøking av problemer</sys:String>
@@ -18,5 +19,8 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">Begynn å bruke {0}-klient</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCRockstarGetAccountID">Hent konto-ID</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Språk for metadata:</sys:String>
+  <!--Rockstar-->
+  <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Rockstar-utvidelsen kan for øyeblikket kun importe installerte spill. Det finnes ingen måte å koble til en konto for å importere alle spill.</sys:String>
 </ResourceDictionary>

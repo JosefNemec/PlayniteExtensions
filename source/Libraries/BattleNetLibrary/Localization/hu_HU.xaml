@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCBattleNetNotLoggedIn">Felhasználói hitelesítés szükséges.</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedInError">Felhasználói hitelesítés sikertelen.</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Bejelentkezés</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateAlternativeLabel">Alternatív azonosítás</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Játékok indítása a hivatalos kliens futtatása nélkül</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Fiók szinkronizálási hibaelhárító</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Hibaelhárítás</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">{0} használata</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Játékidő importálása</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">Fióknév</sys:String>
+  <sys:String x:Key="LOCBattleNetGetAccountID">Fiókazonosító lekérdezése</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Metaadat nyelve:</sys:String>
+  <!--BattleNet-->
+  <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">A battle.net integráció régóta fennálló problémája a bejelentkezett fiókok véletlenszerű kidobása.
+
+Amíg ezt meg nem szüntetik, azt javasoljuk, hogy linkeld be a fiókod, importáld be a játékaid, és válaszd le a fiókod. Ezt csak akkor kell megismételned, amikor új játékot adsz hozzá a fiókodhoz.</sys:String>
 </ResourceDictionary>

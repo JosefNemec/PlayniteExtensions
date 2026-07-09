@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUbisoftNotLoggedIn">يتطلب المصادقة</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">مصادقة</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateAlternativeLabel">المصادقة البديلة</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
@@ -18,5 +19,8 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">بدء باستخدام {0} عميل</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">استيراد وقت التشغيل</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">تعريف الحساب</sys:String>
+  <sys:String x:Key="LOCUbisoftGetAccountID">الحصول على معرف الحساب</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
+  <!--Ubisoft-->
+  <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">إضافة Ubisoft لا تتطلب إي مصادقة، حيث أنها تأخذ معلومات المكتبة عن طريق خدمة "Ubisoft Connect" لبيانات العميل المستخدم.</sys:String>
 </ResourceDictionary>

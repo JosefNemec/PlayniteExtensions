@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCRockstarImportPlaytime">Impor waktu main</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">ID Akun</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Bahasa metadata:</sys:String>
+  <!--Rockstar-->
 </ResourceDictionary>

@@ -8,16 +8,18 @@
   <sys:String x:Key="LOCGOGNotLoggedIn">Requereix autenticació</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedInError">No s’ha pogut autenticar l’usuari.</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Autenticar</sys:String>
-  <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Arrencar jocs directament sense executar el client oficial</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateAlternativeLabel">Autentificació alternativa</sys:String>
+  <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Iniciar jocs directament sense executar el client oficial</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Resolució de problemes de sincronització del compte</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues">Resolució de problemes</sys:String>
   <sys:String x:Key="LOCGOGSettingsImportLibraryLabel">Importar tots els jocs</sys:String>
   <sys:String x:Key="LOCGOGPrivateAccount">Compte privat</sys:String>
   <sys:String x:Key="LOCGOGPublicAccount">Compte públic</sys:String>
   <sys:String x:Key="LOCGOGAPIKey">Clau API</sys:String>
-  <sys:String x:Key="LOCGOGStartUsingClient">Iniciar mitjançant el client de {0}</sys:String>
+  <sys:String x:Key="LOCGOGStartUsingClient">Iniciar a través del client {0}</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Importar temps de joc</sys:String>
   <sys:String x:Key="LOCGOGAccountID">ID del compte</sys:String>
+  <sys:String x:Key="LOCGOGGetAccountID">Obtenir l'ID del compte</sys:String>
   <sys:String x:Key="LOCGOGMetadataLanguageLabel">Idioma de les metadades:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Iniciar sessió al compte</sys:String>
@@ -29,4 +31,5 @@ Tingues en compte que l’opció Nom del compte només funciona per a comptes qu
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Iniciar automàticament el procés d'instal·lació quan s'instal·lin jocs a GOG Galaxy</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Si s'activa, el procés d'instal·lació s'iniciarà automàticament sense necessitar la interacció de l'usuari per la ubicació d'instal·lació establerta per defecte.
 Si es desactiva, la pàgina del joc s'obrirà per iniciar el procés d'instal·lació de manera manual.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Utilitzar portades verticals</sys:String>
 </ResourceDictionary>

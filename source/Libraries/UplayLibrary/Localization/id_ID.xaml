@@ -19,4 +19,5 @@
   <sys:String x:Key="LOCUbisoftImportPlaytime">Impor waktu main</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">ID Akun</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Bahasa metadata:</sys:String>
+  <!--Ubisoft-->
 </ResourceDictionary>

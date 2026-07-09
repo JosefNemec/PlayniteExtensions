@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCitchioNotLoggedIn">認証が必要です</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">認証</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateAlternativeLabel">代替認証</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingIssues">問題のトラブルシューティング</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">{0} クライアントの使用を開始</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">プレイ時間をインポート</sys:String>
   <sys:String x:Key="LOCitchioAccountID">アカウントID</sys:String>
+  <sys:String x:Key="LOCitchioGetAccountID">アカウント ID を取得</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">メタデータの言語</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io クライアントが開きます。サインインしてからこのメッセージを閉じてください。</sys:String>

@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCGOGNotLoggedIn">Wymagane uwierzytelnienie</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedInError">Nie powiodło się uwierzytelnienie użytkownika</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Uwierzytelnij</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateAlternativeLabel">Alternatywne uwierzytelnianie</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Rozpoczynaj gry bez uruchamiania oficjalnego klienta</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Rozwiązywanie problemów z synchronizacją konta</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Importuj czasy gier</sys:String>
   <sys:String x:Key="LOCGOGAccountID">Identyfikator konta</sys:String>
+  <sys:String x:Key="LOCGOGGetAccountID">Uzyskaj ID konta</sys:String>
   <sys:String x:Key="LOCGOGMetadataLanguageLabel">Język metadanych:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Logowanie do konta</sys:String>
@@ -29,4 +31,5 @@ Pamiętaj, że opcja Nazwa konta działa tylko w przypadku kont, których konta 
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automatycznie uruchom proces instalacji podczas instalacji gier na GOG Galaxy</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Jeśli opcja jest włączona, proces instalacji zostanie automatycznie uruchomiony bez konieczności interakcji użytkownika ze skonfigurowaną domyślną lokalizacją instalacji.
 Jeśli wyłączone, strona gry zostanie otwarta do ręcznego rozpoczęcia procesu instalacji.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Używaj pionowych okładek</sys:String>
 </ResourceDictionary>

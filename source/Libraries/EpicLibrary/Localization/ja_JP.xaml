@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">認証が必要です</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">認証</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">代替認証</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">問題のトラブルシューティング</sys:String>
@@ -18,5 +19,9 @@
   <sys:String x:Key="LOCEpicStartUsingClient">{0} クライアントの使用を開始</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">プレイ時間をインポート</sys:String>
   <sys:String x:Key="LOCEpicAccountID">アカウントID</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">アカウント ID を取得</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">メタデータの言語</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">EA App ゲームをインポート</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">Ubisoft ゲームをインポート</sys:String>
 </ResourceDictionary>

@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCIGDBNotLoggedIn">Vajalik on autentimine</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedInError">Kasutaja autentimine ebaõnnestus.</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Autendi</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateAlternativeLabel">Alternatiivne autentimine</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Käivita mängud otseselt, ilma ametlikku klienti avamata</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Konto sünkroonimise probleemide tõrkeotsing</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">Probleemide tõrkeotsing</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">Käivita klienti {0} kasutades</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Impordi mänguaeg</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCIGDBGetAccountID">Saa konto ID</sys:String>
   <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Metaandmete keel:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Kasuta kunstiteose puudumisel ekraanipilte</sys:String>

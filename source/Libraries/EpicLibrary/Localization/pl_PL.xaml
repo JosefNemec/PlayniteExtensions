@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">Wymagane uwierzytelnienie</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Nie powiodło się uwierzytelnienie użytkownika</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Uwierzytelnij</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">Alternatywne uwierzytelnianie</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Rozpoczynaj gry bez uruchamiania oficjalnego klienta</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Rozwiązywanie problemów z synchronizacją konta</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
@@ -18,5 +19,13 @@
   <sys:String x:Key="LOCEpicStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Importuj czasy gier</sys:String>
   <sys:String x:Key="LOCEpicAccountID">Identyfikator konta</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">Uzyskaj ID konta</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Język metadanych:</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">Importuj gry z EA App</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">Importuj gry Ubisoft</sys:String>
+  <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Zaloguj się do sklepu internetowego Epic w domyślnej przeglądarce
+2. Przejdź do strony kodu uwierzytelniającego, klikając OK w tym oknie dialogowym.
+3. Wstaw wartość "authorizationCode" w następnym oknie dialogowym</sys:String>
+  <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Wstaw wartość "authorizationCode"</sys:String>
 </ResourceDictionary>

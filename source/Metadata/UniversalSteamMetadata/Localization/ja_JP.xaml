@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedIn">認証が必要です</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateLabel">認証</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateAlternativeLabel">代替認証</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingIssues">問題のトラブルシューティング</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">{0} クライアントの使用を開始</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">プレイ時間をインポート</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">アカウントID</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataGetAccountID">アカウント ID を取得</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">メタデータの言語</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">私のアカウント名は何ですか？</sys:String>
@@ -61,6 +63,9 @@
   <sys:String x:Key="LOCSteamTagBlacklistHeader">除外するタグ</sys:String>
   <sys:String x:Key="LOCSteamTagWhitelistTooltip">除外するタグから削除</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTooltip">除外するタグに追加</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryFeatures">特徴</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryGenres">ジャンル</sys:String>
+  <sys:String x:Key="LOCSteamTagCategorySoftware">ソフトウェア</sys:String>
   <sys:String x:Key="LOCSteamValidationFixedTagCount">固定タグ数は有効な数字でなければなりません</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">デスクトップモードで Steam の起動メニューを表示</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Steam の起動メニューをフルスクリーンモードで表示</sys:String>

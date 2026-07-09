@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">Απαιτείται πιστοποίηση</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">Εναλλακτική ταυτοποίηση</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Απευθείας εκκίνηση των παιχνιδιών χωρίς τη χρήση της επίσημης εφαρμογής</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρονισμού του λογαριασμού</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
@@ -18,5 +19,13 @@
   <sys:String x:Key="LOCEpicStartUsingClient">Ξεκινήστε να χρησιμοποιείτε την εφαρμογή {0}</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Εισαγωγή ωρών παιχνιδιού</sys:String>
   <sys:String x:Key="LOCEpicAccountID">ID Λογαριασμού</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">Εύρεση ID λογαριασμού</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Γλώσσα μεταδεδόμενων:</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">Εισαγωγή παιχνιδιών από το EA app</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">Εισαγωγή παιχνιδιών από το Ubisoft Connect</sys:String>
+  <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Κάντε log in στην επίσημη ιστοσελίδα της Epic Games
+2. Θα μεταβείτε στην σελίδα ταυτοποίησης πατώντας ΟΚ σε αυτό το παράθυρο διαλόγου
+3. Εισάγετε τον "κωδικό ταυτοποίησης" στο επόμενο παράθυρο διαλόγου.</sys:String>
+  <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Εισάγετε τον "κωδικό ταυτοποίησης" </sys:String>
 </ResourceDictionary>

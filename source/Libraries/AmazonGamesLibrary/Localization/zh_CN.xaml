@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCAmazonNotLoggedIn">需要身份认证</sys:String>
   <sys:String x:Key="LOCAmazonNotLoggedInError">用户身份验证失败。</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">身份验证</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateAlternativeLabel">其他身份验证</sys:String>
   <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">账户同步疑难解答</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingIssues">疑难解答</sys:String>
@@ -18,5 +19,6 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">使用 {0} 客户端启动</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCAmazonGetAccountID">获取账户 ID</sys:String>
   <sys:String x:Key="LOCAmazonMetadataLanguageLabel">元数据语言：</sys:String>
 </ResourceDictionary>

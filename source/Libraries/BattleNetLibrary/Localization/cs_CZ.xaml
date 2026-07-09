@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCBattleNetNotLoggedIn">Vyžaduje přihlášení</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedInError">Přihlášení se nezdařilo.</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Autentizovat</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateAlternativeLabel">Alternativní autentizace</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Spustit hru přímo bez použití oficiálního klienta</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Řešení problémů se synchronizací účtu</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Řešení potíží</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">ID účtu</sys:String>
+  <sys:String x:Key="LOCBattleNetGetAccountID">Získat ID účtu</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Jazyk metadat:</sys:String>
+  <!--BattleNet-->
+  <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Battle.net integrace má dlouhotrvající problém, kde může dojít k náhodnému odhlášení ověřeného účtu.
+
+Než bude problém vyřešen, doporučujeme propojit účet, importovat hry a následně odpojit účet. Následně budete muset tento proces opakovat pouze v případě, že je k vašemu účtu přidána nová hra.</sys:String>
 </ResourceDictionary>

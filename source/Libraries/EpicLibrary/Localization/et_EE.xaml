@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">Vajalik on autentimine</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Kasutaja autentimine ebaõnnestus.</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Autendi</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">Alternatiivne autentimine</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Käivita mängud otseselt, ilma ametlikku klienti avamata</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Konto sünkroonimise probleemide tõrkeotsing</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">Probleemide tõrkeotsing</sys:String>
@@ -18,5 +19,7 @@
   <sys:String x:Key="LOCEpicStartUsingClient">Käivita klienti {0} kasutades</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Impordi mänguaeg</sys:String>
   <sys:String x:Key="LOCEpicAccountID">Konto ID</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">Saa konto ID</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Metaandmete keel:</sys:String>
+  <!--Epic-->
 </ResourceDictionary>

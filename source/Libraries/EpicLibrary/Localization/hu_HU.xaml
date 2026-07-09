@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">Felhasználói hitelesítés szükséges.</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Felhasználói hitelesítés sikertelen.</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Bejelentkezés</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">Alternatív azonosítás</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Játékok indítása a hivatalos kliens futtatása nélkül</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Fiók szinkronizálási hibaelhárító</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">Hibaelhárítás</sys:String>
@@ -18,5 +19,13 @@
   <sys:String x:Key="LOCEpicStartUsingClient">{0} használata</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Játékidő importálása</sys:String>
   <sys:String x:Key="LOCEpicAccountID">Fióknév</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">Fiókazonosító lekérdezése</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Metaadat nyelve:</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">EA App játékok importálása</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">Ubisoft játékok importálása</sys:String>
+  <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Jelentkezz be az Epic store-ba a böngésződből
+2. Nyisd meg a hitelesítő kód oldalát ezen ablak OK-jére nyomva
+3. Illeszd be az "authorizationCode"-ot a következő ablakba</sys:String>
+  <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Illeszd be az "authorizationCode"-ot</sys:String>
 </ResourceDictionary>

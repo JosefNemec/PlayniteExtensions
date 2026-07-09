@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedIn">Krever autentisering</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateLabel">Autentiser</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataAuthenticateAlternativeLabel">Alternativ autentisering</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataTroubleShootingIssues">Feilsøking av problemer</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCUniversalSteamMetadataStartUsingClient">Begynn å bruke {0}-klient</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCUniversalSteamMetadataGetAccountID">Hent konto-ID</sys:String>
   <sys:String x:Key="LOCUniversalSteamMetadataMetadataLanguageLabel">Språk for metadata:</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">Hva er kontonavnet mitt?</sys:String>
@@ -61,7 +63,24 @@
   <sys:String x:Key="LOCSteamTagBlacklistHeader">Ekskluderte stikkord</sys:String>
   <sys:String x:Key="LOCSteamTagWhitelistTooltip">Fjern fra ekskluderte stikkord</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTooltip">Legg til ekskluderte stikkord</sys:String>
+  <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">Angi emneordkategori som prefiks</sys:String>
+  <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">Angir kategorien emneordet tilhører som prefiks. For eksempel blir "Action RPG" gjort om til "Genres: Action RPG"</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryAssessments">Vurderinger</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryFeatures">Funksjoner</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryFundingEtc">Finansiering</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryGenres">Sjangre</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryHardwareInput">Maskinvare/inngang</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryOtherTags">Andre emneord</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryPlayers">Spillere</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">Vurderinger</sys:String>
+  <sys:String x:Key="LOCSteamTagCategorySoftware">Programvare</sys:String>
+  <sys:String x:Key="LOCSteamTagCategorySubGenres">Sub-sjangre</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryThemesMoods">Temaer og stemninger</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">Overordnede sjangre</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">Bilder og synsvinkel</sys:String>
   <sys:String x:Key="LOCSteamValidationFixedTagCount">Låst stikkordantall må være et gyldig tall</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">Vis Steams oppstartsmeny for spill i skrivebordsmodus</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">Vis Steams oppstartsmeny for spill i fullskjermmodus</sys:String>
+  <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Importer Steam Deck-kompatibilitet som en</sys:String>
+  <sys:String x:Key="LOCSteamWebVsApiLogin">Skal jeg bruke web- eller API-innlogging?</sys:String>
 </ResourceDictionary>

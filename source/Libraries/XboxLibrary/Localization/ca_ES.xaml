@@ -8,16 +8,18 @@
   <sys:String x:Key="LOCXboxNotLoggedIn">Requereix autenticació</sys:String>
   <sys:String x:Key="LOCXboxNotLoggedInError">No s’ha pogut autenticar l’usuari.</sys:String>
   <sys:String x:Key="LOCXboxAuthenticateLabel">Autenticar</sys:String>
-  <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Arrencar jocs directament sense executar el client oficial</sys:String>
+  <sys:String x:Key="LOCXboxAuthenticateAlternativeLabel">Autentificació alternativa</sys:String>
+  <sys:String x:Key="LOCXboxSettingsStartGameDirectly">Iniciar jocs directament sense executar el client oficial</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingAccountLink">Resolució de problemes de sincronització del compte</sys:String>
   <sys:String x:Key="LOCXboxTroubleShootingIssues">Resolució de problemes</sys:String>
   <sys:String x:Key="LOCXboxSettingsImportLibraryLabel">Importar tots els jocs</sys:String>
   <sys:String x:Key="LOCXboxPrivateAccount">Compte privat</sys:String>
   <sys:String x:Key="LOCXboxPublicAccount">Compte públic</sys:String>
   <sys:String x:Key="LOCXboxAPIKey">Clau API</sys:String>
-  <sys:String x:Key="LOCXboxStartUsingClient">Iniciar mitjançant el client de {0}</sys:String>
+  <sys:String x:Key="LOCXboxStartUsingClient">Iniciar a través del client {0}</sys:String>
   <sys:String x:Key="LOCXboxImportPlaytime">Importar temps de joc</sys:String>
   <sys:String x:Key="LOCXboxAccountID">ID del compte</sys:String>
+  <sys:String x:Key="LOCXboxGetAccountID">Obtenir l'ID del compte</sys:String>
   <sys:String x:Key="LOCXboxMetadataLanguageLabel">Idioma de les metadades:</sys:String>
   <!--Xbox-->
   <sys:String x:Key="LOCXboxXboxAppClientPriorityLaunch">Iniciar l'aplicació Xbox Pass en lloc de Microsoft Store en obrir el client</sys:String>

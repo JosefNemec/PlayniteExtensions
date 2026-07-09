@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCBattleNetNotLoggedIn">認証が必要です</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">認証</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateAlternativeLabel">代替認証</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">問題のトラブルシューティング</sys:String>
@@ -18,5 +19,7 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">{0} クライアントの使用を開始</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">プレイ時間をインポート</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">アカウントID</sys:String>
+  <sys:String x:Key="LOCBattleNetGetAccountID">アカウント ID を取得</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">メタデータの言語</sys:String>
+  <!--BattleNet-->
 </ResourceDictionary>

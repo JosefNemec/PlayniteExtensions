@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <sys:String x:Key="LOCEpicSettingsImportInstalledLabel">Nhập vào các trò chơi đã được cài đặt</sys:String>
-  <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">Nhập vào các trò chơi chưa được cài đặt</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportInstalledLabel">Nhập vào các trò chơi đã cài</sys:String>
+  <sys:String x:Key="LOCEpicSettingsImportUninstalledLabel">Nhập vào các trò chơi chưa cài</sys:String>
   <sys:String x:Key="LOCEpicSettingsConnectAccount">Kết nối tài khoản</sys:String>
   <sys:String x:Key="LOCEpicLoginChecking">Đang kiểm tra trạng thái xác thực…</sys:String>
   <sys:String x:Key="LOCEpicLoggedIn">Người dùng được xác thực</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedIn">Yêu cầu xác thực</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Không xác thực được người dùng.</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Xác thực</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">Cách đăng nhập khác</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Bắt đầu trò chơi trực tiếp mà không cần chạy ứng dụng khách chính thức</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Khắc phục sự cố đồng bộ hóa tài khoản</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">Khắc phục sự cố</sys:String>
@@ -18,5 +19,13 @@
   <sys:String x:Key="LOCEpicStartUsingClient">Bắt đầu sử dụng ứng dụng khách {0}</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Nhập thời gian chơi</sys:String>
   <sys:String x:Key="LOCEpicAccountID">ID tài khoản</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">Lấy ID tài khoản</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Ngôn ngữ siêu dữ liệu</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">Nhập những trò chơi từ EA App</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">Nhập những trò chơi Ubisoft</sys:String>
+  <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Đăng nhập vào cửa hàng Epic web trên trình duyệt mặc định
+2. Chuyển đến trang mã đăng nhập bằng cách nhấn OK trên hội thoại này
+3. Chèn vào giá trị mã đăng nhập trong hội thoại sau</sys:String>
+  <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Nhập giá trị "authorizationCode"</sys:String>
 </ResourceDictionary>

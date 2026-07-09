@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCHumbleNotLoggedIn">Felhasználói hitelesítés szükséges.</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">Felhasználói hitelesítés sikertelen.</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">Bejelentkezés</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateAlternativeLabel">Alternatív azonosítás</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Játékok indítása a hivatalos kliens futtatása nélkül</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Fiók szinkronizálási hibaelhárító</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">Hibaelhárítás</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">{0} használata</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Játékidő importálása</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">Fióknév</sys:String>
+  <sys:String x:Key="LOCHumbleGetAccountID">Fiókazonosító lekérdezése</sys:String>
   <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Metaadat nyelve:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Harmadik féltől származó játékok figyelmen kívül hagyása</sys:String>

@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCIGDBNotLoggedIn">يتطلب المصادقة</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">مصادقة</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateAlternativeLabel">المصادقة البديلة</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">بدء باستخدام {0} عميل</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">استيراد وقت التشغيل</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">تعريف الحساب</sys:String>
+  <sys:String x:Key="LOCIGDBGetAccountID">الحصول على معرف الحساب</sys:String>
   <sys:String x:Key="LOCIGDBMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">استخدم لقطات الشاشة في حالة عدم توفر العمل الفني</sys:String>

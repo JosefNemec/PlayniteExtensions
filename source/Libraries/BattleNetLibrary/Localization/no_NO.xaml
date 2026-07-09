@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCBattleNetNotLoggedIn">Krever autentisering</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Autentiser</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateAlternativeLabel">Alternativ autentisering</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Feilsøking av problemer</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">Begynn å bruke {0}-klient</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCBattleNetGetAccountID">Hent konto-ID</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Språk for metadata:</sys:String>
+  <!--BattleNet-->
+  <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Battle.net-integrasjon har vedvarende problem der en autentisert bruker kan bli logget ut på tilfeldige tidspunkter.
+
+Frem til problemet er rettet, anbefaler vi å koble til en konto, importere spill og koble fra kontoen igjen. Du trenger bare å gjenta prosessen når et nytt spill er lagt til kontoen din.</sys:String>
 </ResourceDictionary>

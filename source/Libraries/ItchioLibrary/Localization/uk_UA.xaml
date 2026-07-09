@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCitchioNotLoggedIn">Необхідна автентифікація</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedInError">Не вдалося автентифікувати користувача.</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">Автентифікація</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateAlternativeLabel">Альтернативна автентифікація</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Запускати гру напряму без запуску офіційного клієнту</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Вирішення проблем із синхронізацією облікового запису</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingIssues">Вирішення проблем</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Запустити клієнтом {0}</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Імпортувати час у грі</sys:String>
   <sys:String x:Key="LOCitchioAccountID">ID облікового запису</sys:String>
+  <sys:String x:Key="LOCitchioGetAccountID">Отримати ID облікового запису</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">Мова метаданих:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io буде запущено. Будь ласка авторизуйтеся після чого закрийте це повідомлення.</sys:String>

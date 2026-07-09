@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCIGDBNotLoggedIn">Krever autentisering</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Autentiser</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateAlternativeLabel">Alternativ autentisering</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">Feilsøking av problemer</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">Begynn å bruke {0}-klient</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCIGDBGetAccountID">Hent konto-ID</sys:String>
   <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Språk for metadata:</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Bruk skjermbilder hvis bildemateriale ikke er tilgjengelig</sys:String>

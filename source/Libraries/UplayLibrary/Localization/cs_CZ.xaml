@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUbisoftNotLoggedIn">Vyžaduje přihlášení</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">Přihlášení se nezdařilo.</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Autentizovat</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateAlternativeLabel">Alternativní autentizace</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Spustit hru přímo bez použití oficiálního klienta</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Řešení problémů se synchronizací účtu</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Řešení potíží</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">ID účtu</sys:String>
+  <sys:String x:Key="LOCUbisoftGetAccountID">Získat ID účtu</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Jazyk metadat:</sys:String>
+  <!--Ubisoft-->
+  <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Ubisoft plugin nevyžaduje žádnou autentizaci, používá informace o knihovně z uživatelských datových souborů Ubisoft Connect klienta.
+
+Pokud máte problémy s importem her, ujistěte se, že je klient správně nainstalován a váš účet je přihlášen.</sys:String>
 </ResourceDictionary>

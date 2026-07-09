@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCitchioNotLoggedIn">Wymagane uwierzytelnienie</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedInError">Nie powiodło się uwierzytelnienie użytkownika</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">Uwierzytelnij</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateAlternativeLabel">Alternatywne uwierzytelnianie</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Rozpoczynaj gry bez uruchamiania oficjalnego klienta</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Rozwiązywanie problemów z synchronizacją konta</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingIssues">Rozwiązywanie problemów</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Uruchomiono poprzez klienta {0}</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Importuj czasy gier</sys:String>
   <sys:String x:Key="LOCitchioAccountID">Identyfikator konta</sys:String>
+  <sys:String x:Key="LOCitchioGetAccountID">Uzyskaj ID konta</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">Język metadanych:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io zostanie uruchomiony. Zaloguj się, a następnie zamknij ten komunikat.</sys:String>

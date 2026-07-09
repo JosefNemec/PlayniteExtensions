@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUbisoftNotLoggedIn">Krever autentisering</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Autentiser</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateAlternativeLabel">Alternativ autentisering</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Feilsøking av problemer</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">Begynn å bruke {0}-klient</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCUbisoftGetAccountID">Hent konto-ID</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Språk for metadata:</sys:String>
+  <!--Ubisoft-->
+  <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Ubisoft-utvidelsen krever ingen godkjenning. Den henter bibliotekinformasjon fra Ubisoft Connect-klientens brukerdatafiler.
+
+Hvis du har problemer med å importere spill, bør du kontrollere at klienten er riktig installert og at den er logget inn.</sys:String>
 </ResourceDictionary>

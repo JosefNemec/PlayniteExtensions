@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCGOGNotLoggedIn">Statut : Authentification requise</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedInError">Impossible de connecter l'utilisateur.</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Connexion</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateAlternativeLabel">Authentification alternative</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Lancer les jeux sans passer par le client officiel</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Régler les problèmes de synchronisation</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues">Résolution des problèmes</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Lancer avec le client {0}</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Importer le temps de jeu</sys:String>
   <sys:String x:Key="LOCGOGAccountID">ID du compte</sys:String>
+  <sys:String x:Key="LOCGOGGetAccountID">Obtenir l'ID du compte</sys:String>
   <sys:String x:Key="LOCGOGMetadataLanguageLabel">Langue des métadonnées :</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Connexion au compte</sys:String>
@@ -28,4 +30,5 @@
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Démarrer le processus automatiquement lorsqu'un jeu est installé depuis GOG Galaxy</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Lorsque cette option est activée, le processus d'installation démarrera automatiquement.
 Lorsque cette option est désactivée, la fiche du jeu sera ouverte, permettant à l'utilisateur de démarrer et configurer l'installation manuellement.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Utiliser des couvertures verticales</sys:String>
 </ResourceDictionary>

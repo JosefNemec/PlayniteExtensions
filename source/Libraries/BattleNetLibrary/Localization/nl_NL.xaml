@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCBattleNetNotLoggedIn">Verificatie vereist</sys:String>
   <sys:String x:Key="LOCBattleNetNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCBattleNetAuthenticateLabel">Verifiëren</sys:String>
+  <sys:String x:Key="LOCBattleNetAuthenticateAlternativeLabel">Alternatieve authenticatie</sys:String>
   <sys:String x:Key="LOCBattleNetSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
   <sys:String x:Key="LOCBattleNetTroubleShootingIssues">Probleemoplossing</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCBattleNetStartUsingClient">Starten met {0} client</sys:String>
   <sys:String x:Key="LOCBattleNetImportPlaytime">Importeer speeltijd</sys:String>
   <sys:String x:Key="LOCBattleNetAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCBattleNetGetAccountID">Account-ID verkrijgen</sys:String>
   <sys:String x:Key="LOCBattleNetMetadataLanguageLabel">Metadata taal:</sys:String>
+  <!--BattleNet-->
+  <sys:String x:Key="LOCBattleNetAccountSyncNotice" xml:space="preserve">Battle.net-integratie heeft een lang probleem waar geverifieerd account willekeurig kan uitgelogd worden.
+
+Tot het probleem is opgelost, raden we aan om een account te koppelen, spellen te importeren en account te ontkoppelen. Je moet het proces alleen herhalen wanneer een nieuw spel is toegevoegd aan je account.</sys:String>
 </ResourceDictionary>

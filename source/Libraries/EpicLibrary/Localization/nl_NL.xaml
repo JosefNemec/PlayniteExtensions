@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">Verificatie vereist</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Verifiëren</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">Alternatieve authenticatie</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">Probleemoplossing</sys:String>
@@ -18,5 +19,13 @@
   <sys:String x:Key="LOCEpicStartUsingClient">Starten met {0} client</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Importeer speeltijd</sys:String>
   <sys:String x:Key="LOCEpicAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">Account-ID verkrijgen</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Metadata taal:</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">Importeer EA App games</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">Importeer Ubisoft spellen</sys:String>
+  <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Log in op de Epic webwinkel in uw standaard browser
+2. Navigeer naar de verificatiecodepagina door op OK te klikken in dit dialoogvenster
+3. Voeg "authorizationCode" in, in het volgende dialoogvenster</sys:String>
+  <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Voeg "autorisatiecode" waarde in</sys:String>
 </ResourceDictionary>

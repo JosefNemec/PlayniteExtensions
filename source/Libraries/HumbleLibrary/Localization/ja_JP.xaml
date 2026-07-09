@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCHumbleNotLoggedIn">認証が必要です</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">ユーザー認証に失敗しました。</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">認証</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateAlternativeLabel">代替認証</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">公式クライアントを起動しないでゲームを直接起動する</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">アカウント同期問題のトラブルシューティング</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">問題のトラブルシューティング</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">{0} クライアントの使用を開始</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">プレイ時間をインポート</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">アカウントID</sys:String>
+  <sys:String x:Key="LOCHumbleGetAccountID">アカウント ID を取得</sys:String>
   <sys:String x:Key="LOCHumbleMetadataLanguageLabel">メタデータの言語</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">サードパーティー製のストアのゲームを無視する</sys:String>

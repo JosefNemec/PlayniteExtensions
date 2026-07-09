@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCHumbleNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
   <sys:String x:Key="LOCHumbleNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCHumbleAuthenticateLabel">Kimlik Doğrulaması</sys:String>
+  <sys:String x:Key="LOCHumbleAuthenticateAlternativeLabel">Alternatif kimlik doğrulaması</sys:String>
   <sys:String x:Key="LOCHumbleSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingAccountLink">Hesap eşitleme sorunlarını giderme</sys:String>
   <sys:String x:Key="LOCHumbleTroubleShootingIssues">Sorunları giderme</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCHumbleStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCHumbleImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCHumbleAccountID">Hesap kimliği</sys:String>
+  <sys:String x:Key="LOCHumbleGetAccountID">Hesap ID al</sys:String>
   <sys:String x:Key="LOCHumbleMetadataLanguageLabel">Üst veri dili:</sys:String>
   <!--Humble-->
   <sys:String x:Key="LOCHumbleIgnoreThirdPartyStoreGames">Üçüncü parti mağaza oyunlarını yok say</sys:String>

@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">Krever autentisering</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">Brukerautentisering mislyktes.</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">Autentiser</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">Alternativ autentisering</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">Start spill direkte uten å kjøre offisiell klient</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">Feilsøking for kontosynkroniseringsproblemer</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">Feilsøking av problemer</sys:String>
@@ -18,5 +19,13 @@
   <sys:String x:Key="LOCEpicStartUsingClient">Begynn å bruke {0}-klient</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">Importer spilletid</sys:String>
   <sys:String x:Key="LOCEpicAccountID">Konto-ID</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">Hent konto-ID</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">Språk for metadata:</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">Importer EA App-spill</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">Importer Ubisoft-spill</sys:String>
+  <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1. Logg inn i Epic Web Store i standardnettleseren din
+2. Naviger til autentiseringskodesiden ved å trykke på OK i denne dialogboksen
+3. Fyll inn autentiseringskoden i den neste dialogboksen</sys:String>
+  <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">Fyll inn autentiseringskode</sys:String>
 </ResourceDictionary>

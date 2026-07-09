@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCAmazonNotLoggedIn">يتطلب المصادقة</sys:String>
   <sys:String x:Key="LOCAmazonNotLoggedInError">فشل في مصادقة المستخدم.</sys:String>
   <sys:String x:Key="LOCAmazonAuthenticateLabel">مصادقة</sys:String>
+  <sys:String x:Key="LOCAmazonAuthenticateAlternativeLabel">المصادقة البديلة</sys:String>
   <sys:String x:Key="LOCAmazonSettingsStartGameDirectly">بدء تشغيل الألعاب مباشرة دون تشغيل المنصة الرسمية</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingAccountLink">استكشاف مشاكل مزامنة الحساب وإصلاحها</sys:String>
   <sys:String x:Key="LOCAmazonTroubleShootingIssues">استكشاف الأخطاء وإصلاحها</sys:String>
@@ -18,5 +19,6 @@
   <sys:String x:Key="LOCAmazonStartUsingClient">بدء باستخدام {0} عميل</sys:String>
   <sys:String x:Key="LOCAmazonImportPlaytime">استيراد وقت التشغيل</sys:String>
   <sys:String x:Key="LOCAmazonAccountID">تعريف الحساب</sys:String>
+  <sys:String x:Key="LOCAmazonGetAccountID">الحصول على معرف الحساب</sys:String>
   <sys:String x:Key="LOCAmazonMetadataLanguageLabel">لغة بيانات التعريف:</sys:String>
 </ResourceDictionary>

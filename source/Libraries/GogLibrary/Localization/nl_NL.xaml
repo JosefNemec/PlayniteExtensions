@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCGOGNotLoggedIn">Verificatie vereist</sys:String>
   <sys:String x:Key="LOCGOGNotLoggedInError">Kan gebruiker niet verifiëren</sys:String>
   <sys:String x:Key="LOCGOGAuthenticateLabel">Verifiëren</sys:String>
+  <sys:String x:Key="LOCGOGAuthenticateAlternativeLabel">Alternatieve authenticatie</sys:String>
   <sys:String x:Key="LOCGOGSettingsStartGameDirectly">Start games zonder de officiële client op te starten.</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingAccountLink">Probleemoplossing account synchronisatie</sys:String>
   <sys:String x:Key="LOCGOGTroubleShootingIssues">Probleemoplossing</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCGOGStartUsingClient">Starten met {0} client</sys:String>
   <sys:String x:Key="LOCGOGImportPlaytime">Importeer speeltijd</sys:String>
   <sys:String x:Key="LOCGOGAccountID">Account ID</sys:String>
+  <sys:String x:Key="LOCGOGGetAccountID">Account-ID verkrijgen</sys:String>
   <sys:String x:Key="LOCGOGMetadataLanguageLabel">Metadata taal:</sys:String>
   <!--GOG-->
   <sys:String x:Key="LOCGOGUseLogin">Account login</sys:String>
@@ -29,4 +31,5 @@ Houd er rekening mee dat de optie Accountnaam alleen werkt voor accounts waarvan
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstalls">Automatisch start het installatieproces bij het installeren van spellen op GOG Galaxy</sys:String>
   <sys:String x:Key="LOCGOGSettingsUseAutomaticGameInstallsTooltip" xml:space="preserve">Indien ingeschakeld, zal het installatieproces automatisch worden gestart zonder gebruikersinteractie nodig te hebben op de geconfigureerde standaardinstallatie-locatie.
 Als dit is uitgeschakeld, wordt de spelpagina geopend om het installatieproces handmatig te starten.</sys:String>
+  <sys:String x:Key="LOCGOGSettingsUseVerticalCovers">Gebruik verticale covers</sys:String>
 </ResourceDictionary>

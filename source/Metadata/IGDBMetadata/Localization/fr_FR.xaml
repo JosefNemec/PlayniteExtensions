@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCIGDBNotLoggedIn">Statut : Authentification requise</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedInError">Impossible de connecter l'utilisateur.</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">Connexion</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateAlternativeLabel">Authentification alternative</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">Lancer les jeux sans passer par le client officiel</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">Régler les problèmes de synchronisation</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">Résolution des problèmes</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">Lancer avec le client {0}</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">Importer le temps de jeu</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">ID du compte</sys:String>
+  <sys:String x:Key="LOCIGDBGetAccountID">Obtenir l'ID du compte</sys:String>
   <sys:String x:Key="LOCIGDBMetadataLanguageLabel">Langue des métadonnées :</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">Utiliser des captures d'écran si aucune image de fond n'est disponible</sys:String>

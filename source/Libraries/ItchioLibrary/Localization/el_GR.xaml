@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCitchioNotLoggedIn">Απαιτείται πιστοποίηση</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedInError">Αδυναμία πιστοποίησης του χρήστη</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">Πιστοποίηση</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateAlternativeLabel">Εναλλακτική ταυτοποίηση</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Απευθείας εκκίνηση των παιχνιδιών χωρίς τη χρήση της επίσημης εφαρμογής</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Αντιμετώπιση προβλημάτων συγχρονισμού του λογαριασμού</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingIssues">Αντιμετώπιση προβλημάτων</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">Ξεκινήστε να χρησιμοποιείτε την εφαρμογή {0}</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Εισαγωγή ωρών παιχνιδιού</sys:String>
   <sys:String x:Key="LOCitchioAccountID">ID Λογαριασμού</sys:String>
+  <sys:String x:Key="LOCitchioGetAccountID">Εύρεση ID λογαριασμού</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">Γλώσσα μεταδεδόμενων:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">Το itch.io θα εκκινηθεί. Συνδεθείτε και έπειτα κλείστε αυτό το μήνυμα.</sys:String>

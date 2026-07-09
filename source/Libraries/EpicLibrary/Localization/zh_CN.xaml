@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCEpicNotLoggedIn">需要身份认证</sys:String>
   <sys:String x:Key="LOCEpicNotLoggedInError">用户身份验证失败。</sys:String>
   <sys:String x:Key="LOCEpicAuthenticateLabel">身份验证</sys:String>
+  <sys:String x:Key="LOCEpicAuthenticateAlternativeLabel">其他身份验证</sys:String>
   <sys:String x:Key="LOCEpicSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingAccountLink">账户同步疑难解答</sys:String>
   <sys:String x:Key="LOCEpicTroubleShootingIssues">疑难解答</sys:String>
@@ -18,5 +19,13 @@
   <sys:String x:Key="LOCEpicStartUsingClient">使用 {0} 客户端启动</sys:String>
   <sys:String x:Key="LOCEpicImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCEpicAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCEpicGetAccountID">获取账户 ID</sys:String>
   <sys:String x:Key="LOCEpicMetadataLanguageLabel">元数据语言：</sys:String>
+  <!--Epic-->
+  <sys:String x:Key="LOCEpicImportEAGames">导入 EA 游戏</sys:String>
+  <sys:String x:Key="LOCEpicImportUbisoftGames">导入 Ubisoft 游戏</sys:String>
+  <sys:String x:Key="LOCEpicAlternativeAuthInstructions" xml:space="preserve">1.在默认浏览器中登录 Epic 游戏商城。
+2.在对话框中点击 “确定”，进入验证码页面。
+3.在接下来的对话框中输入 “授权码” 。</sys:String>
+  <sys:String x:Key="LOCEpicAuthCodeInputMessage" xml:space="preserve">请在指定字段中输入 “授权码” </sys:String>
 </ResourceDictionary>

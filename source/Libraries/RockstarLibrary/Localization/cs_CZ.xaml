@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCRockstarNotLoggedIn">Vyžaduje přihlášení</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedInError">Přihlášení se nezdařilo.</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Autentizovat</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateAlternativeLabel">Alternativní autentizace</sys:String>
   <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Spustit hru přímo bez použití oficiálního klienta</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Řešení problémů se synchronizací účtu</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues">Řešení potíží</sys:String>
@@ -18,5 +19,8 @@
   <sys:String x:Key="LOCRockstarStartUsingClient">Začít používat {0} klienta.</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Importovat nahraný čas</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">ID účtu</sys:String>
+  <sys:String x:Key="LOCRockstarGetAccountID">Získat ID účtu</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Jazyk metadat:</sys:String>
+  <!--Rockstar-->
+  <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">Rockstar plugin momentálně importuje pouze nainstalované hry. Neexistuje způsob, jak propojit účet pro import všech her.</sys:String>
 </ResourceDictionary>

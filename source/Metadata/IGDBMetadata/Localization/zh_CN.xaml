@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCIGDBNotLoggedIn">需要身份认证</sys:String>
   <sys:String x:Key="LOCIGDBNotLoggedInError">用户身份验证失败。</sys:String>
   <sys:String x:Key="LOCIGDBAuthenticateLabel">身份验证</sys:String>
+  <sys:String x:Key="LOCIGDBAuthenticateAlternativeLabel">其他身份验证</sys:String>
   <sys:String x:Key="LOCIGDBSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingAccountLink">账户同步疑难解答</sys:String>
   <sys:String x:Key="LOCIGDBTroubleShootingIssues">疑难解答</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCIGDBStartUsingClient">使用 {0} 客户端启动</sys:String>
   <sys:String x:Key="LOCIGDBImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCIGDBAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCIGDBGetAccountID">获取账户 ID</sys:String>
   <sys:String x:Key="LOCIGDBMetadataLanguageLabel">元数据语言：</sys:String>
   <!--IGDB-->
   <sys:String x:Key="LOCIgdbUseScreenshotIfNecessary">在无法使用艺术作品的时候使用截图</sys:String>

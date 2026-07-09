@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCSteamNotLoggedIn">需要身份认证</sys:String>
   <sys:String x:Key="LOCSteamNotLoggedInError">用户身份验证失败。</sys:String>
   <sys:String x:Key="LOCSteamAuthenticateLabel">身份验证</sys:String>
+  <sys:String x:Key="LOCSteamAuthenticateAlternativeLabel">其他身份验证</sys:String>
   <sys:String x:Key="LOCSteamSettingsStartGameDirectly">直接运行游戏，不启动官方客户端</sys:String>
   <sys:String x:Key="LOCSteamTroubleShootingAccountLink">账户同步疑难解答</sys:String>
   <sys:String x:Key="LOCSteamTroubleShootingIssues">疑难解答</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCSteamStartUsingClient">使用 {0} 客户端启动</sys:String>
   <sys:String x:Key="LOCSteamImportPlaytime">导入游玩时间</sys:String>
   <sys:String x:Key="LOCSteamAccountID">账户 ID</sys:String>
+  <sys:String x:Key="LOCSteamGetAccountID">获取账户 ID</sys:String>
   <sys:String x:Key="LOCSteamMetadataLanguageLabel">元数据语言：</sys:String>
   <!--Steam-->
   <sys:String x:Key="LOCSettingsWhatsSteamName">我的账户名称是什么？</sys:String>
@@ -61,7 +63,24 @@
   <sys:String x:Key="LOCSteamTagBlacklistHeader">已排除标签</sys:String>
   <sys:String x:Key="LOCSteamTagWhitelistTooltip">从已排除标签中移除</sys:String>
   <sys:String x:Key="LOCSteamTagBlacklistTooltip">添加到已排除标签</sys:String>
+  <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixLabel">设置标签类型为前缀</sys:String>
+  <sys:String x:Key="LOCSteamSetTagCategoryAsPrefixTooltip">设置标签所属的类别作为前缀。例如，"动作 RPG" 会变成"类型：动作 RPG"</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryAssessments">评估</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryFeatures">特色</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryFundingEtc">资金</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryGenres">类型</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryHardwareInput">硬件/输入</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryOtherTags">其它标签</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryPlayers">玩家人数</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryRatingsEtc">评分</sys:String>
+  <sys:String x:Key="LOCSteamTagCategorySoftware">软件</sys:String>
+  <sys:String x:Key="LOCSteamTagCategorySubGenres">子类型</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryThemesMoods">主题与气氛</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryTopLevelGenres">主类型</sys:String>
+  <sys:String x:Key="LOCSteamTagCategoryVisualsViewpoint">视觉元素与视角</sys:String>
   <sys:String x:Key="LOCSteamValidationFixedTagCount">固定标签数量必须是一个有效的数字</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInDesktopMode">在桌面模式下显示 Steam 游戏启动选择菜单</sys:String>
   <sys:String x:Key="LOCSteamShowGameLaunchMenuInFullscreenMode">在全屏模式下显示 Steam 游戏启动选择菜单</sys:String>
+  <sys:String x:Key="LOCSteamImportSteamDeckCompatibilityAs">Steam Deck 兼容</sys:String>
+  <sys:String x:Key="LOCSteamWebVsApiLogin">我应该使用 Web 还是 API 登录？</sys:String>
 </ResourceDictionary>

@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCUbisoftNotLoggedIn">Felhasználói hitelesítés szükséges.</sys:String>
   <sys:String x:Key="LOCUbisoftNotLoggedInError">Felhasználói hitelesítés sikertelen.</sys:String>
   <sys:String x:Key="LOCUbisoftAuthenticateLabel">Bejelentkezés</sys:String>
+  <sys:String x:Key="LOCUbisoftAuthenticateAlternativeLabel">Alternatív azonosítás</sys:String>
   <sys:String x:Key="LOCUbisoftSettingsStartGameDirectly">Játékok indítása a hivatalos kliens futtatása nélkül</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingAccountLink">Fiók szinkronizálási hibaelhárító</sys:String>
   <sys:String x:Key="LOCUbisoftTroubleShootingIssues">Hibaelhárítás</sys:String>
@@ -18,5 +19,10 @@
   <sys:String x:Key="LOCUbisoftStartUsingClient">{0} használata</sys:String>
   <sys:String x:Key="LOCUbisoftImportPlaytime">Játékidő importálása</sys:String>
   <sys:String x:Key="LOCUbisoftAccountID">Fióknév</sys:String>
+  <sys:String x:Key="LOCUbisoftGetAccountID">Fiókazonosító lekérdezése</sys:String>
   <sys:String x:Key="LOCUbisoftMetadataLanguageLabel">Metaadat nyelve:</sys:String>
+  <!--Ubisoft-->
+  <sys:String x:Key="LOCUbisoftSettingsNotice" xml:space="preserve">Az Ubisoft beépülője nem igényel hitelesítést, a könyvtárinformációkat az Ubisoft Connect kliens felhasználói fájljai közül szedi.
+
+Ha problémák vannak az importálással, győződj meg róla, hogy az Ubi kliens fel van telepítve, és be vagy benne jelentkezve.</sys:String>
 </ResourceDictionary>

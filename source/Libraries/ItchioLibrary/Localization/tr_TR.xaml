@@ -8,6 +8,7 @@
   <sys:String x:Key="LOCitchioNotLoggedIn">Kimlik doğrulaması gerektiriyor</sys:String>
   <sys:String x:Key="LOCitchioNotLoggedInError">Kullanıcı kimliği doğrulanamadı.</sys:String>
   <sys:String x:Key="LOCitchioAuthenticateLabel">Kimlik Doğrulaması</sys:String>
+  <sys:String x:Key="LOCitchioAuthenticateAlternativeLabel">Alternatif kimlik doğrulaması</sys:String>
   <sys:String x:Key="LOCitchioSettingsStartGameDirectly">Oyunu resmi istemciyi çalıştırmadan doğrudan başlat</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingAccountLink">Hesap eşitleme sorunlarını giderme</sys:String>
   <sys:String x:Key="LOCitchioTroubleShootingIssues">Sorunları giderme</sys:String>
@@ -18,6 +19,7 @@
   <sys:String x:Key="LOCitchioStartUsingClient">{0} istemcisini kullanarak başlat</sys:String>
   <sys:String x:Key="LOCitchioImportPlaytime">Oynama zamanını içe aktar</sys:String>
   <sys:String x:Key="LOCitchioAccountID">Hesap kimliği</sys:String>
+  <sys:String x:Key="LOCitchioGetAccountID">Hesap ID al</sys:String>
   <sys:String x:Key="LOCitchioMetadataLanguageLabel">Üst veri dili:</sys:String>
   <!--itch.io-->
   <sys:String x:Key="LOCItchioSignInNotif">itch.io başlatılacaktır. Lütfen oturum açın ve ardından bu mesajı kapatın.</sys:String>

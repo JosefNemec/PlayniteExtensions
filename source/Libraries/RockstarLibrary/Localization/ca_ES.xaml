@@ -8,15 +8,19 @@
   <sys:String x:Key="LOCRockstarNotLoggedIn">Requereix autenticació</sys:String>
   <sys:String x:Key="LOCRockstarNotLoggedInError">No s’ha pogut autenticar l’usuari.</sys:String>
   <sys:String x:Key="LOCRockstarAuthenticateLabel">Autenticar</sys:String>
-  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Arrencar jocs directament sense executar el client oficial</sys:String>
+  <sys:String x:Key="LOCRockstarAuthenticateAlternativeLabel">Autentificació alternativa</sys:String>
+  <sys:String x:Key="LOCRockstarSettingsStartGameDirectly">Iniciar jocs directament sense executar el client oficial</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingAccountLink">Resolució de problemes de sincronització del compte</sys:String>
   <sys:String x:Key="LOCRockstarTroubleShootingIssues">Resolució de problemes</sys:String>
   <sys:String x:Key="LOCRockstarSettingsImportLibraryLabel">Importar tots els jocs</sys:String>
   <sys:String x:Key="LOCRockstarPrivateAccount">Compte privat</sys:String>
   <sys:String x:Key="LOCRockstarPublicAccount">Compte públic</sys:String>
   <sys:String x:Key="LOCRockstarAPIKey">Clau API</sys:String>
-  <sys:String x:Key="LOCRockstarStartUsingClient">Iniciar mitjançant el client de {0}</sys:String>
+  <sys:String x:Key="LOCRockstarStartUsingClient">Iniciar a través del client {0}</sys:String>
   <sys:String x:Key="LOCRockstarImportPlaytime">Importar temps de joc</sys:String>
   <sys:String x:Key="LOCRockstarAccountID">ID del compte</sys:String>
+  <sys:String x:Key="LOCRockstarGetAccountID">Obtenir l'ID del compte</sys:String>
   <sys:String x:Key="LOCRockstarMetadataLanguageLabel">Idioma de les metadades:</sys:String>
+  <!--Rockstar-->
+  <sys:String x:Key="LOCRockstarSettingsNotice" xml:space="preserve">El complement Rockstar ara per ara només importa jocs instal·lats. No hi ha manera d'enllaçar un compte per importar tots els jocs.</sys:String>
 </ResourceDictionary>
