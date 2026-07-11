@@ -13,3 +13,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_21.pext
     Changelog:
       - Added option to import non-game library items as separate game entires (by Rast1234)
+  - Version: 2.22
+    RequiredApiVersion: 6.14.0
+    ReleaseDate: 2026-07-11
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/GogLibrary_Builtin_2_22.pext
+    Changelog:
+      - Fixed metadata downloads not working
