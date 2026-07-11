@@ -61,8 +61,8 @@ namespace GogLibrary
             {
                 storeData.Genres = storeData.StoreDetails.genres?.Select(a => new MetadataNameProperty(a.name)).ToHashSet<MetadataProperty>();
                 storeData.Features = storeData.StoreDetails.features?.Where(a => a.name != "Overlay").Select(a => new MetadataNameProperty(a.name)).ToHashSet<MetadataProperty>();
-                storeData.Developers = storeData.StoreDetails.developers.Select(a => new MetadataNameProperty(a.name)).ToHashSet<MetadataProperty>();
-                storeData.Publishers = new HashSet<MetadataProperty>() { new MetadataNameProperty(storeData.StoreDetails.publisher) };
+                storeData.Developers = storeData.StoreDetails.developers?.Select(a => new MetadataNameProperty(a.name)).ToHashSet<MetadataProperty>();
+                storeData.Publishers = storeData.StoreDetails.publishers?.Select(a => new MetadataNameProperty(a.name)).ToHashSet<MetadataProperty>();
                 storeData.Tags = storeData.StoreDetails.gameTags?.Select(t => new MetadataNameProperty(t.name)).ToHashSet<MetadataProperty>();
                 if (storeData.ReleaseDate == null && storeData.StoreDetails.globalReleaseDate != null)
                 {
