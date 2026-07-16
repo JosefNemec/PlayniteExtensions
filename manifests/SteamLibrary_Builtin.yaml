@@ -30,3 +30,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_41.pext
     Changelog:
       - Added option to disable SteamDB's community score formula
+  - Version: 2.42
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2026-07-16
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_42.pext
+    Changelog:
+      - Fixed play time import from extra accounts not working
