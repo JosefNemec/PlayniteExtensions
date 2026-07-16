@@ -126,12 +126,21 @@ namespace SteamLibrary.Services
                     }
                 }
 
-                foreach (var extraAccount in ParseAdditionalAccounts(settings))
+                if (settings.AdditionalAccounts.HasItems())
                 {
-                    if (familySharingUserIds.Contains(extraAccount.Item1.ToString()))
-                        logger.Info($"Skipped extra account import for {extraAccount.Item1} because it's in the family sharing group");
-                    else
-                        TryAddGames(() => playerService.GetOwnedGamesApiKey(settings, extraAccount.Item1, extraAccount.Item2, false, false), $"Extra Account ({extraAccount.Item1})", onlineLibraryGameIds, true);
+                    foreach (var account in settings.AdditionalAccounts)
+                    {
+                        if (!ulong.TryParse(account.AccountId, out var accountId))
+                        {
+                            logger.Error($"Steam account ID provided ({account.AccountId}) is not valid account ID.");
+                            continue;
+                        }
+
+                        if (familySharingUserIds.Contains(account.AccountId))
+                            logger.Info($"Skipped extra account import for {accountId} because it's in the family sharing group");
+                        else
+                            TryAddGames(() => playerService.GetOwnedGamesApiKey(settings, accountId,  account.RuntimeApiKey, false, account.ImportPlayTime), $"Extra Account ({accountId})", onlineLibraryGameIds, true);
+                    }
                 }
 
                 if (settings.IgnoreOtherInstalled)
@@ -286,24 +295,6 @@ namespace SteamLibrary.Services
                     Source = new MetadataNameProperty(SourceNames.Steam),
                     Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
-            }
-        }
-
-        private IEnumerable<Tuple<ulong, string>> ParseAdditionalAccounts(SteamLibrarySettings settings)
-        {
-            if (!settings.AdditionalAccounts.HasItems())
-                yield break;
-
-            foreach (var account in settings.AdditionalAccounts)
-            {
-                if (ulong.TryParse(account.AccountId, out var id))
-                {
-                    yield return new Tuple<ulong, string>(id, account.RuntimeApiKey);
-                }
-                else
-                {
-                    logger.Error($"Steam account ID provided ({account.AccountId}) is not valid account ID.");
-                }
             }
         }
 
