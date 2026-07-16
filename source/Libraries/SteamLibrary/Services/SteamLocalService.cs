@@ -1,12 +1,12 @@
 using Playnite.Common;
 using Playnite.SDK;
-using Playnite.SDK.Models;
 using SteamKit2;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using SteamLibrary.Models;
 
 namespace SteamLibrary.Services
 {
@@ -69,7 +69,7 @@ namespace SteamLibrary.Services
             return result;
         }
 
-        internal static GameMetadata GetInstalledGameFromFile(string path)
+        internal static LocalSteamApp GetInstalledGameFromFile(string path)
         {
             var kv = new KeyValue();
             using (var fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
@@ -113,22 +113,17 @@ namespace SteamLibrary.Services
                 }
             }
 
-            var game = new GameMetadata()
+            return new LocalSteamApp()
             {
-                // no source because normal/family sharing source is determined later in SteamServiceAggregator
-                GameId = gameId.ToString(),
+                Id = gameId,
                 Name = name.RemoveTrademarks().Trim(),
-                InstallDirectory = installDir,
-                IsInstalled = true,
-                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
+                InstallDir = installDir
             };
-
-            return game;
         }
 
-        internal static List<GameMetadata> GetInstalledGamesFromFolder(string path)
+        internal static List<LocalSteamApp> GetInstalledGamesFromFolder(string path)
         {
-            var games = new List<GameMetadata>();
+            var games = new List<LocalSteamApp>();
 
             foreach (var file in Directory.GetFiles(path, @"appmanifest*"))
             {
@@ -145,7 +140,7 @@ namespace SteamLibrary.Services
                         continue;
                     }
 
-                    if (game.InstallDirectory.IsNullOrEmpty() || game.InstallDirectory.Contains(@"steamapps\music"))
+                    if (game.InstallDir.IsNullOrEmpty() || game.InstallDir.Contains(@"steamapps\music"))
                     {
                         logger.Info($"Steam game {game.Name} is not properly installed or it's a soundtrack, skipping.");
                         continue;
@@ -163,9 +158,9 @@ namespace SteamLibrary.Services
             return games;
         }
 
-        internal static List<GameMetadata> GetInstalledGoldSrcModsFromFolder(string path)
+        internal static List<ModInfo> GetInstalledGoldSrcModsFromFolder(string path)
         {
-            var games = new List<GameMetadata>();
+            var games = new List<ModInfo>();
             var dirInfo = new DirectoryInfo(path);
 
             foreach (var folder in dirInfo.GetDirectories().Where(a => !firstPartyModPrefixes.Any(prefix => a.Name.StartsWith(prefix))).Select(a => a.FullName))
@@ -188,9 +183,9 @@ namespace SteamLibrary.Services
             return games;
         }
 
-        internal static List<GameMetadata> GetInstalledSourceModsFromFolder(string path)
+        internal static List<ModInfo> GetInstalledSourceModsFromFolder(string path)
         {
-            var games = new List<GameMetadata>();
+            var games = new List<ModInfo>();
 
             foreach (var folder in Directory.GetDirectories(path))
             {
@@ -212,38 +207,14 @@ namespace SteamLibrary.Services
             return games;
         }
 
-        internal static GameMetadata GetInstalledModFromFolder(string path, ModInfo.ModType modType)
+        internal static ModInfo GetInstalledModFromFolder(string path, ModInfo.ModType modType)
         {
-            var modInfo = ModInfo.GetFromFolder(path, modType);
-            if (modInfo == null)
-            {
-                return null;
-            }
-
-            var game = new GameMetadata
-            {
-                Source = new MetadataNameProperty(SourceNames.Steam),
-                GameId = modInfo.GameId.ToString(),
-                Name = modInfo.Name.RemoveTrademarks().Trim(),
-                InstallDirectory = path,
-                IsInstalled = true,
-                Developers = new HashSet<MetadataProperty> { new MetadataNameProperty(modInfo.Developer) },
-                Links = modInfo.Links,
-                Tags = modInfo.Categories?.Select(a => new MetadataNameProperty(a)).Cast<MetadataProperty>().ToHashSet(),
-                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
-            };
-
-            if (!modInfo.IconPath.IsNullOrEmpty() && File.Exists(modInfo.IconPath))
-            {
-                game.Icon = new MetadataFile(modInfo.IconPath);
-            }
-
-            return game;
+            return ModInfo.GetFromFolder(path, modType);
         }
 
-        internal static Dictionary<string, GameMetadata> GetInstalledGames(bool includeMods = true)
+        internal static Dictionary<string, ISteamApp> GetInstalledGames(bool includeMods)
         {
-            var games = new Dictionary<string, GameMetadata>();
+            var games = new Dictionary<string, ISteamApp>();
             if (!Steam.IsInstalled)
             {
                 throw new Exception("Steam installation not found.");
@@ -257,14 +228,14 @@ namespace SteamLibrary.Services
                     GetInstalledGamesFromFolder(libFolder).ForEach(a =>
                     {
                         // Ignore redist
-                        if (a.GameId == "228980")
+                        if (a.Id == "228980")
                         {
                             return;
                         }
 
-                        if (!games.ContainsKey(a.GameId))
+                        if (!games.ContainsKey(a.Id))
                         {
-                            games.Add(a.GameId, a);
+                            games.Add(a.Id, a);
                         }
                     });
                 }
@@ -284,9 +255,9 @@ namespace SteamLibrary.Services
                     {
                         GetInstalledGoldSrcModsFromFolder(Steam.ModInstallPath).ForEach(a =>
                         {
-                            if (!games.ContainsKey(a.GameId))
+                            if (!games.ContainsKey(a.Id))
                             {
-                                games.Add(a.GameId, a);
+                                games.Add(a.Id, a);
                             }
                         });
                     }
@@ -297,9 +268,9 @@ namespace SteamLibrary.Services
                     {
                         GetInstalledSourceModsFromFolder(Steam.SourceModInstallPath).ForEach(a =>
                         {
-                            if (!games.ContainsKey(a.GameId))
+                            if (!games.ContainsKey(a.Id))
                             {
-                                games.Add(a.GameId, a);
+                                games.Add(a.Id, a);
                             }
                         });
                     }

@@ -28,6 +28,11 @@ namespace SteamLibrary
 
         public override void Install(InstallActionArgs args)
         {
+            if (HandleVideos())
+            {
+                return;
+            }
+
             if (!Steam.IsInstalled)
             {
                 throw new Exception("Steam installation not found.");
@@ -61,9 +66,10 @@ namespace SteamLibrary
                     var installed = SteamLocalService.GetInstalledGames(false);
                     if (installed.TryGetValue(id, out var installedGame))
                     {
+                        var game = installedGame.ToGame();
                         var installInfo = new GameInstallationData
                         {
-                            InstallDirectory = installedGame.InstallDirectory
+                            InstallDirectory = game.InstallDirectory
                         };
 
                         InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
@@ -74,6 +80,21 @@ namespace SteamLibrary
                 }
             });
         }
+
+        private bool HandleVideos()
+        {
+            if (Game.Source.Name != SourceNames.Video)
+            {
+                return false;
+            }
+
+            var url = GetExtraUrl(Game.GameId);
+            ProcessStarter.StartUrl(url);
+            InvokeOnInstallationCancelled(new GameInstallationCancelledEventArgs());
+            return true;
+        }
+
+        private string GetExtraUrl(string steamId) => $"https://store.steampowered.com/video/watch/{steamId}";
     }
 
     public class SteamUninstallController : UninstallController
@@ -159,6 +180,7 @@ namespace SteamLibrary
 
         public override void Play(PlayActionArgs args)
         {
+
             Dispose();
 
             var steamExe = Steam.ClientExecPath;
@@ -171,9 +193,10 @@ namespace SteamLibrary
             if (gameId.IsMod)
             {
                 var allGames = SteamLocalService.GetInstalledGames(false);
-                if (allGames.TryGetValue(gameId.AppID.ToString(), out GameMetadata realGame))
+                if (allGames.TryGetValue(gameId.AppID.ToString(), out var realGame))
                 {
-                    installDirectory = realGame.InstallDirectory;
+                    var game = realGame.ToGame();
+                    installDirectory = game.InstallDirectory;
                 }
             }
 

@@ -1,21 +1,24 @@
-using Playnite.SDK.Models;
 using SteamLibrary.Models;
 using SteamLibrary.Services.Base;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace SteamLibrary.Services
 {
     public class PlayerService : SteamApiServiceBase
     {
-        public IEnumerable<GameMetadata> GetOwnedGamesWeb(SteamLibrarySettings settings, SteamUserToken userToken, bool freeSub) =>
-            PlayerServiceGetOwnedGames(settings, userToken.UserId, "access_token", userToken.AccessToken, freeSub, true);
+        /// <summary>
+        /// IPlayerService/GetOwnedGames
+        /// </summary>
+        public IEnumerable<ISteamApp> GetOwnedGamesWeb(SteamLibrarySettings settings, SteamUserToken userToken) =>
+            PlayerServiceGetOwnedGames(settings, userToken.UserId, "access_token", userToken.AccessToken, true);
 
-        public IEnumerable<GameMetadata> GetOwnedGamesApiKey(SteamLibrarySettings settings, ulong userId, string apiKey, bool freeSub, bool includePlaytime = true) =>
-            PlayerServiceGetOwnedGames(settings, userId, "key", apiKey, freeSub, includePlaytime);
+        /// <summary>
+        /// IPlayerService/GetOwnedGames
+        /// </summary>
+        public IEnumerable<ISteamApp> GetOwnedGamesApiKey(SteamLibrarySettings settings, ulong userId, string apiKey, bool includePlaytime = true) =>
+            PlayerServiceGetOwnedGames(settings, userId, "key", apiKey, includePlaytime);
 
-        private IEnumerable<GameMetadata> PlayerServiceGetOwnedGames(SteamLibrarySettings settings, ulong userId, string keyType, string key, bool freeSub, bool includePlaytime)
+        private IEnumerable<ISteamApp> PlayerServiceGetOwnedGames(SteamLibrarySettings settings, ulong userId, string keyType, string key, bool includePlaytime)
         {
             // For some reason Steam Web API likes to return 429 even if you
             // don't make a request in several hours, so just retry couple times.
@@ -27,30 +30,18 @@ namespace SteamLibrary.Services
                 { "steamid", userId.ToString() },
                 { "include_appinfo", "true" },
                 { "include_played_free_games", "true" },
-                { "include_free_sub", freeSub.ToString() },
+                { "include_free_sub", "true" },
+                { "skip_unvetted_apps", "false" },
                 { "language", settings.LanguageKey },
             };
             var response = Get<GetOwnedGamesResponse>("https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/", parameters, retrySettings);
-            return response.games.Select(g => ToGame(g, includePlaytime));
-        }
-
-        private static GameMetadata ToGame(OwnedGame game, bool includePlaytime)
-        {
-            var output = new GameMetadata
+            foreach (var game in response.games)
             {
-                GameId = game.appid.ToString(),
-                Name = game.name.RemoveTrademarks().Trim(),
-                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
-                Source = new MetadataNameProperty(SourceNames.Steam),
-            };
-
-            if (includePlaytime)
-            {
-                output.Playtime = game.playtime_forever * 60;
-                output.LastActivity = GetLastPlayedDateTime(game.rtime_last_played);
+                game.IncludePlaytime = includePlaytime;
             }
-
-            return output;
+            return response.games;
         }
+
+
     }
 }

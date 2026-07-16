@@ -3,12 +3,15 @@ using SteamKit2;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using SteamLibrary.Models;
+using SteamLibrary.Services;
 
 namespace SteamLibrary
 {
-    internal class ModInfo
+    internal class ModInfo : ISteamApp
     {
         public enum ModType
         {
@@ -17,7 +20,7 @@ namespace SteamLibrary
         }
 
         public string Name { get; private set; }
-        public GameID GameId { get; private set; }
+        public GameID Id { get; private set; }
         public string InstallFolder { get; private set; }
         public List<string> Categories { get; private set; }
         public string Developer { get; private set; }
@@ -49,7 +52,7 @@ namespace SteamLibrary
             InstallFolder = installFolder;
             Name = "Unknown Mod";
             Links = new List<Link>();
-            GameId = new GameID();
+            Id = new GameID();
             Developer = "Unknown";
             Categories = new List<string>();
         }
@@ -106,7 +109,7 @@ namespace SteamLibrary
             ModInfo modInfo = new ModInfo(modType, path);
             if (modType == ModType.HL)
             {
-                modInfo.GameId.AppID = halfLife;
+                modInfo.Id.AppID = halfLife;
                 PopulateModInfoFromLibList(ref modInfo, gameInfoPath);
             }
             else
@@ -114,8 +117,8 @@ namespace SteamLibrary
                 PopulateModInfoFromGameInfo(ref modInfo, gameInfoPath);
             }
 
-            modInfo.GameId.AppType = GameID.GameType.GameMod;
-            modInfo.GameId.ModID = GetModFolderCRC(dirInfo.Name);
+            modInfo.Id.AppType = GameID.GameType.GameMod;
+            modInfo.Id.ModID = GetModFolderCRC(dirInfo.Name);
 
             return modInfo;
         }
@@ -141,7 +144,7 @@ namespace SteamLibrary
             var gameInfo = new KeyValue();
             gameInfo.ReadFileAsText(path);
 
-            modInfo.GameId.AppID = gameInfo["FileSystem"]["SteamAppId"].AsUnsignedInteger();
+            modInfo.Id.AppID = gameInfo["FileSystem"]["SteamAppId"].AsUnsignedInteger();
             modInfo.Name = gameInfo["game"].Value;
 
             if (gameInfo["developer"] != KeyValue.Invalid)
@@ -279,5 +282,31 @@ namespace SteamLibrary
 
             return null;
         }
+
+        public GameMetadata ToGame()
+        {
+            var game = new GameMetadata
+            {
+                GameId = Id,
+                Name = Name.RemoveTrademarks().Trim(),
+                InstallDirectory = InstallFolder,
+                IsInstalled = true,
+                Developers = new HashSet<MetadataProperty> { new MetadataNameProperty(Developer) },
+                Links = Links,
+                Tags = Categories?.Select(a => new MetadataNameProperty(a)).Cast<MetadataProperty>().ToHashSet(),
+                Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
+                Source = SourceNames.GetSource(IsOwned, BackendAppInfo?.Type),
+            };
+
+            if (!IconPath.IsNullOrEmpty() && File.Exists(IconPath))
+            {
+                game.Icon = new MetadataFile(IconPath);
+            }
+
+            return game;
+        }
+
+        public bool IsOwned => true;
+        public BackendAppInfo BackendAppInfo { get; set; }
     }
 }

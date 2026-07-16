@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using SteamLibrary.Models;
 
 namespace SteamLibrary.Services
 {
@@ -35,7 +36,6 @@ namespace SteamLibrary.Services
         public async Task<IEnumerable<GameMetadata>> GetGamesAsync(SteamLibrarySettings settings)
         {
             var installedGameIds = new HashSet<string>();
-
             var allGames = new Dictionary<string, GameMetadata>();
             Exception importError = null;
 
@@ -61,17 +61,39 @@ namespace SteamLibrary.Services
                         if (existingGame.Playtime == 0)
                             existingGame.Playtime = game.Playtime;
 
-                        if (existingGame.Source == null)
-                            existingGame.Source = game.Source;
+                        existingGame.Source = game.Source;
                     }
                 }
             }
 
-            bool TryAddGames(Func<IEnumerable<GameMetadata>> getGamesFunc, string importSource, HashSet<string> gameIdsOutput = null, bool overwriteName = false)
+            bool TryAddGames(Func<IEnumerable<ISteamApp>> getGamesFunc, string importSource, HashSet<string> gameIdsOutput = null, bool overwriteName = false)
             {
                 try
                 {
-                    var games = getGamesFunc().ToList();
+                    var apps = getGamesFunc().ToList();
+                    var query = apps.Where(x => x.BackendAppInfo is null)
+                        .Select(x => x.Id)
+                        .Distinct()
+                        .ToList();
+                    var infos = playniteBackend.GetAppInfo(query).Result.ToDictionary(x => x.AppId);
+                    foreach (var app in apps)
+                    {
+                        if (infos.TryGetValue((uint) app.Id.ToUInt64(), out var info))
+                        {
+                            app.BackendAppInfo = info;
+                        }
+
+                        if (string.IsNullOrWhiteSpace(app.BackendAppInfo.Name) || string.IsNullOrWhiteSpace(app.BackendAppInfo.Type))
+                        {
+                            logger.Warn($"{app.Id} own={app.IsOwned} incomplete backend info: [{app.BackendAppInfo!.Name}] [{app.BackendAppInfo.Type}]");
+                        }
+                    }
+
+                    var games = apps
+                        .Where(x => Filter(x, settings))
+                        .Select(x => x.ToGame())
+                        .ToList();
+
                     logger.Info($"Found {games.Count} {importSource} Steam games.");
                     AddGames(games, overwriteName);
 
@@ -89,40 +111,69 @@ namespace SteamLibrary.Services
                 }
             }
 
-            if (settings.ImportInstalledGames)
-                TryAddGames(() => SteamLocalService.GetInstalledGames().Values, "Installed", installedGameIds);
+            if (settings.ImportInstalled)
+            {
+                TryAddGames(() => SteamLocalService.GetInstalledGames(settings.ImportInstalledMods).Values, "Installed", installedGameIds);
+            }
 
             if (settings.ConnectAccount)
             {
-                var onlineLibraryGameIds = new HashSet<string>();
+                var importedOnlineOwn = new HashSet<string>();
+                var importedOnlineFamily = new HashSet<string>();
                 var familySharingUserIds = new HashSet<string>();
-
-                if (settings.IsPrivateAccount)
+                if (settings.UseApiLogin)
                 {
                     if (settings.UserId.IsNullOrEmpty())
                     {
                         throw new Exception(playniteApi.Resources.GetString(LOC.SteamNotLoggedInError));
                     }
 
-                    TryAddGames(() => playerService.GetOwnedGamesApiKey(settings, ulong.Parse(settings.UserId), settings.RuntimeApiKey, settings.IncludeFreeSubGames), "PlayerService (API key)", onlineLibraryGameIds, true);
+                    TryAddGames(() => playerService.GetOwnedGamesApiKey(settings, ulong.Parse(settings.UserId), settings.RuntimeApiKey), "PlayerService (API key)", importedOnlineOwn, true);
                 }
                 else
                 {
                     try
                     {
                         var userToken = await storeService.GetAccessTokenAsync();
-                        TryAddGames(() => playerService.GetOwnedGamesWeb(settings, userToken, settings.IncludeFreeSubGames), "PlayerService (access token)", onlineLibraryGameIds, true);
+                        // endpoint query order is important: if a game gets imported as own and from family, "Steam" source should win
 
-                        if (!TryAddGames(() => clientCommService.GetClientAppList(settings, userToken), "GetClientAppList", onlineLibraryGameIds, true))
-                            TryAddGames(() => GetSteamStoreGamesAsync(settings, allGames).GetAwaiter().GetResult(), "userdata", onlineLibraryGameIds);
+                        if (settings.ImportGamesFamily || settings.ImportFreeFamily || settings.ImportToolsFamily || settings.ImportToolsOwn)
+                        {
+                            // game, demo, beta, tool - returns family content
+                            // also required to filter out family tools that steam wrongly displays as own
+                            // also returns all tools
+                            var familyGames = familyGroupsService.GetSharedGames(settings, userToken, familySharingUserIds);
+                            TryAddGames(() => familyGames, "Family Sharing", importedOnlineFamily, true);
+                        }
 
-                        if (settings.ImportFamilySharedGames)
-                            TryAddGames(() => familyGroupsService.GetSharedGames(settings, userToken, out familySharingUserIds), "Family Sharing", onlineLibraryGameIds, true);
+                        /*if (settings.ImportFreeOwn)
+                        {
+                            // demo - returns inconclusive data. better results with next endpoint, this can be skipped entirely
+                            var ownedGames = playerService.GetOwnedGamesWeb(settings, userToken);
+                            TryAddGames(() => ownedGames, "PlayerService (access token)", importedOnlineOwn, true);
+                        }*/
+
+                        if (settings.ImportFreeOwn || settings.ImportToolsOwn)
+                        {
+                            // demo, tool - returns all demos and some tools
+                            // works only when steam client is running. there is a note in UI about that
+                            var clientGames = clientCommService.GetClientAppList(settings, userToken).ToList();
+                            //FixToolsOwnership(clientGames, importedOnlineFamily);
+                            TryAddGames(() => clientGames, "GetClientAppList", importedOnlineOwn, true);
+                        }
+
+                        if (settings.ImportGamesOwn || settings.ImportAppsOwn || settings.ImportMediaOwn || settings.ImportFreeOwn)
+                        {
+                            // game, app, media, beta - returns everything perfectly without any issues
+                            // no need to query anything else for these types
+                            var userdataGames = await GetUserdataGamesAsync(settings);
+                            TryAddGames(() => userdataGames, "userdata", importedOnlineOwn, true);
+                        }
                     }
                     catch (Exception e)
                     {
                         importError = e;
-                        logger.Error(e, "Failed to get access token for Steam account.");
+                        logger.Error(e, "Failed to import Steam games");
                     }
                 }
 
@@ -131,13 +182,14 @@ namespace SteamLibrary.Services
                     if (familySharingUserIds.Contains(extraAccount.Item1.ToString()))
                         logger.Info($"Skipped extra account import for {extraAccount.Item1} because it's in the family sharing group");
                     else
-                        TryAddGames(() => playerService.GetOwnedGamesApiKey(settings, extraAccount.Item1, extraAccount.Item2, false, false), $"Extra Account ({extraAccount.Item1})", onlineLibraryGameIds, true);
+                        TryAddGames(() => playerService.GetOwnedGamesApiKey(settings, extraAccount.Item1, extraAccount.Item2, false), $"Extra Account ({extraAccount.Item1})", importedOnlineOwn, true);
                 }
 
-                if (settings.IgnoreOtherInstalled)
+                if (settings.ImportInstalledIgnoreOthers)
                 {
-                    var idsOfInstalledGamesFromAccountsNotUnderUserControl = installedGameIds.Except(onlineLibraryGameIds).ToList();
-                    foreach (var installedGameId in idsOfInstalledGamesFromAccountsNotUnderUserControl)
+                    // when a foreign game is installed AND also imported from family, there is no reason to exclude it
+                    var installedNotOwnedNotFamily = installedGameIds.Except(importedOnlineOwn).Except(importedOnlineFamily);
+                    foreach (var installedGameId in installedNotOwnedNotFamily)
                     {
                         if (IsModId(installedGameId))
                             continue;
@@ -163,50 +215,99 @@ namespace SteamLibrary.Services
                 playniteApi.Notifications.Remove(plugin.ImportErrorMessageId);
             }
 
-            var output = allGames.Values.Where(g => !g.Name.IsNullOrWhiteSpace() && (g.IsInstalled || settings.ImportUninstalledGames)).ToList();
-
-            foreach (var game in output.Where(g => g.Source == null)) //installed games don't get a source by default
+            foreach (var unnamed in allGames.Where(x => x.Value.Name.IsNullOrWhiteSpace()))
             {
-                game.Source = new MetadataNameProperty(SourceNames.Steam);
+                var game = unnamed.Value;
+                logger.Warn($"Unnamed game [{game.GameId}]");
+                allGames.Remove(unnamed.Key);
             }
 
+            var output = allGames.Values.ToList();
             UpdateExistingGames(output);
-
             return output;
         }
 
-        private async Task<IEnumerable<GameMetadata>> GetSteamStoreGamesAsync(SteamLibrarySettings settings, Dictionary<string, GameMetadata> pendingImportGames)
+        private bool Filter(ISteamApp app, SteamLibrarySettings settings)
         {
-            var appIds = (await storeService.GetUserDataAsync()).rgOwnedApps;
+            var b = app.BackendAppInfo;
+            logger.Debug($"FILTER [{app.Id}] [{b.Name}] {app.GetType().Name} {b.Type} useless={b.IsUseless} game={b.IsGame} app={b.IsApp} media={b.IsMedia} free={b.IsFree} tool={b.IsTool} own={app.IsOwned}");
 
-            var existingLibraryIds = playniteApi.Database.Games.Where(g => g.PluginId == plugin.Id).Select(g => g.GameId).ToHashSet();
-
-            var newAppIds = appIds.Where(id =>
+            if (b.IsUseless)
             {
-                var strId = id.ToString();
-                return !pendingImportGames.ContainsKey(strId)
-                       && !existingLibraryIds.Contains(strId);
-            }).ToList();
+                return false;
+            }
 
-            var appInfos = playniteBackend.GetAppInfos(newAppIds).Result;
-
-            var output = new List<GameMetadata>();
-
-            foreach (var appInfo in appInfos)
+            if (app is LocalSteamApp && settings.ImportInstalled)
             {
-                if (appInfo.LocalizedNames?.TryGetValue(settings.LanguageKey, out var appName) != true || string.IsNullOrWhiteSpace(appName))
-                    appName = appInfo.Name;
+                return true;
+            }
 
-                if (string.IsNullOrWhiteSpace(appName) || !"game".Equals(appInfo.Type, StringComparison.OrdinalIgnoreCase))
-                    continue;
+            if (app is ModInfo && settings.ImportInstalledMods)
+            {
+                return true;
+            }
 
-                output.Add(new GameMetadata
-                {
-                    Name = appName.RemoveTrademarks(),
-                    GameId = appInfo.AppId.ToString(),
-                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") },
-                    Source = new MetadataNameProperty(SourceNames.Steam),
-                });
+            if (app is ExtraIdSteamApp)
+            {
+                return true;
+            }
+
+            if (b.IsGame && app.IsOwned && settings.ImportGamesOwn)
+            {
+                return true;
+            }
+
+            if (b.IsGame && !app.IsOwned && settings.ImportGamesFamily)
+            {
+                return true;
+            }
+
+            if (b.IsApp && settings.ImportAppsOwn)
+            {
+                return true;
+            }
+
+            if (b.IsMedia && settings.ImportMediaOwn)
+            {
+                return true;
+            }
+
+            if (b.IsFree && app.IsOwned && settings.ImportFreeOwn)
+            {
+                return true;
+            }
+
+            if (b.IsFree && !app.IsOwned && settings.ImportFreeFamily)
+            {
+                return true;
+            }
+
+            if (b.IsTool && app.IsOwned && settings.ImportToolsOwn)
+            {
+                return true;
+            }
+
+            if (b.IsTool && !app.IsOwned && settings.ImportToolsFamily)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// dynamicstore/userdata + playnite backend
+        /// </summary>
+        private async Task<IEnumerable<ISteamApp>> GetUserdataGamesAsync(SteamLibrarySettings settings)
+        {
+            var userdata = await storeService.GetUserDataAsync();
+            var appIds = userdata.rgOwnedApps.Select(x => new GameID(x)).ToList();
+            var appInfos = await playniteBackend.GetAppInfo(appIds);
+            var output = new List<ISteamApp>();
+            foreach (var app in appInfos)
+            {
+                app.LocalizeName(settings.LanguageKey);
+                output.Add(new BackendOwnSteamDbApp(app));
             }
             return output;
         }
@@ -266,7 +367,7 @@ namespace SteamLibrary.Services
 
         private static bool IsModId(string gameId) => new GameID(ulong.Parse(gameId)).IsMod;
 
-        private IEnumerable<GameMetadata> GetGamesFromExtraIds(SteamLibrarySettings settings)
+        private IEnumerable<ISteamApp> GetGamesFromExtraIds(SteamLibrarySettings settings)
         {
             if (!settings.ExtraIDsToImport.HasItems())
                 yield break;
@@ -279,12 +380,10 @@ namespace SteamLibrary.Services
                     continue;
                 }
 
-                yield return new GameMetadata
+                yield return new ExtraIdSteamApp()
                 {
-                    GameId = parseResult.Item1,
+                    Id = uint.Parse(parseResult.Item1),
                     Name = parseResult.Item2,
-                    Source = new MetadataNameProperty(SourceNames.Steam),
-                    Platforms = new HashSet<MetadataProperty> { new MetadataSpecProperty("pc_windows") }
                 };
             }
         }
