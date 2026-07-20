@@ -9,11 +9,29 @@ namespace SteamLibrary.Services
 {
     public class PlayerService : SteamApiServiceBase
     {
+        public IEnumerable<ClientPlaytime> GetClientLastPlayedTimesWeb(SteamUserToken userToken, DateTimeOffset? minLastPlayed = null) =>
+            PlayerServiceGetClientLastPlayedTimes("access_token", userToken.AccessToken, minLastPlayed);
+
+        public IEnumerable<ClientPlaytime> GetClientLastPlayedTimesApiKey(string apiKey, DateTimeOffset? minLastPlayed = null) =>
+            PlayerServiceGetClientLastPlayedTimes("key", apiKey, minLastPlayed);
+
         public IEnumerable<GameMetadata> GetOwnedGamesWeb(SteamLibrarySettings settings, SteamUserToken userToken, bool freeSub) =>
             PlayerServiceGetOwnedGames(settings, userToken.UserId, "access_token", userToken.AccessToken, freeSub, true);
 
         public IEnumerable<GameMetadata> GetOwnedGamesApiKey(SteamLibrarySettings settings, ulong userId, string apiKey, bool freeSub, bool includePlaytime = true) =>
             PlayerServiceGetOwnedGames(settings, userId, "key", apiKey, freeSub, includePlaytime);
+
+        private IEnumerable<ClientPlaytime> PlayerServiceGetClientLastPlayedTimes(string keyType, string key, DateTimeOffset? minLastPlayed)
+        {
+            var retrySettings = new SteamApiRetrySettings(5, 5, 429);
+            var parameters = new Dictionary<string, string>
+            {
+                { keyType, key },
+                { "min_last_played", minLastPlayed?.ToUnixTimeSeconds().ToString() ?? "0" },
+            };
+            var response = Get<ClientPlaytimeResponse>("https://api.steampowered.com/IPlayerService/ClientGetLastPlayedTimes/v1/", parameters, retrySettings);
+            return response.games ?? [];
+        }
 
         private IEnumerable<GameMetadata> PlayerServiceGetOwnedGames(SteamLibrarySettings settings, ulong userId, string keyType, string key, bool freeSub, bool includePlaytime)
         {

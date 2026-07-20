@@ -21,7 +21,7 @@ namespace SteamLibrary.Models
 
     public class FamilySharedApp
     {
-        public int appid { get; set; }
+        public uint appid { get; set; }
         public string[] owner_steamids { get; set; }
         public string name { get; set; }
         public string capsule_filename { get; set; }
@@ -46,7 +46,7 @@ namespace SteamLibrary.Models
 
     public class SteamClientApp
     {
-        public ulong appid { get; set; }
+        public uint appid { get; set; }
         public string app { get; set; }
         public string app_type { get; set; }
         public bool available_on_platform { get; set; }
@@ -63,9 +63,36 @@ namespace SteamLibrary.Models
 
     public class OwnedGame
     {
-        public int appid { get; set; }
+        public uint appid { get; set; }
         public string name { get; set; }
         public uint playtime_forever { get; set; }
-        public uint rtime_last_played { get; set; }
+        public long rtime_last_played { get; set; }
+    }
+
+    public class ClientPlaytime
+    {
+        public uint appid { get; set; }
+        public long last_playtime { get; set; }
+        public uint playtime_2weeks { get; set; }
+        public uint playtime_forever { get; set; }
+        public long first_playtime { get; set; }
+        public uint playtime_windows_forever { get; set; }
+        public uint playtime_mac_forever { get; set; }
+        public uint playtime_linux_forever { get; set; }
+        public uint playtime_deck_forever { get; set; }
+        public long first_windows_playtime { get; set; }
+        public long first_mac_playtime { get; set; }
+        public long first_linux_playtime { get; set; }
+        public long first_deck_playtime { get; set; }
+        public long last_windows_playtime { get; set; }
+        public long last_mac_playtime { get; set; }
+        public long last_linux_playtime { get; set; }
+        public long last_deck_playtime { get; set; }
+        public uint playtime_disconnected { get; set; }
+    }
+
+    public class ClientPlaytimeResponse
+    {
+        public List<ClientPlaytime> games { get; set; }
     }
 }

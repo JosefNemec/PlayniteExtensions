@@ -1,6 +1,8 @@
 using Playnite.SDK;
 using Playnite.SDK.Models;
 using SteamKit2;
+using SteamLibrary.Models;
+using SteamLibrary.Services.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -89,6 +91,34 @@ namespace SteamLibrary.Services
                 }
             }
 
+            void TryAddPlayTimes(Func<IEnumerable<ClientPlaytime>> getPlayTimesFunc, string importSource)
+            {
+                try
+                {
+                    var playTimes = getPlayTimesFunc().ToList();
+                    logger.Info($"Found {playTimes.Count} {importSource} Steam play times.");
+
+                    foreach (var playtime in playTimes)
+                    {
+                        if (!allGames.TryGetValue(playtime.appid.ToString(), out var game))
+                            continue;
+
+                        ulong playtimeSeconds = (playtime.playtime_forever + playtime.playtime_disconnected) * 60;
+                        var lastPlayed = SteamApiServiceBase.GetLastPlayedDateTime(playtime.last_playtime);
+
+                        if (game.Playtime < playtimeSeconds)
+                            game.Playtime = playtimeSeconds;
+
+                        if (game.LastActivity == null || game.LastActivity < lastPlayed)
+                            game.LastActivity = lastPlayed;
+                    }
+                }
+                catch (Exception e)
+                {
+                    logger.Error(e, $"Failed to get/set play times for {importSource} Steam games.");
+                }
+            }
+
             if (settings.ImportInstalledGames)
                 TryAddGames(() => SteamLocalService.GetInstalledGames().Values, "Installed", installedGameIds);
 
@@ -105,6 +135,11 @@ namespace SteamLibrary.Services
                     }
 
                     TryAddGames(() => playerService.GetOwnedGamesApiKey(settings, ulong.Parse(settings.UserId), settings.RuntimeApiKey, settings.IncludeFreeSubGames), "PlayerService (API key)", onlineLibraryGameIds, true);
+
+                    TryAddPlayTimes(() => playerService.GetClientLastPlayedTimesApiKey(settings.RuntimeApiKey, settings.LastPlayTimeSync), "API key");
+
+                    settings.LastPlayTimeSync = DateTimeOffset.Now;
+                    plugin.SavePluginSettings(settings);
                 }
                 else
                 {
@@ -118,6 +153,11 @@ namespace SteamLibrary.Services
 
                         if (settings.ImportFamilySharedGames)
                             TryAddGames(() => familyGroupsService.GetSharedGames(settings, userToken, out familySharingUserIds), "Family Sharing", onlineLibraryGameIds, true);
+
+                        TryAddPlayTimes(() => playerService.GetClientLastPlayedTimesWeb(userToken, settings.LastPlayTimeSync), "Web");
+
+                        settings.LastPlayTimeSync = DateTimeOffset.Now;
+                        plugin.SavePluginSettings(settings);
                     }
                     catch (Exception e)
                     {
@@ -137,9 +177,14 @@ namespace SteamLibrary.Services
                         }
 
                         if (familySharingUserIds.Contains(account.AccountId))
+                        {
                             logger.Info($"Skipped extra account import for {accountId} because it's in the family sharing group");
-                        else
-                            TryAddGames(() => playerService.GetOwnedGamesApiKey(settings, accountId,  account.RuntimeApiKey, false, account.ImportPlayTime), $"Extra Account ({accountId})", onlineLibraryGameIds, true);
+                            continue;
+                        }
+
+                        TryAddGames(() => playerService.GetOwnedGamesApiKey(settings, accountId,  account.RuntimeApiKey, false, account.ImportPlayTime), $"Extra Account ({accountId})", onlineLibraryGameIds, true);
+
+                        TryAddPlayTimes(() => playerService.GetClientLastPlayedTimesApiKey(account.RuntimeApiKey), $"Extra Account ({accountId})");
                     }
                 }
 
