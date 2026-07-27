@@ -36,3 +36,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_42.pext
     Changelog:
       - Fixed play time import from extra accounts not working
+  - Version: 2.43
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2026-07-27
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_43.pext
+    Changelog:
+      - Added support for playtime import for demos and profile features limited games (by Jeshibu)
