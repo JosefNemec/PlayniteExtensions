@@ -195,6 +195,7 @@
     <Compile Include="Services\Base\SteamApiServiceBase.cs" />
     <Compile Include="Services\ClientCommService.cs" />
     <Compile Include="Services\FamilyGroupsService.cs" />
+    <Compile Include="Services\ParentalService.cs" />
     <Compile Include="Services\PlayerService.cs" />
     <Compile Include="Services\SteamLocalService.cs" />
     <Compile Include="Services\SteamServiceAggregator.cs" />

@@ -110,7 +110,7 @@ namespace SteamLibrary
 
         public override IEnumerable<GameMetadata> GetGames(LibraryGetGamesArgs args)
         {
-            var aggregator = new SteamServiceAggregator(new PlayerService(), new SteamStoreService(PlayniteApi), new ClientCommService(), new FamilyGroupsService(), ServicesClient, this);
+            var aggregator = new SteamServiceAggregator(new(), new(PlayniteApi), new(), new(), new(), ServicesClient, this);
             return aggregator.GetGamesAsync(SettingsViewModel.Settings).GetAwaiter().GetResult();
         }
 
