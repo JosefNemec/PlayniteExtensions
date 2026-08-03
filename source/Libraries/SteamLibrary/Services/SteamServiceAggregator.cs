@@ -101,19 +101,48 @@ namespace SteamLibrary.Services
                     var playTimes = getPlayTimesFunc().ToList();
                     logger.Info($"Found {playTimes.Count} {importSource} Steam play times.");
 
+                    Dictionary<string, List<Game>> libraryGames = playniteApi.Database.Games.Where(g => g.PluginId == plugin.Id)
+                                                                             .GroupBy(g => g.GameId)
+                                                                             .ToDictionary(gr => gr.Key, gr => gr.ToList());
+
+                    using var bufferedUpdate = playniteApi.Database.BufferedUpdate();
                     foreach (var playtime in playTimes)
                     {
-                        if (!allGames.TryGetValue(playtime.appid.ToString(), out var game))
-                            continue;
-
+                        string idStr = playtime.appid.ToString();
                         ulong playtimeSeconds = (playtime.playtime_forever + playtime.playtime_disconnected) * 60;
                         var lastPlayed = SteamApiServiceBase.GetLastPlayedDateTime(playtime.last_playtime);
 
-                        if (game.Playtime < playtimeSeconds)
-                            game.Playtime = playtimeSeconds;
+                        if (allGames.TryGetValue(idStr, out var game))
+                        {
+                            if (game.Playtime < playtimeSeconds)
+                                game.Playtime = playtimeSeconds;
 
-                        if (game.LastActivity == null || game.LastActivity < lastPlayed)
-                            game.LastActivity = lastPlayed;
+                            if (game.LastActivity == null || game.LastActivity < lastPlayed)
+                                game.LastActivity = lastPlayed;
+
+                            continue;
+                        }
+
+                        if (playniteApi.ApplicationSettings.PlaytimeImportMode == PlaytimeImportMode.Always && libraryGames.TryGetValue(idStr, out var libraryGamesWithThisId))
+                        {
+                            foreach (var libGame in libraryGamesWithThisId)
+                            {
+                                bool setPlaytime = libGame.Playtime < playtimeSeconds;
+                                bool setLastPlayed = libGame.LastActivity == null || libGame.LastActivity < lastPlayed;
+
+                                if (setPlaytime)
+                                    libGame.Playtime = playtimeSeconds;
+
+                                if (setLastPlayed)
+                                    libGame.LastActivity = lastPlayed;
+
+                                if (setPlaytime || setLastPlayed)
+                                {
+                                    libGame.Modified = DateTime.Now;
+                                    playniteApi.Database.Games.Update(libGame);
+                                }
+                            }
+                        }
                     }
                 }
                 catch (Exception e)
