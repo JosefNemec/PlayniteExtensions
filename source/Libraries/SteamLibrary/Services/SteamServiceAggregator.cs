@@ -41,44 +41,45 @@ namespace SteamLibrary.Services
             var allGames = new Dictionary<string, GameMetadata>();
             Exception importError = null;
 
-            void AddGames(IEnumerable<GameMetadata> gamesToAdd, bool overwriteName = false)
+            bool AddGame(GameMetadata game, bool overwriteName = false, bool familySharingGame = false)
             {
-                foreach (var game in gamesToAdd)
+                bool gameAlreadyInImport = allGames.TryGetValue(game.GameId, out var existingGame);
+
+                // If importing family shared games is disabled, skip uninstalled games (installed games will already have been added to `allGames`)
+                // This way installed family sharing games still get the appropriate source set
+                bool gameIsInstalled = gameAlreadyInImport && existingGame.IsInstalled;
+                if (familySharingGame && !settings.ImportFamilySharedGames && !gameIsInstalled)
+                    return false;
+
+                if (gameAlreadyInImport)
                 {
-                    if (!allGames.TryGetValue(game.GameId, out var existingGame))
-                    {
-                        allGames.Add(game.GameId, game);
-                    }
-                    else
-                    {
-                        if (overwriteName)
-                            existingGame.Name = game.Name;
+                if (overwriteName)
+                    existingGame.Name = game.Name;
 
-                        if (existingGame.InstallSize == null)
-                            existingGame.InstallSize = game.InstallSize;
+                if (existingGame.Playtime == 0)
+                    existingGame.Playtime = game.Playtime;
 
-                        if (existingGame.LastActivity == null)
-                            existingGame.LastActivity = game.LastActivity;
-
-                        if (existingGame.Playtime == 0)
-                            existingGame.Playtime = game.Playtime;
-
-                        if (existingGame.Source == null)
-                            existingGame.Source = game.Source;
-                    }
+                existingGame.InstallSize ??= game.InstallSize;
+                existingGame.LastActivity ??= game.LastActivity;
+                existingGame.Source ??= game.Source;
                 }
+                else
+                {
+                    allGames.Add(game.GameId, game);
+                }
+
+                return true;
             }
 
-            bool TryAddGames(Func<IEnumerable<GameMetadata>> getGamesFunc, string importSource, HashSet<string> gameIdsOutput = null, bool overwriteName = false)
+            bool TryAddGames(Func<IEnumerable<GameMetadata>> getGamesFunc, string importSource, HashSet<string> gameIdsOutput = null, bool overwriteName = false, bool familySharingGames = false)
             {
                 try
                 {
                     var games = getGamesFunc().ToList();
                     logger.Info($"Found {games.Count} {importSource} Steam games.");
-                    AddGames(games, overwriteName);
 
-                    if (gameIdsOutput != null)
-                        foreach (var game in games)
+                    foreach (var game in games)
+                        if (AddGame(game, overwriteName, familySharingGames) && gameIdsOutput != null)
                             gameIdsOutput.Add(game.GameId);
 
                     return games.Count > 0;
@@ -151,8 +152,9 @@ namespace SteamLibrary.Services
                         if (!TryAddGames(() => clientCommService.GetClientAppList(settings, userToken), "GetClientAppList", onlineLibraryGameIds, true))
                             TryAddGames(() => GetSteamStoreGamesAsync(settings, allGames).GetAwaiter().GetResult(), "userdata", onlineLibraryGameIds);
 
-                        if (settings.ImportFamilySharedGames)
-                            TryAddGames(() => familyGroupsService.GetSharedGames(settings, userToken, out familySharingUserIds), "Family Sharing", onlineLibraryGameIds, true);
+                        // If importing family sharing games is disabled, still fetch the games to appropriately set the game source for installed games
+                        if (settings.ImportFamilySharedGames || settings.ImportInstalledGames)
+                            TryAddGames(() => familyGroupsService.GetSharedGames(settings, userToken, out familySharingUserIds), "Family Sharing", onlineLibraryGameIds, overwriteName: true, familySharingGames: true);
 
                         TryAddPlayTimes(() => playerService.GetClientLastPlayedTimesWeb(userToken, settings.LastPlayTimeSync), "Web");
 
