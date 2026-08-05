@@ -1,0 +1,8 @@
+AddonId: GameSyncPlugin_e8411d37-23b9-4a9b-9c71-08f237583a12
+Packages:
+  - Version: 1.0.0
+    RequiredApiVersion: 6.11.0
+    ReleaseDate: 2026-08-05
+    PackageUrl: https://github.com/Krops/GameSyncPlugin/releases/download/v1.0.0/GameSyncPlugin.pext
+    Changelog:
+      - Initial release of Database Reset & Launcher Sync plugin
