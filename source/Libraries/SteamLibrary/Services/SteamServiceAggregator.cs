@@ -129,6 +129,7 @@ namespace SteamLibrary.Services
                                 Name = libraryGamesWithThisId.FirstOrDefault()?.Name,
                                 Playtime = playtimeSeconds,
                                 LastActivity = lastPlayed,
+                                Source = new MetadataNameProperty(SourceNames.PlaytimeOnly),
                             };
                             AddGame(playtimeGame);
                         }
@@ -318,9 +319,10 @@ namespace SteamLibrary.Services
                     bool update = false;
 
                     var oldSource = existingGame.Source;
-                    if (SourceNames.AllKnown.Contains(oldSource?.Name, StringComparer.InvariantCultureIgnoreCase))
+                    var newSourceName = ((MetadataNameProperty)newGame.Source).Name;
+                    if (SourceNames.IsUpdatableSource(oldSource?.Name) && SourceNames.IsUpdatableSource(newSourceName))
                     {
-                        var newSource = GetOrCreateSource(((MetadataNameProperty)newGame.Source).Name);
+                        var newSource = GetOrCreateSource(newSourceName);
 
                         if (oldSource?.Id != newSource.Id)
                         {
