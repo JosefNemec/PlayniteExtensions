@@ -17,18 +17,20 @@ namespace SteamLibrary.Services
         private readonly SteamStoreService storeService;
         private readonly ClientCommService clientCommService;
         private readonly FamilyGroupsService familyGroupsService;
+        private readonly ParentalService parentalService;
         private readonly SteamServicesClient playniteBackend;
         private readonly IPlayniteAPI playniteApi;
         private readonly SteamLibrary plugin;
         private readonly ILogger logger = LogManager.GetLogger();
         private static readonly Regex steamItemPattern = new Regex(@"^(.*):\s*https://store.steampowered.com/app/(\d+)$", RegexOptions.Compiled);
 
-        public SteamServiceAggregator(PlayerService playerService, SteamStoreService storeService, ClientCommService clientCommService, FamilyGroupsService familyGroupsService, SteamServicesClient playniteBackend, SteamLibrary plugin)
+        public SteamServiceAggregator(PlayerService playerService, SteamStoreService storeService, ClientCommService clientCommService, FamilyGroupsService familyGroupsService, ParentalService parentalService, SteamServicesClient playniteBackend, SteamLibrary plugin)
         {
             this.playerService = playerService;
             this.storeService = storeService;
             this.clientCommService = clientCommService;
             this.familyGroupsService = familyGroupsService;
+            this.parentalService = parentalService;
             this.playniteBackend = playniteBackend;
             this.playniteApi = plugin.PlayniteApi;
             this.plugin = plugin;
@@ -157,6 +159,16 @@ namespace SteamLibrary.Services
                             TryAddGames(() => familyGroupsService.GetSharedGames(settings, userToken, out familySharingUserIds), "Family Sharing", onlineLibraryGameIds, overwriteName: true, familySharingGames: true);
 
                         TryAddPlayTimes(() => playerService.GetClientLastPlayedTimesWeb(userToken, settings.LastPlayTimeSync), "Web");
+
+                        var allower = parentalService.GetParentalAppAllower(userToken);
+                        foreach (var game in new List<GameMetadata>(allGames.Values))
+                        {
+                            if (allower.AppIsAllowed(game.GameId))
+                                continue;
+
+                            logger.Info($"Parental restriction: removing {game.Name} ({game.GameId}) from import");
+                            allGames.Remove(game.GameId);
+                        }
 
                         settings.LastPlayTimeSync = DateTimeOffset.Now;
                         plugin.SavePluginSettings(settings);

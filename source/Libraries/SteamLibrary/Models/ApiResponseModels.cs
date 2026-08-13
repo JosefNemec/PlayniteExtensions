@@ -95,4 +95,26 @@ namespace SteamLibrary.Models
     {
         public List<ClientPlaytime> games { get; set; }
     }
+
+    public class ParentalSettingsResponse
+    {
+        public ParentalSettings settings { get; set; }
+    }
+
+    public class ParentalSettings
+    {
+        public string steamid { get; set; }
+        public bool is_enabled { get; set; }
+        public bool is_site_license_lock { get; set; }
+        public uint applist_base_id { get; set; }
+        public string applist_base_description { get; set; }
+        public List<ParentalApp> applist_base { get; set; } = [];
+        public List<ParentalApp> applist_custom { get; set; } = [];
+        public List<uint> utility_appids { get; set; } = [];
+    }
+
+    public class ParentalApp {
+        public uint appid { get; set; }
+        public bool is_allowed { get; set; }
+    }
 }
