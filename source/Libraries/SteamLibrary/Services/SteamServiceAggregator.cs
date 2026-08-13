@@ -157,10 +157,7 @@ namespace SteamLibrary.Services
 
                     TryAddGames(() => playerService.GetOwnedGamesApiKey(settings, ulong.Parse(settings.UserId), settings.RuntimeApiKey, settings.IncludeFreeSubGames), "PlayerService (API key)", onlineLibraryGameIds, true);
 
-                    TryAddPlayTimes(() => playerService.GetClientLastPlayedTimesApiKey(settings.RuntimeApiKey, settings.LastPlayTimeSync), "API key");
-
-                    settings.LastPlayTimeSync = DateTimeOffset.Now;
-                    plugin.SavePluginSettings(settings);
+                    TryAddPlayTimes(() => playerService.GetClientLastPlayedTimesApiKey(settings.RuntimeApiKey), "API key");
                 }
                 else
                 {
@@ -176,7 +173,7 @@ namespace SteamLibrary.Services
                         if (settings.ImportFamilySharedGames || settings.ImportInstalledGames)
                             TryAddGames(() => familyGroupsService.GetSharedGames(settings, userToken, out familySharingUserIds), "Family Sharing", onlineLibraryGameIds, overwriteName: true, familySharingGames: true);
 
-                        TryAddPlayTimes(() => playerService.GetClientLastPlayedTimesWeb(userToken, settings.LastPlayTimeSync), "Web");
+                        TryAddPlayTimes(() => playerService.GetClientLastPlayedTimesWeb(userToken), "Web");
 
                         var allower = parentalService.GetParentalAppAllower(userToken);
                         foreach (var game in new List<GameMetadata>(allGames.Values))
@@ -187,9 +184,6 @@ namespace SteamLibrary.Services
                             logger.Info($"Parental restriction: removing {game.Name} ({game.GameId}) from import");
                             allGames.Remove(game.GameId);
                         }
-
-                        settings.LastPlayTimeSync = DateTimeOffset.Now;
-                        plugin.SavePluginSettings(settings);
                     }
                     catch (Exception e)
                     {
