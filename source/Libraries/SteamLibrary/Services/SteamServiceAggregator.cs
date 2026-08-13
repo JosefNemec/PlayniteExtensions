@@ -55,15 +55,15 @@ namespace SteamLibrary.Services
 
                 if (gameAlreadyInImport)
                 {
-                if (overwriteName)
-                    existingGame.Name = game.Name;
+                    if (overwriteName)
+                        existingGame.Name = game.Name;
 
-                if (existingGame.Playtime == 0)
-                    existingGame.Playtime = game.Playtime;
+                    if (existingGame.Playtime == 0)
+                        existingGame.Playtime = game.Playtime;
 
-                existingGame.InstallSize ??= game.InstallSize;
-                existingGame.LastActivity ??= game.LastActivity;
-                existingGame.Source ??= game.Source;
+                    existingGame.InstallSize ??= game.InstallSize;
+                    existingGame.LastActivity ??= game.LastActivity;
+                    existingGame.Source ??= game.Source;
                 }
                 else
                 {
@@ -105,7 +105,6 @@ namespace SteamLibrary.Services
                                                                              .GroupBy(g => g.GameId)
                                                                              .ToDictionary(gr => gr.Key, gr => gr.ToList());
 
-                    using var bufferedUpdate = playniteApi.Database.BufferedUpdate();
                     foreach (var playtime in playTimes)
                     {
                         string idStr = playtime.appid.ToString();
@@ -119,29 +118,19 @@ namespace SteamLibrary.Services
 
                             if (game.LastActivity == null || game.LastActivity < lastPlayed)
                                 game.LastActivity = lastPlayed;
-
-                            continue;
                         }
-
-                        if (playniteApi.ApplicationSettings.PlaytimeImportMode == PlaytimeImportMode.Always && libraryGames.TryGetValue(idStr, out var libraryGamesWithThisId))
+                        else  if (libraryGames.TryGetValue(idStr, out var libraryGamesWithThisId))
                         {
-                            foreach (var libGame in libraryGamesWithThisId)
+                            // Add games to import result as a way to potentially update their playtimes
+                            // We don't add these for games that aren't already in the Playnite library because that would include demos and refunded games
+                            var playtimeGame = new GameMetadata
                             {
-                                bool setPlaytime = libGame.Playtime < playtimeSeconds;
-                                bool setLastPlayed = libGame.LastActivity == null || libGame.LastActivity < lastPlayed;
-
-                                if (setPlaytime)
-                                    libGame.Playtime = playtimeSeconds;
-
-                                if (setLastPlayed)
-                                    libGame.LastActivity = lastPlayed;
-
-                                if (setPlaytime || setLastPlayed)
-                                {
-                                    libGame.Modified = DateTime.Now;
-                                    playniteApi.Database.Games.Update(libGame);
-                                }
-                            }
+                                GameId = idStr,
+                                Name = libraryGamesWithThisId.FirstOrDefault()?.Name,
+                                Playtime = playtimeSeconds,
+                                LastActivity = lastPlayed,
+                            };
+                            AddGame(playtimeGame);
                         }
                     }
                 }
