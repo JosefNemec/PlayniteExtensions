@@ -55,15 +55,15 @@ namespace SteamLibrary.Services
 
                 if (gameAlreadyInImport)
                 {
-                if (overwriteName)
-                    existingGame.Name = game.Name;
+                    if (overwriteName)
+                        existingGame.Name = game.Name;
 
-                if (existingGame.Playtime == 0)
-                    existingGame.Playtime = game.Playtime;
+                    if (existingGame.Playtime == 0)
+                        existingGame.Playtime = game.Playtime;
 
-                existingGame.InstallSize ??= game.InstallSize;
-                existingGame.LastActivity ??= game.LastActivity;
-                existingGame.Source ??= game.Source;
+                    existingGame.InstallSize ??= game.InstallSize;
+                    existingGame.LastActivity ??= game.LastActivity;
+                    existingGame.Source ??= game.Source;
                 }
                 else
                 {
@@ -101,19 +101,38 @@ namespace SteamLibrary.Services
                     var playTimes = getPlayTimesFunc().ToList();
                     logger.Info($"Found {playTimes.Count} {importSource} Steam play times.");
 
+                    Dictionary<string, List<Game>> libraryGames = playniteApi.Database.Games.Where(g => g.PluginId == plugin.Id)
+                                                                             .GroupBy(g => g.GameId)
+                                                                             .ToDictionary(gr => gr.Key, gr => gr.ToList());
+
                     foreach (var playtime in playTimes)
                     {
-                        if (!allGames.TryGetValue(playtime.appid.ToString(), out var game))
-                            continue;
-
+                        string idStr = playtime.appid.ToString();
                         ulong playtimeSeconds = (playtime.playtime_forever + playtime.playtime_disconnected) * 60;
                         var lastPlayed = SteamApiServiceBase.GetLastPlayedDateTime(playtime.last_playtime);
 
-                        if (game.Playtime < playtimeSeconds)
-                            game.Playtime = playtimeSeconds;
+                        if (allGames.TryGetValue(idStr, out var game))
+                        {
+                            if (game.Playtime < playtimeSeconds)
+                                game.Playtime = playtimeSeconds;
 
-                        if (game.LastActivity == null || game.LastActivity < lastPlayed)
-                            game.LastActivity = lastPlayed;
+                            if (game.LastActivity == null || game.LastActivity < lastPlayed)
+                                game.LastActivity = lastPlayed;
+                        }
+                        else  if (libraryGames.TryGetValue(idStr, out var libraryGamesWithThisId))
+                        {
+                            // Add games to import result as a way to potentially update their playtimes
+                            // We don't add these for games that aren't already in the Playnite library because that would include demos and refunded games
+                            var playtimeGame = new GameMetadata
+                            {
+                                GameId = idStr,
+                                Name = libraryGamesWithThisId.FirstOrDefault()?.Name,
+                                Playtime = playtimeSeconds,
+                                LastActivity = lastPlayed,
+                                Source = new MetadataNameProperty(SourceNames.PlaytimeOnly),
+                            };
+                            AddGame(playtimeGame);
+                        }
                     }
                 }
                 catch (Exception e)
@@ -139,10 +158,7 @@ namespace SteamLibrary.Services
 
                     TryAddGames(() => playerService.GetOwnedGamesApiKey(settings, ulong.Parse(settings.UserId), settings.RuntimeApiKey, settings.IncludeFreeSubGames), "PlayerService (API key)", onlineLibraryGameIds, true);
 
-                    TryAddPlayTimes(() => playerService.GetClientLastPlayedTimesApiKey(settings.RuntimeApiKey, settings.LastPlayTimeSync), "API key");
-
-                    settings.LastPlayTimeSync = DateTimeOffset.Now;
-                    plugin.SavePluginSettings(settings);
+                    TryAddPlayTimes(() => playerService.GetClientLastPlayedTimesApiKey(settings.RuntimeApiKey), "API key");
                 }
                 else
                 {
@@ -158,7 +174,7 @@ namespace SteamLibrary.Services
                         if (settings.ImportFamilySharedGames || settings.ImportInstalledGames)
                             TryAddGames(() => familyGroupsService.GetSharedGames(settings, userToken, out familySharingUserIds), "Family Sharing", onlineLibraryGameIds, overwriteName: true, familySharingGames: true);
 
-                        TryAddPlayTimes(() => playerService.GetClientLastPlayedTimesWeb(userToken, settings.LastPlayTimeSync), "Web");
+                        TryAddPlayTimes(() => playerService.GetClientLastPlayedTimesWeb(userToken), "Web");
 
                         var allower = parentalService.GetParentalAppAllower(userToken);
                         foreach (var game in new List<GameMetadata>(allGames.Values))
@@ -169,9 +185,6 @@ namespace SteamLibrary.Services
                             logger.Info($"Parental restriction: removing {game.Name} ({game.GameId}) from import");
                             allGames.Remove(game.GameId);
                         }
-
-                        settings.LastPlayTimeSync = DateTimeOffset.Now;
-                        plugin.SavePluginSettings(settings);
                     }
                     catch (Exception e)
                     {
@@ -306,9 +319,10 @@ namespace SteamLibrary.Services
                     bool update = false;
 
                     var oldSource = existingGame.Source;
-                    if (SourceNames.AllKnown.Contains(oldSource?.Name, StringComparer.InvariantCultureIgnoreCase))
+                    var newSourceName = ((MetadataNameProperty)newGame.Source).Name;
+                    if (SourceNames.IsUpdatableSource(oldSource?.Name) && SourceNames.IsUpdatableSource(newSourceName))
                     {
-                        var newSource = GetOrCreateSource(((MetadataNameProperty)newGame.Source).Name);
+                        var newSource = GetOrCreateSource(newSourceName);
 
                         if (oldSource?.Id != newSource.Id)
                         {

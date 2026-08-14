@@ -49,7 +49,6 @@ namespace SteamLibrary
         public bool ShowSteamLaunchMenuInDesktopMode { get; set; } = true;
         public bool ShowSteamLaunchMenuInFullscreenMode { get; set; } = false;
         public List<string> ExtraIDsToImport { get; set; }
-        public DateTimeOffset? LastPlayTimeSync { get; set; } = null;
         [Obsolete] public string ApiKey { get; set; }
 
         [DontSerialize] public string RuntimeApiKey { get => apiKey; set => SetValue(ref apiKey, value); }

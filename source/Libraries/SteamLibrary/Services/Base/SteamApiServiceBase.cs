@@ -62,7 +62,10 @@ namespace SteamLibrary.Services.Base
             if (unixEpochSeconds == 0)
                 return null;
 
-            return DateTimeOffset.FromUnixTimeSeconds(unixEpochSeconds).LocalDateTime;
+            var lastPlayed = DateTimeOffset.FromUnixTimeSeconds(unixEpochSeconds).LocalDateTime;
+
+            // Some games last played before Steam started storing last played times (about 2008?) report as last played 1970-01-02 00:00:00 UTC
+            return lastPlayed.Year < 2004 ? null : lastPlayed;
         }
     }
 
