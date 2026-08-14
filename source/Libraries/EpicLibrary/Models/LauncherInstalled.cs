@@ -30,6 +30,7 @@ namespace EpicLibrary.Models
         public bool bCanRunOffline;
         public string AppName;
         public string CatalogNamespace;
+        public string CatalogItemId;
         public List<string> AppCategories;
         public List<string> CompatibleApps;
         public string DisplayName;

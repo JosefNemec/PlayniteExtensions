@@ -36,7 +36,12 @@ namespace EpicLibrary
             }
 
             Dispose();
-            ProcessStarter.StartUrl(string.Format(EpicLauncher.GameInstallUrlMask, Game.GameId));
+            // We can't use GameInstallUrlMask because Epic updated something and while this will technically work,
+            // it shows the old installation dialog (why the hell they still have code there for old and new install dialog?????),
+            // which seems to work weird, like it doesn't show install progress correctly.
+            // So until somebody figures out how to invoke install via new install dialog, we just open library page.
+            // ProcessStarter.StartUrl(string.Format(EpicLauncher.GameInstallUrlMask, Game.GameId));
+            ProcessStarter.StartUrl(EpicLauncher.LibraryLaunchUrl);
             StartInstallWatcher();
         }
 

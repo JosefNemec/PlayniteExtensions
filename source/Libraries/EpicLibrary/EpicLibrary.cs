@@ -41,19 +41,8 @@ namespace EpicLibrary
             var appList = EpicLauncher.GetInstalledAppList();
             var manifests = EpicLauncher.GetInstalledManifests();
 
-            foreach (var app in appList)
+            foreach (var manifest in manifests)
             {
-                if (app.AppName.StartsWith("UE_"))
-                {
-                    continue;
-                }
-
-                var manifest = manifests.FirstOrDefault(a => a.AppName == app.AppName);
-                if (manifest == null)
-                {
-                    continue;
-                }
-
                 // DLC
                 if (manifest.AppCategories?.Contains("addons") == true && manifest.AppCategories?.Any(a => a == "addons/launchable") == false)
                 {
@@ -68,15 +57,18 @@ namespace EpicLibrary
                     continue;
                 }
 
-                var gameName = manifest?.DisplayName ?? Path.GetFileName(app.InstallLocation);
+                var gameName = manifest?.DisplayName ?? Path.GetFileName(manifest.InstallLocation);
 
                 // Looks like manifest location can be not valid if a workaround to import existing game installation
                 // is used and also the game was previously installed into different location.
                 // App list seems to have correct location so it should be preffered value.
-                var installLocation = app.InstallLocation;
+                var installLocation = manifest.InstallLocation;
                 if (installLocation.IsNullOrEmpty() || !Directory.Exists(installLocation))
                 {
-                    installLocation = manifest?.InstallLocation;
+                    // appList can be sometimes empty or have "stale" data in it. I don't know why, go ask Tim...
+                    var app = appList.FirstOrDefault(a => a.AppName.Equals(manifest.AppName, StringComparison.OrdinalIgnoreCase));
+                    if (app?.InstallLocation.IsNullOrWhiteSpace() == false)
+                        installLocation = app.InstallLocation;
                 }
 
                 if (installLocation.IsNullOrEmpty() || !Directory.Exists(installLocation))
@@ -94,7 +86,7 @@ namespace EpicLibrary
                 var game = new GameMetadata()
                 {
                     Source = new MetadataNameProperty("Epic"),
-                    GameId = app.AppName,
+                    GameId = manifest.AppName,
                     Name = gameName,
                     InstallDirectory = installLocation,
                     IsInstalled = true,
@@ -284,12 +276,17 @@ namespace EpicLibrary
                 yield break;
             }
 
+            var manifest = EpicLauncher.GetInstalledManifests().
+                FirstOrDefault(a => a.AppName.Equals(args.Game.GameId, StringComparison.OrdinalIgnoreCase));
+            if (manifest is null)
+                throw new Exception("Can't start Epic game, installation data manifest not found.");
+
             yield return new AutomaticPlayController(args.Game)
             {
                 Type = AutomaticPlayActionType.Url,
                 TrackingMode = TrackingMode.Directory,
                 TrackingPath = args.Game.InstallDirectory,
-                Path = string.Format(EpicLauncher.GameLaunchUrlMask, args.Game.GameId),
+                Path = string.Format(EpicLauncher.GameLaunchUrlMask, manifest.CatalogNamespace, manifest.CatalogItemId, args.Game.GameId),
                 Name = ResourceProvider.GetString(LOC.EpicStartUsingClient).Format("Epic")
             };
         }

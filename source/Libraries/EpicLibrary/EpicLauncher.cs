@@ -15,7 +15,7 @@ namespace EpicLibrary
     public class EpicLauncher
     {
         private static readonly ILogger logger = LogManager.GetLogger();
-        public const string GameLaunchUrlMask = @"com.epicgames.launcher://apps/{0}?action=launch&silent=true";
+        public const string GameLaunchUrlMask = @"com.epicgames.launcher://apps/{0}%3A{1}%3A{2}?action=launch&silent=true";
         public const string GameInstallUrlMask = @"com.epicgames.launcher://apps/{0}?action=install";
         public const string LibraryLaunchUrl = @"com.epicgames.launcher://store/library";
 
