@@ -13,3 +13,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_27.pext
     Changelog:
       - Fixed Fortnite not being imported as installed if UEFN is also installed
+  - Version: 2.28
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2026-08-14
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_28.pext
+    Changelog:
+      - Fixed installed game detection and game startup not working after recent Epic client update
