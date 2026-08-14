@@ -42,3 +42,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_43.pext
     Changelog:
       - Added support for playtime import for demos and profile features limited games (by Jeshibu)
+  - Version: 2.44
+    RequiredApiVersion: 6.4.0
+    ReleaseDate: 2026-08-14
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/SteamLibrary_Builtin_2_44.pext
+    Changelog:
+      - Various fixes and improvements to game import (by Jeshibu)
