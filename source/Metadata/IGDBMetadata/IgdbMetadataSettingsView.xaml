@@ -38,5 +38,15 @@
                 </ComboBox.ItemTemplate>
             </ComboBox>
         </StackPanel>
+
+        <Separator Margin="0,20,0,10"/>
+        <TextBlock Text="{DynamicResource LOCIgdbSkipImagesHeader}" FontWeight="Bold" Margin="0,0,0,5"/>
+
+        <CheckBox Content="{DynamicResource LOCIgdbSkipCoverImage}" Margin="0,5,0,0"
+                  IsChecked="{Binding Settings.SkipCoverImage}"/>
+        <CheckBox Content="{DynamicResource LOCIgdbSkipBackgroundImage}" Margin="0,5,0,0"
+                  IsChecked="{Binding Settings.SkipBackgroundImage}"/>
+        <CheckBox Content="{DynamicResource LOCIgdbSkipIcon}" Margin="0,5,0,0"
+                  IsChecked="{Binding Settings.SkipIcon}"/>
     </StackPanel>
 </UserControl>

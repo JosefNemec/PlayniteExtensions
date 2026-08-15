@@ -74,7 +74,8 @@ namespace IGDBMetadata
 
         public override MetadataFile GetBackgroundImage(GetMetadataFieldArgs args)
         {
-            if (!AvailableFields.Contains(MetadataField.BackgroundImage))
+            if (!AvailableFields.Contains(MetadataField.BackgroundImage) ||
+                plugin.SettingsViewModel.Settings.SkipBackgroundImage)
             {
                 return base.GetBackgroundImage(args);
             }
@@ -152,7 +153,8 @@ namespace IGDBMetadata
 
         public override MetadataFile GetCoverImage(GetMetadataFieldArgs args)
         {
-            if (!AvailableFields.Contains(MetadataField.CoverImage))
+            if (!AvailableFields.Contains(MetadataField.CoverImage) ||
+                plugin.SettingsViewModel.Settings.SkipCoverImage)
             {
                 return base.GetCoverImage(args);
             }
@@ -162,7 +164,8 @@ namespace IGDBMetadata
 
         public override MetadataFile GetIcon(GetMetadataFieldArgs args)
         {
-            if (!AvailableFields.Contains(MetadataField.Icon))
+            if (!AvailableFields.Contains(MetadataField.Icon) ||
+                plugin.SettingsViewModel.Settings.SkipIcon)
             {
                 return base.GetCoverImage(args);
             }
@@ -332,20 +335,28 @@ namespace IGDBMetadata
 
                 if (GameData.cover_expanded != null && !GameData.cover_expanded.url.IsNullOrEmpty())
                 {
-                    fields.Add(MetadataField.CoverImage);
-                    if (plugin.SettingsViewModel.Settings.UseCoverAsIcon)
+                    if (!plugin.SettingsViewModel.Settings.SkipCoverImage)
+                    {
+                        fields.Add(MetadataField.CoverImage);
+                    }
+
+                    if (plugin.SettingsViewModel.Settings.UseCoverAsIcon &&
+                        !plugin.SettingsViewModel.Settings.SkipIcon)
                     {
                         fields.Add(MetadataField.Icon);
                     }
                 }
 
-                if (GameData.artworks_expanded.HasItems())
+                if (!plugin.SettingsViewModel.Settings.SkipBackgroundImage)
                 {
-                    fields.Add(MetadataField.BackgroundImage);
-                }
-                else if (GameData.screenshots_expanded.HasItems() && plugin.SettingsViewModel.Settings.UseScreenshotsIfNecessary)
-                {
-                    fields.Add(MetadataField.BackgroundImage);
+                    if (GameData.artworks_expanded.HasItems())
+                    {
+                        fields.Add(MetadataField.BackgroundImage);
+                    }
+                    else if (GameData.screenshots_expanded.HasItems() && plugin.SettingsViewModel.Settings.UseScreenshotsIfNecessary)
+                    {
+                        fields.Add(MetadataField.BackgroundImage);
+                    }
                 }
 
                 if (GameData.first_release_date != 0)
