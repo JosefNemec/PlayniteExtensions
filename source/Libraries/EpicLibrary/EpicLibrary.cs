@@ -59,14 +59,15 @@ namespace EpicLibrary
 
                 var gameName = manifest?.DisplayName ?? Path.GetFileName(manifest.InstallLocation);
 
+                // appList can be sometimes empty or have "stale" data in it. I don't know why, go ask Tim...
+                var app = appList.FirstOrDefault(a => a.AppName.Equals(manifest.AppName, StringComparison.OrdinalIgnoreCase));
+
                 // Looks like manifest location can be not valid if a workaround to import existing game installation
                 // is used and also the game was previously installed into different location.
                 // App list seems to have correct location so it should be preffered value.
                 var installLocation = manifest.InstallLocation;
                 if (installLocation.IsNullOrEmpty() || !Directory.Exists(installLocation))
                 {
-                    // appList can be sometimes empty or have "stale" data in it. I don't know why, go ask Tim...
-                    var app = appList.FirstOrDefault(a => a.AppName.Equals(manifest.AppName, StringComparison.OrdinalIgnoreCase));
                     if (app?.InstallLocation.IsNullOrWhiteSpace() == false)
                         installLocation = app.InstallLocation;
                 }
@@ -94,7 +95,18 @@ namespace EpicLibrary
                 };
 
                 game.Name = game.Name.RemoveTrademarks();
-                games.Add(game.GameId, game);
+
+                // Some people have multiple manifests for one game from different locations...
+                if (games.ContainsKey(game.GameId))
+                {
+                    // applist should in theory have the correct entry
+                    if (app?.InstallLocation.Equals(game.InstallDirectory, StringComparison.OrdinalIgnoreCase) == true)
+                        games[game.GameId] = game;
+                }
+                else
+                {
+                    games.Add(game.GameId, game);
+                }
             }
 
             return games;
