@@ -113,5 +113,21 @@ namespace System
         /// Substitute cropped cover image for icon
         /// </summary>
         public const string IgdbCoverAsIcon = "LOCIgdbCoverAsIcon";
+        /// <summary>
+        /// Skip image downloads
+        /// </summary>
+        public const string IgdbSkipImagesHeader = "LOCIgdbSkipImagesHeader";
+        /// <summary>
+        /// Do not download cover image
+        /// </summary>
+        public const string IgdbSkipCoverImage = "LOCIgdbSkipCoverImage";
+        /// <summary>
+        /// Do not download background image
+        /// </summary>
+        public const string IgdbSkipBackgroundImage = "LOCIgdbSkipBackgroundImage";
+        /// <summary>
+        /// Do not download icon
+        /// </summary>
+        public const string IgdbSkipIcon = "LOCIgdbSkipIcon";
     }
 }

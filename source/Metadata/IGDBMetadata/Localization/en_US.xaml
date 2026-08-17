@@ -27,4 +27,8 @@
   <sys:String x:Key="LOCIgdbMultipleArtworkOptionsTitle">If multiple images are available then use:</sys:String>
   <sys:String x:Key="LOCIgdbSelectBackgroundTitle">Select background image for {0}</sys:String>
   <sys:String x:Key="LOCIgdbCoverAsIcon">Substitute cropped cover image for icon</sys:String>
+  <sys:String x:Key="LOCIgdbSkipImagesHeader">Skip image downloads</sys:String>
+  <sys:String x:Key="LOCIgdbSkipCoverImage">Do not download cover image</sys:String>
+  <sys:String x:Key="LOCIgdbSkipBackgroundImage">Do not download background image</sys:String>
+  <sys:String x:Key="LOCIgdbSkipIcon">Do not download icon</sys:String>
 </ResourceDictionary>
