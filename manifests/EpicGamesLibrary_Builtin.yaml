@@ -19,3 +19,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_28.pext
     Changelog:
       - Fixed installed game detection and game startup not working after recent Epic client update
+  - Version: 2.29
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2026-08-17
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_29.pext
+    Changelog:
+      - Fixed detection of installed games failing
