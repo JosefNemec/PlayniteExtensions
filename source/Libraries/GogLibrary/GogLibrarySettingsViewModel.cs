@@ -73,7 +73,7 @@ namespace GogLibrary
         {
             try
             {
-                using (var view = PlayniteApi.WebViews.CreateView(500, 500))
+                using (var view = PlayniteApi.WebViews.CreateView(630, 820))
                 using (var backgroundView = PlayniteApi.WebViews.CreateOffscreenView())
                 {
                     var api = new GogAccountClient(view);
