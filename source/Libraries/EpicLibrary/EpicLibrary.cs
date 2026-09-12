@@ -268,7 +268,7 @@ namespace EpicLibrary
                 yield break;
             }
 
-            yield return new EpicInstallController(args.Game);
+            yield return new EpicInstallController(args.Game, this);
         }
 
         public override IEnumerable<UninstallController> GetUninstallActions(GetUninstallActionsArgs args)
@@ -278,7 +278,7 @@ namespace EpicLibrary
                 yield break;
             }
 
-            yield return new EpicUninstallController(args.Game);
+            yield return new EpicUninstallController(args.Game, this);
         }
 
         public override IEnumerable<PlayController> GetPlayActions(GetPlayActionsArgs args)

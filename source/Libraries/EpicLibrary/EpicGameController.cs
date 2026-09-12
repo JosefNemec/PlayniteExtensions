@@ -16,10 +16,12 @@ namespace EpicLibrary
 {
     public class EpicInstallController : InstallController
     {
+        private readonly EpicLibrary plugin;
         private CancellationTokenSource watcherToken;
 
-        public EpicInstallController(Game game) : base(game)
+        public EpicInstallController(Game game, EpicLibrary plugin) : base(game)
         {
+            this.plugin = plugin;
             Name = "Install using Epic client";
         }
 
@@ -57,13 +59,12 @@ namespace EpicLibrary
                         return;
                     }
 
-                    var installed = EpicLauncher.GetInstalledAppList();
-                    var app = installed?.FirstOrDefault(a => a.AppName == Game.GameId);
-                    if (app != null)
+                    var installed = plugin.GetInstalledGames();
+                    if (installed.TryGetValue(Game.GameId, out var installedEntry))
                     {
                         var installInfo = new GameInstallationData
                         {
-                            InstallDirectory = app.InstallLocation
+                            InstallDirectory = installedEntry.InstallDirectory
                         };
 
                         InvokeOnInstalled(new GameInstalledEventArgs(installInfo));
@@ -78,10 +79,12 @@ namespace EpicLibrary
 
     public class EpicUninstallController : UninstallController
     {
+        private readonly EpicLibrary plugin;
         private CancellationTokenSource watcherToken;
 
-        public EpicUninstallController(Game game) : base(game)
+        public EpicUninstallController(Game game, EpicLibrary plugin) : base(game)
         {
+            this.plugin = plugin;
             Name = "Uninstall";
         }
 
@@ -113,9 +116,8 @@ namespace EpicLibrary
                     return;
                 }
 
-                var installed = EpicLauncher.GetInstalledAppList();
-                var app = installed?.FirstOrDefault(a => a.AppName == Game.GameId);
-                if (app == null)
+                var installed = plugin.GetInstalledGames();
+                if (!installed.ContainsKey(Game.GameId))
                 {
                     InvokeOnUninstalled(new GameUninstalledEventArgs());
                     return;
