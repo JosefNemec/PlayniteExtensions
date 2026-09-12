@@ -25,3 +25,9 @@ Packages:
     PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_29.pext
     Changelog:
       - Fixed detection of installed games failing
+  - Version: 2.30
+    RequiredApiVersion: 6.2.0
+    ReleaseDate: 2026-09-12
+    PackageUrl: https://github.com/JosefNemec/PlayniteExtensions/releases/download/2.2/EpicGamesLibrary_Builtin_2_30.pext
+    Changelog:
+      - Fixed detection of install state for manually initiated installations
