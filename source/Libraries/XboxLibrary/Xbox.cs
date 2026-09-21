@@ -1,6 +1,7 @@
 ﻿using Playnite.Common;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -14,6 +15,7 @@ namespace XboxLibrary
         private const string xboxPassAppFN = "Microsoft.GamingApp_8wekyb3d8bbwe";
 
         private static bool? isXboxPassAppInstalled;
+        public static bool IsRunning => Process.GetProcessesByName("XboxPcApp").Length > 0;
         public static bool IsXboxPassAppInstalled
         {
             get
@@ -56,6 +58,11 @@ namespace XboxLibrary
             {
                 throw new NotSupportedException("Only supported on Windows 10 and newer.");
             }
+        }
+
+        public static void OpenGamePage(string productId)
+        {
+            ProcessStarter.StartUrl($"msxbox://game/?productId={productId}");
         }
 
         public static string Icon { get; } = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"icon.png");
